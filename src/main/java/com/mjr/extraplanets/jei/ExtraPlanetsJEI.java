@@ -2,10 +2,11 @@ package com.mjr.extraplanets.jei;
 
 import javax.annotation.Nonnull;
 
-import mezz.jei.api.BlankModPlugin;
 import mezz.jei.api.IGuiHelper;
+import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
+import mezz.jei.api.recipe.IRecipeCategoryRegistration;
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 
 import com.mjr.extraplanets.Config;
@@ -58,16 +59,11 @@ import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeMaker;
 import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeWrapper;
 
 @JEIPlugin
-public class ExtraPlanetsJEI extends BlankModPlugin {
-	@SuppressWarnings("deprecation")
+public class ExtraPlanetsJEI implements IModPlugin {
 	@Override
 	public void register(@Nonnull IModRegistry registry) {
 		if (Config.JEI_SUPPORT) {
-			IGuiHelper guiHelper = registry.getJeiHelpers().getGuiHelper();
-			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper),
-					new Tier8RocketRecipeCategory(guiHelper), new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper),
-					new BlockSmasherRecipeCategory(guiHelper), new SolarEvaporationChamberRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(
-							guiHelper), new PurifierRecipeCategory(guiHelper), new DensifierRecipeCategory(guiHelper));
+			// IStackHelper stackHelper = registry.getJeiHelpers().getStackHelper();
 
 			registry.handleRecipes(INasaWorkbenchRecipe.class, Tier4RocketRecipeWrapper::new, RecipeCategories.ROCKET_T4_ID);
 			registry.handleRecipes(INasaWorkbenchRecipe.class, Tier5RocketRecipeWrapper::new, RecipeCategories.ROCKET_T5_ID);
@@ -105,5 +101,15 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.addRecipes(DensifierRecipeMaker.getRecipesList(), RecipeCategories.DENSIFIER_ID);
 
 		}
+	}
+
+	@Override
+	public void registerCategories(IRecipeCategoryRegistration registry) {
+		IGuiHelper guiHelper = registry.getJeiHelpers().getGuiHelper();
+		registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper), new Tier8RocketRecipeCategory(guiHelper),
+				new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper), new BlockSmasherRecipeCategory(guiHelper),
+				new SolarEvaporationChamberRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(guiHelper), new PurifierRecipeCategory(guiHelper),
+				new DensifierRecipeCategory(guiHelper));
+
 	}
 }

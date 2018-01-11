@@ -3,12 +3,10 @@ package com.mjr.extraplanets.jei.blocksmasher;
 import javax.annotation.Nonnull;
 
 import mezz.jei.api.ingredients.IIngredients;
-import mezz.jei.api.recipe.BlankRecipeWrapper;
-import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
+import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.item.ItemStack;
 
-@SuppressWarnings("deprecation")
-public class BlockSmasherRecipeWrapper extends BlankRecipeWrapper implements ICraftingRecipeWrapper {
+public class BlockSmasherRecipeWrapper implements IRecipeWrapper {
 	@Nonnull
 	private final ItemStack input;
 	@Nonnull

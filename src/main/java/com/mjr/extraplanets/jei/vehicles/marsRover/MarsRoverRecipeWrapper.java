@@ -3,15 +3,13 @@ package com.mjr.extraplanets.jei.vehicles.marsRover;
 import javax.annotation.Nonnull;
 
 import mezz.jei.api.ingredients.IIngredients;
-import mezz.jei.api.recipe.BlankRecipeWrapper;
-import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
+import mezz.jei.api.recipe.IRecipeWrapper;
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import net.minecraft.item.ItemStack;
 
 import com.google.common.collect.Lists;
 
-@SuppressWarnings("deprecation")
-public class MarsRoverRecipeWrapper extends BlankRecipeWrapper implements ICraftingRecipeWrapper {
+public class MarsRoverRecipeWrapper implements IRecipeWrapper {
 	@Nonnull
 	private final INasaWorkbenchRecipe recipe;
 

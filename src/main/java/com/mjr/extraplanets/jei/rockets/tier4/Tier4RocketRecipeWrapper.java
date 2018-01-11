@@ -3,15 +3,13 @@ package com.mjr.extraplanets.jei.rockets.tier4;
 import javax.annotation.Nonnull;
 
 import mezz.jei.api.ingredients.IIngredients;
-import mezz.jei.api.recipe.BlankRecipeWrapper;
-import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import net.minecraft.item.ItemStack;
+import mezz.jei.api.recipe.IRecipeWrapper;
 
 import com.google.common.collect.Lists;
 
-@SuppressWarnings("deprecation")
-public class Tier4RocketRecipeWrapper extends BlankRecipeWrapper implements ICraftingRecipeWrapper {
+public class Tier4RocketRecipeWrapper implements IRecipeWrapper {
 	@Nonnull
 	private final INasaWorkbenchRecipe recipe;
 

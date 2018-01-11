@@ -3,12 +3,10 @@ package com.mjr.extraplanets.jei.solarEvaporationChamber;
 import javax.annotation.Nonnull;
 
 import mezz.jei.api.ingredients.IIngredients;
-import mezz.jei.api.recipe.BlankRecipeWrapper;
-import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
+import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.item.ItemStack;
 
-@SuppressWarnings("deprecation")
-public class SolarEvaporationChamberRecipeWrapper extends BlankRecipeWrapper implements ICraftingRecipeWrapper {
+public class SolarEvaporationChamberRecipeWrapper implements IRecipeWrapper {
 	@Nonnull
 	private final ItemStack input;
 	@Nonnull
