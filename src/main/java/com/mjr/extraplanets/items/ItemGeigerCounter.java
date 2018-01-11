@@ -3,7 +3,6 @@ package com.mjr.extraplanets.items;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumAction;
