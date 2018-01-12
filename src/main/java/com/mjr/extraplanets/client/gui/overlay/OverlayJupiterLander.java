@@ -37,8 +37,8 @@ public class OverlayJupiterLander extends Overlay {
 		GL11.glScalef(2.0F, 2.0F, 0.0F);
 
 		if (OverlayJupiterLander.minecraft.thePlayer.getRidingEntity().motionY < -2.0) {
-			OverlayJupiterLander.minecraft.fontRendererObj.drawString(TranslateUtilities.translate("gui.warning"), width / 4 - OverlayJupiterLander.minecraft.fontRendererObj.getStringWidth(TranslateUtilities.translate("gui.warning")) / 2, height / 8 - 20,
-					ColorUtil.to32BitColor(255, 255, 0, 0));
+			OverlayJupiterLander.minecraft.fontRendererObj.drawString(TranslateUtilities.translate("gui.warning"), width / 4 - OverlayJupiterLander.minecraft.fontRendererObj.getStringWidth(TranslateUtilities.translate("gui.warning")) / 2,
+					height / 8 - 20, ColorUtil.to32BitColor(255, 255, 0, 0));
 			final int alpha = (int) (255 * Math.sin(OverlayJupiterLander.screenTicks / 20.0F));
 			final String press1 = TranslateUtilities.translate("gui.lander.warning2");
 			final String press2 = TranslateUtilities.translate("gui.lander.warning3");

@@ -43,8 +43,7 @@ public abstract class StructureComponentVillage extends StructureComponent {
 		this.villagersSpawned = nbttagcompound.getInteger("VCount");
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	protected StructureComponent getNextComponentNN(StructureComponentVillageStartPiece par1ComponentVillageStartPiece, List par2List, Random par3Random, int par4, int par5) {
+	protected StructureComponent getNextComponentNN(StructureComponentVillageStartPiece par1ComponentVillageStartPiece, List<StructureComponent> par2List, Random par3Random, int par4, int par5) {
 		switch (this.getCoordBaseMode().getHorizontalIndex()) {
 		case 0:
 			return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.minY + par4, this.boundingBox.minZ + par5, EnumFacing.getHorizontal(1),
@@ -63,8 +62,7 @@ public abstract class StructureComponentVillage extends StructureComponent {
 		}
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	protected StructureComponent getNextComponentPP(StructureComponentVillageStartPiece par1ComponentVillageStartPiece, List par2List, Random par3Random, int par4, int par5) {
+	protected StructureComponent getNextComponentPP(StructureComponentVillageStartPiece par1ComponentVillageStartPiece, List<StructureComponent> par2List, Random par3Random, int par4, int par5) {
 		switch (this.getCoordBaseMode().getHorizontalIndex()) {
 		case 0:
 			return StructureVillagePiecesPluto.getNextStructureComponent(par1ComponentVillageStartPiece, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.minY + par4, this.boundingBox.minZ + par5, EnumFacing.getHorizontal(3),

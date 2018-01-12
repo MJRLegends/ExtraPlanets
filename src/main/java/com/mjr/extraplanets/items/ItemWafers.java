@@ -30,15 +30,15 @@ public class ItemWafers extends Item {
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			if (itemStack != null){
-				if(itemStack.getItemDamage() == 0 || itemStack.getItemDamage() == 1)
+			if (itemStack != null) {
+				if (itemStack.getItemDamage() == 0 || itemStack.getItemDamage() == 1)
 					list.add(EnumColor.YELLOW + TranslateUtilities.translate("currently.unused.name"));
 				else
 					list.add(EnumColor.AQUA + TranslateUtilities.translate("wafter.uses.information"));
 			}
 		}
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack par1ItemStack) {
@@ -50,9 +50,8 @@ public class ItemWafers extends Item {
 		return this.getUnlocalizedName() + "." + ItemWafers.names[itemStack.getItemDamage()];
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
 		for (int i = 0; i < ItemWafers.names.length; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}

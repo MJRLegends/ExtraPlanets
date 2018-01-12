@@ -46,9 +46,8 @@ public class ItemTier5ThermalPadding extends Item implements IItemThermal {
 		return ExtraPlanets.ArmorTab;
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
 		for (int i = 0; i < ItemTier5ThermalPadding.names.length / 2; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
