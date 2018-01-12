@@ -53,7 +53,8 @@ public class ItemCannedFood extends Item {
 
 	@Override
 	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
-		if(!this.isInCreativeTab(par2CreativeTabs)) return;
+		if (!this.isInCreativeTab(par2CreativeTabs))
+			return;
 		for (int i = 0; i < ItemCannedFood.names.length; i++) {
 			par3List.add(new ItemStack(this, 1, i));
 		}
@@ -65,7 +66,6 @@ public class ItemCannedFood extends Item {
 	}
 
 	@Override
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> par3List, ITooltipFlag flagIn) {
 		if (par1ItemStack.getItemDamage() < 19) {

@@ -52,7 +52,8 @@ public class ItemMarsRover extends Item implements IHoldableItem {
 
 	@Override
 	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
-		if(!this.isInCreativeTab(par2CreativeTabs)) return;
+		if (!this.isInCreativeTab(par2CreativeTabs))
+			return;
 		for (int i = 0; i < 4; i++) {
 			par3List.add(new ItemStack(this, 1, i));
 		}
@@ -132,7 +133,6 @@ public class ItemMarsRover extends Item implements IHoldableItem {
 		}
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> par2List, ITooltipFlag flagIn) {

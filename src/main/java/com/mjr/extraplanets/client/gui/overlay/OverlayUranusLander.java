@@ -51,7 +51,8 @@ public class OverlayUranusLander extends Overlay {
 		GL11.glPopMatrix();
 
 		if (OverlayUranusLander.minecraft.player.getRidingEntity().motionY != 0.0D) {
-			String string = TranslateUtilities.translate("gui.lander.velocity") + ": " + Math.round(((EntityUranusLander) OverlayUranusLander.minecraft.player.getRidingEntity()).motionY * 1000) / 100.0D + " " + TranslateUtilities.translate("gui.lander.velocityu");
+			String string = TranslateUtilities.translate("gui.lander.velocity") + ": " + Math.round(((EntityUranusLander) OverlayUranusLander.minecraft.player.getRidingEntity()).motionY * 1000) / 100.0D + " "
+					+ TranslateUtilities.translate("gui.lander.velocityu");
 			int color = ColorUtil.to32BitColor(255, (int) Math.floor(Math.abs(OverlayUranusLander.minecraft.player.getRidingEntity().motionY) * 51.0D),
 					255 - (int) Math.floor(Math.abs(OverlayUranusLander.minecraft.player.getRidingEntity().motionY) * 51.0D), 0);
 			OverlayUranusLander.minecraft.fontRenderer.drawString(string, width / 2 - OverlayUranusLander.minecraft.fontRenderer.getStringWidth(string) / 2, height / 3, color);

@@ -42,7 +42,8 @@ public class ItemKeyT10 extends Item implements IKeyItem, ISortableItem {
 
 	@Override
 	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
-		if(!this.isInCreativeTab(par2CreativeTabs)) return;
+		if (!this.isInCreativeTab(par2CreativeTabs))
+			return;
 		par3List.add(new ItemStack(this, 1, 0));
 	}
 

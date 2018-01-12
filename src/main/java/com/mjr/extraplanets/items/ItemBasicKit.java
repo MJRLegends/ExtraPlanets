@@ -48,7 +48,8 @@ public class ItemBasicKit extends Item {
 
 	@Override
 	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
-		if(!this.isInCreativeTab(par2CreativeTabs)) return;
+		if (!this.isInCreativeTab(par2CreativeTabs))
+			return;
 		for (int i = 0; i < ItemBasicKit.names.length; i++) {
 			par3List.add(new ItemStack(this, 1, i));
 		}

@@ -120,7 +120,8 @@ public class UltimateOxygenCompressor extends BlockAdvancedTile implements IShif
 
 	@Override
 	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> par3List) {
-		if(!(this.getCreativeTabToDisplayOn() == tab)) return;
+		if (!(this.getCreativeTabToDisplayOn() == tab))
+			return;
 		par3List.add(new ItemStack(this, 1, UltimateOxygenCompressor.OXYGEN_COMPRESSOR_METADATA));
 		par3List.add(new ItemStack(this, 1, UltimateOxygenCompressor.OXYGEN_DECOMPRESSOR_METADATA));
 	}

@@ -116,8 +116,8 @@ public class GuiBasicDensifier extends GuiContainerGC {
 		inputTankDesc.add(TranslateUtilities.translate("gui.message.general.tank.name"));
 		int fuelLevel = this.tileEntity.inputTank != null && this.tileEntity.inputTank.getFluid() != null ? this.tileEntity.inputTank.getFluid().amount : 0;
 		int fuelCapacity = this.tileEntity.inputTank != null ? this.tileEntity.inputTank.getCapacity() : 0;
-		inputTankDesc.add(EnumColor.YELLOW + TranslateUtilities.translate("gui.message.general.tank.fluid.name") + " " + (this.tileEntity.inputTank.getFluid() == null ? "" : this.tileEntity.inputTank.getFluid().getLocalizedName()) + ": " + fuelLevel + " / "
-				+ fuelCapacity);
+		inputTankDesc.add(EnumColor.YELLOW + TranslateUtilities.translate("gui.message.general.tank.fluid.name") + " " + (this.tileEntity.inputTank.getFluid() == null ? "" : this.tileEntity.inputTank.getFluid().getLocalizedName()) + ": " + fuelLevel
+				+ " / " + fuelCapacity);
 		this.inputTankRegion.tooltipStrings = inputTankDesc;
 
 		List<String> electricityDesc = new ArrayList<String>();

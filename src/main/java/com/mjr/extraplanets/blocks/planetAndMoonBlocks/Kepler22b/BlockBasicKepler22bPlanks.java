@@ -39,7 +39,8 @@ public class BlockBasicKepler22bPlanks extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
-		if(!(this.getCreativeTabToDisplayOn() == tab)) return;
+		if (!(this.getCreativeTabToDisplayOn() == tab))
+			return;
 		for (BlockBasicKepler22bPlanks.EnumType blockplanks$enumtype : BlockBasicKepler22bPlanks.EnumType.values()) {
 			list.add(new ItemStack(this, 1, blockplanks$enumtype.getMetadata()));
 		}

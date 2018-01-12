@@ -52,7 +52,8 @@ public class ItemTier3ThermalPadding extends Item implements IItemThermal {
 
 	@Override
 	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
-		if(!this.isInCreativeTab(par2CreativeTabs)) return;
+		if (!this.isInCreativeTab(par2CreativeTabs))
+			return;
 		for (int i = 0; i < ItemTier3ThermalPadding.names.length / 2; i++) {
 			par3List.add(new ItemStack(this, 1, i));
 		}
