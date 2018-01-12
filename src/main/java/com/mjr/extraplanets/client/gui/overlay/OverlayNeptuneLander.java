@@ -37,8 +37,8 @@ public class OverlayNeptuneLander extends Overlay {
 		GL11.glScalef(2.0F, 2.0F, 0.0F);
 
 		if (OverlayNeptuneLander.minecraft.thePlayer.ridingEntity.motionY < -2.0) {
-			OverlayNeptuneLander.minecraft.fontRendererObj.drawString(TranslateUtilities.translate("gui.warning"), width / 4 - OverlayNeptuneLander.minecraft.fontRendererObj.getStringWidth(TranslateUtilities.translate("gui.warning")) / 2, height / 8 - 20,
-					ColorUtil.to32BitColor(255, 255, 0, 0));
+			OverlayNeptuneLander.minecraft.fontRendererObj.drawString(TranslateUtilities.translate("gui.warning"), width / 4 - OverlayNeptuneLander.minecraft.fontRendererObj.getStringWidth(TranslateUtilities.translate("gui.warning")) / 2,
+					height / 8 - 20, ColorUtil.to32BitColor(255, 255, 0, 0));
 			final int alpha = (int) (255 * Math.sin(OverlayNeptuneLander.screenTicks / 20.0F));
 			final String press1 = TranslateUtilities.translate("gui.lander.warning2");
 			final String press2 = TranslateUtilities.translate("gui.lander.warning3");
@@ -50,7 +50,8 @@ public class OverlayNeptuneLander extends Overlay {
 		GL11.glPopMatrix();
 
 		if (OverlayNeptuneLander.minecraft.thePlayer.ridingEntity.motionY != 0.0D) {
-			String string = TranslateUtilities.translate("gui.lander.velocity") + ": " + Math.round(((EntityNeptuneLander) OverlayNeptuneLander.minecraft.thePlayer.ridingEntity).motionY * 1000) / 100.0D + " " + TranslateUtilities.translate("gui.lander.velocityu");
+			String string = TranslateUtilities.translate("gui.lander.velocity") + ": " + Math.round(((EntityNeptuneLander) OverlayNeptuneLander.minecraft.thePlayer.ridingEntity).motionY * 1000) / 100.0D + " "
+					+ TranslateUtilities.translate("gui.lander.velocityu");
 			int color = ColorUtil.to32BitColor(255, (int) Math.floor(Math.abs(OverlayNeptuneLander.minecraft.thePlayer.ridingEntity.motionY) * 51.0D),
 					255 - (int) Math.floor(Math.abs(OverlayNeptuneLander.minecraft.thePlayer.ridingEntity.motionY) * 51.0D), 0);
 			OverlayNeptuneLander.minecraft.fontRendererObj.drawString(string, width / 2 - OverlayNeptuneLander.minecraft.fontRendererObj.getStringWidth(string) / 2, height / 3, color);

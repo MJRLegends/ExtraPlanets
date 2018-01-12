@@ -114,10 +114,9 @@ public class BlockBasicDeimos extends Block implements IDetectableResource, IPla
 		return 1;
 	}
 
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
+	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
 		for (EnumBlockBasic blockBasic : EnumBlockBasic.values()) {
 			par3List.add(new ItemStack(par1, 1, blockBasic.getMeta()));
 		}
