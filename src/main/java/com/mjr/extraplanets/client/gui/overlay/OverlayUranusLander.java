@@ -37,8 +37,8 @@ public class OverlayUranusLander extends Overlay {
 		GL11.glScalef(2.0F, 2.0F, 0.0F);
 
 		if (OverlayUranusLander.minecraft.player.getRidingEntity().motionY < -2.0) {
-			OverlayUranusLander.minecraft.fontRendererObj.drawString(TranslateUtilities.translate("gui.warning"), width / 4 - OverlayUranusLander.minecraft.fontRendererObj.getStringWidth(TranslateUtilities.translate("gui.warning")) / 2, height / 8 - 20,
-					ColorUtil.to32BitColor(255, 255, 0, 0));
+			OverlayUranusLander.minecraft.fontRendererObj.drawString(TranslateUtilities.translate("gui.warning"), width / 4 - OverlayUranusLander.minecraft.fontRendererObj.getStringWidth(TranslateUtilities.translate("gui.warning")) / 2,
+					height / 8 - 20, ColorUtil.to32BitColor(255, 255, 0, 0));
 			final int alpha = (int) (255 * Math.sin(OverlayUranusLander.screenTicks / 20.0F));
 			final String press1 = TranslateUtilities.translate("gui.lander.warning2");
 			final String press2 = TranslateUtilities.translate("gui.lander.warning3");
@@ -50,7 +50,8 @@ public class OverlayUranusLander extends Overlay {
 		GL11.glPopMatrix();
 
 		if (OverlayUranusLander.minecraft.player.getRidingEntity().motionY != 0.0D) {
-			String string = TranslateUtilities.translate("gui.lander.velocity") + ": " + Math.round(((EntityUranusLander) OverlayUranusLander.minecraft.player.getRidingEntity()).motionY * 1000) / 100.0D + " " + TranslateUtilities.translate("gui.lander.velocityu");
+			String string = TranslateUtilities.translate("gui.lander.velocity") + ": " + Math.round(((EntityUranusLander) OverlayUranusLander.minecraft.player.getRidingEntity()).motionY * 1000) / 100.0D + " "
+					+ TranslateUtilities.translate("gui.lander.velocityu");
 			int color = ColorUtil.to32BitColor(255, (int) Math.floor(Math.abs(OverlayUranusLander.minecraft.player.getRidingEntity().motionY) * 51.0D),
 					255 - (int) Math.floor(Math.abs(OverlayUranusLander.minecraft.player.getRidingEntity().motionY) * 51.0D), 0);
 			OverlayUranusLander.minecraft.fontRendererObj.drawString(string, width / 2 - OverlayUranusLander.minecraft.fontRendererObj.getStringWidth(string) / 2, height / 3, color);

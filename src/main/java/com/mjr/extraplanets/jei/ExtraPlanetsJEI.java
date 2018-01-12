@@ -100,9 +100,10 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 
 		}
 	}
-		@Override
-		public void registerCategories(IRecipeCategoryRegistration registry) {
-			if (Config.JEI_SUPPORT) {
+
+	@Override
+	public void registerCategories(IRecipeCategoryRegistration registry) {
+		if (Config.JEI_SUPPORT) {
 			IGuiHelper guiHelper = registry.getJeiHelpers().getGuiHelper();
 			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper),
 					new Tier8RocketRecipeCategory(guiHelper), new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper),

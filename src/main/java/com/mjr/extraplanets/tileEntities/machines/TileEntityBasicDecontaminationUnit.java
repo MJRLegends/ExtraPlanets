@@ -53,10 +53,10 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 	@Override
 	public void update() {
 		if (!this.world.isRemote) {
-			List<EntityPlayerMP> containedEntities = world.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2,
-					this.getPos().getZ() + 1));
+			List<EntityPlayerMP> containedEntities = world.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2, this
+					.getPos().getZ() + 1));
 			if (containedEntities.size() == 1) {
-				EntityPlayerMP player = ((EntityPlayerMP) containedEntities.get(0));
+				EntityPlayerMP player = (containedEntities.get(0));
 				if (this.storage.getEnergyStoredGC() >= 1000000) {
 					IStatsCapability stats = null;
 					if (player != null) {
@@ -80,7 +80,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 							+ ", You need to add more power to use this! The machine needs 1,000,000 gJ or 625,000 RF per use!"));
 			} else if (this.ticks % 40 == 0)
 				for (int i = 0; i < containedEntities.size(); i++) {
-					EntityPlayerMP player = ((EntityPlayerMP) containedEntities.get(i));
+					EntityPlayerMP player = (containedEntities.get(i));
 					player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You currently have to many people within the machine! Only 1 Player is allowed!"));
 				}
 		}

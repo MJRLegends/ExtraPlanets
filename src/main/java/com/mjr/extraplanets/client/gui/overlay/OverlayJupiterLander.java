@@ -37,8 +37,8 @@ public class OverlayJupiterLander extends Overlay {
 		GL11.glScalef(2.0F, 2.0F, 0.0F);
 
 		if (OverlayJupiterLander.minecraft.player.getRidingEntity().motionY < -2.0) {
-			OverlayJupiterLander.minecraft.fontRendererObj.drawString(TranslateUtilities.translate("gui.warning"), width / 4 - OverlayJupiterLander.minecraft.fontRendererObj.getStringWidth(TranslateUtilities.translate("gui.warning")) / 2, height / 8 - 20,
-					ColorUtil.to32BitColor(255, 255, 0, 0));
+			OverlayJupiterLander.minecraft.fontRendererObj.drawString(TranslateUtilities.translate("gui.warning"), width / 4 - OverlayJupiterLander.minecraft.fontRendererObj.getStringWidth(TranslateUtilities.translate("gui.warning")) / 2,
+					height / 8 - 20, ColorUtil.to32BitColor(255, 255, 0, 0));
 			final int alpha = (int) (255 * Math.sin(OverlayJupiterLander.screenTicks / 20.0F));
 			final String press1 = TranslateUtilities.translate("gui.lander.warning2");
 			final String press2 = TranslateUtilities.translate("gui.lander.warning3");
@@ -50,7 +50,8 @@ public class OverlayJupiterLander extends Overlay {
 		GL11.glPopMatrix();
 
 		if (OverlayJupiterLander.minecraft.player.getRidingEntity().motionY != 0.0D) {
-			String string = TranslateUtilities.translate("gui.lander.velocity") + ": " + Math.round(((EntityJupiterLander) OverlayJupiterLander.minecraft.player.getRidingEntity()).motionY * 1000) / 100.0D + " " + TranslateUtilities.translate("gui.lander.velocityu");
+			String string = TranslateUtilities.translate("gui.lander.velocity") + ": " + Math.round(((EntityJupiterLander) OverlayJupiterLander.minecraft.player.getRidingEntity()).motionY * 1000) / 100.0D + " "
+					+ TranslateUtilities.translate("gui.lander.velocityu");
 			int color = ColorUtil.to32BitColor(255, (int) Math.floor(Math.abs(OverlayJupiterLander.minecraft.player.getRidingEntity().motionY) * 51.0D),
 					255 - (int) Math.floor(Math.abs(OverlayJupiterLander.minecraft.player.getRidingEntity().motionY) * 51.0D), 0);
 			OverlayJupiterLander.minecraft.fontRendererObj.drawString(string, width / 2 - OverlayJupiterLander.minecraft.fontRendererObj.getStringWidth(string) / 2, height / 3, color);

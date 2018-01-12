@@ -676,7 +676,7 @@ public class ExtraPlanets_Recipes {
 
 			// Block to Nickel
 			RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 9, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1, 14) });
-			
+
 			// Stone Bricks
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 4, 11), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1, 1) });
 

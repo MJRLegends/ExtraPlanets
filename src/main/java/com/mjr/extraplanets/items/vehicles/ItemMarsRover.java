@@ -128,10 +128,9 @@ public class ItemMarsRover extends Item implements IHoldableItem {
 		}
 	}
 
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List par2List, boolean b) {
+	public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List<String> par2List, boolean b) {
 		if (par1ItemStack.getItemDamage() != 0) {
 			par2List.add(TranslateUtilities.translate("gui.buggy.storage_space") + ": " + par1ItemStack.getItemDamage() * 18);
 		}
