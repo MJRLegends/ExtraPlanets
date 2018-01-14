@@ -158,8 +158,10 @@ public class ExtraPlanets {
 
 	@Instance(Constants.modID)
 	public static ExtraPlanets instance;
-
 	public static ExtraPlanetsChannelHandler packetPipeline;
+
+	// Generate recipe JSON's (For use in Dev Workspace Only)
+	public static boolean generateRecipes = false;
 
 	// Block/Item/Biome Events Registering Lists
 	public static List<Item> itemList = new ArrayList<>();
@@ -343,9 +345,12 @@ public class ExtraPlanets {
 
 		// Register Custom Recipe Type
 		// RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
-		
-		ExtraPlanets_RecipeGeneration.generate();
-		ExtraPlanets_RecipeGeneration.generateConstants();
+
+		// Generate recipe JSON's (For use in Dev Workspace Only)
+		if (generateRecipes) {
+			ExtraPlanets_RecipeGeneration.generate();
+			ExtraPlanets_RecipeGeneration.generateConstants();
+		}
 
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
