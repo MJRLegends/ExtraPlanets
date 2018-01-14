@@ -130,6 +130,8 @@ public class ItemMarsRover extends Item implements IHoldableItem {
 		if (par1ItemStack.getItemDamage() != 0) {
 			par2List.add(TranslateUtilities.translate("gui.buggy.storage_space") + ": " + par1ItemStack.getItemDamage() * 18);
 		}
+		par2List.add(TranslateUtilities.translate("gui.rover.information"));
+		par2List.add(TranslateUtilities.translate("gui.rover.information.2"));
 	}
 
 	@Override
