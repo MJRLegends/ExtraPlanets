@@ -505,6 +505,8 @@ gui.battery_slot.desc.custom=Recommended to use a Massive Battery
 gui.radiation.cancel.message=You can use Oxygen Sealers with a Ambient Thermal Controller upgrade for full protection from Radiation & Pressure
 currently.unused.name=Currently Unused!
 wafter.uses.information=Used for Space Station Recipes
+gui.rover.information=Use with a Vehicle Charging Pad
+gui.rover.information.2=Attach a Vehicle Charger to the pad to charge
 
 #Celestial Selection Screen GUI Components
 gui.celestial_details.name=Celestial Details
