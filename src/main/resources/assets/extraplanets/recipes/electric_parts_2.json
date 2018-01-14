@@ -8,6 +8,12 @@
     "WXW",
     " W "
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "rovers"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "W": {

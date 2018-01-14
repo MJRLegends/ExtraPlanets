@@ -8,6 +8,12 @@
     " X ",
     "X X"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "uranus"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {

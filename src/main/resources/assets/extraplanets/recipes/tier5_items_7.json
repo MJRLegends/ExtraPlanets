@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "extraplanets:tier5_items",
+    "data": 7,
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "extraplanets:jupiter",
+      "data": 13
+    }
+  ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "jupiter"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

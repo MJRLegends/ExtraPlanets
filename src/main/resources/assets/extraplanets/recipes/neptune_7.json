@@ -8,6 +8,12 @@
     "XXX",
     "XXX"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "neptune"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {

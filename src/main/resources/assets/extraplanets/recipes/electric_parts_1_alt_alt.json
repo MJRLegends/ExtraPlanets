@@ -1,0 +1,27 @@
+{
+  "result": {
+    "item": "extraplanets:electric_parts",
+    "data": 1
+  },
+  "pattern": [
+    "XWX",
+    "WXW",
+    "XWX"
+  ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "rovers"
+    }
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "W": {
+      "item": "#INGOTDESH"
+    },
+    "X": {
+      "item": "galacticraftplanets:basic_item_venus",
+      "data": 1
+    }
+  }
+}

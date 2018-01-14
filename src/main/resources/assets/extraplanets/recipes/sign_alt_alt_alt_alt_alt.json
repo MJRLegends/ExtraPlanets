@@ -8,6 +8,12 @@
     "DDD",
     " S "
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "kepler22b"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "S": {

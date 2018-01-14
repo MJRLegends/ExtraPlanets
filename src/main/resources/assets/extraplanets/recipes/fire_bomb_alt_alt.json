@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "extraplanets:fire_bomb"
+  },
+  "pattern": [
+    "GZG",
+    "SLS",
+    "GLG"
+  ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "saturn"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "S": {
+      "item": "minecraft:sand",
+      "data": 0
+    },
+    "G": {
+      "item": "extraplanets:ingot_uranium",
+      "data": 0
+    },
+    "Z": {
+      "item": "extraplanets:tier6_items",
+      "data": 5
+    },
+    "L": {
+      "item": "extraplanets:ingot_lead",
+      "data": 0
+    }
+  }
+}

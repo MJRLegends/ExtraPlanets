@@ -7,6 +7,12 @@
     "SUS",
     "GSG"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "ceres"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "S": {

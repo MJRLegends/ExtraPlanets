@@ -10,5 +10,11 @@
       "data": 4
     }
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "uranus"
+    }
+  ],
   "type": "minecraft:crafting_shapeless"
 }

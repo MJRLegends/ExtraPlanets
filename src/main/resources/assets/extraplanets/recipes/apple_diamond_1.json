@@ -8,6 +8,12 @@
     "DAD",
     "DDD"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "customapples"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "A": {

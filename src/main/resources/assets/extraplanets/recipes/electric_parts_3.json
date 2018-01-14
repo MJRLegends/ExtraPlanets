@@ -8,6 +8,12 @@
     "WXW",
     " W "
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "rovers"
+    }
+  ],
   "type": "forge:ore_shaped",
   "key": {
     "W": {

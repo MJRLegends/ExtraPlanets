@@ -1,0 +1,26 @@
+{
+  "result": {
+    "item": "extraplanets:basic_chemical_injector"
+  },
+  "pattern": [
+    "UUU",
+    "PPP",
+    "UUU"
+  ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "radiation"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "minecraft:piston"
+    },
+    "U": {
+      "item": "extraplanets:potassium",
+      "data": 0
+    }
+  }
+}

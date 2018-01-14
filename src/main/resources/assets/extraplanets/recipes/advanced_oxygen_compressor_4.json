@@ -8,6 +8,12 @@
     "YZY",
     "ZYZ"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "oxygencompressoradvanced"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "Y": {

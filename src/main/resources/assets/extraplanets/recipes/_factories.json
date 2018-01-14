@@ -1,0 +1,5 @@
+{
+  "conditions": {
+    "recipe_enabled": "com.mjr.extraplanets.recipes.RecipeEnabledCondition"
+  }
+}

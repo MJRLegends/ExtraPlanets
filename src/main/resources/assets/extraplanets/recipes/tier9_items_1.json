@@ -8,6 +8,12 @@
     "ZWZ",
     "XVX"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "pluto"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "V": {

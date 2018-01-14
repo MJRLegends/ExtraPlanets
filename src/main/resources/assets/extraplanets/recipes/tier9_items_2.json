@@ -8,6 +8,12 @@
     "XYX",
     "X X"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "pluto"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "X": {

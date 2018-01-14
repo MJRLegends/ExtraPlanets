@@ -7,6 +7,12 @@
     " S ",
     " S "
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "yellowdiamondtools"
+    }
+  ],
   "type": "forge:ore_shaped",
   "key": {
     "S": {

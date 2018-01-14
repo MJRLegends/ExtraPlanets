@@ -1,0 +1,24 @@
+{
+  "result": {
+    "item": "extraplanets:kepler22b",
+    "data": 14
+  },
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "kepler22b"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": {
+      "item": "extraplanets:tier11_items",
+      "data": 5
+    }
+  }
+}

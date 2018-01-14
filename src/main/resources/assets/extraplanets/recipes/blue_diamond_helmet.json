@@ -7,6 +7,12 @@
     "MMM",
     "M M"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "bluediamondtools"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "M": {

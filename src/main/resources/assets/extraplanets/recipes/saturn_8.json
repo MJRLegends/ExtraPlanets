@@ -9,6 +9,12 @@
     "SS ",
     "SS "
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "saturn"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "S": {

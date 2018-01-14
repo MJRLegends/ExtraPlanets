@@ -10,5 +10,11 @@
       "data": 7
     }
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "pluto"
+    }
+  ],
   "type": "minecraft:crafting_shapeless"
 }

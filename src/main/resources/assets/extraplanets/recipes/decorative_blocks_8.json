@@ -8,6 +8,12 @@
     "CC ",
     "CC "
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "jupiter"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "C": {

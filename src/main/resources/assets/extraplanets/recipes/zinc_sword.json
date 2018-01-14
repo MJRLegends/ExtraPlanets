@@ -7,6 +7,12 @@
     " X ",
     " S "
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "zinctools"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "S": {

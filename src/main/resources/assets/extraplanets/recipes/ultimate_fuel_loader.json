@@ -7,6 +7,12 @@
     "XZX",
     "WYW"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "fuelloaderadvanced"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "W": {

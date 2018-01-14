@@ -7,6 +7,12 @@
     "SFS",
     "VBE"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "radiation"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "B": {

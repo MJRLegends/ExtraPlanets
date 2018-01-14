@@ -8,6 +8,12 @@
     "MMM",
     "M M"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "pressureandradiation"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "R": {

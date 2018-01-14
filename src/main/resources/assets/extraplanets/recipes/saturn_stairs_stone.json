@@ -8,6 +8,12 @@
     "MM ",
     "MMM"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "saturnslabsandstairs"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "M": {

@@ -10,5 +10,11 @@
       "data": 8
     }
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "jupiter"
+    }
+  ],
   "type": "minecraft:crafting_shapeless"
 }

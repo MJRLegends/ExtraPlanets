@@ -7,6 +7,12 @@
     "YZY",
     "ZYZ"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "refinery_advanced"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "Y": {

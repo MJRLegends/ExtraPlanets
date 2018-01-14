@@ -7,6 +7,12 @@
     "TRT",
     "TCT"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "batteries"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "R": {

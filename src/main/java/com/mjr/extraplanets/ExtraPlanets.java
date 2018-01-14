@@ -125,6 +125,7 @@ import com.mjr.extraplanets.planets.Saturn.worldgen.SaturnBiomes;
 import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
 import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
 import com.mjr.extraplanets.proxy.CommonProxy;
+import com.mjr.extraplanets.recipes.ExtraPlanets_RecipeGeneration;
 import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
 import com.mjr.extraplanets.recipes.MarsRoverRecipes;
 import com.mjr.extraplanets.recipes.Tier10ElectricRocketRecipes;
@@ -342,6 +343,9 @@ public class ExtraPlanets {
 
 		// Register Custom Recipe Type
 		// RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
+		
+		ExtraPlanets_RecipeGeneration.generate();
+		ExtraPlanets_RecipeGeneration.generateConstants();
 
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);

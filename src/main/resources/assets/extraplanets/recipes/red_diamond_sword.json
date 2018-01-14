@@ -7,6 +7,12 @@
     " X ",
     " S "
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "reddiamondtools"
+    }
+  ],
   "type": "forge:ore_shaped",
   "key": {
     "S": {
