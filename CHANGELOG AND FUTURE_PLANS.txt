@@ -15,6 +15,29 @@
 
 
 ===========================================Released Updates===========================================
+v0.1.2
+*Refactoring to use Model Utilities & Translate Utilities classes from MJRLegends Lib
+*Changed requirement of MJRLegendsLib to 1.12.2-1.0.3 & above
+*Added class containing all current recipes for future possible json generation
+*Added Block of Nickel &* Platinum
+
+*Fixed spelling error for Kepler22b Ore Platinum
+
+*Changed Mars/ Venus Rover Schematics textures
+*Added Tool tips for Custom Wafers to tell the player where they are used
+
+*Updated lang files
+
+*Added Block of Nickel & Platinum recipes (in Generation Class)
+*Updated JEI Support from JEI 4.5 to 4.8
+
+*Fixed warning with JEI Support classes
+
+*Fixed some raw type warnings
+*Fixed a few deprecated methods
+*Clean up/Fix formatting
+
+
 v0.1.1
 *Fixed creative tabs issue, removed tools and armour tabs
 *Fixed double registering of the Callisto biome
