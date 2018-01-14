@@ -282,7 +282,8 @@ public class MainHandlerClient {
 			event.setDensity(0.01f);
 			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 			event.setCanceled(true);
-		}
+		} else
+			GL11.glFogi(GL11.GL_EXP, GL11.GL_EXP);
 	}
 
 	@SubscribeEvent
