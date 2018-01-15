@@ -161,7 +161,7 @@ public class ExtraPlanets {
 	public static ExtraPlanetsChannelHandler packetPipeline;
 
 	// Generate recipe JSON's (For use in Dev Workspace Only)
-	public static boolean generateRecipes = false;
+	public static boolean generateRecipes = true;
 
 	// Block/Item/Biome Events Registering Lists
 	public static List<Item> itemList = new ArrayList<>();

@@ -8,15 +8,14 @@
     "DCD",
     " D "
   ],
-  "type": "minecraft:crafting_shaped",
+  "type": "forge:ore_shaped",
   "key": {
     "C": {
       "item": "extraplanets:cake_blocks",
       "data": 4
     },
     "D": {
-      "item": "minecraft:dye",
-      "data": 9
+      "item": "#DYEPINK"
     }
   }
 }

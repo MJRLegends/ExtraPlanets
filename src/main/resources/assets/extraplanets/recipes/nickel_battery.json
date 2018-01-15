@@ -13,10 +13,10 @@
       "value": "jupiter/batteries"
     }
   ],
-  "type": "minecraft:crafting_shaped",
+  "type": "forge:ore_shaped",
   "key": {
     "R": {
-      "item": "minecraft:redstone"
+      "item": "#DUSTREDSTONE"
     },
     "C": {
       "item": "minecraft:coal",

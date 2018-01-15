@@ -13,10 +13,10 @@
       "value": "magnesiumtools"
     }
   ],
-  "type": "minecraft:crafting_shaped",
+  "type": "forge:ore_shaped",
   "key": {
     "S": {
-      "item": "minecraft:stick"
+      "item": "#STICKWOOD"
     },
     "X": {
       "item": "extraplanets:tier6_items",

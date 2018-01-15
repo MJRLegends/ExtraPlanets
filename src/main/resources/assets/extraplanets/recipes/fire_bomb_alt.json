@@ -13,7 +13,7 @@
       "value": "saturn"
     }
   ],
-  "type": "minecraft:crafting_shaped",
+  "type": "forge:ore_shaped",
   "key": {
     "S": {
       "item": "minecraft:sand",
@@ -28,8 +28,7 @@
       "data": 5
     },
     "L": {
-      "item": "extraplanets:ingot_lead",
-      "data": 0
+      "item": "#INGOTLEAD"
     }
   }
 }

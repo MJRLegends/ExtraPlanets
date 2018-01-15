@@ -14,10 +14,10 @@
       "value": "kepler22b"
     }
   ],
-  "type": "minecraft:crafting_shaped",
+  "type": "forge:ore_shaped",
   "key": {
     "S": {
-      "item": "minecraft:stick"
+      "item": "#STICKWOOD"
     },
     "D": {
       "item": "extraplanets:kepler22b_planks",
