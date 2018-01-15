@@ -10,7 +10,7 @@ import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.moons.Oberon.worldgen.BiomeGenOberon;
+import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberon;
 import com.mjr.extraplanets.util.MessageUtilities;
 
 public class MapGenVillageOberon extends MapGenStructure {

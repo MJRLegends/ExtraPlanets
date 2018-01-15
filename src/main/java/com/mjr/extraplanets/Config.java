@@ -183,6 +183,8 @@ public class Config {
 	public static int titanSeaBiomeID;
 	public static int titanMethaneHillsBiomeID;
 	public static int oberonBiomeID;
+	public static int oberonValleysBiomeID;
+	public static int oberonLargeMountainBiomeID;
 	public static int titaniaBiomeID;
 	public static int iapetusBiomeID;
 
@@ -490,8 +492,8 @@ public class Config {
 		ioAshLandsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Ash Lands Biome ID", 190, "[range: 0 ~ 255, default: 190]").getInt();
 		uranusFrozenSeaBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Frozen Sea Biome ID", 191, "[range: 0 ~ 255, default: 191]").getInt();
 		uranusSnowLandsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Snow Lands Biome ID", 192, "[range: 0 ~ 255, default: 192]").getInt();
-		// OBERON_LARGE_MOUNTAIN_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Large Mountain Biome ID", 193, "[range: 0 ~ 255, default: 193]").getInt();
-		// OBERON_VALLEYS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Valleys Biome ID", 194, "[range: 0 ~ 255, default: 194]").getInt();
+		oberonLargeMountainBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Large Mountain Biome ID", 193, "[range: 0 ~ 255, default: 193]").getInt();
+		oberonValleysBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Oberon Valleys Biome ID", 194, "[range: 0 ~ 255, default: 194]").getInt();
 		kepler22bWasteLandsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Waste Lands Biome ID", 195, "[range: 0 ~ 255, default: 195]").getInt();
 		jupiterSandsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Jupiter Sands Biome ID", 196, "[range: 0 ~ 255, default: 196]").getInt();
 		// KEPLER22B_CANDY_LAND_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Candy Land Biome ID", 197, "[range: 0 ~ 255, default: 197]").getInt();
