@@ -133,11 +133,8 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 		if (par1ItemStack.getItemDamage() != 0) {
 			par2List.add(GCCoreUtil.translate("gui.buggy.storageSpace") + ": " + par1ItemStack.getItemDamage() * 18);
 		}
-
-		// if (par1ItemStack.hasTagCompound() && par1ItemStack.getTagCompound().hasKey("BuggyFuel"))
-		// {
-		// par2List.add(GCCoreUtil.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("BuggyFuel") + " / " + EntityVenusRover.tankCapacity);
-		// }
+        par2List.add(GCCoreUtil.translate("gui.rover.information"));
+        par2List.add(GCCoreUtil.translate("gui.rover.information.2"));
 	}
 
 	@Override
