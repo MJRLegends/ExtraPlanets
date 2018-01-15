@@ -64,7 +64,6 @@ public class TeleportTypePluto implements ITeleportType {
 
 	@Override
 	public void setupAdventureSpawn(EntityPlayerMP player) {
-		// TODO Auto-generated method stub
 
 	}
 }
