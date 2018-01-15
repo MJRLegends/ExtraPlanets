@@ -46,7 +46,9 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	private ItemStack producingStack = null;
 
 	@NetworkedField(targetSide = Side.CLIENT)
-	public int outputTextureOffset;
+	public int outputTextureOffsetX;
+	@NetworkedField(targetSide = Side.CLIENT)
+	public int outputTextureOffsetY;
 
 	public TileEntityBasicDensifier() {
 		inputTank = new FluidTank(this.tankCapacity);
@@ -180,20 +182,27 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public void updateTextureOffset() {
 		if (this.inputTank.getFluid() == null)
 			return;
-		if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0)))
-			this.outputTextureOffset = 48;
-		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID, 0)))
-			this.outputTextureOffset = 16;
-		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0)))
-			this.outputTextureOffset = 0;
-		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.GLOWSTONE_FLUID, 0)))
-			this.outputTextureOffset = 0; // TODO Add texture
-		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_FLUID, 0)))
-			this.outputTextureOffset = 0; // TODO Add texture
-		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.FROZEN_WATER_FLUID, 0)))
-			this.outputTextureOffset = 0; // TODO Add texture
-		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID, 0)))
-			this.outputTextureOffset = 0; // TODO Add texture
+		if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0))) {
+			this.outputTextureOffsetX = 48;
+			this.outputTextureOffsetY = 0;
+		} else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID, 0))) {
+			this.outputTextureOffsetX = 16;
+			this.outputTextureOffsetY = 0;
+		} else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0))) {
+			this.outputTextureOffsetX = 0;
+			this.outputTextureOffsetY = 0;
+		} else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.GLOWSTONE_FLUID, 0)))
+			this.outputTextureOffsetX = 64;
+		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_FLUID, 0))) {
+			this.outputTextureOffsetX = 0;
+			this.outputTextureOffsetY = 45;
+		} else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.FROZEN_WATER_FLUID, 0))) {
+			this.outputTextureOffsetX = 0;
+			this.outputTextureOffsetY = 45;
+		} else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID, 0))) {
+			this.outputTextureOffsetX = 16;
+			this.outputTextureOffsetY = 45;
+		}
 	}
 
 	public int getScaledFuelLevel(int i) {
