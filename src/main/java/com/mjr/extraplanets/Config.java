@@ -265,7 +265,6 @@ public class Config {
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Advanced options for Celestial Body Map to change locations of planets and solar systems! (For Advanced Users ONLY!)");
 
 		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_DIMENSION_IDS, true);
-		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_BIOME_IDS, true);
 		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, true);
 		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, true);
 		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, true);
@@ -552,11 +551,7 @@ public class Config {
 		ConfigCategory configDimensionSettings = config.getCategory(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS);
 		configDimensionSettings.setComment("Dimension Settings");
 		list.add(new ConfigElement(configDimensionSettings));
-		
-		ConfigCategory configBiomeIDs = config.getCategory(Constants.CONFIG_CATEGORY_BIOME_IDS);
-		configBiomeIDs.setComment("Biome IDs;");
-		list.add(new ConfigElement(configBiomeIDs));
-		
+	
 		ConfigCategory configItems = config.getCategory(Constants.CONFIG_CATEGORY_ITEMS);
 		configItems.setComment("Item Settings");
 		list.add(new ConfigElement(configItems));
