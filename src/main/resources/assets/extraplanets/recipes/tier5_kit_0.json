@@ -5,29 +5,21 @@
   },
   "pattern": [
     "MGF",
-    "TTA",
-    "BCD"
+    "TAT",
+    " P "
   ],
   "type": "minecraft:crafting_shaped",
   "key": {
+    "P": {
+      "item": "extraplanets:tier5_kit",
+      "data": 5
+    },
     "A": {
-      "item": "extraplanets:tier5_thermal_padding",
+      "item": "galacticraftcore:parachute",
       "data": 0
-    },
-    "B": {
-      "item": "extraplanets:tier5_thermal_padding",
-      "data": 1
-    },
-    "C": {
-      "item": "extraplanets:tier5_thermal_padding",
-      "data": 2
     },
     "T": {
       "item": "extraplanets:oxygen_tank_extremely_heavy_full"
-    },
-    "D": {
-      "item": "extraplanets:tier5_thermal_padding",
-      "data": 3
     },
     "F": {
       "item": "galacticraftcore:basic_item",

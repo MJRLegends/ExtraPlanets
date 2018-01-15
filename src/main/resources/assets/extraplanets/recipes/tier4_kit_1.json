@@ -5,11 +5,15 @@
   },
   "pattern": [
     "M G",
-    "T T",
+    "TPT",
     "   "
   ],
   "type": "minecraft:crafting_shaped",
   "key": {
+    "P": {
+      "item": "galacticraftcore:parachute",
+      "data": 0
+    },
     "T": {
       "item": "extraplanets:oxygen_tank_very_heavy_full"
     },

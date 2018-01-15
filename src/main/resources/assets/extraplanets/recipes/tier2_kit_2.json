@@ -4,12 +4,16 @@
     "data": 2
   },
   "pattern": [
-    "F A",
+    "FPA",
     "BCD",
     " S "
   ],
   "type": "minecraft:crafting_shaped",
   "key": {
+    "P": {
+      "item": "galacticraftcore:parachute",
+      "data": 0
+    },
     "A": {
       "item": "galacticraftplanets:thermal_padding_t2",
       "data": 0

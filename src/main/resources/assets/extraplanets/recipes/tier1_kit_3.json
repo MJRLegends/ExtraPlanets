@@ -5,11 +5,15 @@
   },
   "pattern": [
     "MGF",
-    "T T",
+    "TPT",
     "   "
   ],
   "type": "minecraft:crafting_shaped",
   "key": {
+    "P": {
+      "item": "galacticraftcore:parachute",
+      "data": 0
+    },
     "T": {
       "item": "galacticraftcore:oxygen_tank_light_full"
     },

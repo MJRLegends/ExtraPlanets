@@ -5,11 +5,15 @@
   },
   "pattern": [
     "MGF",
-    "T T",
+    "TPT",
     " S "
   ],
   "type": "minecraft:crafting_shaped",
   "key": {
+    "P": {
+      "item": "galacticraftcore:parachute",
+      "data": 0
+    },
     "S": {
       "item": "galacticraftplanets:basic_item_venus",
       "data": 0
