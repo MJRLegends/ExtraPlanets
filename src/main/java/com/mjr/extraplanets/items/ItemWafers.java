@@ -79,10 +79,14 @@ public class ItemWafers extends Item {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List list, boolean par4) {
-		if (itemStack != null && itemStack.getItemDamage() == 0) {
-			if (player.worldObj.isRemote) {
-				list.add(EnumChatFormatting.RED + GCCoreUtil.translate("currently.unused.name"));
+		if (player.worldObj.isRemote) {
+			if (itemStack != null) {
+				if (itemStack.getItemDamage() == 0 || itemStack.getItemDamage() == 1)
+					list.add(EnumChatFormatting.YELLOW + GCCoreUtil.translate("currently.unused.name"));
+				else
+					list.add(EnumChatFormatting.AQUA + GCCoreUtil.translate("wafter.uses.information"));
 			}
 		}
 	}
+
 }
