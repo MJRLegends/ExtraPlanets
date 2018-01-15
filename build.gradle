@@ -57,7 +57,7 @@ dependencies {
 		"GalacticraftCore-Dev-1.8.9-4.0.1.120.jar",
 		"Galacticraft-Planets-Dev-1.8.9-4.0.1.120.jar",
 		"MicdoodleCore-Dev-1.8.9-4.0.1.120.jar",
-		"MJRLegendsLib-1.8.9-1.0.1-dev.jar"
+		"MJRLegendsLib-1.8.9-1.0.2-dev.jar"
 	)
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
