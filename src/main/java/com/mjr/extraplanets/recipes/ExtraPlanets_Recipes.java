@@ -884,11 +884,11 @@ public class ExtraPlanets_Recipes {
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 1), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeMagenta" });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeYellow" });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyePink" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeBrown" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeRed" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeGreen" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeCyan" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyePurple" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeLightBlue" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeOrange" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeMagenta" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyePink" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeLime" });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 7), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeLime" });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 8), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeLightBlue" });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 9), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeWhite" });
@@ -897,11 +897,11 @@ public class ExtraPlanets_Recipes {
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 1), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeMagenta" });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeYellow" });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyePink" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeBrown" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeRed" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeGreen" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeCyan" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyePurple" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeLightBlue" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeOrange" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeMagenta" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyePink" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeLime" });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 7), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeLime" });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 8), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeLightBlue" });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 9), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeWhite" });
@@ -915,13 +915,13 @@ public class ExtraPlanets_Recipes {
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), 'D', "dyeMagenta" });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), 'D', "dyeMagenta" });
 
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', "dyeCyan" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', "dyeCyan" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), 'D', "dyeCyan" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', "dyePink" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', "dyePink" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), 'D', "dyePink" });
 
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', "dyeRed" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', "dyeRed" });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), 'D', "dyeRed" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', "dyeOrange" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', "dyeOrange" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), 'D', "dyeOrange" });
 
 		// Cookies to Cookie Rocks
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 7), new Object[] { "CCC", "CCC", "CCC", 'C', new ItemStack(Items.cookie) });
@@ -1163,7 +1163,7 @@ public class ExtraPlanets_Recipes {
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 1), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 0) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 2), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(Blocks.snow) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 3), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(Blocks.ice) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 5), new Object[] { "BSW", "SBS", "BSW", 'S', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 2), 'B', "dyeWhite", 'W', "dyeBlack" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 5), new Object[] { "BSW", "SBS", "BSW", 'S', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 2), 'B', "dyeWhite", 'W', "dyeWhite" });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 6), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 0) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 7), new Object[] { " FF", " FF", "   ", 'F', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 6) });
 		if (Config.JUPITER) {
@@ -1181,11 +1181,11 @@ public class ExtraPlanets_Recipes {
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 13), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 14), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 13) });
 
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 0), new Object[] { " D ", "DBD", " D ", 'D', "dyeBlack", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 0), new Object[] { " D ", "DBD", " D ", 'D', "dyeWhite", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 1), new Object[] { " D ", "DBD", " D ", 'D', "dyeOrange", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 2), new Object[] { " D ", "DBD", " D ", 'D', "dyeYellow", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 3), new Object[] { " D ", "DBD", " D ", 'D', "dyeBrown", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 4), new Object[] { " D ", "DBD", " D ", 'D', "dyeBlue", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 3), new Object[] { " D ", "DBD", " D ", 'D', "dyeLightBlue", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 4), new Object[] { " D ", "DBD", " D ", 'D', "dyeYellow", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 5), new Object[] { " D ", "DBD", " D ", 'D', "dyeMagenta", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
 
 		// Kits
