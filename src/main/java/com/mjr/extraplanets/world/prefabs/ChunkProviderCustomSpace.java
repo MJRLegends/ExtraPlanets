@@ -40,6 +40,7 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderGenerate {
 	double[] field_147426_g;
 
 	protected Block waterBlock;
+	protected boolean seaIceLayer = false;
 
 	private List<MapGenBaseMeta> worldGenerators;
 
@@ -139,6 +140,8 @@ public abstract class ChunkProviderCustomSpace extends ChunkProviderGenerate {
 							for (int k3 = 0; k3 < 4; ++k3) {
 								if ((d15 += d16) > 0.0D) {
 									p_147424_3_[j3 += short1] = Blocks.stone;
+								} else if (this.seaIceLayer && (k2 * 8 + l2 == 62)) {
+									p_147424_3_[j3 += short1] = Blocks.ice;
 								} else if (k2 * 8 + l2 < b0) {
 									p_147424_3_[j3 += short1] = this.waterBlock;
 								} else {

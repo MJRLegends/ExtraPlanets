@@ -25,6 +25,7 @@ public class ChunkProviderTriton extends ChunkProviderCustomSpace {
 	public ChunkProviderTriton(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
 		this.waterBlock = ExtraPlanets_Fluids.nitrogen_ice;
+		this.seaIceLayer = true;
 	}
 
 	@Override
