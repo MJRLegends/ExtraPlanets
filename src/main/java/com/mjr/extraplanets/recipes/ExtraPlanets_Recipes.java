@@ -190,7 +190,7 @@ public class ExtraPlanets_Recipes {
 			RecipeUtilities.addSmelting(new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1, 10), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 4), 0.0F);
 		}
 		if (Config.ORE_LEAD_GENERATION)
-			RecipeUtilities.addSmelting(new ItemStack(ExtraPlanets_Blocks.ORE_LEAD, 1, 0), OreDictionary.getOres("ingotLead").get(0), 0.0F);
+			RecipeUtilities.addSmelting(new ItemStack(ExtraPlanets_Blocks.ORE_LEAD, 1, 0), new ItemStack(ExtraPlanets_Items.INGOT_LEAD), 0.0F);
 	}
 
 	private static void registerCraftingRecipes() {
@@ -227,7 +227,7 @@ public class ExtraPlanets_Recipes {
 		if (Config.MERCURY) {
 			// Battery
 			if (Config.BATTERIES)
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), 'R', Items.redstone, 'C', Items.coal });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), 'R', "dustRedstone", 'C', Items.coal });
 
 			// Stone Bricks
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 4, 8), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 2) });
@@ -240,11 +240,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.ITEMS_MERCURY) {
 				// Tools
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.MERCURY_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 1, 0), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.MERCURY_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 1, 0), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.MERCURY_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 1, 0), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.MERCURY_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 1, 0), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.MERCURY_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 1, 0), 'S', Items.stick });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.MERCURY_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 1, 0), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.MERCURY_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 1, 0), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.MERCURY_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 1, 0), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.MERCURY_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 1, 0), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.MERCURY_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 1, 0), 'S', "stickWood" });
 
 				// Armour
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.MERCURY_HELMET), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.INGOT_MERCURY, 1, 0) });
@@ -269,11 +269,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.ITEMS_CARBON) {
 				// Tools
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.CARBON_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.CARBON_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.CARBON_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.CARBON_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.CARBON_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), 'S', Items.stick });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.CARBON_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.CARBON_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.CARBON_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.CARBON_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.CARBON_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5), 'S', "stickWood" });
 
 				// Armour
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.CARBON_HELMET), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5) });
@@ -306,11 +306,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.ITEMS_URANIUM) {
 				// Tools
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.URANIUM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM, 1, 0), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.URANIUM_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM, 1, 0), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.URANIUM_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM, 1, 0), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.URANIUM_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM, 1, 0), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.URANIUM_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM, 1, 0), 'S', Items.stick });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.URANIUM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM, 1, 0), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.URANIUM_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM, 1, 0), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.URANIUM_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM, 1, 0), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.URANIUM_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM, 1, 0), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.URANIUM_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM, 1, 0), 'S', "stickWood" });
 
 				// Armour
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.URANIUM_HELMET), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM, 1, 0) });
@@ -373,11 +373,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.ITEMS_PALLADIUM) {
 				// Tools
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.PALLADIUM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.PALLADIUM_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.PALLADIUM_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.PALLADIUM_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.PALLADIUM_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'S', Items.stick });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.PALLADIUM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.PALLADIUM_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.PALLADIUM_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.PALLADIUM_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.PALLADIUM_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'S', "stickWood" });
 
 				// Armour
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.PALLASIUM_HELMET), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5) });
@@ -388,11 +388,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.ITEMS_GEM_RED) {
 				// Tools
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.RED_GEM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.RED_GEM_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.RED_GEM_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.RED_GEM_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.RED_GEM_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 'S', Items.stick });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.RED_GEM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.RED_GEM_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.RED_GEM_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.RED_GEM_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.RED_GEM_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 'S', "stickWood" });
 
 				// Armour
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.RED_GEM_HELMET), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8) });
@@ -403,7 +403,7 @@ public class ExtraPlanets_Recipes {
 
 			// Battery
 			if (Config.BATTERIES)
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_NICKEL, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 6), 'R', Items.redstone, 'C', Items.coal });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_NICKEL, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 6), 'R', "dustRedstone", 'C', Items.coal });
 			// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 0) });
@@ -450,11 +450,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.ITEMS_MAGNESIUM) {
 				// Tools
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.MAGNESIUM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.MAGNESIUM_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.MAGNESIUM_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.MAGNESIUM_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.MAGNESIUM_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'S', Items.stick });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.MAGNESIUM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.MAGNESIUM_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.MAGNESIUM_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.MAGNESIUM_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.MAGNESIUM_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'S', "stickWood" });
 
 				// Armour
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.MAGNESIUM_HELMET), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5) });
@@ -500,11 +500,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.ITEMS_CRYSTAL) {
 				// Tools
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.CRYSTAL_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.CRYSTAL_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.CRYSTAL_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.CRYSTAL_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.CRYSTAL_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 5), 'S', Items.stick });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.CRYSTAL_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.CRYSTAL_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.CRYSTAL_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.CRYSTAL_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.CRYSTAL_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 5), 'S', "stickWood" });
 
 				// Armour
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.CRYSTAL_HELMET), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 5) });
@@ -515,11 +515,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.ITEMS_GEM_WHITE) {
 				// Tools
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.WHITE_GEM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.WHITE_GEM_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.WHITE_GEM_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.WHITE_GEM_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.WHITE_GEM_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7), 'S', Items.stick });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.WHITE_GEM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.WHITE_GEM_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.WHITE_GEM_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.WHITE_GEM_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.WHITE_GEM_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7), 'S', "stickWood" });
 
 				// Armour
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.WHITE_GEM_HELMET), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 7) });
@@ -561,11 +561,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.ITEMS_GEM_BLUE) {
 				// Tools
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.BLUE_GEM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.BLUE_GEM_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.BLUE_GEM_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.BLUE_GEM_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.BLUE_GEM_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'S', Items.stick });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.BLUE_GEM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.BLUE_GEM_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.BLUE_GEM_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.BLUE_GEM_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.BLUE_GEM_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'S', "stickWood" });
 
 				// Armour
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.BLUE_GEM_HELMET), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6) });
@@ -576,11 +576,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.ITEMS_ZINC) {
 				// Tools
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.ZINC_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.ZINC_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.ZINC_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.ZINC_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.ZINC_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'S', Items.stick });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.ZINC_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.ZINC_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.ZINC_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.ZINC_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.ZINC_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'S', "stickWood" });
 
 				// Armour
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.ZINC_HELMET), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5) });
@@ -591,7 +591,7 @@ public class ExtraPlanets_Recipes {
 
 			// Battery
 			if (Config.BATTERIES)
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ZINC, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'R', Items.redstone, 'C', Items.coal });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ZINC, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'R', "dustRedstone", 'C', Items.coal });
 			// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.NEPTUNE_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 0) });
@@ -620,11 +620,11 @@ public class ExtraPlanets_Recipes {
 
 			if (Config.ITEMS_TUNGSTEN) {
 				// Tools
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.TUNGSTEN_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.TUNGSTEN_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.TUNGSTEN_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.TUNGSTEN_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'S', Items.stick });
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Tools.TUNGSTEN_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'S', Items.stick });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.TUNGSTEN_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.TUNGSTEN_AXE), new Object[] { "XX ", "XS ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.TUNGSTEN_HOE), new Object[] { "XX ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.TUNGSTEN_SWORD), new Object[] { " X ", " X ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'S', "stickWood" });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Tools.TUNGSTEN_SHOVEL), new Object[] { " X ", " S ", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'S', "stickWood" });
 
 				// Armour
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TUNGSTEN_HELMET), new Object[] { "   ", "MMM", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
@@ -724,12 +724,12 @@ public class ExtraPlanets_Recipes {
 			RecipeUtilities.addRecipe(new ItemStack(Items.oak_door, 4, 0), new Object[] { "DD ", "DD ", "DD ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5) });
 
 			// Planks to Signs (6 Planks per 6 Signs)
-			RecipeUtilities.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), 'S', new ItemStack(Items.stick) });
-			RecipeUtilities.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), 'S', new ItemStack(Items.stick) });
-			RecipeUtilities.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), 'S', new ItemStack(Items.stick) });
-			RecipeUtilities.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), 'S', new ItemStack(Items.stick) });
-			RecipeUtilities.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), 'S', new ItemStack(Items.stick) });
-			RecipeUtilities.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), 'S', new ItemStack(Items.stick) });
+			RecipeUtilities.addOreRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), 'S', "stickWood" });
+			RecipeUtilities.addOreRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), 'S', "stickWood" });
+			RecipeUtilities.addOreRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), 'S', "stickWood" });
+			RecipeUtilities.addOreRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), 'S', "stickWood" });
+			RecipeUtilities.addOreRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), 'S', "stickWood" });
+			RecipeUtilities.addOreRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), 'S', "stickWood" });
 
 			if (Config.ITEMS_KEPLER22B) {
 				// Tools
@@ -885,7 +885,8 @@ public class ExtraPlanets_Recipes {
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1, 0), new Object[] { "RTR", "TCT", "RTR", 'T', new ItemStack(GCItems.basicItem, 1, 14), 'R', GCItems.battery, 'C', new ItemStack(GCItems.itemBasicMoon, 1, 0) });
 
 		// Sledge Hammer
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), new Object[] { "XXX", "YSY", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12), 'Y', new ItemStack(GCItems.itemBasicMoon), 'S', Items.stick });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), new Object[] { "XXX", "YSY", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12), 'Y', new ItemStack(GCItems.itemBasicMoon), 'S', "stickWood" });
+
 
 		// Grinding Wheel
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 1), new Object[] { "ZXZ", "XHX", "ZXZ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10), 'H', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), 'Z',
@@ -898,60 +899,60 @@ public class ExtraPlanets_Recipes {
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), new Object[] { "CPC", "MMM", "CPC", 'C', new ItemStack(ExtraPlanets_Items.CLOTH), 'P', Items.paper, 'M', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 2) });
 
 		// Candy Cane
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 0), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 1) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 1), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 2) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 4) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 6) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 12) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 14) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 13) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 9) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 10) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 7), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 5) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 8), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 3) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 9), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 0) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 0), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeOrange" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 1), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeMagenta" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeYellow" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyePink" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeBrown" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeRed" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeGreen" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeCyan" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyePurple" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 7), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeLime" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 8), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeLightBlue" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS, 1, 9), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeWhite" });
 
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 0), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 1) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 1), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 2) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 4) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 6) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 12) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 14) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 13) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 9) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 10) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 7), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 5) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 8), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 3) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 9), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', new ItemStack(Items.dye, 1, 0) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 0), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeOrange" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 1), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeMagenta" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeYellow" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyePink" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 2), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeBrown" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeRed" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeGreen" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeCyan" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyePurple" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 7), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeLime" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 8), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeLightBlue" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CANDY_BLOCKS_HORIZONTAL, 1, 9), new Object[] { " D ", "DCD", " D ", 'C', ExtraPlanets_Blocks.CANDY_BLOCKS, 'D', "dyeWhite" });
 
 		// Cake/Icing Blocks
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', new ItemStack(Items.dye, 1, 1) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), 'D', new ItemStack(Items.dye, 1, 1) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), 'D', new ItemStack(Items.dye, 1, 1) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', "dyeOrange" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), 'D', "dyeOrange" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), 'D', "dyeOrange" });
 
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', new ItemStack(Items.dye, 1, 2) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), 'D', new ItemStack(Items.dye, 1, 2) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), 'D', new ItemStack(Items.dye, 1, 2) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', "dyeMagenta" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), 'D', "dyeMagenta" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), 'D', "dyeMagenta" });
 
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', new ItemStack(Items.dye, 1, 9) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', new ItemStack(Items.dye, 1, 9) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), 'D', new ItemStack(Items.dye, 1, 9) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', "dyeCyan" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', "dyeCyan" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), 'D', "dyeCyan" });
 
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', new ItemStack(Items.dye, 1, 14) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', new ItemStack(Items.dye, 1, 14) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), 'D', new ItemStack(Items.dye, 1, 14) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 3), 'D', "dyeRed" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 4), 'D', "dyeRed" });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 6), new Object[] { " D ", "DCD", " D ", 'C', new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 5), 'D', "dyeRed" });
 
 		// Cookies to Cookie Rocks
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 7), new Object[] { "CCC", "CCC", "CCC", 'C', new ItemStack(Items.cookie) });
 
 		if (Config.PRESSURE || Config.RADIATION) {
 			// Tier 1 - 4 Radiation Layers
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LCL", "LCL", 'L', OreDictionary.getOres("ingotLead").get(0), 'C', ExtraPlanets_Items.CLOTH });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', OreDictionary.getOres("ingotLead").get(0), 'C', ExtraPlanets_Items.CLOTH, 'R',
+			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LCL", "LCL", 'L', "ingotLead", 'C', ExtraPlanets_Items.CLOTH });
+			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', "ingotLead", 'C', ExtraPlanets_Items.CLOTH, 'R',
 					ExtraPlanets_Items.TIER_1_RADIATION_LAYER });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', OreDictionary.getOres("ingotLead").get(0), 'C', ExtraPlanets_Items.CLOTH, 'R',
+			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', "ingotLead", 'C', ExtraPlanets_Items.CLOTH, 'R',
 					ExtraPlanets_Items.TIER_2_RADIATION_LAYER });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', OreDictionary.getOres("ingotLead").get(0), 'C', ExtraPlanets_Items.CLOTH, 'R',
+			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', "ingotLead", 'C', ExtraPlanets_Items.CLOTH, 'R',
 					ExtraPlanets_Items.TIER_3_RADIATION_LAYER });
 
 			// Tier 1 - 4 Pressure Layers
@@ -1201,12 +1202,13 @@ public class ExtraPlanets_Recipes {
 		if (Config.SATURN)
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 13), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 14), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 13) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 0), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.dye, 1, 15), 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 1), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.dye, 1, 1), 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 2), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.dye, 1, 4), 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 3), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.dye, 1, 12), 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 4), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.dye, 1, 11), 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 5), new Object[] { " D ", "DBD", " D ", 'D', new ItemStack(Items.dye, 1, 2), 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 0), new Object[] { " D ", "DBD", " D ", 'D', "dyeBlack", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 1), new Object[] { " D ", "DBD", " D ", 'D', "dyeOrange", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 2), new Object[] { " D ", "DBD", " D ", 'D', "dyeYellow", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 3), new Object[] { " D ", "DBD", " D ", 'D', "dyeBrown", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 4), new Object[] { " D ", "DBD", " D ", 'D', "dyeBlue", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS2, 1, 5), new Object[] { " D ", "DBD", " D ", 'D', "dyeMagenta", 'B', ExtraPlanets_Blocks.DECORATIVE_BLOCKS2 });
 
 		// Kits
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, 1, 0), new Object[] { "MGF", "TTA", "BCD", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
