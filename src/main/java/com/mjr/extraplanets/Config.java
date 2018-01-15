@@ -1,10 +1,17 @@
 package com.mjr.extraplanets;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
+import net.minecraftforge.common.config.ConfigCategory;
+import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fml.client.config.IConfigElement;
 
 public class Config {
+	public static Configuration config = new Configuration(new File(Constants.CONFIG_FILE));
+
 	// Config options
 	public static boolean MOB_SUFFOCATION;
 	public static boolean USE_DEFAULT_BOSSES;
@@ -16,7 +23,7 @@ public class Config {
 	public static boolean GENERATE_JUITPER_SKY_FEATURE;
 	public static boolean JUITPER_LIGHTING;
 	public static boolean CUSTOM_FOG;
-	
+
 	public static boolean ITEMS_CARBON;
 	public static boolean ITEMS_PALLADIUM;
 	public static boolean ITEMS_MAGNESIUM;
@@ -285,7 +292,6 @@ public class Config {
 	public static boolean CUSTOM_GALAXIES;
 
 	public static void load() {
-		Configuration config = new Configuration(new File(Constants.CONFIG_FILE));
 		config.load();
 
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Change if a dimension ID is causing conflicts!");
@@ -303,6 +309,20 @@ public class Config {
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable/Disable compatibility settings");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable/Disable general settings");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Advanced options for Celestial Body Map to change locations of planets and solar systems! (For Advanced Users ONLY!)");
+
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_DIMENSION_IDS, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_BIOME_IDS, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_ITEMS, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_BLOCKS, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_SPACE_STATIONS, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_COMPATIBILITY, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, true);
 
 		ITEMS_CARBON = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Carbon Tools & Armor", true).getBoolean(true);
 		ITEMS_PALLADIUM = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Palladium Tools & Armor", true).getBoolean(true);
@@ -352,7 +372,8 @@ public class Config {
 		GENERATE_URANUS_ICE_SPIKES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Setting this option to false will disable Ice Spikes from generating on Uranus").getBoolean(true);
 		GENERATE_JUITPER_SKY_FEATURE = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Jupiter", true, "Setting this option to false will disable the Sky Feature on Jupiter").getBoolean(true);
 		JUITPER_LIGHTING = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable Lighting & Lighting Effects on Jupiter").getBoolean(true);
-		CUSTOM_FOG = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable Fog Effects on Jupiter, Uranus, Saturn, Neptune").getBoolean(true);
+		CUSTOM_FOG = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable Fog Effects on Jupiter, Uranus, Saturn, Neptune")
+				.getBoolean(true);
 
 		TRITON = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Triton", true, "Setting this option to false will remove Triton & all the related items/block/tools/armour/space stations!").getBoolean(true);
 		EUROPA = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Europa", true, "Setting this option to false will remove Europa & all the related items/block/tools/armour/space stations!").getBoolean(true);
@@ -601,4 +622,60 @@ public class Config {
 		config.save();
 	}
 
+	public static List<IConfigElement> getConfigElements() {
+		List<IConfigElement> list = new ArrayList<IConfigElement>();
+		
+		ConfigCategory configMainDimensions = config.getCategory(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS);
+		configMainDimensions.setComment("Planet & Moon Settings");
+		list.add(new ConfigElement(configMainDimensions));
+		
+		ConfigCategory configOtherDimensions = config.getCategory(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS);
+		configOtherDimensions.setComment("Other Dimension Settings");
+		list.add(new ConfigElement(configOtherDimensions));
+		
+		ConfigCategory configDimenisonIDs = config.getCategory(Constants.CONFIG_CATEGORY_DIMENSION_IDS);
+		configDimenisonIDs.setComment("Dimension IDs");
+		list.add(new ConfigElement(configDimenisonIDs));
+		
+		ConfigCategory configDimensionSettings = config.getCategory(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS);
+		configDimensionSettings.setComment("Dimension Settings");
+		list.add(new ConfigElement(configDimensionSettings));
+		
+		ConfigCategory configBiomeIDs = config.getCategory(Constants.CONFIG_CATEGORY_BIOME_IDS);
+		configBiomeIDs.setComment("Biome IDs;");
+		list.add(new ConfigElement(configBiomeIDs));
+		
+		ConfigCategory configItems = config.getCategory(Constants.CONFIG_CATEGORY_ITEMS);
+		configItems.setComment("Item Settings");
+		list.add(new ConfigElement(configItems));
+		
+		ConfigCategory configBlocks = config.getCategory(Constants.CONFIG_CATEGORY_BLOCKS);
+		configBlocks.setComment("Blocks Settings");
+		list.add(new ConfigElement(configBlocks));
+		
+		ConfigCategory configSpaceStations = config.getCategory(Constants.CONFIG_CATEGORY_SPACE_STATIONS);
+		configSpaceStations.setComment("Space Stations Settings");
+		list.add(new ConfigElement(configSpaceStations));
+		
+		ConfigCategory configSchematicGUIIDs = config.getCategory(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS);
+		configSchematicGUIIDs.setComment("Schematic GUI IDs");
+		list.add(new ConfigElement(configSchematicGUIIDs));
+		
+		ConfigCategory configSchematicPageIDs = config.getCategory(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS);
+		configSchematicPageIDs.setComment("Schematic Page IDs");
+		list.add(new ConfigElement(configSchematicPageIDs));
+		
+		ConfigCategory configCompatibility = config.getCategory(Constants.CONFIG_CATEGORY_COMPATIBILITY);
+		configCompatibility.setComment("Compatibility Settings");
+		list.add(new ConfigElement(configCompatibility));
+		
+		ConfigCategory configGeneralSettings = config.getCategory(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS);
+		configGeneralSettings.setComment("General Settings");
+		list.add(new ConfigElement(configGeneralSettings));
+		
+		ConfigCategory configCelestialMapSettings = config.getCategory(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS);
+		configCelestialMapSettings.setComment("Celestial Map Settings");
+		list.add(new ConfigElement(configCelestialMapSettings));
+		return list;
+	}
 }
