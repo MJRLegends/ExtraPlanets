@@ -157,7 +157,6 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 
 	@Override
 	public void setSwingingArms(boolean swingingArms) {
-		// TODO Auto-generated method stub
-		// TODO 1.12.2
+
 	}
 }

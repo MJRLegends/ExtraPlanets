@@ -246,7 +246,6 @@ public class EntityCreeperBossEris extends EntityBossBase implements IEntityBrea
 
 	@Override
 	public void setSwingingArms(boolean swingingArms) {
-		// TODO Auto-generated method stub
-		// TODO 1.12.2
+
 	}
 }

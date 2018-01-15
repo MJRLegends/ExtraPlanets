@@ -411,8 +411,6 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		this.stopRocketSound();
 
 		if (this.shouldCancelExplosion()) {
-			// TODO: why looking around when already know the target?
-			// TODO: it would be good to land on an alternative neighbouring pad if there is already a rocket on the target pad
 			for (int i = -3; i <= 3; i++) {
 				BlockPos pos = new BlockPos((int) Math.floor(this.posX), (int) Math.floor(this.posY + i), (int) Math.floor(this.posZ));
 				if (this.launchPhase == EnumLaunchPhase.LANDING.ordinal() && this.targetVec != null && this.world.getTileEntity(pos) instanceof IPowerDock && this.posY - this.targetVec.getY() < 5) {

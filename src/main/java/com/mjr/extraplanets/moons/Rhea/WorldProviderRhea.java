@@ -169,7 +169,6 @@ public class WorldProviderRhea extends WorldProviderRealisticSpace implements IG
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

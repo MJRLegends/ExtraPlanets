@@ -95,16 +95,6 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 
 	@Override
 	public AxisAlignedBB getBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
-		// switch (getMetaFromState(blockState))
-		// {
-		// case 0:
-		// return new AxisAlignedBB(pos.getX() + this.minX, pos.getY() + this.minY, pos.getZ() + this.minZ,
-		// pos.getX() + this.maxX, pos.getY() + this.maxY, pos.getZ() + this.maxZ); TODO
-		// case 2:
-		// return new AxisAlignedBB(pos.getX() + this.minX, pos.getY() + this.minY, pos.getZ() + this.minZ,
-		// pos.getX() + this.maxX, pos.getY() + this.maxY, pos.getZ() + this.maxZ);
-		// default:
-		// }
 		return this.AABB;
 	}
 

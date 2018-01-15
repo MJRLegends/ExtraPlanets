@@ -169,7 +169,6 @@ public class WorldProviderEuropa extends WorldProviderRealisticSpace implements 
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }
