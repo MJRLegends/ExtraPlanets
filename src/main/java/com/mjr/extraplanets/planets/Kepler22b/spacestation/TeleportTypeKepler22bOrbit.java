@@ -38,7 +38,6 @@ public class TeleportTypeKepler22bOrbit implements ITeleportType {
 
 	@Override
 	public void setupAdventureSpawn(EntityPlayerMP player) {
-		// TODO Auto-generated method stub
 
 	}
 }

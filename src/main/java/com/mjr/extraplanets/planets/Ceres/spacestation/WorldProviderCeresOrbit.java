@@ -60,7 +60,6 @@ public class WorldProviderCeresOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	public boolean isDaytime() {
 		final float a = this.world.getCelestialAngle(0F);
-		// TODO: adjust this according to size of planet below
 		return a < 0.42F || a > 0.58F;
 	}
 

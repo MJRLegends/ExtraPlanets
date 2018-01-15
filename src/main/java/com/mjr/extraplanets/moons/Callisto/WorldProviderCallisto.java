@@ -169,7 +169,6 @@ public class WorldProviderCallisto extends WorldProviderRealisticSpace implement
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }
