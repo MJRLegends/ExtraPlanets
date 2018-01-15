@@ -14,6 +14,35 @@
 
 
 ===========================================Released Updates===========================================
+v0.9.0
+*Refactor some code over to MJRLegends Lib
+*Fixed broken recipe for Tier 1 Pressure Layer
+*Refactoring to use Model Utilities & Translate Utilities classes from MJRLegends Lib
+*Changed requirement of MJRLegendsLib to 1.10.2-1.0.2 & above
+*Added Block of Nickel &* Platinum
+*Fixed spelling error for Kepler22b Ore Platinum
+*Changed Mars/ Venus Rover Schematics textures
+*Added Tool tips for Custom Wafers to tell the player where they are used
+*Updated lang files
+*Added Block of Nickel & Platinum recipes
+*Fixed warning with JEI Support classes
+*Fixed some raw type warnings
+*Removed a unused import
+*Clean up/Fix formatting
+*Added tool tips to Mars and Venus Rover to say how to use them
+*Fixed the issue with fog staying after traveling to a planet or moon that has fog
+*Removed not needed TODO tag comments within code
+*Convert all hardcoded items/blocks such as sticks & dyes in recipes to ore dict versions
+*Converted system for adding ore dict for Lead ingots to same system as other ore dict recipes
+*Fixed ore dict for dyes being the wrong way around in a few commits ago
+*Added Config option for Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune
+*Updated zh_CH.lang (Thanks to sdjnmxd)
+*Added Extra information to the Electric Rocket Tool tip
+*Added Config GUI Factory, for ingame config editing
+*Added missing Densifier GUI Fluid textures
+*Few more tweaks for missing Densifier GUI Fluid textures
+*Fixed certain kits giving free parachutes and shield controllers
+
 v0.8.9
 *Fixed some compatibility issues with More Planets
 *Few fixes to Celestial Selection screen
