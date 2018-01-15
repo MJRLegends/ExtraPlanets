@@ -263,24 +263,26 @@ public class MainHandlerClient {
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
 	public void onRenderFogDensity(EntityViewRenderEvent.FogDensity event) {
-		if (event.entity.worldObj.provider.getDimensionId() == Config.JUPITER_ID) {
-			event.density = 0.02f;
-			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
-			event.setCanceled(true);
-		} else if (event.entity.worldObj.provider.getDimensionId() == Config.URANUS_ID) {
-			event.density = 0.008f;
-			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
-			event.setCanceled(true);
-		} else if (event.entity.worldObj.provider.getDimensionId() == Config.SATURN_ID) {
-			event.density = 0.015f;
-			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
-			event.setCanceled(true);
-		} else if (event.entity.worldObj.provider.getDimensionId() == Config.NEPTUNE_ID) {
-			event.density = 0.01f;
-			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
-			event.setCanceled(true);
-		} else
-			GL11.glFogi(GL11.GL_EXP, GL11.GL_EXP);
+		if (Config.CUSTOM_FOG) {
+			if (event.entity.worldObj.provider.getDimensionId() == Config.JUPITER_ID) {
+				event.density = 0.02f;
+				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+				event.setCanceled(true);
+			} else if (event.entity.worldObj.provider.getDimensionId() == Config.URANUS_ID) {
+				event.density = 0.008f;
+				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+				event.setCanceled(true);
+			} else if (event.entity.worldObj.provider.getDimensionId() == Config.SATURN_ID) {
+				event.density = 0.015f;
+				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+				event.setCanceled(true);
+			} else if (event.entity.worldObj.provider.getDimensionId() == Config.NEPTUNE_ID) {
+				event.density = 0.01f;
+				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+				event.setCanceled(true);
+			} else
+				GL11.glFogi(GL11.GL_EXP, GL11.GL_EXP);
+		}
 	}
 
 	@SubscribeEvent
