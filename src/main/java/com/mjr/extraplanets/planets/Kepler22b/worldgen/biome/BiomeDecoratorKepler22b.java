@@ -22,7 +22,6 @@ import com.mjr.extraplanets.world.features.WorldGenBigRedTree;
 import com.mjr.extraplanets.world.features.WorldGenBlueHut;
 import com.mjr.extraplanets.world.features.WorldGenBlueTower;
 import com.mjr.extraplanets.world.features.WorldGenBrownHut;
-import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 import com.mjr.extraplanets.world.features.WorldGenGreenHut;
 import com.mjr.extraplanets.world.features.WorldGenLogTree;
 import com.mjr.extraplanets.world.features.WorldGenPurpleHut;
@@ -96,11 +95,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.TREE) && (i < this.blueTreesPerChunk); i++) {
 			if (this.rand.nextInt(10) == 0) {
-				int x = this.chunkX + this.rand.nextInt(80) + 8;
-				// int y = this.rand.nextInt(16) + 16;
-				int z = this.chunkZ + this.rand.nextInt(80) + 8;
-				int y = this.rand.nextInt(256);
-				new WorldGenCustomLake(Blocks.water).generate(this.currentWorld, this.rand, x, y, z, Blocks.grass);
+				WorldGenHelper.generateLake(this.currentWorld, this.rand, this.chunk_X, this.rand.nextInt(256), this.chunk_Z, Blocks.water, Blocks.grass);
 			}
 		}
 
@@ -111,37 +106,33 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < 1); i++) {
-			int x = chunk_X + this.rand.nextInt(16) + 8;
+			int x = chunk_X + this.rand.nextInt(16);
 			int y = this.rand.nextInt(256);
-			int z = chunk_Z + this.rand.nextInt(16) + 8;
+			int z = chunk_Z + this.rand.nextInt(16);
 			(new WorldGenKepler22bDungeons()).generate(this.currentWorld, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < 1); i++) {
 			if (this.generateHuts) {
 				if (this.rand.nextInt(200) == 1) {
-					int x = chunk_X + this.rand.nextInt(16) + 8;
-					int z = chunk_Z + this.rand.nextInt(16) + 8;
-					int y = this.currentWorld.getHeightValue(x, z);
-					int randomNum = this.rand.nextInt(7) + 0;
-					switch (randomNum) {
+					switch (this.rand.nextInt(7)) {
 					case 1:
-						(new WorldGenBlueHut()).generate(this.currentWorld, rand, x, y, z);
+						WorldGenHelper.generateStructureWithRandom(new WorldGenBlueHut(), this.currentWorld, rand, this.chunk_X, 0, this.chunk_Z, 16);
 						break;
 					case 2:
-						(new WorldGenRedHut()).generate(this.currentWorld, rand, x, y, z);
+						WorldGenHelper.generateStructureWithRandom(new WorldGenRedHut(), this.currentWorld, rand, this.chunk_X, 0, this.chunk_Z, 16);
 						break;
 					case 3:
-						(new WorldGenPurpleHut()).generate(this.currentWorld, rand, x, y, z);
+						WorldGenHelper.generateStructureWithRandom(new WorldGenPurpleHut(), this.currentWorld, rand, this.chunk_X, 0, this.chunk_Z, 16);
 						break;
 					case 4:
-						(new WorldGenYellowHut()).generate(this.currentWorld, rand, x, y, z);
+						WorldGenHelper.generateStructureWithRandom(new WorldGenYellowHut(), this.currentWorld, rand, this.chunk_X, 0, this.chunk_Z, 16);
 						break;
 					case 5:
-						(new WorldGenGreenHut()).generate(this.currentWorld, rand, x, y, z);
+						WorldGenHelper.generateStructureWithRandom(new WorldGenGreenHut(), this.currentWorld, rand, this.chunk_X, 0, this.chunk_Z, 16);
 						break;
 					case 6:
-						(new WorldGenBrownHut()).generate(this.currentWorld, rand, x, y, z);
+						WorldGenHelper.generateStructureWithRandom(new WorldGenBrownHut(), this.currentWorld, rand, this.chunk_X, 0, this.chunk_Z, 16);
 						break;
 					}
 				}
@@ -150,11 +141,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.blueTowerPerChunk); i++) {
 			if (this.rand.nextInt(100) == 1) {
-				int x = chunk_X + this.rand.nextInt(16) + 8;
-				int z = chunk_Z + this.rand.nextInt(16) + 8;
-				int y = this.currentWorld.getHeightValue(x, z) - 1;
-				(new WorldGenBlueTower()).generate(this.currentWorld, rand, x, y, z);
-				break;
+				WorldGenHelper.generateStructureWithRandom(new WorldGenBlueTower(), this.currentWorld, rand, this.chunk_X, 0, this.chunk_Z, 8);
 			}
 		}
 
@@ -167,8 +154,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 		for (int i = 0; i < this.bigTreeWithNoLeafsPerChunk; i++) {
 			if (this.rand.nextInt(5) == 1) {
-				int x = chunk_X + this.rand.nextInt(16) + 8;
-				int z = chunk_Z + this.rand.nextInt(16) + 8;
+				int x = chunk_X + this.rand.nextInt(8) + 8;
+				int z = chunk_Z + this.rand.nextInt(8) + 8;
 				int y = this.currentWorld.getHeightValue(x, z) - 1;
 				new WorldGenLogTree().generate(this.currentWorld, this.rand, x, y, z);
 			}
@@ -176,8 +163,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.purpleBigTreesPerChunk); i++) {
 			if (this.rand.nextInt(100) == 1) {
-				int x = chunk_X + this.rand.nextInt(16) + 8;
-				int z = chunk_Z + this.rand.nextInt(16) + 8;
+				int x = chunk_X + this.rand.nextInt(8) + 8;
+				int z = chunk_Z + this.rand.nextInt(8) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
 				new WorldGenBigPurpleTree().generate(this.currentWorld, this.rand, x, y, z);
 			}
@@ -185,8 +172,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.blueBigTreesPerChunk); i++) {
 			if (this.rand.nextInt(100) == 1) {
-				int x = chunk_X + this.rand.nextInt(16) + 8;
-				int z = chunk_Z + this.rand.nextInt(16) + 8;
+				int x = chunk_X + this.rand.nextInt(8) + 8;
+				int z = chunk_Z + this.rand.nextInt(8) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
 				new WorldGenBigBlueTree().generate(this.currentWorld, this.rand, x, y, z);
 			}
@@ -194,16 +181,16 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.CUSTOM) && (i < this.redBigTreesPerChunk); i++) {
 			if (this.rand.nextInt(100) == 1) {
-				int x = chunk_X + this.rand.nextInt(16) + 8;
-				int z = chunk_Z + this.rand.nextInt(16) + 8;
+				int x = chunk_X + this.rand.nextInt(8) + 8;
+				int z = chunk_Z + this.rand.nextInt(8) + 8;
 				int y = this.currentWorld.getHeightValue(x, z);
 				new WorldGenBigRedTree().generate(this.currentWorld, this.rand, x, y, z);
 			}
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.TREE) && (i < this.blueTreesPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 
 			WorldGenKepler22bTree tree = new WorldGenKepler22bTree(false, 8, 0, 0, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog, ExtraPlanets_Blocks.kepler22bMapleLeaf);
 			tree.setScale(1.0D, 1.0D, 1.0D);
@@ -211,8 +198,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.TREE) && (i < this.redTreesPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 
 			WorldGenKepler22bTree tree1 = new WorldGenKepler22bTree(false, 8, 1, 1, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog, ExtraPlanets_Blocks.kepler22bMapleLeaf);
 			tree1.setScale(1.0D, 1.0D, 1.0D);
@@ -220,8 +207,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.TREE) && (i < this.purpleTreesPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 
 			WorldGenKepler22bTree tree2 = new WorldGenKepler22bTree(false, 8, 2, 2, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog, ExtraPlanets_Blocks.kepler22bMapleLeaf);
 			tree2.setScale(1.0D, 1.0D, 1.0D);
@@ -229,8 +216,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.TREE) && (i < this.yellowTreesPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 
 			WorldGenKepler22bTree tree3 = new WorldGenKepler22bTree(false, 8, 3, 3, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog, ExtraPlanets_Blocks.kepler22bMapleLeaf);
 			tree3.setScale(1.0D, 1.0D, 1.0D);
@@ -239,8 +226,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.TREE) && (i < this.greenTreesPerChunk); i++) {
 			if (rand.nextInt(5) + 1 == 1) {
-				int x = this.chunk_X + this.rand.nextInt(16) + 8;
-				int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+				int x = this.chunk_X + this.rand.nextInt(8) + 8;
+				int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 
 				WorldGenKepler22bTree tree3 = new WorldGenKepler22bTree(false, 8, 0, 0, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog2, ExtraPlanets_Blocks.kepler22bMapleLeaf2);
 				tree3.setScale(1.0D, 1.0D, 1.0D);
@@ -250,8 +237,8 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.TREE) && (i < this.brownTreesPerChunk); i++) {
 			if (rand.nextInt(5) + 1 == 1) {
-				int x = this.chunk_X + this.rand.nextInt(16) + 8;
-				int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+				int x = this.chunk_X + this.rand.nextInt(8) + 8;
+				int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 
 				WorldGenKepler22bTree tree3 = new WorldGenKepler22bTree(false, 8, 1, 1, false, ExtraPlanets_Blocks.kepler22bMapleSapling, ExtraPlanets_Blocks.kepler22bMapleLog2, ExtraPlanets_Blocks.kepler22bMapleLeaf2);
 				tree3.setScale(1.0D, 1.0D, 1.0D);
@@ -260,72 +247,72 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.blueShortGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 0).generate(world, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.blueMedGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 1).generate(world, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.blueTallGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 2).generate(world, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.redShortGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 3).generate(world, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.redMedGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 4).generate(world, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.redTallGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 5).generate(world, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.purpleShortGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 6).generate(world, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.purpleMedGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 7).generate(world, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.purpleTallGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 8).generate(world, rand, x, y, z);
@@ -333,24 +320,24 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.yellowShortGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 9).generate(world, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.yellowMedGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 10).generate(world, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.yellowTallGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 11).generate(world, rand, x, y, z);
@@ -358,24 +345,24 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.greenShortGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 12).generate(world, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.greenMedGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 13).generate(world, rand, x, y, z);
 		}
 
 		for (int i = 0; TerrainGen.decorate(this.currentWorld, this.rand, this.chunk_X, this.chunk_Z, DecorateBiomeEvent.Decorate.EventType.GRASS) && (i < this.greenTallGrassPerChunk); i++) {
-			int x = this.chunk_X + this.rand.nextInt(16) + 8;
-			int z = this.chunk_Z + this.rand.nextInt(16) + 8;
+			int x = this.chunk_X + this.rand.nextInt(8) + 8;
+			int z = this.chunk_Z + this.rand.nextInt(8) + 8;
 			int y = this.rand.nextInt(256);
 
 			new WorldGenKepler22bFlowers(ExtraPlanets_Blocks.kepler22bGrassFlowers, 14).generate(world, rand, x, y, z);
