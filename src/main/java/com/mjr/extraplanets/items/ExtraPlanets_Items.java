@@ -157,7 +157,6 @@ public class ExtraPlanets_Items {
 		if (Config.mercury) {
 			if (Config.batteries)
 				mercuryBattery = new ItemBasicBattery("mercury_battery", 85000f, 2);
-
 			ingotMercury = new ItemBasicItem("ingot_mercury");
 			compressedMercury = new ItemMercuryCompressed("compressed_mercury");
 		}
@@ -170,13 +169,10 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.ceres) {
 			ingotUranium = new ItemBasicItem("ingot_uranium");
-			salt_bucket = new ItemBasicItemBucket("bucket_salt", ExtraPlanets_Fluids.salt);
 		}
 		if (Config.jupiter) {
 			if (Config.batteries)
 				nickelBattery = new ItemBasicBattery("nickel_battery", 45000f, 2);
-			magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.magma);
-
 			tier5Rocket = new Tier5Rocket("item_tier5_rocket");
 			schematicTier5 = new SchematicTier5("schematic_tier5");
 			noseConeTier5 = new Tier5NoseCone("nose_cone_tier5");
@@ -184,8 +180,6 @@ public class ExtraPlanets_Items {
 			T5key = new ItemKeyT5().setUnlocalizedName("T5key");
 		}
 		if (Config.saturn) {
-			glowstone_bucket = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.glowstone);
-
 			if (Config.morePlanetsCompatibilityAdv == false) {
 				tier6Rocket = new Tier6Rocket("item_tier6_rocket");
 				schematicTier6 = new SchematicTier6("schematic_tier6");
@@ -198,8 +192,6 @@ public class ExtraPlanets_Items {
 			}
 		}
 		if (Config.uranus) {
-			frozen_water_bucket = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.frozen_water);
-
 			if (Config.morePlanetsCompatibilityAdv == false) {
 				tier7Rocket = new Tier7Rocket("item_tier7_rocket");
 				schematicTier7 = new SchematicTier7("schematic_tier7");
@@ -214,8 +206,6 @@ public class ExtraPlanets_Items {
 		if (Config.neptune) {
 			if (Config.batteries)
 				zincBattery = new ItemBasicBattery("zinc_battery", 125000f, 2);
-			nitrogen_bucket = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanets_Fluids.nitrogen);
-
 			if (Config.morePlanetsCompatibilityAdv == false) {
 				tier8Rocket = new Tier8Rocket("item_tier8_rocket");
 				schematicTier8 = new SchematicTier8("schematic_tier8");
@@ -284,6 +274,12 @@ public class ExtraPlanets_Items {
 		tier2EquipmentKit = new ItemBasicKit("tier2_kit", 2);
 		tier3EquipmentKit = new ItemBasicKit("tier3_kit", 3);
 		tier4EquipmentKit = new ItemBasicKit("tier4_kit", 4);
+		
+		nitrogen_bucket = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanets_Fluids.nitrogen);
+		frozen_water_bucket = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.frozen_water);
+		glowstone_bucket = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.glowstone);
+		magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.magma);
+		salt_bucket = new ItemBasicItemBucket("bucket_salt", ExtraPlanets_Fluids.salt);
 	}
 
 	private static void registerItems() {
@@ -302,7 +298,6 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.ceres) {
 			GameRegistry.registerItem(ingotUranium, "ingotUranium");
-			GameRegistry.registerItem(salt_bucket, "bucket_salt");
 		}
 		if (Config.jupiter) {
 			GameRegistry.registerItem(tier5Rocket, "itemTier5Rocket");
@@ -313,7 +308,6 @@ public class ExtraPlanets_Items {
 
 			if (Config.batteries)
 				GameRegistry.registerItem(nickelBattery, "nickelBattery");
-			GameRegistry.registerItem(magma_bucket, "bucket_magma");
 		}
 		if (Config.saturn) {
 			if (Config.morePlanetsCompatibilityAdv == false) {
@@ -323,7 +317,6 @@ public class ExtraPlanets_Items {
 			}
 			GameRegistry.registerItem(tier6Items, "tier6Items");
 			GameRegistry.registerItem(T6key, "T6key");
-			GameRegistry.registerItem(glowstone_bucket, "bucket_glowstone");
 		}
 		if (Config.uranus) {
 			if (Config.morePlanetsCompatibilityAdv == false) {
@@ -333,7 +326,6 @@ public class ExtraPlanets_Items {
 			}
 			GameRegistry.registerItem(tier7Items, "tier7Items");
 			GameRegistry.registerItem(T7key, "T7key");
-			GameRegistry.registerItem(frozen_water_bucket, "bucket_frozen_water");
 		}
 		if (Config.neptune) {
 			if (Config.morePlanetsCompatibilityAdv == false) {
@@ -345,7 +337,6 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(T8key, "T8key");
 			if (Config.batteries)
 				GameRegistry.registerItem(zincBattery, "zincBattery");
-			GameRegistry.registerItem(nitrogen_bucket, "bucket_nitrogen");
 		}
 		if (Config.pluto) {
 			GameRegistry.registerItem(tier9Rocket, "itemTier9Rocket");
@@ -402,24 +393,20 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(tier2EquipmentKit, tier2EquipmentKit.getUnlocalizedName());
 		GameRegistry.registerItem(tier3EquipmentKit, tier3EquipmentKit.getUnlocalizedName());
 		GameRegistry.registerItem(tier4EquipmentKit, tier4EquipmentKit.getUnlocalizedName());
+		
+		GameRegistry.registerItem(nitrogen_bucket, "bucket_nitrogen");
+		GameRegistry.registerItem(frozen_water_bucket, "bucket_frozen_water");
+		GameRegistry.registerItem(glowstone_bucket, "bucket_glowstone");
+		GameRegistry.registerItem(magma_bucket, "bucket_magma");
+		GameRegistry.registerItem(salt_bucket, "bucket_salt");
 	}
 
 	private static void registerFluidContainer() {
-		if (Config.saturn) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.glowstone_fluid, new ItemStack(glowstone_bucket, 1, 0), new ItemStack(Items.bucket));
-		}
-		if (Config.jupiter) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.magma_fluid, new ItemStack(magma_bucket, 1, 0), new ItemStack(Items.bucket));
-		}
-		if (Config.neptune) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.nitrogen_fluid, new ItemStack(nitrogen_bucket, 1, 0), new ItemStack(Items.bucket));
-		}
-		if (Config.uranus) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.frozen_water_fluid, new ItemStack(frozen_water_bucket, 1, 0), new ItemStack(Items.bucket));
-		}
-		if (Config.ceres) {
-			FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.salt_fluid, new ItemStack(salt_bucket, 1, 0), new ItemStack(Items.bucket));
-		}
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.glowstone_fluid, new ItemStack(glowstone_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.magma_fluid, new ItemStack(magma_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.nitrogen_fluid, new ItemStack(nitrogen_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.frozen_water_fluid, new ItemStack(frozen_water_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.salt_fluid, new ItemStack(salt_bucket, 1, 0), new ItemStack(Items.bucket));
 	}
 
 	public static void OreDictionaryRegister() {
