@@ -11,7 +11,7 @@ A Galacticraft Addon, Made By MJRLegends
 
 **Any lines that need translating within the current lang files have the tag "##NEEDS TRANSLATE##"**
 
-**1.7.10, 1.8.9, 1.10.2, 1.11.2:**
+**1.7.10, 1.8.9, 1.10.2, 1.11.2, 1.12.2:**
 https://github.com/MJRLegends/ExtraPlanets/tree/master/src/main/resources/assets/extraplanets/lang
 
 **Note: All versions use the same lang file**
