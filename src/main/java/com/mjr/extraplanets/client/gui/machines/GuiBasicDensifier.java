@@ -110,7 +110,7 @@ public class GuiBasicDensifier extends GuiContainerGC {
 
 		this.tileEntity.updateTextureOffset();
 		int displayInt = this.tileEntity.getScaledFuelLevel(38);
-		this.drawTexturedModalRect((this.width - this.xSize) / 2 + 7, (this.height - this.ySize) / 2 + 17 + 49 - displayInt, 176 + this.tileEntity.outputTextureOffset, 38 - displayInt, 16, displayInt);
+		this.drawTexturedModalRect((this.width - this.xSize) / 2 + 7, (this.height - this.ySize) / 2 + 17 + 49 - displayInt, 176 + this.tileEntity.outputTextureOffsetX, (38+ this.tileEntity.outputTextureOffsetY) - displayInt, 16, displayInt);
 
 		List<String> inputTankDesc = new ArrayList<String>();
 		inputTankDesc.add(TranslateUtilities.translate("gui.message.general.tank.name"));
