@@ -435,17 +435,8 @@ public class ExtraPlanets_Recipes {
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.FIRE_BOMB), new Object[] { "GZG", "SVS", "GZG", 'G', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM), 'S', Blocks.sand, 'Z',
 						new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10), 'V', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 11) });
 			else {
-				List<ItemStack> items = OreDictionary.getOres("ingotLead");
-				int count = items.size();
-				for (int j = 0; j <= count; j++) {
-					ItemStack item;
-					if (j == 0)
-						item = new ItemStack(ExtraPlanets_Items.INGOT_LEAD);
-					else
-						item = items.get(j - 1);
-					RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.FIRE_BOMB), new Object[] { "GZG", "SLS", "GLG", 'G', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM), 'S', Blocks.sand, 'Z',
-							new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'L', item });
-				}
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Blocks.FIRE_BOMB), new Object[] { "GZG", "SLS", "GLG", 'G', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM), 'S', Blocks.sand, 'Z',
+						new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'L', "ingotLead" });
 			}
 
 			if (Config.ITEMS_MAGNESIUM) {
@@ -846,17 +837,8 @@ public class ExtraPlanets_Recipes {
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Machines.VEHICLE_CHARGER), new Object[] { "WXW", "WXW", "WXW", 'W', "ingotDesh", 'X', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
 
 		if (Config.MARS_ROVER || Config.VENUS_ROVER) {
-			List<ItemStack> items = OreDictionary.getOres("ingotLead");
-			int count = items.size();
-			for (int j = 0; j <= count; j++) {
-				ItemStack item;
-				if (j == 0)
-					item = new ItemStack(ExtraPlanets_Items.INGOT_LEAD);
-				else
-					item = items.get(j - 1);
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 0), new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', item });
-				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', "ingotDesh", 'X', item });
-			}
+			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 0), new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', "ingotLead" });
+			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', "ingotDesh", 'X', "ingotLead" });
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 2), new Object[] { " W ", "WXW", " W ", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(GCItems.partBuggy, 1, 0) });
 			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3), new Object[] { " W ", "WXW", " W ", 'W', "ingotDesh", 'X', new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 2) });
 		}
@@ -886,7 +868,6 @@ public class ExtraPlanets_Recipes {
 
 		// Sledge Hammer
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), new Object[] { "XXX", "YSY", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12), 'Y', new ItemStack(GCItems.itemBasicMoon), 'S', "stickWood" });
-
 
 		// Grinding Wheel
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 1), new Object[] { "ZXZ", "XHX", "ZXZ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10), 'H', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), 'Z',
@@ -948,12 +929,9 @@ public class ExtraPlanets_Recipes {
 		if (Config.PRESSURE || Config.RADIATION) {
 			// Tier 1 - 4 Radiation Layers
 			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LCL", "LCL", 'L', "ingotLead", 'C', ExtraPlanets_Items.CLOTH });
-			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', "ingotLead", 'C', ExtraPlanets_Items.CLOTH, 'R',
-					ExtraPlanets_Items.TIER_1_RADIATION_LAYER });
-			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', "ingotLead", 'C', ExtraPlanets_Items.CLOTH, 'R',
-					ExtraPlanets_Items.TIER_2_RADIATION_LAYER });
-			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', "ingotLead", 'C', ExtraPlanets_Items.CLOTH, 'R',
-					ExtraPlanets_Items.TIER_3_RADIATION_LAYER });
+			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', "ingotLead", 'C', ExtraPlanets_Items.CLOTH, 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER });
+			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', "ingotLead", 'C', ExtraPlanets_Items.CLOTH, 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER });
+			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', "ingotLead", 'C', ExtraPlanets_Items.CLOTH, 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER });
 
 			// Tier 1 - 4 Pressure Layers
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_PRESSURE_LAYER, 1, 0), new Object[] { "CCC", "O O", "CCC", 'O', GCItems.oxygenConcentrator, 'C', ExtraPlanets_Items.CLOTH });
