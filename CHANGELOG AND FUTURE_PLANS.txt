@@ -24,7 +24,7 @@ v1.2.3
 *Changed Mars/ Venus Rover Schematics textures
 *Added Tool tips for Custom Wafers to tell the player where they are used
 *Updated lang files
-**Added Block of Nickel & Platinum recipes
+*Added Block of Nickel & Platinum recipes
 *Fixed some raw type warnings
 *Removed a unused import
 *Clean up/Fix formatting
