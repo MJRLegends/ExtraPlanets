@@ -66,7 +66,6 @@ public class TeleportTypeTriton implements ITeleportType {
 
 	@Override
 	public void setupAdventureSpawn(EntityPlayerMP player) {
-		// TODO Auto-generated method stub
 
 	}
 }

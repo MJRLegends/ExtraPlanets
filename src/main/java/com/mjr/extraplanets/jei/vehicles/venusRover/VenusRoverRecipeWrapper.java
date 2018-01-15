@@ -37,6 +37,5 @@ public class VenusRoverRecipeWrapper extends BlankRecipeWrapper implements ICraf
 
 	@Override
 	public void getIngredients(IIngredients ingredients) {
-		// TODO Auto-generated method stub
 	}
 }

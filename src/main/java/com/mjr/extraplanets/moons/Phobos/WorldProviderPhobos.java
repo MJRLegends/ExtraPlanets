@@ -142,7 +142,6 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

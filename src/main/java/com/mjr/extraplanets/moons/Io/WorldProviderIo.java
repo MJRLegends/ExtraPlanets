@@ -169,7 +169,6 @@ public class WorldProviderIo extends WorldProviderRealisticSpace implements IGal
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

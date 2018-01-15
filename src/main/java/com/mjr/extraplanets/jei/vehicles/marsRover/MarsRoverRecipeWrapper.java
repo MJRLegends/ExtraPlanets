@@ -37,6 +37,5 @@ public class MarsRoverRecipeWrapper extends BlankRecipeWrapper implements ICraft
 
 	@Override
 	public void getIngredients(IIngredients ingredients) {
-		// TODO Auto-generated method stub
 	}
 }

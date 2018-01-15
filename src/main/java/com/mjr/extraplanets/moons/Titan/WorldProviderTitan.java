@@ -169,7 +169,6 @@ public class WorldProviderTitan extends WorldProviderRealisticSpace implements I
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }

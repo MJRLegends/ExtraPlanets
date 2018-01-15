@@ -166,7 +166,6 @@ public class WorldProviderTitania extends WorldProviderRealisticSpace implements
 
 	@Override
 	public ResourceLocation getDungeonChestType() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 }
