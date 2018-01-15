@@ -17,7 +17,9 @@ public class Config {
 	public static boolean genUranusIgloos;
 	public static boolean genUranusIceSpikes;
 	public static boolean genJupiterSkyFeature;
-
+	public static boolean jupiterLighting;
+	public static boolean customFog;
+	
 	public static boolean carbonItems;
 	public static boolean palladiumItems;
 	public static boolean magnesiumItems;
@@ -344,6 +346,8 @@ public class Config {
 		genUranusIgloos = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Will disable Igloos from generating on Uranus").getBoolean(true);
 		genUranusIceSpikes = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Will disable Ice Spikes from generating on Uranus").getBoolean(true);
 		genJupiterSkyFeature = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Jupiter", true, "Setting this option to false will disable the Sky Feature on Jupiter").getBoolean(true);
+		jupiterLighting = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable Lighting & Lighting Effects on Jupiter").getBoolean(true);
+		customFog = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable Fog Effects on Jupiter, Uranus, Saturn, Neptune").getBoolean(true);
 
 		ceres = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Ceres", true).getBoolean(true);
 		mercury = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Mercury", true).getBoolean(true);

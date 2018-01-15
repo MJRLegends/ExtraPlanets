@@ -30,7 +30,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class MainHandler {
 	@SubscribeEvent
 	public void onPlayer(PlayerTickEvent event) {
-		if (event.player.worldObj.provider.dimensionId == Config.jupiterID) {
+		if (Config.jupiterLighting && event.player.worldObj.provider.dimensionId == Config.jupiterID) {
 			Random rand = new Random();
 			int addX = rand.nextInt(64);
 			int addZ = rand.nextInt(64);
@@ -89,24 +89,25 @@ public class MainHandler {
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
 	public void onRenderFogDensity(EntityViewRenderEvent.FogDensity event) {
-		if (event.entity.worldObj.provider.dimensionId == Config.jupiterID) {
-			event.density = 0.02f;
-			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
-			event.setCanceled(true);
-		} else if (event.entity.worldObj.provider.dimensionId == Config.uranusID) {
-			event.density = 0.008f;
-			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
-			event.setCanceled(true);
-		} else if (event.entity.worldObj.provider.dimensionId == Config.saturnID) {
-			event.density = 0.015f;
-			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
-			event.setCanceled(true);
-		} else if (event.entity.worldObj.provider.dimensionId == Config.neptuneID) {
-			event.density = 0.01f;
-			GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
-			event.setCanceled(true);
+		if (Config.customFog) {
+			if (event.entity.worldObj.provider.dimensionId == Config.jupiterID) {
+				event.density = 0.02f;
+				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+				event.setCanceled(true);
+			} else if (event.entity.worldObj.provider.dimensionId == Config.uranusID) {
+				event.density = 0.008f;
+				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+				event.setCanceled(true);
+			} else if (event.entity.worldObj.provider.dimensionId == Config.saturnID) {
+				event.density = 0.015f;
+				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+				event.setCanceled(true);
+			} else if (event.entity.worldObj.provider.dimensionId == Config.neptuneID) {
+				event.density = 0.01f;
+				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+				event.setCanceled(true);
+			}
 		}
-
 	}
 
 	@SideOnly(Side.CLIENT)
