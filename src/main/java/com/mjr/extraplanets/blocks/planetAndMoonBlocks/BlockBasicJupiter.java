@@ -34,7 +34,7 @@ public class BlockBasicJupiter extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		this.blockIcons = new IIcon[12];
+		this.blockIcons = new IIcon[13];
 		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_surface");
 		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_sub_surface");
 		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_stone");
@@ -47,6 +47,7 @@ public class BlockBasicJupiter extends Block {
 		this.blockIcons[9] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_stone_bricks");
 		this.blockIcons[10] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_ore_red_gem");
 		this.blockIcons[11] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_red_gem_block");
+		this.blockIcons[12] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "jupiter_nickel_block");
 		this.blockIcon = this.blockIcons[0];
 	}
 

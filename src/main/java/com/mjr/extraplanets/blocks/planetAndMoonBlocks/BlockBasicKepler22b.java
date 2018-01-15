@@ -37,7 +37,7 @@ public class BlockBasicKepler22b extends Block {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister par1IconRegister) {
-		this.blockIcons = new IIcon[14];
+		this.blockIcons = new IIcon[15];
 		this.blockIcons[0] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_dirt");
 		this.blockIcons[1] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_stone");
 		this.blockIcons[2] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_ore_iron");
@@ -52,6 +52,7 @@ public class BlockBasicKepler22b extends Block {
 		this.blockIcons[11] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_stone_bricks");
 		this.blockIcons[12] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_cobblestone");
 		this.blockIcons[13] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "keler22b_ore_platinum");
+		this.blockIcons[14] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "keler22b_platinum_block");
 		this.blockIcon = this.blockIcons[0];
 	}
 
