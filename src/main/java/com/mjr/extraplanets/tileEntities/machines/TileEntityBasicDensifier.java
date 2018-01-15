@@ -197,10 +197,10 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 			this.outputTextureOffsetX = 0;
 			this.outputTextureOffsetY = 45;
 		} else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.FROZEN_WATER_FLUID, 0))) {
-			this.outputTextureOffsetX = 0;
+			this.outputTextureOffsetX = 16;
 			this.outputTextureOffsetY = 45;
 		} else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID, 0))) {
-			this.outputTextureOffsetX = 16;
+			this.outputTextureOffsetX = 32;
 			this.outputTextureOffsetY = 45;
 		}
 	}
