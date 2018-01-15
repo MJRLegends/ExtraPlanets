@@ -150,7 +150,7 @@ import com.mjr.extraplanets.schematicPages.SchematicVenusRover;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
 import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
-@Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = Constants.DEPENDENCIES_FORGE + Constants.DEPENDENCIES_MODS)
+@Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = Constants.DEPENDENCIES_FORGE + Constants.DEPENDENCIES_MODS, guiFactory = "com.mjr.extraplanets.client.gui.screen.ConfigGuiFactory")
 public class ExtraPlanets {
 
 	@SidedProxy(clientSide = "com.mjr.extraplanets.proxy.ClientProxy", serverSide = "com.mjr.extraplanets.proxy.CommonProxy")
