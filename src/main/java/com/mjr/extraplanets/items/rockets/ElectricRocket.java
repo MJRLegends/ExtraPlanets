@@ -135,6 +135,7 @@ public class ElectricRocket extends Item implements IHoldableItem {
 		}
 
 		par2List.add(EnumColor.DARK_AQUA + TranslateUtilities.translate("rocket_pad.electric.desc"));
+		par2List.add(TranslateUtilities.translate("gui.rover.information.2"));
 	}
 
 	@Override
