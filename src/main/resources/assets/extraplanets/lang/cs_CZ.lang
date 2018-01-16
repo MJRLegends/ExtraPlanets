@@ -773,6 +773,8 @@ item.bucket_radioactive_water.name=Radioactive Water Bucket ##NEEDS TRANSLATE##
 item.bucket_methane.name=Liquid Methane Bucket ##NEEDS TRANSLATE##
 item.bucket_nitrogen_ice.name=Liquid Nitrogen Ice Bucket ##NEEDS TRANSLATE##
 item.bucket_liquid_hydrocarbon.name=Liquid Hydrocarbon Bucket ##NEEDS TRANSLATE##
+item.bucket_liquid_caramel.name=Liquid Caramel Bucket ##NEEDS TRANSLATE##
+item.bucket_liquid_chocolate.name=Liquid Chocolate Bucket ##NEEDS TRANSLATE##
 
 #Keys
 item.T4key.name=Klíč ke kobce typ 4

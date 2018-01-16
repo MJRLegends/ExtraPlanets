@@ -771,6 +771,8 @@ item.bucket_radioactive_water.name=Ведро радиоактивной вод�
 item.bucket_methane.name=Ведро жидкого метана
 item.bucket_nitrogen_ice.name=Ведро замороженного азота
 item.bucket_liquid_hydrocarbon.name=Ведро жидкого водорода
+item.bucket_liquid_caramel.name=Liquid Caramel Bucket ##NEEDS TRANSLATE##
+item.bucket_liquid_chocolate.name=Liquid Chocolate Bucket ##NEEDS TRANSLATE##
 
 #Keys
 item.T4key.name=Ключ от подземелья 4-го уровня
