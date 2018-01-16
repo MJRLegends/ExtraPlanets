@@ -773,6 +773,8 @@ item.bucket_radioactive_water.name=放射性水桶
 item.bucket_methane.name=液态甲烷桶
 item.bucket_nitrogen_ice.name=液氮冰桶
 item.bucket_liquid_hydrocarbon.name=液态烃桶
+item.bucket_liquid_caramel.name=Liquid Caramel Bucket ##NEEDS TRANSLATE##
+item.bucket_liquid_chocolate.name=Liquid Chocolate Bucket ##NEEDS TRANSLATE##
 
 #Keys
 item.T4key.name=4阶宝箱钥匙
