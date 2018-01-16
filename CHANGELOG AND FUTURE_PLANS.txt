@@ -8,6 +8,36 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.9.5
+*Updated lang files to match 1.8+ changes
+*Converted Io over to multi biome system
+*Added Io Ash Lands Biome
+*Added Io Burning Plains Biome
+*Added Ravines Moons & Planets that had it missing
+*Updated zh_CH.lang (Thanks to sdjnmxd)
+*Removed a unused variable
+*Added Config option for Custom Fog Effect on Jupiter, Uranus, Saturn,
+*Added tool tips to Mars and Venus Rover to say how to use them
+*Added Tool tips for Custom Wafers to tell the player where they are
+*Changed Mars/ Venus Rover Schematics textures
+*Updated lang files to match 1.8+ changes
+*Fixed certain kits giving free parachutes and shield controllers
+*Added Block of Nickel &* Platinum with recipes
+*Converted Oberon over to multi biome system
+*Added Oberon Large Mountain Biome
+*Added Oberon Valleys Biome
+*Fixes for Kepler22b world gen to match 1.8+ versions
+*Added Ice to Triton Ice Sea Biome
+*Made Buckets for liquid register all the time
+*Added missing buckets for fluids
+*Added recipes to make resources from certain buckets of fluids
+*Fixes for Kepler22b Platinum Block
+*Fixed spelling error in the Platinum Ore within the code
+*Added textures for new buckets
+*Updated lang files
+*Fixes for Oberon Biomes
+*Fixed sky renders for Iapetus, Oberon, Titania
+
 v1.9.4
 *Fixed some compatibility issues with other addons
 
