@@ -116,6 +116,12 @@ public class ExtraPlanets_Items {
 	public static Item nitrogen_bucket;
 	public static Item frozen_water_bucket;
 	public static Item salt_bucket;
+	public static Item nitrogen_ice_bucket;
+	public static Item methane_bucket;
+	public static Item infected_water_bucket;
+	public static Item liquid_hydrocarbon_bucket;
+	public static Item liquid_chocolate_bucket;
+	public static Item liquid_caramel_bucket;
 
 	public static Item cannedFood;
 	public static Item diamondApple;
@@ -280,6 +286,12 @@ public class ExtraPlanets_Items {
 		glowstone_bucket = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.glowstone);
 		magma_bucket = new ItemBasicItemBucket("bucket_magma", ExtraPlanets_Fluids.magma);
 		salt_bucket = new ItemBasicItemBucket("bucket_salt", ExtraPlanets_Fluids.salt);
+		nitrogen_ice_bucket = new ItemBasicItemBucket("bucket_nitrogen_ice", ExtraPlanets_Fluids.nitrogen_ice);
+		methane_bucket = new ItemBasicItemBucket("bucket_methane", ExtraPlanets_Fluids.methane);
+		infected_water_bucket = new ItemBasicItemBucket("bucket_infected_water", ExtraPlanets_Fluids.infected_water);
+		liquid_hydrocarbon_bucket = new ItemBasicItemBucket("bucket_liquid_hydrocarbon", ExtraPlanets_Fluids.liquid_hydrocarbon);
+		liquid_chocolate_bucket = new ItemBasicItemBucket("bucket_liquid_chocolate", ExtraPlanets_Fluids.liquid_chocolate);
+		liquid_caramel_bucket = new ItemBasicItemBucket("bucket_liquid_caramel", ExtraPlanets_Fluids.liquid_caramel);
 	}
 
 	private static void registerItems() {
@@ -399,6 +411,12 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(glowstone_bucket, "bucket_glowstone");
 		GameRegistry.registerItem(magma_bucket, "bucket_magma");
 		GameRegistry.registerItem(salt_bucket, "bucket_salt");
+		GameRegistry.registerItem(nitrogen_ice_bucket, "bucket_nitrogen_ice");
+		GameRegistry.registerItem(methane_bucket, "bucket_methane");
+		GameRegistry.registerItem(infected_water_bucket, "bucket_infected_water");
+		GameRegistry.registerItem(liquid_hydrocarbon_bucket, "bucket_liquid_hydrocarbon");
+		GameRegistry.registerItem(liquid_chocolate_bucket, "bucket_liquid_chocolate");
+		GameRegistry.registerItem(liquid_caramel_bucket, "bucket_liquid_caramel");
 	}
 
 	private static void registerFluidContainer() {
@@ -407,6 +425,12 @@ public class ExtraPlanets_Items {
 		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.nitrogen_fluid, new ItemStack(nitrogen_bucket, 1, 0), new ItemStack(Items.bucket));
 		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.frozen_water_fluid, new ItemStack(frozen_water_bucket, 1, 0), new ItemStack(Items.bucket));
 		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.salt_fluid, new ItemStack(salt_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.nitrogen_ice_fluid, new ItemStack(nitrogen_ice_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.methane_fluid, new ItemStack(methane_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.infected_water_fluid, new ItemStack(infected_water_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.liquid_hydrocarbon_fluid, new ItemStack(liquid_hydrocarbon_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.liquid_chocolate_fluid, new ItemStack(liquid_chocolate_bucket, 1, 0), new ItemStack(Items.bucket));
+		FluidContainerRegistry.registerFluidContainer(ExtraPlanets_Fluids.liquid_caramel_fluid, new ItemStack(liquid_caramel_bucket, 1, 0), new ItemStack(Items.bucket));
 	}
 
 	public static void OreDictionaryRegister() {

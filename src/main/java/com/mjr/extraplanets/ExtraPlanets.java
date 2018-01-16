@@ -258,6 +258,12 @@ public class ExtraPlanets {
 		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.glowstone, ExtraPlanets_Items.glowstone_bucket);
 		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.frozen_water, ExtraPlanets_Items.frozen_water_bucket);
 		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.nitrogen, ExtraPlanets_Items.nitrogen_bucket);
+		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.nitrogen_ice, ExtraPlanets_Items.nitrogen_ice_bucket);
+		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.methane, ExtraPlanets_Items.methane_bucket);
+		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.infected_water, ExtraPlanets_Items.infected_water_bucket);
+		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.liquid_hydrocarbon, ExtraPlanets_Items.liquid_hydrocarbon_bucket);
+		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.liquid_chocolate, ExtraPlanets_Items.liquid_chocolate_bucket);
+		BucketHandler.INSTANCE.buckets.put(ExtraPlanets_Fluids.liquid_caramel, ExtraPlanets_Items.liquid_caramel_bucket);
 
 		// Bucket Handler
 		MinecraftForge.EVENT_BUS.register(BucketHandler.INSTANCE);
