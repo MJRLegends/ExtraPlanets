@@ -29,6 +29,7 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 	@NetworkedField(targetSide = Side.CLIENT)
 	public IPowerable attachedPowerable;
 	private boolean loadedPowerLastTick = false;
+	private NonNullList<ItemStack> stacks = NonNullList.withSize(1, ItemStack.EMPTY);
 
 	public TileEntityVehicleChanger() {
 		this.storage.setMaxExtract(30);
@@ -75,11 +76,13 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 	@Override
 	public void readFromNBT(NBTTagCompound par1NBTTagCompound) {
 		super.readFromNBT(par1NBTTagCompound);
+		this.stacks = this.readStandardItemsFromNBT(par1NBTTagCompound);
 	}
 
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound par1NBTTagCompound) {
 		super.writeToNBT(par1NBTTagCompound);
+		this.writeStandardItemsToNBT(par1NBTTagCompound, this.stacks);
 		return par1NBTTagCompound;
 	}
 
@@ -182,6 +185,6 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 
 	@Override
 	protected NonNullList<ItemStack> getContainingItems() {
-		return null;
+		return this.stacks;
 	}
 }
