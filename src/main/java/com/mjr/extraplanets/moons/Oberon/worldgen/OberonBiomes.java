@@ -13,12 +13,14 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenLargeMountain;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberon;
+import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenValleys;
 
 public class OberonBiomes extends BiomeGenBase {
 	public static final BiomeGenBase oberon = new BiomeGenOberon(Config.oberonBiomeID).setBiomeName("oberon").setHeight(new Height(0.125F, 0.05F));
-	public static final BiomeGenBase oberonLargeMountain = new BiomeGenOberon(Config.oberonLargeMountainBiomeID).setBiomeName("oberonLargeMountain").setHeight(new Height(3.0F, 2.5F));
-	public static final BiomeGenBase oberonValleys = new BiomeGenOberon(Config.oberonValleysBiomeID).setBiomeName("oberonValleys").setHeight(new Height(-0.4F, 0.2F));
+	public static final BiomeGenBase oberonLargeMountain = new BiomeGenLargeMountain(Config.oberonLargeMountainBiomeID).setBiomeName("oberonLargeMountain").setHeight(new Height(3.0F, 2.5F));
+	public static final BiomeGenBase oberonValleys = new BiomeGenValleys(Config.oberonValleysBiomeID).setBiomeName("oberonValleys").setHeight(new Height(-0.4F, 0.2F));
 
 	protected Block stoneBlock;
 	protected byte topMeta;
