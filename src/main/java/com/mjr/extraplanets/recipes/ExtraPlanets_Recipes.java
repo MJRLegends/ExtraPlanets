@@ -1023,6 +1023,28 @@ public class ExtraPlanets_Recipes {
 				new ItemStack(GCItems.parachute) });
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier4EquipmentKit, 1, 5), new Object[] { "ABC", " D ", "   ", 'A', new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 0), 'B',
 				new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.tier4ThermalPadding, 1, 3) });
+
+		// Bucket to Glowstone
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.glowstone, 1), new Object[] { new ItemStack(ExtraPlanets_Items.glowstone_bucket) });
+		
+		// Bucket to Ice
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.ice, 3), new Object[] { new ItemStack(ExtraPlanets_Items.frozen_water_bucket) });
+
+		// Bucket to Frozen Nitrogen
+		GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.frozenNitrogen, 2), new Object[] { new ItemStack(ExtraPlanets_Items.nitrogen_bucket) });
+		
+		// Bucket to Coal
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.coal, 3), new Object[] { new ItemStack(ExtraPlanets_Items.liquid_hydrocarbon_bucket) });
+		
+		// Bucket to Ice
+		GameRegistry.addShapelessRecipe(new ItemStack(Blocks.ice, 6), new Object[] { new ItemStack(ExtraPlanets_Items.nitrogen_ice_bucket) });
+		
+		// Bucket to Caramel Bar
+		//GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.caramelBar, 3), new Object[] { new ItemStack(ExtraPlanets_Items.liquid_caramel_bucket) });
+		
+		// Bucket to Chocolate Bar
+		//GameRegistry.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.chocolateBar, 3), new Object[] { new ItemStack(ExtraPlanets_Items.liquid_chocolate_bucket) });
+	
 	}
 
 	private static void registerCompressorRecipes() {
