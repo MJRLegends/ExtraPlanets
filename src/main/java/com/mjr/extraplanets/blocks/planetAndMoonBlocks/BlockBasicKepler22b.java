@@ -51,8 +51,8 @@ public class BlockBasicKepler22b extends Block {
 		this.blockIcons[10] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_ore_green_diamond");
 		this.blockIcons[11] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_stone_bricks");
 		this.blockIcons[12] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_cobblestone");
-		this.blockIcons[13] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "keler22b_ore_platinum");
-		this.blockIcons[14] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "keler22b_platinum_block");
+		this.blockIcons[13] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_ore_platinum");
+		this.blockIcons[14] = par1IconRegister.registerIcon(Constants.TEXTURE_PREFIX + "kepler22b_platinum_block");
 		this.blockIcon = this.blockIcons[0];
 	}
 
