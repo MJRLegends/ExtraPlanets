@@ -3,6 +3,8 @@ package com.mjr.extraplanets.entities.bosses;
 import java.util.List;
 import java.util.Random;
 
+import javax.annotation.Nullable;
+
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -21,8 +23,10 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.world.BossInfo.Color;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
@@ -69,21 +73,23 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue((0.20000000298023224D * 8));
 	}
 
-	// @Override
-	// protected String getLivingSound() {
-	// return null;
-	// }
-	//
-	// @Override
-	// protected String getHurtSound() {
-	// this.playSound(Constants.TEXTURE_PREFIX + "entity.bossliving", this.getSoundVolume(), this.getSoundPitch() + 6.0F);
-	// return null;
-	// }
-	//
-	// @Override
-	// protected String getDeathSound() {
-	// return null;
-	// }
+    @Nullable
+    protected SoundEvent getAmbientSound()
+    {
+        return SoundEvents.ENTITY_SNOWMAN_AMBIENT;
+    }
+
+    @Nullable
+    protected SoundEvent getHurtSound()
+    {
+        return SoundEvents.ENTITY_SNOWMAN_HURT;
+    }
+
+    @Nullable
+    protected SoundEvent getDeathSound()
+    {
+        return SoundEvents.ENTITY_SNOWMAN_DEATH;
+    }
 
 	@Override
 	protected Item getDropItem() {
