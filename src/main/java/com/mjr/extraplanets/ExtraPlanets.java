@@ -31,6 +31,7 @@ import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedGiantZombieBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
@@ -427,7 +428,10 @@ public class ExtraPlanets {
 		if (Config.PLUTO)
 			RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossPluto.class, "CreeperBossPluto", 894731, 0);
 		if (Config.ERIS)
-			RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossEris.class, "CreeperBossEris", 894731, 0);
+			if (Config.USE_DEFAULT_BOSSES)
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossEris.class, "CreeperBossEris", 894731, 0);
+			else
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedGiantZombieBoss.class, "EvolvedGiantZombieBoss", 894731, 0);
 	}
 
 	private void registerFluidSubmergedTextures() {

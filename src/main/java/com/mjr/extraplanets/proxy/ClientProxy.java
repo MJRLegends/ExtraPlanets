@@ -77,6 +77,7 @@ import com.mjr.extraplanets.client.render.entities.RenderFireBombPrimed;
 import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedFireBatBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGhastBoss;
+import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGiantZombieBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedSnowmanBoss;
@@ -119,6 +120,7 @@ import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedGiantZombieBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
@@ -390,8 +392,12 @@ public class ClientProxy extends CommonProxy {
 		}
 		if (Config.PLUTO)
 			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossPluto.class, (RenderManager manager) -> new RenderCreeperBossPluto(manager));
-		if (Config.ERIS)
-			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossEris.class, (RenderManager manager) -> new RenderCreeperBossEris(manager));
+		if (Config.ERIS) {
+			if (Config.USE_DEFAULT_BOSSES)
+				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossEris.class, (RenderManager manager) -> new RenderCreeperBossEris(manager));
+			else
+				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedGiantZombieBoss.class, (RenderManager manager) -> new RenderEvolvedGiantZombieBoss(manager));
+		}
 		if (Config.MERCURY)
 			RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, (RenderManager manager) -> new RenderTier4Rocket(manager));
 		if (Config.JUPITER)
