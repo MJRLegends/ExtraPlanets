@@ -1,6 +1,7 @@
 {
   "result": {
-    "item": "extraplanets:massive_battery"
+    "item": "extraplanets:massive_battery",
+    "data": 100
   },
   "pattern": [
     "PPP",

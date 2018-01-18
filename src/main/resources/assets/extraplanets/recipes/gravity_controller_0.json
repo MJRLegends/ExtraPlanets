@@ -11,7 +11,8 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "R": {
-      "item": "galacticraftcore:battery"
+      "item": "galacticraftcore:battery",
+      "data": 100
     },
     "C": {
       "item": "galacticraftcore:item_basic_moon",

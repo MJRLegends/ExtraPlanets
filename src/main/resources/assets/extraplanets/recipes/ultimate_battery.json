@@ -1,6 +1,7 @@
 {
   "result": {
-    "item": "extraplanets:ultimate_battery"
+    "item": "extraplanets:ultimate_battery",
+    "data": 100
   },
   "pattern": [
     "WRB",
