@@ -12,11 +12,11 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.SoundCategory;
 
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedGiantZombieBoss;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
 
-public class TileEntityDungeonSpawnerEris extends TileEntityDungeonSpawner<EntityEvolvedGiantZombieBoss> {
-	public TileEntityDungeonSpawnerEris() {
-		super(EntityEvolvedGiantZombieBoss.class);
+public class TileEntityDungeonSpawnerErisDefault extends TileEntityDungeonSpawner<EntityCreeperBossEris> {
+	public TileEntityDungeonSpawnerErisDefault() {
+		super(EntityCreeperBossEris.class);
 	}
 
 	@Override
@@ -30,6 +30,6 @@ public class TileEntityDungeonSpawnerEris extends TileEntityDungeonSpawner<Entit
 
 	@Override
 	public void playSpawnSound(Entity entity) {
-		this.world.playSound(null, entity.posX, entity.posY, entity.posZ, GCSounds.scaryScape, SoundCategory.AMBIENT, 9.0F, 1.4F);
+		this.worldObj.playSound(null, entity.posX, entity.posY, entity.posZ, GCSounds.scaryScape, SoundCategory.AMBIENT, 9.0F, 1.4F);
 	}
 }
