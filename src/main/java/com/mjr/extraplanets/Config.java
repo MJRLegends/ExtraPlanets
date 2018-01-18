@@ -211,6 +211,7 @@ public class Config {
 
 	public static boolean ORE_DICTIONARY;
 	public static boolean ORE_DICTIONARY_INGOTS;
+	public static boolean ORE_DICTIONARY_OTHER;
 
 	public static int SCHEMATIC_TIER_4_GUI_ID;
 	public static int SCHEMATIC_TIER_5_GUI_ID;
@@ -554,6 +555,7 @@ public class Config {
 		ORE_DICTIONARY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of All Planet/Moons Ores to the Ore Dictionary", true, "Setting this to false will disable all Ore Dictionary Support for Planet and Moon Ores!").getBoolean(
 				true);
 		ORE_DICTIONARY_INGOTS = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of all Ingots to the Ore Dictionary", true, "Setting this to false will disable all Ore Dictionary Support for All Ingots!").getBoolean(true);
+		ORE_DICTIONARY_OTHER = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of all Items excluding Ingots to the Ore Dictionary", true, "Setting this to false will disable all Ore Dictionary Support for All needed Items excluding Ingots!").getBoolean(true);
 
 		MORE_PLANETS_COMPATIBILITY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable More Planets Compatibility", false,
 				"FOR THIS TO WORK YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!").getBoolean(false);

@@ -248,7 +248,8 @@ public class ExtraPlanets_Items {
 		registerItems();
 		if (Config.ORE_DICTIONARY_INGOTS)
 			OreDictionaryIngotsRegister();
-		OreDictionaryItemsRegister();
+		if(Config.ORE_DICTIONARY_OTHER)
+			OreDictionaryItemsRegister();
 		registerGearItems();
 	}
 
