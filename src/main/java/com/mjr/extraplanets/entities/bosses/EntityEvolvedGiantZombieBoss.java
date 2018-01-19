@@ -92,10 +92,10 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 	protected void onDeathUpdate() {
 		super.onDeathUpdate();
 
-		if (!this.worldObj.isRemote) {
+		if (!this.world.isRemote) {
 			if (this.deathTicks == 100) {
-				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }),
-						new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.world), new Object[] { 1.5F }),
+						new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.world), this.posX, this.posY, this.posZ, 40.0D));
 			}
 		}
 	}
@@ -136,7 +136,7 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 		boolean flag = super.attackEntityAsMob(entityIn);
 
 		if (flag) {
-			float f = this.worldObj.getDifficultyForLocation(new BlockPos(this)).getAdditionalDifficulty();
+			float f = this.world.getDifficultyForLocation(new BlockPos(this)).getAdditionalDifficulty();
 
 			if (this.getHeldItemMainhand() == null) {
 				if (this.isBurning() && this.rand.nextFloat() < f * 0.3F) {
@@ -173,7 +173,7 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 	}
 
 	public static void registerFixesZombie(DataFixer fixer) {
-		EntityLiving.registerFixesMob(fixer, "Zombie");
+		EntityLiving.registerFixesMob(fixer, EntityZombie.class);
 	}
 
 	/**
@@ -248,13 +248,13 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 
 	@Override
 	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+		final EntityItem entityitem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, par1ItemStack);
 		entityitem.motionY = -2.0D;
 		entityitem.setDefaultPickupDelay();
 		if (this.captureDrops) {
 			this.capturedDrops.add(entityitem);
 		} else {
-			this.worldObj.spawnEntityInWorld(entityitem);
+			this.world.spawnEntity(entityitem);
 		}
 		return entityitem;
 	}
