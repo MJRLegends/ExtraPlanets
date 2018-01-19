@@ -23,27 +23,26 @@ import com.mjr.extraplanets.entities.bosses.EntityEvolvedGiantZombieBoss;
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedGiantZombieBoss extends RenderBiped<EntityEvolvedGiantZombieBoss> {
 	private static final ResourceLocation ZOMBIE_TEXTURES = new ResourceLocation("textures/entity/zombie/zombie.png");
-	private final ModelBiped defaultModel;
+	private final ModelBiped field_82434_o;
 	private final ModelZombieVillager zombieVillagerModel;
-	@SuppressWarnings("unused")
-	private final List<LayerRenderer<EntityEvolvedGiantZombieBoss>> villagerLayers;
-	private final List<LayerRenderer<EntityEvolvedGiantZombieBoss>> defaultLayers;
+	private final List<LayerRenderer<EntityEvolvedGiantZombieBoss>> field_177121_n;
+	private final List<LayerRenderer<EntityEvolvedGiantZombieBoss>> field_177122_o;
 
 	@SuppressWarnings("rawtypes")
 	public RenderEvolvedGiantZombieBoss(RenderManager renderManagerIn) {
 		super(renderManagerIn, new ModelZombie(), 0.5F, 1.0F);
-		LayerRenderer<?> layerrenderer = (LayerRenderer) this.layerRenderers.get(0);
-		this.defaultModel = this.modelBipedMain;
+		LayerRenderer layerrenderer = (LayerRenderer) this.layerRenderers.get(0);
+		this.field_82434_o = this.modelBipedMain;
 		this.zombieVillagerModel = new ModelZombieVillager();
 		this.addLayer(new LayerHeldItem(this));
 		LayerBipedArmor layerbipedarmor = new LayerBipedArmor(this) {
 			protected void initArmor() {
-				this.modelLeggings = new ModelZombie(0.5F, true);
-				this.modelArmor = new ModelZombie(1.0F, true);
+				this.field_177189_c = new ModelZombie(0.5F, true);
+				this.field_177186_d = new ModelZombie(1.0F, true);
 			}
 		};
 		this.addLayer(layerbipedarmor);
-		this.defaultLayers = Lists.newArrayList(this.layerRenderers);
+		this.field_177122_o = Lists.newArrayList(this.layerRenderers);
 
 		if (layerrenderer instanceof LayerCustomHead) {
 			this.removeLayer(layerrenderer);
@@ -52,7 +51,7 @@ public class RenderEvolvedGiantZombieBoss extends RenderBiped<EntityEvolvedGiant
 
 		this.removeLayer(layerbipedarmor);
 		this.addLayer(new LayerVillagerArmor(this));
-		this.villagerLayers = Lists.newArrayList(this.layerRenderers);
+		this.field_177121_n = Lists.newArrayList(this.layerRenderers);
 	}
 
 	/**
@@ -68,7 +67,7 @@ public class RenderEvolvedGiantZombieBoss extends RenderBiped<EntityEvolvedGiant
 	 * Renders the desired {@code T} type Entity.
 	 */
 	public void doRender(EntityEvolvedGiantZombieBoss entity, double x, double y, double z, float entityYaw, float partialTicks) {
-		this.swapArmor(entity);
+		this.func_82427_a(entity);
 		super.doRender(entity, x, y, z, entityYaw, partialTicks);
 	}
 
@@ -79,14 +78,13 @@ public class RenderEvolvedGiantZombieBoss extends RenderBiped<EntityEvolvedGiant
 		return ZOMBIE_TEXTURES;
 	}
 
-	private void swapArmor(EntityEvolvedGiantZombieBoss zombie) {
-		this.mainModel = this.defaultModel;
-		this.layerRenderers = this.defaultLayers;
-
+	private void func_82427_a(EntityEvolvedGiantZombieBoss zombie) {
+		this.mainModel = this.field_82434_o;
+		this.layerRenderers = this.field_177122_o;
 		this.modelBipedMain = (ModelBiped) this.mainModel;
 	}
 
-	protected void rotateCorpse(EntityEvolvedGiantZombieBoss entityLiving, float p_77043_2_, float p_77043_3_, float partialTicks) {
-		super.rotateCorpse(entityLiving, p_77043_2_, p_77043_3_, partialTicks);
+	protected void rotateCorpse(EntityEvolvedGiantZombieBoss bat, float p_77043_2_, float p_77043_3_, float partialTicks) {
+		super.rotateCorpse(bat, p_77043_2_, p_77043_3_, partialTicks);
 	}
 }
