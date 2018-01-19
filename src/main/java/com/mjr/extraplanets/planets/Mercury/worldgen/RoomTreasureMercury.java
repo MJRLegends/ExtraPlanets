@@ -2,15 +2,11 @@ package com.mjr.extraplanets.planets.Mercury.worldgen;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
@@ -64,18 +60,7 @@ public class RoomTreasureMercury extends RoomTreasure {
 					} else if ((i == 1 && k == 1) || (i == 1 && k == this.sizeZ - 1) || (i == this.sizeX - 1 && k == 1) || (i == this.sizeX - 1 && k == this.sizeZ - 1)) {
 						this.setBlockState(worldIn, Blocks.glowstone.getDefaultState(), i, j, k, boundingBox);
 					} else if (i == this.sizeX / 2 && j == 1 && k == this.sizeZ / 2) {
-						BlockPos blockpos = new BlockPos(this.getXWithOffset(i, k), this.getYWithOffset(j), this.getZWithOffset(i, k));
-						if (boundingBox.isVecInside(blockpos)) {
-							worldIn.setBlockState(blockpos, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_4.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), 2);
-							TileEntityTreasureChest treasureChest = (TileEntityTreasureChest) worldIn.getTileEntity(blockpos);
-							if (treasureChest != null) {
-								ResourceLocation chesttype = RoomTreasure.TABLE_TIER_1_DUNGEON;
-								if (worldIn.provider instanceof IGalacticraftWorldProvider) {
-									chesttype = ((IGalacticraftWorldProvider) worldIn.provider).getDungeonChestType();
-								}
-								treasureChest.setLootTable(chesttype, random.nextLong());
-							}
-						}
+						this.setBlockState(worldIn, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_4.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
 					} else {
 						this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
 					}
