@@ -9,7 +9,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import com.mjr.extraplanets.Config;
 
 public class CeresBiomes extends BiomeGenBase {
-	public static final BiomeGenBase ceres = new BiomeGenCeres(Config.CERES_BIOME_ID).setBiomeName("ceres").setHeight(new Height(0.4F, 0.0F));
+	public static final BiomeGenBase ceres = new BiomeGenCeres(Config.CERES_BIOME_ID).setBiomeName("Ceres").setHeight(new Height(0.4F, 0.0F));
 
 	CeresBiomes(int var1) {
 		super(var1);

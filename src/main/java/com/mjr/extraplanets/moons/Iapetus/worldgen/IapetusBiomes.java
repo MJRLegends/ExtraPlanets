@@ -10,7 +10,7 @@ import com.mjr.extraplanets.Config;
 
 public class IapetusBiomes extends BiomeGenBase {
 
-	public static final BiomeGenBase iapetus = new BiomeGenIapetus(Config.IAPETUS_BIOME_ID).setBiomeName("iapetus").setHeight(new Height(2.5F, 0.4F));
+	public static final BiomeGenBase iapetus = new BiomeGenIapetus(Config.IAPETUS_BIOME_ID).setBiomeName("Iapetus").setHeight(new Height(2.5F, 0.4F));
 
 	IapetusBiomes(int par1) {
 		super(par1);

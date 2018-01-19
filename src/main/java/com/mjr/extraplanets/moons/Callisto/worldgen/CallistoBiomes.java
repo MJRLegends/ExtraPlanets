@@ -10,7 +10,7 @@ import com.mjr.extraplanets.Config;
 
 public class CallistoBiomes extends BiomeGenBase {
 
-	public static final BiomeGenBase callisto = new BiomeGenCallisto(Config.CALLISTO_BIOME_ID).setBiomeName("callisto").setHeight(new Height(2.5F, 0.4F));
+	public static final BiomeGenBase callisto = new BiomeGenCallisto(Config.CALLISTO_BIOME_ID).setBiomeName("Callisto").setHeight(new Height(2.5F, 0.4F));
 
 	CallistoBiomes(int var1) {
 		super(var1);

@@ -20,9 +20,9 @@ import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonLargeMoun
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonValleys;
 
 public class OberonBiomes extends BiomeGenBase {
-	public static final BiomeGenBase oberon = new BiomeGenOberon(Config.OBERON_BIOME_ID).setBiomeName("oberon").setHeight(new Height(2.5F, 0.4F));
-	public static final BiomeGenBase oberonLargeIceMountain = new BiomeGenOberonLargeMountain(Config.OBERON_LARGE_MOUNTAIN_BIOME_ID).setBiomeName("oberonLargeIceMountain").setHeight(new Height(3.0F, 2.5F));
-	public static final BiomeGenBase oberonValleys = new BiomeGenOberonValleys(Config.OBERON_VALLEYS_BIOME_ID).setBiomeName("oberonValleys").setHeight(new Height(-0.4F, 0.2F));
+	public static final BiomeGenBase oberon = new BiomeGenOberon(Config.OBERON_BIOME_ID).setBiomeName("Oberon").setHeight(new Height(2.5F, 0.4F));
+	public static final BiomeGenBase oberonLargeIceMountain = new BiomeGenOberonLargeMountain(Config.OBERON_LARGE_MOUNTAIN_BIOME_ID).setBiomeName("Oberon Large Ice Mountain").setHeight(new Height(3.0F, 2.5F));
+	public static final BiomeGenBase oberonValleys = new BiomeGenOberonValleys(Config.OBERON_VALLEYS_BIOME_ID).setBiomeName("Oberon Valleys").setHeight(new Height(-0.4F, 0.2F));
 
 	protected OberonBiomes(int var1) {
 		super(var1);

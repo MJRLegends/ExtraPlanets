@@ -10,7 +10,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.Eris.worldgen.BiomeGenEris;
 
 public class MercuryBiomes extends BiomeGenBase {
-	public static final BiomeGenBase mercury = new BiomeGenEris(Config.MERCURY_BIOME_ID).setBiomeName("mercury").setHeight(new Height(2.5F, 0.4F));
+	public static final BiomeGenBase mercury = new BiomeGenEris(Config.MERCURY_BIOME_ID).setBiomeName("Mercury").setHeight(new Height(2.5F, 0.4F));
 
 	MercuryBiomes(int var1) {
 		super(var1);

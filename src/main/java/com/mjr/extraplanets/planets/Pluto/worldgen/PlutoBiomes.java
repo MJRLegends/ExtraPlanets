@@ -10,7 +10,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.Eris.worldgen.BiomeGenEris;
 
 public class PlutoBiomes extends BiomeGenBase {
-	public static final BiomeGenBase pluto = new BiomeGenEris(Config.PLUTO_BIOME_ID).setBiomeName("pluto").setHeight(new Height(2.5F, 0.4F));
+	public static final BiomeGenBase pluto = new BiomeGenEris(Config.PLUTO_BIOME_ID).setBiomeName("Pluto").setHeight(new Height(2.5F, 0.4F));
 
 	PlutoBiomes(int var1) {
 		super(var1);

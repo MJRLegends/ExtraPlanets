@@ -9,7 +9,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import com.mjr.extraplanets.Config;
 
 public class RheaBiomes extends BiomeGenBase {
-	public static final BiomeGenBase rhea = new BiomeGenRhea(Config.RHEA_BIOME_ID).setBiomeName("rhea").setHeight(new Height(2.5F, 0.4F));
+	public static final BiomeGenBase rhea = new BiomeGenRhea(Config.RHEA_BIOME_ID).setBiomeName("Rhea").setHeight(new Height(2.5F, 0.4F));
 
 	RheaBiomes(int par1) {
 		super(par1);

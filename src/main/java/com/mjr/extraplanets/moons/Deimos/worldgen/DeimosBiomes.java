@@ -10,7 +10,7 @@ import com.mjr.extraplanets.Config;
 
 public class DeimosBiomes extends BiomeGenBase {
 
-	public static final BiomeGenBase deimos = new BiomeGenDeimos(Config.DEIMOS_BIOME_ID).setBiomeName("deimos").setHeight(new Height(2.5F, 0.4F));
+	public static final BiomeGenBase deimos = new BiomeGenDeimos(Config.DEIMOS_BIOME_ID).setBiomeName("Deimos").setHeight(new Height(2.5F, 0.4F));
 
 	DeimosBiomes(int par1) {
 		super(par1);

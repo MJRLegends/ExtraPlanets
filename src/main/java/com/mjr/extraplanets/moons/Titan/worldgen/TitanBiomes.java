@@ -22,9 +22,9 @@ import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneHill
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneSea;
 
 public class TitanBiomes extends BiomeGenBase {
-	public static final BiomeGenBase titan = new BiomeGenTitan(Config.TITAN_BIOME_ID).setBiomeName("titan").setHeight(new Height(0.125F, 0.25F));
-	public static final BiomeGenBase titanMethaneSea = new BiomeGenTitanMethaneSea(Config.TITAN_SEA_BIOME_ID).setBiomeName("titanMethaneSea").setHeight(new Height(-1.0F, 0.0F));
-	public static final BiomeGenBase titanMethaneHills = new BiomeGenTitanMethaneHills(Config.TITAN_METHANE_HILLS_BIOME_ID).setBiomeName("titanMethaneHills").setHeight(new Height(0.125F, 0.55F));
+	public static final BiomeGenBase titan = new BiomeGenTitan(Config.TITAN_BIOME_ID).setBiomeName("Titan").setHeight(new Height(0.125F, 0.25F));
+	public static final BiomeGenBase titanMethaneSea = new BiomeGenTitanMethaneSea(Config.TITAN_SEA_BIOME_ID).setBiomeName("Titan Methane Sea").setHeight(new Height(-1.0F, 0.0F));
+	public static final BiomeGenBase titanMethaneHills = new BiomeGenTitanMethaneHills(Config.TITAN_METHANE_HILLS_BIOME_ID).setBiomeName("Titan Methane Hills").setHeight(new Height(0.125F, 0.55F));
 
 	protected TitanBiomes(int par1) {
 		super(par1);

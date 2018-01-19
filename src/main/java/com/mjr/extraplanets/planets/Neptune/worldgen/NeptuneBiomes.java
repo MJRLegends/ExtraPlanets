@@ -22,9 +22,9 @@ import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneLayer
 import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneRadioActiveWaterSea;
 
 public class NeptuneBiomes extends BiomeGenBase {
-	public static final BiomeGenBase neptune = new BiomeGenNeptune(Config.NEPTUNE_BIOME_ID).setBiomeName("neptune").setHeight(new Height(0.125F, 0.05F));
-	public static final BiomeGenBase neptuneRadioActiveWaterSea = new BiomeGenNeptuneRadioActiveWaterSea(Config.NEPTUNE_RADIO_ACTIVE_WATER_SEA_BIOME_ID).setBiomeName("neptuneRadioActiveWaterSea").setHeight(new Height(-1.0F, 0.0F));
-	public static final BiomeGenBase neptuneLayeredHills = new BiomeGenNeptuneLayeredHills(Config.NEPTUNE_LAYERED_HILLS_BIOME_ID).setBiomeName("neptuneLayeredHills").setHeight(new Height(1.5F, 0.025F));
+	public static final BiomeGenBase neptune = new BiomeGenNeptune(Config.NEPTUNE_BIOME_ID).setBiomeName("Neptune").setHeight(new Height(0.125F, 0.05F));
+	public static final BiomeGenBase neptuneRadioActiveWaterSea = new BiomeGenNeptuneRadioActiveWaterSea(Config.NEPTUNE_RADIO_ACTIVE_WATER_SEA_BIOME_ID).setBiomeName("Neptune RadioActive Water Sea").setHeight(new Height(-1.0F, 0.0F));
+	public static final BiomeGenBase neptuneLayeredHills = new BiomeGenNeptuneLayeredHills(Config.NEPTUNE_LAYERED_HILLS_BIOME_ID).setBiomeName("Neptune Layered Hills").setHeight(new Height(1.5F, 0.025F));
 
 	protected NeptuneBiomes(int var1) {
 		super(var1);

@@ -9,7 +9,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import com.mjr.extraplanets.Config;
 
 public class ErisBiomes extends BiomeGenBase {
-	public static final BiomeGenBase eris = new BiomeGenEris(Config.ERIS_BIOME_ID).setBiomeName("eris").setHeight(new Height(0.4F, 0.0F));
+	public static final BiomeGenBase eris = new BiomeGenEris(Config.ERIS_BIOME_ID).setBiomeName("Eris").setHeight(new Height(0.4F, 0.0F));
 
 	ErisBiomes(int var1) {
 		super(var1);

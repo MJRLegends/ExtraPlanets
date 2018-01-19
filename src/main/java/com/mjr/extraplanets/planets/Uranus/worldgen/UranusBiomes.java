@@ -22,9 +22,9 @@ import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusFrozenW
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusSnowLands;
 
 public class UranusBiomes extends BiomeGenBase {
-	public static final BiomeGenBase uranus = new BiomeGenUranus(Config.URANUS_BIOME_ID).setBiomeName("uranus").setHeight(new Height(0.125F, 0.05F));
-	public static final BiomeGenBase uranusFrozenWater = new BiomeGenUranusFrozenWaterSea(Config.URANUS_FROZEN_SEA_BIOME_ID).setBiomeName("uranusFrozenWater").setHeight(new Height(-1.0F, 0.0F));
-	public static final BiomeGenBase uranusSnowLands = new BiomeGenUranusSnowLands(Config.URANUS_SNOW_LANDS_BIOME_ID).setBiomeName("uranusSnowLands").setHeight(new Height(0.825F, 0.25F));
+	public static final BiomeGenBase uranus = new BiomeGenUranus(Config.URANUS_BIOME_ID).setBiomeName("Uranus").setHeight(new Height(0.125F, 0.05F));
+	public static final BiomeGenBase uranusFrozenWater = new BiomeGenUranusFrozenWaterSea(Config.URANUS_FROZEN_SEA_BIOME_ID).setBiomeName("Uranus Frozen Water").setHeight(new Height(-1.0F, 0.0F));
+	public static final BiomeGenBase uranusSnowLands = new BiomeGenUranusSnowLands(Config.URANUS_SNOW_LANDS_BIOME_ID).setBiomeName("Uranus Snow Lands").setHeight(new Height(0.825F, 0.25F));
 
 	protected UranusBiomes(int var1) {
 		super(var1);

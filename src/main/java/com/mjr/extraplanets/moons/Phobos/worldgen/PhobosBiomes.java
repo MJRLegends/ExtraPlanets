@@ -9,7 +9,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import com.mjr.extraplanets.Config;
 
 public class PhobosBiomes extends BiomeGenBase {
-	public static final BiomeGenBase phobos = new BiomeGenPhobos(Config.PHOBOS_BIOME_ID).setBiomeName("phobos").setHeight(new Height(2.5F, 0.4F));
+	public static final BiomeGenBase phobos = new BiomeGenPhobos(Config.PHOBOS_BIOME_ID).setBiomeName("Phobos").setHeight(new Height(2.5F, 0.4F));
 
 	PhobosBiomes(int par1) {
 		super(par1);
