@@ -11,11 +11,11 @@ import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAILookIdle;
 import net.minecraft.entity.ai.EntityAIMoveThroughVillage;
 import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
@@ -24,31 +24,21 @@ import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.datasync.DataParameter;
-import net.minecraft.network.datasync.DataSerializers;
-import net.minecraft.network.datasync.EntityDataManager;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.datafix.DataFixer;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.BossInfo.Color;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.mjr.extraplanets.entities.bosses.ai.EntityAIBossZombieAttack;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob, IEntityBreathable {
-	private static final DataParameter<Boolean> ARMS_RAISED = EntityDataManager.<Boolean> createKey(EntityZombie.class, DataSerializers.BOOLEAN);
 	/** The width of the entity */
 	private float zombieWidth = -1.0F;
 	/** The height of the the entity. */
@@ -61,7 +51,7 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 
 	protected void initEntityAI() {
 		this.tasks.addTask(0, new EntityAISwimming(this));
-		this.tasks.addTask(2, new EntityAIBossZombieAttack(this, 1.0D, false));
+		this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
 		this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
 		this.tasks.addTask(7, new EntityAIWander(this, 1.0D));
 		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
@@ -76,16 +66,17 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(1200.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(100.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.23000000417232513D);
-		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(6.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(12.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1200.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(100.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.23000000417232513D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(6.0D);
 	}
 
 	protected void entityInit() {
 		super.entityInit();
-		this.getDataManager().register(ARMS_RAISED, Boolean.valueOf(false));
+		this.getDataWatcher().addObject(12, Byte.valueOf((byte) 0));
+		this.getDataWatcher().addObject(13, Byte.valueOf((byte) 0));
+		this.getDataWatcher().addObject(14, Byte.valueOf((byte) 0));
 	}
 
 	@Override
@@ -98,15 +89,6 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 						new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
 			}
 		}
-	}
-
-	public void setArmsRaised(boolean armsRaised) {
-		this.getDataManager().set(ARMS_RAISED, Boolean.valueOf(armsRaised));
-	}
-
-	@SideOnly(Side.CLIENT)
-	public boolean isArmsRaised() {
-		return ((Boolean) this.getDataManager().get(ARMS_RAISED)).booleanValue();
 	}
 
 	/**
@@ -136,33 +118,32 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 		boolean flag = super.attackEntityAsMob(entityIn);
 
 		if (flag) {
-			float f = this.worldObj.getDifficultyForLocation(new BlockPos(this)).getAdditionalDifficulty();
+			int i = this.worldObj.getDifficulty().getDifficultyId();
 
-			if (this.getHeldItemMainhand() == null) {
-				if (this.isBurning() && this.rand.nextFloat() < f * 0.3F) {
-					entityIn.setFire(2 * (int) f);
-				}
+			if (this.getHeldItem() == null && this.isBurning() && this.rand.nextFloat() < (float) i * 0.3F) {
+				entityIn.setFire(2 * i);
 			}
 		}
 
 		return flag;
 	}
 
-	protected SoundEvent getAmbientSound() {
-		return SoundEvents.ENTITY_ZOMBIE_VILLAGER_AMBIENT;
+	/**
+	 * Returns the sound this mob makes when it is hurt.
+	 */
+	protected String getHurtSound() {
+		return "mob.zombie.hurt";
 	}
 
-	protected SoundEvent getHurtSound() {
-		return SoundEvents.ENTITY_ZOMBIE_VILLAGER_HURT;
-	}
-
-	protected SoundEvent getDeathSound() {
-		return SoundEvents.ENTITY_ZOMBIE_VILLAGER_DEATH;
+	/**
+	 * Returns the sound this mob makes on death.
+	 */
+	protected String getDeathSound() {
+		return "mob.zombie.death";
 	}
 
 	protected void playStepSound(BlockPos pos, Block blockIn) {
-		SoundEvent soundevent = SoundEvents.ENTITY_ZOMBIE_VILLAGER_STEP;
-		this.playSound(soundevent, 0.15F, 1.0F);
+		this.playSound("mob.zombie.step", 0.15F, 1.0F);
 	}
 
 	/**
@@ -170,10 +151,6 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 	 */
 	public EnumCreatureAttribute getCreatureAttribute() {
 		return EnumCreatureAttribute.UNDEAD;
-	}
-
-	public static void registerFixesZombie(DataFixer fixer) {
-		EntityLiving.registerFixesMob(fixer, "Zombie");
 	}
 
 	/**
@@ -200,8 +177,8 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 		return f;
 	}
 
-	protected boolean canEquipItem(ItemStack stack) {
-		return stack.getItem() == Items.EGG && this.isChild() && this.isRiding() ? false : super.canEquipItem(stack);
+	protected boolean func_175448_a(ItemStack stack) {
+		return stack.getItem() == Items.egg && this.isChild() && this.isRiding() ? false : super.func_175448_a(stack);
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -279,10 +256,5 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 		List<ItemStack> stackList;
 		stackList = GalacticraftRegistry.getDungeonLoot(10);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
-	}
-
-	@Override
-	public Color getHealthBarColor() {
-		return Color.BLUE;
 	}
 }
