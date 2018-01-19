@@ -14,7 +14,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.ChunkPrimer;
 
-import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberon;
@@ -24,9 +23,9 @@ import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 public class OberonBiomes extends BiomeGenBase {
 
-	public static final BiomeGenBase oberon = new BiomeGenOberon(new BiomeProperties("oberon").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final BiomeGenBase oberonLargeMountain = new BiomeGenOberonLargeMountain(new BiomeProperties("oberonLargeIceMountain").setBaseHeight(3.0F).setHeightVariation(2.5F).setRainfall(0.0F).setRainDisabled().setSnowEnabled());
-	public static final BiomeGenBase oberonValleys = new BiomeGenOberonValleys(new BiomeProperties("oberonValleys").setBaseHeight(-0.4F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase oberon = new BiomeGenOberon(new BiomeProperties("Oberon").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase oberonLargeMountain = new BiomeGenOberonLargeMountain(new BiomeProperties("Oberon Large Ice Mountain").setBaseHeight(3.0F).setHeightVariation(2.5F).setRainfall(0.0F).setRainDisabled().setSnowEnabled());
+	public static final BiomeGenBase oberonValleys = new BiomeGenOberonValleys(new BiomeProperties("Oberon Valleys").setBaseHeight(-0.4F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
 
 	protected OberonBiomes(BiomeProperties properties) {
 		super(properties);
@@ -37,7 +36,6 @@ public class OberonBiomes extends BiomeGenBase {
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		this.setRegistryName(Constants.TEXTURE_PREFIX + this.getBiomeName());
 	}
 
 	@Override

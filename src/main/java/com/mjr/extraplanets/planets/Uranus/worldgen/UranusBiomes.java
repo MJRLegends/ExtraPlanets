@@ -25,9 +25,9 @@ import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 public class UranusBiomes extends BiomeGenBase {
 
-	public static final BiomeGenBase uranus = new BiomeGenUranus(new BiomeProperties("uranus").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final BiomeGenBase uranusFrozenWater = new BiomeGenUranusFrozenWaterSea(new BiomeProperties("uranusFrozenWater").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-	public static final BiomeGenBase uranusSnowLands = new BiomeGenUranusSnowLands(new BiomeProperties("uranusSnowLands").setBaseHeight(0.825F).setHeightVariation(0.25F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase uranus = new BiomeGenUranus(new BiomeProperties("Uranus").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase uranusFrozenWaterSea = new BiomeGenUranusFrozenWaterSea(new BiomeProperties("Uranus Frozen Water").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase uranusSnowLands = new BiomeGenUranusSnowLands(new BiomeProperties("Uranus Snow Lands").setBaseHeight(0.825F).setHeightVariation(0.25F).setRainfall(0.0F).setRainDisabled());
 
 	protected UranusBiomes(BiomeProperties properties) {
 		super(properties);

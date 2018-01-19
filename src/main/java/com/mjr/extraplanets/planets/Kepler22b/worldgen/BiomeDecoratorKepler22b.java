@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
+package com.mjr.extraplanets.planets.Kepler22b.worldgen;
 
 import java.util.Random;
 

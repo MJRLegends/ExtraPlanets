@@ -112,7 +112,7 @@ import com.mjr.extraplanets.planets.Eris.worldgen.ErisBiomes;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
 import com.mjr.extraplanets.planets.Kepler22b.event.Kepler22bEvents;
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 import com.mjr.extraplanets.planets.KuiperBelt.KuiperBeltEvents;
 import com.mjr.extraplanets.planets.Mercury.event.MercuryEvents;
 import com.mjr.extraplanets.planets.Mercury.worldgen.MercuryBiomes;
@@ -351,77 +351,133 @@ public class ExtraPlanets {
 
 	public static void registerBiomes() {
 		// Planets
-		if (Config.MERCURY)
+		if (Config.MERCURY) {
+			MercuryBiomes.mercury.setRegistryName(Constants.TEXTURE_PREFIX + "mercury");
 			ExtraPlanets.biomesList.add(MercuryBiomes.mercury);
-		if (Config.CERES)
+		}
+		if (Config.CERES) {
+			CeresBiomes.ceres.setRegistryName(Constants.TEXTURE_PREFIX + "ceres");
 			ExtraPlanets.biomesList.add(CeresBiomes.ceres);
+		}
 		if (Config.JUPITER) {
+			JupiterBiomes.jupiter.setRegistryName(Constants.TEXTURE_PREFIX + "jupiter");
+			JupiterBiomes.jupiterMagmaSea.setRegistryName(Constants.TEXTURE_PREFIX + "jupiter_magma_sea");
+			JupiterBiomes.jupiterSands.setRegistryName(Constants.TEXTURE_PREFIX + "jupiter_sands");
 			ExtraPlanets.biomesList.add(JupiterBiomes.jupiter);
 			ExtraPlanets.biomesList.add(JupiterBiomes.jupiterMagmaSea);
 			ExtraPlanets.biomesList.add(JupiterBiomes.jupiterSands);
 		}
 		if (Config.SATURN) {
+			SaturnBiomes.saturn.setRegistryName(Constants.TEXTURE_PREFIX + "saturn");
+			SaturnBiomes.saturnHydroCarbonSea.setRegistryName(Constants.TEXTURE_PREFIX + "saturn_hydrocarbon_sea");
+			SaturnBiomes.saturnNuclearLand.setRegistryName(Constants.TEXTURE_PREFIX + "saturn_nuclear_lands");
 			ExtraPlanets.biomesList.add(SaturnBiomes.saturn);
 			ExtraPlanets.biomesList.add(SaturnBiomes.saturnHydroCarbonSea);
 			ExtraPlanets.biomesList.add(SaturnBiomes.saturnNuclearLand);
 		}
 		if (Config.URANUS) {
+			UranusBiomes.uranus.setRegistryName(Constants.TEXTURE_PREFIX + "uranus");
+			UranusBiomes.uranusFrozenWaterSea.setRegistryName(Constants.TEXTURE_PREFIX + "uranus_frozen_water_sea");
+			UranusBiomes.uranusSnowLands.setRegistryName(Constants.TEXTURE_PREFIX + "uranus_snow_lands");
 			ExtraPlanets.biomesList.add(UranusBiomes.uranus);
-			ExtraPlanets.biomesList.add(UranusBiomes.uranusFrozenWater);
+			ExtraPlanets.biomesList.add(UranusBiomes.uranusFrozenWaterSea);
 			ExtraPlanets.biomesList.add(UranusBiomes.uranusSnowLands);
 		}
 		if (Config.NEPTUNE) {
+			NeptuneBiomes.neptune.setRegistryName(Constants.TEXTURE_PREFIX + "neptune");
+			NeptuneBiomes.neptuneRadioActiveWaterSea.setRegistryName(Constants.TEXTURE_PREFIX + "neptune_radioactive_water_sea");
+			NeptuneBiomes.neptuneLayeredHills.setRegistryName(Constants.TEXTURE_PREFIX + "neptune_layered_hills");
 			ExtraPlanets.biomesList.add(NeptuneBiomes.neptune);
 			ExtraPlanets.biomesList.add(NeptuneBiomes.neptuneRadioActiveWaterSea);
 			ExtraPlanets.biomesList.add(NeptuneBiomes.neptuneLayeredHills);
 		}
-		if (Config.PLUTO)
+		if (Config.PLUTO) {
+			PlutoBiomes.pluto.setRegistryName(Constants.TEXTURE_PREFIX + "pluto");
 			ExtraPlanets.biomesList.add(PlutoBiomes.pluto);
-		if (Config.ERIS)
+		}
+		if (Config.ERIS) {
+			ErisBiomes.eris.setRegistryName(Constants.TEXTURE_PREFIX + "eris");
 			ExtraPlanets.biomesList.add(ErisBiomes.eris);
+		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bPlains);
-			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bBlueForest);
-			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bRedForest);
-			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bPurpleForest);
-			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bYellowForest);
-			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bRedDesert);
-			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bWasteLands);
-			ExtraPlanets.biomesList.add(BiomeGenBaseKepler22b.kepler22bCandyLand);
+			Kepler22bBiomes.kepler22bPlains.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_plains");
+			Kepler22bBiomes.kepler22bBlueForest.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_blue_forest");
+			Kepler22bBiomes.kepler22bRedForest.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_red_forest");
+			Kepler22bBiomes.kepler22bPurpleForest.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_purple_forest");
+			Kepler22bBiomes.kepler22bYellowForest.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_yellow_forest");
+			Kepler22bBiomes.kepler22bRedDesert.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_red_desert");
+			Kepler22bBiomes.kepler22bWasteLands.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_waste_lands");
+			Kepler22bBiomes.kepler22bCandyLand.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_candy_land");
+			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bPlains);
+			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bBlueForest);
+			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bRedForest);
+			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bPurpleForest);
+			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bYellowForest);
+			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bRedDesert);
+			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bWasteLands);
+			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bCandyLand);
 		}
 		// Moons
-		if (Config.CALLISTO)
+		if (Config.CALLISTO) {
+			CallistoBiomes.callisto.setRegistryName(Constants.TEXTURE_PREFIX + "callisto");
 			ExtraPlanets.biomesList.add(CallistoBiomes.callisto);
-		if (Config.DEIMOS)
+		}
+		if (Config.DEIMOS) {
+			DeimosBiomes.deimos.setRegistryName(Constants.TEXTURE_PREFIX + "deimos");
 			ExtraPlanets.biomesList.add(DeimosBiomes.deimos);
-		if (Config.EUROPA)
+		}
+		if (Config.EUROPA) {
+			EuropaBiomes.europa.setRegistryName(Constants.TEXTURE_PREFIX + "europa");
 			ExtraPlanets.biomesList.add(EuropaBiomes.europa);
-		if (Config.GANYMEDE)
+		}
+		if (Config.GANYMEDE) {
+			GanymedeBiomes.ganymede.setRegistryName(Constants.TEXTURE_PREFIX + "ganymede");
 			ExtraPlanets.biomesList.add(GanymedeBiomes.ganymede);
-		if (Config.IAPETUS)
+		}
+		if (Config.IAPETUS) {
+			IapetusBiomes.iapetus.setRegistryName(Constants.TEXTURE_PREFIX + "iapetus");
 			ExtraPlanets.biomesList.add(IapetusBiomes.iapetus);
+		}
 		if (Config.IO) {
+			IoBiomes.io.setRegistryName(Constants.TEXTURE_PREFIX + "io");
+			IoBiomes.ioAshLands.setRegistryName(Constants.TEXTURE_PREFIX + "io_ash_lands");
+			IoBiomes.ioBurningPlains.setRegistryName(Constants.TEXTURE_PREFIX + "io_burning_plains");
 			ExtraPlanets.biomesList.add(IoBiomes.io);
 			ExtraPlanets.biomesList.add(IoBiomes.ioAshLands);
 			ExtraPlanets.biomesList.add(IoBiomes.ioBurningPlains);
 		}
 		if (Config.OBERON) {
+			OberonBiomes.oberon.setRegistryName(Constants.TEXTURE_PREFIX + "oberon");
+			OberonBiomes.oberonLargeMountain.setRegistryName(Constants.TEXTURE_PREFIX + "oberon_large_mountain");
+			OberonBiomes.oberonValleys.setRegistryName(Constants.TEXTURE_PREFIX + "oberon_valleys");
 			ExtraPlanets.biomesList.add(OberonBiomes.oberon);
 			ExtraPlanets.biomesList.add(OberonBiomes.oberonLargeMountain);
 			ExtraPlanets.biomesList.add(OberonBiomes.oberonValleys);
 		}
-		if (Config.PHOBOS)
+		if (Config.PHOBOS) {
+			PhobosBiomes.phobos.setRegistryName(Constants.TEXTURE_PREFIX + "phobos");
 			ExtraPlanets.biomesList.add(PhobosBiomes.phobos);
-		if (Config.RHEA)
+		}
+		if (Config.RHEA) {
+			RheaBiomes.rhea.setRegistryName(Constants.TEXTURE_PREFIX + "rhea");
 			ExtraPlanets.biomesList.add(RheaBiomes.rhea);
+		}
 		if (Config.TITAN) {
+			TitanBiomes.titan.setRegistryName(Constants.TEXTURE_PREFIX + "titan");
+			TitanBiomes.titanMethaneHills.setRegistryName(Constants.TEXTURE_PREFIX + "titan_methane_hills");
+			TitanBiomes.titanMethaneSea.setRegistryName(Constants.TEXTURE_PREFIX + "titan_methane_sea");
 			ExtraPlanets.biomesList.add(TitanBiomes.titan);
 			ExtraPlanets.biomesList.add(TitanBiomes.titanMethaneHills);
 			ExtraPlanets.biomesList.add(TitanBiomes.titanMethaneSea);
 		}
-		if (Config.TITANIA)
+		if (Config.TITANIA) {
+			TitaniaBiomes.titania.setRegistryName(Constants.TEXTURE_PREFIX + "titania");
 			ExtraPlanets.biomesList.add(TitaniaBiomes.titania);
+		}
 		if (Config.TRITON) {
+			TritonBiomes.triton.setRegistryName(Constants.TEXTURE_PREFIX + "triton");
+			TritonBiomes.tritonIceLands.setRegistryName(Constants.TEXTURE_PREFIX + "triton_ice_lands");
+			TritonBiomes.tritonIceSea.setRegistryName(Constants.TEXTURE_PREFIX + "triton_ice_sea");
 			ExtraPlanets.biomesList.add(TritonBiomes.triton);
 			ExtraPlanets.biomesList.add(TritonBiomes.tritonIceLands);
 			ExtraPlanets.biomesList.add(TritonBiomes.tritonIceSea);

@@ -6,12 +6,11 @@ import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.world.biome.Biome;
 
-import com.mjr.extraplanets.Constants;
 import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 public class GanymedeBiomes extends BiomeGenBase {
 
-	public static final BiomeGenBase ganymede = new BiomeGenGanymede(new BiomeProperties("ganymede").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase ganymede = new BiomeGenGanymede(new BiomeProperties("Ganymede").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
 	protected GanymedeBiomes(BiomeProperties properties) {
 		super(properties);
@@ -22,7 +21,6 @@ public class GanymedeBiomes extends BiomeGenBase {
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		this.setRegistryName(Constants.TEXTURE_PREFIX + this.getBiomeName());
 	}
 
 	@Override

@@ -7,7 +7,7 @@ import net.minecraft.world.gen.layer.GenLayer;
 import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
 
 public class GenLayerUranusBiomes extends GenLayer {
-	private static final Biome[] biomes = new Biome[] { UranusBiomes.uranus, UranusBiomes.uranusFrozenWater, UranusBiomes.uranusSnowLands };
+	private static final Biome[] biomes = new Biome[] { UranusBiomes.uranus, UranusBiomes.uranusFrozenWaterSea, UranusBiomes.uranusSnowLands };
 
 	public GenLayerUranusBiomes(long l, GenLayer parent) {
 		super(l);

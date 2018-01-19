@@ -15,7 +15,6 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.ChunkPrimer;
 
-import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTriton;
@@ -24,9 +23,9 @@ import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
 public class TritonBiomes extends BiomeGenBase {
 
-	public static final BiomeGenBase triton = new BiomeGenTriton(new BiomeProperties("triton").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final BiomeGenBase tritonIceLands = new BiomeGenTritonIceLands(new BiomeProperties("tritonIceLands").setBaseHeight(2.5F).setHeightVariation(0.4F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
-	public static final BiomeGenBase tritonIceSea = new BiomeGenTritonIceLands(new BiomeProperties("tritonIceSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
+	public static final BiomeGenBase triton = new BiomeGenTriton(new BiomeProperties("Triton").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase tritonIceLands = new BiomeGenTritonIceLands(new BiomeProperties("Triton Ice Lands").setBaseHeight(2.5F).setHeightVariation(0.4F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
+	public static final BiomeGenBase tritonIceSea = new BiomeGenTritonIceLands(new BiomeProperties("Triton Ice Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
 
 	protected TritonBiomes(BiomeProperties properties) {
 		super(properties);
@@ -37,7 +36,6 @@ public class TritonBiomes extends BiomeGenBase {
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
 		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
-		this.setRegistryName(Constants.TEXTURE_PREFIX + this.getBiomeName());
 	}
 
 	@Override

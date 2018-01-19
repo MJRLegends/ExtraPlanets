@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
+package com.mjr.extraplanets.planets.Kepler22b.worldgen;
 
 import java.util.Random;
 
@@ -23,9 +23,17 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bBlueMapleForest;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bCandyLand;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bPlains;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bPurpleMapleForest;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bRedDesert;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bRedMapleForest;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bWasteLands;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bYellowMapleForest;
 import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
-public class BiomeGenBaseKepler22b extends BiomeGenBase {
+public class Kepler22bBiomes extends BiomeGenBase {
 	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains(new BiomeProperties("Kepler22b Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final BiomeGenBase kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest(new BiomeProperties("Kepler22b Blue Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final BiomeGenBase kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest(new BiomeProperties("Kepler22b Purple Maple Forest").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
@@ -38,7 +46,7 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 	protected byte topMeta;
 	protected byte fillerMeta;
 
-	public BiomeGenBaseKepler22b(BiomeProperties properties) {
+	public Kepler22bBiomes(BiomeProperties properties) {
 		super(properties);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
