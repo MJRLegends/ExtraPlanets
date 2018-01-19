@@ -22,9 +22,9 @@ import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonValleys;
 
 public class OberonBiomes extends Biome {
 
-	public static final Biome oberon = new BiomeGenOberon(new BiomeProperties("oberon").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome oberonLargeMountain = new BiomeGenOberonLargeMountain(new BiomeProperties("oberonLargeIceMountain").setBaseHeight(3.0F).setHeightVariation(2.5F).setRainfall(0.0F).setRainDisabled().setSnowEnabled());
-	public static final Biome oberonValleys = new BiomeGenOberonValleys(new BiomeProperties("oberonValleys").setBaseHeight(-0.4F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome oberon = new BiomeGenOberon(new BiomeProperties("Oberon").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome oberonLargeMountain = new BiomeGenOberonLargeMountain(new BiomeProperties("Oberon Large Ice Mountain").setBaseHeight(3.0F).setHeightVariation(2.5F).setRainfall(0.0F).setRainDisabled().setSnowEnabled());
+	public static final Biome oberonValleys = new BiomeGenOberonValleys(new BiomeProperties("Oberon Valleys").setBaseHeight(-0.4F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
 
 	protected OberonBiomes(BiomeProperties properties) {
 		super(properties);

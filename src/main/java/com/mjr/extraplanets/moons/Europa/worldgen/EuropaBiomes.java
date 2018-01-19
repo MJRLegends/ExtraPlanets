@@ -8,7 +8,7 @@ import net.minecraft.world.biome.Biome;
 
 public class EuropaBiomes extends Biome {
 
-	public static final Biome europa = new BiomeGenEuropa(new BiomeProperties("europa").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome europa = new BiomeGenEuropa(new BiomeProperties("Europa").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
 	EuropaBiomes(BiomeProperties properties) {
 		super(properties);

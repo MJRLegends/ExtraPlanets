@@ -8,7 +8,7 @@ import net.minecraft.world.biome.Biome;
 
 public class DeimosBiomes extends Biome {
 
-	public static final Biome deimos = new BiomeGenDeimos(new BiomeProperties("deimos").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome deimos = new BiomeGenDeimos(new BiomeProperties("Deimos").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
 	DeimosBiomes(BiomeProperties properties) {
 		super(properties);

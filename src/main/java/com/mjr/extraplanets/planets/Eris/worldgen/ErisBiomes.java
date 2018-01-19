@@ -8,7 +8,7 @@ import net.minecraft.world.biome.Biome;
 
 public class ErisBiomes extends Biome {
 
-	public static final Biome eris = new BiomeGenEris(new BiomeProperties("eris").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome eris = new BiomeGenEris(new BiomeProperties("Eris").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
 	ErisBiomes(BiomeProperties properties) {
 		super(properties);

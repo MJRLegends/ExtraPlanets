@@ -23,9 +23,9 @@ import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterSands
 
 public class JupiterBiomes extends Biome {
 
-	public static final Biome jupiter = new BiomeGenJupiter(new BiomeProperties("jupiter").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome jupiterMagmaSea = new BiomeGenJupiterMagmaSea(new BiomeProperties("jupiterMagmaSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome jupiterSands = new BiomeGenJupiterSands(new BiomeProperties("jupiterSands").setBaseHeight(1.0F).setHeightVariation(0.5F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome jupiter = new BiomeGenJupiter(new BiomeProperties("Jupiter").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome jupiterMagmaSea = new BiomeGenJupiterMagmaSea(new BiomeProperties("Jupiter Magma Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome jupiterSands = new BiomeGenJupiterSands(new BiomeProperties("Jupiter Sands").setBaseHeight(1.0F).setHeightVariation(0.5F).setRainfall(0.0F).setRainDisabled());
 
 	protected JupiterBiomes(BiomeProperties properties) {
 		super(properties);

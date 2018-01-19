@@ -8,7 +8,7 @@ import net.minecraft.world.biome.Biome;
 
 public class IapetusBiomes extends Biome {
 
-	public static final Biome iapetus = new BiomeGenIapetus(new BiomeProperties("iapetus").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome iapetus = new BiomeGenIapetus(new BiomeProperties("Iapetus").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
 	IapetusBiomes(BiomeProperties properties) {
 		super(properties);

@@ -23,9 +23,9 @@ import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIoAshLands;
 
 public class IoBiomes extends Biome {
 
-	public static final Biome io = new BiomeGenIo(new BiomeProperties("io").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome ioAshLands = new BiomeGenIoAshLands(new BiomeProperties("ioAshLands").setBaseHeight(2.0F).setHeightVariation(2.0F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome ioBurningPlains = new BiomeGenIOBurningPlains(new BiomeProperties("ioBurningPlains").setBaseHeight(0.125F).setHeightVariation(0.015F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome io = new BiomeGenIo(new BiomeProperties("Io").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome ioAshLands = new BiomeGenIoAshLands(new BiomeProperties("Io Ash Lands").setBaseHeight(2.0F).setHeightVariation(2.0F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome ioBurningPlains = new BiomeGenIOBurningPlains(new BiomeProperties("Io Burning Plains").setBaseHeight(0.125F).setHeightVariation(0.015F).setRainfall(0.0F).setRainDisabled());
 
 	protected IoBiomes(BiomeProperties properties) {
 		super(properties);

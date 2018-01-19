@@ -8,8 +8,9 @@ import net.minecraftforge.common.BiomeDictionary;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.moons.Titan.worldgen.TitanBiomes;
 
-public class BiomeGenTitanMethaneSea extends Biome {
+public class BiomeGenTitanMethaneSea extends TitanBiomes {
 	public BiomeGenTitanMethaneSea(Biome.BiomeProperties properties) {
 		super(properties);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.OCEAN);

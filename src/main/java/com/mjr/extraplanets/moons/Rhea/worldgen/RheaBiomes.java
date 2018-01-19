@@ -8,7 +8,7 @@ import net.minecraft.world.biome.Biome;
 
 public class RheaBiomes extends Biome {
 
-	public static final Biome rhea = new BiomeGenRhea(new BiomeProperties("rhea").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome rhea = new BiomeGenRhea(new BiomeProperties("Rhea").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
 	RheaBiomes(BiomeProperties properties) {
 		super(properties);

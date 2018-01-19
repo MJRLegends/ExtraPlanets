@@ -23,9 +23,9 @@ import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneRadio
 
 public class NeptuneBiomes extends Biome {
 
-	public static final Biome neptune = new BiomeGenNeptune(new BiomeProperties("neptune").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome neptuneRadioActiveWaterSea = new BiomeGenNeptuneRadioActiveWaterSea(new BiomeProperties("neptuneRadioActiveWaterSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome neptuneLayeredHills = new BiomeGenNeptuneLayeredHills(new BiomeProperties("neptuneLayeredHills").setBaseHeight(1.5F).setHeightVariation(0.025F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome neptune = new BiomeGenNeptune(new BiomeProperties("Neptune").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome neptuneRadioActiveWaterSea = new BiomeGenNeptuneRadioActiveWaterSea(new BiomeProperties("Neptune RadioActive Water Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome neptuneLayeredHills = new BiomeGenNeptuneLayeredHills(new BiomeProperties("Neptune Layered Hills").setBaseHeight(1.5F).setHeightVariation(0.025F).setRainfall(0.0F).setRainDisabled());
 
 	protected NeptuneBiomes(BiomeProperties properties) {
 		super(properties);

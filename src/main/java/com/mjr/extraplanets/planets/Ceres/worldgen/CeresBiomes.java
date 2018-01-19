@@ -8,7 +8,7 @@ import net.minecraft.world.biome.Biome;
 
 public class CeresBiomes extends Biome {
 
-	public static final Biome ceres = new BiomeGenCeres(new BiomeProperties("ceres").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome ceres = new BiomeGenCeres(new BiomeProperties("Ceres").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
 	CeresBiomes(BiomeProperties properties) {
 		super(properties);
