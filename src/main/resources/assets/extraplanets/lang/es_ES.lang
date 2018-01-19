@@ -5,10 +5,10 @@ itemGroup.SpaceToolsTab=Herramientas de Extra Planets
 itemGroup.SpaceArmorTab=Armaduras de Extra Planets
 
 #Galaxies
-galaxy.whirlpool=Whirlpool ##NEEDS TRANSLATE##
-galaxy.andromeda=Andromeda ##NEEDS TRANSLATE##
-galaxy.black_eye=Black Eye ##NEEDS TRANSLATE##
-galaxy.proxima_centauri=Proxima Centauri ##NEEDS TRANSLATE##
+galaxy.whirlpool=Remolino
+galaxy.andromeda=Andrómeda
+galaxy.black_eye=Ojo Negro
+galaxy.proxima_centauri=Próxima Centauri
 
 #Solar Systems
 solarsystem.kepler22=Sistema Kepler 22
@@ -16,10 +16,10 @@ solarsystem.kepler47=Sistema Kepler 47
 solarsystem.kepler62=Sistema Kepler 62
 solarsystem.kepler69=Sistema Kepler 69
 
-solarsystem.xenos157=Xenos 157 ##NEEDS TRANSLATE##
-solarsystem.deltiri10=Deltiri 10 ##NEEDS TRANSLATE##
-solarsystem.vendrizi161=Vendrizi 161 ##NEEDS TRANSLATE##
-solarsystem.epsilonSolaria=Epsilon Solaria ##NEEDS TRANSLATE##
+solarsystem.xenos157=Xenos 157
+solarsystem.deltiri10=Deltiri 10
+solarsystem.vendrizi161=Vendrizi 161
+solarsystem.epsilonSolaria=Épsilon Solaria
 
 #Stars
 star.kepler22=Estrella Kepler 22
@@ -27,10 +27,10 @@ star.kepler47=Estrella Kepler 47
 star.kepler62=Estrella Kepler 62
 star.kepler69=Estrella Kepler 69
 
-star.xenos157=Xenos 157 Star ##NEEDS TRANSLATE##
-star.deltiri10=Deltiri 10 Star ##NEEDS TRANSLATE##
-star.vendrizi161=Vendrizi 161 Star ##NEEDS TRANSLATE##
-star.epsilonSolaria=Epsilon Solaria Star ##NEEDS TRANSLATE##
+star.xenos157=Estrella Xenos 157
+star.deltiri10=Estrella Deltiri 10
+star.vendrizi161=Estrella Vendrizi 161
+star.epsilonSolaria=Estrella Épsilon Solaria
 
 #Planets
 planet.Mercury=Mercurio
@@ -56,22 +56,22 @@ planet.kepler47c=Kepler 47c
 planet.kepler69b=Kepler 69b
 planet.kepler69c=Kepler 69c
 
-planet.tatooine=Tatooine ##NEEDS TRANSLATE##
-planet.crait=Crait ##NEEDS TRANSLATE##
-planet.hoth=Hoth ##NEEDS TRANSLATE##
-planet.aqua=Aqua ##NEEDS TRANSLATE##
+planet.tatooine=Tatooine
+planet.crait=Crait
+planet.hoth=Hoth
+planet.aqua=Aqua
 
-planet.qustroithea=Qustroithea ##NEEDS TRANSLATE##
-planet.jetraruta=Jetraruta ##NEEDS TRANSLATE##
-planet.moswion=Moswion ##NEEDS TRANSLATE##
-planet.ketherth=Ketherth ##NEEDS TRANSLATE##
-planet.xovis=Xovis ##NEEDS TRANSLATE##
+planet.qustroithea=Qustroithea
+planet.jetraruta=Jetraruta
+planet.moswion=Moswion
+planet.ketherth=Ketherth
+planet.xovis=Xovis
 
-planet.oarilia=Oarilia ##NEEDS TRANSLATE##
-planet.struronides=Struronides ##NEEDS TRANSLATE##
-planet.brajutov=Brajutov ##NEEDS TRANSLATE##
-planet.speshani16=Speshani 16 ##NEEDS TRANSLATE##
-planet.trars9=Trars 9 ##NEEDS TRANSLATE##
+planet.oarilia=Oarilia
+planet.struronides=Struronides
+planet.brajutov=Brajutov
+planet.speshani16=Speshani 16
+planet.trars9=Trars 9
 
 #Moons
 moon.triton=Tritón
@@ -103,7 +103,7 @@ tile.mercury.stone_bricks.name=Ladrillos de Roca Mercuriana
 tile.mercury.mercury_block.name=Bloque de Mercurio
 tile.mercury.ore_carbon.name=Mena de Carbono
 tile.mercury.carbon_block.name=Bloque de Carbono
-tile.mercury.dungeon_brick.name=Mercury Dungeon Brick ##NEEDS TRANSLATE##
+tile.mercury.dungeon_brick.name=Ladrillo de Mazmorra de Saturno
 
 tile.ceres.surface.name=Roca Superficial de Ceres
 tile.ceres.sub_surface.name=Roca Subterránea de Ceres
@@ -127,8 +127,8 @@ tile.jupiter.ore_red_gem.name=Mena de Gema Roja de Júpiter
 tile.jupiter.stone_bricks.name=Ladrillos de Roca de Júpiter
 tile.jupiter.palladium_block.name=Bloque de Paladio
 tile.jupiter.red_gem_block.name=Bloque de Gema Roja
-tile.jupiter.dungeon_brick.name=Jupiter Dungeon Brick ##NEEDS TRANSLATE##
-tile.jupiter.nickel_block.name=Block of Nickel ##NEEDS TRANSLATE##
+tile.jupiter.dungeon_brick.name=Ladrillo de la Mazmorra de Júpiter
+tile.jupiter.nickel_block.name=Bloque de Níquel
 
 tile.saturn.surface.name=Roca Superficial de Saturno
 tile.saturn.sub_surface.name=Roca Subterránea de Saturno
@@ -139,10 +139,10 @@ tile.saturn.ore_copper.name=Mena de Cobre de Saturno
 tile.saturn.ore_magnesium.name=Mena de Magnesio de Saturno
 tile.saturn.stone_bricks.name=Ladrillos de Roca de Saturno
 tile.saturn.magnesium_block.name=Bloque de Magnesio
-tile.saturn.dungeon_brick.name=Saturn Dungeon Brick ##NEEDS TRANSLATE##
-tile.saturn.broken_infected_stone.name=Saturn Broken Infected Stone ##NEEDS TRANSLATE##
-tile.saturn.infected_stone.name=Saturn Infected Stone ##NEEDS TRANSLATE##
-tile.saturn.ore_slime.name=Saturn Slime Ore ##NEEDS TRANSLATE##
+tile.saturn.dungeon_brick.name=Ladrillo de la Mazmorra de Saturno
+tile.saturn.broken_infected_stone.name=Roca Agrietada Infectada de Saturno
+tile.saturn.infected_stone.name=Roca Infectada de Saturno
+tile.saturn.ore_slime.name=Mena de Slime de Saturno
 
 tile.uranus.surface.name=Roca Superficial de Urano
 tile.uranus.sub_surface.name=Roca Subterránea de Urano
@@ -152,7 +152,7 @@ tile.uranus.ore_white_gem.name=Mena de Gema Blanca de Urano
 tile.uranus.stone_bricks.name=Ladrillos de Roca de Urano
 tile.uranus.crystal_block.name=Bloque de Cristal
 tile.uranus.white_gem_block.name=Bloque de Gema Blanca
-tile.uranus.dungeon_brick.name=Uranus Dungeon Brick ##NEEDS TRANSLATE##
+tile.uranus.dungeon_brick.name=Ladrillo de Mazmorra de Urano
 
 tile.neptune.surface.name=Roca Superficial de Neptuno
 tile.neptune.sub_surface.name=Roca Subterránea de Neptuno
@@ -165,7 +165,7 @@ tile.neptune.ore_blue_gem.name=Mena de Gema Azúl de Neptuno
 tile.neptune.stone_bricks.name=Ladrillos de Piedra de Neptuno
 tile.neptune.zinc_block.name=Bloque de Zinc
 tile.neptune.blue_gem_block.name=Bloque de Gema Azúl
-tile.neptune.dungeon_brick.name=Neptune Dungeon Brick ##NEEDS TRANSLATE##
+tile.neptune.dungeon_brick.name=Ladrillo de Mazmorra de Neptuno
 
 tile.pluto.surface.name=Roca Superficial de Pluto
 tile.pluto.sub_surface.name=Roca Subterránea de Pluto
@@ -176,7 +176,7 @@ tile.pluto.ore_copper.name=Mena de Cobre de Pluto
 tile.pluto.ore_tungsten.name=Mena de Tungsteno de Pluto
 tile.pluto.stone_bricks.name=Ladrillos de Roca de Pluto
 tile.pluto.tungsten_block.name=Bloque de Tungsteno
-tile.pluto.dungeon_brick.name=Pluto Dungeon Brick ##NEEDS TRANSLATE##
+tile.pluto.dungeon_brick.name=Ladrillo de Mazmorra de Pluto
 
 tile.eris.surface.name=Roca Superficial de Eris
 tile.eris.sub_surface.name=Roca Subterránea de Eris
@@ -185,70 +185,70 @@ tile.eris.ore_iron.name=Mena de Hierro de Eris
 tile.eris.ore_tin.name=Mena de Estaño de Eris
 tile.eris.ore_copper.name=Mena de Cobre de Eris
 tile.eris.stone_bricks.name=Ladrillos de Roca de Eris
-tile.eris.dungeon_brick.name=Eris Dungeon Brick ##NEEDS TRANSLATE##
-tile.eris.ore_dark_iron.name=Eris Dark Iron Ore ##NEEDS TRANSLATE##
-tile.eris.dark_iron_block.name=Block of Dark Iron ##NEEDS TRANSLATE##
+tile.eris.dungeon_brick.name=Ladrillo de Mazmorra de Eris
+tile.eris.ore_dark_iron.name=Mena de Hierro Oscuro de Eris 
+tile.eris.dark_iron_block.name=Bloque de Hierro Oscuro
 
-tile.kepler22b.dirt.name=Kepler 22b Dirt ##NEEDS TRANSLATE##
-tile.kepler22b.stone.name=Kepler 22b Stone ##NEEDS TRANSLATE##
-tile.kepler22b_grass.name=Kepler 22b Grass ##NEEDS TRANSLATE##
-tile.kepler22b_blue_grass.name=Kepler 22b Blue Grass ##NEEDS TRANSLATE##
-tile.kepler22b_purple_grass.name=Kepler 22b Purple Grass ##NEEDS TRANSLATE##
-tile.kepler22b_red_grass.name=Kepler 22b Red Grass ##NEEDS TRANSLATE##
-tile.kepler22b_yellow_grass.name=Kepler 22b Yellow Grass ##NEEDS TRANSLATE##
-tile.kepler22b_infected_grass.name=Kepler 22b Infected Grass ##NEEDS TRANSLATE##
-tile.kepler22b.ore_iron.name=Kepler 22b Iron Ore ##NEEDS TRANSLATE##
-tile.kepler22b.ore_tin.name=Kepler 22b Tin Ore ##NEEDS TRANSLATE##
-tile.kepler22b.ore_copper.name=Kepler 22b Copper Ore ##NEEDS TRANSLATE##
-tile.kepler22b.ore_dense_coal.name=Kepler 22b Dense Coal Ore ##NEEDS TRANSLATE##
-tile.kepler22b.ore_blue_diamonds.name=Kepler 22b Blue Diamond Ore ##NEEDS TRANSLATE##
-tile.kepler22b.ore_red_diamonds.name=Kepler 22b Red Diamond Ore ##NEEDS TRANSLATE##
-tile.kepler22b.ore_purple_diamonds.name=Kepler 22b Purple Diamond Ore ##NEEDS TRANSLATE##
-tile.kepler22b.ore_yellow_diamonds.name=Kepler 22b Yellow Diamond Ore ##NEEDS TRANSLATE##
-tile.kepler22b.ore_green_diamonds.name=Kepler 22b Green Diamond Ore ##NEEDS TRANSLATE##
-tile.kepler22b_planks.plank_maple_blue.name=Kepler 22b Blue Wooden Planks ##NEEDS TRANSLATE##
-tile.kepler22b_planks.plank_maple_red.name=Kepler 22b Red Wooden Planks ##NEEDS TRANSLATE##
-tile.kepler22b_planks.plank_maple_purple.name=Kepler 22b Purple Wooden Planks ##NEEDS TRANSLATE##
-tile.kepler22b_planks.plank_maple_yellow.name=Kepler 22b Yellow Wooden Planks ##NEEDS TRANSLATE##
-tile.kepler22b_planks.plank_maple_green.name=Kepler 22b Green Wooden Planks ##NEEDS TRANSLATE##
-tile.kepler22b_planks.plank_maple_brown.name=Kepler 22b Brown Wooden Planks ##NEEDS TRANSLATE##
-tile.kepler22b.stone_bricks.name=Kepler 22b Stone Bricks ##NEEDS TRANSLATE##
-tile.kepler22b_maple_logs.maple_blue_log.name=Kepler 22b Blue Maple Log ##NEEDS TRANSLATE##
-tile.kepler22b_maple_logs.maple_red_log.name=Kepler 22b Red Maple Log ##NEEDS TRANSLATE##
-tile.kepler22b_maple_logs.maple_purple_log.name=Kepler 22b Purple Maple Log ##NEEDS TRANSLATE##
-tile.kepler22b_maple_logs.maple_yellow_log.name=Kepler 22b Yellow Maple Log ##NEEDS TRANSLATE##
-tile.kepler22b_maple_logs2.maple_green_log.name=Kepler 22b Green Maple Log ##NEEDS TRANSLATE##
-tile.kepler22b_maple_logs2.maple_brown_log.name=Kepler 22b Brown Maple Log ##NEEDS TRANSLATE##
-tile.kepler22b_maple_saplings.blue_maple_sapling.name=Kepler 22b Blue Maple Sapling ##NEEDS TRANSLATE##
-tile.kepler22b_maple_saplings.red_maple_sapling.name=Kepler 22b Red Maple Sapling ##NEEDS TRANSLATE##
-tile.kepler22b_maple_saplings.purple_maple_sapling.name=Kepler 22b Purple Maple Sapling ##NEEDS TRANSLATE##
-tile.kepler22b_maple_saplings.yellow_maple_sapling.name=Kepler 22b Yellow Maple Sapling ##NEEDS TRANSLATE##
-tile.kepler22b_maple_saplings.green_maple_sapling.name=Kepler 22b Green Maple Sapling ##NEEDS TRANSLATE##
-tile.kepler22b_maple_saplings.brown_maple_sapling.name=Kepler 22b Brown Maple Sapling ##NEEDS TRANSLATE##
-tile.kepler22b_new_maple_leaves.blue_maple_leaf.name=Kepler 22b Blue Maple Leaves ##NEEDS TRANSLATE##
-tile.kepler22b_new_maple_leaves.red_maple_leaf.name=Kepler 22b Red Maple Leaves ##NEEDS TRANSLATE##
-tile.kepler22b_new_maple_leaves.purple_maple_leaf.name=Kepler 22b Purple Maple Leaves ##NEEDS TRANSLATE##
-tile.kepler22b_new_maple_leaves.yellow_maple_leaf.name=Kepler 22b Yellow Maple Leaves ##NEEDS TRANSLATE##
-tile.kepler22b_new_maple_leaves_2.green_maple_leaf.name=Kepler 22b Green Maple Leaves ##NEEDS TRANSLATE##
-tile.kepler22b_new_maple_leaves_2.brown_maple_leaf.name=Kepler 22b Brown Maple Leaves ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.blue_maple_short_grass.name=Kepler 22b Blue Short Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.blue_maple_med_grass.name=Kepler 22b Blue Medium Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.blue_maple_tall_grass.name=Kepler 22b Blue Tall Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.red_maple_short_grass.name=Kepler 22b Red Short Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.red_maple_med_grass.name=Kepler 22b Red Medium Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.red_maple_tall_grass.name=Kepler 22b Red Tall Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.yellow_maple_short_grass.name=Kepler 22b Yellow Short Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.yellow_maple_med_grass.name=Kepler 22b Yellow Medium Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.yellow_maple_tall_grass.name=Kepler 22b Yellow Tall Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.purple_maple_short_grass.name=Kepler 22b Purple Short Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.purple_maple_med_grass.name=Kepler 22b Purple Medium Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.purple_maple_tall_grass.name=Kepler 22b Purple Tall Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.green_maple_short_grass.name=Kepler 22b Green Short Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.green_maple_med_grass.name=Kepler 22b Green Medium Grass ##NEEDS TRANSLATE##
-tile.kepler22b_flowers.green_maple_tall_grass.name=Kepler 22b Green Tall Grass ##NEEDS TRANSLATE##
-tile.kepler22b.cobblestone.name=Kepler 22b Cobblestone ##NEEDS TRANSLATE##
-tile.kepler22b.ore_platinum.name=Kepler 22b Platinum Ore ##NEEDS TRANSLATE##
-tile.kepler22b.platinum_block.name=Block of Platinum ##NEEDS TRANSLATE##
+tile.kepler22b.dirt.name=Tierra de Kepler 22b
+tile.kepler22b.stone.name=Piedra de Kepler 22b
+tile.kepler22b_grass.name=Hierba de Kepler 22b
+tile.kepler22b_blue_grass.name=Hierba azúl de Kepler 22b
+tile.kepler22b_purple_grass.name=Hierba Morada de Kepler 22b
+tile.kepler22b_red_grass.name=Hierba Roja de Kepler 22b
+tile.kepler22b_yellow_grass.name=Hierba Amarilla de Kepler 22b
+tile.kepler22b_infected_grass.name=Hierba Infectada de Kepler 22b
+tile.kepler22b.ore_iron.name=Mena de Hierro de Kepler 22b
+tile.kepler22b.ore_tin.name=Mena de Estaño de Kepler 22b
+tile.kepler22b.ore_copper.name=Mena de Cobre de Kepler 22b
+tile.kepler22b.ore_dense_coal.name=Mena densa de Carbón de Kepler 22b
+tile.kepler22b.ore_blue_diamonds.name=Mena de Diamante Azúl Kepler 22b
+tile.kepler22b.ore_red_diamonds.name=Mena de Diamante Rojo de Kepler 22b
+tile.kepler22b.ore_purple_diamonds.name=Mena de Diamante Púrpura de Kepler 22b
+tile.kepler22b.ore_yellow_diamonds.name=Mena de Diamante Amarillo de Kepler 22b
+tile.kepler22b.ore_green_diamonds.name=Mena de Diamante Verde de Kepler 22b
+tile.kepler22b_planks.plank_maple_blue.name=Madera Azúl de Kepler 22b
+tile.kepler22b_planks.plank_maple_red.name=Madera Roja de Kepler 22b
+tile.kepler22b_planks.plank_maple_purple.name=Madera Púrpura de Kepler 22b
+tile.kepler22b_planks.plank_maple_yellow.name=Madera Amarilla de Kepler 22b
+tile.kepler22b_planks.plank_maple_green.name=Madera Verde de Kepler 22b
+tile.kepler22b_planks.plank_maple_brown.name=Madera Café de Kepler 22b
+tile.kepler22b.stone_bricks.name=Ladrillo de Piedra de Kepler 22b
+tile.kepler22b_maple_logs.maple_blue_log.name=Tronco de Maple Azúl de Kepler 22b
+tile.kepler22b_maple_logs.maple_red_log.name=Tronco de Maple Rojo de Kepler 22b
+tile.kepler22b_maple_logs.maple_purple_log.name=Tronco de Maple Púrpura de Kepler 22b
+tile.kepler22b_maple_logs.maple_yellow_log.name=Tronco de Maple Amarillo de Kepler 22b
+tile.kepler22b_maple_logs2.maple_green_log.name=Tronco de Maple Verde de Kepler 22b
+tile.kepler22b_maple_logs2.maple_brown_log.name=Tronco de Maple Café de Kepler 22b
+tile.kepler22b_maple_saplings.blue_maple_sapling.name=Brote de Maple Azúl de Kepler 22b
+tile.kepler22b_maple_saplings.red_maple_sapling.name=Brote de Maple Rojo de Kepler 22b
+tile.kepler22b_maple_saplings.purple_maple_sapling.name=Brote de Maple Púrpura de Kepler 22b
+tile.kepler22b_maple_saplings.yellow_maple_sapling.name=Brote de Maple Amarillo de Kepler 22b
+tile.kepler22b_maple_saplings.green_maple_sapling.name=Brote de Maple Verde de Kepler 22b
+tile.kepler22b_maple_saplings.brown_maple_sapling.name=Brote de Maple Café de Kepler 22b
+tile.kepler22b_new_maple_leaves.blue_maple_leaf.name=Hojas de Maple Azúl de Kepler 22b
+tile.kepler22b_new_maple_leaves.red_maple_leaf.name=Hojas de Maple Roja de Kepler 22b
+tile.kepler22b_new_maple_leaves.purple_maple_leaf.name=Hojas de Maple Púrpura de Kepler 22b
+tile.kepler22b_new_maple_leaves.yellow_maple_leaf.name=Hojas de Maple Amarillo de Kepler 22b
+tile.kepler22b_new_maple_leaves_2.green_maple_leaf.name=Hojas de Maple Verde de Kepler 22b
+tile.kepler22b_new_maple_leaves_2.brown_maple_leaf.name=Hojas de Maple Café de Kepler 22b
+tile.kepler22b_flowers.blue_maple_short_grass.name=Hierba Azúl Corta de Kepler 22b
+tile.kepler22b_flowers.blue_maple_med_grass.name=Hierba Azúl Media de Kepler 22b
+tile.kepler22b_flowers.blue_maple_tall_grass.name=Hierba Azúl Alta de Kepler 22b
+tile.kepler22b_flowers.red_maple_short_grass.name=Hierba Roja Corta de Kepler 22b
+tile.kepler22b_flowers.red_maple_med_grass.name=Hierba Roja Media de Kepler 22b
+tile.kepler22b_flowers.red_maple_tall_grass.name=Hierba Roja Alta de Kepler 22b
+tile.kepler22b_flowers.yellow_maple_short_grass.name=Hierba Amarilla Corta de Kepler 22b
+tile.kepler22b_flowers.yellow_maple_med_grass.name=Hierba Amarilla Media de Kepler 22b
+tile.kepler22b_flowers.yellow_maple_tall_grass.name=Hierba Amarilla Alta de Kepler 22b
+tile.kepler22b_flowers.purple_maple_short_grass.name=Hierba Púrpura Corta de Kepler 22b
+tile.kepler22b_flowers.purple_maple_med_grass.name=Hierba Púrpura Media de Kepler 22b
+tile.kepler22b_flowers.purple_maple_tall_grass.name=Hierba Púrpura Alta de Kepler 22b
+tile.kepler22b_flowers.green_maple_short_grass.name=Hierba Verde Corta de Kepler 22b
+tile.kepler22b_flowers.green_maple_med_grass.name=Hierba Verde Media de Kepler 22b
+tile.kepler22b_flowers.green_maple_tall_grass.name=Hierba Verde Alta de Kepler 22b
+tile.kepler22b.cobblestone.name=Roca de Kepler 22b
+tile.kepler22b.ore_platinum.name=Mena de Platino de Kepler 22b
+tile.kepler22b.platinum_block.name=Bloque de Platino
 
 #Moon Blocks
 tile.callisto.surface.name=Roca Superficial de Calisto
@@ -312,31 +312,31 @@ tile.titan.stone.name=Roca de Titán
 tile.titan.ore_iron.name=Mena de Hierro de Titán
 tile.titan.ore_tin.name=Mena de Estaño de Titán
 tile.titan.ore_copper.name=Mena de Cobre de Titán
-tile.titan.titan_methane_surface.name=Titan Methane Surface ##NEEDS TRANSLATE##
-tile.titan.titan_methane_sub_surface.name=Titan Methane Sub-Surface ##NEEDS TRANSLATE##
-tile.titan.titan_rocks.name=Titan Rocks ##NEEDS TRANSLATE##
+tile.titan.titan_methane_surface.name=Metáno Superficial de Titán
+tile.titan.titan_methane_sub_surface.name=Metano Subterráneo de Titán
+tile.titan.titan_rocks.name=Rocas de Titán
 
-tile.oberon.surface.name=Oberon Surface Rock ##NEEDS TRANSLATE##
-tile.oberon.sub_surface.name=Oberon Sub-Surface Rock ##NEEDS TRANSLATE##
-tile.oberon.stone.name=Oberon Stone ##NEEDS TRANSLATE##
-tile.oberon.ore_iron.name=Oberon Iron Ore ##NEEDS TRANSLATE##
-tile.oberon.ore_tin.name=Oberon Tin Ore ##NEEDS TRANSLATE##
-tile.oberon.ore_copper.name=Oberon Copper Ore ##NEEDS TRANSLATE##
+tile.oberon.surface.name=Roca superficial de Oberón
+tile.oberon.sub_surface.name=Roca subterránea de Oberón
+tile.oberon.stone.name=Roca de Oberón
+tile.oberon.ore_iron.name=Mena de Hierro de Oberón
+tile.oberon.ore_tin.name=Mena de Estaño de Oberón
+tile.oberon.ore_copper.name=Mena de Cobre de Oberón
 
-tile.titania.surface.name=Titania Surface Rock ##NEEDS TRANSLATE##
-tile.titania.sub_surface.name=Titania Sub-Surface Rock ##NEEDS TRANSLATE##
-tile.titania.stone.name=Titania Stone ##NEEDS TRANSLATE##
-tile.titania.ore_iron.name=Titania Iron Ore ##NEEDS TRANSLATE##
-tile.titania.ore_tin.name=Titania Tin Ore ##NEEDS TRANSLATE##
-tile.titania.ore_copper.name=Titania Copper Ore ##NEEDS TRANSLATE##
+tile.titania.surface.name=Roca Superficial de Titania
+tile.titania.sub_surface.name=Roca Subterránea de Titania
+tile.titania.stone.name=Roca de Titania
+tile.titania.ore_iron.name=Mena de Hierro de Titania
+tile.titania.ore_tin.name=Mena de Estaño de Titania
+tile.titania.ore_copper.name=Mena de Cobre de Titania
 
-tile.iapetus.surface.name=Iapetus Surface Rock ##NEEDS TRANSLATE##
-tile.iapetus.sub_surface.name=Iapetus Sub-Surface Rock ##NEEDS TRANSLATE##
-tile.iapetus.stone.name=Iapetus Stone ##NEEDS TRANSLATE##
-tile.iapetus.ore_iron.name=Iapetus Iron Ore ##NEEDS TRANSLATE##
-tile.iapetus.ore_tin.name=Iapetus Tin Ore ##NEEDS TRANSLATE##
-tile.iapetus.ore_copper.name=Iapetus Copper Ore ##NEEDS TRANSLATE##
-tile.iapetus.ice.name=Iapetus Ice ##NEEDS TRANSLATE##
+tile.iapetus.surface.name=Roca Superficial de Jápeto
+tile.iapetus.sub_surface.name=Roca Subterránea de Jápeto
+tile.iapetus.stone.name=Roca de Jápeto
+tile.iapetus.ore_iron.name=Mena de Hierro de Jápeto
+tile.iapetus.ore_tin.name=Mena de Estaño de Jápeto
+tile.iapetus.ore_copper.name=Mena de Cobre de Jápeto
+tile.iapetus.ice.name=Hielo de Jápeto
 
 #PlanetGravel Blocks
 tile.mercury_gravel.name=Grava de Mercurio
@@ -352,9 +352,9 @@ tile.callisto_gravel.name=Grava de Calisto
 tile.ganymede_gravel.name=Grava de Ganimedes
 tile.rhea_gravel.name=Grava de Rea
 tile.titan_gravel.name=Grava de Titán
-tile.oberon_gravel.name=OberonGravel ##NEEDS TRANSLATE##
-tile.titania_gravel.name=TitaniaGravel ##NEEDS TRANSLATE##
-tile.iapetus_gravel.name=IapetusGravel ##NEEDS TRANSLATE##
+tile.oberon_gravel.name=Grava de Oberón
+tile.titania_gravel.name=Grava de Titania
+tile.iapetus_gravel.name=Grava de Jápeto
 
 tile.venus_gravel.name=Grava de Venus
 tile.jupiter_gravel.name=Grava de Júpiter
@@ -363,74 +363,74 @@ tile.uranus_gravel.name=Grava de Urano
 tile.neptune_gravel.name=Grava de Neptuno
 
 #Treasure Chests
-tile.treasure_chest_t4.name=Cofre del tesoro nivel 4
-tile.treasure_chest_t5.name=Cofre del tesoro nivel 5
-tile.treasure_chest_t6.name=Cofre del tesoro nivel 6
-tile.treasure_chest_t7.name=Cofre del tesoro nivel 7
-tile.treasure_chest_t8.name=Cofre del tesoro nivel 8
-tile.treasure_chest_t9.name=Cofre del tesoro nivel 9
-tile.treasure_chest_t10.name=Cofre del tesoro nivel 10
-tile.treasure_chest_t4.description=Tier 4 Treasure Chests will generate in Mercury Dungeons. They are unlockable after defeating the final boss.
-tile.treasure_chest_t5.description=Los cofres del tesoro nivel 5 se generarán en las mazmorras de Júpiter. Se desbloquean despues de matar al jefe final.
-tile.treasure_chest_t6.description=Los cofres del tesoro nivel 6 se generarán en las mazmorras de Saturno. Se desbloquean despues de matar al jefe final.
-tile.treasure_chest_t7.description=Los cofres del tesoro nivel 7 se generarán en las mazmorras de Urano. Se desbloquean despues de matar al jefe final.
-tile.treasure_chest_t8.description=Los cofres del tesoro nivel 8 se generarán en las mazmorras de Neptuno. Se desbloquean despues de matar al jefe final.
-tile.treasure_chest_t9.description=Los cofres del tesoro nivel 9 se generarán en las mazmorras de Pluto. Se desbloquean despues de matar al jefe final.
-tile.treasure_chest_t10.description=Los cofres del tesoro nivel 10 se generarán en las mazmorras de Eris. Se desbloquean despues de matar al jefe final.
+tile.treasure_chest_t4.name=Cofre del Tesoro Nivel 4
+tile.treasure_chest_t5.name=Cofre del Tesoro Nivel 5
+tile.treasure_chest_t6.name=Cofre del Tesoro Nivel 6
+tile.treasure_chest_t7.name=Cofre del Tesoro Nivel 7
+tile.treasure_chest_t8.name=Cofre del Tesoro Nivel 8
+tile.treasure_chest_t9.name=Cofre del Tesoro Nivel 9
+tile.treasure_chest_t10.name=Cofre del Tesoro Nivel 10
+tile.treasure_chest_t4.description=Los Cofres del Tesoro Nivel 4 se generarán en las Mazmorras de Mercurio. Se desbloquean despues de matar al jefe final.
+tile.treasure_chest_t5.description=Los Cofres del Tesoro Nivel 5 se generarán en las Mazmorras de Júpiter. Se desbloquean despues de matar al jefe final.
+tile.treasure_chest_t6.description=Los Cofres del Tesoro Nivel 6 se generarán en las Mazmorras de Saturno. Se desbloquean despues de matar al jefe final.
+tile.treasure_chest_t7.description=Los Cofres del Tesoro Nivel 7 se generarán en las Mazmorras de Urano. Se desbloquean despues de matar al jefe final.
+tile.treasure_chest_t8.description=Los Cofres del Tesoro Nivel 8 se generarán en las Mazmorras de Neptuno. Se desbloquean despues de matar al jefe final.
+tile.treasure_chest_t9.description=Los Cofres del Tesoro Nivel 9 se generarán en las Mazmorras de Pluto. Se desbloquean despues de matar al jefe final.
+tile.treasure_chest_t10.description=Los Cofres del Tesoro Nivel 10 se generarán en las Mazmorras de Eris. Se desbloquean despues de matar al jefe final.
 
 #Machines
 tile.advanced_refinery.name=Refinería Avanzada
-tile.ultimate_refinery.name=Ultimate Refinery
+tile.ultimate_refinery.name=Refinería Definitiva
 tile.solar.hybrid_solar.name=Panel Solar Híbrido
 tile.solar.ultimate_solar.name=Panel Solar Definitivo
 tile.solar_hybrid.description=Este Panel Solar trabajará durante el día y la noche
 tile.solar_ultimate.description=Este Panel Solar trabajará durante el día y la noche
-tile.advanced_oxygen_compressor.0.name=Advanced Oxygen Compressor ##NEEDS TRANSLATE##
-tile.advanced_oxygen_compressor.1.name=Advanced Oxygen Decompressor ##NEEDS TRANSLATE##
-tile.ultimate_oxygen_compressor.0.name=Ultimate Oxygen Compressor ##NEEDS TRANSLATE##
-tile.ultimate_oxygen_compressor.1.name=Ultimate Oxygen Decompressor ##NEEDS TRANSLATE##
-tile.basic_decrystallizer.name=Basic Decrystallizer ##NEEDS TRANSLATE##
-tile.basic_crystallizer.name=Basic Crystallizer ##NEEDS TRANSLATE##
-tile.basic_smasher.name=Basic Block Smasher ##NEEDS TRANSLATE##
-tile.basic_chemical_injector.name=Basic Chemical Injector ##NEEDS TRANSLATE##
-tile.basic_solar_evaporation_chamber.name=Basic Solar Evaporation Chamber ##NEEDS TRANSLATE##
-tile.advanced_launch_pad.tier2LandingPad.name=Tier 2 Rocket Launch Pad ##NEEDS TRANSLATE##
-tile.advanced_launch_pad.tier3LandingPad.name=Tier 3 Rocket Launch Pad ##NEEDS TRANSLATE##
-tile.advanced_launch_pad.poweredChargingPad.name=Vehicle Charging Pad ##NEEDS TRANSLATE##
-tile.advanced_launch_pad.rocketPoweredChargingPad.name=Powered Rocket Launch Pad ##NEEDS TRANSLATE##
-tile.advanced_launch_pad_full.name=Tier 2/3 Launch Pad ##NEEDS TRANSLATE##
-tile.advanced_launch_pad.tier2.desc=Used to launch Tier 4 - 8 Rockets. To be placed in a 5x5 square ##NEEDS TRANSLATE##
-tile.advanced_launch_pad.tier3.desc=Used to launch Tier 9 - 10 Rockets. To be placed in a 5x5 square ##NEEDS TRANSLATE##
-tile.advanced_launch_pad.powered.desc=Used to power Mars Rover & Venus Rover Vehicles. To be placed in a 5x5 square ##NEEDS TRANSLATE##
-tile.advanced_launch_pad.powered.rocket.desc=Used to launch Tier 10 Electric Rocket. To be placed in a 5x5 square ##NEEDS TRANSLATE##
-tile.advanced_fuel_loader.name=Advanced Fuel Loader ##NEEDS TRANSLATE##
-tile.ultimate_fuel_loader.name=Ultimate Fuel Loader ##NEEDS TRANSLATE##
-tile.vehicle_charger.name=Vehicle Charger (WIP) ##NEEDS TRANSLATE##
-tile.basic_purifier.name=Basic Purifier ##NEEDS TRANSLATE##
-tile.basic_densifier.name=Basic Densifier ##NEEDS TRANSLATE##
-tile.basic_decontamination_unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
-tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
+tile.advanced_oxygen_compressor.0.name=Compresor de Oxígeno Avanzado
+tile.advanced_oxygen_compressor.1.name=Descompresor de Oxígeno Avanzado
+tile.ultimate_oxygen_compressor.0.name=Compresor de Oxígeno Definitivo
+tile.ultimate_oxygen_compressor.1.name=Descompresor de Oxígeno Definitivo
+tile.basic_decrystallizer.name=Descristalizador Básico
+tile.basic_crystallizer.name=Cristalizador Básico
+tile.basic_smasher.name=Rompedor de Bloques Básico
+tile.basic_chemical_injector.name=Inyector Químico Básico
+tile.basic_solar_evaporation_chamber.name=Cámara de Evaporación Solar Básica
+tile.advanced_launch_pad.tier2LandingPad.name=Plataforma de Lanzamiento Nivel 2
+tile.advanced_launch_pad.tier3LandingPad.name=Plataforma de Lanzamiento Nivel 3
+tile.advanced_launch_pad.poweredChargingPad.name=Plataforma de Carga de Vehículos
+tile.advanced_launch_pad.rocketPoweredChargingPad.name=Plataforma de Lanzamiento para Cohetes Eléctricos
+tile.advanced_launch_pad_full.name=Plataforma de lanzamiento nivel 2/3
+tile.advanced_launch_pad.tier2.desc=Usado para lanzar Cohetes Nivel 4 - 8. Debe colocarse en 5x5
+tile.advanced_launch_pad.tier3.desc=Usado para lanzar Cohetes Nivel 9 - 10. Debe colocarse en 5x5
+tile.advanced_launch_pad.powered.desc=Usado para cargar los Vehículos Rover marciano y Rover de Venus. Debe colocarse en 5x5
+tile.advanced_launch_pad.powered.rocket.desc=Usado para lanzar el Cohete Eléctrico Nivel 10. Debe colocarse en 5x5
+tile.advanced_fuel_loader.name=Cargador de Combustible Avanzado
+tile.ultimate_fuel_loader.name=Cargador de Combustible Definitivo
+tile.vehicle_charger.name=Cargador de Vehículos (WIP)
+tile.basic_purifier.name=Purificador Básico
+tile.basic_densifier.name=Densificador Básico
+tile.basic_decontamination_unit.name=Unidad de Descontaminación Básica
+tile.basic_decontamination_unit_fake_block.name=Unidad de Descontaminación Básica
 
 #Machine Containers
 container.solarhybrid.name=Panel Solar Híbrido
 container.solarultimate.name=Panel Solar Definitivo
-container.advanced.refinery.name=Advanced Refinery ##NEEDS TRANSLATE##
-container.ultimate.refinery.name=Ultimate Refinery ##NEEDS TRANSLATE##
-container.advancedoxygencompressor.name=Advanced Oxygen Compressor ##NEEDS TRANSLATE##
-container.advancedoxygendecompressor.name=Advanced Oxygen Decompressor ##NEEDS TRANSLATE##
-container.ultimateoxygencompressor.name=Ultimate Oxygen Compressor ##NEEDS TRANSLATE##
-container.ultimateoxygendecompressor.name=Ultimate Oxygen Decompressor ##NEEDS TRANSLATE##
-container.basic.decrystallizer.name=Basic Decrystallizer ##NEEDS TRANSLATE##
-container.basic.crystallizer.name=Basic Crystallizer ##NEEDS TRANSLATE##
-container.basic.smasher.name=Basic Smasher ##NEEDS TRANSLATE##
-container.basic.chemical_injector.name=Basic Chemical Injector ##NEEDS TRANSLATE##
-container.advanced.fuelloader.name=Advanced Fuel Loader ##NEEDS TRANSLATE##
-container.ultimate.fuelloader.name=Ultimate Fuel Loader ##NEEDS TRANSLATE##
-container.basic.solar.evaporation.chamber.name=Basic Solar Evaporation Chamber ##NEEDS TRANSLATE##
-container.vehicle.charger.name=Vehicle Charger ##NEEDS TRANSLATE##
-container.basic.purifier.name=Purifier ##NEEDS TRANSLATE##
-container.basic.densifier.name=Basic Densifier ##NEEDS TRANSLATE##
-container.basic.decontamination.unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
+container.advanced.refinery.name=Refinería Avanzada
+container.ultimate.refinery.name=Refinería Definitiva
+container.advancedoxygencompressor.name=Compresor de Oxígeno Avanzado
+container.advancedoxygendecompressor.name=Descompresor de Oxígeno Avanzado
+container.ultimateoxygencompressor.name=Compresor de Oxígeno Definitivo
+container.ultimateoxygendecompressor.name=Descompresor de Oxígeno Definitivo
+container.basic.decrystallizer.name=Basic Descristalizador Básico
+container.basic.crystallizer.name=Cristalizador Básico
+container.basic.smasher.name=Rompedor Básico
+container.basic.chemical_injector.name=Inyector Químico Básico
+container.advanced.fuelloader.name=Cargador de Combustible Avanzado
+container.ultimate.fuelloader.name=Cargador de Combustible Definitivo
+container.basic.solar.evaporation.chamber.name=Cámara de Evaporación Solar Básica
+container.vehicle.charger.name=Cargador de Vehículos
+container.basic.purifier.name=Purificador Básico
+container.basic.densifier.name=Densificador Básico
+container.basic.decontamination.unit.name=Unidad de Descontaminación Básica
 
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank ##NEEDS TRANSLATE##
@@ -529,22 +529,22 @@ gui.celestial_body_pressure_level.name=Pressure Level ##NEEDS TRANSLATE##
 gui.celestial_body_amount_of_planets.name=Amount of Planets ##NEEDS TRANSLATE##
 
 #GUI Controls/Keybinds
-keybind.vehicleInv.name=Open Powered Vehicle Inventory ##NEEDS TRANSLATE##
+keybind.vehicleInv.name=Abrir inventario de vehículo eléctrico
 
 #Other Blocks
-tile.nuclear_bomb.name=Bomba nuclear
-tile.fire_bomb.name=Fire Bomb
-tile.volcanic_rock.name=Roca volcánica
-tile.ash_rock.name=Ash Block
-tile.frozen_nitrogen.name=Nitrógeno congelado
-tile.dense_ice.name=Hielo denso
-tile.fossil.name=Bloque fósil
-tile.ore_lead.name=Lead Ore
-tile.potash.name=Potash
-tile.red_sand.name=Red Sand
-tile.red_sandstone.name=Red Sandstone
-tile.orange_sand.name=Orange Sand
-tile.orange_sandstone.name=Orange Sandstone
+tile.nuclear_bomb.name=Bomba Nuclear
+tile.fire_bomb.name=Bomba de Fuego
+tile.volcanic_rock.name=Roca Volcánica
+tile.ash_rock.name=Bloque de Ceniza
+tile.frozen_nitrogen.name=Nitrógeno Congelado
+tile.dense_ice.name=Hielo Denso
+tile.fossil.name=Bloque Fósil
+tile.ore_lead.name=Mena de Plomo
+tile.potash.name=Potasa
+tile.red_sand.name=Arena Roja
+tile.red_sandstone.name=Arenisca Roja
+tile.orange_sand.name=Arena Naranja
+tile.orange_sandstone.name=Arenisca Naranja
 
 #CandyCane/Cake/Icing Blocks
 tile.candy_blocks.candy_cane_red.name=Red Candy Cane ##NEEDS TRANSLATE##
@@ -581,28 +581,28 @@ tile.cake_blocks.cookie_rocks.name=Cookie Rocks
 tile.white_sugar_cane.name=White Sugar Cane Block ##NEEDS TRANSLATE##
 
 #Decorative Blocks
-tile.decorative_blocks.marble.name=Marble ##NEEDS TRANSLATE##
-tile.decorative_blocks.marble_bricks.name=Marble Bricks ##NEEDS TRANSLATE##
-tile.decorative_blocks.snow_bricks.name=Snow Bricks ##NEEDS TRANSLATE##
-tile.decorative_blocks.ice_bricks.name=Ice Bricks ##NEEDS TRANSLATE##
-tile.decorative_blocks.fire_bricks.name=Fire Bricks ##NEEDS TRANSLATE##
-tile.decorative_blocks.black_white_floor.name=Black/White Tiled Floor ##NEEDS TRANSLATE##
-tile.decorative_blocks.marble_titled_floor.name=Marble Tiled Floor ##NEEDS TRANSLATE##
-tile.decorative_blocks.marble_broken_titled_floor.name=Marble Broken Tiled Floor ##NEEDS TRANSLATE##
-tile.decorative_blocks.metal_mesh.name=Metal Mesh Floor ##NEEDS TRANSLATE##
-tile.decorative_blocks.frozen_nitrogen_bricks.name=Frozen Nitrogen Bricks ##NEEDS TRANSLATE##
-tile.decorative_blocks.volcanic_rock_bricks.name=Volcanic Rock Bricks ##NEEDS TRANSLATE##
-tile.decorative_blocks.carbon_titled_floor.name=Carbon Tiled Floor ##NEEDS TRANSLATE##
-tile.decorative_blocks.carbon_broken_titled_floor.name=Carbon Broken Tiled Floor ##NEEDS TRANSLATE##
-tile.decorative_blocks.magnesium_titled_floor.name=Magnesium Tiled Floor ##NEEDS TRANSLATE##
-tile.decorative_blocks.magnesium_broken_titled_floor.name=Magnesium Broken Tiled Floor ##NEEDS TRANSLATE##
-tile.decorative_blocks.ash_bricks.name=Ash Bricks ##NEEDS TRANSLATE##
-tile.decorative_blocks2.white_block.name=White Block ##NEEDS TRANSLATE##
-tile.decorative_blocks2.red_block.name=Red Block ##NEEDS TRANSLATE##
-tile.decorative_blocks2.blue_block.name=Blue Block ##NEEDS TRANSLATE##
-tile.decorative_blocks2.light_blue_block.name=Light Blue Block ##NEEDS TRANSLATE##
-tile.decorative_blocks2.yellow_block.name=Yellow Block ##NEEDS TRANSLATE##
-tile.decorative_blocks2.green_block.name=Green Block ##NEEDS TRANSLATE##
+tile.decorative_blocks.marble.name=Mármol
+tile.decorative_blocks.marble_bricks.name=Ladrillos de mármol
+tile.decorative_blocks.snow_bricks.name=Ladrillos de nieve#
+tile.decorative_blocks.ice_bricks.name=Ladrillos de hielo
+tile.decorative_blocks.fire_bricks.name=Ladrillos de fuego
+tile.decorative_blocks.black_white_floor.name=Piso de azulejos blanco/negro
+tile.decorative_blocks.marble_titled_floor.name=Piso de azulejos de mármol
+tile.decorative_blocks.marble_broken_titled_floor.name=Piso de azulejos rotos de mármol
+tile.decorative_blocks.metal_mesh.name=Piso de malla de metal
+tile.decorative_blocks.frozen_nitrogen_bricks.name=Ladrillos de nitrógeno congelado
+tile.decorative_blocks.volcanic_rock_bricks.name=Ladrillos de roca volcánica
+tile.decorative_blocks.carbon_titled_floor.name=Piso de azulejos de carbono
+tile.decorative_blocks.carbon_broken_titled_floor.name=Piso de azulejos rotos de carbono
+tile.decorative_blocks.magnesium_titled_floor.name=Piso de azulejos de magnesio
+tile.decorative_blocks.magnesium_broken_titled_floor.name=Piso de azulejos rotos de magnesio
+tile.decorative_blocks.ash_bricks.name=Ladrillos de ceniza
+tile.decorative_blocks2.white_block.name=Bloque blanco
+tile.decorative_blocks2.red_block.name=Bloque rojo
+tile.decorative_blocks2.blue_block.name=Bloque azul
+tile.decorative_blocks2.light_blue_block.name=Bloque celeste
+tile.decorative_blocks2.yellow_block.name=Bloque amarillo
+tile.decorative_blocks2.green_block.name=Bloque verde
 
 #Stairs
 tile.mercury_stairs_surface.name=Mercury Surface Stairs ##NEEDS TRANSLATE##
@@ -646,21 +646,21 @@ tile.eris_stairs_stone.name=Eris Stone Stairs ##NEEDS TRANSLATE##
 tile.eris_stairs_stone_bricks.name=Eris Stone Bricks Stairs ##NEEDS TRANSLATE##
 
 #Rocket Items
-item.item_tier4_rocket.t4Rocket.name=Cohete nivel 4
-item.item_tier5_rocket.t5Rocket.name=Cohete nivel 5
-item.item_tier6_rocket.t6Rocket.name=Cohete nivel 6
-item.item_tier7_rocket.t7Rocket.name=Cohete nivel 7
-item.item_tier8_rocket.t8Rocket.name=Cohete nivel 8
-item.item_tier9_rocket.t9Rocket.name=Cohete nivel 9
-item.item_tier10_rocket.t10Rocket.name=Cohete nivel 10
-item.item_tier10_electric_rocket.t10Rocket.name=Tier 10 Electric Rocket ##NEEDS TRANSLATE##
-rocket_pad.tier2.desc=Needs to be placed on a Tier 2 Launch Pad ##NEEDS TRANSLATE##
-rocket_pad.tier3.desc=Needs to be placed on a Tier 3 Launch Pad ##NEEDS TRANSLATE##
-rocket_pad.electric.desc=Needs to be placed on a Powered Rocket Launch Pad ##NEEDS TRANSLATE##
+item.item_tier4_rocket.t4Rocket.name=Cohete Nivel 4
+item.item_tier5_rocket.t5Rocket.name=Cohete Nivel 5
+item.item_tier6_rocket.t6Rocket.name=Cohete Nivel 6
+item.item_tier7_rocket.t7Rocket.name=Cohete Nivel 7
+item.item_tier8_rocket.t8Rocket.name=Cohete Nivel 8
+item.item_tier9_rocket.t9Rocket.name=Cohete Nivel 9
+item.item_tier10_rocket.t10Rocket.name=Cohete Nivel 10
+item.item_tier10_electric_rocket.t10Rocket.name=Cohete Eléctrico Nivel 10
+rocket_pad.tier2.desc=Debe colocarse en una Plataforma de Lanzamiento Nivel 2
+rocket_pad.tier3.desc=Debe colocarse en una Plataforma de Lanzamiento Nivel 3
+rocket_pad.electric.desc=Debe colocarse en una Plataforma de Lanzamiento para Cohetes Eléctricos
 
 #Vehicles
-item.mars_rover.name=Mars Rover ##NEEDS TRANSLATE##
-item.venus_rover.name=Venus Rover ##NEEDS TRANSLATE##
+item.mars_rover.name=Rover marciano
+item.venus_rover.name=Rover de Venus
 
 #Rocket Tiered Items
 item.nose_cone_tier4.name=Ojiva nivel 4
@@ -668,32 +668,32 @@ item.nose_cone_tier5.name=Ojiva nivel 5
 item.nose_cone_tier6.name=Ojiva nivel 6
 item.nose_cone_tier7.name=Ojiva nivel 7
 item.nose_cone_tier8.name=Ojiva nivel 8
-item.nose_cone_tier9.name=Ojiva nivel 9
-item.nose_cone_tier10.name=Ojiva nivel 10
+item.nose_cone_tier9.name=Ojiva Nivel 9
+item.nose_cone_tier10.name=Ojiva Nivel 10
 
-item.tier4_items.tier4fin.name=Aletas de cohete nivel 4
-item.tier5_items.tier5fin.name=Aletas de cohete nivel 5
-item.tier6_items.tier6fin.name=Aletas de cohete nivel 6
-item.tier7_items.tier7fin.name=Aletas de cohete nivel 7
-item.tier8_items.tier8fin.name=Aletas de cohete nivel 8
-item.tier9_items.tier9fin.name=Aletas de cohete nivel 9
-item.tier10_items.tier10fin.name=Aletas de cohete nivel 10
+item.tier4_items.tier4fin.name=Aletas de Cohete Nivel 4
+item.tier5_items.tier5fin.name=Aletas de Cohete Nivel 5
+item.tier6_items.tier6fin.name=Aletas de Cohete Nivel 6
+item.tier7_items.tier7fin.name=Aletas de Cohete Nivel 7
+item.tier8_items.tier8fin.name=Aletas de Cohete Nivel 8
+item.tier9_items.tier9fin.name=Aletas de Cohete Nivel 9
+item.tier10_items.tier10fin.name=Aletas de Cohete Nivel 10
 
-item.tier4_items.tier4engine.name=Motor de coehte nivel 4
-item.tier5_items.tier5engine.name=Motor de coehte nivel 5
-item.tier6_items.tier6engine.name=Motor de coehte nivel 6
-item.tier7_items.tier7engine.name=Motor de coehte nivel 7
-item.tier8_items.tier8engine.name=Motor de coehte nivel 8
-item.tier9_items.tier9engine.name=Motor de coehte nivel 9
-item.tier10_items.tier10engine.name=Motor de coehte nivel 10
+item.tier4_items.tier4engine.name=Motor de Cohete Nivel 4
+item.tier5_items.tier5engine.name=Motor de Cohete Nivel 5
+item.tier6_items.tier6engine.name=Motor de Cohete Nivel 6
+item.tier7_items.tier7engine.name=Motor de Cohete Nivel 7
+item.tier8_items.tier8engine.name=Motor de Cohete Nivel 8
+item.tier9_items.tier9engine.name=Motor de Cohete Nivel 9
+item.tier10_items.tier10engine.name=Motor de Cohete Nivel 10
 
-item.tier4_items.tier4booster.name=Acelerador nivel 4
-item.tier5_items.tier5booster.name=Acelerador nivel 5
-item.tier6_items.tier6booster.name=Acelerador nivel 6
-item.tier7_items.tier7booster.name=Acelerador nivel 7
-item.tier8_items.tier8booster.name=Acelerador nivel 8
-item.tier9_items.tier9booster.name=Acelerador nivel 9
-item.tier10_items.tier10booster.name=Acelerador nivel 10
+item.tier4_items.tier4booster.name=Acelerador Nivel 4
+item.tier5_items.tier5booster.name=Acelerador Nivel 5
+item.tier6_items.tier6booster.name=Acelerador Nivel 6
+item.tier7_items.tier7booster.name=Acelerador Nivel 7
+item.tier8_items.tier8booster.name=Acelerador Nivel 8
+item.tier9_items.tier9booster.name=Acelerador Nivel 9
+item.tier10_items.tier10booster.name=Acelerador Nivel 10
 
 item.tier4_items.tier4heavy_duty_plate.name=Placa de alta resistencia
 item.tier5_items.tier5heavy_duty_plate.name=Placa de alta resistencia
@@ -703,13 +703,13 @@ item.tier8_items.tier8heavy_duty_plate.name=Placa de alta resistencia
 item.tier9_items.tier9heavy_duty_plate.name=Placa de alta resistencia
 item.tier10_items.tier10heavy_duty_plate.name=Placa de alta resistencia
 
-tier4.heavy_duty_plate.name=nivel 4
-tier5.heavy_duty_plate.name=nivel 5
-tier6.heavy_duty_plate.name=nivel 6
-tier7.heavy_duty_plate.name=nivel 7
-tier8.heavy_duty_plate.name=nivel 8
-tier9.heavy_duty_plate.name=nivel 9
-tier10.heavy_duty_plate.name=nivel 10
+tier4.heavy_duty_plate.name=Nivel 4
+tier5.heavy_duty_plate.name=Nivel 5
+tier6.heavy_duty_plate.name=Nivel 6
+tier7.heavy_duty_plate.name=Nivel 7
+tier8.heavy_duty_plate.name=Nivel 8
+tier9.heavy_duty_plate.name=Nivel 9
+tier10.heavy_duty_plate.name=Nivel 10
 
 #Compressed Items
 item.tier4_items.compressed_carbon.name=Carbono comprimido
@@ -721,7 +721,7 @@ item.tier8_items.compressed_zinc.name=Zinc comprimido
 item.tier5_items.compressed_nickel.name=Estaño comprimido
 item.compressed_mercury.name=Mercurio comprimido
 item.tier9_items.compressed_tungsten.name=Tungsteno comprimido
-item.tier10_items.compressed_dark_iron.name=Compressed Dark Iron ##NEEDS TRANSLATE##
+item.tier10_items.compressed_dark_iron.name=Hierro oscuro comprimido
 
 #Ingots
 item.tier4_items.ingot_carbon.name=Lingote de carbono
@@ -733,24 +733,24 @@ item.tier5_items.ingot_nickel.name=Lingote de estaño
 item.ingot_mercury.name=Lingote mercuriano
 item.ingot_uranium.name=Lingore de uranio
 item.tier9_items.ingot_tungsten.name=Lingote de tungsteno
-item.tier10_items.ingot_dark_iron.name=Dark Iron Ingot ##NEEDS TRANSLATE##
-item.ingot_lead.name=Lead Ingot ##NEEDS TRANSLATE##
-item.tier5_items.ingot_volcanic.name=Volcanic Ingot ##NEEDS TRANSLATE##
+item.tier10_items.ingot_dark_iron.name=Lingote de hierro oscuro
+item.ingot_lead.name=Lingote de plomo
+item.tier5_items.ingot_volcanic.name=Lingote volcánico
 
 #Shards
-item.tier5_items.volcanic_shard.name=Volcanic Shard ##NEEDS TRANSLATE##
-item.tier5_items.ash_shard.name=Ash Shard ##NEEDS TRANSLATE##
-item.tier4_items.diamond_shard.name=Diamond Shard ##NEEDS TRANSLATE##
+item.tier5_items.volcanic_shard.name=Fragmento Volcánico
+item.tier5_items.ash_shard.name=Fragmento de Ceniza
+item.tier4_items.diamond_shard.name=Fragmento de Diamante
 
 #Gems
 item.tier5_items.red_gem.name=Gema roja
 item.tier8_items.blue_gem.name=Gema azúl
 item.tier7_items.white_gem.name=Gema blanca
-item.tier11_items.blue_diamond.name=Blue Diamond ##NEEDS TRANSLATE##
-item.tier11_items.red_diamond.name=Red Diamond ##NEEDS TRANSLATE##
-item.tier11_items.yellow_diamond.name=Yellow Diamond ##NEEDS TRANSLATE##
-item.tier11_items.purple_diamond.name=Purple Diamond ##NEEDS TRANSLATE##
-item.tier11_items.green_diamond.name=Green Diamond ##NEEDS TRANSLATE##
+item.tier11_items.blue_diamond.name=Diamante Azúl
+item.tier11_items.red_diamond.name=Diamante Rojo
+item.tier11_items.yellow_diamond.name=Diamante Amarillo
+item.tier11_items.purple_diamond.name=Diamante Púrpura
+item.tier11_items.green_diamond.name=Diamante Verde
 
 #Wafers
 item.wafer.diamond_wafer.name=Oblea de diamante
@@ -762,27 +762,27 @@ item.wafer.white_gem_wafer.name=Oblea de gema blanca
 
 #Buckets
 item.bucket_glowstone.name=Cubeta de piedra luminosa
-item.bucket_salt.name=Liquid Crystallized Water
+item.bucket_salt.name=Agua Cristalizada Líquida
 item.bucket_magma.name=Cubeta de magma
 item.bucket_frozen_water.name=Cubeta de agua congelada
 item.bucket_nitrogen.name=Cubeta de nitrógeno
-item.bucket_clean_water.name=Clean Water Bucket ##NEEDS TRANSLATE##
-item.bucket_infected_water.name=Infected Water Bucket ##NEEDS TRANSLATE##
-item.bucket_radioactive_water.name=Radioactive Water Bucket ##NEEDS TRANSLATE##
-item.bucket_methane.name=Liquid Methane Bucket ##NEEDS TRANSLATE##
-item.bucket_nitrogen_ice.name=Liquid Nitrogen Ice Bucket ##NEEDS TRANSLATE##
-item.bucket_liquid_hydrocarbon.name=Liquid Hydrocarbon Bucket ##NEEDS TRANSLATE##
-item.bucket_liquid_caramel.name=Liquid Caramel Bucket ##NEEDS TRANSLATE##
-item.bucket_liquid_chocolate.name=Liquid Chocolate Bucket ##NEEDS TRANSLATE##
+item.bucket_clean_water.name=Cubeta de Agua Limpia
+item.bucket_infected_water.name=Cubeta de Agua Infectada
+item.bucket_radioactive_water.name=Cubeta de Agua Radioactiva
+item.bucket_methane.name=Cubeta de Metano Líquido
+item.bucket_nitrogen_ice.name=Cubeta de Nitrogeno Congelado Líquido
+item.bucket_liquid_hydrocarbon.name=Cubeta de Hidrocarbono Líquido
+item.bucket_liquid_caramel.name=Cubeta de Caramelo Líquido
+item.bucket_liquid_chocolate.name=Cubeta de Chocolate Líquido
 
 #Keys
-item.T4key.name=Llave de mazmorra nivel 4
-item.T5key.name=Llave de mazmorra nivel 5
-item.T6key.name=Llave de mazmorra nivel 6
-item.T7key.name=Llave de mazmorra nivel 7
-item.T8key.name=Llave de mazmorra nivel 8
-item.T9key.name=Llave de mazmorra nivel 9
-item.T10key.name=Llave de mazmorra nivel 10
+item.T4key.name=Llave de Mazmorra Nivel 4
+item.T5key.name=Llave de Mazmorra Nivel 5
+item.T6key.name=Llave de Mazmorra Nivel 6
+item.T7key.name=Llave de Mazmorra Nivel 7
+item.T8key.name=Llave de Mazmorra Nivel 8
+item.T9key.name=Llave de Mazmorra Nivel 9
+item.T10key.name=Llave de Mazmorra Nivel 10
 
 #Tools
 item.carbon_pickaxe.name=Pico de carbono
@@ -840,35 +840,35 @@ item.uranium_axe.name=Hacha de uranio
 item.uranium_sword.name=Espada de uranio
 item.uranium_hoe.name=Azada de uranio
 item.uranium_shovel.name=Pala de uranio
-item.blue_diamond_pickaxe.name=Blue Diamond Pickaxe ##NEEDS TRANSLATE##
-item.blue_diamond_axe.name=Blue Diamond Axe ##NEEDS TRANSLATE##
-item.blue_diamond_sword.name=Blue Diamond Sword ##NEEDS TRANSLATE##
-item.blue_diamond_hoe.name=Blue Diamond Hoe ##NEEDS TRANSLATE##
-item.blue_diamond_shovel.name=Blue Diamond Shovel ##NEEDS TRANSLATE##
-item.red_diamond_pickaxe.name=Red Diamond Pickaxe ##NEEDS TRANSLATE##
-item.red_diamond_axe.name=Red Diamond Axe ##NEEDS TRANSLATE##
-item.red_diamond_sword.name=Red Diamond Sword ##NEEDS TRANSLATE##
-item.red_diamond_hoe.name=Red Diamond Hoe ##NEEDS TRANSLATE##
-item.red_diamond_shovel.name=Red Diamond Shovel ##NEEDS TRANSLATE##
-item.purple_diamond_pickaxe.name=Purple Diamond Pickaxe ##NEEDS TRANSLATE##
-item.purple_diamond_axe.name=Purple Diamond Axe ##NEEDS TRANSLATE##
-item.purple_diamond_sword.name=Purple Diamond Sword ##NEEDS TRANSLATE##
-item.purple_diamond_hoe.name=Purple Diamond Hoe ##NEEDS TRANSLATE##
-item.purple_diamond_shovel.name=Purple Diamond Shovel ##NEEDS TRANSLATE##
-item.yellow_diamond_pickaxe.name=Yellow Diamond Pickaxe ##NEEDS TRANSLATE##
-item.yellow_diamond_axe.name=Yellow Diamond Axe ##NEEDS TRANSLATE##
-item.yellow_diamond_sword.name=Yellow Diamond Sword ##NEEDS TRANSLATE##
-item.yellow_diamond_hoe.name=Yellow Diamond Hoe ##NEEDS TRANSLATE##
-item.yellow_diamond_shovel.name=Yellow Diamond Shovel ##NEEDS TRANSLATE##
-item.green_diamond_pickaxe.name=Green Diamond Pickaxe ##NEEDS TRANSLATE##
-item.green_diamond_axe.name=Green Diamond Axe ##NEEDS TRANSLATE##
-item.green_diamond_sword.name=Green Diamond Sword ##NEEDS TRANSLATE##
-item.green_diamond_hoe.name=Green Diamond Hoe ##NEEDS TRANSLATE##
-item.green_diamond_shovel.name=Green Diamond Shovel ##NEEDS TRANSLATE##
+item.blue_diamond_pickaxe.name=Pico de diamante azúl
+item.blue_diamond_axe.name=Hacha de diamante azúl
+item.blue_diamond_sword.name=Espada de diamante azúl
+item.blue_diamond_hoe.name=Azada de diamante azúl
+item.blue_diamond_shovel.name=Pala de diamante azúl
+item.red_diamond_pickaxe.name=Pico de diamante rojo
+item.red_diamond_axe.name=Hacha de diamante rojo
+item.red_diamond_sword.name=Espada de diamante rojo
+item.red_diamond_hoe.name=Azada de diamante rojo
+item.red_diamond_shovel.name=Pala de diamante rojo
+item.purple_diamond_pickaxe.name=Pico de diamante púrpura
+item.purple_diamond_axe.name=Hacha de diamante púrpura
+item.purple_diamond_sword.name=Espada de diamante púrpura
+item.purple_diamond_hoe.name=Azada de diamante púrpura
+item.purple_diamond_shovel.name=Pala de diamante púrpura
+item.yellow_diamond_pickaxe.name=Pico de diamante amarillo
+item.yellow_diamond_axe.name=Hacha de diamante amarillo
+item.yellow_diamond_sword.name=Espada de diamante amarillo
+item.yellow_diamond_hoe.name=Azada de  de diamante amarillo
+item.yellow_diamond_shovel.name=Pala de diamante amarillo
+item.green_diamond_pickaxe.name=Pico de diamante verde
+item.green_diamond_axe.name=Hacha de diamante verde
+item.green_diamond_sword.name=Espada de diamante verde
+item.green_diamond_hoe.name=Azada de diamante verde
+item.green_diamond_shovel.name=Pala de diamante verde
 
 #Schematics
-item.schematic_mars_rover.name=NASA Workbench Schematic ##NEEDS TRANSLATE##
-item.schematic_venus_rover.name=NASA Workbench Schematic ##NEEDS TRANSLATE##
+item.schematic_mars_rover.name=Planos
+item.schematic_venus_rover.name=Planos
 
 item.schematic_tier4.name=Planos
 item.schematic_tier5.name=Planos
@@ -877,28 +877,28 @@ item.schematic_tier7.name=Planos
 item.schematic_tier8.name=Planos
 item.schematic_tier9.name=Planos
 item.schematic_tier10.name=Planos
-item.schematic_tier10_electric_rocket.name=NASA Workbench Schematic ##NEEDS TRANSLATE##
+item.schematic_tier10_electric_rocket.name=Planos
 
-schematic.mars.rover.name=Mars Rover ##NEEDS TRANSLATE##
-schematic.venus.rover.name=Venus Rover ##NEEDS TRANSLATE##
+schematic.mars.rover.name=Rover marciano
+schematic.venus.rover.name=Rover de Venus
 
-schematic.tier4.rocket.name=Cohete nivel 4
-schematic.tier5.rocket.name=Cohete nivel 5
-schematic.tier6.rocket.name=Cohete nivel 6
-schematic.tier7.rocket.name=Cohete nivel 7
-schematic.tier8.rocket.name=Cohete nivel 8
-schematic.tier9.rocket.name=Cohete nivel 9
-schematic.tier10.rocket.name=Cohete nivel 10
-schematic.tier10.electric.rocket.name=Tier 10 Electric Rocket ##NEEDS TRANSLATE##
+schematic.tier4.rocket.name=Cohete Nivel 4
+schematic.tier5.rocket.name=Cohete Nivel 5
+schematic.tier6.rocket.name=Cohete Nivel 6
+schematic.tier7.rocket.name=Cohete Nivel 7
+schematic.tier8.rocket.name=Cohete Nivel 8
+schematic.tier9.rocket.name=Cohete Nivel 9
+schematic.tier10.rocket.name=Cohete Nivel 10
+schematic.tier10.electric.rocket.name=Cohete Eléctrico Nivel 10
 
-schematic.rocket.t4.name=Cohete nivel 4
-schematic.rocket.t5.name=Cohete nivel 5
-schematic.rocket.t6.name=Cohete nivel 6
-schematic.rocket.t7.name=Cohete nivel 7
-schematic.rocket.t8.name=Cohete nivel 8
-schematic.rocket.t9.name=Cohete nivel 9
-schematic.rocket.t10.name=Cohete nivel 10
-schematic.rocket.electric.t10.name=Electric Rocket ##NEEDS TRANSLATE##
+schematic.rocket.t4.name=Cohete Nivel 4
+schematic.rocket.t5.name=Cohete Nivel 5
+schematic.rocket.t6.name=Cohete Nivel 6
+schematic.rocket.t7.name=Cohete Nivel 7
+schematic.rocket.t8.name=Cohete Nivel 8
+schematic.rocket.t9.name=Cohete Nivel 9
+schematic.rocket.t10.name=Cohete Nivel 10
+schematic.rocket.electric.t10.name=Cohete Eléctrico 
 
 #Batteries
 item.mercury_battery.name=Batería de mercurio
@@ -906,7 +906,7 @@ item.nickel_battery.name=Batería de estaño
 item.zinc_battery.name=Batería de zinc
 item.advanced_battery.name=Batería avanzada
 item.ultimate_battery.name=Batería definitiva
-item.massive_battery.name=Massive Battery ##NEEDS TRANSLATE##
+item.massive_battery.name=Batería masíva
 
 #Armor
 item.carbon_helmet.name=Casco de carbono
@@ -953,28 +953,28 @@ item.tungsten_helmet.name=Casco de tungsteno
 item.tungsten_chest.name=Peto de tungsteno
 item.tungsten_legings.name=Grebas de tungsteno
 item.tungsten_boots.name=Botas de tungsteno
-item.blue_diamond_helmet.name=Blue Diamond Helmet ##NEEDS TRANSLATE##
-item.blue_diamond_chest.name=Blue Diamond Chestplate ##NEEDS TRANSLATE##
-item.blue_diamond_legings.name=Blue Diamond Leggings ##NEEDS TRANSLATE##
-item.blue_diamond_boots.name=Blue Diamond Boots ##NEEDS TRANSLATE##
-item.red_diamond_helmet.name=Red Diamond Helmet ##NEEDS TRANSLATE##
-item.red_diamond_chest.name=Red Diamond Chestplate ##NEEDS TRANSLATE##
-item.red_diamond_legings.name=Red Diamond Leggings ##NEEDS TRANSLATE##
-item.red_diamond_boots.name=Red Diamond Boots ##NEEDS TRANSLATE##
-item.purple_diamond_helmet.name=Purple Diamond Helmet ##NEEDS TRANSLATE##
-item.purple_diamond_chest.name=Purple Diamond Chestplate ##NEEDS TRANSLATE##
-item.purple_diamond_legings.name=Purple Diamond Leggings ##NEEDS TRANSLATE##
-item.purple_diamond_boots.name=Purple Diamond Boots ##NEEDS TRANSLATE##
-item.yellow_diamond_helmet.name=Yellow Diamond Helmet ##NEEDS TRANSLATE##
-item.yellow_diamond_chest.name=Yellow Diamond Chestplate ##NEEDS TRANSLATE##
-item.yellow_diamond_legings.name=Yellow Diamond Leggings ##NEEDS TRANSLATE##
-item.yellow_diamond_boots.name=Yellow Diamond Boots ##NEEDS TRANSLATE##
-item.green_diamond_helmet.name=Green Diamond Helmet ##NEEDS TRANSLATE##
-item.green_diamond_chest.name=Green Diamond Chestplate ##NEEDS TRANSLATE##
-item.green_diamond_legings.name=Green Diamond Leggings ##NEEDS TRANSLATE##
-item.green_diamond_boots.name=Green Diamond Boots ##NEEDS TRANSLATE##
-item.tier11_items.ingot_platinum.name=Platinum Ingot ##NEEDS TRANSLATE##
-item.tier11_items.compressed_platinum.name=Compressed Platinum ##NEEDS TRANSLATE##
+item.blue_diamond_helmet.name=Casco de diamante azúl
+item.blue_diamond_chest.name=Peto de diamante azúl
+item.blue_diamond_legings.name=Grebas de diamante azúl
+item.blue_diamond_boots.name=Botas de diamante azúl
+item.red_diamond_helmet.name=Caso de diamante rojo
+item.red_diamond_chest.name=Peto de diamante rojo
+item.red_diamond_legings.name=Grebas de diamante rojo
+item.red_diamond_boots.name=Botas de diamante rojo
+item.purple_diamond_helmet.name=Casco de diamante púrpura
+item.purple_diamond_chest.name=Peto de diamante púrpura
+item.purple_diamond_legings.name=Grebas de diamante púrpura
+item.purple_diamond_boots.name=Botas de diamante púrpura
+item.yellow_diamond_helmet.name=Casco de diamante amarillo
+item.yellow_diamond_chest.name=Peto de diamante amarillo
+item.yellow_diamond_legings.name=Grebas de diamante amarillo
+item.yellow_diamond_boots.name=Botas de diamante amarillo
+item.green_diamond_helmet.name=Casco de diamante verde
+item.green_diamond_chest.name=Peto de diamante verde
+item.green_diamond_legings.name=Grebas de diamante verde
+item.green_diamond_boots.name=Botas de diamante verde
+item.tier11_items.ingot_platinum.name=Lingote de platino
+item.tier11_items.compressed_platinum.name=Platino comprimido
 
 item.tier1_space_suit_helmet.name=Tier 1 Space Suit Helmet (WIP) ##NEEDS TRANSLATE##
 item.tier1_space_suit_chest.name=Tier 1 Space Suit Chestplate (WIP) ##NEEDS TRANSLATE##
@@ -1002,22 +1002,22 @@ tier2.space.suit.information=Required for Jupiter including their moons ##NEEDS 
 tier3.space.suit.information=Required for Saturn, Uranus including their moons ##NEEDS TRANSLATE##
 tier4.space.suit.information=Required for Neptune, Pluto, Eris including their moons ##NEEDS TRANSLATE##
 
-item.tier3_thermal_helm.name=Gorro térmico nivel 3
-item.tier3_thermal_chestplate.name=Suéter térmico nivel 3
-item.tier3_thermal_leggings.name=Leggings térmicos nivel 3
-item.tier3_thermal_boots.name=Calcetines térmicos nivel 3
-item.tier4_thermal_helm.name=Gorro térmico nivel 4
-item.tier4_thermal_chestplate.name=Suéter térmico nivel 4
-item.tier4_thermal_leggings.name=Leggings térmicos nivel 4
-item.tier4_thermal_boots.name=Calcetines térmicos nivel 4
-item.tier5_thermal_helm.name=Gorro térmico nivel 5
-item.tier5_thermal_chestplate.name=Suéter térmico nivel 5
-item.tier5_thermal_leggings.name=Leggings térmicos nivel 5
-item.tier5_thermal_boots.name=Calcetines térmicos nivel 5
+item.tier3_thermal_helm.name=Gorro térmico Nivel 3
+item.tier3_thermal_chestplate.name=Suéter térmico Nivel 3
+item.tier3_thermal_leggings.name=Leggings térmicos Nivel 3
+item.tier3_thermal_boots.name=Calcetines térmicos Nivel 3
+item.tier4_thermal_helm.name=Gorro térmico Nivel 4
+item.tier4_thermal_chestplate.name=Suéter térmico Nivel 4
+item.tier4_thermal_leggings.name=Leggings térmicos Nivel 4
+item.tier4_thermal_boots.name=Calcetines térmicos Nivel 4
+item.tier5_thermal_helm.name=Gorro térmico Nivel 5
+item.tier5_thermal_chestplate.name=Suéter térmico Nivel 5
+item.tier5_thermal_leggings.name=Leggings térmicos Nivel 5
+item.tier5_thermal_boots.name=Calcetines térmicos Nivel 5
 
-tier3.thermal.padding.information=Required for Mercury ##NEEDS TRANSLATE##
-tier4.thermal.padding.information=Required for Jupiter and Saturn including their moons ##NEEDS TRANSLATE##
-tier5.thermal.padding.information=Required for Uranus, Neptune, Pluto and Eris including their moons ##NEEDS TRANSLATE##
+tier3.thermal.padding.information=Requerido para Mercurio
+tier4.thermal.padding.information=Requerido para Júpiter y Saturno incluyendo sus lunas
+tier5.thermal.padding.information=Requerido para Urano, Neptuno, Pluto y Eris incluyendo sus lunas
 
 #Space Suit Layers
 item.tier1_pressure_layer.name=Tier 1 Pressure Layer ##NEEDS TRANSLATE##
@@ -1166,21 +1166,21 @@ item.tier11_items.green_sticks.name=Green Sticks ##NEEDS TRANSLATE##
 item.tier11_items.brown_sticks.name=Brown Sticks ##NEEDS TRANSLATE##
 
 #Tools
-item.tools.sledge_hammer.name=Sledge Hammer ##NEEDS TRANSLATE##
-item.tools.grinding_wheel.name=Grinding Wheel ##NEEDS TRANSLATE##
-item.tools.mesh.name=String Mesh ##NEEDS TRANSLATE##
-item.tools.filter.name=Filter ##NEEDS TRANSLATE##
+item.tools.sledge_hammer.name=Almádena
+item.tools.grinding_wheel.name=Muela
+item.tools.mesh.name=Malla de cuerda
+item.tools.filter.name=Filtro
 
 #Other Blocks
-tile.slime_block.name=Slime Block
+tile.slime_block.name=Bloque de Slime
 
 #Other Blocks
-tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
-tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
+tile.deimos.ore_lead.name=Mena de Plomo de Deimos
+tile.phobos.ore_lead.name=Mena de Plomo de Fobos
 
 #Other Items
 item.apple_diamond.name=Manzana de diamante
-item.apple_iron.name=Iron Apple
+item.apple_iron.name=Manzana de hierro
 item.canned_food.canned_food.name=Lata de comida
 item.bodyparts.arm.name=Brazo
 item.bodyparts.leg.name=Pierna
@@ -1190,12 +1190,12 @@ item.thermal_cloth.tier3_thermal_cloth.name=Tier 3 Thermal Cloth ##NEEDS TRANSLA
 item.thermal_cloth.tier4_thermal_cloth.name=Tier 4 Thermal Cloth ##NEEDS TRANSLATE##
 item.thermal_cloth.tier5_thermal_cloth.name=Tier 5 Thermal Cloth ##NEEDS TRANSLATE##
 item.tier5_items.ash.name=Ash Powder ##NEEDS TRANSLATE##
-item.geiger_counter.name=Geiger Counter ##NEEDS TRANSLATE##
+item.geiger_counter.name=Contador Geiger
 item.white_sugar_cane_item.name=White Sugar Cane ##NEEDS TRANSLATE##
 geiger.counter.desc=Right Click to see your Current Radiation Level! ##NEEDS TRANSLATE##
 geiger.counter.location.desc=Can be Obtained from a Mercury Dungeon! ##NEEDS TRANSLATE##
-item.chocolate_bar.name=Chocolate Bar ##NEEDS TRANSLATE##
-item.caramel_bar.name=Caramel Bar ##NEEDS TRANSLATE##
+item.chocolate_bar.name=Barra de Chocolate
+item.caramel_bar.name=Barra de Caramelo
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=Chuletas de cerdo deshidratadas
@@ -1214,17 +1214,17 @@ item.electric_parts.electric_wheels_tier2.name=Tier 2 Wheel ##NEEDS TRANSLATE##
 #Entities
 entity.ProjectileTNT.name=Projectíl de TNT
 
-entity.extraplanets.EntityTier4Rocket.name=Cohete nivel 4
-entity.extraplanets.EntityTier5Rocket.name=Cohete nivel 5
-entity.extraplanets.EntityTier6Rocket.name=Cohete nivel 6
-entity.extraplanets.EntityTier7Rocket.name=Cohete nivel 7
-entity.extraplanets.EntityTier8Rocket.name=Cohete nivel 8
-entity.extraplanets.EntityTier9Rocket.name=Cohete nivel 9
-entity.extraplanets.EntityTier10Rocket.name=Cohete nivel 10
-entity.extraplanets.EntityTier10ElectricRocket.name=Tier 10 Electric Rocket ##NEEDS TRANSLATE##
+entity.extraplanets.EntityTier4Rocket.name=Cohete Nivel 4
+entity.extraplanets.EntityTier5Rocket.name=Cohete Nivel 5
+entity.extraplanets.EntityTier6Rocket.name=Cohete Nivel 6
+entity.extraplanets.EntityTier7Rocket.name=Cohete Nivel 7
+entity.extraplanets.EntityTier8Rocket.name=Cohete Nivel 8
+entity.extraplanets.EntityTier9Rocket.name=Cohete Nivel 9
+entity.extraplanets.EntityTier10Rocket.name=Cohete Nivel 10
+entity.extraplanets.EntityTier10ElectricRocket.name=Cohete Eléctrico Nivel 10
 
-entity.extraplanets.EntityMarsRover.name=Mars Rover ##NEEDS TRANSLATE##
-entity.extraplanets.EntityVenusRover.name=Venus Rover ##NEEDS TRANSLATE##
+entity.extraplanets.EntityMarsRover.name=Rover marciano
+entity.extraplanets.EntityVenusRover.name=Rover de Venus
 
 entity.extraplanets.CreeperBossMercury.name=Jefe creeper evolucionado de Venus
 entity.extraplanets.CreeperBossJupiter.name=Jefe creeper evolucionado de Júpiter
@@ -1260,51 +1260,51 @@ achievement.uranus_planet=¡Aterriza en Urano!
 achievement.neptune_planet=¡Aterriza en Neptuno!
 achievement.pluto_planet=¡Aterriza en Pluto!
 achievement.eris_planet=¡Aterriza en Eris!
-achievement.kepler62b_planet=Land on Kepler62b! ##NEEDS TRANSLATE##
-achievement.kepler22b_planet=Land on Kepler22b! ##NEEDS TRANSLATE##
+achievement.kepler62b_planet=¡Aterriza en Kepler62b!
+achievement.kepler22b_planet=¡Aterriza en Kepler22b!
 
-achievement.mercury_planet.desc=Toma un a cohete nivel 3 a Mercurio
-achievement.ceres_planet.desc=Toma un a cohete nivel 4 a Ceres
-achievement.jupiter_planet.desc=Toma un a cohete nivel 4 a Júpiter
-achievement.saturn_planet.desc=Toma un a cohete nivel 5 a Saturno
-achievement.uranus_planet.desc=Toma un a cohete nivel 6 a Urano
-achievement.neptune_planet.desc=Toma un a cohete nivel 7 a Neptuno
-achievement.pluto_planet.desc=Toma un a cohete nivel 8 a Pluto
-achievement.eris_planet.desc=Toma un a cohete nivel 9 a Eris
-achievement.kepler62b_planet.desc=Take a Tier 10 rocket to Kepler62b ##NEEDS TRANSLATE##
-achievement.kepler22b_planet.desc=Take a Tier 10 rocket to Kepler22b ##NEEDS TRANSLATE##
+achievement.mercury_planet.desc=Toma un a Cohete Nivel 3 a Mercurio
+achievement.ceres_planet.desc=Toma un a Cohete Nivel 4 a Ceres
+achievement.jupiter_planet.desc=Toma un a Cohete Nivel 4 a Júpiter
+achievement.saturn_planet.desc=Toma un a Cohete Nivel 5 a Saturno
+achievement.uranus_planet.desc=Toma un a Cohete Nivel 6 a Urano
+achievement.neptune_planet.desc=Toma un a Cohete Nivel 7 a Neptuno
+achievement.pluto_planet.desc=Toma un a Cohete Nivel 8 a Pluto
+achievement.eris_planet.desc=Toma un a Cohete Nivel 9 a Eris
+achievement.kepler62b_planet.desc=Toma un a Cohete Nivel 10 a Kepler62b
+achievement.kepler22b_planet.desc=Toma un a Cohete Nivel 10 a Kepler22b
 
-achievement.mercury_boss=¡Jefe nivel 4 derrotado!
-achievement.jupiter_boss=¡Jefe nivel 5 derrotado!
-achievement.saturn_boss=¡Jefe nivel 6 derrotado!
-achievement.uranus_boss=¡Jefe nivel 7 derrotado!
-achievement.neptune_boss=¡Jefe nivel 8 derrotado!
-achievement.pluto_boss=¡Jefe nivel 9 derrotado!
-achievement.eris_boss=¡Jefe nivel 10 derrotado!
+achievement.mercury_boss=¡Jefe de Nivel 4 derrotado!
+achievement.jupiter_boss=¡Jefe de Nivel 5 derrotado!
+achievement.saturn_boss=¡Jefe de Nivel 6 derrotado!
+achievement.uranus_boss=¡Jefe de Nivel 7 derrotado!
+achievement.neptune_boss=¡Jefe de Nivel 8 derrotado!
+achievement.pluto_boss=¡Jefe de Nivel 9 derrotado!
+achievement.eris_boss=¡Jefe de Nivel 10 derrotado!
 
-achievement.mercury_boss.desc=Mata al jefe de la mazmorra de Mercurio y abre el cofre del tesoro
-achievement.jupiter_boss.desc=Mata al jefe de la mazmorra de Júpiter y abre el cofre del tesoro
-achievement.saturn_boss.desc=Mata al jefe de la mazmorra de Saturno y abre el cofre del tesoro
-achievement.uranus_boss.desc=Mata al jefe de la mazmorra de Urano y abre el cofre del tesoro
-achievement.neptune_boss.desc=Mata al jefe de la mazmorra de Neptuno y abre el cofre del tesoro
-achievement.pluto_boss.desc=Mata al jefe de la mazmorra de Pluto y abre el cofre del tesoro
-achievement.eris_boss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest ##NEEDS TRANSLATE##
+achievement.mercury_boss.desc=Mata al jefe de la Mazmorra de Mercurio y abre el Cofre del Tesoro
+achievement.jupiter_boss.desc=Mata al jefe de la Mazmorra de Júpiter y abre el Cofre del Tesoro
+achievement.saturn_boss.desc=Mata al jefe de la Mazmorra de Saturno y abre el Cofre del Tesoro
+achievement.uranus_boss.desc=Mata al jefe de la Mazmorra de Urano y abre el Cofre del Tesoro
+achievement.neptune_boss.desc=Mata al jefe de la Mazmorra de Neptuno y abre el Cofre del Tesoro
+achievement.pluto_boss.desc=Mata al jefe de la Mazmorra de Pluto y abre el Cofre del Tesoro
+achievement.eris_boss.desc=Mata al jefe de la Mazmorra de Eris y abre el Cofre del Tesoro
 
-achievement.craft_rocket_4=¡Cohete nivel 4!
-achievement.craft_rocket_5=¡Cohete nivel 5!
-achievement.craft_rocket_6=¡Cohete nivel 6!
-achievement.craft_rocket_7=¡Cohete nivel 7!
-achievement.craft_rocket_8=¡Cohete nivel 8!
-achievement.craft_rocket_9=¡Cohete nivel 9!
-achievement.craft_rocket_9=¡Cohete nivel 10!
+achievement.craft_rocket_4=¡Cohete Nivel 4!
+achievement.craft_rocket_5=¡Cohete Nivel 5!
+achievement.craft_rocket_6=¡Cohete Nivel 6!
+achievement.craft_rocket_7=¡Cohete Nivel 7!
+achievement.craft_rocket_8=¡Cohete Nivel 8!
+achievement.craft_rocket_9=¡Cohete Nivel 9!
+achievement.craft_rocket_9=¡Cohete Nivel 10!
 
-achievement.craft_rocket_4.desc=Crea un cohete nivel 4
-achievement.craft_rocket_5.desc=Crea un cohete nivel 5
-achievement.craft_rocket_6.desc=Crea un cohete nivel 6
-achievement.craft_rocket_7.desc=Crea un cohete nivel 7
-achievement.craft_rocket_8.desc=Crea un cohete nivel 8
-achievement.craft_rocket_9.desc=Crea un cohete nivel 9
-achievement.craft_rocket_10.desc=Crea un cohete nivel 10
+achievement.craft_rocket_4.desc=Crea un Cohete Nivel 4
+achievement.craft_rocket_5.desc=Crea un Cohete Nivel 5
+achievement.craft_rocket_6.desc=Crea un Cohete Nivel 6
+achievement.craft_rocket_7.desc=Crea un Cohete Nivel 7
+achievement.craft_rocket_8.desc=Crea un Cohete Nivel 8
+achievement.craft_rocket_9.desc=Crea un Cohete Nivel 9
+achievement.craft_rocket_10.desc=Crea un Cohete Nivel 10
 
 #Liquids/Fluid
 tile.glowstone.name=Piedra luminosa líquida
@@ -1321,9 +1321,9 @@ tile.liquid_hydrocarbon.name=Liquid Hydrocarbon ##NEEDS TRANSLATE##
 tile.liquid_chocolate.name=Liquid Chocolate ##NEEDS TRANSLATE##
 tile.liquid_caramel.name=Liquid Caramel ##NEEDS TRANSLATE##
 
-fluid.glowstone_fluid=Piedra luminosa líquida
-fluid.magma_fluid=Magma líquido
-fluid.nitrogen_fluid=Nitrógeno líquido 
+fluid.glowstone_fluid=Piedra Luminosa Líquida
+fluid.magma_fluid=Magma Líquido
+fluid.nitrogen_fluid=Nitrógeno Líquido 
 fluid.frozen_water_fluid=Agua Congelada
 fluid.salt_fluid=Lqiuid Crystallized Water ##NEEDS TRANSLATE##
 fluid.radioactive_water_fluid=Radioactive Water ##NEEDS TRANSLATE##
@@ -1447,17 +1447,17 @@ tile.uranusDungeonBrickStoneStairs.name=Uranus Dungeon Brick Stairs ##NEEDS TRAN
 tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs ##NEEDS TRANSLATE##
 
 #Planets
-planet.Venus=Venus ##NEEDS TRANSLATE##
+planet.Venus=Venus
 
 #Other Items
 item.tier4_items.ash_shard.name=Ash Shard ##NEEDS TRANSLATE##
 item.tier4_items.volcanic_shard.name=Volcanic Shard ##NEEDS TRANSLATE##
 item.tier4_items.ingot_volcanic.name=Volcanic Ingot ##NEEDS TRANSLATE##
 item.tier6_items.magnesium_shard.name=Magnesium Shard ##NEEDS TRANSLATE##
-item.tier4_items.ash.name=Ash ##NEEDS TRANSLATE##
-item.tier4_items.sledge_hammer.name=Sledge Hammer ##NEEDS TRANSLATE##
-item.tier4_items.grinding_wheel.name=Grinding Wheel ##NEEDS TRANSLATE##
-item.thermal_cloth.tier2_thermal_cloth.name=Tier 2 Thermal Cloth ##NEEDS TRANSLATE##
+item.tier4_items.ash.name=Ceniza
+item.tier4_items.sledge_hammer.name=Almádena
+item.tier4_items.grinding_wheel.name=Muela
+item.thermal_cloth.tier2_thermal_cloth.name=Tela términca nivel 2
 
 #MorePlanetsCompactBlocks&Items
 tile.treasure_chest_t4_saturn.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
@@ -1472,21 +1472,21 @@ item.key.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
 item.key.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
 
 #Thermal Paddings
-item.tier2_thermal_helm.name=Tier 2 Thermal Padding Helm ##NEEDS TRANSLATE##
-item.tier2_thermal_chestplate.name=Tier 2 Thermal Padding Chestpiece ##NEEDS TRANSLATE##
-item.tier2_thermal_leggings.name=Tier 2 Thermal Padding Leggings ##NEEDS TRANSLATE##
-item.tier2_thermal_boots.name=Tier 2 Thermal Padding Boots ##NEEDS TRANSLATE##
+item.tier2_thermal_helm.name=Gorro térmico nivel 2
+item.tier2_thermal_chestplate.name=Suéter térmico nivel 2
+item.tier2_thermal_leggings.name=Leggings térmicos nivel 2
+item.tier2_thermal_boots.name=Calcetines térmicos nivel 2
 
 #Messages
-tier2.information=Required for Venus and Mercury ##NEEDS TRANSLATE##
-tier3.information=Required for Jupiter and Saturn including their moons ##NEEDS TRANSLATE##
-tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons ##NEEDS TRANSLATE##
+tier2.information=Requerido para Venus y Mercurio
+tier3.information=Requerido para Júpiter y Saturno incluyendo sus lunas
+tier4.information=Requerido para Urano, Neptuno, Pluto y Eris incluyendo sus lunas
 
 #------------------1.11.2 & 1.12.2 Only Section------------------
-item.t4key.name=Llave de mazmorra nivel 4
-item.t5key.name=Llave de mazmorra nivel 5
-item.t6key.name=Llave de mazmorra nivel 6
-item.t7key.name=Llave de mazmorra nivel 7
-item.t8key.name=Llave de mazmorra nivel 8
-item.t9key.name=Llave de mazmorra nivel 9
-item.t10key.name=Llave de mazmorra nivel 10
+item.t4key.name=Llave de Mazmorra Nivel 4
+item.t5key.name=Llave de Mazmorra Nivel 5
+item.t6key.name=Llave de Mazmorra Nivel 6
+item.t7key.name=Llave de Mazmorra Nivel 7
+item.t8key.name=Llave de Mazmorra Nivel 8
+item.t9key.name=Llave de Mazmorra Nivel 9
+item.t10key.name=Llave de Mazmorra Nivel 10
