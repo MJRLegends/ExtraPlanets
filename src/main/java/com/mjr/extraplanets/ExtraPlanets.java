@@ -107,7 +107,7 @@ import com.mjr.extraplanets.planets.Eris.worldgen.ErisBiomes;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
 import com.mjr.extraplanets.planets.Kepler22b.event.Kepler22bEvents;
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 import com.mjr.extraplanets.planets.KuiperBelt.KuiperBeltEvents;
 import com.mjr.extraplanets.planets.Mercury.event.MercuryEvents;
 import com.mjr.extraplanets.planets.Mercury.worldgen.MercuryBiomes;
@@ -481,14 +481,14 @@ public class ExtraPlanets {
 		if (Config.ERIS)
 			Biome.registerBiome(Config.ERIS_BIOME_ID, ErisBiomes.eris.getBiomeName(), ErisBiomes.eris);
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			Biome.registerBiome(Config.KEPLER22B_PLAINS_BIOME_ID, BiomeGenBaseKepler22b.kepler22bPlains.getBiomeName(), BiomeGenBaseKepler22b.kepler22bPlains);
-			Biome.registerBiome(Config.KEPLER22B_BLUE_FOREST_BIOME_ID, BiomeGenBaseKepler22b.kepler22bBlueForest.getBiomeName(), BiomeGenBaseKepler22b.kepler22bBlueForest);
-			Biome.registerBiome(Config.KEPLER22B_RED_FOREST_BIOME_ID, BiomeGenBaseKepler22b.kepler22bRedForest.getBiomeName(), BiomeGenBaseKepler22b.kepler22bRedForest);
-			Biome.registerBiome(Config.KEPLER22B_PURPLE_FOREST_BIOME_ID, BiomeGenBaseKepler22b.kepler22bPurpleForest.getBiomeName(), BiomeGenBaseKepler22b.kepler22bPurpleForest);
-			Biome.registerBiome(Config.KEPLER22B_YELLOW_FOREST_BIOME_ID, BiomeGenBaseKepler22b.kepler22bYellowForest.getBiomeName(), BiomeGenBaseKepler22b.kepler22bYellowForest);
-			Biome.registerBiome(Config.KEPLER22B_RED_DESERT_BIOME_ID, BiomeGenBaseKepler22b.kepler22bRedDesert.getBiomeName(), BiomeGenBaseKepler22b.kepler22bRedDesert);
-			Biome.registerBiome(Config.KEPLER22B_WASTE_LANDS_BIOME_ID, BiomeGenBaseKepler22b.kepler22bWasteLands.getBiomeName(), BiomeGenBaseKepler22b.kepler22bWasteLands);
-			Biome.registerBiome(Config.KEPLER22B_CANDY_LAND_BIOME_ID, BiomeGenBaseKepler22b.kepler22bCandyLand.getBiomeName(), BiomeGenBaseKepler22b.kepler22bCandyLand);
+			Biome.registerBiome(Config.KEPLER22B_PLAINS_BIOME_ID, Kepler22bBiomes.kepler22bPlains.getBiomeName(), Kepler22bBiomes.kepler22bPlains);
+			Biome.registerBiome(Config.KEPLER22B_BLUE_FOREST_BIOME_ID, Kepler22bBiomes.kepler22bBlueForest.getBiomeName(), Kepler22bBiomes.kepler22bBlueForest);
+			Biome.registerBiome(Config.KEPLER22B_RED_FOREST_BIOME_ID, Kepler22bBiomes.kepler22bRedForest.getBiomeName(), Kepler22bBiomes.kepler22bRedForest);
+			Biome.registerBiome(Config.KEPLER22B_PURPLE_FOREST_BIOME_ID, Kepler22bBiomes.kepler22bPurpleForest.getBiomeName(), Kepler22bBiomes.kepler22bPurpleForest);
+			Biome.registerBiome(Config.KEPLER22B_YELLOW_FOREST_BIOME_ID, Kepler22bBiomes.kepler22bYellowForest.getBiomeName(), Kepler22bBiomes.kepler22bYellowForest);
+			Biome.registerBiome(Config.KEPLER22B_RED_DESERT_BIOME_ID, Kepler22bBiomes.kepler22bRedDesert.getBiomeName(), Kepler22bBiomes.kepler22bRedDesert);
+			Biome.registerBiome(Config.KEPLER22B_WASTE_LANDS_BIOME_ID, Kepler22bBiomes.kepler22bWasteLands.getBiomeName(), Kepler22bBiomes.kepler22bWasteLands);
+			Biome.registerBiome(Config.KEPLER22B_CANDY_LAND_BIOME_ID, Kepler22bBiomes.kepler22bCandyLand.getBiomeName(), Kepler22bBiomes.kepler22bCandyLand);
 		}
 		// Moons
 		if (Config.CALLISTO)

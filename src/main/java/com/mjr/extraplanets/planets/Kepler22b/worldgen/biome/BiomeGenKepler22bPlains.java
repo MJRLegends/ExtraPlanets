@@ -13,8 +13,9 @@ import net.minecraft.entity.passive.EntitySheep;
 import net.minecraftforge.common.BiomeDictionary;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 
-public class BiomeGenKepler22bPlains extends BiomeGenBaseKepler22b {
+public class BiomeGenKepler22bPlains extends Kepler22bBiomes {
 	public BiomeGenKepler22bPlains(BiomeProperties properties) {
 		super(properties);
 		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
