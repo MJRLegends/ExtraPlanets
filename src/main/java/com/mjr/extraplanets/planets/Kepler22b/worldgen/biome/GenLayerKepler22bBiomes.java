@@ -1,10 +1,8 @@
-package com.mjr.extraplanets.planets.Kepler22b.worldgen.layer;
+package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
-
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
 
 public class GenLayerKepler22bBiomes extends GenLayer {
 	protected BiomeGenBase[] commonBiomes = { BiomeGenBaseKepler22b.kepler22bPlains, BiomeGenBaseKepler22b.kepler22bBlueForest, BiomeGenBaseKepler22b.kepler22bPurpleForest, BiomeGenBaseKepler22b.kepler22bRedForest,

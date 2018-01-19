@@ -13,7 +13,7 @@ import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.layer.GenLayerKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.GenLayerKepler22b;
 
 public class WorldChunkManagerKepler22b extends WorldChunkManager {
 	private GenLayer unzoomedBiomes;

@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Kepler22b.worldgen.layer;
+package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
