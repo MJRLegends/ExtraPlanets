@@ -16,8 +16,9 @@ import net.minecraftforge.common.BiomeDictionary;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 
-public class BiomeGenKepler22bPurpleMapleForest extends BiomeGenBaseKepler22b {
+public class BiomeGenKepler22bPurpleMapleForest extends Kepler22bBiomes {
 	public BiomeGenKepler22bPurpleMapleForest(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.KEPLER22B_PURPLE_FOREST_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);

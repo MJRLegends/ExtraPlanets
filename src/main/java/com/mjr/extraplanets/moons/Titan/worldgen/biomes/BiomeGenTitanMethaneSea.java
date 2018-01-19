@@ -13,7 +13,7 @@ import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.moons.Titan.worldgen.TitanBiomes;
 
 public class BiomeGenTitanMethaneSea extends TitanBiomes {
-	public BiomeGenTitanMethaneSea(Biome.BiomeProperties properties) {
+	public BiomeGenTitanMethaneSea(BiomeProperties properties) {
 		super(properties);
 		this.spawnableCreatureList.clear();
 		Biome.registerBiome(Config.TITAN_SEA_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);

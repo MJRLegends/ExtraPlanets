@@ -14,7 +14,6 @@ import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.layer.GenLayerKepler22b;
 
 public class BiomeProviderKepler22b extends BiomeProvider {
@@ -26,12 +25,12 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 	protected BiomeProviderKepler22b() {
 		this.biomeCache = new BiomeCache(this);
 		this.biomesToSpawn = new ArrayList<Biome>();
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPlains);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bBlueForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPurpleForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bRedForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bYellowForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bRedDesert);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bPlains);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bBlueForest);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bPurpleForest);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bRedForest);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bYellowForest);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bRedDesert);
 	}
 
 	public BiomeProviderKepler22b(long seed) {
@@ -47,7 +46,7 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 	}
 
 	public Biome getBiome() {
-		return BiomeGenBaseKepler22b.kepler22bPlains;
+		return Kepler22bBiomes.kepler22bPlains;
 	}
 
 	@Override
@@ -60,7 +59,7 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 		Biome biome = this.biomeCache.getBiome(pos.getX(), pos.getZ(), biomeGen);
 
 		if (biome == null) {
-			return BiomeGenBaseKepler22b.kepler22bPlains;
+			return Kepler22bBiomes.kepler22bPlains;
 		}
 		return biome;
 	}
@@ -81,7 +80,7 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 			if (arrayOfInts[i] >= 0) {
 				par1ArrayOfBiome[i] = Biome.getBiome(arrayOfInts[i]);
 			} else {
-				par1ArrayOfBiome[i] = BiomeGenBaseKepler22b.kepler22bPlains;
+				par1ArrayOfBiome[i] = Kepler22bBiomes.kepler22bPlains;
 			}
 		}
 		return par1ArrayOfBiome;

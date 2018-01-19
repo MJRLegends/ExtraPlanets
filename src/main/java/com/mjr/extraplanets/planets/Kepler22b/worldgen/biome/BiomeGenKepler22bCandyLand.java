@@ -7,8 +7,9 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.BlockCakeBlocks;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 
-public class BiomeGenKepler22bCandyLand extends BiomeGenBaseKepler22b {
+public class BiomeGenKepler22bCandyLand extends Kepler22bBiomes {
 	public BiomeGenKepler22bCandyLand(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.KEPLER22B_CANDY_LAND_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);

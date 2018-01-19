@@ -7,8 +7,9 @@ import net.minecraftforge.common.BiomeDictionary;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 
-public class BiomeGenKepler22bWasteLands extends BiomeGenBaseKepler22b {
+public class BiomeGenKepler22bWasteLands extends Kepler22bBiomes {
 	public BiomeGenKepler22bWasteLands(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.KEPLER22B_WASTE_LANDS_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
