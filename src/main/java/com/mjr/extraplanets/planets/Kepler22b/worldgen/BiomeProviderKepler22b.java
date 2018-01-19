@@ -14,7 +14,7 @@ import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.layer.GenLayerKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.GenLayerKepler22b;
 
 public class BiomeProviderKepler22b extends BiomeProvider {
 	private GenLayer unzoomedBiomes;
