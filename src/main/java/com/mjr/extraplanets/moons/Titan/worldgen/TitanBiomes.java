@@ -23,9 +23,9 @@ import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneSea;
 
 public class TitanBiomes extends Biome {
 
-	public static final Biome titan = new BiomeGenTitan(new BiomeProperties("titan").setBaseHeight(0.125F).setHeightVariation(0.25F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome titanMethaneSea = new BiomeGenTitanMethaneSea(new BiomeProperties("titanMethaneSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome titanMethaneHills = new BiomeGenTitanMethaneHills(new BiomeProperties("titanMethaneHills").setBaseHeight(0.125F).setHeightVariation(0.55F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome titan = new BiomeGenTitan(new BiomeProperties("Titan").setBaseHeight(0.125F).setHeightVariation(0.25F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome titanMethaneSea = new BiomeGenTitanMethaneSea(new BiomeProperties("Titan Methane Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome titanMethaneHills = new BiomeGenTitanMethaneHills(new BiomeProperties("Titan Methane Hills").setBaseHeight(0.125F).setHeightVariation(0.55F).setRainfall(0.0F).setRainDisabled());
 
 	protected TitanBiomes(BiomeProperties properties) {
 		super(properties);

@@ -8,7 +8,7 @@ import net.minecraft.world.biome.Biome;
 
 public class TitaniaBiomes extends Biome {
 
-	public static final Biome titania = new BiomeGenTitania(new BiomeProperties("titania").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome titania = new BiomeGenTitania(new BiomeProperties("Titania").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
 	TitaniaBiomes(BiomeProperties properties) {
 		super(properties);

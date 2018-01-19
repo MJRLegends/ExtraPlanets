@@ -22,9 +22,9 @@ import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTritonIceLands;
 
 public class TritonBiomes extends Biome {
 
-	public static final Biome triton = new BiomeGenTriton(new BiomeProperties("triton").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome tritonIceLands = new BiomeGenTritonIceLands(new BiomeProperties("tritonIceLands").setBaseHeight(2.5F).setHeightVariation(0.4F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
-	public static final Biome tritonIceSea = new BiomeGenTritonIceLands(new BiomeProperties("tritonIceSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
+	public static final Biome triton = new BiomeGenTriton(new BiomeProperties("Triton").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome tritonIceLands = new BiomeGenTritonIceLands(new BiomeProperties("Triton Ice Lands").setBaseHeight(2.5F).setHeightVariation(0.4F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
+	public static final Biome tritonIceSea = new BiomeGenTritonIceLands(new BiomeProperties("Triton Ice Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
 
 	protected TritonBiomes(BiomeProperties properties) {
 		super(properties);

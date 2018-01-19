@@ -8,7 +8,7 @@ import net.minecraft.world.biome.Biome;
 
 public class PlutoBiomes extends Biome {
 
-	public static final Biome pluto = new BiomeGenPluto(new BiomeProperties("pluto").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome pluto = new BiomeGenPluto(new BiomeProperties("Pluto").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
 	PlutoBiomes(BiomeProperties properties) {
 		super(properties);

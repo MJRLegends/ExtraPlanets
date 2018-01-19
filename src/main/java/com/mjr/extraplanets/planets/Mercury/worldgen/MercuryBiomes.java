@@ -8,7 +8,7 @@ import net.minecraft.world.biome.Biome;
 
 public class MercuryBiomes extends Biome {
 
-	public static final Biome mercury = new BiomeGenMercury(new BiomeProperties("mercury").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome mercury = new BiomeGenMercury(new BiomeProperties("Mercury").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
 	MercuryBiomes(BiomeProperties properties) {
 		super(properties);

@@ -23,9 +23,9 @@ import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnNuclear
 
 public class SaturnBiomes extends Biome {
 
-	public static final Biome saturn = new BiomeGenSaturn(new BiomeProperties("saturn").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome saturnHydroCarbonSea = new BiomeGenSaturnHydroCarbonSea(new BiomeProperties("saturnHydroCarbonSea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome saturnNuclearLand = new BiomeGenSaturnNuclearLand(new BiomeProperties("saturnNuclearLand").setBaseHeight(0.225F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome saturn = new BiomeGenSaturn(new BiomeProperties("Saturn").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome saturnHydroCarbonSea = new BiomeGenSaturnHydroCarbonSea(new BiomeProperties("Saturn HydroCarbon Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome saturnNuclearLand = new BiomeGenSaturnNuclearLand(new BiomeProperties("Saturn Nuclear Land").setBaseHeight(0.225F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
 
 	protected SaturnBiomes(BiomeProperties properties) {
 		super(properties);

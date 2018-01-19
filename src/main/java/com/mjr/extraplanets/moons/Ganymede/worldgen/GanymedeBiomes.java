@@ -8,7 +8,7 @@ import net.minecraft.world.biome.Biome;
 
 public class GanymedeBiomes extends Biome {
 
-	public static final Biome ganymede = new BiomeGenGanymede(new BiomeProperties("ganymede").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome ganymede = new BiomeGenGanymede(new BiomeProperties("Ganymede").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
 	GanymedeBiomes(BiomeProperties properties) {
 		super(properties);

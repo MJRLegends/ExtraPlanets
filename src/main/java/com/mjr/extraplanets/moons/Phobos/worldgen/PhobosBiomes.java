@@ -8,7 +8,7 @@ import net.minecraft.world.biome.Biome;
 
 public class PhobosBiomes extends Biome {
 
-	public static final Biome phobos = new BiomeGenPhobos(new BiomeProperties("phobos").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome phobos = new BiomeGenPhobos(new BiomeProperties("Phobos").setBaseHeight(2.5F).setHeightVariation(0.4F).setRainfall(0.0F).setRainDisabled());
 
 	PhobosBiomes(BiomeProperties properties) {
 		super(properties);
