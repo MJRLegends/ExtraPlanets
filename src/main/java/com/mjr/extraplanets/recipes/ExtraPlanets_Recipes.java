@@ -27,6 +27,7 @@ public class ExtraPlanets_Recipes {
 		registerCompressorRecipes();
 		registerCircuitFabricatorRecipes();
 		registerSatellitesRecipes();
+		registerExtraPlanetMachineRecipes();
 	}
 
 	private static void registerRocketCraftingRecipes() {
@@ -398,4 +399,8 @@ public class ExtraPlanets_Recipes {
 			GCRecipeUtilities.addSpaceStationRecipe(Config.KEPLER22B_SPACE_STATION_ID, Config.KEPLER22B_ID, inputMap);
 		}
 	};
+
+	private static void registerExtraPlanetMachineRecipes() {
+		ExtraPlanets_MachineRecipes.addBlockSmasherRecipe(new ItemStack(ExtraPlanets_Items.POTASH_SHARDS, 3, 0), new ItemStack(ExtraPlanets_Blocks.ORE_POTASH));
+	}
 }

@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.tileEntities.machines;
 
+import java.util.ArrayList;
+
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
@@ -16,7 +18,7 @@ import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.machines.BasicSmasher;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.recipes.ExtraPlanets_MachineRecipes;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory implements ISidedInventory {
@@ -25,7 +27,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public int processTicks = 0;
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 
-	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.POTASH_SHARDS, 3, 0);
+	private ItemStack producingStack = ItemStack.EMPTY;
 
 	public TileEntityBasicSmasher() {
 	}
@@ -33,6 +35,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	@Override
 	public void update() {
 		super.update();
+		this.producingStack = ExtraPlanets_MachineRecipes.getBlockSmasherOutputForInput(this.stacks.get(1));
 
 		if (!this.world.isRemote) {
 			if (this.canProcess() && canOutput() && this.hasEnoughEnergyToRun) {
@@ -51,9 +54,10 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	}
 
 	public boolean canProcess() {
-		if (this.stacks.get(1).isEmpty())
+		if (this.producingStack.isEmpty()) {
 			return false;
-		if (this.stacks.get(1).getItem() != Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))
+		}
+		if (this.stacks.get(1).isEmpty())
 			return false;
 		return !this.getDisabled(0);
 	}
@@ -74,7 +78,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	}
 
 	public boolean hasInputs() {
-		if (!this.stacks.get(1).isEmpty() && this.stacks.get(1).getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))
+		if (!this.stacks.get(1).isEmpty() && this.stacks.get(1).getCount() >= ExtraPlanets_MachineRecipes.getBlockSmasherInputForOutput(this.producingStack).getCount())
 			return true;
 		return false;
 	}
@@ -101,7 +105,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 				}
 			}
 		}
-		this.decrStackSize(1, 1);
+		this.decrStackSize(1, ExtraPlanets_MachineRecipes.getBlockSmasherInputForOutput(this.producingStack).getCount());
 	}
 
 	@Override
@@ -153,7 +157,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
-				return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH);
+				return ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.contains(itemstack.getItem());
 			default:
 				return false;
 			}
@@ -168,7 +172,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
 			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
+				return itemstack.getItem() == this.producingStack.getItem();
 			default:
 				return false;
 			}
@@ -183,8 +187,14 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
 		case 1:
 			return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH);
-		case 2:
-			return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
+		}
+
+		ArrayList<ItemStack> list = ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.get(slotID - 1);
+
+		for (ItemStack test : list) {
+			if (test.isItemEqual(itemstack)) {
+				return true;
+			}
 		}
 
 		return false;
