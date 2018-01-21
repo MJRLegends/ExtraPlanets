@@ -14,7 +14,7 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.machines.BasicSolarEvaporationChamber;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.recipes.ExtraPlanets_MachineRecipes;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBlockWithInventory implements ISidedInventory {
@@ -24,7 +24,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 	public int processTime = 0;
 
-	private ItemStack producingStack = new ItemStack(ExtraPlanets_Items.POTASSIUM, 1, 0);
+	private ItemStack producingStack = ItemStack.EMPTY;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public boolean isDaylight = false;
 
@@ -34,6 +34,8 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	@Override
 	public void update() {
 		super.update();
+		this.producingStack = ExtraPlanets_MachineRecipes.getSolarEvaporationChamberOutputForInput(this.stacks.get(1));
+
 		if (!this.world.isRemote) {
 			if (this.world.isDaytime())
 				isDaylight = true;
@@ -58,11 +60,11 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	}
 
 	public boolean canProcess() {
+		ItemStack itemstack = this.producingStack;
+		if (itemstack == null) {
+			return false;
+		}
 		if (this.stacks.get(1).isEmpty())
-			return false;
-		if (this.stacks.get(1).getItem() != ExtraPlanets_Items.POTASH_SHARDS)
-			return false;
-		if (this.stacks.get(1).getCount() < 12)
 			return false;
 		if (this.world.isDaytime() == false || this.world.canBlockSeeSky(pos.add(0, 1, 0)) == false) {
 			return false;
@@ -86,15 +88,14 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	}
 
 	public boolean hasInputs() {
-		if (!this.stacks.get(1).isEmpty() && this.stacks.get(1).getItem() == ExtraPlanets_Items.POTASH_SHARDS)
-			if (this.stacks.get(1).getCount() >= 12)
-				return true;
+		if (!this.stacks.get(1).isEmpty() && this.stacks.get(1).getCount() >= ExtraPlanets_MachineRecipes.getSolarEvaporationChamberInputForOutput(this.producingStack).getCount())
+			return true;
 		return false;
 	}
 
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
-		if (this.canProcess() && canOutput()) {
+		if (this.canProcess() && canOutput() && hasInputs()) {
 			if (this.stacks.get(2).isEmpty()) {
 				this.stacks.set(2, resultItemStack.copy());
 			} else if (this.stacks.get(2).isItemEqual(resultItemStack)) {
@@ -113,8 +114,8 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 					this.stacks.get(2).grow(resultItemStack.getCount());
 				}
 			}
+			this.decrStackSize(1, ExtraPlanets_MachineRecipes.getSolarEvaporationChamberInputForOutput(this.producingStack).getCount());
 		}
-		this.decrStackSize(1, 12);
 	}
 
 	@Override
@@ -166,7 +167,11 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
-				return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
+				for (ItemStack test : ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidItems) {
+					if (test.isItemEqual(itemstack)) {
+						return true;
+					}
+				}
 			default:
 				return false;
 			}
@@ -181,7 +186,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
 			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
+				return itemstack.getItem() == this.producingStack.getItem();
 			default:
 				return false;
 			}
@@ -195,11 +200,14 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 		case 0:
 			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
 		case 1:
-			return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
+			for (ItemStack test : ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidItems) {
+				if (test.isItemEqual(itemstack)) {
+					return true;
+				}
+			}
 		case 2:
-			return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
+			return itemstack.getItem() == this.producingStack.getItem();
 		}
-
 		return false;
 	}
 

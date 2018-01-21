@@ -402,5 +402,6 @@ public class ExtraPlanets_Recipes {
 
 	private static void registerExtraPlanetMachineRecipes() {
 		ExtraPlanets_MachineRecipes.addBlockSmasherRecipe(new ItemStack(ExtraPlanets_Items.POTASH_SHARDS, 3, 0), new ItemStack(ExtraPlanets_Blocks.ORE_POTASH));
+		ExtraPlanets_MachineRecipes.addSolarEvaporationChamberRecipe(new ItemStack(ExtraPlanets_Items.POTASSIUM, 1, 0), new ItemStack(ExtraPlanets_Items.POTASH_SHARDS, 12, 0));
 	}
 }
