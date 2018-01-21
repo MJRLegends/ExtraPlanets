@@ -24,9 +24,12 @@ public class ExtraPlanets_Recipes {
 	public static void init() {
 		registerRocketCraftingRecipes();
 		registerFurnaceRecipes();
+		registerSatellitesRecipes();
+	}
+	
+	public static void initEvent(){
 		registerCompressorRecipes();
 		registerCircuitFabricatorRecipes();
-		registerSatellitesRecipes();
 		registerExtraPlanetMachineRecipes();
 	}
 

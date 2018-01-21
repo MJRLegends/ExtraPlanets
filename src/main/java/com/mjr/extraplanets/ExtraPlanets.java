@@ -13,6 +13,7 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.event.RegistryEvent;
@@ -23,6 +24,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 
@@ -700,7 +702,7 @@ public class ExtraPlanets {
 		}
 
 		@SubscribeEvent
-		public static void registerBiomes(RegistryEvent.Register<Biome> event) {
+		public static void registerBiomesEvent(RegistryEvent.Register<Biome> event) {
 			// Register Biomes
 			ExtraPlanets.registerBiomes();
 
@@ -711,5 +713,10 @@ public class ExtraPlanets {
 				}
 			}
 		}
+		
+        @SubscribeEvent(priority = EventPriority.LOWEST)
+        public static void registerRecipesEvent(RegistryEvent.Register<IRecipe> event){
+        	ExtraPlanets_Recipes.initEvent();
+        }
 	}
 }
