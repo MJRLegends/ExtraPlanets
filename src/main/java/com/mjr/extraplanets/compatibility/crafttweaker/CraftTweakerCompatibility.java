@@ -19,4 +19,14 @@ public class CraftTweakerCompatibility {
 	public static void removeBlockSmasherRecipe(IItemStack output){
         CraftTweakerAPI.apply(new ActionRemoveBlockSmasherRecipe(output));
 	}
+	
+	@ZenMethod
+	public static void addSolarEvaporationChamberRecipe(IItemStack input, IItemStack output){
+        CraftTweakerAPI.apply(new ActionAddSolarEvaporationChamberRecipe(input, output));
+	}
+	
+	@ZenMethod
+	public static void removeSolarEvaporationChamberRecipe(IItemStack output){
+        CraftTweakerAPI.apply(new ActionRemoveSolarEvaporationChamberRecipe(output));
+	}
 }
