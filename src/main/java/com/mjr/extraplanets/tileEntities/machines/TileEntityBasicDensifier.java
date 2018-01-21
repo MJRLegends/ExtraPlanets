@@ -222,7 +222,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
-		if (this.canProcess() && this.canCrystallize()) {
+		if (this.canProcess() && this.canCrystallize() && hasInputs()) {
 			final int amountToDrain = 50;
 			amountDrain = amountDrain + amountToDrain;
 			this.inputTank.drain(amountToDrain, true);

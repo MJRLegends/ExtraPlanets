@@ -87,7 +87,7 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
-		if (this.canProcess() && canOutput()) {
+		if (this.canProcess() && canOutput() && hasInputs()) {
 			if (this.containingItems[3] == null) {
 				this.containingItems[3] = resultItemStack.copy();
 			} else if (this.containingItems[3].isItemEqual(resultItemStack)) {
@@ -106,9 +106,9 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 					this.containingItems[3].stackSize += resultItemStack.stackSize;
 				}
 			}
+			this.decrStackSize(1, 3);
+			this.decrStackSize(2, 6);
 		}
-		this.decrStackSize(1, 3);
-		this.decrStackSize(2, 6);
 	}
 
 	@Override
