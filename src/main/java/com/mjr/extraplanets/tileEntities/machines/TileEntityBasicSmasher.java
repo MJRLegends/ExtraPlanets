@@ -81,7 +81,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
-		if (this.canProcess() && canOutput()) {
+		if (this.canProcess() && canOutput() && hasInputs()) {
 			if (this.stacks.get(2).isEmpty()) {
 				this.stacks.set(2, resultItemStack.copy());
 			} else if (this.stacks.get(2).isItemEqual(resultItemStack)) {
@@ -100,8 +100,8 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 					this.stacks.get(2).grow(resultItemStack.getCount());
 				}
 			}
+			this.decrStackSize(1, 1);
 		}
-		this.decrStackSize(1, 1);
 	}
 
 	@Override

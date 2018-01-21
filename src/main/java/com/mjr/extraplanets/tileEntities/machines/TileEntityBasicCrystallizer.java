@@ -127,7 +127,7 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
-		if (this.canProcess() && canCrystallize()) {
+		if (this.canProcess() && canCrystallize() && hasInputs()) {
 			final int amountToDrain = 50;
 			amountDrain = amountDrain + amountToDrain;
 			this.inputTank.drain(amountToDrain, true);

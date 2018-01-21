@@ -94,7 +94,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
-		if (this.canProcess() && canOutput()) {
+		if (this.canProcess() && canOutput() && hasInputs()) {
 			if (this.stacks.get(2).isEmpty()) {
 				this.stacks.set(2, resultItemStack.copy());
 			} else if (this.stacks.get(2).isItemEqual(resultItemStack)) {
@@ -113,8 +113,8 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 					this.stacks.get(2).grow(resultItemStack.getCount());
 				}
 			}
+			this.decrStackSize(1, 12);
 		}
-		this.decrStackSize(1, 12);
 	}
 
 	@Override
