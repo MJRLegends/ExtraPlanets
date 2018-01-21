@@ -161,7 +161,7 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 	}
 
 	public void smeltItem() {
-		if (this.canProcess() && canPurify()) {
+		if (this.canProcess() && canPurify() && hasInputs()) {
 			final int amountToDrain = 50;
 			if (this.inputTank.getFluidAmount() >= amountToDrain) {
 				this.inputTank.drain(amountToDrain, true);
