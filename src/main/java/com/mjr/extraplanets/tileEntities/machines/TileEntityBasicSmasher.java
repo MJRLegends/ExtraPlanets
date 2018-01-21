@@ -6,7 +6,6 @@ import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
@@ -14,7 +13,6 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.fml.relauncher.Side;
 
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.machines.BasicSmasher;
 import com.mjr.extraplanets.recipes.ExtraPlanets_MachineRecipes;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
@@ -83,7 +81,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
-		if (this.canProcess() && canOutput()) {
+		if (this.canProcess() && canOutput() && hasInputs()) {
 			if (this.stacks.get(2).isEmpty()) {
 				this.stacks.set(2, resultItemStack.copy());
 			} else if (this.stacks.get(2).isItemEqual(resultItemStack)) {
@@ -102,8 +100,8 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 					this.stacks.get(2).grow(resultItemStack.getCount());
 				}
 			}
+			this.decrStackSize(1, ExtraPlanets_MachineRecipes.getBlockSmasherInputForOutput(this.producingStack).getCount());
 		}
-		this.decrStackSize(1, ExtraPlanets_MachineRecipes.getBlockSmasherInputForOutput(this.producingStack).getCount());
 	}
 
 	@Override
@@ -155,7 +153,11 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			case 0:
 				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
 			case 1:
-				return ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.contains(itemstack.getItem());
+				for (ItemStack test : ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems) {
+					if (test.isItemEqual(itemstack)) {
+						return true;
+					}
+				}
 			default:
 				return false;
 			}
@@ -184,13 +186,15 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 		case 0:
 			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
 		case 1:
-			return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH);
+			for (ItemStack test : ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems) {
+				if (test.isItemEqual(itemstack)) {
+					return true;
+				}
+			}
+		case 2:
+			return itemstack.getItem() == this.producingStack.getItem();
 		}
 
-		ItemStack test = ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.get(slotID - 1);
-		if (test.isItemEqual(itemstack)) {
-			return true;
-		}
 
 		return false;
 	}
