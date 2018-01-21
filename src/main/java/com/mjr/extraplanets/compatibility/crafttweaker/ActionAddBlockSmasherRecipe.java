@@ -24,7 +24,7 @@ public class ActionAddBlockSmasherRecipe implements IAction {
 
 	@Override
 	public String describe() {
-		return "Adding Block Smasher Recipe: Input " + this.input + " to Output" + this.output;
+		return "Adding Block Smasher Recipe: Input " + this.input + " to Output " + this.output;
 	}
 
 }

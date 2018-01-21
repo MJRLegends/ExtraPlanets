@@ -11,52 +11,34 @@ import com.google.common.collect.ImmutableMap;
 public class ExtraPlanets_MachineRecipes {
 	private static HashMap<ItemStack, ItemStack> blockSmasherRecipes = new HashMap<>();
 
-	public static ArrayList<ArrayList<ItemStack>> blockSmasherSlotValidItems = new ArrayList<>(1);
+	public static ArrayList<ItemStack> blockSmasherSlotValidItems = new ArrayList<>(1);
 
 	public static void addBlockSmasherRecipe(ItemStack output, ItemStack input) {
 		ExtraPlanets_MachineRecipes.blockSmasherRecipes.put(input, output);
 
-		// Add the recipe ingred ients to the valid items for each slot
-		// First initialise the ArrayList if this is the first time it's used
-		if (ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.size() == 0) {
-			ArrayList<ItemStack> entry = new ArrayList<ItemStack>();
-			ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.add(entry);
-		}
-		// Now see if the recipe items are already valid for their slots, if not add them
 		ItemStack inputStack = input;
 		if (inputStack.isEmpty()) {
 			return;
 		}
 
-		ArrayList<ItemStack> validItems = ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.get(0);
-		boolean found = false;
-		for (ItemStack validItem : validItems) {
-			if (inputStack.isItemEqual(validItem)) {
-				found = true;
-				break;
-			}
-		}
-		if (!found) {
-			validItems.add(inputStack.copy());
-		}
+		if (!ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.contains(inputStack))
+			ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.add(inputStack);
 	}
 
 	public static ItemStack getBlockSmasherOutputForInput(ItemStack input) {
 		for (Entry<ItemStack, ItemStack> recipe : ExtraPlanets_MachineRecipes.blockSmasherRecipes.entrySet()) {
 			boolean found = true;
 
-				ItemStack recipeStack = recipe.getKey();
-				ItemStack inputStack = input;
+			ItemStack recipeStack = recipe.getKey();
+			ItemStack inputStack = input;
 
-				if (recipeStack.isEmpty() || inputStack.isEmpty()) {
-					if (!recipeStack.isEmpty() || !inputStack.isEmpty()) {
-						found = false;
-						break;
-					}
-				} else if (recipeStack.getItem() != inputStack.getItem() || recipeStack.getItemDamage() != inputStack.getItemDamage()) {
+			if (recipeStack.isEmpty() || inputStack.isEmpty()) {
+				if (!recipeStack.isEmpty() || !inputStack.isEmpty()) {
 					found = false;
-					break;
 				}
+			} else if (recipeStack.getItem() != inputStack.getItem() || recipeStack.getItemDamage() != inputStack.getItemDamage()) {
+				found = false;
+			}
 
 			if (!found) {
 				continue;
@@ -67,23 +49,21 @@ public class ExtraPlanets_MachineRecipes {
 
 		return ItemStack.EMPTY;
 	}
-	
+
 	public static ItemStack getBlockSmasherInputForOutput(ItemStack output) {
 		for (Entry<ItemStack, ItemStack> recipe : ExtraPlanets_MachineRecipes.blockSmasherRecipes.entrySet()) {
 			boolean found = true;
 
-				ItemStack recipeStack = recipe.getValue();
-				ItemStack inputStack = output;
+			ItemStack recipeStack = recipe.getValue();
+			ItemStack inputStack = output;
 
-				if (recipeStack.isEmpty() || inputStack.isEmpty()) {
-					if (!recipeStack.isEmpty() || !inputStack.isEmpty()) {
-						found = false;
-						break;
-					}
-				} else if (recipeStack.getItem() != inputStack.getItem() || recipeStack.getItemDamage() != inputStack.getItemDamage()) {
+			if (recipeStack.isEmpty() || inputStack.isEmpty()) {
+				if (!recipeStack.isEmpty() || !inputStack.isEmpty()) {
 					found = false;
-					break;
 				}
+			} else if (recipeStack.getItem() != inputStack.getItem() || recipeStack.getItemDamage() != inputStack.getItemDamage()) {
+				found = false;
+			}
 
 			if (!found) {
 				continue;

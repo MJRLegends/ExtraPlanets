@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.tileEntities.machines;
 
-import java.util.ArrayList;
-
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
@@ -189,12 +187,9 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH);
 		}
 
-		ArrayList<ItemStack> list = ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.get(slotID - 1);
-
-		for (ItemStack test : list) {
-			if (test.isItemEqual(itemstack)) {
-				return true;
-			}
+		ItemStack test = ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.get(slotID - 1);
+		if (test.isItemEqual(itemstack)) {
+			return true;
 		}
 
 		return false;
