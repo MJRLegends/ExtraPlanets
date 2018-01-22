@@ -1,10 +1,14 @@
 package com.mjr.extraplanets.planets.Kepler22b;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
+import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.DimensionType;
@@ -14,6 +18,7 @@ import net.minecraft.world.chunk.IChunkGenerator;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.api.ISolarRadiationWorld;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.BiomeProviderKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.ChunkProviderKepler22b;
@@ -141,5 +146,20 @@ public class WorldProviderKepler22b extends WorldProviderRealisticSpace implemen
 	@Override
 	public ResourceLocation getDungeonChestType() {
 		return RoomTreasure.MOONCHEST;
+	}
+
+
+	@Override
+	public List<Block> getSurfaceBlocks() {
+		List<Block> list = new LinkedList<>();
+		list.add(ExtraPlanets_Blocks.KEPLER22B_GRASS_BLUE);
+		list.add(ExtraPlanets_Blocks.KEPLER22B_GRASS_GREEN);
+		list.add(ExtraPlanets_Blocks.KEPLER22B_GRASS_INFECTED);
+		list.add(ExtraPlanets_Blocks.KEPLER22B_GRASS_PURPLE);
+		list.add(ExtraPlanets_Blocks.KEPLER22B_GRASS_RED);
+		list.add(ExtraPlanets_Blocks.KEPLER22B_GRASS_YELLOW);
+		list.add(ExtraPlanets_Blocks.KEPLER22B_BLOCKS);
+		list.add(ExtraPlanets_Blocks.CAKE_BLOCKS);
+		return list;
 	}
 }
