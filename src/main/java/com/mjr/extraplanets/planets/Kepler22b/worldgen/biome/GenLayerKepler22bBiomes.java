@@ -1,14 +1,16 @@
 package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
+
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
 public class GenLayerKepler22bBiomes extends GenLayer {
-	protected BiomeGenBase[] commonBiomes = { BiomeGenBaseKepler22b.kepler22bPlains, BiomeGenBaseKepler22b.kepler22bBlueForest, BiomeGenBaseKepler22b.kepler22bPurpleForest, BiomeGenBaseKepler22b.kepler22bRedForest,
-			BiomeGenBaseKepler22b.kepler22bYellowForest, BiomeGenBaseKepler22b.kepler22bRedDesert, BiomeGenBaseKepler22b.kepler22bWasteLands, BiomeGenBaseKepler22b.kepler22bCandyLand };
+	protected BiomeGenBase[] commonBiomes = { Kepler22bBiomes.kepler22bPlains, Kepler22bBiomes.kepler22bBlueForest, Kepler22bBiomes.kepler22bPurpleForest, Kepler22bBiomes.kepler22bRedForest,
+			Kepler22bBiomes.kepler22bYellowForest, Kepler22bBiomes.kepler22bRedDesert, Kepler22bBiomes.kepler22bWasteLands, Kepler22bBiomes.kepler22bCandyLand };
 
-	protected BiomeGenBase[] rareBiomes = { BiomeGenBaseKepler22b.kepler22bBlueForest, Kepler22bBiomes.kepler22bDiamondPlains };
+	protected BiomeGenBase[] rareBiomes = { Kepler22bBiomes.kepler22bBlueForest, Kepler22bBiomes.kepler22bDiamondPlains };
 
 	public GenLayerKepler22bBiomes(long seed, GenLayer genlayer) {
 		super(seed);

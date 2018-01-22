@@ -12,7 +12,6 @@ import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.GenLayerKepler22b;
 
 public class WorldChunkManagerKepler22b extends WorldChunkManager {
@@ -24,12 +23,12 @@ public class WorldChunkManagerKepler22b extends WorldChunkManager {
 	protected WorldChunkManagerKepler22b() {
 		this.biomeCache = new BiomeCache(this);
 		this.biomesToSpawn = new ArrayList<BiomeGenBase>();
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPlains);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bBlueForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPurpleForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bRedForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bYellowForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bRedDesert);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bPlains);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bBlueForest);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bPurpleForest);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bRedForest);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bYellowForest);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bRedDesert);
 	}
 
 	public WorldChunkManagerKepler22b(long seed) {
@@ -45,7 +44,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManager {
 	}
 
 	public BiomeGenBase getBiome() {
-		return BiomeGenBaseKepler22b.kepler22bPlains;
+		return Kepler22bBiomes.kepler22bPlains;
 	}
 
 	@Override
@@ -88,7 +87,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManager {
 			if (arrayOfInts[i] >= 0) {
 				par1ArrayOfBiome[i] = BiomeGenBase.getBiome(arrayOfInts[i]);
 			} else {
-				par1ArrayOfBiome[i] = BiomeGenBaseKepler22b.kepler22bPlains;
+				par1ArrayOfBiome[i] = Kepler22bBiomes.kepler22bPlains;
 			}
 		}
 		return par1ArrayOfBiome;

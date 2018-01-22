@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
+package com.mjr.extraplanets.planets.Kepler22b.worldgen;
 
 import java.util.Random;
 
@@ -23,8 +23,16 @@ import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bBlueMapleForest;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bCandyLand;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bDiamondPlains;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bPlains;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bPurpleMapleForest;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bRedDesert;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bRedMapleForest;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bYellowMapleForest;
 
-public class BiomeGenBaseKepler22b extends BiomeGenBase {
+public class Kepler22bBiomes extends BiomeGenBase {
 	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains(Config.KEPLER22B_PLAINS_BIOME_ID).setBiomeName("Kepler22b Plains").setHeight(new Height(0.125F, 0.05F));
 	public static final BiomeGenBase kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest(Config.KEPLER22B_BLUE_FOREST_BIOME_ID).setBiomeName("Kepler22b Blue Maple Forest").setHeight(new Height(0.125F, 0.05F));
 	public static final BiomeGenBase kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest(Config.KEPLER22B_PURPLE_FOREST_BIOME_ID).setBiomeName("Kepler22b Purple Maple Forest").setHeight(new Height(0.125F, 0.05F));
@@ -33,12 +41,12 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 	public static final BiomeGenBase kepler22bRedDesert = new BiomeGenKepler22bRedDesert(Config.KEPLER22B_RED_DESERT_BIOME_ID).setBiomeName("Kepler22b Red Desert").setHeight(new Height(0.125F, 0.1F));
 	public static final BiomeGenBase kepler22bWasteLands = new BiomeGenKepler22bRedDesert(Config.KEPLER22B_WASTE_LANDS_BIOME_ID).setBiomeName("Kepler22b WasteLands").setHeight(new Height(-0.2F, 0.1F));
 	public static final BiomeGenBase kepler22bCandyLand = new BiomeGenKepler22bCandyLand(Config.KEPLER22B_CANDY_LAND_BIOME_ID).setBiomeName("Kepler22b Candy Land").setHeight(new Height(0.225F, 0.02F));
-	public static final Biome kepler22bDiamondPlains = new BiomeGenKepler22bDiamondPlains(new BiomeProperties("Kepler22b Diamond Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase kepler22bDiamondPlains = new BiomeGenKepler22bDiamondPlains(Config.KEPLER22B_DIAMOND_PLAINS_BIOME_ID).setBiomeName("Kepler22b Diamond Plains").setHeight(new Height(0.125F,0.05F));
 
 	protected byte topMeta;
 	protected byte fillerMeta;
 
-	public BiomeGenBaseKepler22b(int var1) {
+	public Kepler22bBiomes(int var1) {
 		super(var1);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();
