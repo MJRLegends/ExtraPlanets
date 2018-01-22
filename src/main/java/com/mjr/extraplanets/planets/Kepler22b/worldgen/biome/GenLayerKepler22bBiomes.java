@@ -10,7 +10,8 @@ public class GenLayerKepler22bBiomes extends GenLayer {
 	protected BiomeGenBase[] commonBiomes = { Kepler22bBiomes.kepler22bPlains, Kepler22bBiomes.kepler22bBlueForest, Kepler22bBiomes.kepler22bPurpleForest, Kepler22bBiomes.kepler22bRedForest,
 			Kepler22bBiomes.kepler22bYellowForest, Kepler22bBiomes.kepler22bRedDesert, Kepler22bBiomes.kepler22bWasteLands, Kepler22bBiomes.kepler22bCandyLand };
 
-	protected BiomeGenBase[] rareBiomes = { Kepler22bBiomes.kepler22bBlueForest, Kepler22bBiomes.kepler22bDiamondPlains };
+	protected Biome[] rareBiomes = { Kepler22bBiomes.kepler22bBlueForest, Kepler22bBiomes.kepler22bDiamondPlains, Kepler22bBiomes.kepler22bCoalPlains, Kepler22bBiomes.kepler22bIronPlains, Kepler22bBiomes.kepler22bGoldPlains,
+		Kepler22bBiomes.kepler22bEmeraldPlains };
 
 	public GenLayerKepler22bBiomes(long seed, GenLayer genlayer) {
 		super(seed);
