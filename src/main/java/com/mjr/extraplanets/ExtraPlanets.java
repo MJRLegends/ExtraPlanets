@@ -490,6 +490,10 @@ public class ExtraPlanets {
 			Biome.registerBiome(Config.KEPLER22B_WASTE_LANDS_BIOME_ID, Kepler22bBiomes.kepler22bWasteLands.getBiomeName(), Kepler22bBiomes.kepler22bWasteLands);
 			Biome.registerBiome(Config.KEPLER22B_CANDY_LAND_BIOME_ID, Kepler22bBiomes.kepler22bCandyLand.getBiomeName(), Kepler22bBiomes.kepler22bCandyLand);
 			Biome.registerBiome(Config.KEPLER22B_DIAMOND_PLAINS_BIOME_ID, Kepler22bBiomes.kepler22bDiamondPlains.getBiomeName(), Kepler22bBiomes.kepler22bDiamondPlains);
+			Biome.registerBiome(Config.KEPLER22B_COAL_PLAINS_BIOME_ID, Kepler22bBiomes.kepler22bCoalPlains.getBiomeName(), Kepler22bBiomes.kepler22bCoalPlains);
+			Biome.registerBiome(Config.KEPLER22B_IRON_PLAINS_BIOME_ID, Kepler22bBiomes.kepler22bIronPlains.getBiomeName(), Kepler22bBiomes.kepler22bIronPlains);
+			Biome.registerBiome(Config.KEPLER22B_GOLD_PLAINS_BIOME_ID, Kepler22bBiomes.kepler22bGoldPlains.getBiomeName(), Kepler22bBiomes.kepler22bGoldPlains);
+			Biome.registerBiome(Config.KEPLER22B_EMERALD_PLAINS_BIOME_ID, Kepler22bBiomes.kepler22bEmeraldPlains.getBiomeName(), Kepler22bBiomes.kepler22bEmeraldPlains);
 		}
 		// Moons
 		if (Config.CALLISTO)
