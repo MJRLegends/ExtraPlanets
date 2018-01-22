@@ -339,9 +339,6 @@ public class ExtraPlanets {
 		if (Config.MC_MULITPART_SUPPORT)
 			MCMultiPartCompatibility.init();
 
-		// Register Custom Recipe Type
-		// RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
-
 		// Generate recipe JSON's (For use in Dev Workspace Only)
 		if (generateRecipes) {
 			ExtraPlanets_RecipeGeneration.generate();
@@ -713,10 +710,10 @@ public class ExtraPlanets {
 				}
 			}
 		}
-		
-        @SubscribeEvent(priority = EventPriority.LOWEST)
-        public static void registerRecipesEvent(RegistryEvent.Register<IRecipe> event){
-        	ExtraPlanets_Recipes.initEvent();
-        }
+
+		@SubscribeEvent(priority = EventPriority.LOWEST)
+		public static void registerRecipesEvent(RegistryEvent.Register<IRecipe> event) {
+			ExtraPlanets_Recipes.initEvent();
+		}
 	}
 }
