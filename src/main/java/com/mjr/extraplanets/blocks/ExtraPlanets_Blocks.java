@@ -284,6 +284,12 @@ public class ExtraPlanets_Blocks {
 	public static Block CAKE_BLOCKS;
 
 	public static BlockWhiteSugerCane WHITE_SUGAR_CANE;
+	
+	public static Block DIAMOND_GRIT;
+	public static Block GOLD_GRIT;
+	public static Block COAL_GRIT;
+	public static Block IRON_GRIT;
+	public static Block EMERALD_GRIT;
 
 	public static Block FAKE_BLOCK_DECONTAMINATION_UNIT;
 
@@ -455,6 +461,11 @@ public class ExtraPlanets_Blocks {
 		WHITE_SUGAR_CANE = new BlockWhiteSugerCane("white_sugar_cane");
 		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT)
 			FAKE_BLOCK_DECONTAMINATION_UNIT = new BlockDecontaminationUnitFake("basic_decontamination_unit_fake_block");
+		DIAMOND_GRIT = new BlockBasicGravel("diamond_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
+		GOLD_GRIT = new BlockBasicGravel("gold_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
+		COAL_GRIT = new BlockBasicGravel("coal_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
+		IRON_GRIT = new BlockBasicGravel("iron_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
+		EMERALD_GRIT = new BlockBasicGravel("emeralds_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
 	}
 
 	public static void initializeStairs() {
@@ -729,6 +740,11 @@ public class ExtraPlanets_Blocks {
 		registerBlock(WHITE_SUGAR_CANE, ItemBlockDesc.class, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
 		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT)
 			registerBlock(FAKE_BLOCK_DECONTAMINATION_UNIT, ItemBlockDesc.class, FAKE_BLOCK_DECONTAMINATION_UNIT.getUnlocalizedName().substring(5));
+		registerBlock(DIAMOND_GRIT, ItemBlockDefault.class, DIAMOND_GRIT.getUnlocalizedName().substring(5));
+		registerBlock(GOLD_GRIT, ItemBlockDefault.class, GOLD_GRIT.getUnlocalizedName().substring(5));
+		registerBlock(COAL_GRIT, ItemBlockDefault.class, COAL_GRIT.getUnlocalizedName().substring(5));
+		registerBlock(IRON_GRIT, ItemBlockDefault.class, IRON_GRIT.getUnlocalizedName().substring(5));
+		registerBlock(EMERALD_GRIT, ItemBlockDefault.class, EMERALD_GRIT.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerStairs() throws NoSuchMethodException {
