@@ -19,12 +19,13 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTriton;
 import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTritonIceLands;
+import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTritonIceSea;
 
 public class TritonBiomes extends Biome {
 
 	public static final Biome triton = new BiomeGenTriton(new BiomeProperties("Triton").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome tritonIceLands = new BiomeGenTritonIceLands(new BiomeProperties("Triton Ice Lands").setBaseHeight(2.5F).setHeightVariation(0.4F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
-	public static final Biome tritonIceSea = new BiomeGenTritonIceLands(new BiomeProperties("Triton Ice Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
+	public static final Biome tritonIceSea = new BiomeGenTritonIceSea(new BiomeProperties("Triton Ice Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setTemperature(0.0F).setRainfall(0.5F).setSnowEnabled());
 
 	protected TritonBiomes(BiomeProperties properties) {
 		super(properties);
