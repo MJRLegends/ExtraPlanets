@@ -13,7 +13,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenCaveKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenRavineKepler22b;
-import com.mjr.extraplanets.world.prefabs.ChunkProviderMultiBiomeNormal;
+import com.mjr.mjrlegendslib.world.ChunkProviderMultiBiomeNormal;
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 
 public class ChunkProviderKepler22b extends ChunkProviderMultiBiomeNormal {
