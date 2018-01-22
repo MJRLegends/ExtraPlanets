@@ -465,7 +465,7 @@ public class ExtraPlanets_Blocks {
 		GOLD_GRIT = new BlockBasicGravel("gold_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
 		COAL_GRIT = new BlockBasicGravel("coal_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
 		IRON_GRIT = new BlockBasicGravel("iron_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
-		EMERALD_GRIT = new BlockBasicGravel("emeralds_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
+		EMERALD_GRIT = new BlockBasicGravel("emerald_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
 	}
 
 	public static void initializeStairs() {

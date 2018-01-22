@@ -10,7 +10,7 @@ public class GenLayerKepler22bBiomes extends GenLayer {
 	protected Biome[] commonBiomes = { Kepler22bBiomes.kepler22bPlains, Kepler22bBiomes.kepler22bBlueForest, Kepler22bBiomes.kepler22bPurpleForest, Kepler22bBiomes.kepler22bRedForest, Kepler22bBiomes.kepler22bYellowForest,
 			Kepler22bBiomes.kepler22bRedDesert, Kepler22bBiomes.kepler22bWasteLands, Kepler22bBiomes.kepler22bCandyLand };
 
-	protected Biome[] rareBiomes = { Kepler22bBiomes.kepler22bBlueForest, Kepler22bBiomes.kepler22bDiamondPlains, Kepler22bBiomes.kepler22bCoalPlains, Kepler22bBiomes.kepler22bIronPlains, Kepler22bBiomes.kepler22bGoldPlains,
+	protected Biome[] rareBiomes = { Kepler22bBiomes.kepler22bDiamondPlains, Kepler22bBiomes.kepler22bCoalPlains, Kepler22bBiomes.kepler22bIronPlains, Kepler22bBiomes.kepler22bGoldPlains,
 			Kepler22bBiomes.kepler22bEmeraldPlains };
 
 	public GenLayerKepler22bBiomes(long seed, GenLayer genlayer) {
@@ -30,7 +30,7 @@ public class GenLayerKepler22bBiomes extends GenLayer {
 			for (int dx = 0; dx < width; dx++) {
 				this.initChunkSeed(dx + x, dz + z);
 
-				if (this.nextInt(15) == 0) {
+				if (this.nextInt(150) == 0) {
 					dest[dx + dz * width] = Biome.getIdForBiome(this.rareBiomes[this.nextInt(this.rareBiomes.length)]);
 				} else {
 					dest[dx + dz * width] = Biome.getIdForBiome(this.commonBiomes[this.nextInt(this.commonBiomes.length)]);
