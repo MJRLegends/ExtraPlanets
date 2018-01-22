@@ -1,10 +1,14 @@
 package com.mjr.extraplanets.moons.Io;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import net.minecraft.block.Block;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -14,6 +18,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.api.IPressureWorld;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Io.worldgen.ChunkProviderIo;
 import com.mjr.extraplanets.moons.Io.worldgen.WorldChunkManagerIo;
@@ -167,5 +172,13 @@ public class WorldProviderIo extends WorldProviderRealisticSpace implements IGal
 	@Override
 	public String getInternalNameSuffix() {
 		return "io";
+	}
+
+	public List<Block> getSurfaceBlocks() {
+		List<Block> list = new LinkedList<>();
+		list.add(ExtraPlanets_Blocks.IO_BLOCKS);
+		list.add(ExtraPlanets_Blocks.ASH_ROCK);
+		list.add(ExtraPlanets_Blocks.VOLCANIC_ROCK);
+		return list;
 	}
 }

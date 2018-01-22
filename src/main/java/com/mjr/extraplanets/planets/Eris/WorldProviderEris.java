@@ -1,15 +1,20 @@
 package com.mjr.extraplanets.planets.Eris;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
+import net.minecraft.block.Block;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.api.IPressureWorld;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Eris.worldgen.ChunkProviderEris;
 import com.mjr.extraplanets.planets.Eris.worldgen.WorldChunkManagerEris;
@@ -130,5 +135,12 @@ public class WorldProviderEris extends WorldProviderRealisticSpace implements IG
 	@Override
 	public String getInternalNameSuffix() {
 		return "eris";
+	}
+
+	@Override
+	public List<Block> getSurfaceBlocks() {
+		List<Block> list = new LinkedList<>();
+		list.add(ExtraPlanets_Blocks.ERIS_BLOCKS);
+		return list;
 	}
 }
