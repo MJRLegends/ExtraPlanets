@@ -3,7 +3,6 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
@@ -14,7 +13,8 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeDecoratorKepler22bOres;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenCaveKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenRavineKepler22b;
-import com.mjr.extraplanets.world.prefabs.ChunkProviderMultiBiomeNormal;
+import com.mjr.mjrlegendslib.world.ChunkProviderMultiBiomeNormal;
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 
 public class ChunkProviderKepler22b extends ChunkProviderMultiBiomeNormal {
 	public ChunkProviderKepler22b(World world, long seed, boolean flag) {
