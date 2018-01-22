@@ -72,7 +72,10 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 			} else {
 				IBlockState state = worldIn.getBlockState(position.down());
 
-				if (state.getBlock().canSustainPlant(state, worldIn, position.down(), net.minecraft.util.EnumFacing.UP, (BlockKepler22bMapleTreeSapling) ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING) && position.getY() < worldIn.getHeight() - i - 1) {
+				if ((state.getBlock().canSustainPlant(state, worldIn, position.down(), net.minecraft.util.EnumFacing.UP, (BlockKepler22bMapleTreeSapling) ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING)
+						|| state.equals(ExtraPlanets_Blocks.DIAMOND_GRIT.getDefaultState()) || state.equals(ExtraPlanets_Blocks.GOLD_GRIT.getDefaultState()) || state.equals(ExtraPlanets_Blocks.COAL_GRIT.getDefaultState())
+						|| state.equals(ExtraPlanets_Blocks.IRON_GRIT.getDefaultState()) || state.equals(ExtraPlanets_Blocks.EMERALD_GRIT.getDefaultState()))
+						&& position.getY() < worldIn.getHeight() - i - 1) {
 					this.setDirtAt(worldIn, position.down());
 					int k2 = 3;
 					int l2 = 0;
