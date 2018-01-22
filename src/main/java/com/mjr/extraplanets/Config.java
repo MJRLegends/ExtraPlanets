@@ -209,6 +209,10 @@ public class Config {
 	public static int KEPLER22B_RED_DESERT_BIOME_ID;
 	public static int KEPLER22B_WASTE_LANDS_BIOME_ID;
 	public static int KEPLER22B_DIAMOND_PLAINS_BIOME_ID;
+	public static int KEPLER22B_COAL_PLAINS_BIOME_ID;
+	public static int KEPLER22B_IRON_PLAINS_BIOME_ID;
+	public static int KEPLER22B_GOLD_PLAINS_BIOME_ID;
+	public static int KEPLER22B_EMERALD_PLAINS_BIOME_ID;
 	
 	public static boolean ORE_DICTIONARY;
 	public static boolean ORE_DICTIONARY_INGOTS;
@@ -528,6 +532,10 @@ public class Config {
 		TITAN_METHANE_HILLS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Methane Hills Biome ID", 202, "[range: 0 ~ 255, default: 202]").getInt();
 		IO_BURNING_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Burning Plains Biome ID", 203, "[range: 0 ~ 255, default: 203]").getInt();
 		KEPLER22B_DIAMOND_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Diamond Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
+		KEPLER22B_COAL_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Coal Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
+		KEPLER22B_IRON_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Iron Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
+		KEPLER22B_GOLD_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Gold Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
+		KEPLER22B_EMERALD_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Emerald Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
 		
 		SCHEMATIC_TIER_4_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555, "[range: -2147483647 ~ 2147483647, default: 5555]").getInt();
 		SCHEMATIC_TIER_5_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556, "[range: -2147483647 ~ 2147483647, default: 5556]").getInt();
