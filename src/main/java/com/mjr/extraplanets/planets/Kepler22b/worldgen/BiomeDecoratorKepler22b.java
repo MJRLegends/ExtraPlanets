@@ -215,50 +215,50 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 		for (int i = 0; i < this.coalTreesPerChunk; i++) {
 			if (random.nextInt(5) == 1) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-				new WorldGenKepler22bTree(true, 12, Blocks.COAL_ORE.getDefaultState(), Blocks.COAL_BLOCK.getDefaultState(), false).generate(worldIn, random, blockpos);
+				new WorldGenKepler22bTree(true, 12, Blocks.coal_ore.getDefaultState(), Blocks.coal_block.getDefaultState(), false).generate(worldIn, random, blockpos);
 			}
 		}
 		for (int i = 0; i < this.coalSpheresPerChunk; i++) {
 			if (random.nextInt(5) == 1) {
-				WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.COAL_ORE.getDefaultState(), 9, 0), worldIn, random, this.chunkPos, 6);
+				WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.coal_ore.getDefaultState(), 9, 0), worldIn, random, pos, 6);
 			}
 		}
 		for (int i = 0; i < this.ironTreesPerChunk; i++) {
 			if (random.nextInt(5) == 1) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-				new WorldGenKepler22bTree(true, 12, Blocks.IRON_ORE.getDefaultState(), Blocks.IRON_BLOCK.getDefaultState(), false).generate(worldIn, random, blockpos);
+				new WorldGenKepler22bTree(true, 12, Blocks.iron_ore.getDefaultState(), Blocks.iron_block.getDefaultState(), false).generate(worldIn, random, blockpos);
 			}
 		}
 		for (int i = 0; i < this.ironSpheresPerChunk; i++) {
 			if (random.nextInt(5) == 1) {
-				WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.IRON_ORE.getDefaultState(), 9, 0), worldIn, random, this.chunkPos, 6);
+				WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.iron_ore.getDefaultState(), 9, 0), worldIn, random, pos, 6);
 			}
 		}
 		for (int i = 0; i < this.goldTreesPerChunk; i++) {
 			if (random.nextInt(5) == 1) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-				new WorldGenKepler22bTree(true, 12, Blocks.GOLD_ORE.getDefaultState(), Blocks.GOLD_BLOCK.getDefaultState(), false).generate(worldIn, random, blockpos);
+				new WorldGenKepler22bTree(true, 12, Blocks.gold_ore.getDefaultState(), Blocks.gold_block.getDefaultState(), false).generate(worldIn, random, blockpos);
 			}
 		}
 		for (int i = 0; i < this.goldSpheresPerChunk; i++) {
 			if (random.nextInt(5) == 1) {
-				WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.GOLD_ORE.getDefaultState(), 9, 0), worldIn, random, this.chunkPos, 6);
+				WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.gold_ore.getDefaultState(), 9, 0), worldIn, random, pos, 6);
 			}
 		}
 		for (int i = 0; i < this.emeraldTreesPerChunk; i++) {
 			if (random.nextInt(5) == 1) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-				new WorldGenKepler22bTree(true, 12, Blocks.EMERALD_ORE.getDefaultState(), Blocks.EMERALD_BLOCK.getDefaultState(), false).generate(worldIn, random, blockpos);
+				new WorldGenKepler22bTree(true, 12, Blocks.emerald_ore.getDefaultState(), Blocks.emerald_block.getDefaultState(), false).generate(worldIn, random, blockpos);
 			}
 		}
 		for (int i = 0; i < this.emeraldSpheresPerChunk; i++) {
 			if (random.nextInt(5) == 1) {
-				WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.EMERALD_ORE.getDefaultState(), 9, 0), worldIn, random, this.chunkPos, 6);
+				WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.emerald_ore.getDefaultState(), 9, 0), worldIn, random, pos, 6);
 			}
 		}
 		for (int i = 0; i < this.purpleBigTreesPerChunk; i++) {
