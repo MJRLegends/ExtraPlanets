@@ -12,7 +12,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
-import com.mjr.extraplanets.world.prefabs.ChunkProviderMultiBiomeSpace;
+import com.mjr.mjrlegendslib.world.ChunkProviderMultiBiomeSpace;
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
 import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
