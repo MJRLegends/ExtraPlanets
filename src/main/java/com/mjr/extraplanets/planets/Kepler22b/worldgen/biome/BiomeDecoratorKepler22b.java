@@ -8,6 +8,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
@@ -31,6 +33,7 @@ import com.mjr.extraplanets.world.features.WorldGenRedHut;
 import com.mjr.extraplanets.world.features.WorldGenWhiteSugerCane;
 import com.mjr.extraplanets.world.features.WorldGenYellowHut;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
+import com.mjr.mjrlegendslib.world.features.WorldGenSphere;
 
 public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
@@ -71,6 +74,10 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 
 	public int treeWithNoLeafsPerChunk;
 	public int bigTreeWithNoLeafsPerChunk;
+
+	public int diamondTreesPerChunk;
+	public int diamondSpheresPerChunk;
+
 	public boolean generateHuts;
 
 	public boolean generateCandyCanes = false;
@@ -184,6 +191,18 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
 				new WorldGenLogTree().generate(worldIn, random, blockpos);
+			}
+		}
+		for (int i = 0; i < this.diamondTreesPerChunk; i++) {
+			if (random.nextInt(5) == 1) {
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+				blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
+				new WorldGenKepler22bTree(true, 12, Blocks.DIAMOND_ORE.getDefaultState(), Blocks.DIAMOND_BLOCK.getDefaultState(), false).generate(worldIn, random, blockpos);
+			}
+		}
+		for (int i = 0; i < this.diamondSpheresPerChunk; i++) {
+			if (random.nextInt(5) == 1) {
+				WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.DIAMOND_ORE.getDefaultState(), 9, 0), worldIn, random, this.chunkPos, 6);
 			}
 		}
 		for (int i = 0; i < this.purpleBigTreesPerChunk; i++) {

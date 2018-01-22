@@ -75,7 +75,9 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 				Block block1 = worldIn.getBlockState(down).getBlock();
 				boolean isSoil = block1.canSustainPlant(worldIn, down, net.minecraft.util.EnumFacing.UP, (BlockKepler22bMapleTreeSapling) ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING);
 				position = new BlockPos(position.getX(), position.getY() - 1, position.getZ());
-				if (isSoil && position.getY() < 256 - i - 1) {
+				if ((isSoil || block1.equals(ExtraPlanets_Blocks.DIAMOND_GRIT.getDefaultState()) || block1.equals(ExtraPlanets_Blocks.GOLD_GRIT.getDefaultState()) || block1.equals(ExtraPlanets_Blocks.COAL_GRIT.getDefaultState())
+						|| block1.equals(ExtraPlanets_Blocks.IRON_GRIT.getDefaultState()) || block1.equals(ExtraPlanets_Blocks.EMERALD_GRIT.getDefaultState()))
+						&& position.getY() < 256 - i - 1) {
 					block1.onPlantGrow(worldIn, down, position);
 					int k2 = 3;
 					int l2 = 0;

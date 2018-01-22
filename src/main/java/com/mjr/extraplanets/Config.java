@@ -208,7 +208,8 @@ public class Config {
 	public static int KEPLER22B_YELLOW_FOREST_BIOME_ID;
 	public static int KEPLER22B_RED_DESERT_BIOME_ID;
 	public static int KEPLER22B_WASTE_LANDS_BIOME_ID;
-
+	public static int KEPLER22B_DIAMOND_PLAINS_BIOME_ID;
+	
 	public static boolean ORE_DICTIONARY;
 	public static boolean ORE_DICTIONARY_INGOTS;
 	public static boolean ORE_DICTIONARY_OTHER;
@@ -523,7 +524,8 @@ public class Config {
 		SATURN_NUCLEAR_LAND_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Saturn Nuclear Land Biome ID", 201, "[range: 0 ~ 255, default: 201]").getInt();
 		TITAN_METHANE_HILLS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Methane Hills Biome ID", 202, "[range: 0 ~ 255, default: 202]").getInt();
 		IO_BURNING_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Burning Plains Biome ID", 203, "[range: 0 ~ 255, default: 203]").getInt();
-
+		KEPLER22B_DIAMOND_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Diamond Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
+		
 		SCHEMATIC_TIER_4_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555, "[range: -2147483647 ~ 2147483647, default: 5555]").getInt();
 		SCHEMATIC_TIER_5_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556, "[range: -2147483647 ~ 2147483647, default: 5556]").getInt();
 		SCHEMATIC_TIER_6_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 6 GUI ID", 5557, "[range: -2147483647 ~ 2147483647, default: 5557]").getInt();
