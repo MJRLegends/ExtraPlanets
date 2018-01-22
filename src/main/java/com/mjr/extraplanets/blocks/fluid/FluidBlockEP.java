@@ -12,22 +12,18 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.fluids.BlockFluidClassic;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.util.DamageSourceEP;
+import com.mjr.mjrlegendslib.block.FluidBasicBlock;
 
-public class FluidBlockEP extends BlockFluidClassic {
+public class FluidBlockEP extends FluidBasicBlock {
 
 	public FluidBlockEP(Fluid fluid, String assetName, Material material) {
-		super(fluid, material);
-		this.setQuantaPerBlock(9);
-		this.needsRandomTick = true;
-		this.setUnlocalizedName(assetName);
+		super(fluid, assetName, material);
 	}
 
 	@Override
@@ -57,20 +53,6 @@ public class FluidBlockEP extends BlockFluidClassic {
 				}
 			}
 		}
-	}
-
-	@Override
-	public boolean canDisplace(IBlockAccess world, BlockPos pos) {
-		if (world.getBlockState(pos).getMaterial().isLiquid())
-			return false;
-		return super.canDisplace(world, pos);
-	}
-
-	@Override
-	public boolean displaceIfPossible(World world, BlockPos pos) {
-		if (world.getBlockState(pos).getMaterial().isLiquid())
-			return false;
-		return super.displaceIfPossible(world, pos);
 	}
 
 	@Override
