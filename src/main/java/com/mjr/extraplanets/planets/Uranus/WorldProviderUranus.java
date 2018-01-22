@@ -154,7 +154,7 @@ public class WorldProviderUranus extends WorldProviderRealisticSpace implements 
 	public List<Block> getSurfaceBlocks() {
 		List<Block> list = new LinkedList<>();
 		list.add(ExtraPlanets_Blocks.SATURN_BLOCKS);
-		list.add(Blocks.SNOW);
+		list.add(Blocks.snow);
 		return list;
 	}
 }
