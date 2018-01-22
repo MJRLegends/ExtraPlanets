@@ -1,10 +1,14 @@
 package com.mjr.extraplanets.moons.Triton;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DimensionType;
@@ -17,6 +21,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.IPressureWorld;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Triton.worldgen.BiomeProviderTriton;
 import com.mjr.extraplanets.moons.Triton.worldgen.ChunkProviderTriton;
@@ -170,5 +175,13 @@ public class WorldProviderTriton extends WorldProviderRealisticSpace implements 
 	@Override
 	public ResourceLocation getDungeonChestType() {
 		return null;
+	}
+
+	@Override
+	public List<Block> getSurfaceBlocks() {
+		List<Block> list = new LinkedList<>();
+		list.add(ExtraPlanets_Blocks.TRITON_BLOCKS);
+		list.add(ExtraPlanets_Blocks.FROZEN_NITROGEN);
+		return list;
 	}
 }
