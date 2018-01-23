@@ -47,10 +47,10 @@ public class Kepler22bBiomes extends BiomeGenBase {
 	public static final BiomeGenBase kepler22bWasteLands = new BiomeGenKepler22bWasteLands(new BiomeProperties("Kepler22b WasteLands").setBaseHeight(-0.2F).setHeightVariation(0.1F).setTemperature(0.8F).setRainfall(0.9F).setWaterColor(14745518));
 	public static final BiomeGenBase kepler22bCandyLand = new BiomeGenKepler22bCandyLand(new BiomeProperties("Kepler22b Candy Land").setBaseHeight(0.225F).setHeightVariation(0.02F).setRainfall(0.9F).setSnowEnabled());
 	public static final BiomeGenBase kepler22bDiamondPlains = new BiomeGenKepler22bDiamondPlains(new BiomeProperties("Kepler22b Diamond Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome kepler22bCoalPlains = new BiomeGenKepler22bCoalPlains(new BiomeProperties("Kepler22b Coal Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome kepler22bIronPlains = new BiomeGenKepler22bIronPlains(new BiomeProperties("Kepler22b Iron Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome kepler22bGoldPlains = new BiomeGenKepler22bGoldPlains(new BiomeProperties("Kepler22b Gold Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome kepler22bEmeraldPlains = new BiomeGenKepler22bEmeraldPlains(new BiomeProperties("Kepler22b Emerald Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase kepler22bCoalPlains = new BiomeGenKepler22bCoalPlains(new BiomeProperties("Kepler22b Coal Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase kepler22bIronPlains = new BiomeGenKepler22bIronPlains(new BiomeProperties("Kepler22b Iron Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase kepler22bGoldPlains = new BiomeGenKepler22bGoldPlains(new BiomeProperties("Kepler22b Gold Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final BiomeGenBase kepler22bEmeraldPlains = new BiomeGenKepler22bEmeraldPlains(new BiomeProperties("Kepler22b Emerald Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 
 	protected byte topMeta;
 	protected byte fillerMeta;

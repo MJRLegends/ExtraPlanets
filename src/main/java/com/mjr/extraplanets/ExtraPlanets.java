@@ -409,6 +409,10 @@ public class ExtraPlanets {
 			Kepler22bBiomes.kepler22bWasteLands.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_waste_lands");
 			Kepler22bBiomes.kepler22bCandyLand.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_candy_land");
 			Kepler22bBiomes.kepler22bDiamondPlains.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_diamond_plains");
+			Kepler22bBiomes.kepler22bCoalPlains.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_coal_plains");
+			Kepler22bBiomes.kepler22bIronPlains.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_iron_plains");
+			Kepler22bBiomes.kepler22bGoldPlains.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_gold_plains");
+			Kepler22bBiomes.kepler22bEmeraldPlains.setRegistryName(Constants.TEXTURE_PREFIX + "kepler22b_emerald_plains");
 			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bPlains);
 			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bBlueForest);
 			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bRedForest);
@@ -418,6 +422,10 @@ public class ExtraPlanets {
 			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bWasteLands);
 			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bCandyLand);
 			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bDiamondPlains);
+			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bCoalPlains);
+			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bIronPlains);
+			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bGoldPlains);
+			ExtraPlanets.biomesList.add(Kepler22bBiomes.kepler22bEmeraldPlains);
 		}
 		// Moons
 		if (Config.CALLISTO) {
