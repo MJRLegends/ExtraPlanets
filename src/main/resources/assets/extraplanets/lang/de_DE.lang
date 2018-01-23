@@ -339,7 +339,7 @@ tile.iapetus.ore_tin.name=Iapetus Zinnerz
 tile.iapetus.ore_copper.name=Iapetus Kupfererz
 tile.iapetus.ice.name=Iapetus Eis
 
-#Planet Gravel Blocks
+#Planet/Moon Gravel Blocks
 tile.mercury_gravel.name=Merkur Kies
 tile.ceres_gravel.name=Ceres Kies
 tile.pluto_gravel.name=Pluto Kies
@@ -356,12 +356,18 @@ tile.titan_gravel.name=Titan Kies
 tile.oberon_gravel.name=Oberon Kies
 tile.titania_gravel.name=Titania Kies
 tile.iapetus_gravel.name=Iapetus Kies
-
 tile.venus_gravel.name=Venus Kies
 tile.jupiter_gravel.name=Jupiter Kies
 tile.saturn_gravel.name=Saturn Kies
 tile.uranus_gravel.name=Uranus Kies
 tile.neptune_gravel.name=Neptun Kies
+
+#Girt Blocks
+tile.diamond_grit.name=Diamond Grit ##NEEDS TRANSLATE##
+tile.coal_grit.name=Coal Grit ##NEEDS TRANSLATE##
+tile.iron_grit.name=Iron Grit ##NEEDS TRANSLATE##
+tile.gold_grit.name=Gold Grit ##NEEDS TRANSLATE##
+tile.emerald_grit.name=Emerald Grit ##NEEDS TRANSLATE##
 
 #Treasure Chests
 tile.treasure_chest_t4.name=Schatztruhe (Stufe 4)
@@ -1176,6 +1182,7 @@ entity.extraplanets.EvolvedIceSlimeBoss.name=Entwickelter Eisschleim Boss
 entity.extraplanets.EvolvedGhastBoss.name=Entwickelter Ghast Boss
 entity.extraplanets.EvolvedSnowmanBoss.name=Entwickelter Schneemann Boss
 entity.extraplanets.EvolvedFireBatBoss.name=Entwickelter Feuerfledermaus Boss
+entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
 
 entity.extraplanets.EvolvedWitch.name=Entwickelte Hexe
 entity.extraplanets.EvolvedMagmaCube.name=Entwickelter Magmaschleim
