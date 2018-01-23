@@ -13,6 +13,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.mjrlegendslib.world.ChunkProviderMultiBiomeSpace;
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
+import com.mjr.mjrlegendslib.world.gen.MapGenFilledCaveGen;
 import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
 public class ChunkProviderEuropa extends ChunkProviderMultiBiomeSpace {
@@ -21,6 +22,7 @@ public class ChunkProviderEuropa extends ChunkProviderMultiBiomeSpace {
 	private final BiomeDecoratorEuropaOther ioBiomeDecorator2 = new BiomeDecoratorEuropaOther();
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.EUROPA_BLOCKS, 0, 1, 2);
+	private final MapGenFilledCaveGen caveGenerator2 = new MapGenFilledCaveGen(ExtraPlanets_Blocks.EUROPA_BLOCKS, 0, 1, 2, ExtraPlanets_Fluids.SALT.getDefaultState());
 
 	public ChunkProviderEuropa(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -33,6 +35,7 @@ public class ChunkProviderEuropa extends ChunkProviderMultiBiomeSpace {
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
 		generators.add(this.caveGenerator);
+		generators.add(this.caveGenerator2);
 		return generators;
 	}
 
