@@ -16,8 +16,6 @@ public class Config {
 	public static boolean MOB_SUFFOCATION;
 	public static boolean USE_DEFAULT_BOSSES;
 
-	public static int ROCKET_TIER_CERES;
-
 	public static boolean GENERATE_KEPLER22B_DUNGEONS;
 	public static boolean GENERATE_KEPLER22B_SMALL_TREES;
 	public static boolean GENERATE_KEPLER22B_NO_LEAF_SMALL_TREES;
@@ -335,8 +333,6 @@ public class Config {
 		MOB_SUFFOCATION = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mob Suffocation", true, "Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
 		USE_DEFAULT_BOSSES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Setting this option to false will disable all custom bosses and will replace them with Creeper Bosses!").getBoolean(
 				false);
-
-		ROCKET_TIER_CERES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Ceres Rocket required", 4, "[range: 0 ~ 2147483647, default: 4]").getInt();
 
 		GENERATE_KEPLER22B_DUNGEONS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Vanilla Style Dungeons on Kepler22b", true, "Setting this option to false will disable Vanilla Style Dungeons from generating on Kepler22b")
 				.getBoolean(true);

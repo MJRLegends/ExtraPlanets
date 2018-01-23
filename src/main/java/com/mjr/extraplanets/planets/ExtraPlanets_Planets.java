@@ -97,7 +97,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.CERES) {
 			CERES = new Planet("Ceres").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			CERES.setTierRequired(Config.ROCKET_TIER_CERES);
+			CERES.setTierRequired(4);
 			CERES.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			CERES.setPhaseShift(Constants.floatPI);
 			CERES.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.50F + Config.CERES_DISTANCE_OFFSET, 1.50F + Config.CERES_DISTANCE_OFFSET));
