@@ -85,7 +85,7 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 			}
 		}
 
-		if (this.rand.nextInt(250) == 1) {
+		if (Config.GENERATE_JUPITER_BASIC_HIDEOUTS && this.rand.nextInt(250) == 1) {
 			WorldGenUtilities.generateStructure(new WorldGenBasicHideout(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
