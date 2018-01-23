@@ -339,7 +339,7 @@ tile.iapetus.ore_tin.name=Iapetus Tin Ore ##NEEDS TRANSLATE##
 tile.iapetus.ore_copper.name=Iapetus Copper Ore ##NEEDS TRANSLATE##
 tile.iapetus.ice.name=Iapetus Ice ##NEEDS TRANSLATE##
 
-#PlanetGravel Blocks
+#Planet/Moon Gravel Blocks
 tile.mercury_gravel.name=Štěrk
 tile.ceres_gravel.name=Štěrk
 tile.pluto_gravel.name=Štěrk
@@ -356,12 +356,18 @@ tile.titan_gravel.name=TitanGravel
 tile.oberon_gravel.name=OberonGravel
 tile.titania_gravel.name=TitaniaGravel
 tile.iapetus_gravel.name=IapetusGravel
-
 tile.venus_gravel.name=Štěrk
 tile.jupiter_gravel.name=Štěrk
 tile.saturn_gravel.name=Štěrk
 tile.uranus_gravel.name=Štěrk
 tile.neptune_gravel.name=Štěrk
+
+#Girt Blocks
+tile.diamond_grit.name=Diamond Grit ##NEEDS TRANSLATE##
+tile.coal_grit.name=Coal Grit ##NEEDS TRANSLATE##
+tile.iron_grit.name=Iron Grit ##NEEDS TRANSLATE##
+tile.gold_grit.name=Gold Grit ##NEEDS TRANSLATE##
+tile.emerald_grit.name=Emerald Grit ##NEEDS TRANSLATE##
 
 #Treasure Chests
 tile.treasure_chest_t4.name=Truhla s pokladem typ 4
@@ -1235,6 +1241,7 @@ entity.extraplanets.EvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
 entity.extraplanets.EvolvedGhastBoss.name=Evolved Ghast Boss ##NEEDS TRANSLATE##
 entity.extraplanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss ##NEEDS TRANSLATE##
 entity.extraplanets.EvolvedFireBatBoss.name=Evolved Fire Bat Boss ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
 
 entity.extraplanets.EvolvedWitch.name=Vyvinutá Čarodejnice
 entity.extraplanets.EvolvedMagmaCube.name=Vyvinutá Magma Kostka
