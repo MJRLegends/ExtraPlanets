@@ -339,7 +339,7 @@ tile.iapetus.ore_tin.name=Iapetus Tin Ore ##NEEDS TRANSLATE##
 tile.iapetus.ore_copper.name=Iapetus Copper Ore ##NEEDS TRANSLATE##
 tile.iapetus.ice.name=Iapetus Ice ##NEEDS TRANSLATE##
 
-#PlanetGravel Blocks
+#Planet/Moon Gravel Blocks
 tile.mercury_gravel.name=水星沙礫
 tile.ceres_gravel.name=穀神星沙礫
 tile.pluto_gravel.name=冥王星沙礫
@@ -356,11 +356,17 @@ tile.titan_gravel.name=土衛一沙礫
 tile.oberon_gravel.name=OberonGravel ##NEEDS TRANSLATE##
 tile.titania_gravel.name=TitaniaGravel ##NEEDS TRANSLATE##
 tile.iapetus_gravel.name=IapetusGravel ##NEEDS TRANSLATE##
-
 tile.jupiter_gravel.name=木星沙礫
 tile.saturn_gravel.name=土星沙礫
 tile.uranus_gravel.name=天王星沙礫
 tile.neptune_gravel.name=海王星沙礫
+
+#Girt Blocks
+tile.diamond_grit.name=Diamond Grit ##NEEDS TRANSLATE##
+tile.coal_grit.name=Coal Grit ##NEEDS TRANSLATE##
+tile.iron_grit.name=Iron Grit ##NEEDS TRANSLATE##
+tile.gold_grit.name=Gold Grit ##NEEDS TRANSLATE##
+tile.emerald_grit.name=Emerald Grit ##NEEDS TRANSLATE##
 
 #Treasure Chests
 tile.treasure_chest_t4.name=4階寶箱
@@ -1239,6 +1245,7 @@ entity.extraplanets.EvolvedIceSlimeBoss.name=冰史萊姆之王(進化體)
 entity.extraplanets.EvolvedGhastBoss.name=Evolved Ghast Boss ##NEEDS TRANSLATE##
 entity.extraplanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss ##NEEDS TRANSLATE##
 entity.extraplanets.EvolvedFireBatBoss.name=Evolved Fire Bat Boss ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
 
 entity.extraplanets.EvolvedWitch.name=女巫(進化體)
 entity.extraplanets.EvolvedMagmaCube.name=岩漿怪(進化體)

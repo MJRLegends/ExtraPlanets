@@ -339,7 +339,7 @@ tile.iapetus.ore_tin.name=Оловянная руда Япета
 tile.iapetus.ore_copper.name=Медная руда Япета
 tile.iapetus.ice.name=Лёд Япета
 
-#Planet Gravel Blocks
+#Planet/Moon Gravel Blocks
 tile.mercury_gravel.name=Гравий Меркурия
 tile.ceres_gravel.name=Гравий Цереры
 tile.pluto_gravel.name=Гравий Плутона
@@ -356,12 +356,18 @@ tile.titan_gravel.name=Гравий Титана
 tile.oberon_gravel.name=Гравий Оберона
 tile.titania_gravel.name=Гравий Титании
 tile.iapetus_gravel.name=Гравий Япета
-
 tile.venus_gravel.name=Гравий Венеры
 tile.jupiter_gravel.name=Гравий Юпитера
 tile.saturn_gravel.name=Гравий Сатурна
 tile.uranus_gravel.name=Гравий Урана
 tile.neptune_gravel.name=Гравий Нептуна
+
+#Girt Blocks
+tile.diamond_grit.name=Diamond Grit ##NEEDS TRANSLATE##
+tile.coal_grit.name=Coal Grit ##NEEDS TRANSLATE##
+tile.iron_grit.name=Iron Grit ##NEEDS TRANSLATE##
+tile.gold_grit.name=Gold Grit ##NEEDS TRANSLATE##
+tile.emerald_grit.name=Emerald Grit ##NEEDS TRANSLATE##
 
 #Treasure Chests
 tile.treasure_chest_t4.name=Сундук с сокровищами 4-го уровня
@@ -1238,6 +1244,7 @@ entity.extraplanets.EvolvedIceSlimeBoss.name=Эволюционировавши�
 entity.extraplanets.EvolvedGhastBoss.name=Эволюционировавший гаст-босс
 entity.extraplanets.EvolvedSnowmanBoss.name=Эволюционировавший снеговик-босс
 entity.extraplanets.EvolvedFireBatBoss.name=Эволюционировавшая огненная летучая мышь-босс
+entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
 
 entity.extraplanets.EvolvedWitch.name=Эволюционировавшая ведьма
 entity.extraplanets.EvolvedMagmaCube.name=Эволюционировавший адский слизень
