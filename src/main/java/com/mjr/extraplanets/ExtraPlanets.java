@@ -438,7 +438,11 @@ public class ExtraPlanets {
 		}
 		if (Config.EUROPA) {
 			EuropaBiomes.europa.setRegistryName(Constants.TEXTURE_PREFIX + "europa");
+			EuropaBiomes.europaIceValleys.setRegistryName(Constants.TEXTURE_PREFIX + "europa_ice_valleys");
+			EuropaBiomes.europaSaltSea.setRegistryName(Constants.TEXTURE_PREFIX + "europa_salt_sea");
 			ExtraPlanets.biomesList.add(EuropaBiomes.europa);
+			ExtraPlanets.biomesList.add(EuropaBiomes.europaIceValleys);
+			ExtraPlanets.biomesList.add(EuropaBiomes.europaSaltSea);
 		}
 		if (Config.GANYMEDE) {
 			GanymedeBiomes.ganymede.setRegistryName(Constants.TEXTURE_PREFIX + "ganymede");
