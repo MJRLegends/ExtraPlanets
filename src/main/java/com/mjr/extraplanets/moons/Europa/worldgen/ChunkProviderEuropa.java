@@ -1,44 +1,32 @@
 package com.mjr.extraplanets.moons.Europa.worldgen;
 
 import java.util.List;
+import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
-import net.minecraft.world.chunk.IChunkProvider;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.world.prefabs.ChunkProviderSingleBiomeSpace;
+import com.mjr.mjrlegendslib.world.ChunkProviderMultiBiomeSpace;
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
 import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
-public class ChunkProviderEuropa extends ChunkProviderSingleBiomeSpace {
-	private final BiomeDecoratorEuropa ceresBiomeDecorator = new BiomeDecoratorEuropa();
-	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.EUROPA_BLOCKS, 0, 1, 2);
+public class ChunkProviderEuropa extends ChunkProviderMultiBiomeSpace {
+	private final BiomeDecoratorEuropa ioBiomeDecorator = new BiomeDecoratorEuropa();
+	@SuppressWarnings("unused")
+	private final BiomeDecoratorEuropaOther ioBiomeDecorator2 = new BiomeDecoratorEuropaOther();
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
+	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.EUROPA_BLOCKS, 0, 1, 2);
 
 	public ChunkProviderEuropa(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
-	}
-
-	@Override
-	protected BiomeDecoratorSpace getBiomeGenerator() {
-		return this.ceresBiomeDecorator;
-	}
-
-	@Override
-	protected BiomeGenBase[] getBiomesForGeneration() {
-		return new BiomeGenBase[] { EuropaBiomes.europa };
-	}
-
-	@Override
-	protected int getSeaLevel() {
-		return 93;
+		this.stoneBlock = ExtraPlanets_Blocks.EUROPA_BLOCKS.getStateFromMeta(2);
+		this.waterBlock = Blocks.air.getDefaultState();
+		this.seaLevel = 50;
 	}
 
 	@Override
@@ -49,43 +37,8 @@ public class ChunkProviderEuropa extends ChunkProviderSingleBiomeSpace {
 	}
 
 	@Override
-	protected BlockMetaPair getGrassBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.EUROPA_BLOCKS, (byte) 0);
-	}
-
-	@Override
-	protected BlockMetaPair getDirtBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.EUROPA_BLOCKS, (byte) 1);
-	}
-
-	@Override
-	protected BlockMetaPair getStoneBlock() {
-		return new BlockMetaPair(ExtraPlanets_Blocks.EUROPA_BLOCKS, (byte) 2);
-	}
-
-	@Override
-	public double getHeightModifier() {
-		return 12;
-	}
-
-	@Override
-	public double getSmallFeatureHeightModifier() {
-		return 26;
-	}
-
-	@Override
-	public double getMountainHeightModifier() {
-		return 95;
-	}
-
-	@Override
-	public double getValleyHeightModifier() {
-		return 50;
-	}
-
-	@Override
 	public int getCraterProbability() {
-		return 2000;
+		return 0;
 	}
 
 	@Override
@@ -98,6 +51,12 @@ public class ChunkProviderEuropa extends ChunkProviderSingleBiomeSpace {
 	}
 
 	@Override
-	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
+	protected void decoratePlanet(World world, Random rand, int x, int z) {
+		this.ioBiomeDecorator.decorate(world, rand, x, z);
+		// this.ioBiomeDecorator2.decorate(world, rand, null, new BlockPos(x, 0, z));
+	}
+
+	@Override
+	public void onPopulate(int cX, int cZ) {
 	}
 }
