@@ -339,7 +339,7 @@ tile.iapetus.ore_tin.name=Iapetus Kalay Cevheri
 tile.iapetus.ore_copper.name=Iapetus Bakır Cevheri
 tile.iapetus.ice.name=Iapetus Buzu
 
-#PlanetGravel Blocks
+#Planet/Moon Gravel Blocks
 tile.mercury_gravel.name=Merkür Çakılı
 tile.ceres_gravel.name=Ceres Çakılı
 tile.pluto_gravel.name=Pluto Çakılı
@@ -356,12 +356,18 @@ tile.titan_gravel.name=Titan Çakıl
 tile.oberon_gravel.name=Oberon Çakılı
 tile.titania_gravel.name=Titania Çakılı
 tile.iapetus_gravel.name=Iapetus Çakılı
-
 tile.venus_gravel.name=Venüs Çakılı
 tile.jupiter_gravel.name=Jüpiter Çakılı
 tile.saturn_gravel.name=Satürn Çakılı
 tile.uranus_gravel.name=Uranüs Çakılı
 tile.neptune_gravel.name=Neptün Çakılı
+
+#Girt Blocks
+tile.diamond_grit.name=Diamond Grit ##NEEDS TRANSLATE##
+tile.coal_grit.name=Coal Grit ##NEEDS TRANSLATE##
+tile.iron_grit.name=Iron Grit ##NEEDS TRANSLATE##
+tile.gold_grit.name=Gold Grit ##NEEDS TRANSLATE##
+tile.emerald_grit.name=Emerald Grit ##NEEDS TRANSLATE##
 
 #Treasure Chests
 tile.treasure_chest_t4.name=Seviye 4 Hazine Sandığı
@@ -1237,6 +1243,7 @@ entity.extraplanets.EvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patro
 entity.extraplanets.EvolvedGhastBoss.name=Evolved Ghast Boss
 entity.extraplanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss
 entity.extraplanets.EvolvedFireBatBoss.name=Evolved Fire Bat Boss
+entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
 
 entity.extraplanets.EvolvedWitch.name=Evrimleşmiş Cadı
 entity.extraplanets.EvolvedMagmaCube.name=Evrimleşmiş Magma Küpü

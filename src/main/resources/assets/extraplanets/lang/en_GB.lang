@@ -339,7 +339,7 @@ tile.iapetus.ore_tin.name=Iapetus Tin Ore
 tile.iapetus.ore_copper.name=Iapetus Copper Ore
 tile.iapetus.ice.name=Iapetus Ice
 
-#PlanetGravel Blocks
+#Planet/Moon Gravel Blocks
 tile.mercury_gravel.name=MercuryGravel
 tile.ceres_gravel.name=CeresGravel
 tile.pluto_gravel.name=PlutoGravel
@@ -356,12 +356,18 @@ tile.titan_gravel.name=TitanGravel
 tile.oberon_gravel.name=OberonGravel
 tile.titania_gravel.name=TitaniaGravel
 tile.iapetus_gravel.name=IapetusGravel
-
 tile.venus_gravel.name=VenusGravel
 tile.jupiter_gravel.name=JupiterGravel
 tile.saturn_gravel.name=SaturnGravel
 tile.uranus_gravel.name=UranusGravel
 tile.neptune_gravel.name=NeptuneGravel
+
+#Girt Blocks
+tile.diamond_grit.name=Diamond Grit
+tile.coal_grit.name=Coal Grit
+tile.iron_grit.name=Iron Grit
+tile.gold_grit.name=Gold Grit
+tile.emerald_grit.name=Emerald Grit
 
 #Treasure Chests
 tile.treasure_chest_t4.name=Tier 4 Treasure Chest
@@ -1240,6 +1246,7 @@ entity.extraplanets.EvolvedIceSlimeBoss.name=Evolved Ice Slime Boss
 entity.extraplanets.EvolvedGhastBoss.name=Evolved Ghast Boss
 entity.extraplanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss
 entity.extraplanets.EvolvedFireBatBoss.name=Evolved Fire Bat Boss
+entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss
 
 entity.extraplanets.EvolvedWitch.name=Evolved Witch
 entity.extraplanets.EvolvedMagmaCube.name=Evolved Magma Cube
