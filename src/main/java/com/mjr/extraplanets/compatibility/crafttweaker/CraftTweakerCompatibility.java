@@ -11,7 +11,7 @@ import crafttweaker.api.item.IItemStack;
 public class CraftTweakerCompatibility {
 	
 	@ZenMethod
-	public static void addBlockSmasherRecipe(IItemStack input, IItemStack output){
+	public static void addBlockSmasherRecipe(IItemStack output, IItemStack input){
         CraftTweakerAPI.apply(new ActionAddBlockSmasherRecipe(input, output));
 	}
 	
@@ -21,7 +21,7 @@ public class CraftTweakerCompatibility {
 	}
 	
 	@ZenMethod
-	public static void addSolarEvaporationChamberRecipe(IItemStack input, IItemStack output){
+	public static void addSolarEvaporationChamberRecipe(IItemStack output, IItemStack input){
         CraftTweakerAPI.apply(new ActionAddSolarEvaporationChamberRecipe(input, output));
 	}
 	
