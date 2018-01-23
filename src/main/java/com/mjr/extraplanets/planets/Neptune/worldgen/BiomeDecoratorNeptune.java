@@ -6,6 +6,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.world.features.WorldGenFrozenNitrogenPile;
@@ -66,7 +67,7 @@ public class BiomeDecoratorNeptune extends BiomeDecoratorSpace {
 			}
 		}
 
-		if (this.rand.nextInt(20) == 1) {
+		if (Config.GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES && this.rand.nextInt(20) == 1) {
 			WorldGenUtilities.generateStructure(new WorldGenFrozenNitrogenPile(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 		}
 

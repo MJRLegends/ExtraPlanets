@@ -18,6 +18,22 @@ public class Config {
 
 	public static int ROCKET_TIER_CERES;
 
+	public static boolean GENERATE_KEPLER22B_DUNGEONS;
+	public static boolean GENERATE_KEPLER22B_SMALL_TREES;
+	public static boolean GENERATE_KEPLER22B_NO_LEAF_SMALL_TREES;
+	public static boolean GENERATE_KEPLER22B_NO_LEAF_BIG_TREES;
+	public static boolean GENERATE_KEPLER22B_SPHERES;
+	public static boolean GENERATE_KEPLER22B_MATERIAL_TREES;
+	public static boolean GENERATE_KEPLER22B_CANDY_CANES;
+	public static boolean GENERATE_KEPLER22B_COOKIE_ROCKS;
+	public static boolean GENERATE_KEPLER22B_HUTS;
+	public static boolean GENERATE_KEPLER22B_TOWERS;
+	public static boolean GENERATE_KEPLER22B_BIG_TREES;
+	public static boolean GENERATE_JUPITER_BASIC_HIDEOUTS;
+	public static boolean GENERATE_IO_VOLCANOS;
+	public static boolean GENERATE_SATURN_SLIME_TREES;
+	public static boolean GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES;
+	public static boolean GENERATE_SATURN_NUCLEAR_PILES;
 	public static boolean GENERATE_URANUS_IGLOOS;
 	public static boolean GENERATE_URANUS_ICE_SPIKES;
 	public static boolean GENERATE_JUITPER_SKY_FEATURE;
@@ -377,6 +393,27 @@ public class Config {
 
 		ROCKET_TIER_CERES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Ceres Rocket required", 4, "[range: 0 ~ 2147483647, default: 4]").getInt();
 
+		GENERATE_KEPLER22B_DUNGEONS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Vanilla Style Dungeons on Kepler22b", true, "Setting this option to false will disable Vanilla Style Dungeons from generating on Kepler22b")
+				.getBoolean(true);
+		GENERATE_KEPLER22B_SMALL_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Small Trees on Kepler22b", true, "Setting this option to false will disable Small Trees from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_NO_LEAF_SMALL_TREES = config
+				.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate No Leaf Small Trees on Kepler22b", true, "Setting this option to false will disable No Leaf Small Trees from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_NO_LEAF_BIG_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate No Leaf Big Trees on Kepler22b", true, "Setting this option to false will disable No Leaf Big Trees from generating on Kepler22b")
+				.getBoolean(true);
+		GENERATE_KEPLER22B_SPHERES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Material Spheres on Kepler22b", true, "Setting this option to false will disable Material Spheres from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_MATERIAL_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Material Trees on Kepler22b", true, "Setting this option to false will disable Material Trees from generating on Kepler22b").getBoolean(
+				true);
+		GENERATE_KEPLER22B_CANDY_CANES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Candy Canes on Kepler22b", true, "Setting this option to false will disable Candy Canes from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_COOKIE_ROCKS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Cookie Rocks on Kepler22b", true, "Setting this option to false will disable Cookie Rocks from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_HUTS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Huts on Kepler22b", true, "Setting this option to false will disable Huts from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_TOWERS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Towers on Kepler22b", true, "Setting this option to false will disable Towers from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_BIG_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Big Trees on Kepler22b", true, "Setting this option to false will disable Big Trees from generating on Kepler22b").getBoolean(true);
+		GENERATE_JUPITER_BASIC_HIDEOUTS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Basic Hideouts on Jupiter", true, "Setting this option to false will disable Basic Hideouts from generating on Jupiter").getBoolean(true);
+		GENERATE_IO_VOLCANOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanos on Io", true, "Setting this option to false will disable Volcanos from generating on Io").getBoolean(true);
+		GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Frozen Nitrongen Piles on Neptune", true,
+				"Setting this option to false will disable Frozen Nitrongen Piles from generating on Neptune").getBoolean(true);
+		GENERATE_SATURN_NUCLEAR_PILES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Nuclear Piles on Saturn", true, "Setting this option to false will disable Nuclear Piles from generating on Saturn").getBoolean(true);
+		GENERATE_SATURN_SLIME_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Slime Trees on Saturn", true, "Setting this option to false will disable Slime Trees from generating on Saturn").getBoolean(true);
 		GENERATE_URANUS_IGLOOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Setting this option to false will disable Igloos from generating on Uranus").getBoolean(true);
 		GENERATE_URANUS_ICE_SPIKES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Setting this option to false will disable Ice Spikes from generating on Uranus").getBoolean(true);
 		GENERATE_JUITPER_SKY_FEATURE = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Jupiter", true, "Setting this option to false will disable the Sky Feature on Jupiter").getBoolean(true);
@@ -565,7 +602,8 @@ public class Config {
 		ORE_DICTIONARY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of All Planet/Moons Ores to the Ore Dictionary", true, "Setting this to false will disable all Ore Dictionary Support for Planet and Moon Ores!").getBoolean(
 				true);
 		ORE_DICTIONARY_INGOTS = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of all Ingots to the Ore Dictionary", true, "Setting this to false will disable all Ore Dictionary Support for All Ingots!").getBoolean(true);
-		ORE_DICTIONARY_OTHER = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of all Items excluding Ingots to the Ore Dictionary", true, "Setting this to false will disable all Ore Dictionary Support for All needed Items excluding Ingots!").getBoolean(true);
+		ORE_DICTIONARY_OTHER = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of all Items excluding Ingots to the Ore Dictionary", true,
+				"Setting this to false will disable all Ore Dictionary Support for All needed Items excluding Ingots!").getBoolean(true);
 
 		MORE_PLANETS_COMPATIBILITY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable More Planets Compatibility", false,
 				"FOR THIS TO WORK YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!").getBoolean(false);
@@ -642,19 +680,19 @@ public class Config {
 
 	public static List<IConfigElement> getConfigElements() {
 		List<IConfigElement> list = new ArrayList<IConfigElement>();
-		
+
 		ConfigCategory configMainDimensions = config.getCategory(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS);
 		configMainDimensions.setComment("Planet & Moon Settings");
 		list.add(new ConfigElement(configMainDimensions));
-		
+
 		ConfigCategory configOtherDimensions = config.getCategory(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS);
 		configOtherDimensions.setComment("Other Dimension Settings");
 		list.add(new ConfigElement(configOtherDimensions));
-		
+
 		ConfigCategory configDimenisonIDs = config.getCategory(Constants.CONFIG_CATEGORY_DIMENSION_IDS);
 		configDimenisonIDs.setComment("Dimension IDs");
 		list.add(new ConfigElement(configDimenisonIDs));
-		
+
 		ConfigCategory configDimensionSettings = config.getCategory(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS);
 		configDimensionSettings.setComment("Dimension Settings");
 		list.add(new ConfigElement(configDimensionSettings));
@@ -662,35 +700,35 @@ public class Config {
 		ConfigCategory configBiomeIDs = config.getCategory(Constants.CONFIG_CATEGORY_BIOME_IDS);
 		configBiomeIDs.setComment("Biome IDs;");
 		list.add(new ConfigElement(configBiomeIDs));
-		
+
 		ConfigCategory configItems = config.getCategory(Constants.CONFIG_CATEGORY_ITEMS);
 		configItems.setComment("Item Settings");
 		list.add(new ConfigElement(configItems));
-		
+
 		ConfigCategory configBlocks = config.getCategory(Constants.CONFIG_CATEGORY_BLOCKS);
 		configBlocks.setComment("Blocks Settings");
 		list.add(new ConfigElement(configBlocks));
-		
+
 		ConfigCategory configSpaceStations = config.getCategory(Constants.CONFIG_CATEGORY_SPACE_STATIONS);
 		configSpaceStations.setComment("Space Stations Settings");
 		list.add(new ConfigElement(configSpaceStations));
-		
+
 		ConfigCategory configSchematicGUIIDs = config.getCategory(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS);
 		configSchematicGUIIDs.setComment("Schematic GUI IDs");
 		list.add(new ConfigElement(configSchematicGUIIDs));
-		
+
 		ConfigCategory configSchematicPageIDs = config.getCategory(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS);
 		configSchematicPageIDs.setComment("Schematic Page IDs");
 		list.add(new ConfigElement(configSchematicPageIDs));
-		
+
 		ConfigCategory configCompatibility = config.getCategory(Constants.CONFIG_CATEGORY_COMPATIBILITY);
 		configCompatibility.setComment("Compatibility Settings");
 		list.add(new ConfigElement(configCompatibility));
-		
+
 		ConfigCategory configGeneralSettings = config.getCategory(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS);
 		configGeneralSettings.setComment("General Settings");
 		list.add(new ConfigElement(configGeneralSettings));
-		
+
 		ConfigCategory configCelestialMapSettings = config.getCategory(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS);
 		configCelestialMapSettings.setComment("Celestial Map Settings");
 		list.add(new ConfigElement(configCelestialMapSettings));
