@@ -9,6 +9,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
@@ -86,10 +87,10 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 							ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.BROKEN_INFECTED_STONE));
 				}
 			}
-			if (this.rand.nextInt(5) == 1) {
+			if (Config.GENERATE_SATURN_NUCLEAR_PILES && this.rand.nextInt(5) == 1) {
 				WorldGenUtilities.generateStructure(new WorldGenNuclearPile(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 			}
-			if (this.rand.nextInt(5) == 1) {
+			if (Config.GENERATE_SATURN_SLIME_TREES && this.rand.nextInt(5) == 1) {
 				WorldGenUtilities.generateStructure(new WorldGenSlimeTree(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 			}
 		}

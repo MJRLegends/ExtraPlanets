@@ -8,6 +8,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIOBurningPlains;
@@ -69,7 +70,7 @@ public class BiomeDecoratorIo extends BiomeDecoratorSpace {
 					WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.MAGMA, ExtraPlanets_Blocks.VOLCANIC_ROCK.getDefaultState());
 				}
 			}
-			if (this.rand.nextInt(5) == 1) {
+			if (Config.GENERATE_IO_VOLCANOS && this.rand.nextInt(5) == 1) {
 				WorldGenUtilities.generateStructure(new WorldGenVolcano(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 			}
 		}
