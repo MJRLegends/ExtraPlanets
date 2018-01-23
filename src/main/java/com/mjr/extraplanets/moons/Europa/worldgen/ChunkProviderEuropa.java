@@ -14,12 +14,14 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
 import com.mjr.mjrlegendslib.world.ChunkProviderMultiBiomeSpace;
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
+import com.mjr.mjrlegendslib.world.gen.MapGenFilledCaveGen;
 import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
 public class ChunkProviderEuropa extends ChunkProviderMultiBiomeSpace {
 	private final BiomeDecoratorEuropa ceresBiomeDecorator = new BiomeDecoratorEuropa();
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.EUROPA_BLOCKS, 0, 1, 2);
+	private final MapGenFilledCaveGen caveGenerator2 = new MapGenFilledCaveGen(ExtraPlanets_Blocks.EUROPA_BLOCKS, 0, 1, 2, ExtraPlanets_Fluids.SALT.getDefaultState());
 
 	public ChunkProviderEuropa(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
@@ -32,6 +34,7 @@ public class ChunkProviderEuropa extends ChunkProviderMultiBiomeSpace {
 	protected List<MapGenBaseMeta> getWorldGenerators() {
 		List<MapGenBaseMeta> generators = Lists.newArrayList();
 		generators.add(this.caveGenerator);
+		generators.add(this.caveGenerator2);
 		return generators;
 	}
 
