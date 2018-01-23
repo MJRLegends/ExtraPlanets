@@ -104,7 +104,7 @@ public class MainHandler {
 				event.setCanceled(true);
 			} else if (event.entity.worldObj.provider.dimensionId == Config.neptuneID) {
 				event.density = 0.01f;
-				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
+				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_LINEAR);
 				event.setCanceled(true);
 			}
 		}
