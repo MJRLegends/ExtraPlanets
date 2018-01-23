@@ -11,7 +11,7 @@ public class Constants {
 
 	public static final String MCVERSION = "[1.12.2]";
 	public static final String DEPENDENCIES_FORGE = "required-after:forge@[14.23.1.2555,);";
-	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib@[1.12.2-1.0.4,); required-after:galacticraftcore; required-after:galacticraftplanets; after:crafttweaker@[3.0.25.,);";
+	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib@[1.12.2-1.0.5,); required-after:galacticraftcore; required-after:galacticraftplanets; after:crafttweaker@[3.0.25.,);";
 
 	public static final String ASSET_PREFIX = modID;
 	public static final String TEXTURE_PREFIX = ASSET_PREFIX + ":";
