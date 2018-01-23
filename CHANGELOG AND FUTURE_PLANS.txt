@@ -17,53 +17,34 @@
 v0.1.5
 *Converted Basic Block Smasher over to a general list of recipes
 *Added CraftTweaker Support for Basic Smasher
-
 *Few fixes for Block Smasher Recipe System
-
 *Converted Basic Solar Evaporation Chamber over to a general list of recipes
 *Fixed a few automation issues with some machines
-
 *Added CraftTweaker Support for Basic Solar Evaporation Chamber
-
 *Changes to timing of registering machine recipes
 *Fixes for CraftTweaker dependency requirement
 *Changes for latest Galacticraft API changes
 *Fixed Triton Ice Sea Biome
 *Refactor more code/classes to MJRLegendsLib
 *Added Json Recipe for Anti Radiation Drink
-
 *Fixed OpenGL Error spam
-
 *Added Diamond, Gold, Coal, Iron, Emerald Grit Blocks
-
 *Added Kepler22b Diamond Plains Biome
-
 *Added Diamond Trees to the Diamond Plains Biome
-
 *Added Diamond Ore Spheres to the Diamond Plains Biome
 *Added Kepler22b Coal, Iron, Gold, Emerald Plains Biome
-
 *Added Coal, Iron, Gold, Emerald Trees to the Coal, Iron, Gold, Emerald Plains Biome
-
 *Added Coal, Iron, Gold, Emerald Ore Spheres to the Coal, Iron, Gold, Emerald Plains Biome
-
 *Changed Kepler22b Rare biomes rate
-
 *Fixed Emerald Grit having the wrong name
-
 *Converted Europa over to multi biome system
-
 *Added Europa Salt Sea Biome
-
 *Added Europa Valleys Biome
-
 *Added Spheres of Iron ore generation between y 20 & 40
 *Added Caves full of Liquid Crystallized Water to Europa
 *Added Config options for 90% of the world gen features
 *Removed the Config option for Ceres Rocket Tier requirement
-
 *Updated lang files
-
 *Fixes names for Eris Bosses
 *Added/Tweaks to comments on all Config options
 *Changed requirement of MJRLegendsLib to 1.12.2-1.0.5 & above
