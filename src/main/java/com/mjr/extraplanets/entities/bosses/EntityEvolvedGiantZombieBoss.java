@@ -49,10 +49,6 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob, IEntityBreathable {
 	private static final DataParameter<Boolean> ARMS_RAISED = EntityDataManager.<Boolean> createKey(EntityZombie.class, DataSerializers.BOOLEAN);
-	/** The width of the entity */
-	private float zombieWidth = -1.0F;
-	/** The height of the the entity. */
-	private float zombieHeight;
 
 	public EntityEvolvedGiantZombieBoss(World world) {
 		super(world);
@@ -190,60 +186,9 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 		super.readEntityFromNBT(compound);
 	}
 
-	public float getEyeHeight() {
-		float f = 1.74F;
-
-		if (this.isChild()) {
-			f = (float) ((double) f - 0.81D);
-		}
-
-		return f;
-	}
-
-	protected boolean canEquipItem(ItemStack stack) {
-		return stack.getItem() == Items.EGG && this.isChild() && this.isRiding() ? false : super.canEquipItem(stack);
-	}
-
 	@SideOnly(Side.CLIENT)
 	public void handleStatusUpdate(byte id) {
 		super.handleStatusUpdate(id);
-	}
-
-	/**
-	 * Sets the width and height of the entity.
-	 */
-	protected final void setSize(float width, float height) {
-		boolean flag = this.zombieWidth > 0.0F && this.zombieHeight > 0.0F;
-		this.zombieWidth = width;
-		this.zombieHeight = height;
-
-		if (!flag) {
-			this.multiplySize(1.0F);
-		}
-	}
-
-	/**
-	 * Multiplies the height and width by the provided float.
-	 */
-	protected final void multiplySize(float size) {
-		super.setSize(this.zombieWidth * size, this.zombieHeight * size);
-	}
-
-	/**
-	 * Returns the Y Offset of this entity.
-	 */
-	public double getYOffset() {
-		return -0.35D;
-	}
-
-	class GroupData implements IEntityLivingData {
-		public boolean isChild;
-		public boolean isVillager;
-
-		private GroupData(boolean isBaby, boolean isVillagerZombie) {
-			this.isChild = isBaby;
-			this.isVillager = isVillagerZombie;
-		}
 	}
 
 	@Override
