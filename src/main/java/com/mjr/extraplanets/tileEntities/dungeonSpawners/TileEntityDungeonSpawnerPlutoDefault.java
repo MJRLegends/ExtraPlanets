@@ -3,19 +3,20 @@ package com.mjr.extraplanets.tileEntities.dungeonSpawners;
 import java.util.ArrayList;
 import java.util.List;
 
+import micdoodle8.mods.galacticraft.core.client.sounds.GCSounds;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.util.SoundCategory;
 
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedSpacemanBoss;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 
-public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner<EntityEvolvedSpacemanBoss> {
-	public TileEntityDungeonSpawnerPluto() {
-		super(EntityEvolvedSpacemanBoss.class);
+public class TileEntityDungeonSpawnerPlutoDefault extends TileEntityDungeonSpawner<EntityCreeperBossPluto> {
+	public TileEntityDungeonSpawnerPlutoDefault() {
+		super(EntityCreeperBossPluto.class);
 	}
 
 	@Override
@@ -29,6 +30,6 @@ public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner<Enti
 
 	@Override
 	public void playSpawnSound(Entity entity) {
-		this.worldObj.playSoundAtEntity(entity, Constants.TEXTURE_PREFIX + "ambience.scaryscape", 9.0F, 1.4F);
+		this.world.playSound(null, entity.posX, entity.posY, entity.posZ, GCSounds.scaryScape, SoundCategory.AMBIENT, 9.0F, 1.4F);
 	}
 }

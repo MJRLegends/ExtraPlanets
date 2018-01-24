@@ -83,6 +83,7 @@ import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedGiantZomb
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedSnowmanBoss;
+import com.mjr.extraplanets.client.render.entities.bosses.RenderEvolvedSpacemanBoss;
 import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossEris;
 import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossJupiter;
 import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.RenderCreeperBossMercury;
@@ -126,6 +127,7 @@ import com.mjr.extraplanets.entities.bosses.EntityEvolvedGiantZombieBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedSpacemanBoss;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossMercury;
@@ -393,7 +395,11 @@ public class ClientProxy extends CommonProxy {
 			RenderingRegistry.registerEntityRenderingHandler(EntityNeptuneLander.class, (RenderManager manager) -> new RenderNeptuneLander(manager));
 		}
 		if (Config.PLUTO)
-			RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossPluto.class, (RenderManager manager) -> new RenderCreeperBossPluto(manager));
+			if (Config.USE_DEFAULT_BOSSES)
+				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossPluto.class, (RenderManager manager) -> new RenderCreeperBossPluto(manager));
+			else
+				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedSpacemanBoss.class, (RenderManager manager) -> new RenderEvolvedSpacemanBoss(manager));
+
 		if (Config.ERIS) {
 			if (Config.USE_DEFAULT_BOSSES)
 				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossEris.class, (RenderManager manager) -> new RenderCreeperBossEris(manager));
