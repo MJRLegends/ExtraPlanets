@@ -182,18 +182,18 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 
 	@Override
 	public int getChestTier() {
-		return 10;
+		return 9;
 	}
 
 	@Override
 	public void dropKey() {
-		this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_10_KEY, 1, 0), 0.5F);
+		this.entityDropItem(new ItemStack(ExtraPlanets_Items.TIER_9_KEY, 1, 0), 0.5F);
 	}
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList;
-		stackList = GalacticraftRegistry.getDungeonLoot(10);
+		stackList = GalacticraftRegistry.getDungeonLoot(9);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
 	}
 
