@@ -16,14 +16,15 @@ import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
+import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropa;
 import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaIceValleys;
 import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaSaltSea;
 
 public class EuropaBiomes extends Biome {
 
-	public static final BiomeGenBase europa = new BiomeGenEuropa(new BiomeProperties("Europa").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final BiomeGenBase europaSaltSea = new BiomeGenEuropaSaltSea(new BiomeProperties("Europa Salt Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-	public static final BiomeGenBase europaIceValleys = new BiomeGenEuropaIceValleys(new BiomeProperties("Europa Ice Valleys").setBaseHeight(-0.4F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome europa = new BiomeGenEuropa(new BiomeProperties("Europa").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome europaSaltSea = new BiomeGenEuropaSaltSea(new BiomeProperties("Europa Salt Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome europaIceValleys = new BiomeGenEuropaIceValleys(new BiomeProperties("Europa Ice Valleys").setBaseHeight(-0.4F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
 
 	protected EuropaBiomes(BiomeProperties properties) {
 		super(properties);
@@ -42,7 +43,7 @@ public class EuropaBiomes extends Biome {
 	}
 
 	protected BiomeDecoratorEuropaOther getBiomeDecorator() {
-		return (BiomeDecoratorEuropaOther) this.decorator;
+		return (BiomeDecoratorEuropaOther) this.theBiomeDecorator;
 	}
 
 	@Override
@@ -82,7 +83,7 @@ public class EuropaBiomes extends Biome {
 						}
 
 						if (j1 < 63 && (iblockstate == null || iblockstate.getMaterial() == Material.AIR)) {
-							if (this.getTemperature(blockpos$mutableblockpos.setPos(x, j1, z)) < 0.15F) {
+							if (this.getFloatTemperature(blockpos$mutableblockpos.setPos(x, j1, z)) < 0.15F) {
 								iblockstate = Blocks.ICE.getDefaultState();
 							} else {
 								iblockstate = Blocks.WATER.getDefaultState();

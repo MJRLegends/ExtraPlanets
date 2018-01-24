@@ -84,8 +84,8 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 		if (super.attackEntityFrom(source, amount)) {
 			EntityLivingBase entitylivingbase = this.getAttackTarget();
 
-			if (entitylivingbase == null && source.getTrueSource() instanceof EntityLivingBase) {
-				entitylivingbase = (EntityLivingBase) source.getTrueSource();
+			if (entitylivingbase == null && source.getEntity() instanceof EntityLivingBase) {
+				entitylivingbase = (EntityLivingBase) source.getEntity();
 			}
 			return true;
 		} else {
