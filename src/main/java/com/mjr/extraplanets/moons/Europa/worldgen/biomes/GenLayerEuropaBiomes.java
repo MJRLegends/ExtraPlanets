@@ -1,14 +1,14 @@
 package com.mjr.extraplanets.moons.Europa.worldgen.biomes;
 
 import micdoodle8.mods.miccore.IntCache;
-import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 
 import com.mjr.extraplanets.moons.Europa.worldgen.EuropaBiomes;
 
 public class GenLayerEuropaBiomes extends GenLayer {
-	private static final Biome[] biomes = new Biome[] { EuropaBiomes.europa, EuropaBiomes.europaSaltSea, EuropaBiomes.europaIceValleys };
-	private static final Biome[] biomesRare = new Biome[] { EuropaBiomes.europa };
+	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { EuropaBiomes.europa, EuropaBiomes.europaSaltSea, EuropaBiomes.europaIceValleys };
+	private static final BiomeGenBase[] biomesRare = new BiomeGenBase[] { EuropaBiomes.europa };
 
 	public GenLayerEuropaBiomes(long l, GenLayer parent) {
 		super(l);
@@ -27,9 +27,9 @@ public class GenLayerEuropaBiomes extends GenLayer {
 			for (int i = 0; i < width; ++i) {
 				initChunkSeed(x + i, z + k);
 				if (this.nextInt(10) == 0) {
-					dest[i + k * width] = Biome.getIdForBiome(biomesRare[nextInt(biomesRare.length)]);
+					dest[i + k * width] = biomesRare[nextInt(biomesRare.length)].biomeID;
 				} else {
-					dest[i + k * width] = Biome.getIdForBiome(biomes[nextInt(biomes.length)]);
+					dest[i + k * width] = biomes[nextInt(biomes.length)].biomeID;
 				}
 			}
 		}

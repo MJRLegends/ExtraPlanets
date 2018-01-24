@@ -111,7 +111,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 		if (Config.GENERATE_KEPLER22B_DUNGEONS) {
 			for (int i = 0; i < 1; i++) {
-				WorldGenUtilities.generateStructureWithRandom(new WorldGenKepler22bDungeons(), worldIn, random, this.chunkPos, 16, 256);
+				WorldGenUtilities.generateStructureWithRandom(new WorldGenKepler22bDungeons(), worldIn, random, pos, 16, 256);
 			}
 		}
 		if (Config.GENERATE_KEPLER22B_HUTS) {
@@ -120,22 +120,22 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 					if (random.nextInt(200) == 1) {
 						switch (random.nextInt(7)) {
 						case 1:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueHut(), worldIn, random, this.chunkPos, 16);
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueHut(), worldIn, random, pos, 16);
 							break;
 						case 2:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenRedHut(), worldIn, random, this.chunkPos, 16);
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenRedHut(), worldIn, random, pos, 16);
 							break;
 						case 3:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenPurpleHut(), worldIn, random, this.chunkPos, 16);
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenPurpleHut(), worldIn, random, pos, 16);
 							break;
 						case 4:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenYellowHut(), worldIn, random, this.chunkPos, 16);
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenYellowHut(), worldIn, random, pos, 16);
 							break;
 						case 5:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenGreenHut(), worldIn, random, this.chunkPos, 16);
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenGreenHut(), worldIn, random, pos, 16);
 							break;
 						case 6:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenBrownHut(), worldIn, random, this.chunkPos, 16);
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenBrownHut(), worldIn, random, pos, 16);
 							break;
 						}
 					}
@@ -162,7 +162,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 					worldIn.setBlockState(worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + (random.nextInt(6)), 0, pos.getZ() + (random.nextInt(6)))), Blocks.cake.getDefaultState());
 				}
 				if (Config.GENERATE_KEPLER22B_COOKIE_ROCKS && random.nextInt(100) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + (random.nextInt(6)), 0, this.chunkPos.getZ() + (random.nextInt(6))).down(2));
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + (random.nextInt(6)), 0, pos.getZ() + (random.nextInt(6))).down(2));
 					(new WorldGenCookieRocksType1()).generate(worldIn, random, blockpos);
 				}
 				if (random.nextInt(10) == 0) {
@@ -186,25 +186,25 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		if (Config.GENERATE_KEPLER22B_TOWERS) {
 			for (int i = 0; i < this.blueTowerPerChunk; i++) {
 				if (random.nextInt(100) == 1) {
-					WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueTower(), worldIn, random, this.chunkPos, 8);
+					WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueTower(), worldIn, random, pos, 8);
 				}
 			}
 		}
 		if (Config.GENERATE_KEPLER22B_NO_LEAF_SMALL_TREES) {
 			for (int i = 0; i < this.treeWithNoLeafsPerChunk; i++) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				if (random.nextInt(5) < 5)
 					blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
 				else
 					blockpos = blockpos.add(random.nextInt(12) * -1, 0, random.nextInt(12) * -1);
-				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getDefaultState().withProperty(BlockKepler22bMapleTreeLog2.VARIANT, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_GREEN), Blocks.AIR.getDefaultState(), false)
+				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getDefaultState().withProperty(BlockKepler22bMapleTreeLog2.VARIANT, BlockKepler22bMapleTreeLog2.EnumType.MAPLE_GREEN), Blocks.air.getDefaultState(), false)
 						.generate(worldIn, random, blockpos);
 			}
 		}
 		if (Config.GENERATE_KEPLER22B_NO_LEAF_BIG_TREES) {
 			for (int i = 0; i < this.bigTreeWithNoLeafsPerChunk; i++) {
 				if (random.nextInt(5) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 					blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
 					new WorldGenLogTree().generate(worldIn, random, blockpos);
 				}
@@ -213,87 +213,87 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		if (Config.GENERATE_KEPLER22B_SPHERES) {
 			for (int i = 0; i < this.diamondSpheresPerChunk; i++) {
 				if (random.nextInt(5) == 1) {
-					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.DIAMOND_ORE.getDefaultState(), 9, 0), worldIn, random, this.chunkPos, 6);
+					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.diamond_ore.getDefaultState(), 9, 0), worldIn, random, pos, 6);
 				}
 			}
 			for (int i = 0; i < this.coalSpheresPerChunk; i++) {
 				if (random.nextInt(5) == 1) {
-					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.COAL_ORE.getDefaultState(), 9, 0), worldIn, random, this.chunkPos, 6);
+					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.coal_ore.getDefaultState(), 9, 0), worldIn, random, pos, 6);
 				}
 			}
 
 			for (int i = 0; i < this.ironSpheresPerChunk; i++) {
 				if (random.nextInt(5) == 1) {
-					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.IRON_ORE.getDefaultState(), 9, 0), worldIn, random, this.chunkPos, 6);
+					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.iron_ore.getDefaultState(), 9, 0), worldIn, random, pos, 6);
 				}
 			}
 
 			for (int i = 0; i < this.goldSpheresPerChunk; i++) {
 				if (random.nextInt(5) == 1) {
-					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.GOLD_ORE.getDefaultState(), 9, 0), worldIn, random, this.chunkPos, 6);
+					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.gold_ore.getDefaultState(), 9, 0), worldIn, random, pos, 6);
 				}
 			}
 			for (int i = 0; i < this.emeraldSpheresPerChunk; i++) {
 				if (random.nextInt(5) == 1) {
-					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.EMERALD_ORE.getDefaultState(), 9, 0), worldIn, random, this.chunkPos, 6);
+					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(Config.DEBUG_MODE, Constants.modID, Blocks.emerald_ore.getDefaultState(), 9, 0), worldIn, random, pos, 6);
 				}
 			}
 		}
 		if (Config.GENERATE_KEPLER22B_MATERIAL_TREES) {
 			for (int i = 0; i < this.diamondTreesPerChunk; i++) {
 				if (random.nextInt(5) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 					blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-					new WorldGenKepler22bTree(true, 12, Blocks.DIAMOND_ORE.getDefaultState(), Blocks.DIAMOND_BLOCK.getDefaultState(), false).generate(worldIn, random, blockpos);
+					new WorldGenKepler22bTree(true, 12, Blocks.diamond_ore.getDefaultState(), Blocks.diamond_block.getDefaultState(), false).generate(worldIn, random, blockpos);
 				}
 			}
 			for (int i = 0; i < this.coalTreesPerChunk; i++) {
 				if (random.nextInt(5) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 					blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-					new WorldGenKepler22bTree(true, 12, Blocks.COAL_ORE.getDefaultState(), Blocks.COAL_BLOCK.getDefaultState(), false).generate(worldIn, random, blockpos);
+					new WorldGenKepler22bTree(true, 12, Blocks.coal_ore.getDefaultState(), Blocks.coal_block.getDefaultState(), false).generate(worldIn, random, blockpos);
 				}
 			}
 			for (int i = 0; i < this.ironTreesPerChunk; i++) {
 				if (random.nextInt(5) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 					blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-					new WorldGenKepler22bTree(true, 12, Blocks.IRON_ORE.getDefaultState(), Blocks.IRON_BLOCK.getDefaultState(), false).generate(worldIn, random, blockpos);
+					new WorldGenKepler22bTree(true, 12, Blocks.iron_ore.getDefaultState(), Blocks.iron_block.getDefaultState(), false).generate(worldIn, random, blockpos);
 				}
 			}
 			for (int i = 0; i < this.goldTreesPerChunk; i++) {
 				if (random.nextInt(5) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 					blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-					new WorldGenKepler22bTree(true, 12, Blocks.GOLD_ORE.getDefaultState(), Blocks.GOLD_BLOCK.getDefaultState(), false).generate(worldIn, random, blockpos);
+					new WorldGenKepler22bTree(true, 12, Blocks.gold_ore.getDefaultState(), Blocks.gold_block.getDefaultState(), false).generate(worldIn, random, blockpos);
 				}
 			}
 			for (int i = 0; i < this.emeraldTreesPerChunk; i++) {
 				if (random.nextInt(5) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 					blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
-					new WorldGenKepler22bTree(true, 12, Blocks.EMERALD_ORE.getDefaultState(), Blocks.EMERALD_BLOCK.getDefaultState(), false).generate(worldIn, random, blockpos);
+					new WorldGenKepler22bTree(true, 12, Blocks.emerald_ore.getDefaultState(), Blocks.emerald_block.getDefaultState(), false).generate(worldIn, random, blockpos);
 				}
 			}
 		}
 		if (Config.GENERATE_KEPLER22B_BIG_TREES) {
 			for (int i = 0; i < this.purpleBigTreesPerChunk; i++) {
 				if (random.nextInt(100) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 					blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
 					new WorldGenBigPurpleTree().generate(worldIn, random, blockpos);
 				}
 			}
 			for (int i = 0; i < this.blueBigTreesPerChunk; i++) {
 				if (random.nextInt(100) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 					blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
 					new WorldGenBigBlueTree().generate(worldIn, random, blockpos);
 				}
 			}
 			for (int i = 0; i < this.redBigTreesPerChunk; i++) {
 				if (random.nextInt(100) == 1) {
-					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+					BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 					blockpos = blockpos.add(random.nextInt(8), 0, random.nextInt(8));
 					new WorldGenBigRedTree().generate(worldIn, random, blockpos);
 				}
@@ -301,7 +301,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 		if (Config.GENERATE_KEPLER22B_SMALL_TREES) {
 			for (int i = 0; i < blueTreesPerChunk; i++) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				if (random.nextInt(5) < 5)
 					blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
 				else
@@ -309,7 +309,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getStateFromMeta(0), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getStateFromMeta(0), false).generate(worldIn, random, blockpos);
 			}
 			for (int i = 0; i < redTreesPerChunk; i++) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				if (random.nextInt(5) < 5)
 					blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
 				else
@@ -317,7 +317,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getStateFromMeta(1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getStateFromMeta(1), false).generate(worldIn, random, blockpos);
 			}
 			for (int i = 0; i < purpleTreesPerChunk; i++) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				if (random.nextInt(5) < 5)
 					blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
 				else
@@ -325,7 +325,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getStateFromMeta(2), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getStateFromMeta(2), false).generate(worldIn, random, blockpos);
 			}
 			for (int i = 0; i < yellowTreesPerChunk; i++) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				if (random.nextInt(5) < 5)
 					blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
 				else
@@ -333,7 +333,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG.getStateFromMeta(3), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF.getStateFromMeta(3), false).generate(worldIn, random, blockpos);
 			}
 			for (int i = 0; i < greenTreesPerChunk; i++) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				if (random.nextInt(5) < 5)
 					blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
 				else
@@ -341,7 +341,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 				new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(0), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF2.getStateFromMeta(0), false).generate(worldIn, random, blockpos);
 			}
 			for (int i = 0; i < brownTreesPerChunk; i++) {
-				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + 8, 0, this.chunkPos.getZ() + 8));
+				BlockPos blockpos = worldIn.getTopSolidOrLiquidBlock(new BlockPos(pos.getX() + 8, 0, pos.getZ() + 8));
 				if (random.nextInt(5) < 5)
 					blockpos = blockpos.add(random.nextInt(12), 0, random.nextInt(12));
 				else

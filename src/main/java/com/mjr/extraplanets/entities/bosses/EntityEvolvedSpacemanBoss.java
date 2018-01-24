@@ -5,15 +5,15 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
+import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.EntityAIAttackMelee;
+import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAILookIdle;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
@@ -22,13 +22,10 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.BossInfo.Color;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.relauncher.Side;
@@ -45,7 +42,7 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 
 	protected void initEntityAI() {
 		this.tasks.addTask(0, new EntityAISwimming(this));
-		this.tasks.addTask(2, new EntityAIAttackMelee(this, 1.0D, false));
+		this.tasks.addTask(2, new EntityAIAttackOnCollide(this, 1.0D, false));
 		this.tasks.addTask(7, new EntityAIWander(this, 1.0D));
 		this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
 		this.tasks.addTask(8, new EntityAILookIdle(this));
@@ -54,11 +51,10 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
-		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(1300.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(100.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.23000000417232513D);
-		this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(6.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(12.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1300.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(100.0D);
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.23000000417232513D);
+		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(6.0D);
 	}
 
 	protected void entityInit() {
@@ -69,10 +65,10 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 	protected void onDeathUpdate() {
 		super.onDeathUpdate();
 
-		if (!this.world.isRemote) {
+		if (!this.worldObj.isRemote) {
 			if (this.deathTicks == 100) {
-				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.world), new Object[] { 1.5F }),
-						new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.world), this.posX, this.posY, this.posZ, 40.0D));
+				GalacticraftCore.packetPipeline.sendToAllAround(new PacketSimple(PacketSimple.EnumSimplePacket.C_PLAY_SOUND_BOSS_DEATH, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { 1.5F }),
+						new NetworkRegistry.TargetPoint(GCCoreUtil.getDimensionID(this.worldObj), this.posX, this.posY, this.posZ, 40.0D));
 			}
 		}
 	}
@@ -84,8 +80,8 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 		if (super.attackEntityFrom(source, amount)) {
 			EntityLivingBase entitylivingbase = this.getAttackTarget();
 
-			if (entitylivingbase == null && source.getTrueSource() instanceof EntityLivingBase) {
-				entitylivingbase = (EntityLivingBase) source.getTrueSource();
+			if (entitylivingbase == null && source.getEntity() instanceof EntityLivingBase) {
+				entitylivingbase = (EntityLivingBase) source.getEntity();
 			}
 			return true;
 		} else {
@@ -104,9 +100,9 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 		boolean flag = super.attackEntityAsMob(entityIn);
 
 		if (flag) {
-			float f = this.world.getDifficultyForLocation(new BlockPos(this)).getAdditionalDifficulty();
+			float f = this.worldObj.getDifficultyForLocation(new BlockPos(this)).getAdditionalDifficulty();
 
-			if (this.getHeldItemMainhand() == null) {
+			if (this.getHeldItem() == null) {
 				if (this.isBurning() && this.rand.nextFloat() < f * 0.3F) {
 					entityIn.setFire(2 * (int) f);
 				}
@@ -116,21 +112,20 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 		return flag;
 	}
 
-	protected SoundEvent getAmbientSound() {
-		return SoundEvents.ENTITY_ZOMBIE_VILLAGER_AMBIENT;
+	@Override
+	protected String getLivingSound() {
+		return null;
 	}
 
-	protected SoundEvent getHurtSound() {
-		return SoundEvents.ENTITY_ZOMBIE_VILLAGER_HURT;
+	@Override
+	protected String getHurtSound() {
+		this.playSound(Constants.TEXTURE_PREFIX + "entity.bossliving", this.getSoundVolume(), this.getSoundPitch() + 6.0F);
+		return null;
 	}
 
-	protected SoundEvent getDeathSound() {
-		return SoundEvents.ENTITY_ZOMBIE_VILLAGER_DEATH;
-	}
-
-	protected void playStepSound(BlockPos pos, Block blockIn) {
-		SoundEvent soundevent = SoundEvents.ENTITY_ZOMBIE_VILLAGER_STEP;
-		this.playSound(soundevent, 0.15F, 1.0F);
+	@Override
+	protected String getDeathSound() {
+		return null;
 	}
 
 	/**
@@ -164,13 +159,13 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 
 	@Override
 	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
 		entityitem.motionY = -2.0D;
 		entityitem.setDefaultPickupDelay();
 		if (this.captureDrops) {
 			this.capturedDrops.add(entityitem);
 		} else {
-			this.world.spawnEntity(entityitem);
+			this.worldObj.spawnEntityInWorld(entityitem);
 		}
 		return entityitem;
 	}
@@ -195,10 +190,5 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 		List<ItemStack> stackList;
 		stackList = GalacticraftRegistry.getDungeonLoot(10);
 		return stackList.get(rand.nextInt(stackList.size())).copy();
-	}
-
-	@Override
-	public Color getHealthBarColor() {
-		return Color.BLUE;
 	}
 }

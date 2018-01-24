@@ -102,7 +102,7 @@ public class RenderEvolvedSpacemanBoss extends Render<EntityEvolvedSpacemanBoss>
 
 	@Override
 	protected ResourceLocation getEntityTexture(EntityEvolvedSpacemanBoss par1Entity) {
-		return TextureMap.LOCATION_BLOCKS_TEXTURE;
+		return TextureMap.locationBlocksTexture;
 	}
 
 	@Override
@@ -116,7 +116,7 @@ public class RenderEvolvedSpacemanBoss extends Render<EntityEvolvedSpacemanBoss>
 		//GlStateManager.rotate(-pitch, 0.0F, 0.0F, 1.0F);
 
 		this.updateModel();
-		this.bindTexture(TextureMap.LOCATION_BLOCKS_TEXTURE);
+		this.bindTexture(TextureMap.locationBlocksTexture);
 
 		if (Minecraft.isAmbientOcclusionEnabled()) {
 			GlStateManager.shadeModel(GL11.GL_SMOOTH);
