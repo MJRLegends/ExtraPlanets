@@ -13,7 +13,6 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
-import net.minecraft.entity.IEntityLivingData;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAILookIdle;
@@ -26,7 +25,6 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.BlockPos;
@@ -39,10 +37,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob, IEntityBreathable {
-	/** The width of the entity */
-	private float zombieWidth = -1.0F;
-	/** The height of the the entity. */
-	private float zombieHeight;
 
 	public EntityEvolvedGiantZombieBoss(World world) {
 		super(world);
@@ -167,60 +161,9 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 		super.readEntityFromNBT(compound);
 	}
 
-	public float getEyeHeight() {
-		float f = 1.74F;
-
-		if (this.isChild()) {
-			f = (float) ((double) f - 0.81D);
-		}
-
-		return f;
-	}
-
-	protected boolean func_175448_a(ItemStack stack) {
-		return stack.getItem() == Items.egg && this.isChild() && this.isRiding() ? false : super.func_175448_a(stack);
-	}
-
 	@SideOnly(Side.CLIENT)
 	public void handleStatusUpdate(byte id) {
 		super.handleStatusUpdate(id);
-	}
-
-	/**
-	 * Sets the width and height of the entity.
-	 */
-	protected final void setSize(float width, float height) {
-		boolean flag = this.zombieWidth > 0.0F && this.zombieHeight > 0.0F;
-		this.zombieWidth = width;
-		this.zombieHeight = height;
-
-		if (!flag) {
-			this.multiplySize(1.0F);
-		}
-	}
-
-	/**
-	 * Multiplies the height and width by the provided float.
-	 */
-	protected final void multiplySize(float size) {
-		super.setSize(this.zombieWidth * size, this.zombieHeight * size);
-	}
-
-	/**
-	 * Returns the Y Offset of this entity.
-	 */
-	public double getYOffset() {
-		return -0.35D;
-	}
-
-	class GroupData implements IEntityLivingData {
-		public boolean isChild;
-		public boolean isVillager;
-
-		private GroupData(boolean isBaby, boolean isVillagerZombie) {
-			this.isChild = isBaby;
-			this.isVillager = isVillagerZombie;
-		}
 	}
 
 	@Override
