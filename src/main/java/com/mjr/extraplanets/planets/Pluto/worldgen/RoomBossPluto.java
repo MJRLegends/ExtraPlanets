@@ -11,8 +11,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerPluto;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerPlutoDefault;
 
 public class RoomBossPluto extends RoomBoss {
 	public RoomBossPluto() {
@@ -83,9 +85,16 @@ public class RoomBossPluto extends RoomBoss {
 		// Is this position inside the chunk currently being generated?
 		if (chunkBox.isVecInside(blockpos)) {
 			worldIn.setBlockState(blockpos, ExtraPlanets_Blocks.PLUTO_SPAWNER.getDefaultState(), 2);
-			TileEntityDungeonSpawnerPluto spawner = (TileEntityDungeonSpawnerPluto) worldIn.getTileEntity(blockpos);
-			if (spawner != null) {
-				spawner.setRoom(new Vector3(this.boundingBox.minX + 1, this.boundingBox.minY + 1, this.boundingBox.minZ + 1), new Vector3(this.sizeX - 1, this.sizeY - 1, this.sizeZ - 1));
+			if (Config.USE_DEFAULT_BOSSES) {
+				TileEntityDungeonSpawnerPlutoDefault spawner = (TileEntityDungeonSpawnerPlutoDefault) worldIn.getTileEntity(blockpos);
+				if (spawner != null) {
+					spawner.setRoom(new Vector3(this.boundingBox.minX + 1, this.boundingBox.minY + 1, this.boundingBox.minZ + 1), new Vector3(this.sizeX - 1, this.sizeY - 1, this.sizeZ - 1));
+				}
+			} else {
+				TileEntityDungeonSpawnerPluto spawner = (TileEntityDungeonSpawnerPluto) worldIn.getTileEntity(blockpos);
+				if (spawner != null) {
+					spawner.setRoom(new Vector3(this.boundingBox.minX + 1, this.boundingBox.minY + 1, this.boundingBox.minZ + 1), new Vector3(this.sizeX - 1, this.sizeY - 1, this.sizeZ - 1));
+				}
 			}
 		}
 

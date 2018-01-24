@@ -35,6 +35,7 @@ import com.mjr.extraplanets.entities.bosses.EntityEvolvedGiantZombieBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedSpacemanBoss;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossJupiter;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossMercury;
@@ -426,7 +427,10 @@ public class ExtraPlanets {
 			else
 				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedSnowmanBoss.class, "EvolvedSnowmanBoss", 894731, 0);
 		if (Config.PLUTO)
-			RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossPluto.class, "CreeperBossPluto", 894731, 0);
+			if (Config.USE_DEFAULT_BOSSES)
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossPluto.class, "CreeperBossPluto", 894731, 0);
+			else
+				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedSpacemanBoss.class, "EvolvedSpaceManBoss", 894731, 0);
 		if (Config.ERIS)
 			if (Config.USE_DEFAULT_BOSSES)
 				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossEris.class, "CreeperBossEris", 894731, 0);

@@ -12,11 +12,11 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.SoundCategory;
 
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedSpacemanBoss;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
 
-public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner<EntityEvolvedSpacemanBoss> {
-	public TileEntityDungeonSpawnerPluto() {
-		super(EntityEvolvedSpacemanBoss.class);
+public class TileEntityDungeonSpawnerPlutoDefault extends TileEntityDungeonSpawner<EntityCreeperBossPluto> {
+	public TileEntityDungeonSpawnerPlutoDefault() {
+		super(EntityCreeperBossPluto.class);
 	}
 
 	@Override
@@ -30,6 +30,6 @@ public class TileEntityDungeonSpawnerPluto extends TileEntityDungeonSpawner<Enti
 
 	@Override
 	public void playSpawnSound(Entity entity) {
-		this.worldObj.playSound(null, entity.posX, entity.posY, entity.posZ, GCSounds.scaryScape, SoundCategory.AMBIENT, 9.0F, 1.4F);
+		this.world.playSound(null, entity.posX, entity.posY, entity.posZ, GCSounds.scaryScape, SoundCategory.AMBIENT, 9.0F, 1.4F);
 	}
 }
