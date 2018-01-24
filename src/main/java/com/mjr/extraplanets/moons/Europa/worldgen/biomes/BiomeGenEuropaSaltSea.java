@@ -13,6 +13,7 @@ import com.mjr.extraplanets.moons.Europa.worldgen.EuropaBiomes;
 public class BiomeGenEuropaSaltSea extends EuropaBiomes {
 	public BiomeGenEuropaSaltSea(BiomeProperties properties) {
 		super(properties);
+		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.OCEAN);
 		this.spawnableCreatureList.clear();
 		this.topBlock = ExtraPlanets_Fluids.SALT.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Fluids.SALT.getDefaultState();
@@ -21,10 +22,5 @@ public class BiomeGenEuropaSaltSea extends EuropaBiomes {
 	@Override
 	public List<Biome.SpawnListEntry> getSpawnableList(EnumCreatureType creatureType) {
 		return Lists.<Biome.SpawnListEntry> newArrayList();
-	}
-
-	@Override
-	public void registerTypes() {
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.OCEAN);
 	}
 }
