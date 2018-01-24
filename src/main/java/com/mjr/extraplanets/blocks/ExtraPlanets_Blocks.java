@@ -100,6 +100,7 @@ import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier2LandingPadSingle;
 import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPad;
 import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPadSingle;
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerEris;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerErisDefault;
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerJupiter;
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerJupiterDefault;
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerMercury;
@@ -107,6 +108,7 @@ import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawne
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerNeptune;
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerNeptuneDefault;
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerPluto;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerPlutoDefault;
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerSaturn;
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerSaturnDefault;
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerUranus;
@@ -284,7 +286,7 @@ public class ExtraPlanets_Blocks {
 	public static Block CAKE_BLOCKS;
 
 	public static BlockWhiteSugerCane WHITE_SUGAR_CANE;
-	
+
 	public static Block DIAMOND_GRIT;
 	public static Block GOLD_GRIT;
 	public static Block COAL_GRIT;
@@ -835,11 +837,17 @@ public class ExtraPlanets_Blocks {
 			RegisterUtilities.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
 		}
 		if (Config.PLUTO) {
-			RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
+			if (Config.USE_DEFAULT_BOSSES)
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerPlutoDefault.class, Constants.modName + "Pluto Dungeon Default Spawner");
+			else
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerPluto.class, Constants.modName + "Pluto Dungeon Spawner");
 			RegisterUtilities.registerTileEntity(TileEntityT9TreasureChest.class, Constants.modName + "Tier 9 Treasure Chest");
 		}
 		if (Config.ERIS) {
-			RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
+			if (Config.USE_DEFAULT_BOSSES)
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerErisDefault.class, Constants.modName + "Eris Dungeon Default Spawner");
+			else
+				RegisterUtilities.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
 			RegisterUtilities.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");
 		}
 		RegisterUtilities.registerTileEntity(TileEntityTier2LandingPadSingle.class, "Tier 2 Landing Pad");
