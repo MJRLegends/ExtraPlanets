@@ -66,7 +66,7 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1250.0D);
-		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue((0.20000000298023224D * 8));
+		this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.20000000298023224D);
 	}
 
 	@Override
