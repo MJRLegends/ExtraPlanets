@@ -6,12 +6,12 @@ public class Constants {
 
 	public static final int LOCALMAJVERSION = 0;
 	public static final int LOCALMINVERSION = 9;
-	public static final int LOCALBUILDVERSION = 0;
+	public static final int LOCALBUILDVERSION = 1;
 	public static final String modVersion = "1.10.2" + "-" + LOCALMAJVERSION + "." + LOCALMINVERSION + "." + LOCALBUILDVERSION;
 
 	public static final String MCVERSION = "[1.10.2]";
 	public static final String DEPENDENCIES_FORGE = "required-after:Forge@[12.18.3.2239,);";
-	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib@[1.10.2-1.0.2,); required-after:galacticraftcore; required-after:galacticraftplanets;";
+	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib@[1.10.2-1.0.3,); required-after:galacticraftcore; required-after:galacticraftplanets;";
 
 	public static final String ASSET_PREFIX = modID;
 	public static final String TEXTURE_PREFIX = ASSET_PREFIX + ":";
