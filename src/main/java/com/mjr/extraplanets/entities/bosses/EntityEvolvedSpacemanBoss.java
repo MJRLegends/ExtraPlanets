@@ -6,6 +6,7 @@ import java.util.Random;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.client.sounds.GCSounds;
 import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
@@ -117,15 +118,15 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 	}
 
 	protected SoundEvent getAmbientSound() {
-		return SoundEvents.ENTITY_ZOMBIE_VILLAGER_AMBIENT;
+		return null;
 	}
 
 	protected SoundEvent getHurtSound() {
-		return SoundEvents.ENTITY_ZOMBIE_VILLAGER_HURT;
-	}
+        this.playSound(GCSounds.bossOoh, this.getSoundVolume(), this.getSoundPitch() + 1.0F);
+        return null;	}
 
 	protected SoundEvent getDeathSound() {
-		return SoundEvents.ENTITY_ZOMBIE_VILLAGER_DEATH;
+		return null;
 	}
 
 	protected void playStepSound(BlockPos pos, Block blockIn) {
