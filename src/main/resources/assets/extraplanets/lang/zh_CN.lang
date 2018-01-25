@@ -1247,6 +1247,7 @@ entity.extraplanets.EvolvedGhastBoss.name=恶魂之王（进化体）
 entity.extraplanets.EvolvedSnowmanBoss.name=雪傀儡之王（进化体）
 entity.extraplanets.EvolvedFireBatBoss.name=烈焰蝙蝠之王（进化体）
 entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedSpaceManBoss.name=Evolved Space Man Boss ##NEEDS TRANSLATE##
 
 entity.extraplanets.EvolvedWitch.name=女巫（进化体）
 entity.extraplanets.EvolvedMagmaCube.name=岩浆怪（进化体）

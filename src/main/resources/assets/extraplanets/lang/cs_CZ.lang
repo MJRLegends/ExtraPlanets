@@ -1242,6 +1242,7 @@ entity.extraplanets.EvolvedGhastBoss.name=Evolved Ghast Boss ##NEEDS TRANSLATE##
 entity.extraplanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss ##NEEDS TRANSLATE##
 entity.extraplanets.EvolvedFireBatBoss.name=Evolved Fire Bat Boss ##NEEDS TRANSLATE##
 entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedSpaceManBoss.name=Evolved Space Man Boss ##NEEDS TRANSLATE##
 
 entity.extraplanets.EvolvedWitch.name=Vyvinutá Čarodejnice
 entity.extraplanets.EvolvedMagmaCube.name=Vyvinutá Magma Kostka

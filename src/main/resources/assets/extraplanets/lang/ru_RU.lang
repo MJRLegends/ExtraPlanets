@@ -1245,6 +1245,7 @@ entity.extraplanets.EvolvedGhastBoss.name=Эволюционировавший �
 entity.extraplanets.EvolvedSnowmanBoss.name=Эволюционировавший снеговик-босс
 entity.extraplanets.EvolvedFireBatBoss.name=Эволюционировавшая огненная летучая мышь-босс
 entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedSpaceManBoss.name=Evolved Space Man Boss ##NEEDS TRANSLATE##
 
 entity.extraplanets.EvolvedWitch.name=Эволюционировавшая ведьма
 entity.extraplanets.EvolvedMagmaCube.name=Эволюционировавший адский слизень
