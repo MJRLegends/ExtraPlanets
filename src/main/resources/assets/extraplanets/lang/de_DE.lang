@@ -1205,7 +1205,6 @@ achievement.uranus_planet=Lande auf Uranus!
 achievement.neptune_planet=Lande auf Neptun!
 achievement.pluto_planet=Lande auf Pluto!
 achievement.eris_planet=Lande auf Eris!
-achievement.kepler62b_planet=Lande auf Kepler62b!
 achievement.kepler22b_planet=Lande auf Kepler22b!
 
 achievement.mercury_planet.desc=Fliege zum Merkur mit einer Stufe 3 Rakete
@@ -1216,7 +1215,6 @@ achievement.uranus_planet.desc=Fliege zum Uranus mit einer Stufe 6 Rakete
 achievement.neptune_planet.desc=Fliege zum Neptun mit einer Stufe 7 Rakete
 achievement.pluto_planet.desc=Fliege zum Pluto mit einer Stufe 8 Rakete
 achievement.eris_planet.desc=Fliege zum Eris mit einer Stufe 9 Rakete
-achievement.kepler62b_planet.desc=Fliege zum Kepler62b mit einer Stufe 10 Rakete
 achievement.kepler22b_planet.desc=Fliege zum Kepler22b mit einer Stufe 10 Rakete
 
 achievement.mercury_boss=Du hast den Stufe 4 Boss besiegt!
@@ -1235,6 +1233,7 @@ achievement.neptune_boss.desc=Besiege den Neptun Dungeon Boss und öffne die Scha
 achievement.pluto_boss.desc=Besiege den Pluto Dungeon Boss und öffne die Schatzkiste
 achievement.eris_boss.desc=Besiege den Eris Dungeon Boss und öffne die Schatzkiste
 
+achievement.craft_rocket_3=Stufe 3 Rakete!
 achievement.craft_rocket_4=Stufe 4 Rakete!
 achievement.craft_rocket_5=Stufe 5 Rakete!
 achievement.craft_rocket_6=Stufe 6 Rakete!
@@ -1243,6 +1242,7 @@ achievement.craft_rocket_8=Stufe 8 Rakete!
 achievement.craft_rocket_9=Stufe 9 Rakete!
 achievement.craft_rocket_10=Stufe 10 Rakete!
 
+achievement.craft_rocket_3.desc=Stelle eine Stufe 3 Rakete her
 achievement.craft_rocket_4.desc=Stelle eine Stufe 4 Rakete her
 achievement.craft_rocket_5.desc=Stelle eine Stufe 5 Rakete her
 achievement.craft_rocket_6.desc=Stelle eine Stufe 6 Rakete her
