@@ -1183,6 +1183,7 @@ entity.extraplanets.EvolvedGhastBoss.name=Entwickelter Ghast Boss
 entity.extraplanets.EvolvedSnowmanBoss.name=Entwickelter Schneemann Boss
 entity.extraplanets.EvolvedFireBatBoss.name=Entwickelter Feuerfledermaus Boss
 entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedSpaceManBoss.name=Evolved Space Man Boss ##NEEDS TRANSLATE##
 
 entity.extraplanets.EvolvedWitch.name=Entwickelte Hexe
 entity.extraplanets.EvolvedMagmaCube.name=Entwickelter Magmaschleim
