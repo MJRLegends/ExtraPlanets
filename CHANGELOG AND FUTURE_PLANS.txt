@@ -8,7 +8,16 @@
 
 
 ===========================================Future Updates=============================================
-
+v0.1.6
+*Removed not needed code from the Giant Zombie Boss
+*Tweaks to the Snowman Boss moving speed
+*Added Evolved Spaceman boss to Pluto Dungeons
+*Tweaks for Spaceman boss
+*Fixed missing registering of tile entities for Default Boss Pluto/Eris Dungeon Spawners
+*Updated lang files
+*Fixed Spaceman Boss sounds
+*Added nl_NL.lang (Thanks to BB889)
+*Updated lang files to match below 1.12
 ======================================================================================================
 
 
