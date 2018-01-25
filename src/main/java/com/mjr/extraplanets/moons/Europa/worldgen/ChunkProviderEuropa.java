@@ -3,7 +3,6 @@ package com.mjr.extraplanets.moons.Europa.worldgen;
 import java.util.List;
 import java.util.Random;
 
-import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
@@ -28,7 +27,7 @@ public class ChunkProviderEuropa extends ChunkProviderMultiBiomeSpace {
 	public ChunkProviderEuropa(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);
 		this.stoneBlock = ExtraPlanets_Blocks.EUROPA_BLOCKS.getStateFromMeta(2);
-		this.waterBlock = Blocks.air.getDefaultState();
+		this.waterBlock = ExtraPlanets_Fluids.SALT.getDefaultState();
 		this.seaLevel = 50;
 	}
 
