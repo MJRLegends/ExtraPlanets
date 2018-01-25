@@ -1268,7 +1268,6 @@ achievement.uranus_planet=¡Aterriza en Urano!
 achievement.neptune_planet=¡Aterriza en Neptuno!
 achievement.pluto_planet=¡Aterriza en Pluto!
 achievement.eris_planet=¡Aterriza en Eris!
-achievement.kepler62b_planet=¡Aterriza en Kepler62b!
 achievement.kepler22b_planet=¡Aterriza en Kepler22b!
 
 achievement.mercury_planet.desc=Toma un a Cohete Nivel 3 a Mercurio
@@ -1279,7 +1278,6 @@ achievement.uranus_planet.desc=Toma un a Cohete Nivel 6 a Urano
 achievement.neptune_planet.desc=Toma un a Cohete Nivel 7 a Neptuno
 achievement.pluto_planet.desc=Toma un a Cohete Nivel 8 a Pluto
 achievement.eris_planet.desc=Toma un a Cohete Nivel 9 a Eris
-achievement.kepler62b_planet.desc=Toma un a Cohete Nivel 10 a Kepler62b
 achievement.kepler22b_planet.desc=Toma un a Cohete Nivel 10 a Kepler22b
 
 achievement.mercury_boss=¡Jefe de Nivel 4 derrotado!
@@ -1298,6 +1296,7 @@ achievement.neptune_boss.desc=Mata al jefe de la Mazmorra de Neptuno y abre el C
 achievement.pluto_boss.desc=Mata al jefe de la Mazmorra de Pluto y abre el Cofre del Tesoro
 achievement.eris_boss.desc=Mata al jefe de la Mazmorra de Eris y abre el Cofre del Tesoro
 
+achievement.craft_rocket_3=¡Cohete Nivel 3!
 achievement.craft_rocket_4=¡Cohete Nivel 4!
 achievement.craft_rocket_5=¡Cohete Nivel 5!
 achievement.craft_rocket_6=¡Cohete Nivel 6!
@@ -1306,6 +1305,7 @@ achievement.craft_rocket_8=¡Cohete Nivel 8!
 achievement.craft_rocket_9=¡Cohete Nivel 9!
 achievement.craft_rocket_9=¡Cohete Nivel 10!
 
+achievement.craft_rocket_3.desc=Crea un Cohete Nivel 3
 achievement.craft_rocket_4.desc=Crea un Cohete Nivel 4
 achievement.craft_rocket_5.desc=Crea un Cohete Nivel 5
 achievement.craft_rocket_6.desc=Crea un Cohete Nivel 6
