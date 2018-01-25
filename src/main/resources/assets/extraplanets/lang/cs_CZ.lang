@@ -339,7 +339,7 @@ tile.iapetus.ore_tin.name=Iapetus Tin Ore ##NEEDS TRANSLATE##
 tile.iapetus.ore_copper.name=Iapetus Copper Ore ##NEEDS TRANSLATE##
 tile.iapetus.ice.name=Iapetus Ice ##NEEDS TRANSLATE##
 
-#PlanetGravel Blocks
+#Planet/Moon Gravel Blocks
 tile.mercury_gravel.name=Štěrk
 tile.ceres_gravel.name=Štěrk
 tile.pluto_gravel.name=Štěrk
@@ -356,12 +356,18 @@ tile.titan_gravel.name=TitanGravel
 tile.oberon_gravel.name=OberonGravel
 tile.titania_gravel.name=TitaniaGravel
 tile.iapetus_gravel.name=IapetusGravel
-
 tile.venus_gravel.name=Štěrk
 tile.jupiter_gravel.name=Štěrk
 tile.saturn_gravel.name=Štěrk
 tile.uranus_gravel.name=Štěrk
 tile.neptune_gravel.name=Štěrk
+
+#Girt Blocks
+tile.diamond_grit.name=Diamond Grit ##NEEDS TRANSLATE##
+tile.coal_grit.name=Coal Grit ##NEEDS TRANSLATE##
+tile.iron_grit.name=Iron Grit ##NEEDS TRANSLATE##
+tile.gold_grit.name=Gold Grit ##NEEDS TRANSLATE##
+tile.emerald_grit.name=Emerald Grit ##NEEDS TRANSLATE##
 
 #Treasure Chests
 tile.treasure_chest_t4.name=Truhla s pokladem typ 4
@@ -1235,6 +1241,8 @@ entity.extraplanets.EvolvedIceSlimeBoss.name=Vyvinutý Ledový Sliz Boss
 entity.extraplanets.EvolvedGhastBoss.name=Evolved Ghast Boss ##NEEDS TRANSLATE##
 entity.extraplanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss ##NEEDS TRANSLATE##
 entity.extraplanets.EvolvedFireBatBoss.name=Evolved Fire Bat Boss ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedSpaceManBoss.name=Evolved Space Man Boss ##NEEDS TRANSLATE##
 
 entity.extraplanets.EvolvedWitch.name=Vyvinutá Čarodejnice
 entity.extraplanets.EvolvedMagmaCube.name=Vyvinutá Magma Kostka
@@ -1256,7 +1264,6 @@ achievement.uranus_planet=Přistaň na Uranu!
 achievement.neptune_planet=Přistaň na Neptunu!
 achievement.pluto_planet=Přistaň na Plutu!
 achievement.eris_planet=Přistaň na Erisu!
-achievement.kepler62b_planet=Land on Kepler62b! ##NEEDS TRANSLATE##
 achievement.kepler22b_planet=Land on Kepler22b! ##NEEDS TRANSLATE##
 
 achievement.mercury_planet.desc=Vezmi raketu typ 3 na Merkur
@@ -1267,7 +1274,6 @@ achievement.uranus_planet.desc=Vezmi raketu typ 6 na Uran
 achievement.neptune_planet.desc=Vezmi raketu typ 7 na Neptun
 achievement.pluto_planet.desc=Vezmi raketu typ 8 na Pluto
 achievement.eris_planet.desc=Vezmi raketu typ 9 na Eris
-achievement.kepler62b_planet.desc=Take a Tier 10 rocket to Kepler62b ##NEEDS TRANSLATE##
 achievement.kepler22b_planet.desc=Take a Tier 10 rocket to Kepler22b ##NEEDS TRANSLATE##
 
 achievement.mercury_boss=Defeated Tier 4 Boss! ##NEEDS TRANSLATE##
@@ -1286,6 +1292,7 @@ achievement.neptune_boss.desc=Zabij Bosse z kobky na Neptunu a otevři truhlu s 
 achievement.pluto_boss.desc=Kill the Pluto Dungeon Boss and Open the Treasure Chest ##NEEDS TRANSLATE##
 achievement.eris_boss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest ##NEEDS TRANSLATE##
 
+achievement.craft_rocket_3=Tier 3 Rocket! ##NEEDS TRANSLATE##
 achievement.craft_rocket_4=Tier 4 Rocket! ##NEEDS TRANSLATE##
 achievement.craft_rocket_5=Tier 5 Rocket! ##NEEDS TRANSLATE##
 achievement.craft_rocket_6=Tier 6 Rocket! ##NEEDS TRANSLATE##
@@ -1294,6 +1301,7 @@ achievement.craft_rocket_8=Tier 8 Rocket! ##NEEDS TRANSLATE##
 achievement.craft_rocket_9=Tier 9 Rocket! ##NEEDS TRANSLATE##
 achievement.craft_rocket_10=Tier 10 Rocket! ##NEEDS TRANSLATE##
 
+achievement.craft_rocket_3.desc=Craft Tier 3 Rocket ##NEEDS TRANSLATE##
 achievement.craft_rocket_4.desc=Craft Tier 4 Rocket ##NEEDS TRANSLATE##
 achievement.craft_rocket_5.desc=Craft Tier 5 Rocket ##NEEDS TRANSLATE##
 achievement.craft_rocket_6.desc=Craft Tier 6 Rocket ##NEEDS TRANSLATE##

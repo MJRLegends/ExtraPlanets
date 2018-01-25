@@ -339,7 +339,7 @@ tile.iapetus.ore_tin.name=Iapetus Kalay Cevheri
 tile.iapetus.ore_copper.name=Iapetus Bakır Cevheri
 tile.iapetus.ice.name=Iapetus Buzu
 
-#PlanetGravel Blocks
+#Planet/Moon Gravel Blocks
 tile.mercury_gravel.name=Merkür Çakılı
 tile.ceres_gravel.name=Ceres Çakılı
 tile.pluto_gravel.name=Pluto Çakılı
@@ -356,12 +356,18 @@ tile.titan_gravel.name=Titan Çakıl
 tile.oberon_gravel.name=Oberon Çakılı
 tile.titania_gravel.name=Titania Çakılı
 tile.iapetus_gravel.name=Iapetus Çakılı
-
 tile.venus_gravel.name=Venüs Çakılı
 tile.jupiter_gravel.name=Jüpiter Çakılı
 tile.saturn_gravel.name=Satürn Çakılı
 tile.uranus_gravel.name=Uranüs Çakılı
 tile.neptune_gravel.name=Neptün Çakılı
+
+#Girt Blocks
+tile.diamond_grit.name=Diamond Grit ##NEEDS TRANSLATE##
+tile.coal_grit.name=Coal Grit ##NEEDS TRANSLATE##
+tile.iron_grit.name=Iron Grit ##NEEDS TRANSLATE##
+tile.gold_grit.name=Gold Grit ##NEEDS TRANSLATE##
+tile.emerald_grit.name=Emerald Grit ##NEEDS TRANSLATE##
 
 #Treasure Chests
 tile.treasure_chest_t4.name=Seviye 4 Hazine Sandığı
@@ -1237,6 +1243,8 @@ entity.extraplanets.EvolvedIceSlimeBoss.name=Evrimleşmiş Buz Balçığı Patro
 entity.extraplanets.EvolvedGhastBoss.name=Evolved Ghast Boss
 entity.extraplanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss
 entity.extraplanets.EvolvedFireBatBoss.name=Evolved Fire Bat Boss
+entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedSpaceManBoss.name=Evolved Space Man Boss ##NEEDS TRANSLATE##
 
 entity.extraplanets.EvolvedWitch.name=Evrimleşmiş Cadı
 entity.extraplanets.EvolvedMagmaCube.name=Evrimleşmiş Magma Küpü
@@ -1258,7 +1266,6 @@ achievement.uranus_planet=Uranus İçin Küçük Benim İçin Büyük!
 achievement.neptune_planet=Neptune İçin Küçük Benim İçin Büyük!
 achievement.pluto_planet=Pluto İçin Küçük Benim İçin Büyük!
 achievement.eris_planet=Eris İçin Küçük Benim İçin Büyük!
-achievement.kepler62b_planet=Land on Kepler62b!
 achievement.kepler22b_planet=Land on Kepler22b!
 
 achievement.mercury_planet.desc=Tier 3 Roket İle Merkür'ya Git
@@ -1269,7 +1276,6 @@ achievement.uranus_planet.desc=Tier 6 Roket İle Uranüs'e Git
 achievement.neptune_planet.desc=Tier 7 Roket İle Neptün'e Git
 achievement.pluto_planet.desc=Tier 8 Roket Pluto'ya Git
 achievement.eris_planet.desc=Tier 9 Roket İle Eris'e Git
-achievement.kepler62b_planet.desc=Take a Tier 10 rocket to Kepler62b ##NEEDS TRANSLATE##
 achievement.kepler22b_planet.desc=Take a Tier 10 rocket to Kepler22b ##NEEDS TRANSLATE##
 
 achievement.mercury_boss=Defeated Tier 4 Boss! ##NEEDS TRANSLATE##
@@ -1288,6 +1294,7 @@ achievement.neptune_boss.desc=Neptün Mutasyonik Patronu Öldür Ve Hazine Sand�
 achievement.pluto_boss.desc=Pluto Mutasyonik Patronu Öldür Ve Hazine Sandığını Aç
 achievement.eris_boss.desc=Kill the Eris Dungeon Boss and Open the Treasure Chest ##NEEDS TRANSLATE##
 
+achievement.craft_rocket_3=Tier 3 Roket!
 achievement.craft_rocket_4=Tier 4 Roket!
 achievement.craft_rocket_5=Tier 5 Roket!
 achievement.craft_rocket_6=Tier 6 Roket!
@@ -1296,6 +1303,7 @@ achievement.craft_rocket_8=Tier 8 Roket!
 achievement.craft_rocket_9=Tier 9 Roket!
 achievement.craft_rocket_9=Tier 10 Roket!
 
+achievement.craft_rocket_3.desc=Tier 3 Roket İnşa Et
 achievement.craft_rocket_4.desc=Tier 4 Roket İnşa Et
 achievement.craft_rocket_5.desc=Tier 5 Roket İnşa Et
 achievement.craft_rocket_6.desc=Tier 6 Roket İnşa Et
