@@ -107,8 +107,10 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 
 	@Override
 	public int damageDropped(IBlockState state) {
-		int meta = state.getBlock().getMetaFromState(state);
-		return meta;
+		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_SLIME)
+			return 0;
+		else
+		return state.getBlock().getMetaFromState(state);
 	}
 
 	@Override
