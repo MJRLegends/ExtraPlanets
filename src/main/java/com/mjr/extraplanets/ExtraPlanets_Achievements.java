@@ -2,6 +2,7 @@ package com.mjr.extraplanets;
 
 import java.util.ArrayList;
 
+import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.AchievementPage;
@@ -41,6 +42,7 @@ public class ExtraPlanets_Achievements {
 	public static Achievement kepler22b_planet;
 	public static Achievement ceres_planet;
 
+	public static Achievement craft_rocket_3;
 	public static Achievement craft_rocket_4;
 	public static Achievement craft_rocket_5;
 	public static Achievement craft_rocket_6;
@@ -59,47 +61,51 @@ public class ExtraPlanets_Achievements {
 	private static void initAchievements() {
 		// Rocket Achievements
 		if (Config.MERCURY)
-			craft_rocket_4 = new Achievement("achievement.craft_rocket_4", "craft_rocket_4", 3, 2, ExtraPlanets_Items.TIER_4_ROCKET, (Achievement) null).registerStat();
+			craft_rocket_3 = new Achievement("achievement.craft_rocket_3", "craft_rocket_3", 3, 2, AsteroidsItems.tier3Rocket, (Achievement) null).registerStat();
 		if (Config.MERCURY && Config.JUPITER)
-			craft_rocket_5 = new Achievement("achievement.craft_rocket_5", "craft_rocket_5", 5, 2, ExtraPlanets_Items.TIER_5_ROCKET, craft_rocket_4).registerStat();
+			craft_rocket_4 = new Achievement("achievement.craft_rocket_4", "craft_rocket_4", 5, 2, ExtraPlanets_Items.TIER_4_ROCKET, craft_rocket_3).registerStat();
 		else
-			craft_rocket_5 = new Achievement("achievement.craft_rocket_5", "craft_rocket_5", 5, 2, ExtraPlanets_Items.TIER_5_ROCKET, (Achievement) null).registerStat();
+			craft_rocket_4 = new Achievement("achievement.craft_rocket_4", "craft_rocket_4", 5, 2, ExtraPlanets_Items.TIER_4_ROCKET, (Achievement) null).registerStat();
 		if (Config.JUPITER && Config.SATURN)
-			craft_rocket_6 = new Achievement("achievement.craft_rocket_6", "craft_rocket_6", 7, 2, ExtraPlanets_Items.TIER_6_ROCKET, craft_rocket_5).registerStat();
+			craft_rocket_5 = new Achievement("achievement.craft_rocket_5", "craft_rocket_5", 7, 2, ExtraPlanets_Items.TIER_5_ROCKET, craft_rocket_4).registerStat();
 		else
-			craft_rocket_6 = new Achievement("achievement.craft_rocket_6", "craft_rocket_6", 7, 2, ExtraPlanets_Items.TIER_6_ROCKET, (Achievement) null).registerStat();
+			craft_rocket_5 = new Achievement("achievement.craft_rocket_5", "craft_rocket_5", 7, 2, ExtraPlanets_Items.TIER_5_ROCKET, (Achievement) null).registerStat();
 		if (Config.SATURN && Config.URANUS)
-			craft_rocket_7 = new Achievement("achievement.craft_rocket_7", "craft_rocket_7", 9, 2, ExtraPlanets_Items.TIER_7_ROCKET, craft_rocket_6).registerStat();
+			craft_rocket_6 = new Achievement("achievement.craft_rocket_6", "craft_rocket_6", 9, 2, ExtraPlanets_Items.TIER_6_ROCKET, craft_rocket_5).registerStat();
 		else
-			craft_rocket_7 = new Achievement("achievement.craft_rocket_7", "craft_rocket_7", 9, 2, ExtraPlanets_Items.TIER_7_ROCKET, (Achievement) null).registerStat();
+			craft_rocket_6 = new Achievement("achievement.craft_rocket_6", "craft_rocket_6", 9, 2, ExtraPlanets_Items.TIER_6_ROCKET, (Achievement) null).registerStat();
 		if (Config.URANUS && Config.NEPTUNE)
-			craft_rocket_8 = new Achievement("achievement.craft_rocket_8", "craft_rocket_8", 11, 2, ExtraPlanets_Items.TIER_8_ROCKET, craft_rocket_7).registerStat();
+			craft_rocket_7 = new Achievement("achievement.craft_rocket_7", "craft_rocket_7", 11, 2, ExtraPlanets_Items.TIER_7_ROCKET, craft_rocket_6).registerStat();
 		else
-			craft_rocket_8 = new Achievement("achievement.craft_rocket_8", "craft_rocket_8", 11, 2, ExtraPlanets_Items.TIER_8_ROCKET, (Achievement) null).registerStat();
+			craft_rocket_7 = new Achievement("achievement.craft_rocket_7", "craft_rocket_7", 11, 2, ExtraPlanets_Items.TIER_7_ROCKET, (Achievement) null).registerStat();
 		if (Config.NEPTUNE && Config.PLUTO)
-			craft_rocket_9 = new Achievement("achievement.craft_rocket_9", "craft_rocket_9", 13, 2, ExtraPlanets_Items.TIER_9_ROCKET, craft_rocket_8).registerStat();
+			craft_rocket_8 = new Achievement("achievement.craft_rocket_8", "craft_rocket_8", 13, 2, ExtraPlanets_Items.TIER_8_ROCKET, craft_rocket_7).registerStat();
 		else
-			craft_rocket_9 = new Achievement("achievement.craft_rocket_9", "craft_rocket_9", 13, 2, ExtraPlanets_Items.TIER_9_ROCKET, (Achievement) null).registerStat();
+			craft_rocket_8 = new Achievement("achievement.craft_rocket_8", "craft_rocket_8", 13, 2, ExtraPlanets_Items.TIER_8_ROCKET, (Achievement) null).registerStat();
 		if (Config.PLUTO && Config.ERIS)
+			craft_rocket_9 = new Achievement("achievement.craft_rocket_9", "craft_rocket_9", 15, 2, ExtraPlanets_Items.TIER_9_ROCKET, craft_rocket_8).registerStat();
+		else
+			craft_rocket_9 = new Achievement("achievement.craft_rocket_9", "craft_rocket_9", 15, 2, ExtraPlanets_Items.TIER_9_ROCKET, (Achievement) null).registerStat();
+		if (Config.KEPLER22B)
 			craft_rocket_10 = new Achievement("achievement.craft_rocket_10", "craft_rocket_10", 15, 2, ExtraPlanets_Items.TIER_10_ROCKET, craft_rocket_9).registerStat();
 		else
 			craft_rocket_10 = new Achievement("achievement.craft_rocket_10", "craft_rocket_10", 15, 2, ExtraPlanets_Items.TIER_10_ROCKET, (Achievement) null).registerStat();
 
 		// Main _planets Achievements
 		if (Config.MERCURY)
-			mercury_planet = new Achievement("achievement.mercury_planet", "mercury_planet", 3, 4, ExtraPlanets_Blocks.MERCURY_BLOCKS, craft_rocket_4).registerStat();
+			mercury_planet = new Achievement("achievement.mercury_planet", "mercury_planet", 3, 4, ExtraPlanets_Blocks.MERCURY_BLOCKS, craft_rocket_3).registerStat();
 		if (Config.JUPITER)
-			jupiter_planet = new Achievement("achievement.jupiter_planet", "jupiter_planet", 5, 4, ExtraPlanets_Blocks.JUPITER_BLOCKS, craft_rocket_5).registerStat();
+			jupiter_planet = new Achievement("achievement.jupiter_planet", "jupiter_planet", 5, 4, ExtraPlanets_Blocks.JUPITER_BLOCKS, craft_rocket_4).registerStat();
 		if (Config.SATURN)
-			saturn_planet = new Achievement("achievement.saturn_planet", "saturn_planet", 7, 4, ExtraPlanets_Blocks.SATURN_BLOCKS, craft_rocket_6).registerStat();
+			saturn_planet = new Achievement("achievement.saturn_planet", "saturn_planet", 7, 4, ExtraPlanets_Blocks.SATURN_BLOCKS, craft_rocket_5).registerStat();
 		if (Config.URANUS)
-			uranus_planet = new Achievement("achievement.uranus_planet", "uranus_planet", 9, 4, ExtraPlanets_Blocks.URANUS_BLOCKS, craft_rocket_7).registerStat();
+			uranus_planet = new Achievement("achievement.uranus_planet", "uranus_planet", 9, 4, ExtraPlanets_Blocks.URANUS_BLOCKS, craft_rocket_6).registerStat();
 		if (Config.NEPTUNE)
-			neptune_planet = new Achievement("achievement.neptune_planet", "neptune_planet", 11, 4, ExtraPlanets_Blocks.NEPTUNE_BLOCKS, craft_rocket_8).registerStat();
+			neptune_planet = new Achievement("achievement.neptune_planet", "neptune_planet", 11, 4, ExtraPlanets_Blocks.NEPTUNE_BLOCKS, craft_rocket_7).registerStat();
 		if (Config.PLUTO)
-			pluto_planet = new Achievement("achievement.pluto_planet", "pluto_planet", 13, 4, ExtraPlanets_Blocks.PLUTO_BLOCKS, craft_rocket_9).registerStat();
+			pluto_planet = new Achievement("achievement.pluto_planet", "pluto_planet", 13, 4, ExtraPlanets_Blocks.PLUTO_BLOCKS, craft_rocket_8).registerStat();
 		if (Config.ERIS)
-			eris_planet = new Achievement("achievement.eris_planet", "eris_planet", 15, 4, ExtraPlanets_Blocks.ERIS_BLOCKS, craft_rocket_10).registerStat();
+			eris_planet = new Achievement("achievement.eris_planet", "eris_planet", 15, 4, ExtraPlanets_Blocks.ERIS_BLOCKS, craft_rocket_9).registerStat();
 		if (Config.KEPLER22B)
 			kepler22b_planet = new Achievement("achievement.kepler22b_planet", "kepler22b_planet", 17, 4, ExtraPlanets_Blocks.KEPLER22B_BLOCKS, craft_rocket_10).registerStat();
 
@@ -157,6 +163,8 @@ public class ExtraPlanets_Achievements {
 			achievementslist.add(ceres_planet);
 		if (kepler22b_planet != null)
 			achievementslist.add(kepler22b_planet);
+		if (craft_rocket_3 != null)
+			achievementslist.add(craft_rocket_3);		
 		if (craft_rocket_4 != null)
 			achievementslist.add(craft_rocket_4);
 		if (craft_rocket_5 != null)
