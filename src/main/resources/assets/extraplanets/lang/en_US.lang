@@ -1247,6 +1247,7 @@ entity.extraplanets.EvolvedGhastBoss.name=Evolved Ghast Boss
 entity.extraplanets.EvolvedSnowmanBoss.name=Evolved Snowman Boss
 entity.extraplanets.EvolvedFireBatBoss.name=Evolved Fire Bat Boss
 entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss
+entity.extraplanets.EvolvedSpaceManBoss.name=Evolved Space Man Boss
 
 entity.extraplanets.EvolvedWitch.name=Evolved Witch
 entity.extraplanets.EvolvedMagmaCube.name=Evolved Magma Cube
