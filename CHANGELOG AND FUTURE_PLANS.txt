@@ -22,7 +22,7 @@ v0.9.1
 *Tweaks to the comment of the Enable Ore Generation of Lead Config option
 *Fixed Evolved Snowman Boss sounds
 *Added Evolved Giant Zombie boss to Eris Dungeons
-*Added loot back to Mercury, Jupiter, Saturn, Uranus, Neptune, Eris,
+*Added loot back to Mercury, Jupiter, Saturn, Uranus, Neptune, Eris, Pluto Dungeon Treasure Chests
 *Made biome names more user friendly
 *Few fixes
 *Changed Kepler22b World gen classes to match others
@@ -64,7 +64,6 @@ v0.9.1
 *Updated lang files
 *Fixed Spaceman Boss sounds
 *Changed requirement of MJRLegendsLib to 1.10.2-1.0.3 & above
-
 
 v0.9.0
 *Refactor some code over to MJRLegends Lib
