@@ -1267,7 +1267,6 @@ achievement.uranus_planet=Приземлитесь на Уран!
 achievement.neptune_planet=Приземлитесь на Нептун!
 achievement.pluto_planet=Приземлитесь на Плутон!
 achievement.eris_planet=Приземлитесь на Эриду!
-achievement.kepler62b_planet=Приземлитесь на Кеплер 62b!
 achievement.kepler22b_planet=Приземлитесь на Кеплер 22b!
 
 achievement.mercury_planet.desc=Посадите ракету 3-го уровня на Меркурий
@@ -1278,7 +1277,6 @@ achievement.uranus_planet.desc=Посадите ракету 6-го уровня
 achievement.neptune_planet.desc=Посадите ракету 7-го уровня на Нептун
 achievement.pluto_planet.desc=Посадите ракету 8-го уровня на Плутон
 achievement.eris_planet.desc=Посадите ракету 9-го уровня на Эриду
-achievement.kepler62b_planet.desc=Посадите ракету 10-го уровня на Кеплер 62b
 achievement.kepler22b_planet.desc=Посадите ракету 10-го уровня на Кеплер 22b
 
 achievement.mercury_boss=Победить босса 4-го уровня!
@@ -1297,6 +1295,7 @@ achievement.neptune_boss.desc=Убить босса подземелья Неп�
 achievement.pluto_boss.desc=Убить босса подземелья Плутона и открыть сундук с сокровищами
 achievement.eris_boss.desc=Убить босса подземелья Эриды и открыть сундук с сокровищами
 
+achievement.craft_rocket_3=Ракета 3-го уровня!
 achievement.craft_rocket_4=Ракета 4-го уровня!
 achievement.craft_rocket_5=Ракета 5-го уровня!
 achievement.craft_rocket_6=Ракета 6-го уровня!
@@ -1305,6 +1304,7 @@ achievement.craft_rocket_8=Ракета 8-го уровня!
 achievement.craft_rocket_9=Ракета 9-го уровня!
 achievement.craft_rocket_10=Ракета 10-го уровня!
 
+achievement.craft_rocket_3.desc=Создать ракету 3-го уровня
 achievement.craft_rocket_4.desc=Создать ракету 4-го уровня
 achievement.craft_rocket_5.desc=Создать ракету 5-го уровня
 achievement.craft_rocket_6.desc=Создать ракету 6-го уровня
