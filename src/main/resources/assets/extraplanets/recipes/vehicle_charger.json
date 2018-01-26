@@ -7,6 +7,12 @@
     "WXW",
     "WXW"
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "vehiclecharger"
+    }
+  ],
   "type": "forge:ore_shaped",
   "key": {
     "W": {
