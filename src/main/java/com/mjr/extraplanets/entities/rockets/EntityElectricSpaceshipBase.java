@@ -230,10 +230,9 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 					} else
 						this.setDead();
 				}
-
-				if (this.timeSinceLaunch > 50 && this.onGround) {
-					this.failRocket();
-				}
+			}
+			if (this.timeSinceLaunch > 50 && this.onGround) {
+				this.failRocket();
 			}
 		}
 
@@ -376,7 +375,7 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 	@SideOnly(Side.CLIENT)
 	public void setPositionAndRotationDirect(double x, double y, double z, float yaw, float pitch, int posRotationIncrements, boolean b) {
 		this.setRotation(yaw, pitch);
-		if (this.syncAdjustFlag && this.world.isBlockLoaded(new BlockPos(x, 255D, z)) && this.hasValidPower()) {
+		if (this.syncAdjustFlag && this.world.isBlockLoaded(new BlockPos(x, 255D, z))) {
 			EntityPlayer p = FMLClientHandler.instance().getClientPlayerEntity();
 			double dx = x - p.posX;
 			double dz = z - p.posZ;
