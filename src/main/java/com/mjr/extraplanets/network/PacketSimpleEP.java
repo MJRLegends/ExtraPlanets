@@ -12,9 +12,12 @@ import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.items.ItemParaChute;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.network.PacketBase;
+import micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
@@ -44,6 +47,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class), S_IGNITE_ROCKET(Side.SERVER),
 
 		// CLIENT
+        C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT),
 		C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class);
 
 		private Side targetSide;
@@ -145,6 +149,12 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		case C_UPDATE_SOLAR_RADIATION_LEVEL:
 			stats.setRadiationLevel((double) this.data.get(0));
 			break;
+        case C_DISPLAY_ROCKET_CONTROLS:
+            player.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.launch.name")));
+            player.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.turn.name")));
+            player.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.updown.name")));
+            player.addChatMessage(new ChatComponentText(GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.powered.inv.name")));
+            break;
 		default:
 			break;
 		}

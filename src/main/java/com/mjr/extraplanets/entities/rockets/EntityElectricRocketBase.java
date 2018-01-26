@@ -21,7 +21,9 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
+import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPoweredDockable;
+import com.mjr.extraplanets.network.PacketSimpleEP;
 
 /**
  * Do not include this prefab class in your released mod download.
@@ -201,11 +203,10 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 				par1EntityPlayer.mountEntity(null);
 				this.height = heightBefore;
 			}
-
 			return true;
 		} else if (par1EntityPlayer instanceof EntityPlayerMP) {
 			if (!this.worldObj.isRemote) {
-				GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_DISPLAY_ROCKET_CONTROLS, this.worldObj.provider.getDimensionId(), new Object[] {}), (EntityPlayerMP) par1EntityPlayer);
+				ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket.C_DISPLAY_ROCKET_CONTROLS, this.worldObj.provider.getDimensionId(), new Object[] {}), (EntityPlayerMP) par1EntityPlayer);
 				GCPlayerStats stats = GCPlayerStats.get(par1EntityPlayer);
 				stats.setChatCooldown(0);
 				par1EntityPlayer.mountEntity(this);

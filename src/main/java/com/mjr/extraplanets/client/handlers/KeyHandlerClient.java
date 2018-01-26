@@ -21,10 +21,10 @@ import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class KeyHandlerClient extends KeyHandler {
-	public static KeyBinding openFuelGui;
+	public static KeyBinding openPowerGUI;
 
 	static {
-		openFuelGui = new KeyBinding(TranslateUtilities.translate("keybind.vehicleInv.name"), ConfigManagerCore.keyOverrideFuelLevelI == 0 ? Keyboard.KEY_F : ConfigManagerCore.keyOverrideFuelLevelI, Constants.modName);
+		openPowerGUI = new KeyBinding(TranslateUtilities.translate("keybind.vehicleInv.name"), ConfigManagerCore.keyOverrideFuelLevelI == 0 ? Keyboard.KEY_F : ConfigManagerCore.keyOverrideFuelLevelI, Constants.modName);
 	}
 
 	public static KeyBinding accelerateKey;
@@ -38,7 +38,7 @@ public class KeyHandlerClient extends KeyHandler {
 	private static Minecraft mc = MCUtilities.getMinecraft();
 
 	public KeyHandlerClient() {
-		super(new KeyBinding[] { KeyHandlerClient.openFuelGui }, new boolean[] { false, false, false }, KeyHandlerClient.getVanillaKeyBindings(), new boolean[] { false, true, true, true, true, true, true });
+		super(new KeyBinding[] { KeyHandlerClient.openPowerGUI }, new boolean[] { false, false, false }, KeyHandlerClient.getVanillaKeyBindings(), new boolean[] { false, true, true, true, true, true, true });
 	}
 
 	private static KeyBinding[] getVanillaKeyBindings() {
@@ -63,7 +63,7 @@ public class KeyHandlerClient extends KeyHandler {
 				return;
 			}
 
-			if (kb.getKeyCode() == KeyHandlerClient.openFuelGui.getKeyCode()) {
+			if (kb.getKeyCode() == KeyHandlerClient.openPowerGUI.getKeyCode()) {
 				if (playerBase.ridingEntity instanceof EntityVehicleBase) {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_FUEL_GUI, mc.theWorld.provider.getDimensionId(), new Object[] { playerBase.getGameProfile().getName() }));
 				} else if (playerBase.ridingEntity instanceof EntityPoweredVehicleBase) {
