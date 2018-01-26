@@ -13,6 +13,9 @@ public class Constants {
 	public static final String DEPENDENCIES_FORGE = "required-after:Forge@[12.18.3.2239,);";
 	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib@[1.10.2-1.0.3,); required-after:galacticraftcore; required-after:galacticraftplanets;";
 
+	public static final String GUIFACTORY = "com.mjr.extraplanets.client.gui.screen.ConfigGuiFactory";
+	public static final String CERTIFICATEFINGERPRINT = "b02331787272ec3515ebe63ecdeea0d746653468";
+
 	public static final String ASSET_PREFIX = modID;
 	public static final String TEXTURE_PREFIX = ASSET_PREFIX + ":";
 	public static final String PREFIX = modID + ".";
