@@ -9,6 +9,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.MapGenDungeon;
@@ -65,7 +66,8 @@ public class ChunkProviderUranus extends ChunkProviderCustomSpace {
 
 	@Override
 	public void recreateStructures(int par1, int par2) {
-		this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
+		if (Config.uranusVillages)
+			this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
 	}
 
 	@Override
@@ -80,7 +82,8 @@ public class ChunkProviderUranus extends ChunkProviderCustomSpace {
 
 	@Override
 	public void onPopulate(int cX, int cZ) {
-		this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
+		if (Config.uranusVillages)
+			this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
 		this.dungeonGenerator.handleTileEntities(this.rand);
 	}
 }

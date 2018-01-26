@@ -270,6 +270,16 @@ public class Config {
 
 	public static boolean oldStyleGravity;
 
+	public static boolean mercuryVillages;
+	public static boolean venusVillages;
+	public static boolean ceresVillages;
+	public static boolean jupiterVillages;
+	public static boolean saturnVillages;
+	public static boolean uranusVillages;
+	public static boolean neptuneVillages;
+	public static boolean plutoVillages;
+	public static boolean erisVillages;
+	
 	public static boolean useCustomCelestialSelection;
 	public static boolean debugMode;
 
@@ -566,6 +576,16 @@ public class Config {
 
 		oldStyleGravity = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Old Style Gravity", false, "This option will change all the gravity of Planets & Moons back to the old style of gravity").getBoolean(false);
 
+		mercuryVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Mercury Villages", true, "Setting this option to false will disable & remove the Mercury Villages generation").getBoolean(true);
+		venusVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Venus Villages", true, "Setting this option to false will disable & remove the Venus Villages generation").getBoolean(true);
+		ceresVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ceres Villages", true, "Setting this option to false will disable & remove the Ceres Villages generation").getBoolean(true);
+		jupiterVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Jupiter Villages", true, "Setting this option to false will disable & remove the Jupiter Villages generation").getBoolean(true);
+		saturnVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Saturn Villages", true, "Setting this option to false will disable & remove the Saturn Villages generation").getBoolean(true);
+		uranusVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Uranus Villages", true, "Setting this option to false will disable & remove the Uranus Villages generation").getBoolean(true);
+		neptuneVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Neptune Villages", true, "Setting this option to false will disable & remove the Neptune Villages generation").getBoolean(true);
+		plutoVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Pluto Villages", true, "Setting this option to false will disable & remove the Pluto Villages generation").getBoolean(true);
+		erisVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Eris Villages", true, "Setting this option to false will disable & remove the Eris Villages generation").getBoolean(true);
+		
 		useCustomCelestialSelection = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestial Selection Screen", true,
 				"Setting this option to false make it use the Galacticraft Galaxy Map/Celestial Selection Screen").getBoolean(true);
 

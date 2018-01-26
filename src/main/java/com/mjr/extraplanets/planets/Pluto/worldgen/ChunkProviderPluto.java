@@ -150,12 +150,14 @@ public class ChunkProviderPluto extends ChunkProviderSpace {
 
 	@Override
 	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
-		this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
+		if (Config.plutoVillages)
+			this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
 		this.dungeonGenerator.handleTileEntities(this.rand);
 	}
 
 	@Override
 	public void recreateStructures(int par1, int par2) {
-		this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
+		if (Config.plutoVillages)
+			this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
 	}
 }
