@@ -14,6 +14,58 @@
 
 
 ===========================================Released Updates===========================================
+v1.2.4
+*Updated change log file
+*Updated lang files
+*Tweaks to all moon Sky providers
+*Fixed issue with crafting batteries and using them for crafting
+*Added config option for adding of other items to the ore dict
+*Tweaks to the comment of the Enable Ore Generation of Lead Config option
+*Fixed Evolved Snowman Boss sounds
+*Added Evolved Giant Zombie boss to Eris Dungeons
+*Added loot back to Mercury, Jupiter, Saturn, Uranus, Neptune, Eris, Pluto Dungeon Treasure Chests
+*Made biome names more user friendly
+*Few fixes
+*Changed Kepler22b World gen classes to match others
+*Update es_ES.lang (Thanks to Spellkaze)
+*Fixed a few automation issues with some machines
+*Changes for latest Galacticraft API changes
+*Fixed Triton Ice Sea Biome
+*Fixed OpenGL Error spam
+*Refactor more code/classes to MJRLegendsLib
+*Added Diamond, Gold, Coal, Iron, Emerald Grit Blocks
+*Added Kepler22b Diamond Plains Biome
+*Added Diamond Trees to the Diamond Plains Biome
+*Added Diamond Ore Spheres to the Diamond Plains Biome
+*Forgotten change in last commit
+*Updated build.gradle
+*Added Kepler22b Coal, Iron, Gold, Emerald Plains Biome
+*Added Coal, Iron, Gold, Emerald Trees to the Coal, Iron, Gold, Emerald Plains Biome
+*Added Coal, Iron, Gold, Emerald Ore Spheres to the Coal, Iron, Gold, Emerald Plains Biome
+*Changed Kepler22b Rare biomes rate
+*Fixed Emerald Grit having the wrong name
+*Converted Europa over to multi biome system
+*Added Europa Salt Sea Biome
+*Added Europa Valleys Biome
+*Added Spheres of Iron ore generation between y 20 & 40
+*Added Caves full of Liquid Crystallized Water to Europa
+*Added Config options for 90% of the world gen features
+*Removed the Config option for Ceres Rocket Tier requirement
+*Updated lang files
+*Added/Tweaks to comments on all Config options
+*Tweaks to the Snowman Boss moving speed
+*Added Evolved Spaceman boss to Pluto Dungeons
+*Removed not needed code from the Giant Zombie Boss
+*Tweaks for Spaceman boss
+*Fixed missing registering of tile entities for Default Boss Pluto/Eris
+*Changed Galacticraft minimum requirement to build 122
+*Updated lang files
+*Fixed Spaceman Boss sounds
+*Fixes for Europa Salt Sea Biome
+*Moved a class to the correct package
+*Added Custom Model for Tier 1 - 4 Space Suits
+*Changed requirement of MJRLegendsLib to 1.8.9-1.0.3 & above
+
 v1.2.3
 *Refactor some code over to MJRLegends Lib
 *Fixed broken recipe for Tier 1 Pressure Layer
