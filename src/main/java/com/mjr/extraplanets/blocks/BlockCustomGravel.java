@@ -11,10 +11,10 @@ import com.mjr.extraplanets.Constants;
 public class BlockCustomGravel extends BlockFalling {
 	public BlockCustomGravel(String name) {
 		super();
-		setHardness(0.6F);
-		setStepSound(Block.soundTypeGravel);
-		setBlockName(name);
-		setBlockTextureName(Constants.TEXTURE_PREFIX + name);
+		this.setHardness(0.6F);
+		this.setStepSound(Block.soundTypeGravel);
+		this.setBlockName(name);
+		this.setBlockTextureName(Constants.TEXTURE_PREFIX + name);
 	}
 
 	@Override

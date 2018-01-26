@@ -9,6 +9,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCeres;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicDeimos;
@@ -232,6 +233,12 @@ public class ExtraPlanets_Blocks {
 
 	public static Block slimeBlock;
 
+	public static Block diamondGrit;
+	public static Block goldGrit;
+	public static Block ironGrit;
+	public static Block coalGrit;
+	public static Block emeraldGrit;
+
 	public static void init() {
 		initializeBlocks();
 		initializeTreasureChestBlocks();
@@ -341,7 +348,7 @@ public class ExtraPlanets_Blocks {
 			fossil = new BlockFossil(Material.rock).setBlockName("fossil").setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.ceres && Config.nuclearBomb)
 			nuclearBomb = new BlockNuclearBomb();
-		if(Config.saturn && Config.fireBomb)
+		if (Config.saturn && Config.fireBomb)
 			fireBomb = new BlockFireBomb();
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
@@ -362,6 +369,12 @@ public class ExtraPlanets_Blocks {
 		decorativeBlocks2 = new BlockDecorativeBlocks2("decorative_blocks2");
 
 		slimeBlock = new BlockSlime("slime_block");
+
+		diamondGrit = new BlockCustomGravel("diamond_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
+		goldGrit = new BlockCustomGravel("gold_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
+		ironGrit = new BlockCustomGravel("iron_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
+		coalGrit = new BlockCustomGravel("coal_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
+		emeraldGrit = new BlockCustomGravel("emerald_grit").setCreativeTab(ExtraPlanets.BlocksTab).setLightLevel(0.5F);
 	}
 
 	private static void initializeDungeonBlocks() {
@@ -600,7 +613,7 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(fossil, "fossil");
 		if (Config.ceres && Config.nuclearBomb)
 			GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
-		if(Config.saturn && Config.fireBomb)
+		if (Config.saturn && Config.fireBomb)
 			GameRegistry.registerBlock(fireBomb, "fireBomb");
 
 		GameRegistry.registerBlock(advancedLaunchPad, ItemBlockCustomLandingPad.class, "tile.advancedLaunchPad");
@@ -610,6 +623,12 @@ public class ExtraPlanets_Blocks {
 		GameRegistry.registerBlock(decorativeBlocks2, ItemBlockDecorativeBlocks2.class, "tile.decorativeBlocks2");
 
 		GameRegistry.registerBlock(slimeBlock, "slimeBlock");
+
+		GameRegistry.registerBlock(diamondGrit, diamondGrit.getUnlocalizedName());
+		GameRegistry.registerBlock(goldGrit, goldGrit.getUnlocalizedName());
+		GameRegistry.registerBlock(ironGrit, ironGrit.getUnlocalizedName());
+		GameRegistry.registerBlock(coalGrit, coalGrit.getUnlocalizedName());
+		GameRegistry.registerBlock(emeraldGrit, emeraldGrit.getUnlocalizedName());
 	}
 
 	private static void registerTileEntitys() {
