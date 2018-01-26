@@ -10,11 +10,11 @@ import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
 
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 import com.mjr.extraplanets.util.MessageUtilities;
 
 public class MapGenVillageKepler22b extends MapGenStructure {
-	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { BiomeGenBaseKepler22b.kepler22bPlains });
+	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { Kepler22bBiomes.kepler22bPlains });
 	private final int terrainType;
 	private static boolean initialized;
 

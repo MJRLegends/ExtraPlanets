@@ -7,8 +7,9 @@ import net.minecraft.entity.monster.EntityZombie;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 
-public class BiomeGenKepler22bRedDesert extends BiomeGenBaseKepler22b {
+public class BiomeGenKepler22bRedDesert extends Kepler22bBiomes {
 	@SuppressWarnings("unchecked")
 	public BiomeGenKepler22bRedDesert() {
 		super(Config.kepler22bRedDesertBiomeID);

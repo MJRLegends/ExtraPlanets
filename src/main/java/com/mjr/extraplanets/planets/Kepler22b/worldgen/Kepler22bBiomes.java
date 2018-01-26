@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
+package com.mjr.extraplanets.planets.Kepler22b.worldgen;
 
 import java.util.Random;
 
@@ -10,8 +10,15 @@ import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bBlueMapleForest;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bPlains;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bPurpleMapleForest;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bRedDesert;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bRedMapleForest;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bWasteLands;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bYellowMapleForest;
 
-public class BiomeGenBaseKepler22b extends BiomeGenBase {
+public class Kepler22bBiomes extends BiomeGenBase {
 	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains().setColor(112).setBiomeName("Kepler22b Plains").setHeight(height_LowPlains);
 	public static final BiomeGenBase kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest().setColor(112).setBiomeName("Kepler22b Blue Maple Forest").setHeight(height_LowPlains);
 	public static final BiomeGenBase kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest().setColor(112).setBiomeName("Kepler22b Purple Maple Forest").setHeight(height_LowPlains);
@@ -25,7 +32,7 @@ public class BiomeGenBaseKepler22b extends BiomeGenBase {
 	protected byte fillerMeta;
 	protected byte stoneMeta;
 
-	public BiomeGenBaseKepler22b(int id) {
+	public Kepler22bBiomes(int id) {
 		super(id);
 		this.spawnableMonsterList.clear();
 		this.spawnableWaterCreatureList.clear();

@@ -12,8 +12,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenBaseKepler22b;
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.layer.GenLayerKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.GenLayerKepler22b;
 
 public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 	private GenLayer unzoomedBiomes;
@@ -24,12 +23,12 @@ public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 	protected WorldChunkManagerKepler22b() {
 		this.biomeCache = new BiomeCache(this);
 		this.biomesToSpawn = new ArrayList<BiomeGenBase>();
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPlains);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bBlueForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bPurpleForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bRedForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bYellowForest);
-		this.biomesToSpawn.add(BiomeGenBaseKepler22b.kepler22bRedDesert);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bPlains);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bBlueForest);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bPurpleForest);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bRedForest);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bYellowForest);
+		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bRedDesert);
 	}
 
 	public WorldChunkManagerKepler22b(long seed) {
@@ -46,7 +45,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 
 	@Override
 	public BiomeGenBase getBiome() {
-		return BiomeGenBaseKepler22b.kepler22bPlains;
+		return Kepler22bBiomes.kepler22bPlains;
 	}
 
 	@Override
@@ -59,7 +58,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 		BiomeGenBase biome = this.biomeCache.getBiomeGenAt(par1, par2);
 
 		if (biome == null) {
-			return BiomeGenBaseKepler22b.kepler22bPlains;
+			return Kepler22bBiomes.kepler22bPlains;
 		}
 		return biome;
 	}
@@ -99,7 +98,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 			if (arrayOfInts[i] >= 0) {
 				par1ArrayOfBiomeGenBase[i] = BiomeGenBase.getBiome(arrayOfInts[i]);
 			} else {
-				par1ArrayOfBiomeGenBase[i] = BiomeGenBaseKepler22b.kepler22bPlains;
+				par1ArrayOfBiomeGenBase[i] = Kepler22bBiomes.kepler22bPlains;
 			}
 		}
 		return par1ArrayOfBiomeGenBase;
@@ -126,7 +125,7 @@ public class WorldChunkManagerKepler22b extends WorldChunkManagerSpace {
 			if (ai[i] >= 0) {
 				par1ArrayOfBiomeGenBase[i] = BiomeGenBase.getBiome(ai[i]);
 			} else {
-				par1ArrayOfBiomeGenBase[i] = BiomeGenBaseKepler22b.kepler22bPlains;
+				par1ArrayOfBiomeGenBase[i] = Kepler22bBiomes.kepler22bPlains;
 			}
 		}
 		return par1ArrayOfBiomeGenBase;

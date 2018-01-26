@@ -13,8 +13,9 @@ import net.minecraft.entity.passive.EntitySheep;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 
-public class BiomeGenKepler22bPurpleMapleForest extends BiomeGenBaseKepler22b {
+public class BiomeGenKepler22bPurpleMapleForest extends Kepler22bBiomes {
 	@SuppressWarnings("unchecked")
 	public BiomeGenKepler22bPurpleMapleForest() {
 		super(Config.kepler22bPurpleForestBiomeID);
