@@ -157,7 +157,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 						}
 					}
 				}
-				if (yDiff < 0.06) {
+				if (yDiff < 0.4) {
 					int yMin = MathHelper.floor_double(this.getEntityBoundingBox().minY - this.getOnPadYOffset() - 0.45D) - 2;
 					int yMax = MathHelper.floor_double(this.getEntityBoundingBox().maxY) + 1;
 					int zMin = MathHelper.floor_double(this.posZ) - 1;

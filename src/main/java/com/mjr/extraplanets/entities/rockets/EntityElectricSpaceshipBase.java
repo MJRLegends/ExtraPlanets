@@ -229,10 +229,9 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 					} else
 						this.setDead();
 				}
-
-				if (this.timeSinceLaunch > 50 && this.onGround) {
-					this.failRocket();
-				}
+			}
+			if (this.timeSinceLaunch > 50 && this.onGround) {
+				this.failRocket();
 			}
 		}
 
