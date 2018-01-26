@@ -219,7 +219,7 @@ public class ClientProxy extends CommonProxy {
 
 		// Register Client Key Handler
 		RegisterUtilities.registerEventHandler(new KeyHandlerClient());
-		ClientRegistry.registerKeyBinding(KeyHandlerClient.openFuelGui);
+		ClientRegistry.registerKeyBinding(KeyHandlerClient.openPowerGUI);
 
 		// Register TileEntity Special Renderers
 		renderBlocksTileEntitySpecialRenderers();
