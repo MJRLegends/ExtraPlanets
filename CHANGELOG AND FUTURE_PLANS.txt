@@ -24,7 +24,7 @@ v0.5.5
 *Tweaks to the comment of the Enable Ore Generation of Lead Config option
 *Fixed Evolved Snowman Boss sounds
 *Added Evolved Giant Zombie boss to Eris Dungeons
-*Added loot back to Mercury, Jupiter, Saturn, Uranus, Neptune, Eris,
+*Added loot back to Mercury, Jupiter, Saturn, Uranus, Neptune, Eris, Pluto Dungeon Treasure Chests
 *Made biome names more user friendly
 *Few fixes
 *Changed Kepler22b World gen classes to match others
@@ -38,7 +38,6 @@ v0.5.5
 *Added Kepler22b Diamond Plains Biome
 *Added Diamond Trees to the Diamond Plains Biome
 *Added Diamond Ore Spheres to the Diamond Plains Biome
-*Fixes for MC 1.10.2
 *Forgotten change in last commit
 *Updated build.gradle
 *Added Kepler22b Coal, Iron, Gold, Emerald Plains Biome
@@ -57,7 +56,6 @@ v0.5.5
 *Added/Tweaks to comments on all Config options
 *Tweaks to the Snowman Boss moving speed
 *Added Evolved Spaceman boss to Pluto Dungeons
-*Fixes for MC 1.10.2
 *Removed not needed code from the Giant Zombie Boss
 *More fixes for MC 1.10.2
 *Tweaks for Spaceman boss
