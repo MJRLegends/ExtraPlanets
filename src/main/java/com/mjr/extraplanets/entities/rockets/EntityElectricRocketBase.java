@@ -22,7 +22,9 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPoweredDockable;
+import com.mjr.extraplanets.network.PacketSimpleEP;
 
 public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket implements IRocketType, IPoweredDockable, IWorldTransferCallback, ICameraZoomEntity {
 	public EnumRocketType rocketType;
@@ -205,11 +207,10 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 				this.removePassengers();
 				this.height = heightBefore;
 			}
-
 			return true;
 		} else if (player instanceof EntityPlayerMP) {
 			if (!this.world.isRemote) {
-				GalacticraftCore.packetPipeline.sendTo(new PacketSimple(EnumSimplePacket.C_DISPLAY_ROCKET_CONTROLS, this.world.provider.getDimension(), new Object[] {}), (EntityPlayerMP) player);
+				ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket.C_DISPLAY_ROCKET_CONTROLS, this.world.provider.getDimension(), new Object[] {}), (EntityPlayerMP) player);
 				GCPlayerStats stats = GCPlayerStats.get(player);
 				stats.setChatCooldown(0);
 				player.startRiding(this);

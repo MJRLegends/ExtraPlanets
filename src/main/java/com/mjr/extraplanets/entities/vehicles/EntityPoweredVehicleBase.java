@@ -457,7 +457,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 						+ TranslateUtilities.translate("gui.buggy.turn.name")));
 				player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.accel.name")));
 				player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.decel.name")));
-				player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openFuelGui.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.powered.inv.name")));
+				player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.powered.inv.name")));
 			}
 
 			return true;
