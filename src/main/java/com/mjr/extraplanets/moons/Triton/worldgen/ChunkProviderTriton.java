@@ -8,6 +8,7 @@ import net.minecraft.block.Block;
 import net.minecraft.world.World;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.moons.Triton.worldgen.village.MapGenVillageTriton;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
@@ -42,7 +43,8 @@ public class ChunkProviderTriton extends ChunkProviderCustomSpace {
 
 	@Override
 	public void recreateStructures(int par1, int par2) {
-		this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
+		if (Config.tritonVillages)
+			this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
 	}
 
 	@Override
@@ -57,6 +59,7 @@ public class ChunkProviderTriton extends ChunkProviderCustomSpace {
 
 	@Override
 	public void onPopulate(int cX, int cZ) {
-		this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
+		if (Config.tritonVillages)
+			this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
 	}
 }

@@ -285,6 +285,19 @@ public class Config {
 	public static boolean plutoVillages;
 	public static boolean erisVillages;
 	
+	public static boolean tritonVillages;
+	public static boolean europaVillages;
+	public static boolean ioVillages;
+	public static boolean deimosVillages;
+	public static boolean phobosVillages;
+	public static boolean callistoVillages;
+	public static boolean ganymedeVillages;
+	public static boolean rheaVillages;
+	public static boolean titanVillages;
+	public static boolean oberonVillages;
+	public static boolean titaniaVillages;
+	public static boolean iapetusVillages;
+	
 	public static boolean useCustomCelestialSelection;
 	public static boolean debugMode;
 
@@ -598,6 +611,19 @@ public class Config {
 		plutoVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Pluto Villages", true, "Setting this option to false will disable & remove the Pluto Villages generation").getBoolean(true);
 		erisVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Eris Villages", true, "Setting this option to false will disable & remove the Eris Villages generation").getBoolean(true);
 		
+		tritonVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Triton Villages", true, "Setting this option to false will disable & remove the Triton Villages generation").getBoolean(true);
+		europaVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Europa Villages", true, "Setting this option to false will disable & remove the Europa Villages generation").getBoolean(true);
+		ioVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Io Villages", true, "Setting this option to false will disable & remove the Io Villages generation").getBoolean(true);
+		deimosVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Deimos Villages", true, "Setting this option to false will disable & remove the Deimos Villages generation").getBoolean(true);
+		phobosVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Phobos Villages", true, "Setting this option to false will disable & remove the Phobos Villages generation").getBoolean(true);
+		callistoVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Callisto Villages", true, "Setting this option to false will disable & remove the Callisto Villages generation").getBoolean(true);
+		ganymedeVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ganymede Villages", true, "Setting this option to false will disable & remove the Ganymede Villages generation").getBoolean(true);
+		rheaVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Rhea Villages", true, "Setting this option to false will disable & remove the Rhea Villages generation").getBoolean(true);
+		titanVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Titan Villages", true, "Setting this option to false will disable & remove the Titan Villages generation").getBoolean(true);
+		oberonVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Oberon Villages", true, "Setting this option to false will disable & remove the Oberon Villages generation").getBoolean(true);
+		titaniaVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Titania Villages", true, "Setting this option to false will disable & remove the Titania Villages generation").getBoolean(true);
+		iapetusVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Iapetus Villages", true, "Setting this option to false will disable & remove the Iapetus Villages generation").getBoolean(true);
+
 		useCustomCelestialSelection = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestial Selection Screen", true,
 				"Setting this option to false make it use the Galacticraft Galaxy Map/Celestial Selection Screen").getBoolean(true);
 
