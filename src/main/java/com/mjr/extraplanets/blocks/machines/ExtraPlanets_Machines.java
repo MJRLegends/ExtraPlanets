@@ -96,7 +96,8 @@ public class ExtraPlanets_Machines {
 			FUEL_LOADER_ULTIMATE = new UltimateFuelLoader("ultimate_fuel_loader");
 		if (Config.BASIC_DENSIFIER)
 			BASIC_DENSIFIER = new BasicDensifier("basic_densifier");
-		VEHICLE_CHARGER = new VehicleCharger("vehicle_charger");
+		if (Config.VEHICLE_CHARGER)
+			VEHICLE_CHARGER = new VehicleCharger("vehicle_charger");
 	}
 
 	private static void registerMachines() throws NoSuchMethodException {
@@ -132,7 +133,8 @@ public class ExtraPlanets_Machines {
 			RegisterUtilities.registerBlock(Constants.modID, FUEL_LOADER_ULTIMATE, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
 		if (Config.BASIC_DENSIFIER)
 			RegisterUtilities.registerBlock(Constants.modID, BASIC_DENSIFIER, BASIC_DENSIFIER.getUnlocalizedName().substring(5));
-		RegisterUtilities.registerBlock(Constants.modID, VEHICLE_CHARGER, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
+		if (Config.VEHICLE_CHARGER)
+			RegisterUtilities.registerBlock(Constants.modID, VEHICLE_CHARGER, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {
@@ -172,6 +174,7 @@ public class ExtraPlanets_Machines {
 			RegisterUtilities.registerTileEntity(TileEntityUltimateFuelLoader.class, Constants.modName + "UltimateFuelLoader");
 		if (Config.BASIC_DENSIFIER)
 			RegisterUtilities.registerTileEntity(TileEntityBasicDensifier.class, Constants.modName + "Basic Densifier");
-		RegisterUtilities.registerTileEntity(TileEntityVehicleChanger.class, Constants.modName + "VehicleChanger");
+		if (Config.VEHICLE_CHARGER)
+			RegisterUtilities.registerTileEntity(TileEntityVehicleChanger.class, Constants.modName + "VehicleChanger");
 	}
 }

@@ -807,6 +807,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE);
 		if (Config.BASIC_DENSIFIER)
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.BASIC_DENSIFIER);
+		if (Config.VEHICLE_CHARGER)
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.VEHICLE_CHARGER);
 
 		// Other Blocks
 		if (Config.MERCURY || Config.CERES || Config.PLUTO || Config.ERIS)
@@ -836,8 +838,6 @@ public class ClientProxy extends CommonProxy {
 		for (BlockCakeBlocks.EnumBlockBasic blockBasic : BlockCakeBlocks.EnumBlockBasic.values()) {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.CAKE_BLOCKS, blockBasic.getMeta(), blockBasic.getName());
 		}
-
-		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.VEHICLE_CHARGER);
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.FAKE_BLOCK);
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.WHITE_SUGAR_CANE);
 		ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.DIAMOND_GRIT);
