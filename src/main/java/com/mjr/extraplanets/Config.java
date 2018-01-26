@@ -48,6 +48,7 @@ public class Config {
 	public static boolean advancedRefinery;
 	public static boolean slabsAndStairs;
 	public static boolean nuclearBomb;
+	public static boolean fireBomb;
 
 	public static boolean mercury;
 	public static boolean venus;
@@ -195,12 +196,7 @@ public class Config {
 	public static int kepler22bYellowForestBiomeID;
 	public static int kepler22bRedDesertBiomeID;
 	public static int kepler22bWasteLandsBiomeID;
-
-	public static boolean venusLiquid;
-	public static boolean jupiterLiquid;
-	public static boolean saturnLiquid;
-	public static boolean uranusLiquid;
-	public static boolean neptuneLiquid;
+	
 	public static boolean oreDictionary;
 
 	public static int schematicTier4GUIID;
@@ -288,103 +284,99 @@ public class Config {
 
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Change if a dimension ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_BIOME_IDS, "Change if a biome ID is causing conflicts!");
-		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Disabling this will remove the planet with all the related items/block!");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Setting this option to false will remove the planet with all the related items/block!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable/Disable dimension settings");
-		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Disabling this will remove the planet/moon with all the related items/block/space stations!");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Setting this option to false will remove the planet/moon with all the related items/block//space stations!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Change if a Schematic GUI ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Change if a Schematic Page ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_ITEMS,
-				"Changing to false will disable the tool & armor or items (Note: Tools & Armors will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
-		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_BLOCKS, "Changing to false will disable the blocks/machines");
-		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid" + "\"" + " option can cause lag! And It will disable the villages for that planet!");
+				"Changing to false will disable & remove the tool & armor or items (Note: Tools & Armors will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_BLOCKS, "Changing to false will disable & remove the blocks/machines");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS, "Note: The " + "\"" + "Surface & Sub-Surface blocks are Liquid" + "\"" + " option can cause lag! And It will disable & remove the villages for that planet!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SPACE_STATIONS,
-				"Disabling this will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
+				"Setting this option to false will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable/Disable compatibility settings");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable/Disable general settings");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_ENTITIES, "Enable/Disable Entities");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable/Disable Mod Compatibility, This will change and disable anything require to make it compatibility with enabled mods!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Advanced options for Celestial Body Map tp change locations of planets and solar systems! (For Advanced Users ONLY!)");
 
-		carbonItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Carbon Tools & Armor", true).getBoolean(true);
-		palladiumItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Palladium Tools & Armor", true).getBoolean(true);
-		magnesiumItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Magnesium Tools & Armor", true).getBoolean(true);
-		crystalItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Crystal Tools & Armor", true).getBoolean(true);
-		tungstenItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Tungsten Tools & Armor", true).getBoolean(true);
-		redGemItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Red Gem Tools & Armor", true).getBoolean(true);
-		blueGemItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Blue Gem Tools & Armor", true).getBoolean(true);
-		whiteGemItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "White Gem Tools & Armor", true).getBoolean(true);
-		zincItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Zinc Tools & Armor", true).getBoolean(true);
-		mercuryItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Mercury Tools & Armor", true).getBoolean(true);
-		uraniumItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Uranium Tools & Armor", true).getBoolean(true);
-		kepler22bItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Kepler22b Tools & Armor", true).getBoolean(true);
+		carbonItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Carbon Tools & Armor", true, "This option will will disable & remove & remove all Carbon Tools & Armour").getBoolean(true);
+		palladiumItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Palladium Tools & Armor", true, "This option will will disable & remove & remove all Palladium Tools & Armour").getBoolean(true);
+		magnesiumItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Magnesium Tools & Armor", true, "This option will will disable & remove & remove all Magnesium Tools & Armour").getBoolean(true);
+		crystalItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Crystal Tools & Armor", true, "This option will will disable & remove & remove all Crystal Tools & Armour").getBoolean(true);
+		tungstenItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Tungsten Tools & Armor", true, "This option will will disable & remove & remove all Tungsten Tools & Armour").getBoolean(true);
+		redGemItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Red Gem Tools & Armor", true, "This option will will disable & remove & remove all Red Gem Tools & Armour").getBoolean(true);
+		blueGemItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Blue Gem Tools & Armor", true, "This option will will disable & remove & remove all Blue Gem Tools & Armour").getBoolean(true);
+		whiteGemItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "White Gem Tools & Armor", true, "This option will will disable & remove & remove all White Gem Tools & Armour").getBoolean(true);
+		zincItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Zinc Tools & Armor", true, "This option will will disable & remove & remove all Zinc Tools & Armour").getBoolean(true);
+		mercuryItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Mercury Tools & Armor", true, "This option will will disable & remove & remove all Mercury Tools & Armour").getBoolean(true);
+		uraniumItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Uranium Tools & Armor", true, "This option will will disable & remove & remove all Uranium Tools & Armour").getBoolean(true);
+		kepler22bItems = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Kepler22b Tools & Armor", true, "This option will will disable & remove & remove all Kepler22b Tools & Armour").getBoolean(true);
 
 		thermalPaddings = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Tier 2 - 4 Thermal Padding", true, "This option will change planet thermal levels to support this feature!").getBoolean(true);
-		batteries = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Custom Batteries", true, "This option will disable all Custom Batteries!").getBoolean(true);
-		cannedFood = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Custom Canned Food", true, "This option will disable all Custom Canned Food!").getBoolean(true);
-		customApples = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Custom Iron & Diamomd Normal/Notch Apples", true, "This option will disable all Custom Normal/Notch Apples!").getBoolean(true);
+		batteries = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Custom Batteries", true, "This option will disable & remove all Custom Batteries!").getBoolean(true);
+		cannedFood = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Custom Canned Food", true, "This option will disable & remove all Custom Canned Food!").getBoolean(true);
+		customApples = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Custom Iron & Diamomd Normal/Notch Apples", true, "This option will disable & remove all Custom Normal/Notch Apples!").getBoolean(true);
 
-		advancedRefinery = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Refinery", true).getBoolean(true);
-		ultimateRefinery = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Refinery", true).getBoolean(true);
-
-		advancedFuelLoader = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Fuel Loader", true).getBoolean(true);
-		ultimateFuelLoader = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Fuel Loader", true).getBoolean(true);
-
-		advancedOxygenCompressor = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Oxygen Compressor/Decompressor", true).getBoolean(true);
-		ultimateOxygenCompressor = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Oxygen Compressor/Decompressor", true).getBoolean(true);
-
-		chargingBlock = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Vehicle Charger", true).getBoolean(true);
-		solarPanels = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Hybrid/Ultimate Solar Panel", true).getBoolean(true);
-		slabsAndStairs = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Slab & Stairs", true).getBoolean(true);
-
-		nuclearBomb = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Nuclear Bomb", true).getBoolean(true);
-
+		advancedRefinery = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Refinery", true, "This option will disable & remove the Advanced Refinery").getBoolean(true);
+		ultimateRefinery = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Refinery", true, "This option will disable & remove the Ultimate Refinery").getBoolean(true);
+		advancedFuelLoader = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Fuel Loader", true, "This option will disable & remove the Advanced Fuel Loader").getBoolean(true);
+		ultimateFuelLoader = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Fuel Loader", true, "This option will disable & remove the Ultimate Fuel Loader").getBoolean(true);
+		advancedOxygenCompressor = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Oxygen Compressor/Decompressor", true, "This option will disable & remove the Advanced Compressor/Decompressor").getBoolean(true);
+		ultimateOxygenCompressor = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Oxygen Compressor/Decompressor", true, "This option will disable & remove the Ultimate Compressor/Decompressor").getBoolean(true);
+		chargingBlock = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Vehicle Charger", true, "This option will disable & remove the Vehicle Charger").getBoolean(true);
+		solarPanels = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Hybrid/Ultimate Solar Panel", true, "This option will disable & remove the Hybrid/Ulimate Solar Panels").getBoolean(true);
+		nuclearBomb = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Nuclear Bomb", true, "This option will disable & remove the Nuclear Bomb").getBoolean(true);
+		fireBomb = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Fire Bomb", true, "This option will disable & remove the Fire Bomb").getBoolean(true);
+		
 		mobSuffocation = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mob Suffocation", true, "Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
-		useDefaultBosses = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Will disable all custom bosses and will replace them with Creeper Bosses!").getBoolean(false);
+		useDefaultBosses = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Setting this option to false will disable & remove all custom bosses and will replace them with Creeper Bosses!").getBoolean(false);
 
 		mercuryRocketTier = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mercury Rocket required", 4, "Changing this will change the Tier required to go to Mercury").getInt();
 		ceresRocketTier = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Ceres Rocket required", 4, "Changing this will change the Tier required to go to Ceres").getInt();
 
-		genVenusVolcanos = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanos on Venus", true, "Will disable Volcanos from generating on Venus").getBoolean(true);
-		genUranusIgloos = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Will disable Igloos from generating on Uranus").getBoolean(true);
-		genUranusIceSpikes = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Will disable Ice Spikes from generating on Uranus").getBoolean(true);
-		genJupiterSkyFeature = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Jupiter", true, "Setting this option to false will disable the Sky Feature on Jupiter").getBoolean(true);
-		jupiterLighting = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable Lighting & Lighting Effects on Jupiter").getBoolean(true);
-		customFog = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable Fog Effects on Jupiter, Uranus, Saturn, Neptune").getBoolean(true);
+		genVenusVolcanos = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanos on Venus", true, "Setting this option to false will disable & remove Volcanos from generating on Venus").getBoolean(true);
+		genUranusIgloos = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Setting this option to false will disable & remove Igloos from generating on Uranus").getBoolean(true);
+		genUranusIceSpikes = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Setting this option to false will disable & remove Ice Spikes from generating on Uranus").getBoolean(true);
+		genJupiterSkyFeature = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Jupiter", true, "Setting this option to false will disable & remove the Sky Feature on Jupiter").getBoolean(true);
+		jupiterLighting = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable & remove Lighting & Lighting Effects on Jupiter").getBoolean(true);
+		customFog = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune").getBoolean(true);
 
-		ceres = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Ceres", true).getBoolean(true);
-		mercury = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Mercury", true).getBoolean(true);
+		ceres = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Ceres", true, "Setting this option to false will remove Ceres & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		mercury = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Mercury", true, "Setting this option to false will remove Mercury & all the related items/block/tools/armour/space stations!").getBoolean(true);
 
-		triton = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Triton", true, "").getBoolean(true);
-		europa = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Europa", true, "").getBoolean(true);
-		io = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "IO", true, "").getBoolean(true);
-		deimos = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Deimos", true, "").getBoolean(true);
-		phobos = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Phobos", true, "").getBoolean(true);
-		callisto = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Callisto", true, "").getBoolean(true);
-		ganymede = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Ganymede", true, "").getBoolean(true);
-		rhea = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Rhea", true, "").getBoolean(true);
-		titan = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Titan", true, "").getBoolean(true);
-		oberon = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Oberon", true, "").getBoolean(true);
-		titania = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Titania", true, "").getBoolean(true);
-		iapetus = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Iapetus", true, "").getBoolean(true);
+		triton = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Triton", true, "Setting this option to false will remove Triton & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		europa = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Europa", true, "Setting this option to false will remove Europa & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		io = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "IO", true, "Setting this option to false will remove IO & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		deimos = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Deimos", true, "Setting this option to false will remove Deimos & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		phobos = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Phobos", true, "Setting this option to false will remove Phobos & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		callisto = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Callisto", true, "Setting this option to false will remove Callisto & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		ganymede = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Ganymede", true, "Setting this option to false will remove Ganymede & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		rhea = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Rhea", true, "Setting this option to false will remove Rhea & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		titan = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Titan", true, "Setting this option to false will remove Titan & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		oberon = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Oberon", true, "Setting this option to false will remove Oberon & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		titania = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Titania", true, "Setting this option to false will remove Titania & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		iapetus = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Iapetus", true, "Setting this option to false will remove Iapetus & all the related items/block/tools/armour/space stations!").getBoolean(true);
 
-		haumea = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Haumea", true, "").getBoolean(true);
-		makemake = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Makemake", true, "").getBoolean(true);
-		kuiperBelt = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kuiper Belt", true, "").getBoolean(true);
-		keplerSolarSystems = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler SolarSystems", true, "").getBoolean(true);
+		haumea = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Haumea", true, "Setting this option to false will remove Haumea").getBoolean(true);
+		makemake = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Makemake", true, "Setting this option to false will remove Makemake").getBoolean(true);
+		kuiperBelt = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kuiper Belt", true, "Setting this option to false will remove Kuiper Belt").getBoolean(true);
+		keplerSolarSystems = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler SolarSystems", true, "Setting this option to false will remove all Kepler Solar Systems and their Planets/Moons!").getBoolean(true);
 
-		kepler22b = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler 22b", true, "").getBoolean(true);
+		kepler22b = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler 22b", true, "Setting this option to false will remove Kepler 22b & all the related items/block/tools/armour/space stations!").getBoolean(true);
 
-		mercurySpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Mercury SpaceStation", true, "").getBoolean(true);
-		venusSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Venus SpaceStation", true, "").getBoolean(true);
-		ceresSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Ceres SpaceStation", true, "").getBoolean(true);
-		marsSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Mars SpaceStation", true, "").getBoolean(true);
-		jupiterSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Jupiter SpaceStation", true, "").getBoolean(true);
-		saturnSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Saturn SpaceStation", true, "").getBoolean(true);
-		uranusSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Uranus SpaceStation", true, "").getBoolean(true);
-		neptuneSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Neptune SpaceStation", true, "").getBoolean(true);
-		plutoSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Pluto SpaceStation", true, "").getBoolean(true);
-		erisSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Eris SpaceStation", true, "").getBoolean(true);
-		kepler22bSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Kepler22b SpaceStation", true, "").getBoolean(true);
+		mercurySpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Mercury SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
+		venusSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Venus SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
+		ceresSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Ceres SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
+		marsSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Mars SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
+		jupiterSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Jupiter SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
+		saturnSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Saturn SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
+		uranusSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Uranus SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
+		neptuneSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Neptune SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
+		plutoSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Pluto SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
+		erisSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Eris SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
+		kepler22bSpaceStation = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Kepler22b SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
 
 		venus = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Venus & Tier 4 Rocket", true, "Disabling this will remove the Venus & Tier 4 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		jupiter = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Jupiter & Tier 5 Rocket", true, "Disabling this will remove the Jupiter & Tier 5 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
@@ -394,69 +386,63 @@ public class Config {
 		pluto = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Pluto & Tier 9 Rocket", true, "Disabling this will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 		eris = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Eris & Tier 10 Rocket", true, "Disabling this will remove the Eris & Tier 10 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
 
-		venusLiquid = config.get(Constants.CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS, "Venus's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
-		jupiterLiquid = config.get(Constants.CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS, "Jupiter's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
-		saturnLiquid = config.get(Constants.CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS, "Saturn's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
-		uranusLiquid = config.get(Constants.CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS, "Uranus's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
-		neptuneLiquid = config.get(Constants.CONFIG_CATEGORY_DIMENSION_BLOCK_SETTINGS, "Neptune's Surface & Sub-Surface blocks are Liquid", false, "").getBoolean(false);
+		mercuryID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mercury Dimension ID", -13, "[range: -2147483647 ~ 2147483647, default: -13]").getInt();
+		venusID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Venus Dimension ID", -14, "[range: -2147483647 ~ 2147483647, default: -14]").getInt();
+		ceresID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ceres Dimension ID", -20, "[range: -2147483647 ~ 2147483647, default: -20]").getInt();
+		jupiterID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Jupiter Dimension ID", -15, "[range: -2147483647 ~ 2147483647, default: -15]").getInt();
+		saturnID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Saturn Dimension ID", -16, "[range: -2147483647 ~ 2147483647, default: -16]").getInt();
+		uranusID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Uranus Dimension ID", -17, "[range: -2147483647 ~ 2147483647, default: -17]").getInt();
+		neptuneID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Neptune Dimension ID", -18, "[range: -2147483647 ~ 2147483647, default: -18]").getInt();
+		plutoID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Pluto Dimension ID", -19, "[range: -2147483647 ~ 2147483647, default: -19]").getInt();
+		erisID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Eris Dimension ID", -21, "[range: -2147483647 ~ 2147483647, default: -21]").getInt();
 
-		mercuryID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mercury Dimension ID", -13).getInt();
-		venusID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Venus Dimension ID", -14).getInt();
-		ceresID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ceres Dimension ID", -20).getInt();
-		jupiterID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Jupiter Dimension ID", -15).getInt();
-		saturnID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Saturn Dimension ID", -16).getInt();
-		uranusID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Uranus Dimension ID", -17).getInt();
-		neptuneID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Neptune Dimension ID", -18).getInt();
-		plutoID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Pluto Dimension ID", -19).getInt();
-		erisID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Eris Dimension ID", -21).getInt();
+		ioID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Io Dimension ID", -31, "[range: -2147483647 ~ 2147483647, default: -31]").getInt();
+		europaID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Europa Dimension ID", -34, "[range: -2147483647 ~ 2147483647, default: -34]").getInt();
+		phobosID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Phobos Dimension ID", -33, "[range: -2147483647 ~ 2147483647, default: -33]").getInt();
+		deimosID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Deimos Dimension ID", -35, "[range: -2147483647 ~ 2147483647, default: -35]").getInt();
+		tritonID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Triton Dimension ID", -36, "[range: -2147483647 ~ 2147483647, default: -36]").getInt();
+		callistoID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Callisto Dimension ID", -37, "[range: -2147483647 ~ 2147483647, default: -37]").getInt();
+		ganymedeID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ganymede Dimension ID", -38, "[range: -2147483647 ~ 2147483647, default: -38]").getInt();
+		rheaID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Rhea Dimension ID", -39, "[range: -2147483647 ~ 2147483647, default: -39]").getInt();
+		titanID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titan Dimension ID", -40, "[range: -2147483647 ~ 2147483647, default: -40]").getInt();
+		oberonID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Oberon Dimension ID", -41, "[range: -2147483647 ~ 2147483647, default: -41]").getInt();
+		titaniaID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titania Dimension ID", -42, "[range: -2147483647 ~ 2147483647, default: -42]").getInt();
+		iapetusID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Iapetus Dimension ID", -43, "[range: -2147483647 ~ 2147483647, default: -43]").getInt();
 
-		ioID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Io Dimension ID", -31).getInt();
-		europaID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Europa Dimension ID", -34).getInt();
-		phobosID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Phobos Dimension ID", -33).getInt();
-		deimosID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Deimos Dimension ID", -35).getInt();
-		tritonID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Triton Dimension ID", -36).getInt();
-		callistoID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Callisto Dimension ID", -37).getInt();
-		ganymedeID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ganymede Dimension ID", -38).getInt();
-		rheaID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Rhea Dimension ID", -39).getInt();
-		titanID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titan Dimension ID", -40).getInt();
-		oberonID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Oberon Dimension ID", -41).getInt();
-		titaniaID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titania Dimension ID", -42).getInt();
-		iapetusID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Iapetus Dimension ID", -43).getInt();
+		kepler22bID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Kepler 22b Dimension ID", -22, "[range: -2147483647 ~ 2147483647, default: -22]").getInt();
 
-		kepler22bID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Kepler 22b Dimension ID", -22).getInt();
+		mercurySpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mercury SpaceStation Dimension ID", -61, "[range: -2147483647 ~ 2147483647, default: -61]").getInt();
+		mercurySpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mercury SpaceStation Static Dimension ID", -60, "[range: -2147483647 ~ 2147483647, default: -60]").getInt();
 
-		mercurySpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mercury SpaceStation Dimension ID", -61).getInt();
-		mercurySpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mercury SpaceStation Static Dimension ID", -60).getInt();
+		venusSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Venus SpaceStation Dimension ID", -63, "[range: -2147483647 ~ 2147483647, default: -63]").getInt();
+		venusSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Venus SpaceStation Static Dimension ID", -62, "[range: -2147483647 ~ 2147483647, default: -62]").getInt();
 
-		venusSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Venus SpaceStation Dimension ID", -63).getInt();
-		venusSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Venus SpaceStation Static Dimension ID", -62).getInt();
+		ceresSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ceres SpaceStation Dimension ID", -65, "[range: -2147483647 ~ 2147483647, default: -65]").getInt();
+		ceresSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ceres SpaceStation Static Dimension ID", -64, "[range: -2147483647 ~ 2147483647, default: -64]").getInt();
 
-		ceresSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ceres SpaceStation Dimension ID", -65).getInt();
-		ceresSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ceres SpaceStation Static Dimension ID", -64).getInt();
+		marsSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mars SpaceStation Dimension ID", -67, "[range: -2147483647 ~ 2147483647, default: -67]").getInt();
+		marsSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mars SpaceStation Static Dimension ID", -66, "[range: -2147483647 ~ 2147483647, default: -66]").getInt();
 
-		marsSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mars SpaceStation Dimension ID", -67).getInt();
-		marsSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mars SpaceStation Static Dimension ID", -66).getInt();
+		jupiterSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Jupiter SpaceStation Dimension ID", -69, "[range: -2147483647 ~ 2147483647, default: -69]").getInt();
+		jupiterSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Jupiter SpaceStation Static Dimension ID", -68, "[range: -2147483647 ~ 2147483647, default: -68]").getInt();
 
-		jupiterSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Jupiter SpaceStation Dimension ID", -69).getInt();
-		jupiterSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Jupiter SpaceStation Static Dimension ID", -68).getInt();
+		saturnSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Saturn SpaceStation Dimension ID", -71, "[range: -2147483647 ~ 2147483647, default: -71]").getInt();
+		saturnSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Saturn SpaceStation Static Dimension ID", -70, "[range: -2147483647 ~ 2147483647, default: -70]").getInt();
 
-		saturnSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Saturn SpaceStation Dimension ID", -71).getInt();
-		saturnSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Saturn SpaceStation Static Dimension ID", -70).getInt();
+		uranusSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Uranus SpaceStation Dimension ID", -73, "[range: -2147483647 ~ 2147483647, default: -73]").getInt();
+		uranusSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Uranus SpaceStation Static Dimension ID", -72, "[range: -2147483647 ~ 2147483647, default: -72]").getInt();
 
-		uranusSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Uranus SpaceStation Dimension ID", -73).getInt();
-		uranusSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Uranus SpaceStation Static Dimension ID", -72).getInt();
+		neptuneSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Neptune SpaceStation Dimension ID", -75, "[range: -2147483647 ~ 2147483647, default: -75]").getInt();
+		neptuneSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Neptune SpaceStation Static Dimension ID", -74, "[range: -2147483647 ~ 2147483647, default: -74]").getInt();
 
-		neptuneSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Neptune SpaceStation Dimension ID", -75).getInt();
-		neptuneSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Neptune SpaceStation Static Dimension ID", -74).getInt();
+		plutoSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Pluto SpaceStation Dimension ID", -77, "[range: -2147483647 ~ 2147483647, default: -77]").getInt();
+		plutoSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Pluto SpaceStation Static Dimension ID", -76, "[range: -2147483647 ~ 2147483647, default: -76]").getInt();
 
-		plutoSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Pluto SpaceStation Dimension ID", -77).getInt();
-		plutoSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Pluto SpaceStation Static Dimension ID", -76).getInt();
+		erisSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Eris SpaceStation Dimension ID", -79, "[range: -2147483647 ~ 2147483647, default: -79]").getInt();
+		erisSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Eris SpaceStation Static Dimension ID", -78, "[range: -2147483647 ~ 2147483647, default: -78]").getInt();
 
-		erisSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Eris SpaceStation Dimension ID", -79).getInt();
-		erisSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Eris SpaceStation Static Dimension ID", -78).getInt();
-
-		kepler22bSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Kepler 22b SpaceStation Dimension ID", -81).getInt();
-		kepler22bSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Kepler 22b SpaceStation Static Dimension ID", -80).getInt();
+		kepler22bSpaceStationID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Kepler 22b SpaceStation Dimension ID", -81, "[range: -2147483647 ~ 2147483647, default: -81]").getInt();
+		kepler22bSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Kepler 22b SpaceStation Static Dimension ID", -80, "[range: -2147483647 ~ 2147483647, default: -80]").getInt();
 
 		mercuryBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Mercury Biome ID", 148, "[range: 0 ~ 255, default: 148]").getInt();
 		venusBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Venus Biome ID", 149, "[range: 0 ~ 255, default: 149]").getInt();
@@ -504,33 +490,34 @@ public class Config {
 		titanMethaneHillsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Methane Hills Biome ID", 202, "[range: 0 ~ 255, default: 202]").getInt();
 		ioBurningPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Burning Plains Biome ID", 203, "[range: 0 ~ 255, default: 203]").getInt();
 
-		schematicTier4GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555).getInt();
-		schematicTier5GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556).getInt();
-		schematicTier6GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 6 GUI ID", 5557).getInt();
-		schematicTier7GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 7 GUI ID", 5558).getInt();
-		schematicTier8GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 8 GUI ID", 5559).getInt();
-		schematicTier9GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 9 GUI ID", 5560).getInt();
-		schematicTier10GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 10 GUI ID", 5561).getInt();
+		schematicTier4GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555, "[range: -2147483647 ~ 2147483647, default: 5555]").getInt();
+		schematicTier5GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556, "[range: -2147483647 ~ 2147483647, default: 5556]").getInt();
+		schematicTier6GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 6 GUI ID", 5557, "[range: -2147483647 ~ 2147483647, default: 5557]").getInt();
+		schematicTier7GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 7 GUI ID", 5558, "[range: -2147483647 ~ 2147483647, default: 5558]").getInt();
+		schematicTier8GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 8 GUI ID", 5559, "[range: -2147483647 ~ 2147483647, default: 5559]").getInt();
+		schematicTier9GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 9 GUI ID", 5560, "[range: -2147483647 ~ 2147483647, default: 5560]").getInt();
+		schematicTier10GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 10 GUI ID", 5561, "[range: -2147483647 ~ 2147483647, default: 5561]").getInt();
 
-		schematicMarsRoverGUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Mars Rover GUI ID", 5562).getInt();
-		schematicVenusRoverGUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Venus Rover GUI ID", 5563).getInt();
+		schematicMarsRoverGUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Mars Rover GUI ID", 5562, "[range: -2147483647 ~ 2147483647, default: 5562]").getInt();
+		schematicVenusRoverGUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Venus Rover GUI ID", 5563, "[range: -2147483647 ~ 2147483647, default: 5563]").getInt();
 
-		schematicTier4PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 4 Page ID", 6666).getInt();
-		schematicTier5PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 5 Page ID", 6667).getInt();
-		schematicTier6PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 6 Page ID", 6668).getInt();
-		schematicTier7PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 7 Page ID", 6669).getInt();
-		schematicTier8PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 8 Page ID", 6670).getInt();
-		schematicTier9PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 9 Page ID", 6671).getInt();
-		schematicTier10PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 10 Page ID", 6672).getInt();
+		schematicTier4PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 4 Page ID", 6666, "[range: -2147483647 ~ 2147483647, default: 6666]").getInt();
+		schematicTier5PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 5 Page ID", 6667, "[range: -2147483647 ~ 2147483647, default: 6667]").getInt();
+		schematicTier6PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 6 Page ID", 6668, "[range: -2147483647 ~ 2147483647, default: 6668]").getInt();
+		schematicTier7PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 7 Page ID", 6669, "[range: -2147483647 ~ 2147483647, default: 6669]").getInt();
+		schematicTier8PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 8 Page ID", 6670, "[range: -2147483647 ~ 2147483647, default: 6670]").getInt();
+		schematicTier9PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 9 Page ID", 6671, "[range: -2147483647 ~ 2147483647, default: 6671]").getInt();
+		schematicTier10PageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Tier 10 Page ID", 6672, "[range: -2147483647 ~ 2147483647, default: 6672]").getInt();
 
-		schematicMarsRoverPageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Mars Rover Page ID", 6673).getInt();
-		schematicVenusRoverPageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Venus Rover Page ID", 6674).getInt();
+		schematicMarsRoverPageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Mars Rover Page ID", 6673, "[range: -2147483647 ~ 2147483647, default: 6673]").getInt();
+		schematicVenusRoverPageID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Schematic Venus Rover Page ID", 6674, "[range: -2147483647 ~ 2147483647, default: 6674]").getInt();
 
 		microBlock = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Forge Micro blocks support", true, "").getBoolean(true);
-		neiSupport = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable NEI Recipe support", true, "").getBoolean(true);
-		oreDictionary = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Add planet/moons ores to the ore dictionary", true, "Setting this to false will disable all Ore Dictionary Support for Items and Blocks!").getBoolean(true);
+		neiSupport = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable NEI Recipe support", true, "Setting this to false will disable & remove the JEI Support for Custom Machines/Rockets/Vehicles").getBoolean(true);
+		oreDictionary = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Add planet/moons ores to the ore dictionary", true, "Setting this to false will disable & remove all Ore Dictionary Support for Items and Blocks!").getBoolean(true);
 
-		achievements = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable achievements", true, "").getBoolean(true);
+		achievements = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable achievements", true, "Setting this option to false will disable & remove Achievements for ExtraPlanets").getBoolean(true);
+		slabsAndStairs = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Slab & Stairs", true, "Setting this option to false will remove all Slabs and Stairs").getBoolean(true);
 
 		evolvedMagmaCube = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Magma Cube", true, "").getBoolean(true);
 		evolvedIceSlime = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Ice Slime", true, "").getBoolean(true);
@@ -543,13 +530,13 @@ public class Config {
 		evolvedGiantSpider = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Giant Spider", true, "").getBoolean(true);
 		evolvedMiniEnderman = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Mini Enderman", true, "").getBoolean(true);
 
-		morePlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic More Planets Compatibility", false, "This option will disable conflicting Planets/Moons/SpaceStations/Thermal Paddings, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Iapetus & Titania TO -44 & -45").getBoolean(false);
+		morePlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic More Planets Compatibility", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Iapetus & Titania TO -44 & -45").getBoolean(false);
 		morePlanetsCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced More Planets Compatibility", false,
 				"This option will do the same as the basic one but will also fix the progression between addons (Note: Will disable blocks/items/entities/recipes)").getBoolean(false);
-		amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false, "This option will disable the Custom Celestial Selection screen & Change Conflicting Dimension Ids, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Ceres, Eris, Kepler22b, Rhea TO -66 ,-67 -68, -69").getBoolean(false);
-		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility", false, "This option will disable conflicting Planets/Moons/SpaceStations/Thermal Paddings & Custom Celestial Selection screen & Change Conflicting Dimension Ids").getBoolean(false);
+		amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false, "This option will disable & remove the Custom Celestial Selection screen & Change Conflicting Dimension Ids, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Ceres, Eris, Kepler22b, Rhea TO -66 ,-67 -68, -69").getBoolean(false);
+		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings & Custom Celestial Selection screen & Change Conflicting Dimension Ids").getBoolean(false);
 		// galaxySpaceCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
-		extendedPlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility", false, "This option will disable conflicting Planets/Moons/SpaceStations").getBoolean(
+		extendedPlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations").getBoolean(
 				false);
 
 		kepler22SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
@@ -574,10 +561,10 @@ public class Config {
 		kuiperBeltDistanceOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kuiper Belt Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		makemakeDistanceOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Makemake Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 
-		marsRover = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Mars Rover & Its Parts", true, "").getBoolean(true);
-		venusRover = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Venus Rover & Its Parts", true, "").getBoolean(true);
+		marsRover = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Mars Rover & Its Parts", true, "Setting this option to false will remove the Mars Rover Entity & Schematic & Parts needed to Craft it").getBoolean(true);
+		venusRover = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Venus Rover & Its Parts", true, "Setting this option to false will remove the Venus Rover Entity & Schematic & Parts needed to Craft it").getBoolean(true);
 
-		oldStyleGravity = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Old Style Gravity", false, "").getBoolean(false);
+		oldStyleGravity = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Old Style Gravity", false, "This option will change all the gravity of Planets & Moons back to the old style of gravity").getBoolean(false);
 
 		useCustomCelestialSelection = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestial Selection Screen", true,
 				"Setting this option to false make it use the Galacticraft Galaxy Map/Celestial Selection Screen").getBoolean(true);

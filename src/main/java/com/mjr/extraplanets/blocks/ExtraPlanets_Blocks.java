@@ -341,7 +341,8 @@ public class ExtraPlanets_Blocks {
 			fossil = new BlockFossil(Material.rock).setBlockName("fossil").setBlockTextureName(Constants.TEXTURE_PREFIX + "fossil").setHardness(2.5F).setResistance(1.0F);
 		if (Config.ceres && Config.nuclearBomb)
 			nuclearBomb = new BlockNuclearBomb();
-		fireBomb = new BlockFireBomb();
+		if(Config.saturn && Config.fireBomb)
+			fireBomb = new BlockFireBomb();
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			kepler22bBlocks = new BlockBasicKepler22b("kepler22b");
 			kepler22bGrass = new BlockBasicGrass("kepler22b", "kepler22b");
@@ -599,7 +600,8 @@ public class ExtraPlanets_Blocks {
 			GameRegistry.registerBlock(fossil, "fossil");
 		if (Config.ceres && Config.nuclearBomb)
 			GameRegistry.registerBlock(nuclearBomb, "nuclearBomb");
-		GameRegistry.registerBlock(fireBomb, "fireBomb");
+		if(Config.saturn && Config.fireBomb)
+			GameRegistry.registerBlock(fireBomb, "fireBomb");
 
 		GameRegistry.registerBlock(advancedLaunchPad, ItemBlockCustomLandingPad.class, "tile.advancedLaunchPad");
 		GameRegistry.registerBlock(advancedLaunchPadFull, ItemBlockGC.class, "tile.advancedLaunchPadFull");

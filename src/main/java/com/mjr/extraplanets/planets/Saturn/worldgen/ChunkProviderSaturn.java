@@ -9,7 +9,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 import com.google.common.collect.Lists;
-import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.MapGenDungeon;
@@ -66,8 +65,7 @@ public class ChunkProviderSaturn extends ChunkProviderCustomSpace {
 
 	@Override
 	public void recreateStructures(int par1, int par2) {
-		if (!Config.saturnLiquid)
-			this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
+		this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
 	}
 
 	@Override
@@ -82,8 +80,7 @@ public class ChunkProviderSaturn extends ChunkProviderCustomSpace {
 
 	@Override
 	public void onPopulate(int cX, int cZ) {
-		if (!Config.saturnLiquid)
-			this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
+		this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
 		this.dungeonGenerator.handleTileEntities(this.rand);
 	}
 }

@@ -308,7 +308,7 @@ public class ExtraPlanets_Recipes {
 					new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11) });
 
 			// Fire Bomb
-			if (Config.saturn)
+			if (Config.saturn && Config.fireBomb)
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.fireBomb), new Object[] { "GZG", "SUS", "GLG", 'G', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 6), 'S', Blocks.sand, 'U',
 						new ItemStack(ExtraPlanets_Items.tier4Items, 1, 11), 'Z', new ItemStack(ExtraPlanets_Items.tier6Items, 1, 6), 'L', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 10) });
 			else
