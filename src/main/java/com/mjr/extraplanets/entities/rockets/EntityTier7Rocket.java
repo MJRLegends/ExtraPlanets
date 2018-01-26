@@ -63,7 +63,7 @@ public class EntityTier7Rocket extends EntityTieredRocket {
 
 	@Override
 	public float getRotateOffset() {
-		return -0.6F;
+		return 1.0F;
 	}
 
 	@Override
