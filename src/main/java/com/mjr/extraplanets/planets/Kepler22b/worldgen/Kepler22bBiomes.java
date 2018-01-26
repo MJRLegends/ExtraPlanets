@@ -11,6 +11,11 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bBlueMapleForest;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bCoalPlains;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bDiamondPlains;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bEmeraldPlains;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bGoldPlains;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bIronPlains;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bPlains;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bPurpleMapleForest;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bRedDesert;
@@ -26,6 +31,11 @@ public class Kepler22bBiomes extends BiomeGenBase {
 	public static final BiomeGenBase kepler22bYellowForest = new BiomeGenKepler22bYellowMapleForest().setColor(112).setBiomeName("Kepler22b Yellow Maple Forest").setHeight(height_LowPlains);
 	public static final BiomeGenBase kepler22bRedDesert = new BiomeGenKepler22bRedDesert().setColor(112).setBiomeName("Kepler22b Red Desert").setHeight(height_MidHills);
 	public static final BiomeGenBase kepler22bWasteLands = new BiomeGenKepler22bWasteLands().setColor(112).setBiomeName("Kepler22b Waste Lands").setHeight(new Height(-0.2F, 0.1F));
+	public static final BiomeGenBase kepler22bDiamondPlains = new BiomeGenKepler22bDiamondPlains().setBiomeName("Kepler22b Diamond Plains").setHeight(new Height(0.125F, 0.05F));
+	public static final BiomeGenBase kepler22bCoalPlains = new BiomeGenKepler22bCoalPlains().setBiomeName("Kepler22b Coal Plains").setHeight(new Height(0.125F, 0.05F));
+	public static final BiomeGenBase kepler22bIronPlains = new BiomeGenKepler22bIronPlains().setBiomeName("Kepler22b Iron Plains").setHeight(new Height(0.125F, 0.05F));
+	public static final BiomeGenBase kepler22bGoldPlains = new BiomeGenKepler22bGoldPlains().setBiomeName("Kepler22b Gold Plains").setHeight(new Height(0.125F, 0.05F));
+	public static final BiomeGenBase kepler22bEmeraldPlains = new BiomeGenKepler22bEmeraldPlains().setBiomeName("Kepler22b Emerald Plains").setHeight(new Height(0.125F, 0.05F));
 
 	protected Block stoneBlock;
 	protected byte topMeta;

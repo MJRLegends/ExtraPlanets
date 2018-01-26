@@ -196,6 +196,11 @@ public class Config {
 	public static int kepler22bYellowForestBiomeID;
 	public static int kepler22bRedDesertBiomeID;
 	public static int kepler22bWasteLandsBiomeID;
+	public static int kepler22bDiamondPlainsBiomeID;
+	public static int kepler22bCoalPlainsBiomeID;
+	public static int kepler22bIronPlainsBiomeID;
+	public static int kepler22bGoldPlainsBiomeID;
+	public static int kepler22bEmeraldPlainsBiomeID;
 	
 	public static boolean oreDictionary;
 
@@ -499,6 +504,13 @@ public class Config {
 		saturnNuclearLandBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Saturn Nuclear Land Biome ID", 201, "[range: 0 ~ 255, default: 201]").getInt();
 		titanMethaneHillsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Methane Hills Biome ID", 202, "[range: 0 ~ 255, default: 202]").getInt();
 		ioBurningPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Burning Plains Biome ID", 203, "[range: 0 ~ 255, default: 203]").getInt();
+		kepler22bDiamondPlainsBiomeID= config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Diamond Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
+		kepler22bCoalPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Coal Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
+		kepler22bIronPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Iron Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
+		kepler22bGoldPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Gold Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
+		kepler22bEmeraldPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Emerald Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
+		//EUROPA_SALT_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Salt Sea Biome ID", 205, "[range: 0 ~ 255, default: 205]").getInt();
+		//EUROPA_ICE_VALLEYS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Valleys Biome ID", 206, "[range: 0 ~ 255, default: 206]").getInt();
 
 		schematicTier4GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555, "[range: -2147483647 ~ 2147483647, default: 5555]").getInt();
 		schematicTier5GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556, "[range: -2147483647 ~ 2147483647, default: 5556]").getInt();
