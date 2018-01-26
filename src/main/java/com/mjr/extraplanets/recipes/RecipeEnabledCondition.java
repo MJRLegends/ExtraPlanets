@@ -117,7 +117,7 @@ public class RecipeEnabledCondition implements IConditionFactory {
 		if (JsonUtils.getString(json, "value").equals("solarpanels"))
 			return () -> Config.SOLAR_PANELS;
 		if (JsonUtils.getString(json, "value").equals("vehiclecharger"))
-			return () -> Config.SOLAR_PANELS;
+			return () -> Config.VEHICLE_CHARGER;
 		if (JsonUtils.getString(json, "value").equals("oxygencompressoradvanced"))
 			return () -> Config.OXYGEN_COMPRESSOR_ADVANCED;
 		if (JsonUtils.getString(json, "value").equals("oxygencompressorultimate"))
