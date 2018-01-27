@@ -190,7 +190,7 @@ public class TileEntityUltimateRefinery extends TileBaseElectricBlockWithInvento
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
+				return ItemElectricBase.isElectricItemCharged(itemstack);
 			case 1:
 				return FluidUtil.isOilContainerAny(itemstack);
 			case 2:
@@ -207,7 +207,7 @@ public class TileEntityUltimateRefinery extends TileBaseElectricBlockWithInvento
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
+				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
 			case 1:
 				return FluidUtil.isEmptyContainer(itemstack);
 			case 2:

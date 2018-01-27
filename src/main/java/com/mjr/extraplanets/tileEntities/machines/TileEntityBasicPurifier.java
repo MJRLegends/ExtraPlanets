@@ -258,7 +258,7 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
+				return ItemElectricBase.isElectricItemCharged(itemstack);
 			case 4:
 				return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
 			default:
@@ -273,7 +273,7 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
+				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
 			default:
 				return false;
 			}
