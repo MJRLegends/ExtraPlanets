@@ -369,6 +369,22 @@
             "soundReset": true,
             "sounds": []
         },
+		{
+            "conditions": "biome.name == 'Europa Salt Sea'",
+            "soundReset": true,
+            "sounds": []
+        },
+		{
+            "conditions": "biome.name == 'Europa Ice Valleys'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:ice",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
         {
             "conditions": "biome.name == 'Ganymede'",
             "soundReset": true,
