@@ -20,6 +20,7 @@ biomes {
       extraplanets_biomes.json
      >
 ```
+6. Load the game, and enjoy :D
 
 ## 1.8+ Version:
 
@@ -36,5 +37,4 @@ so it looks like
         extraplanets_biomes.json
      >
 ```
-
 6. Load the game, and enjoy :D
