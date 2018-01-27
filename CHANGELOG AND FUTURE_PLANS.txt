@@ -8,6 +8,20 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.9.6
+*Update es_ES.lang
+*Fixed OpenGL Error spam
+*Updated lang files to match 1.8+ changes
+*Add/Tweaks to comments on all Config options
+*Added fire bomb Config option
+*Removed not needed config options
+*Added Diamond, Gold, Coal, Iron, Emerald Grit Blocks
+*Added Config options for Villages on all Planets
+*Fixed issue #207
+*Changed Kepler22b World gen classes to match others part
+*Added Kepler22b Diamond, Coal, Iron, Gold, Emerald Plains Biomes
+*Added Config options for Villages on all Moons
+
 v1.9.5
 *Updated lang files to match 1.8+ changes
 *Converted Io over to multi biome system
