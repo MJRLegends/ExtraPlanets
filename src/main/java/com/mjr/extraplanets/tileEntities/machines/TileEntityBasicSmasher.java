@@ -151,7 +151,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
+				return ItemElectricBase.isElectricItemCharged(itemstack);
 			case 1:
 				for (ItemStack test : ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems) {
 					if (test.isItemEqual(itemstack)) {
@@ -170,7 +170,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
+				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
 			case 2:
 				return itemstack.getItem() == this.producingStack.getItem();
 			default:
