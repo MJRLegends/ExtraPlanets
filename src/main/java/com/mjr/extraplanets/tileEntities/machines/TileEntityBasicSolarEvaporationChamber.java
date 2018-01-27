@@ -164,7 +164,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
+				return ItemElectricBase.isElectricItemCharged(itemstack);
 			case 1:
 				return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
 			default:
@@ -179,7 +179,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
+				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
 			case 2:
 				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM;
 			default:

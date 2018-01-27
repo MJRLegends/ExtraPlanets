@@ -159,7 +159,7 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) > 0;
+				return ItemElectricBase.isElectricItemCharged(itemstack);
 			case 1:
 				return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
 			case 2:
@@ -176,7 +176,7 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItem() instanceof ItemElectricBase && ((ItemElectricBase) itemstack.getItem()).getElectricityStored(itemstack) <= 0 || !this.shouldPullEnergy();
+				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
 			case 3:
 				return itemstack.getItem() == ExtraPlanets_Items.POTASSIUM_IODIDE;
 			default:
