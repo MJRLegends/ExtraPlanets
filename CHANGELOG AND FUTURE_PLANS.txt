@@ -8,6 +8,12 @@
 
 
 ===========================================Future Updates=============================================
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
 v0.1.6
 *Removed not needed code from the Giant Zombie Boss
 *Tweaks to the Snowman Boss moving speed
@@ -18,11 +24,21 @@ v0.1.6
 *Fixed Spaceman Boss sounds
 *Added nl_NL.lang (Thanks to BB889)
 *Updated lang files to match below 1.12
-======================================================================================================
+*Fixed Saturn Slime ore dropping the wrong meta data for slime balls
+*Added Fingerprint Violation Jar Signing
+*Fixed issue #207
+*Fixed packet error with vehicle charger
+*Clean up
+*Fixed Galacticraft Version Checker for dev workspace
+*Fixed Electric Rocket not exploding when hitting the ground
+*Fixed Chat text to show power not fuel for when getting in Electric Rocket
+*Fixes for double "will" in comments in Config options
+*Added Config option for the Vehicle Charger
+*Changed Mars Rover to be added to the Mars Dungeon now that GC has fixed the boss issue for Mars
+*Updated Galacticraft Version checker to a minimum version of build #128
+*Tile Entity tweaks to match GC changes
+*Changed requirement of MJRLegendsLib to 1.12.2-1.0.6 & above
 
-
-
-===========================================Released Updates===========================================
 v0.1.5
 *Converted Basic Block Smasher over to a general list of recipes
 *Added CraftTweaker Support for Basic Smasher
