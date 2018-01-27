@@ -15,6 +15,19 @@
 
 
 ===========================================Released Updates===========================================
+v0.5.6
+*Added Fingerprint Violation Jar Signing
+*Fixed issue #207
+*Fixed packet error with vehicle charger
+*Fixed Electric Rocket not exploding when hitting the ground
+*Fixed Chat text to show power not fuel for when getting in Electric Rocket
+*Fixes for double "will" in comments in Config options
+*Added Config option for the Vehicle Charger
+*Fixed Saturn Slime ore dropping the wrong meta data for slime balls
+*Changed Mars Rover to be added to the Mars Dungeon now that GC has fixed the boss issue for Mars
+*Updated Galacticraft Version checker to a minimum version of build #128
+*Tile Entity tweaks to match GC changes
+
 v0.5.5
 *Updated change log file
 *Updated lang files
