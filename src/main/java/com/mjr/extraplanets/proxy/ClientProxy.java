@@ -1043,60 +1043,62 @@ public class ClientProxy extends CommonProxy {
 			for (int i = 0; i < ItemTier11Items.names.length; i++) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_11_ITEMS, i, ItemTier11Items.names[i]);
 			}
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.BLUE_DIAMOND_BOOTS);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.BLUE_DIAMOND_CHEST);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.BLUE_DIAMOND_HELMET);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.BLUE_DIAMOND_LEGINGS);
+			if (Config.ITEMS_KEPLER22B) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.BLUE_DIAMOND_BOOTS);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.BLUE_DIAMOND_CHEST);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.BLUE_DIAMOND_HELMET);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.BLUE_DIAMOND_LEGINGS);
 
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.GREEN_DIAMOND_BOOTS);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.GREEN_DIAMOND_CHEST);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.GREEN_DIAMOND_HELMET);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.GREEN_DIAMOND_LEGINGS);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.GREEN_DIAMOND_BOOTS);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.GREEN_DIAMOND_CHEST);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.GREEN_DIAMOND_HELMET);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.GREEN_DIAMOND_LEGINGS);
 
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.PURPLE_DIAMOND_BOOTS);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.PURPLE_DIAMOND_CHEST);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.PURPLE_DIAMOND_HELMET);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.PURPLE_DIAMOND_LEGINGS);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.PURPLE_DIAMOND_BOOTS);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.PURPLE_DIAMOND_CHEST);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.PURPLE_DIAMOND_HELMET);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.PURPLE_DIAMOND_LEGINGS);
 
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.RED_DIAMOND_BOOTS);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.RED_DIAMOND_CHEST);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.RED_DIAMOND_HELMET);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.RED_DIAMOND_LEGINGS);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.RED_DIAMOND_BOOTS);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.RED_DIAMOND_CHEST);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.RED_DIAMOND_HELMET);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.RED_DIAMOND_LEGINGS);
 
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.YELLOW_DIAMOND_BOOTS);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.YELLOW_DIAMOND_CHEST);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.YELLOW_DIAMOND_HELMET);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.YELLOW_DIAMOND_LEGINGS);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.YELLOW_DIAMOND_BOOTS);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.YELLOW_DIAMOND_CHEST);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.YELLOW_DIAMOND_HELMET);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.YELLOW_DIAMOND_LEGINGS);
 
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.BLUE_DIAMOND_AXE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.BLUE_DIAMOND_HOE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.BLUE_DIAMOND_PICKAXE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.BLUE_DIAMOND_SHOVEL);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.BLUE_DIAMOND_SWORD);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.BLUE_DIAMOND_AXE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.BLUE_DIAMOND_HOE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.BLUE_DIAMOND_PICKAXE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.BLUE_DIAMOND_SHOVEL);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.BLUE_DIAMOND_SWORD);
 
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.RED_DIAMOND_AXE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.RED_DIAMOND_HOE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.RED_DIAMOND_PICKAXE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.RED_DIAMOND_SHOVEL);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.RED_DIAMOND_SWORD);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.RED_DIAMOND_AXE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.RED_DIAMOND_HOE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.RED_DIAMOND_PICKAXE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.RED_DIAMOND_SHOVEL);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.RED_DIAMOND_SWORD);
 
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.PURPLE_DIAMOND_AXE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.PURPLE_DIAMOND_HOE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.PURPLE_DIAMOND_PICKAXE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.PURPLE_DIAMOND_SHOVEL);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.PURPLE_DIAMOND_SWORD);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.PURPLE_DIAMOND_AXE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.PURPLE_DIAMOND_HOE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.PURPLE_DIAMOND_PICKAXE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.PURPLE_DIAMOND_SHOVEL);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.PURPLE_DIAMOND_SWORD);
 
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.YELLOW_DIAMOND_AXE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.YELLOW_DIAMOND_HOE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.YELLOW_DIAMOND_PICKAXE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.YELLOW_DIAMOND_SHOVEL);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.YELLOW_DIAMOND_SWORD);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.YELLOW_DIAMOND_AXE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.YELLOW_DIAMOND_HOE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.YELLOW_DIAMOND_PICKAXE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.YELLOW_DIAMOND_SHOVEL);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.YELLOW_DIAMOND_SWORD);
 
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_AXE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_HOE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_PICKAXE);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_SHOVEL);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_SWORD);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_AXE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_HOE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_PICKAXE);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_SHOVEL);
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_SWORD);
+			}
 		}
 		if (Config.ERIS && Config.KEPLER22B)
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET_SCHEMATIC);
