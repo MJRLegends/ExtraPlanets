@@ -14,6 +14,14 @@
 
 
 ===========================================Released Updates===========================================
+v1.2.6
+*Fixed issue #209
+*Fixed issue #216
+*Updated de_DE.lang (Thanks to DerMilchkarton)
+*Fixed issue #215
+*Fixed Eris Dungeon Spawner when default bosses config option is enabled
+*Changed implements for World providers classes to be added in the parent class
+
 v1.2.5
 *Added Fingerprint Violation Jar Signing
 *Fixed issue #207
