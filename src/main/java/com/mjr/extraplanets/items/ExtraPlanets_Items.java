@@ -11,6 +11,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.items.keys.ItemKeyT10;
 import com.mjr.extraplanets.items.keys.ItemKeyT4;
 import com.mjr.extraplanets.items.keys.ItemKeyT5;
 import com.mjr.extraplanets.items.keys.ItemKeyT6;
@@ -312,7 +313,7 @@ public class ExtraPlanets_Items {
 			TIER_10_SCHEMATIC = new SchematicTier10("schematic_tier10");
 			TIER_10_NOSE_CONE = new Tier10NoseCone("nose_cone_tier10");
 			TIER_10_ITEMS = new ItemTier10Items("tier10_items");
-			TIER_10_KEY = new ItemKeyT9("t10key");
+			TIER_10_KEY = new ItemKeyT10("t10key");
 			if (Config.KEPLER22B) {
 				TIER_10_ELECTRIC_ROCKET_SCHEMATIC = new SchematicTier10ElectricRocket("schematic_tier10_electric_rocket");
 			}
