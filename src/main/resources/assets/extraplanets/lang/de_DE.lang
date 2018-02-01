@@ -1,95 +1,95 @@
 #Creative Tabs
-itemGroup.SpaceItemsTab=Extra Planets Items ##NEEDS TRANSLATE##
+itemGroup.SpaceItemsTab=Extra Planets Gegenstände
 itemGroup.SpaceBlocksTab=Extra Planets Blöcke
 itemGroup.SpaceToolsTab=Extra Planets Werkzeug
 itemGroup.SpaceArmorTab=Extra Planets Rüstung
 
 #Galaxies
-galaxy.whirlpool=Whirlpool ##NEEDS TRANSLATE##
-galaxy.andromeda=Andromeda ##NEEDS TRANSLATE##
-galaxy.black_eye=Black Eye ##NEEDS TRANSLATE##
-galaxy.proxima_centauri=Proxima Centauri ##NEEDS TRANSLATE##
+galaxy.whirlpool=Whirlpool-Galaxie
+galaxy.andromeda=Andromedagalaxie
+galaxy.black_eye=Black-Eye-Galaxie
+galaxy.proxima_centauri=Proxima-Centauri-Galaxie
 
 #Solar Systems
-solarsystem.kepler22=Kepler 22 System ##NEEDS TRANSLATE##
-solarsystem.kepler47=Kepler 47 System ##NEEDS TRANSLATE##
-solarsystem.kepler62=Kepler 62 System ##NEEDS TRANSLATE##
-solarsystem.kepler69=Kepler 69 System ##NEEDS TRANSLATE##
+solarsystem.kepler22=Kepler-22-System
+solarsystem.kepler47=Kepler-47-System
+solarsystem.kepler62=Kepler-62-System
+solarsystem.kepler69=Kepler-69-System
 
-solarsystem.xenos157=Xenos 157 ##NEEDS TRANSLATE##
-solarsystem.deltiri10=Deltiri 10 ##NEEDS TRANSLATE##
-solarsystem.vendrizi161=Vendrizi 161 ##NEEDS TRANSLATE##
-solarsystem.epsilonSolaria=Epsilon Solaria ##NEEDS TRANSLATE##
+solarsystem.xenos157=Xenos-157-System
+solarsystem.deltiri10=Deltiri-10-System
+solarsystem.vendrizi161=Vendrizi-161-System
+solarsystem.epsilonSolaria=Epsilon-Solaria-System
 
 #Stars
-star.kepler22=Kepler 22 Stern
-star.kepler47=Kepler 47 Stern
-star.kepler62=Kepler 62 Stern
-star.kepler69=Kepler 69 Stern
+star.kepler22=Kepler-22
+star.kepler47=Kepler-47
+star.kepler62=Kepler-62
+star.kepler69=Kepler-69
 
-star.xenos157=Xenos 157 Star ##NEEDS TRANSLATE##
-star.deltiri10=Deltiri 10 Star ##NEEDS TRANSLATE##
-star.vendrizi161=Vendrizi 161 Star ##NEEDS TRANSLATE##
-star.epsilonSolaria=Epsilon Solaria Star ##NEEDS TRANSLATE##
+star.xenos157=Xenos-157
+star.deltiri10=Deltiri-10
+star.vendrizi161=Vendrizi-161
+star.epsilonSolaria=Epsilon-Solaria
 
 #Planets
 planet.Mercury=Merkur
-planet.Ceres=Ceres ##NEEDS TRANSLATE##
-planet.Jupiter=Jupiter ##NEEDS TRANSLATE##
-planet.Saturn=Saturn ##NEEDS TRANSLATE##
-planet.Uranus=Uranus ##NEEDS TRANSLATE##
+planet.Ceres=Ceres
+planet.Jupiter=Jupiter
+planet.Saturn=Saturn
+planet.Uranus=Uranus
 planet.Neptune=Neptun
-planet.Pluto=Pluto ##NEEDS TRANSLATE##
-planet.Eris=Eris ##NEEDS TRANSLATE##
+planet.Pluto=Zwergplanet Pluto
+planet.Eris=Zwergplanet Eris
 planet.kuiperBelt=Kuipergürtel
-planet.makemake=Makemake ##NEEDS TRANSLATE##
-planet.haumea=Haumea ##NEEDS TRANSLATE##
+planet.makemake=Makemake
+planet.haumea=Haumea
 
-planet.kepler62b=Kepler 62b ##NEEDS TRANSLATE##
-planet.kepler62c=Kepler 62c ##NEEDS TRANSLATE##
-planet.kepler62d=Kepler 62d ##NEEDS TRANSLATE##
-planet.kepler62e=Kepler 62e ##NEEDS TRANSLATE##
-planet.kepler62f=Kepler 62f ##NEEDS TRANSLATE##
-planet.kepler22b=Kepler 22b ##NEEDS TRANSLATE##
-planet.kepler47b=Kepler 47b ##NEEDS TRANSLATE##
-planet.kepler47c=Kepler 47c ##NEEDS TRANSLATE##
-planet.kepler69b=Kepler 69b ##NEEDS TRANSLATE##
-planet.kepler69c=Kepler 69c ##NEEDS TRANSLATE##
+planet.kepler62b=Kepler-62b
+planet.kepler62c=Kepler-62c
+planet.kepler62d=Kepler-62d
+planet.kepler62e=Kepler-62e
+planet.kepler62f=Kepler-62f
+planet.kepler22b=Kepler-22b
+planet.kepler47b=Kepler-47b
+planet.kepler47c=Kepler-47c
+planet.kepler69b=Kepler-69b
+planet.kepler69c=Kepler-69c
 
-planet.tatooine=Tatooine ##NEEDS TRANSLATE##
-planet.crait=Crait ##NEEDS TRANSLATE##
-planet.hoth=Hoth ##NEEDS TRANSLATE##
-planet.aqua=Aqua ##NEEDS TRANSLATE##
+planet.tatooine=Tatooine
+planet.crait=Crait
+planet.hoth=Hoth
+planet.aqua=Aqua
 
-planet.qustroithea=Qustroithea ##NEEDS TRANSLATE##
-planet.jetraruta=Jetraruta ##NEEDS TRANSLATE##
-planet.moswion=Moswion ##NEEDS TRANSLATE##
-planet.ketherth=Ketherth ##NEEDS TRANSLATE##
-planet.xovis=Xovis ##NEEDS TRANSLATE##
+planet.qustroithea=Qustroithea
+planet.jetraruta=Jetraruta
+planet.moswion=Moswion
+planet.ketherth=Ketherth
+planet.xovis=Xovis
 
-planet.oarilia=Oarilia ##NEEDS TRANSLATE##
-planet.struronides=Struronides ##NEEDS TRANSLATE##
-planet.brajutov=Brajutov ##NEEDS TRANSLATE##
-planet.speshani16=Speshani 16 ##NEEDS TRANSLATE##
-planet.trars9=Trars 9 ##NEEDS TRANSLATE##
+planet.oarilia=Oarilia
+planet.struronides=Struronides
+planet.brajutov=Brajutov
+planet.speshani16=Speshani-16
+planet.trars9=Trars-9
 
 #Moons
-moon.triton=Triton ##NEEDS TRANSLATE##
-moon.callisto=Callisto ##NEEDS TRANSLATE##
-moon.europa=Europa ##NEEDS TRANSLATE##
-moon.ganymede=Ganymede ##NEEDS TRANSLATE##
-moon.io=Io ##NEEDS TRANSLATE##
-moon.deimos=Deimos ##NEEDS TRANSLATE##
-moon.phobos=Phobos ##NEEDS TRANSLATE##
-moon.iapetus=Iapetus ##NEEDS TRANSLATE##
-moon.rhea=Rhea ##NEEDS TRANSLATE##
-moon.titan=Titan ##NEEDS TRANSLATE##
-moon.oberon=Oberon ##NEEDS TRANSLATE##
-moon.titania=Titania ##NEEDS TRANSLATE##
-moon.charon=Charon ##NEEDS TRANSLATE##
-moon.nix=Nix ##NEEDS TRANSLATE##
-moon.hydra=Hydra ##NEEDS TRANSLATE##
-moon.dysnomia=Dysnomia ##NEEDS TRANSLATE##
+moon.triton=Triton
+moon.callisto=Kallisto
+moon.europa=Europa
+moon.ganymede=Ganymed
+moon.io=Io
+moon.deimos=Deimos
+moon.phobos=Phobos
+moon.iapetus=Iapetus
+moon.rhea=Rhea
+moon.titan=Titan
+moon.oberon=Oberon
+moon.titania=Titania
+moon.charon=Charon
+moon.nix=Nix
+moon.hydra=Hydra
+moon.dysnomia=Dysnomia
 
 #Planet Blocks
 tile.mercury.surface.name=Merkur Oberflächengestein
@@ -247,8 +247,8 @@ tile.kepler22b_flowers.green_maple_short_grass.name=Kepler 22b Grünes Kurzes Gra
 tile.kepler22b_flowers.green_maple_med_grass.name=Kepler 22b Grünes Mittelgroßes Gras
 tile.kepler22b_flowers.green_maple_tall_grass.name=Kepler 22b Grünes großes Gras
 tile.kepler22b.cobblestone.name=Kepler 22b Bruchstein
-tile.kepler22b.ore_platinum.name=Kepler 22b Platinumerz
-tile.kepler22b.platinum_block.name=Block of Platinum ##NEEDS TRANSLATE##
+tile.kepler22b.ore_platinum.name=Kepler 22b Platinerz
+tile.kepler22b.platinum_block.name=Platinblock
 
 #Moon Blocks
 tile.callisto.surface.name=Callisto Oberflächengestein
@@ -363,11 +363,11 @@ tile.uranus_gravel.name=Uranus Kies
 tile.neptune_gravel.name=Neptun Kies
 
 #Girt Blocks
-tile.diamond_grit.name=Diamond Grit ##NEEDS TRANSLATE##
-tile.coal_grit.name=Coal Grit ##NEEDS TRANSLATE##
-tile.iron_grit.name=Iron Grit ##NEEDS TRANSLATE##
-tile.gold_grit.name=Gold Grit ##NEEDS TRANSLATE##
-tile.emerald_grit.name=Emerald Grit ##NEEDS TRANSLATE##
+tile.diamond_grit.name=Grobkörniger Diamantstaub
+tile.coal_grit.name=Grobkörniger Kohlestaub
+tile.iron_grit.name=Grobkörniger Eisenstaub
+tile.gold_grit.name=Grobkörniger Goldstaub
+tile.emerald_grit.name=Grobkörniger Smaragdstaub
 
 #Treasure Chests
 tile.treasure_chest_t4.name=Schatztruhe (Stufe 4)
@@ -388,37 +388,37 @@ tile.treasure_chest_t10.description=Schatztruhen der Stufe 10 werden in Erisdung
 #Machines
 tile.advanced_refinery.name=Fortgeschrittene Raffinerie
 tile.ultimate_refinery.name=Ultimative Raffinerie
-tile.solar.hybrid_solar.name=Hybrid Solarmodul
+tile.solar.hybrid_solar.name=Hybrid-Solarmodul
 tile.solar.ultimate_solar.name=Ultimatives Solarmodul
-tile.solar_hybrid.description=Dieses Solarmodul produziert Tag und nacht energie.
-tile.solar_ultimate.description=This Solar Panel will work during the day and night
+tile.solar_hybrid.description=Dieses Solarmodul produziert Tag und Nacht Energie.
+tile.solar_ultimate.description=Dieses Solarmodul produziert Tag und Nacht Energie.
 tile.advanced_oxygen_compressor.0.name=Fortgeschrittener Sauerstoffkompressor
 tile.advanced_oxygen_compressor.1.name=Fortgeschrittener Sauerstoffdekompressor
 tile.ultimate_oxygen_compressor.0.name=Ultimativer Sauerstoffkompressor
 tile.ultimate_oxygen_compressor.1.name=Ultimativer Sauerstoffdekompressor
-tile.basic_decrystallizer.name=Basis Dekristallisierer
-tile.basic_crystallizer.name=Basis Kristallisierer
-tile.basic_smasher.name=Basis zerstörer
-tile.basic_chemical_injector.name=Basis Chemischer Injektor
-tile.basic_solar_evaporation_chamber.name=Basis Solarverdampfungskammer 
+tile.basic_decrystallizer.name=Einfacher Entkristallisator
+tile.basic_crystallizer.name=Einfacher Kristallisator
+tile.basic_smasher.name=Einfacher Zertrümmerer
+tile.basic_chemical_injector.name=Einfacher chemischer Injektor
+tile.basic_solar_evaporation_chamber.name=Einfache Solarverdampfungskammer 
 tile.advanced_launch_pad.tier2LandingPad.name=Stufe 2 Raketenstartrampe
 tile.advanced_launch_pad.tier3LandingPad.name= Stufe 3 Raketenstartrampe
 tile.advanced_launch_pad.poweredChargingPad.name=Fahrzeugsaufladungsplatform
-tile.advanced_launch_pad.rocketPoweredChargingPad.name= Aufgeladene Raketenplatform
+tile.advanced_launch_pad.rocketPoweredChargingPad.name=Geladene Raketenplatform
 tile.advanced_launch_pad_full.name=Stufe 2/3 Raketenplatform
-tile.advanced_launch_pad.tier2.desc=Wird benutzt um Stufe 4-8 Raketen zu starten. Muss 5x5 gebaut werden.
-tile.advanced_launch_pad.tier3.desc=Wird benutzt um Stufe 9-10 Raketen zu starten. Muss 5x5 gebaut werden.
-tile.advanced_launch_pad.powered.desc=Wird benutzt um Mars Rover & Venus Rover aufzuladen. Muss 5x5 gebaut werden.
-tile.advanced_launch_pad.powered.rocket.desc=Wird benutzt um die Stufe 10 Elektrische Rakete aufzuladen. Muss 5x5 gebaut werden.
-tile.advanced_fuel_loader.name=Fortgeschrittener Treibstofflader
-tile.ultimate_fuel_loader.name=Ultimativer Treibstofflader
-tile.vehicle_charger.name=Fahrzeug Auflader (WIP)
-tile.basic_purifier.name=Basis Reiniger
-tile.basic_decontamination_unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
-tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
+tile.advanced_launch_pad.tier2.desc=Wird benutzt um Raketen der Stufen 4-8 zu starten. Muss quadratisch(5x5) platziert werden.
+tile.advanced_launch_pad.tier3.desc=Wird benutzt um Raketen der Stufen 9-10 zu starten. Muss quadratisch(5x5) platziert werden.
+tile.advanced_launch_pad.powered.desc=Wird benutzt um den Mars Rover und den Venus Rover aufzuladen. Muss quadratisch(5x5) platziert werden
+tile.advanced_launch_pad.powered.rocket.desc=Wird benutzt um die Stufe 10 Elektrische Rakete aufzuladen. Muss quadratisch(5x5) platziert werden
+tile.advanced_fuel_loader.name=Fortgeschrittener Treibstofftanker
+tile.ultimate_fuel_loader.name=Ultimativer Treibstofftanker
+tile.vehicle_charger.name=Ladedock für Fahrzeuge (WIP)
+tile.basic_purifier.name=Einfacher Reiniger
+tile.basic_decontamination_unit.name=Einfache Dekontaminationseinheit
+tile.basic_decontamination_unit_fake_block.name=Einfache Dekontaminationseinheit
 
 #Machine Containers
-container.solarhybrid.name=Hybrid Solarmodul
+container.solarhybrid.name=Hybrid-Solarmodul
 container.solarultimate.name=Ultimatives Solarmodul
 container.advanced.refinery.name=Fortgeschrittene Raffinerie
 container.ultimate.refinery.name=Ultimative Raffinerie
@@ -426,34 +426,34 @@ container.advancedoxygencompressor.name=Fortgeschrittener Sauerstoffkompressor
 container.advancedoxygendecompressor.name=Fortgeschrittener Sauerstoffdekompressor
 container.ultimateoxygencompressor.name=Ultimativer Sauerstoffkompressor
 container.ultimateoxygendecompressor.name=Ultimativer Sauerstoffdekompressor
-container.basic.decrystallizer.name=Basis Dekristallisierer
-container.basic.crystallizer.name=Basis Kristallisierer
-container.basic.smasher.name=Basis zerstörer
-container.basic.chemical_injector.name=Basis Chemischer Injektor
-container.advanced.fuelloader.name=Fortgeschrittener Treibstofflader
-container.ultimate.fuelloader.name=Ultimativer Treibstofflader
-container.basic.solar.evaporation.chamber.name=Basis Solarverdampfungskammer
-container.vehicle.charger.name=Fahrzeugs Auflader
-container.basic.purifier.name=Basis Reiniger
-container.basic.decontamination.unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
+container.basic.decrystallizer.name=Einfacher Entkristallisator
+container.basic.crystallizer.name=Einfacher Kristallisator
+container.basic.smasher.name=Einfacher Zertrümmerer
+container.basic.chemical_injector.name=Einfacher chemischer Injektor
+container.advanced.fuelloader.name=Fortgeschrittener Treibstofftanker
+container.ultimate.fuelloader.name=Ultimativer Treibstofftanker
+container.basic.solar.evaporation.chamber.name=Einfache Solarverdampfungskammer 
+container.vehicle.charger.name=Ladedock für Fahrzeuge
+container.basic.purifier.name=Einfacher Reiniger
+container.basic.decontamination.unit.name=Einfache Dekontaminationseinheit
 
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=Flüssigkristallisierterwassertank
 gui.message.salt_water.name=Kristallisiertes Wasser
 gui.salt_water_input.desc.0=Platziere einen Flüssigkristallisierterwassereimer in
-gui.salt_water_input.desc.1=diesen slot um den tank aufzufüllen.
+gui.salt_water_input.desc.1=diesen slot um den Tank aufzufüllen.
 gui.salt_water_input.desc.2=Jeder Flüssigkristallisierterwassereimer wird 1000mB geben
-gui.salt_water_output.desc.0=Platziere einen leeren eimer in
-gui.salt_water_output.desc.1=diesen slot um die eimer von dem tank zu füllen
-gui.status.injecting.name=Injetzieren
-gui.status.smasher.name=Zerstören
+gui.salt_water_output.desc.0=Platziere einen leeren Eimer in
+gui.salt_water_output.desc.1=diesen slot um den Tank in die Eimer zu füllen
+gui.status.injecting.name=Injizieren
+gui.status.smasher.name=Zertrümmern
 gui.status.crystallizing.name=Kristallisieren
-gui.status.decrystallizing.name=Dekristallisieren
+gui.status.decrystallizing.name=Entkristallisieren
 gui.status.solarEvaporationChamber.name=Verdampfen
-gui.message.power.name=Aufgeladenes Fahrzeug
+gui.message.power.name=Geladenes Fahrzeug
 gui.message.power.rocket.name=Elektrische Rakete
 gui.message.power.message.name=Strom
-gui.button.loadpower.name=Load Strom
+gui.button.loadpower.name=Strom aufladen
 gui.powered.inv.name=Inventar / Strom
 gui.status.purifiering.name=Reinigen
 gui.radioactive_water_tank.desc.4=Radioaktiver Wasser Tank
@@ -471,58 +471,58 @@ gui.infected_water_input.desc.2=Jeder Infiziertenwassereimer wird 1000mB geben.
 gui.clean_water_output.desc.0=Platziere einen leeren eimer in
 gui.clean_water_output.desc.1=diesen slot um die eimer von dem tank zu füllen
 gui.bucket.message.finding=Du kannst die flüssigkeit aufnehmen
-gui.bucket.message.finding.2.infected_water_fluid=on Mercury ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.radioactive_water_fluid=on Ceres & Europa ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.nitrogen_fluid=on Neptune ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.glowstone_fluid=on Saturn ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.magma_fluid=on Jupiter & IO ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.liquid_caramel_fluid=on Kepler22b ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.liquid_chocolate_fluid=on Kepler22b ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.liquid_hydrocarbon_fluid=on Saturn ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.salt_fluid=on Ceres & Europa ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.methane_fluid=on Titan ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.frozen_water_fluid=on Uranus & Triton ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.nitrogen_ice_fluid=on Triton ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.infected_water_fluid=auf Merkur
+gui.bucket.message.finding.2.radioactive_water_fluid=auf Ceres und Europa
+gui.bucket.message.finding.2.nitrogen_fluid=auf Neptun
+gui.bucket.message.finding.2.glowstone_fluid=auf Saturn
+gui.bucket.message.finding.2.magma_fluid=auf Jupiter und Io
+gui.bucket.message.finding.2.liquid_caramel_fluid=auf Kepler 22b
+gui.bucket.message.finding.2.liquid_chocolate_fluid=auf Kepler 22b
+gui.bucket.message.finding.2.liquid_hydrocarbon_fluid=auf Saturn
+gui.bucket.message.finding.2.salt_fluid=auf Ceres und Europa
+gui.bucket.message.finding.2.methane_fluid=auf Titan
+gui.bucket.message.finding.2.frozen_water_fluid=auf Uranus und Triton
+gui.bucket.message.finding.2.nitrogen_ice_fluid=auf Triton
 gui.bucket.message.crafting=Drücke R um zu sehen wie man sie aufnimmt
-gui.status.missing.inputs.name=Fehlende Items/Flüssigkeiten
+gui.status.missing.inputs.name=Fehlende Gegenstände/Flüssigkeiten
 gui.status.missing.power.name=Fehlender Strom
-gui.bucket.message.extreme.reactors.compact=This Fluid has Extreme Reactors Compatibility ##NEEDS TRANSLATE##
-gui.radiation.reduced.message=Your Radiation Level has been reduced by ##NEEDS TRANSLATE##
-gui.radiation.current.message=Your Current Radiation Level is ##NEEDS TRANSLATE##
-gui.radiation.subject.message=You're now subject to ##NEEDS TRANSLATE##
-gui.radiation.reverse.message=You can use the following ways: Sleeping, Decontamination Unit, Anti Rad Drinks to help reverse the damage ##NEEDS TRANSLATE##
-gui.radiation.type.message=Radiation ##NEEDS TRANSLATE##
-gui.status.waiting.on.player.name=No Player in Machine ##NEEDS TRANSLATE##
-gui.message.finding.block=Can be found on ##NEEDS TRANSLATE##
-gui.message.finding.volcanic.rock=Jupiter & Io ##NEEDS TRANSLATE##
-gui.message.decontamination.unit=Reduces Radiation Level by 10% ##NEEDS TRANSLATE##
-gui.battery_slot.desc.custom=Recommended to use a Massive Battery ##NEEDS TRANSLATE##
-gui.radiation.cancel.message=You can use Oxygen Sealers with a Ambient Thermal Controller upgrade for full protection from Radiation & Pressure ##NEEDS TRANSLATE##
+gui.bucket.message.extreme.reactors.compact=Diese Flüssigkeit ist kompatibel mit Extreme Reactors
+gui.radiation.reduced.message=Die Schwere deiner Verstrahlung wurde reduziert um
+gui.radiation.current.message=So schwer bist du aktuell verstrahlt
+gui.radiation.subject.message=Du gehörst nun
+gui.radiation.reverse.message=Folgendermaßen kannst du fortfahren: Schlafen, Dekontaminieren, Anti-Strahlungs-Getränke um den entstandenen Schaden rückgängig zu machen
+gui.radiation.type.message=Verstrahlt
+gui.status.waiting.on.player.name=Kein Spieler in Maschine
+gui.message.finding.block=Kann gefunden werden auf
+gui.message.finding.volcanic.rock=Jupiter und Io
+gui.message.decontamination.unit=Reduziert Schwere der Verstrahlung um 10%
+gui.battery_slot.desc.custom=Es wird empfohlen, eine große Batterie zu nutzen
+gui.radiation.cancel.message=Du kannst den Umgebungstemperatur-Controller in einem Sauerstoffversiegler benutzen, um dich vollständig von Druck und Strahlung zu schützen
 currently.unused.name=Zur Zeit unbenutzt!
-wafter.uses.information=Used for Space Station Recipes ##NEEDS TRANSLATE##
-gui.rover.information=Use with a Vehicle Charging Pad ##NEEDS TRANSLATE##
-gui.rover.information.2=Attach a Vehicle Charger to the pad to charge ##NEEDS TRANSLATE##
+wafter.uses.information=Wird in Raumstationsrezepten gebraucht
+gui.rover.information=Mit Ladedock nutzen
+gui.rover.information.2=Ladedock-Einheit an Platform anbringen
 
 #Celestial Selection Screen GUI Components
-gui.celestial_details.name=Celestial Details ##NEEDS TRANSLATE##
-gui.general_features_details.name=General Feature Details ##NEEDS TRANSLATE##
-gui.atmosphere_details.name=Atmosphere Details ##NEEDS TRANSLATE##
-gui.general_details.name=General Details ##NEEDS TRANSLATE##
-gui.parent_solar_system_details.name=Parent Solar System Details ##NEEDS TRANSLATE##
+gui.celestial_details.name=Informationen zu Himmelskörpern
+gui.general_features_details.name=Allgemeine Informationen zu Features
+gui.atmosphere_details.name=Informationen zur Atmosphäre
+gui.general_details.name=Allgemeine Informationen
+gui.parent_solar_system_details.name=Informationen zum Muttersolarsystem
 
-gui.celestial_body_type.name=Type ##NEEDS TRANSLATE##
-gui.celestial_body_amount_of_moons.name=Amount of Moons ##NEEDS TRANSLATE##
-gui.celestial_body_orbit_time.name=Orbit Time ##NEEDS TRANSLATE##
-gui.celestial_body_gravity.name=Gravity ##NEEDS TRANSLATE##
-gui.celestial_body_day_lengh.name=Day Length ##NEEDS TRANSLATE##
-gui.celestial_body_meteor_frequency.name=Meteor Frequency ##NEEDS TRANSLATE##
-gui.celestial_body_wind_level.name=Wind Level ##NEEDS TRANSLATE##
-gui.celestial_body_temperature.name=Temperature ##NEEDS TRANSLATE##
-gui.celestial_body_breathable.name=Breathable ##NEEDS TRANSLATE##
-gui.celestial_body_corrosive_atmosphere.name=Corrosive Atmosphere ##NEEDS TRANSLATE##
-gui.celestial_body_radiation_level.name=Radiation Level ##NEEDS TRANSLATE##
-gui.celestial_body_pressure_level.name=Pressure Level ##NEEDS TRANSLATE##
-gui.celestial_body_amount_of_planets.name=Amount of Planets ##NEEDS TRANSLATE##
+gui.celestial_body_type.name=Typus
+gui.celestial_body_amount_of_moons.name=Anzahl der Monde
+gui.celestial_body_orbit_time.name=zeitliche Länge der Umlaufbahn
+gui.celestial_body_gravity.name=Schwerkraft
+gui.celestial_body_day_lengh.name=Tageslänge
+gui.celestial_body_meteor_frequency.name=Anfälligkeit für Meteoren
+gui.celestial_body_wind_level.name=Windstärke
+gui.celestial_body_temperature.name=Temperatur
+gui.celestial_body_breathable.name=Atembare Atmosphäre
+gui.celestial_body_corrosive_atmosphere.name=Ätzende Atmosphäre
+gui.celestial_body_radiation_level.name=Schwere der Strahlung
+gui.celestial_body_pressure_level.name=Druck
+gui.celestial_body_amount_of_planets.name=Anzahl der Planeten
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Fahrzeug Inventar öffnen
@@ -757,7 +757,7 @@ item.wafer.blue_gem_wafer.name=BlauerEdelstein-Wafer
 item.wafer.white_gem_wafer.name=WeißerEdelstein-Wafer
 
 #Buckets
-item.bucket_glowstone.name=GlowstoneEimer
+item.bucket_glowstone.name=Glowstone Eimer
 item.bucket_salt.name=Flüssiges KristallisiertesWasser
 item.bucket_magma.name=Magma Eimer
 item.bucket_frozen_water.name=Gefrorener Wasser Eimer
@@ -767,9 +767,9 @@ item.bucket_infected_water.name=Infizierter Wasser Eimer
 item.bucket_radioactive_water.name=Radioaktiver Wasser Eimer
 item.bucket_methane.name=Flüssiger Methan Eimer
 item.bucket_nitrogen_ice.name=FLüssiger Kohlenstoff Eis Eimer
-item.bucket_liquid_hydrocarbon.name=Flüssiger Kohlenstoffwasserstoffeimer
-item.bucket_liquid_caramel.name=Liquid Caramel Bucket ##NEEDS TRANSLATE##
-item.bucket_liquid_chocolate.name=Liquid Chocolate Bucket ##NEEDS TRANSLATE##
+item.bucket_liquid_hydrocarbon.name=Flüssiger Kohlenwasserstoffeimer
+item.bucket_liquid_caramel.name=Flüssigkaramel Eimer
+item.bucket_liquid_chocolate.name=Flüssigschokolade Eimer
 
 #Keys
 item.T4key.name=Stufe 4 Dungeon Schlüssel
@@ -902,7 +902,7 @@ item.nickel_battery.name=Nickel Batterie
 item.zinc_battery.name=Zink Batterie
 item.advanced_battery.name=Fortgeschrittene Batterie
 item.ultimate_battery.name=Ultimative Batterie
-item.massive_battery.name=Massive Battery ##NEEDS TRANSLATE##
+item.massive_battery.name=Gewaltige Batterie
 
 #Armor
 item.carbon_helmet.name=Kohlenstoff Helm
@@ -969,8 +969,8 @@ item.green_diamond_helmet.name=Grüner Diamant Helm
 item.green_diamond_chest.name=Grüner Diamant Brustpanzer
 item.green_diamond_legings.name=Grüner Diamant Beinschutz
 item.green_diamond_boots.name=Grüne Diamant Stiefel
-item.tier11_items.ingot_platinum.name=Platinumbarren
-item.tier11_items.compressed_platinum.name=Gepresstes Platinum
+item.tier11_items.ingot_platinum.name=Platinbarren
+item.tier11_items.compressed_platinum.name=Gepresstes Platin
 
 item.tier1_space_suit_helmet.name=Stufe 1 Space Suit Helm (WIP)
 item.tier1_space_suit_chest.name=Stufe 1 Space Suit Brustpanzer (WIP)
@@ -1182,8 +1182,8 @@ entity.extraplanets.EvolvedIceSlimeBoss.name=Entwickelter Eisschleim Boss
 entity.extraplanets.EvolvedGhastBoss.name=Entwickelter Ghast Boss
 entity.extraplanets.EvolvedSnowmanBoss.name=Entwickelter Schneemann Boss
 entity.extraplanets.EvolvedFireBatBoss.name=Entwickelter Feuerfledermaus Boss
-entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
-entity.extraplanets.EvolvedSpaceManBoss.name=Evolved Space Man Boss ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedGiantZombieBoss.name=Entwickelter Riesenzombie Boss
+entity.extraplanets.EvolvedSpaceManBoss.name=Entwickelter Raumfahrer Boss
 
 entity.extraplanets.EvolvedWitch.name=Entwickelte Hexe
 entity.extraplanets.EvolvedMagmaCube.name=Entwickelter Magmaschleim
@@ -1193,8 +1193,8 @@ entity.extraplanets.EvolvedBlaze.name=Entwickelte Lohe
 entity.extraplanets.EvolvedBlueCreeper.name=Entwickelter Blauer Creeper
 entity.extraplanets.EvolvedRedCreeper.name=Entwickelter Roter Creeper
 entity.extraplanets.EvolvedPowerSkeleton.name=Entwickeltes Macht Skelett
-entity.extraplanets.EvolvedGiantSpider.name=Evolved Giant Spider ##NEEDS TRANSLATE##
-entity.extraplanets.EvolvedMiniEnderman.name=Evolved Mini Enderman ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedGiantSpider.name=Entwickelte Riesenspinne
+entity.extraplanets.EvolvedMiniEnderman.name=Entwickelter Minienderman
 
 #Achievements
 achievement.mercury_planet=Lande auf Merkur!
@@ -1287,7 +1287,7 @@ death.attack.radiation=%1$s hatte Strahlenschutz vergessen.
 death.attack.pressure=%1$s hatte Druckschutz vergessen.
 death.attack.hypothermia=%1$s starb an Unterkühlung.
 death.attack.magma=%1$s verbrannte in Magma.
-death.attack.radiationLiquid=%1$s hat vergessen das Strahlung dich killt.
+death.attack.radiationLiquid=%1$s hat vergessen das Strahlung tötet.
 death.attack.infection=%1$s wurde infiziert.
 
 #CheckList GUI Messages
@@ -1395,8 +1395,8 @@ tile.neptuneDungeonBrickStoneStairs.name=Neptun Dungeonziegeltreppen
 planet.Venus=Venus
 
 #Other Blocks
-tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
-tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
+tile.deimos.ore_lead.name=Deimos Bleierz
+tile.phobos.ore_lead.name=Phobos Bleierz
 
 #Other Items
 item.tier4_items.ash_shard.name=Aschenscherbe
@@ -1406,24 +1406,24 @@ item.tier6_items.magnesium_shard.name=Magnesium Scherbe
 item.tier4_items.ash.name=Asche
 item.tier4_items.sledge_hammer.name=Vorschlaghammer
 item.tier4_items.grinding_wheel.name=Schleifscheibe
-item.thermal_cloth.tier2_thermal_cloth.name=Tier 2 Thermal Cloth ##NEEDS TRANSLATE##
+item.thermal_cloth.tier2_thermal_cloth.name=Stufe 2 Thermalpolster
 
 #Keys
-item.key.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.key.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.key.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
-item.key.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T4_saturn.name=Schlüssel für Stufe 4 Verließkiste
+item.key.T4_uranus.name=Schlüssel für Stufe 4 Verließkiste
+item.key.T5_neptune.name=Schlüssel für Stufe 5 Verließkiste
+item.key.T6_eris.name=Schlüssel für Stufe 6 Verließkiste
 
 #Thermal Paddings
-item.tier2_thermal_helm.name=Tier 2 Thermal Padding Helm ##NEEDS TRANSLATE##
-item.tier2_thermal_chestplate.name=Tier 2 Thermal Padding Chestpiece ##NEEDS TRANSLATE##
-item.tier2_thermal_leggings.name=Tier 2 Thermal Padding Leggings ##NEEDS TRANSLATE##
-item.tier2_thermal_boots.name=Tier 2 Thermal Padding Boots ##NEEDS TRANSLATE##
+item.tier2_thermal_helm.name=Stufe 2 Thermopolsterhelm
+item.tier2_thermal_chestplate.name=Stufe 2 Thermopolsterbrustschutz
+item.tier2_thermal_leggings.name=Stufe 2 Thermopolsterhose
+item.tier2_thermal_boots.name=Stufe 2 Thermopolsterstiefel
 
 #Messages
-tier2.information=Required for Venus and Mercury ##NEEDS TRANSLATE##
-tier3.information=Required for Jupiter and Saturn including their moons ##NEEDS TRANSLATE##
-tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons ##NEEDS TRANSLATE##
+tier2.information=Benötigt für Venus und Merkur
+tier3.information=Benötigt für Jupiter und Saturn, eingeschlossen deren Monde
+tier4.information=Benötigt für Uranus, Neptun, Pluto und Eris, eingeschlossen deren Monde
 
 #------------------1.11.2 & 1.12.2 Only Section------------------
 item.t4key.name=Stufe 4 Dungeon Schlüssel
