@@ -5,8 +5,6 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
@@ -20,7 +18,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
-import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Iapetus.worldgen.BiomeProviderIapetus;
@@ -28,7 +25,7 @@ import com.mjr.extraplanets.moons.Iapetus.worldgen.ChunkProviderIapetus;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
-public class WorldProviderIapetus extends WorldProviderRealisticSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
+public class WorldProviderIapetus extends WorldProviderRealisticSpace {
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
@@ -176,7 +173,7 @@ public class WorldProviderIapetus extends WorldProviderRealisticSpace implements
 	public ResourceLocation getDungeonChestType() {
 		return null;
 	}
-	
+
 	@Override
 	public List<Block> getSurfaceBlocks() {
 		List<Block> list = new LinkedList<>();

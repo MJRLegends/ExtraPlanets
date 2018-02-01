@@ -5,8 +5,6 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
@@ -16,7 +14,6 @@ import net.minecraft.world.gen.IChunkGenerator;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
-import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.BiomeProviderJupiter;
@@ -24,7 +21,7 @@ import com.mjr.extraplanets.planets.Jupiter.worldgen.ChunkProviderJupiter;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
-public class WorldProviderJupiter extends WorldProviderRealisticSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
+public class WorldProviderJupiter extends WorldProviderRealisticSpace {
 
 	@Override
 	public Vector3 getFogColor() {
