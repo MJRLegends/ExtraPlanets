@@ -63,7 +63,7 @@ public class ExtraPlanets_RecipeGeneration {
 				new ItemStack(ExtraPlanets_Items.THERMAL_CLOTH, 1, 2), 'Y', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 4) });
 
 		// Battery
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "mercury/batteries", new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T',
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "mercury/batteries", new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, ExtraPlanets_Items.BATTERY_MERCURY.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T',
 				new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), 'R', "dustRedstone", 'C', Items.COAL });
 
 		// Stone Bricks
@@ -275,7 +275,7 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "redgemtools", new ItemStack(ExtraPlanets_Armor.RED_GEM_BOOTS), new Object[] { "   ", "M M", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8) });
 
 		// Battery
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "jupiter/batteries", new ItemStack(ExtraPlanets_Items.BATTERY_NICKEL, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T',
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "jupiter/batteries", new ItemStack(ExtraPlanets_Items.BATTERY_NICKEL, 1, ExtraPlanets_Items.BATTERY_NICKEL.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T',
 				new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 6), 'R', "dustRedstone", 'C', Items.COAL });
 		// Slab's & Stairs
 

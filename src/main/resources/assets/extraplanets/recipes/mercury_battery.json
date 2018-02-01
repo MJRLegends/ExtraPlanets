@@ -1,6 +1,7 @@
 {
   "result": {
-    "item": "extraplanets:mercury_battery"
+    "item": "extraplanets:mercury_battery",
+    "data": 100
   },
   "pattern": [
     " T ",

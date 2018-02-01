@@ -1,6 +1,7 @@
 {
   "result": {
-    "item": "extraplanets:nickel_battery"
+    "item": "extraplanets:nickel_battery",
+    "data": 100
   },
   "pattern": [
     " T ",
