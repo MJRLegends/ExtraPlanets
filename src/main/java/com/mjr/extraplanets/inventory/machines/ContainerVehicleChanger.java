@@ -42,7 +42,7 @@ public class ContainerVehicleChanger extends Container {
 
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
-		ItemStack var3 = null;
+		ItemStack var3 = ItemStack.EMPTY;
 		final Slot slot = this.inventorySlots.get(par2);
 
 		if (slot != null && slot.getHasStack()) {

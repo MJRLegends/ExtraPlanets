@@ -47,7 +47,7 @@ public class ContainerPoweredVehicleBase extends Container {
 	 */
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
-		ItemStack var3 = null;
+		ItemStack var3 = ItemStack.EMPTY;
 		final Slot var4 = this.inventorySlots.get(par2);
 		final int b = this.inventorySlots.size() - 36;
 
