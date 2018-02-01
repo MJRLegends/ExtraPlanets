@@ -5,8 +5,6 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
@@ -15,14 +13,13 @@ import net.minecraft.world.chunk.IChunkGenerator;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
-import com.mjr.extraplanets.api.IPressureWorld;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Ceres.worldgen.BiomeProviderCeres;
 import com.mjr.extraplanets.planets.Ceres.worldgen.ChunkProviderCeres;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
-public class WorldProviderCeres extends WorldProviderRealisticSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld {
+public class WorldProviderCeres extends WorldProviderRealisticSpace {
 
 	@Override
 	public Vector3 getFogColor() {
@@ -138,7 +135,7 @@ public class WorldProviderCeres extends WorldProviderRealisticSpace implements I
 	public ResourceLocation getDungeonChestType() {
 		return null;
 	}
-	
+
 	@Override
 	public List<Block> getSurfaceBlocks() {
 		List<Block> list = new LinkedList<>();
