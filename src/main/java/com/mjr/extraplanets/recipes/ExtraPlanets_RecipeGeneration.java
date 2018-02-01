@@ -488,7 +488,7 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "zinctools", new ItemStack(ExtraPlanets_Armor.ZINC_BOOTS), new Object[] { "   ", "M M", "M M", 'M', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5) });
 
 		// Battery
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "neptune/batteries", new ItemStack(ExtraPlanets_Items.BATTERY_ZINC, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T',
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "neptune/batteries", new ItemStack(ExtraPlanets_Items.BATTERY_ZINC, 1, ExtraPlanets_Items.BATTERY_ZINC.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T',
 				new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'R', "dustRedstone", 'C', Items.COAL });
 		// Slab's & Stairs
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "neptuneslabsandstairs", new ItemStack(ExtraPlanets_Blocks.NEPTUNE_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M',
