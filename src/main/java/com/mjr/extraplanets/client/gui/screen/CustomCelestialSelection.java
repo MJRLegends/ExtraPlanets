@@ -333,8 +333,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 39, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.atmosphere_details.name") + ": ", xOffset + 10, yOffset + 45, ColorUtil.to32BitColor(255, 0, 150, 255));
 					this.drawString(this.fontRendererObj, "------------------------", xOffset + 10, yOffset + 51, ColorUtil.to32BitColor(255, 0, 150, 255));
-					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_wind_level.name") + ": "
-							+ (!this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") ? (this.selectedBody.getReachable() ? ((WorldProviderSpace) temp).getWindLevel() * 10 + "%" : "Unknown") : "0.0%"), xOffset + 10,
+					float windLevel = 0;
+					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") && !(this.selectedBody instanceof Satellite))
+						windLevel = ((WorldProviderSpace) temp).getWindLevel() * 10;
+
+					this.drawString(this.fontRendererObj, GCCoreUtil.translate("gui.celestial_body_wind_level.name") + ": " + (this.selectedBody.getReachable() ? windLevel + "%" : "Unknown"), xOffset + 10,
 							yOffset + 60, 14737632);
 					float temperature = 0;
 					if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") && !(this.selectedBody instanceof Satellite))
