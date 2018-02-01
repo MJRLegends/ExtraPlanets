@@ -582,7 +582,8 @@ public class ExtraPlanets_Recipes {
 
 			// Battery
 			if (Config.BATTERIES)
-				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ZINC, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'R', "dustRedstone", 'C', Items.coal });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ZINC, 1, ExtraPlanets_Items.BATTERY_ZINC.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'R', "dustRedstone", 'C', Items.coal });
+
 			// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.NEPTUNE_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 0) });
