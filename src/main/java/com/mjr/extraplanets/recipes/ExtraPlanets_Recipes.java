@@ -227,7 +227,7 @@ public class ExtraPlanets_Recipes {
 		if (Config.MERCURY) {
 			// Battery
 			if (Config.BATTERIES)
-				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), 'R', "dustRedstone", 'C', Items.coal });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, ExtraPlanets_Items.BATTERY_MERCURY.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), 'R', "dustRedstone", 'C', Items.coal });
 
 			// Stone Bricks
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 4, 8), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 2) });
@@ -403,7 +403,7 @@ public class ExtraPlanets_Recipes {
 
 			// Battery
 			if (Config.BATTERIES)
-				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_NICKEL, 1, 0), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 6), 'R', "dustRedstone", 'C', Items.coal });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_NICKEL, 1, ExtraPlanets_Items.BATTERY_NICKEL.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 6), 'R', "dustRedstone", 'C', Items.coal });
 			// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 0) });
