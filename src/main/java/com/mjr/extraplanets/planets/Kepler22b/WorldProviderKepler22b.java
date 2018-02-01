@@ -5,23 +5,19 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
 import net.minecraft.block.Block;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
-import com.mjr.extraplanets.api.IPressureWorld;
-import com.mjr.extraplanets.api.ISolarRadiationWorld;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.ChunkProviderKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.WorldChunkManagerKepler22b;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
-public class WorldProviderKepler22b extends WorldProviderRealisticSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld, ISolarRadiationWorld {
+public class WorldProviderKepler22b extends WorldProviderRealisticSpace {
 
 	@Override
 	public Vector3 getFogColor() {
