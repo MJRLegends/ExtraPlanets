@@ -10,6 +10,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraftforge.common.BiomeDictionary;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.BlockDecorativeBlocks2;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
@@ -21,7 +22,8 @@ public class BiomeGenNeptuneLayeredHills extends NeptuneBiomes {
 
 	public BiomeGenNeptuneLayeredHills(int var1) {
 		super(var1);
-		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.HOT);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.HILLS);
 		this.topBlock = ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.BLUE_BLOCK);
 		this.thridtopBlocks = ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.LIGHT_BLUE_BLOCK);
 		this.secondtopBlock = ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.GREEN_BLOCK);
