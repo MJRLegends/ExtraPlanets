@@ -5,9 +5,11 @@ import java.util.List;
 import java.util.Map;
 
 import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.client.gui.overlay.OverlayRocket;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.network.PacketRotateRocket;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
@@ -197,6 +199,12 @@ public class MainHandlerClient {
 				}
 			}
 		}
+		
+        if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI)
+        {
+            OverlayRocket.renderSpaceshipOverlay(((EntityElectricRocketBase) player.getRidingEntity()).getSpaceshipGui());
+        }
+        
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI
 				&& !((EntityElectricRocketBase) minecraft.player.getRidingEntity()).getLaunched()) {
 			OverlayElectricLaunchCountdown.renderCountdownOverlay();
