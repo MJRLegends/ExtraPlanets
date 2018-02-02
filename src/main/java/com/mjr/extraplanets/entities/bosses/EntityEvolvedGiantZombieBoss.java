@@ -53,6 +53,7 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 		this.setSize(0.6F * 4, 1.95F * 4);
 	}
 
+	@Override
 	protected void initEntityAI() {
 		this.tasks.addTask(0, new EntityAISwimming(this));
 		this.tasks.addTask(2, new EntityAIBossZombieAttack(this, 1.0D, false));
@@ -68,6 +69,7 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<EntityPlayer>(this, EntityPlayer.class, true));
 	}
 
+	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(1400.0D);
@@ -77,6 +79,7 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 		this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(12.0D);
 	}
 
+	@Override
 	protected void entityInit() {
 		super.entityInit();
 		this.getDataManager().register(ARMS_RAISED, Boolean.valueOf(false));
@@ -100,12 +103,13 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 
 	@SideOnly(Side.CLIENT)
 	public boolean isArmsRaised() {
-		return ((Boolean) this.getDataManager().get(ARMS_RAISED)).booleanValue();
+		return this.getDataManager().get(ARMS_RAISED).booleanValue();
 	}
 
 	/**
 	 * Called when the entity is attacked.
 	 */
+	@Override
 	public boolean attackEntityFrom(DamageSource source, float amount) {
 		if (super.attackEntityFrom(source, amount)) {
 			EntityLivingBase entitylivingbase = this.getAttackTarget();
@@ -122,10 +126,12 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 	/**
 	 * Called to update the entity's position/logic.
 	 */
+	@Override
 	public void onUpdate() {
 		super.onUpdate();
 	}
 
+	@Override
 	public boolean attackEntityAsMob(Entity entityIn) {
 		boolean flag = super.attackEntityAsMob(entityIn);
 
@@ -142,6 +148,7 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 		return flag;
 	}
 
+	@Override
 	protected SoundEvent getAmbientSound() {
 		return SoundEvents.ENTITY_ZOMBIE_VILLAGER_AMBIENT;
 	}
@@ -150,10 +157,12 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 		return SoundEvents.ENTITY_ZOMBIE_VILLAGER_HURT;
 	}
 
+	@Override
 	protected SoundEvent getDeathSound() {
 		return SoundEvents.ENTITY_ZOMBIE_VILLAGER_DEATH;
 	}
 
+	@Override
 	protected void playStepSound(BlockPos pos, Block blockIn) {
 		SoundEvent soundevent = SoundEvents.ENTITY_ZOMBIE_VILLAGER_STEP;
 		this.playSound(soundevent, 0.15F, 1.0F);
@@ -162,6 +171,7 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 	/**
 	 * Get this Entity's EnumCreatureAttribute
 	 */
+	@Override
 	public EnumCreatureAttribute getCreatureAttribute() {
 		return EnumCreatureAttribute.UNDEAD;
 	}
@@ -173,6 +183,7 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 	/**
 	 * (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
+	@Override
 	public void writeEntityToNBT(NBTTagCompound compound) {
 		super.writeEntityToNBT(compound);
 	}
@@ -180,10 +191,12 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 	/**
 	 * (abstract) Protected helper method to read subclass entity data from NBT.
 	 */
+	@Override
 	public void readEntityFromNBT(NBTTagCompound compound) {
 		super.readEntityFromNBT(compound);
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void handleStatusUpdate(byte id) {
 		super.handleStatusUpdate(id);

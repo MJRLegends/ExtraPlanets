@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Map;
 
 import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
-import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -115,16 +114,14 @@ public class MainHandlerClient {
 			}
 		}
 		if (event.phase == Phase.START && player != null) {
-            boolean inSpaceShip = false;
-            if (player.getRidingEntity() instanceof EntityElectricRocketBase)
-            {
-                inSpaceShip = true;
-                EntityElectricRocketBase rocket = (EntityElectricRocketBase) player.getRidingEntity();
-                if (rocket.prevRotationPitch != rocket.rotationPitch || rocket.prevRotationYaw != rocket.rotationYaw)
-                {
-                    GalacticraftCore.packetPipeline.sendToServer(new PacketRotateRocket(player.getRidingEntity()));
-                }
-            }
+			boolean inSpaceShip = false;
+			if (player.getRidingEntity() instanceof EntityElectricRocketBase) {
+				inSpaceShip = true;
+				EntityElectricRocketBase rocket = (EntityElectricRocketBase) player.getRidingEntity();
+				if (rocket.prevRotationPitch != rocket.rotationPitch || rocket.prevRotationYaw != rocket.rotationYaw) {
+					GalacticraftCore.packetPipeline.sendToServer(new PacketRotateRocket(player.getRidingEntity()));
+				}
+			}
 			if (inSpaceShip) {
 				final EntityElectricRocketBase ship = (EntityElectricRocketBase) player.getRidingEntity();
 				boolean hasChanged = false;
@@ -199,12 +196,11 @@ public class MainHandlerClient {
 				}
 			}
 		}
-		
-        if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI)
-        {
-            OverlayRocket.renderSpaceshipOverlay(((EntityElectricRocketBase) player.getRidingEntity()).getSpaceshipGui());
-        }
-        
+
+		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
+			OverlayRocket.renderSpaceshipOverlay(((EntityElectricRocketBase) player.getRidingEntity()).getSpaceshipGui());
+		}
+
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI
 				&& !((EntityElectricRocketBase) minecraft.player.getRidingEntity()).getLaunched()) {
 			OverlayElectricLaunchCountdown.renderCountdownOverlay();
