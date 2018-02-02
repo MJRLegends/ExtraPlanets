@@ -8,6 +8,7 @@ import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.client.gui.overlay.OverlayRocket;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.network.PacketRotateRocket;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
@@ -110,16 +111,14 @@ public class MainHandlerClient {
 			}
 		}
 		if (event.phase == Phase.START && player != null) {
-            boolean inSpaceShip = false;
-            if (player.ridingEntity instanceof EntityElectricRocketBase)
-            {
-                inSpaceShip = true;
-                EntityElectricRocketBase rocket = (EntityElectricRocketBase) player.ridingEntity;
-                if (rocket.prevRotationPitch != rocket.rotationPitch || rocket.prevRotationYaw != rocket.rotationYaw)
-                {
-                    GalacticraftCore.packetPipeline.sendToServer(new PacketRotateRocket(player.ridingEntity));
-                }
-            }
+			boolean inSpaceShip = false;
+			if (player.ridingEntity instanceof EntityElectricRocketBase) {
+				inSpaceShip = true;
+				EntityElectricRocketBase rocket = (EntityElectricRocketBase) player.ridingEntity;
+				if (rocket.prevRotationPitch != rocket.rotationPitch || rocket.prevRotationYaw != rocket.rotationYaw) {
+					GalacticraftCore.packetPipeline.sendToServer(new PacketRotateRocket(player.ridingEntity));
+				}
+			}
 			if (inSpaceShip) {
 				final EntityElectricRocketBase ship = (EntityElectricRocketBase) player.ridingEntity;
 				boolean hasChanged = false;
@@ -194,6 +193,11 @@ public class MainHandlerClient {
 				}
 			}
 		}
+
+		if (minecraft.currentScreen == null && player.ridingEntity instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
+			OverlayRocket.renderSpaceshipOverlay(((EntityElectricRocketBase) player.ridingEntity).getSpaceshipGui());
+		}
+
 		if (minecraft.currentScreen == null && player.ridingEntity instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI
 				&& !((EntityElectricRocketBase) minecraft.thePlayer.ridingEntity).getLaunched()) {
 			OverlayElectricLaunchCountdown.renderCountdownOverlay();
