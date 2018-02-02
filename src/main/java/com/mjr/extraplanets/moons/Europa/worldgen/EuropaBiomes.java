@@ -14,6 +14,7 @@ import net.minecraft.world.chunk.ChunkPrimer;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
+import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropa;
 import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaIceValleys;
 import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaSaltSea;
 

@@ -13,6 +13,7 @@ import net.minecraft.world.chunk.ChunkPrimer;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonLargeMountain;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonValleys;
 
