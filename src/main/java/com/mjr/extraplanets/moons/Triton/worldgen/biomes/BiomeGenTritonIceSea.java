@@ -17,8 +17,8 @@ public class BiomeGenTritonIceSea extends TritonBiomes {
 		super(par1);
 		if (Config.REGISTER_BIOME_TYPES)
 			BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SNOWY, BiomeDictionary.Type.OCEAN);
-		this.topBlock = ExtraPlanets_Fluids.METHANE.getDefaultState();
-		this.fillerBlock = ExtraPlanets_Fluids.METHANE.getDefaultState();
+		this.topBlock = ExtraPlanets_Fluids.NITROGEN_ICE.getDefaultState();
+		this.fillerBlock = ExtraPlanets_Fluids.NITROGEN_ICE.getDefaultState();
 	}
 
 	@Override

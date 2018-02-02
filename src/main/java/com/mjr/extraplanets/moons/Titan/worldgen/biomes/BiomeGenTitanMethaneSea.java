@@ -13,7 +13,6 @@ import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 public class BiomeGenTitanMethaneSea extends BiomeGenBase {
 	public BiomeGenTitanMethaneSea(int par1) {
 		super(par1);
-		this.spawnableCreatureList.clear();
 		if (Config.REGISTER_BIOME_TYPES)
 			BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.OCEAN);
 		this.topBlock = ExtraPlanets_Fluids.METHANE.getDefaultState();
