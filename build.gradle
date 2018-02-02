@@ -30,7 +30,7 @@ repositories {
 
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "1.11.2-0.5.8"
+version = "1.11.2-0.5.9"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -49,10 +49,10 @@ dependencies {
     compile "codechicken:NotEnoughItems:${minecraft_version}-${nei_version}:deobf"
     compile "codechicken:CodeChickenLib:${minecraft_version}-${ccl_version}:deobf"
 	compile files (
-		"Galacticraft-API-1.11.2-4.0.1.128.jar",
-		"GalacticraftCore-Dev-1.11.2-4.0.1.128.jar",
-		"Galacticraft-Planets-Dev-1.11.2-4.0.1.128.jar",
-		"MicdoodleCore-Dev-1.11.2-4.0.1.128.jar",
+		"Galacticraft-API-1.11.2-4.0.1.132.jar",
+		"GalacticraftCore-Dev-1.11.2-4.0.1.132.jar",
+		"Galacticraft-Planets-Dev-1.11.2-4.0.1.132.jar",
+		"MicdoodleCore-Dev-1.11.2-4.0.1.132.jar",
 		"MJRLegendsLib-1.11.2-1.0.3-dev.jar"
 	)
 	runtime "mezz.jei:jei_${minecraft_version}:${jei_version}"
