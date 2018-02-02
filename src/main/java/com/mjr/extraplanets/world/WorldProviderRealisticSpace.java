@@ -9,7 +9,9 @@ import com.mjr.extraplanets.api.ISolarRadiationWorld;
 
 public abstract class WorldProviderRealisticSpace extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel, IPressureWorld, ISolarRadiationWorld {
 
+	@Override
 	public abstract int getPressureLevel();
 
+	@Override
 	public abstract int getSolarRadiationLevel();
 }
