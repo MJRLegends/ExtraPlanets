@@ -131,7 +131,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 
 			// Set the player's launchpad item for return on landing - or null if launchpads not removed
 			if (stats != null) {
-				stats.setLaunchpadStack(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 25, 1));
+				stats.setLaunchpadStack(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 25, 3));
 			}
 
 			this.playSound(SoundEvents.ENTITY_ITEM_PICKUP, 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
