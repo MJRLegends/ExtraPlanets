@@ -89,14 +89,14 @@ public class ContainerElectricRocketInventory extends Container {
 
 			if (par2 < b) {
 				if (!this.mergeItemStack(var5, b, b + 36, true)) {
-					return null;
+					return ItemStack.EMPTY;
 				}
 			} else if (!this.mergeItemStack(var5, 0, b, false)) {
-				return null;
+				return ItemStack.EMPTY;
 			}
 
 			if (var5.getCount() == 0) {
-				var4.putStack((ItemStack) null);
+				var4.putStack(ItemStack.EMPTY);
 			} else {
 				var4.onSlotChanged();
 			}

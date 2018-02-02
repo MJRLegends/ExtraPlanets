@@ -57,10 +57,10 @@ public class ContainerPoweredVehicleBase extends Container {
 
 			if (par2 < b) {
 				if (!this.mergeItemStack(var5, b, b + 36, true)) {
-					return null;
+					return ItemStack.EMPTY;
 				}
 			} else if (!this.mergeItemStack(var5, 0, b, false)) {
-				return null;
+				return ItemStack.EMPTY;
 			}
 
 			if (var5.getCount() == 0) {
