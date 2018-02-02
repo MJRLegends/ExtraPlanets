@@ -14,6 +14,30 @@
 
 
 ===========================================Released Updates===========================================
+V0.1.9
+NOTE: YOU WILL GET A MESSAGE SAYING 51 EXTRA PLANETS BIOMES ON OLD WORLDS, IT WILL CHANGE BIOME NAMES ALL IN EXTRA PLANETS DIMENSIONS TO PLAINS BIOMES
+
+TO FIX DELETE ALL EXTRA PLANETS DIMENSIONS FILES!!!! PLEASE DON'T REPORT AS A BUG ITS INTENDED
+
+*Fixed issue #226
+*Fixed issue #227
+*Updated de_DE.lang
+*Fixed issue #224
+*Changed all Biome types for all biomes
+*Added config option to disable them
+*Fixes for a few biomes
+*Fixed crash on load up for biomes due to recent commit
+*Fixed Electric rocket rotation from player controlling
+*Small fix for Custom Celestial Selection screen
+*Fixed Creative Rocket Electric Rocket not having 100% power
+*Fixes for Electric Rocket rotation/rendering
+*Fixed missing rendering of side bar for the Electric Rocket
+*Clean up/Fix Formatting
+*Converted over to use GC new API Biome System
+*Changed Galacticraft minimum version to Build 132
+*Few fixes for Moon registering for Biome & Mob info methods
+*More work on Converting over to use GC new API Biome System
+
 v0.1.8
 *Fixed issue #222
 *Fixed issue #221
