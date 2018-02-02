@@ -9,14 +9,14 @@ import net.minecraftforge.common.BiomeDictionary;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.TitanBiomes;
 
 public class BiomeGenTitanMethaneSea extends TitanBiomes {
 	public BiomeGenTitanMethaneSea(BiomeProperties properties) {
 		super(properties);
 		this.topBlock = ExtraPlanets_Blocks.TITAN_BLOCKS.getDefaultState();
-		this.fillerBlock = ExtraPlanets_Blocks.TITAN_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SUB_SURFACE);
+		this.fillerBlock = ExtraPlanets_Blocks.TITAN_BLOCKS.getDefaultState().withProperty(BlockBasicTitan.BASIC_TYPE, BlockBasicTitan.EnumBlockBasic.SUB_SURFACE);
 	}
 
 	@Override

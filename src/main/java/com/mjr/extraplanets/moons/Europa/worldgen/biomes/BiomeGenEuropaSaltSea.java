@@ -9,7 +9,7 @@ import net.minecraftforge.common.BiomeDictionary;
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicSaturn;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
 import com.mjr.extraplanets.moons.Europa.worldgen.EuropaBiomes;
 
 public class BiomeGenEuropaSaltSea extends EuropaBiomes {
@@ -17,7 +17,7 @@ public class BiomeGenEuropaSaltSea extends EuropaBiomes {
 		super(properties);
 		this.spawnableCreatureList.clear();
 		this.topBlock = ExtraPlanets_Blocks.EUROPA_BLOCKS.getDefaultState();
-		this.fillerBlock = ExtraPlanets_Blocks.EUROPA_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SUB_SURFACE);
+		this.fillerBlock = ExtraPlanets_Blocks.EUROPA_BLOCKS.getDefaultState().withProperty(BlockBasicEuropa.BASIC_TYPE, BlockBasicEuropa.EnumBlockBasic.SUB_SURFACE);
 	}
 
 	@Override
