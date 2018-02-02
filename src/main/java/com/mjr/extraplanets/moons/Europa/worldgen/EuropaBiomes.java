@@ -2,10 +2,7 @@ package com.mjr.extraplanets.moons.Europa.worldgen;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -19,23 +16,15 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
 import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropa;
 import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaIceValleys;
 import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaSaltSea;
-import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
-public class EuropaBiomes extends BiomeGenBase {
+public class EuropaBiomes extends BiomeGenBaseGC {
 
-	public static final BiomeGenBase europa = new BiomeGenEuropa(new BiomeProperties("Europa").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final BiomeGenBase europaSaltSea = new BiomeGenEuropaSaltSea(new BiomeProperties("Europa Salt Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
-	public static final BiomeGenBase europaIceValleys = new BiomeGenEuropaIceValleys(new BiomeProperties("Europa Ice Valleys").setBaseHeight(-0.4F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome europa = new BiomeGenEuropa(new BiomeProperties("Europa").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome europaSaltSea = new BiomeGenEuropaSaltSea(new BiomeProperties("Europa Salt Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome europaIceValleys = new BiomeGenEuropaIceValleys(new BiomeProperties("Europa Ice Valleys").setBaseHeight(-0.4F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
 
 	protected EuropaBiomes(BiomeProperties properties) {
-		super(properties);
-		this.spawnableMonsterList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		super(properties, true);
 	}
 
 	@Override
@@ -45,11 +34,6 @@ public class EuropaBiomes extends BiomeGenBase {
 
 	protected BiomeDecoratorEuropaOther getBiomeDecorator() {
 		return (BiomeDecoratorEuropaOther) this.decorator;
-	}
-
-	@Override
-	public float getSpawningChance() {
-		return 0.01F;
 	}
 
 	@Override

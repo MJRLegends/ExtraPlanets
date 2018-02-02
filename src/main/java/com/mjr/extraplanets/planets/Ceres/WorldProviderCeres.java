@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
@@ -50,6 +51,7 @@ public class WorldProviderCeres extends WorldProviderRealisticSpace {
 
 	@Override
 	public Class<? extends BiomeProvider> getBiomeProviderClass() {
+        BiomeAdaptive.setBodyMultiBiome(ExtraPlanets_Planets.CERES);
 		return BiomeProviderCeres.class;
 	}
 

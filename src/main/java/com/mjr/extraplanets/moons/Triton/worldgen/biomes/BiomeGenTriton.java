@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.moons.Triton.worldgen.biomes;
 
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 
 import com.mjr.extraplanets.Config;
@@ -15,8 +16,9 @@ public class BiomeGenTriton extends TritonBiomes {
 		this.fillerBlock = ExtraPlanets_Blocks.TRITON_BLOCKS.getDefaultState().withProperty(BlockBasicTriton.BASIC_TYPE, BlockBasicTriton.EnumBlockBasic.SUB_SURFACE);
 	}
 
-	@Override
-	public void registerTypes() {
-		if (Config.REGISTER_BIOME_TYPES)BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SNOWY);
+	@Override	
+	public void registerTypes(Biome b) {
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(b, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SNOWY);
 	}
 }

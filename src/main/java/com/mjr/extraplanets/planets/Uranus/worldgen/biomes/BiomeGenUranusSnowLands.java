@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.planets.Uranus.worldgen.biomes;
 
 import net.minecraft.init.Blocks;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 
 import com.mjr.extraplanets.Config;
@@ -17,8 +18,8 @@ public class BiomeGenUranusSnowLands extends UranusBiomes {
 	}
 
 	@Override
-	public void registerTypes() {
+	public void registerTypes(Biome b) {
 		if (Config.REGISTER_BIOME_TYPES)
-			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SNOWY);
+			BiomeDictionary.addTypes(b, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SNOWY);
 	}
 }

@@ -10,6 +10,7 @@ import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
 import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 
 import com.mjr.extraplanets.Config;
@@ -42,8 +43,8 @@ public class BiomeGenKepler22bRedMapleForest extends Kepler22bBiomes {
 	}
 
 	@Override
-	public void registerTypes() {
+	public void registerTypes(Biome b) {
 		if (Config.REGISTER_BIOME_TYPES)
-			BiomeDictionary.addTypes(this, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DEAD);
+			BiomeDictionary.addTypes(b, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DEAD);
 	}
 }

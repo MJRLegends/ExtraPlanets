@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.moons.Europa.worldgen.biomes;
 
 import net.minecraft.init.Blocks;
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 
 import com.mjr.extraplanets.Config;
@@ -15,8 +16,8 @@ public class BiomeGenEuropaIceValleys extends EuropaBiomes {
 	}
 
 	@Override
-	public void registerTypes() {
+	public void registerTypes(Biome b) {
 		if (Config.REGISTER_BIOME_TYPES)
-			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SNOWY);
+			BiomeDictionary.addTypes(b, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SNOWY);
 	}
 }

@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 
 import com.mjr.extraplanets.Config;
@@ -19,8 +20,8 @@ public class BiomeGenKepler22bCandyLand extends Kepler22bBiomes {
 	}
 
 	@Override
-	public void registerTypes() {
+	public void registerTypes(Biome b) {
 		if (Config.REGISTER_BIOME_TYPES)
-			BiomeDictionary.addTypes(this, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.COLD, BiomeDictionary.Type.LUSH);
+			BiomeDictionary.addTypes(b, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.COLD, BiomeDictionary.Type.LUSH);
 	}
 }

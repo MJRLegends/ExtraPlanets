@@ -2,10 +2,7 @@ package com.mjr.extraplanets.moons.Oberon.worldgen;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -19,23 +16,15 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonLargeMountain;
 import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonValleys;
-import com.mjr.mjrlegendslib.world.biomes.BiomeGenBase;
 
-public class OberonBiomes extends BiomeGenBase {
+public class OberonBiomes extends BiomeGenBaseGC {
 
-	public static final BiomeGenBase oberon = new BiomeGenOberon(new BiomeProperties("Oberon").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final BiomeGenBase oberonLargeMountain = new BiomeGenOberonLargeMountain(new BiomeProperties("Oberon Large Ice Mountain").setBaseHeight(3.0F).setHeightVariation(2.5F).setRainfall(0.0F).setRainDisabled().setSnowEnabled());
-	public static final BiomeGenBase oberonValleys = new BiomeGenOberonValleys(new BiomeProperties("Oberon Valleys").setBaseHeight(-0.4F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome oberon = new BiomeGenOberon(new BiomeProperties("Oberon").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome oberonLargeMountain = new BiomeGenOberonLargeMountain(new BiomeProperties("Oberon Large Ice Mountain").setBaseHeight(3.0F).setHeightVariation(2.5F).setRainfall(0.0F).setRainDisabled().setSnowEnabled());
+	public static final Biome oberonValleys = new BiomeGenOberonValleys(new BiomeProperties("Oberon Valleys").setBaseHeight(-0.4F).setHeightVariation(0.2F).setRainfall(0.0F).setRainDisabled());
 
 	protected OberonBiomes(BiomeProperties properties) {
-		super(properties);
-		this.spawnableMonsterList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+		super(properties, true);
 	}
 
 	@Override
@@ -46,12 +35,7 @@ public class OberonBiomes extends BiomeGenBase {
 	protected BiomeDecoratorOberonOther getBiomeDecorator() {
 		return (BiomeDecoratorOberonOther) this.decorator;
 	}
-
-	@Override
-	public float getSpawningChance() {
-		return 0.01F;
-	}
-
+	
 	@Override
 	public void genTerrainBlocks(World world, Random rand, ChunkPrimer chunk, int x, int z, double stoneNoise) {
 		generateOberonBiomeTerrain(rand, chunk, x, z, stoneNoise);

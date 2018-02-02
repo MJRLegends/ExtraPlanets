@@ -7,29 +7,54 @@ import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.world.AtmosphereInfo;
 import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedEnderman;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import net.minecraft.entity.monster.EntityCreeper;
+import net.minecraft.entity.monster.EntityEnderman;
+import net.minecraft.entity.monster.EntitySkeleton;
+import net.minecraft.entity.monster.EntitySpider;
+import net.minecraft.entity.monster.EntityWitch;
+import net.minecraft.entity.monster.EntityZombie;
+import net.minecraft.entity.passive.EntityChicken;
+import net.minecraft.entity.passive.EntityCow;
+import net.minecraft.entity.passive.EntityPig;
+import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome.SpawnListEntry;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets_SolarSystems;
 import com.mjr.extraplanets.planets.Ceres.TeleportTypeCeres;
 import com.mjr.extraplanets.planets.Ceres.WorldProviderCeres;
+import com.mjr.extraplanets.planets.Ceres.worldgen.CeresBiomes;
 import com.mjr.extraplanets.planets.Eris.TeleportTypeEris;
 import com.mjr.extraplanets.planets.Eris.WorldProviderEris;
+import com.mjr.extraplanets.planets.Eris.worldgen.ErisBiomes;
 import com.mjr.extraplanets.planets.Jupiter.TeleportTypeJupiter;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
 import com.mjr.extraplanets.planets.Kepler22b.TeleportTypeKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.WorldProviderKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 import com.mjr.extraplanets.planets.Mercury.TeleportTypeMercury;
 import com.mjr.extraplanets.planets.Mercury.WorldProviderMercury;
+import com.mjr.extraplanets.planets.Mercury.worldgen.MercuryBiomes;
 import com.mjr.extraplanets.planets.Neptune.TeleportTypeNeptune;
 import com.mjr.extraplanets.planets.Neptune.WorldProviderNeptune;
+import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
 import com.mjr.extraplanets.planets.Pluto.TeleportTypePluto;
 import com.mjr.extraplanets.planets.Pluto.WorldProviderPluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.PlutoBiomes;
 import com.mjr.extraplanets.planets.Saturn.TeleportTypeSaturn;
 import com.mjr.extraplanets.planets.Saturn.WorldProviderSaturn;
+import com.mjr.extraplanets.planets.Saturn.worldgen.SaturnBiomes;
 import com.mjr.extraplanets.planets.Uranus.TeleportTypeUranus;
 import com.mjr.extraplanets.planets.Uranus.WorldProviderUranus;
+import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
 import com.mjr.extraplanets.util.GCRegisterUtilities;
 
 public class ExtraPlanets_Planets {
@@ -94,6 +119,12 @@ public class ExtraPlanets_Planets {
 			MERCURY.setDimensionInfo(Config.MERCURY_ID, WorldProviderMercury.class);
 			MERCURY.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 50.0F : 5.0F, 0.0F, 0.1F));
 			MERCURY.addChecklistKeys("tier_3_thermal_padding", "tier_1_space_suit", "equipOxygenSuit", "equipParachute");
+			MERCURY.setBiomeInfo(MercuryBiomes.mercury);
+			MERCURY.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			MERCURY.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			MERCURY.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			MERCURY.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			MERCURY.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.CERES) {
 			CERES = new Planet("Ceres").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -107,6 +138,12 @@ public class ExtraPlanets_Planets {
 			CERES.setDimensionInfo(Config.CERES_ID, WorldProviderCeres.class);
 			CERES.setAtmosphere(new AtmosphereInfo(false, false, false, -1.5F, 5.0F, 0.1F));
 			CERES.addChecklistKeys("thermalPadding", "tier_1_space_suit", "equipOxygenSuit", "equipParachute");
+			CERES.setBiomeInfo(CeresBiomes.ceres);
+			CERES.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			CERES.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			CERES.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			CERES.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			CERES.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.JUPITER) {
 			JUPITER = new Planet("Jupiter").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -120,6 +157,12 @@ public class ExtraPlanets_Planets {
 			JUPITER.setDimensionInfo(Config.JUPITER_ID, WorldProviderJupiter.class);
 			JUPITER.setAtmosphere(new AtmosphereInfo(false, false, true, 100.0F, 3.0F, 0.1F));
 			JUPITER.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute", "equipShieldController");
+			JUPITER.setBiomeInfo(JupiterBiomes.jupiter, JupiterBiomes.jupiterMagmaSea, JupiterBiomes.jupiterSands);
+			JUPITER.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			JUPITER.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			JUPITER.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			JUPITER.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			JUPITER.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.SATURN) {
 			SATURN = new Planet("Saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -133,6 +176,12 @@ public class ExtraPlanets_Planets {
 			SATURN.setDimensionInfo(Config.SATURN_ID, WorldProviderSaturn.class);
 			SATURN.setAtmosphere(new AtmosphereInfo(false, false, true, 80.0F, 0.0F, 0.1F));
 			SATURN.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute", "equipShieldController");
+			SATURN.setBiomeInfo(SaturnBiomes.saturn, SaturnBiomes.saturnHydroCarbonSea, SaturnBiomes.saturnNuclearLand);
+			SATURN.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			SATURN.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			SATURN.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			SATURN.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			SATURN.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.URANUS) {
 			URANUS = new Planet("Uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -146,6 +195,12 @@ public class ExtraPlanets_Planets {
 			URANUS.setDimensionInfo(Config.URANUS_ID, WorldProviderUranus.class);
 			URANUS.setAtmosphere(new AtmosphereInfo(false, false, true, -120.0F, 4.0F, 0.1F));
 			URANUS.addChecklistKeys("tier_5_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute", "equipShieldController");
+			URANUS.setBiomeInfo(UranusBiomes.uranus, UranusBiomes.uranusFrozenWaterSea, UranusBiomes.uranusSnowLands);
+			URANUS.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			URANUS.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			URANUS.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			URANUS.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			URANUS.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.NEPTUNE) {
 			NEPTUNE = new Planet("Neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -159,6 +214,12 @@ public class ExtraPlanets_Planets {
 			NEPTUNE.setDimensionInfo(Config.NEPTUNE_ID, WorldProviderNeptune.class);
 			NEPTUNE.setAtmosphere(new AtmosphereInfo(false, false, true, -140.0F, 5.0F, 0.1F));
 			NEPTUNE.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute", "equipShieldController");
+			NEPTUNE.setBiomeInfo(NeptuneBiomes.neptune, NeptuneBiomes.neptuneLayeredHills, NeptuneBiomes.neptuneRadioActiveWaterSea);
+			NEPTUNE.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			NEPTUNE.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			NEPTUNE.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			NEPTUNE.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			NEPTUNE.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.PLUTO) {
 			PLUTO = new Planet("Pluto").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -172,6 +233,12 @@ public class ExtraPlanets_Planets {
 			PLUTO.setDimensionInfo(Config.PLUTO_ID, WorldProviderPluto.class);
 			PLUTO.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -140.0F : 5.0F, 5.0F, 0.1F));
 			PLUTO.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
+			PLUTO.setBiomeInfo(PlutoBiomes.pluto);
+			PLUTO.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			PLUTO.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			PLUTO.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			PLUTO.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			PLUTO.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.ERIS) {
 			ERIS = new Planet("Eris").setParentSolarSystem(GalacticraftCore.solarSystemSol);
@@ -185,6 +252,12 @@ public class ExtraPlanets_Planets {
 			ERIS.setDimensionInfo(Config.ERIS_ID, WorldProviderEris.class);
 			ERIS.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -150.0F : 5.0F, 5.0F, 0.1F));
 			ERIS.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
+			ERIS.setBiomeInfo(ErisBiomes.eris);
+			ERIS.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			ERIS.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			ERIS.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			ERIS.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			ERIS.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			KEPLER22B = new Planet("kepler22b").setParentSolarSystem(ExtraPlanets_SolarSystems.kepler22);
@@ -198,6 +271,19 @@ public class ExtraPlanets_Planets {
 			KEPLER22B.setDimensionInfo(Config.KEPLER22B_ID, WorldProviderKepler22b.class);
 			KEPLER22B.setAtmosphere(new AtmosphereInfo(true, true, false, 0.0F, 5.0F, 0.05F));
 			KEPLER22B.addChecklistKeys("equipParachute");
+			KEPLER22B.setBiomeInfo(Kepler22bBiomes.kepler22bBlueForest, Kepler22bBiomes.kepler22bCandyLand, Kepler22bBiomes.kepler22bCoalPlains, Kepler22bBiomes.kepler22bDiamondPlains, Kepler22bBiomes.kepler22bEmeraldPlains,
+					Kepler22bBiomes.kepler22bGoldPlains, Kepler22bBiomes.kepler22bIronPlains, Kepler22bBiomes.kepler22bPlains, Kepler22bBiomes.kepler22bPurpleForest, Kepler22bBiomes.kepler22bRedDesert, Kepler22bBiomes.kepler22bRedForest,
+					Kepler22bBiomes.kepler22bWasteLands, Kepler22bBiomes.kepler22bYellowForest);
+			KEPLER22B.addMobInfo(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
+			KEPLER22B.addMobInfo(new SpawnListEntry(EntitySpider.class, 100, 4, 4));
+			KEPLER22B.addMobInfo(new SpawnListEntry(EntitySkeleton.class, 100, 4, 4));
+			KEPLER22B.addMobInfo(new SpawnListEntry(EntityCreeper.class, 100, 4, 4));
+			KEPLER22B.addMobInfo(new SpawnListEntry(EntityEnderman.class, 100, 1, 4));
+			KEPLER22B.addMobInfo(new SpawnListEntry(EntityWitch.class, 5, 1, 1));
+			KEPLER22B.addMobInfo(new SpawnListEntry(EntitySheep.class, 12, 4, 4));
+			KEPLER22B.addMobInfo(new SpawnListEntry(EntityPig.class, 10, 4, 4));
+			KEPLER22B.addMobInfo(new SpawnListEntry(EntityChicken.class, 10, 4, 4));
+			KEPLER22B.addMobInfo(new SpawnListEntry(EntityCow.class, 8, 4, 4));
 		}
 		if (Config.KUIPER_BELT) {
 			KUIPER_BELT = GCRegisterUtilities.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);

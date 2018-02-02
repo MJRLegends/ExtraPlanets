@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.moons.Oberon.worldgen;
 
+import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenOberon extends OberonBiomes {
@@ -9,7 +10,7 @@ public class BiomeGenOberon extends OberonBiomes {
 	}
 
 	@Override
-	public void registerTypes() {
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+	public void registerTypes(Biome b) {
+		BiomeDictionary.addTypes(b, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 	}
 }
