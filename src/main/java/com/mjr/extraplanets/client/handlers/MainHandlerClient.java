@@ -254,11 +254,13 @@ public class MainHandlerClient {
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public void onGuiOpenEvent(GuiOpenEvent event) {
-		if (((event.getGui() instanceof GuiCelestialSelection))) {
-			if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap) && Config.USE_CUSTOM_CELESTAIAL_SELECTION) {
-				event.setGui(new CustomCelestialSelection(true, null, PermissionAPI.hasPermission(MCUtilities.getMinecraft().thePlayer, Constants.PERMISSION_CREATE_STATION)));
-			} else {
-				event.setGui(new CustomCelestialSelection(false, null, PermissionAPI.hasPermission(MCUtilities.getMinecraft().thePlayer, Constants.PERMISSION_CREATE_STATION)));
+		if (Config.USE_CUSTOM_CELESTAIAL_SELECTION) {
+			if (((event.getGui() instanceof GuiCelestialSelection))) {
+				if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap)) {
+					event.setGui(new CustomCelestialSelection(true, null, PermissionAPI.hasPermission(MCUtilities.getMinecraft().thePlayer, Constants.PERMISSION_CREATE_STATION)));
+				} else {
+					event.setGui(new CustomCelestialSelection(false, null, PermissionAPI.hasPermission(MCUtilities.getMinecraft().thePlayer, Constants.PERMISSION_CREATE_STATION)));
+				}
 			}
 		}
 	}
@@ -283,8 +285,7 @@ public class MainHandlerClient {
 				event.setDensity(0.01f);
 				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 				event.setCanceled(true);
-			} 
-			else
+			} else
 				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_LINEAR);
 		}
 	}
