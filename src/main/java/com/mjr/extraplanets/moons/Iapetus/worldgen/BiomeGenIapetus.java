@@ -2,6 +2,8 @@ package com.mjr.extraplanets.moons.Iapetus.worldgen;
 
 import net.minecraftforge.common.BiomeDictionary;
 
+import com.mjr.extraplanets.Config;
+
 public class BiomeGenIapetus extends IapetusBiomes {
 
 	public BiomeGenIapetus(BiomeProperties properties) {
@@ -10,6 +12,7 @@ public class BiomeGenIapetus extends IapetusBiomes {
 
 	@Override
 	public void registerTypes() {
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD);
 	}
 }

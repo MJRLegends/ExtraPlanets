@@ -2,6 +2,8 @@ package com.mjr.extraplanets.moons.Rhea.worldgen;
 
 import net.minecraftforge.common.BiomeDictionary;
 
+import com.mjr.extraplanets.Config;
+
 public class BiomeGenRhea extends RheaBiomes {
 
 	public BiomeGenRhea(BiomeProperties properties) {
@@ -10,6 +12,7 @@ public class BiomeGenRhea extends RheaBiomes {
 
 	@Override
 	public void registerTypes() {
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD);
 	}
 }

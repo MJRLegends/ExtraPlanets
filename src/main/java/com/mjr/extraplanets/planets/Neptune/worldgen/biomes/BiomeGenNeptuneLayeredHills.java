@@ -10,6 +10,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraftforge.common.BiomeDictionary;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.BlockDecorativeBlocks2;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
@@ -30,7 +31,8 @@ public class BiomeGenNeptuneLayeredHills extends NeptuneBiomes {
 
 	@Override
 	public void registerTypes() {
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.HILLS);
 	}
 
 	@Override

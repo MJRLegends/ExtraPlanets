@@ -7,13 +7,13 @@ import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 
 import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.moons.Titan.worldgen.TitanBiomes;
 
 public class BiomeGenTitanMethaneSea extends TitanBiomes {
 	public BiomeGenTitanMethaneSea(BiomeProperties properties) {
 		super(properties);
-		this.spawnableCreatureList.clear();
 		this.topBlock = ExtraPlanets_Fluids.METHANE.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Fluids.METHANE.getDefaultState();
 	}
@@ -23,8 +23,9 @@ public class BiomeGenTitanMethaneSea extends TitanBiomes {
 		return Lists.<Biome.SpawnListEntry> newArrayList();
 	}
 
-	@Override
+	@Override	
 	public void registerTypes() {
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.OCEAN);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.OCEAN);
 	}
 }
