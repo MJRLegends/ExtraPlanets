@@ -2,7 +2,7 @@ package com.mjr.extraplanets.client.gui.vehicles;
 
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
-import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
+import micdoodle8.mods.galacticraft.core.client.gui.container.GuiPositionedContainer;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
@@ -14,13 +14,13 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.vehicles.ContainerSchematicVenusRover;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class GuiSchematicVenusRover extends GuiContainerGC implements ISchematicResultPage {
+public class GuiSchematicVenusRover extends GuiPositionedContainer implements ISchematicResultPage {
 	private static final ResourceLocation venusRoverBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/venus_roverbench.png");
 
 	private int pageIndex;
 
 	public GuiSchematicVenusRover(InventoryPlayer par1InventoryPlayer, BlockPos pos) {
-		super(new ContainerSchematicVenusRover(par1InventoryPlayer, pos));
+		super(new ContainerSchematicVenusRover(par1InventoryPlayer, pos), pos);
 		this.ySize = 221;
 	}
 
