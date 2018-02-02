@@ -156,6 +156,10 @@ public class MainHandlerClient {
 				}
 			}
 
+			if (Config.USE_CUSTOM_CELESTAIAL_SELECTION && FMLClientHandler.instance().getClient().currentScreen instanceof CustomCelestialSelection) {
+				player.motionY = 0;
+			}
+
 			boolean isPressed = KeyHandlerClient.spaceKey.isPressed();
 			if (!isPressed) {
 				ClientProxyCore.lastSpacebarDown = false;
