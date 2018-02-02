@@ -79,9 +79,9 @@ public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBl
 
 		boolean validSpot = true;
 
-		for (int x = -1; x <= 1; x++) {
-			for (int y = 0; y < 3; y += 2) {
-				for (int z = -1; z <= 1; z++) {
+		for (int x = -2; x <= 2; x++) {
+			for (int y = 0; y < 4; y++) {
+				for (int z = -1; z <= 2; z++) {
 					if (!(x == 0 && y == 0 && z == 0)) {
 						IBlockState stateAt = worldIn.getBlockState(pos.add(x, y, z));
 
