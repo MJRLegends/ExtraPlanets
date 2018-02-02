@@ -2,8 +2,8 @@ package com.mjr.extraplanets.client.gui.rockets;
 
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
+import micdoodle8.mods.galacticraft.core.client.gui.container.GuiPositionedContainer;
 import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
@@ -14,13 +14,13 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier9Rocket;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class GuiSchematicTier9Rocket extends GuiContainer implements ISchematicResultPage {
+public class GuiSchematicTier9Rocket extends GuiPositionedContainer implements ISchematicResultPage {
 	private static final ResourceLocation rocketBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rocketbench_tier9.png");
 
 	private int pageIndex;
 
 	public GuiSchematicTier9Rocket(InventoryPlayer par1InventoryPlayer, BlockPos pos) {
-		super(new ContainerSchematicTier9Rocket(par1InventoryPlayer, pos));
+		super(new ContainerSchematicTier9Rocket(par1InventoryPlayer, pos), pos);
 		this.ySize = 238;
 	}
 
