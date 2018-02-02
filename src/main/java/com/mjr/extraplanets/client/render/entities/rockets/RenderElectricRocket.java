@@ -47,7 +47,7 @@ public class RenderElectricRocket extends Render<EntityElectricRocket> {
 		final float pitch = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * partialTicks + 180;
 
 		GlStateManager.translate((float) x, (float) y - 0.6, (float) z);
-		GlStateManager.rotate(45.0F - entityYaw, 0.0F, 1.0F, 0.0F);
+		GlStateManager.rotate(180.0F - entityYaw, 0.0F, 1.0F, 0.0F);
 		GlStateManager.rotate(-pitch, 0.0F, 0.0F, 1.0F);
 		GlStateManager.translate(0.0F, entity.getRenderOffsetY(), 0.0F);
 		final float var28 = entity.rollAmplitude / 3 - partialTicks;

@@ -70,7 +70,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 
 	@Override
 	public float getRotateOffset() {
-		return 0.35F;
+		return 1.60F;
 	}
 
 	@Override
