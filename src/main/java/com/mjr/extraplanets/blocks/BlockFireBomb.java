@@ -27,6 +27,7 @@ public class BlockFireBomb extends BlockBasicExplosion {
 		}
 	}
 
+	@Override
 	public void explode(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase igniter) {
 		if (!worldIn.isRemote) {
 			if (state.getValue(EXPLODE).booleanValue()) {

@@ -16,6 +16,7 @@ public class EntityAIBossZombieAttack extends EntityAIAttackMelee {
 	/**
 	 * Execute a one shot task or start executing a continuous task
 	 */
+	@Override
 	public void startExecuting() {
 		super.startExecuting();
 		this.raiseArmTicks = 0;
@@ -24,6 +25,7 @@ public class EntityAIBossZombieAttack extends EntityAIAttackMelee {
 	/**
 	 * Resets the task
 	 */
+	@Override
 	public void resetTask() {
 		super.resetTask();
 		this.zombie.setArmsRaised(false);
@@ -32,6 +34,7 @@ public class EntityAIBossZombieAttack extends EntityAIAttackMelee {
 	/**
 	 * Updates the task
 	 */
+	@Override
 	public void updateTask() {
 		super.updateTask();
 		++this.raiseArmTicks;

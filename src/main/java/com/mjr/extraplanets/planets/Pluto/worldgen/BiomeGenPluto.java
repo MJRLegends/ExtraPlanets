@@ -1,8 +1,8 @@
 package com.mjr.extraplanets.planets.Pluto.worldgen;
 
-import com.mjr.extraplanets.Config;
-
 import net.minecraftforge.common.BiomeDictionary;
+
+import com.mjr.extraplanets.Config;
 
 public class BiomeGenPluto extends PlutoBiomes {
 
