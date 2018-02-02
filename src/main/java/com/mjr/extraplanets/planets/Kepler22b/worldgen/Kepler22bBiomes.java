@@ -2,18 +2,9 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen;
 
 import java.util.Random;
 
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.entity.monster.EntityCreeper;
-import net.minecraft.entity.monster.EntityEnderman;
-import net.minecraft.entity.monster.EntitySkeleton;
-import net.minecraft.entity.monster.EntitySpider;
-import net.minecraft.entity.monster.EntityWitch;
-import net.minecraft.entity.monster.EntityZombie;
-import net.minecraft.entity.passive.EntityChicken;
-import net.minecraft.entity.passive.EntityCow;
-import net.minecraft.entity.passive.EntityPig;
-import net.minecraft.entity.passive.EntitySheep;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
@@ -36,7 +27,7 @@ import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bRe
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bRedMapleForest;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bYellowMapleForest;
 
-public class Kepler22bBiomes extends BiomeGenBase {
+public class Kepler22bBiomes extends BiomeGenBaseGC {
 	public static final BiomeGenBase kepler22bPlains = new BiomeGenKepler22bPlains(Config.KEPLER22B_PLAINS_BIOME_ID).setBiomeName("Kepler22b Plains").setHeight(new Height(0.125F, 0.05F));
 	public static final BiomeGenBase kepler22bBlueForest = new BiomeGenKepler22bBlueMapleForest(Config.KEPLER22B_BLUE_FOREST_BIOME_ID).setBiomeName("Kepler22b Blue Maple Forest").setHeight(new Height(0.125F, 0.05F));
 	public static final BiomeGenBase kepler22bPurpleForest = new BiomeGenKepler22bPurpleMapleForest(Config.KEPLER22B_PURPLE_FOREST_BIOME_ID).setBiomeName("Kepler22b Purple Maple Forest").setHeight(new Height(0.125F, 0.05F));
@@ -56,23 +47,8 @@ public class Kepler22bBiomes extends BiomeGenBase {
 
 	public Kepler22bBiomes(int var1) {
 		super(var1);
-		this.spawnableMonsterList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.spawnableCreatureList.clear();
-		this.spawnableCaveCreatureList.clear();
 		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_GREEN.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState();
-		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
-		this.spawnableMonsterList.add(new SpawnListEntry(EntitySpider.class, 100, 4, 4));
-		this.spawnableMonsterList.add(new SpawnListEntry(EntitySkeleton.class, 100, 4, 4));
-		this.spawnableMonsterList.add(new SpawnListEntry(EntityCreeper.class, 100, 4, 4));
-		this.spawnableMonsterList.add(new SpawnListEntry(EntityEnderman.class, 100, 1, 4));
-		this.spawnableMonsterList.add(new SpawnListEntry(EntityWitch.class, 5, 1, 1));
-
-		this.spawnableCreatureList.add(new SpawnListEntry(EntitySheep.class, 12, 4, 4));
-		this.spawnableCreatureList.add(new SpawnListEntry(EntityPig.class, 10, 4, 4));
-		this.spawnableCreatureList.add(new SpawnListEntry(EntityChicken.class, 10, 4, 4));
-		this.spawnableCreatureList.add(new SpawnListEntry(EntityCow.class, 8, 4, 4));
 	}
 
 	@Override

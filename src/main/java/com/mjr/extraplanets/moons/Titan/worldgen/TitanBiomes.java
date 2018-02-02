@@ -2,10 +2,7 @@ package com.mjr.extraplanets.moons.Titan.worldgen;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -21,31 +18,19 @@ import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneHills;
 import com.mjr.extraplanets.moons.Titan.worldgen.biomes.BiomeGenTitanMethaneSea;
 
-public class TitanBiomes extends BiomeGenBase {
+public class TitanBiomes extends BiomeGenBaseGC {
 	public static final BiomeGenBase titan = new BiomeGenTitan(Config.TITAN_BIOME_ID).setBiomeName("Titan").setHeight(new Height(0.125F, 0.25F));
 	public static final BiomeGenBase titanMethaneSea = new BiomeGenTitanMethaneSea(Config.TITAN_SEA_BIOME_ID).setBiomeName("Titan Methane Sea").setHeight(new Height(-1.0F, 0.0F));
 	public static final BiomeGenBase titanMethaneHills = new BiomeGenTitanMethaneHills(Config.TITAN_METHANE_HILLS_BIOME_ID).setBiomeName("Titan Methane Hills").setHeight(new Height(0.125F, 0.55F));
 
 	protected TitanBiomes(int par1) {
 		super(par1);
-		this.spawnableMonsterList.clear();
-		this.spawnableCreatureList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 		this.rainfall = 0F;
 	}
 
 	@Override
 	public BiomeDecorator createBiomeDecorator() {
 		return new BiomeDecoratorTitanOther();
-	}
-
-	@Override
-	public float getSpawningChance() {
-		return 0.01F;
 	}
 
 	@Override

@@ -2,10 +2,7 @@ package com.mjr.extraplanets.planets.Uranus.worldgen;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -21,31 +18,19 @@ import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusFrozenWaterSea;
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusSnowLands;
 
-public class UranusBiomes extends BiomeGenBase {
+public class UranusBiomes extends BiomeGenBaseGC {
 	public static final BiomeGenBase uranus = new BiomeGenUranus(Config.URANUS_BIOME_ID).setBiomeName("Uranus").setHeight(new Height(0.125F, 0.05F));
 	public static final BiomeGenBase uranusFrozenWater = new BiomeGenUranusFrozenWaterSea(Config.URANUS_FROZEN_SEA_BIOME_ID).setBiomeName("Uranus Frozen Water").setHeight(new Height(-1.0F, 0.0F));
 	public static final BiomeGenBase uranusSnowLands = new BiomeGenUranusSnowLands(Config.URANUS_SNOW_LANDS_BIOME_ID).setBiomeName("Uranus Snow Lands").setHeight(new Height(0.825F, 0.25F));
 
 	protected UranusBiomes(int var1) {
 		super(var1);
-		this.spawnableMonsterList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 	}
 
 	@Override
 	public BiomeDecorator createBiomeDecorator() {
 		return new BiomeDecoratorUranusOther();
-	}
-
-	@Override
-	public float getSpawningChance() {
-		return 0.01F;
-	}
+	}	
 
 	@Override
 	public void genTerrainBlocks(World world, Random rand, ChunkPrimer chunk, int x, int z, double stoneNoise) {

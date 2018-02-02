@@ -2,10 +2,7 @@ package com.mjr.extraplanets.moons.Europa.worldgen;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -20,21 +17,14 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
 import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaIceValleys;
 import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaSaltSea;
 
-public class EuropaBiomes extends BiomeGenBase {
+public class EuropaBiomes extends BiomeGenBaseGC {
 
-	public static final BiomeGenBase europa = new BiomeGenEuropa(Config.EUROPA_BIOME_ID).setBiomeName("Europa").setHeight(new Height(0.125F,0.05F));
+	public static final BiomeGenBase europa = new BiomeGenEuropa(Config.EUROPA_BIOME_ID).setBiomeName("Europa").setHeight(new Height(0.125F, 0.05F));
 	public static final BiomeGenBase europaSaltSea = new BiomeGenEuropaSaltSea(Config.EUROPA_SALT_SEA_BIOME_ID).setBiomeName("Europa Salt Sea").setHeight(new Height(-1.0F, 0.0F));
 	public static final BiomeGenBase europaIceValleys = new BiomeGenEuropaIceValleys(Config.EUROPA_ICE_VALLEYS_BIOME_ID).setBiomeName("Europa Ice Valleys").setHeight(new Height(-0.4F, 0.2F));
 
 	protected EuropaBiomes(int var1) {
 		super(var1);
-		this.spawnableMonsterList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 		this.rainfall = 0F;
 	}
 
@@ -45,11 +35,6 @@ public class EuropaBiomes extends BiomeGenBase {
 
 	protected BiomeDecoratorEuropaOther getBiomeDecorator() {
 		return (BiomeDecoratorEuropaOther) this.theBiomeDecorator;
-	}
-
-	@Override
-	public float getSpawningChance() {
-		return 0.01F;
 	}
 
 	@Override

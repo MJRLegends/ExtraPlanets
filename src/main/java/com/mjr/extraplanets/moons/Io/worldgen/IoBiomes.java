@@ -2,10 +2,7 @@ package com.mjr.extraplanets.moons.Io.worldgen;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -21,20 +18,13 @@ import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIOBurningPlains;
 import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIo;
 import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIoAshLands;
 
-public class IoBiomes extends BiomeGenBase {
+public class IoBiomes extends BiomeGenBaseGC {
 	public static final BiomeGenBase io = new BiomeGenIo(Config.IO_BIOME_ID).setBiomeName("Io").setHeight(new Height(0.125F, 0.05F));
 	public static final BiomeGenBase ioAshLands = new BiomeGenIoAshLands(Config.IO_ASH_LANDS_BIOME_ID).setBiomeName("Io Ash Lands").setHeight(new Height(2.0F, 2.0F));
 	public static final BiomeGenBase ioBurningPlains = new BiomeGenIOBurningPlains(Config.IO_BURNING_PLAINS_BIOME_ID).setBiomeName("Io Burning Plains").setHeight(new Height(0.125F, 0.015F));
 
 	protected IoBiomes(int par1) {
 		super(par1);
-		this.spawnableMonsterList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 		this.rainfall = 0F;
 	}
 
@@ -45,11 +35,6 @@ public class IoBiomes extends BiomeGenBase {
 
 	protected BiomeDecoratorIoOther getBiomeDecorator() {
 		return (BiomeDecoratorIoOther) this.theBiomeDecorator;
-	}
-
-	@Override
-	public float getSpawningChance() {
-		return 0.01F;
 	}
 
 	@Override

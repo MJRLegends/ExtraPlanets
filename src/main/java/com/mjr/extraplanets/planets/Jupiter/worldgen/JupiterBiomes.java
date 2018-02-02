@@ -2,10 +2,7 @@ package com.mjr.extraplanets.planets.Jupiter.worldgen;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -21,31 +18,19 @@ import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiter;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterMagmaSea;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterSands;
 
-public class JupiterBiomes extends BiomeGenBase {
+public class JupiterBiomes extends BiomeGenBaseGC {
 	public static final BiomeGenBase jupiter = new BiomeGenJupiter(Config.JUPITER_BIOME_ID).setBiomeName("Jupiter").setHeight(new Height(0.125F, 0.05F));
 	public static final BiomeGenBase jupiterMagmaSea = new BiomeGenJupiterMagmaSea(Config.JUPITER_SEA_BIOME_ID).setBiomeName("Jupiter Magma Sea").setHeight(new Height(-1.0F, 0.0F));
 	public static final BiomeGenBase jupiterSands = new BiomeGenJupiterSands(Config.JUPITER_SANDS_BIOME_ID).setBiomeName("Jupiter Sands").setHeight(new Height(1.0F, 0.5F));
 
 	protected JupiterBiomes(int var1) {
 		super(var1);
-		this.spawnableMonsterList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 		this.rainfall = 0F;
 	}
 
 	@Override
 	public BiomeDecorator createBiomeDecorator() {
 		return new BiomeDecoratorJupiterOther();
-	}
-
-	@Override
-	public float getSpawningChance() {
-		return 0.01F;
 	}
 
 	@Override

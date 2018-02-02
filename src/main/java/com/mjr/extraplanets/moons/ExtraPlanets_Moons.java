@@ -6,35 +6,51 @@ import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Moon;
 import micdoodle8.mods.galacticraft.api.world.AtmosphereInfo;
 import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedEnderman;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.moons.Callisto.TeleportTypeCallisto;
 import com.mjr.extraplanets.moons.Callisto.WorldProviderCallisto;
+import com.mjr.extraplanets.moons.Callisto.worldgen.CallistoBiomes;
 import com.mjr.extraplanets.moons.Deimos.TeleportTypeDeimos;
 import com.mjr.extraplanets.moons.Deimos.WorldProviderDeimos;
+import com.mjr.extraplanets.moons.Deimos.worldgen.DeimosBiomes;
 import com.mjr.extraplanets.moons.Europa.TeleportTypeEuropa;
 import com.mjr.extraplanets.moons.Europa.WorldProviderEuropa;
+import com.mjr.extraplanets.moons.Europa.worldgen.EuropaBiomes;
 import com.mjr.extraplanets.moons.Ganymede.TeleportTypeGanymede;
 import com.mjr.extraplanets.moons.Ganymede.WorldProviderGanymede;
+import com.mjr.extraplanets.moons.Ganymede.worldgen.GanymedeBiomes;
 import com.mjr.extraplanets.moons.Iapetus.TeleportTypeIapetus;
 import com.mjr.extraplanets.moons.Iapetus.WorldProviderIapetus;
+import com.mjr.extraplanets.moons.Iapetus.worldgen.IapetusBiomes;
 import com.mjr.extraplanets.moons.Io.TeleportTypeIo;
 import com.mjr.extraplanets.moons.Io.WorldProviderIo;
+import com.mjr.extraplanets.moons.Io.worldgen.IoBiomes;
 import com.mjr.extraplanets.moons.Oberon.TeleportTypeOberon;
 import com.mjr.extraplanets.moons.Oberon.WorldProviderOberon;
+import com.mjr.extraplanets.moons.Oberon.worldgen.OberonBiomes;
 import com.mjr.extraplanets.moons.Phobos.TeleportTypePhobos;
 import com.mjr.extraplanets.moons.Phobos.WorldProviderPhobos;
+import com.mjr.extraplanets.moons.Phobos.worldgen.PhobosBiomes;
 import com.mjr.extraplanets.moons.Rhea.TeleportTypeRhea;
 import com.mjr.extraplanets.moons.Rhea.WorldProviderRhea;
 import com.mjr.extraplanets.moons.Titan.TeleportTypeTitan;
 import com.mjr.extraplanets.moons.Titan.WorldProviderTitan;
 import com.mjr.extraplanets.moons.Titania.TeleportTypeTitania;
 import com.mjr.extraplanets.moons.Titania.WorldProviderTitania;
+import com.mjr.extraplanets.moons.Titania.worldgen.TitaniaBiomes;
 import com.mjr.extraplanets.moons.Triton.TeleportTypeTriton;
 import com.mjr.extraplanets.moons.Triton.WorldProviderTriton;
+import com.mjr.extraplanets.moons.Triton.worldgen.TritonBiomes;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.util.GCRegisterUtilities;
 
@@ -96,6 +112,12 @@ public class ExtraPlanets_Moons {
 			TRITON.setDimensionInfo(Config.TRITON_ID, WorldProviderTriton.class);
 			TRITON.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -140.0F : 5.0F, 0.0F, 0.2F));
 			TRITON.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
+			TRITON.setBiomeInfo(TritonBiomes.triton, TritonBiomes.tritonIceLands, TritonBiomes.tritonIceSea);
+			TRITON.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			TRITON.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			TRITON.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			TRITON.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			TRITON.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.PHOBOS) {
 			PHOBOS = new Moon("phobos").setParentPlanet(MarsModule.planetMars);
@@ -109,7 +131,12 @@ public class ExtraPlanets_Moons {
 			PHOBOS.setDimensionInfo(Config.PHOBOS_ID, WorldProviderPhobos.class);
 			PHOBOS.setAtmosphere(new AtmosphereInfo(false, false, false, -1.0F, 0.0F, 0.2F));
 			PHOBOS.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
-
+			PHOBOS.setBiomeInfo(PhobosBiomes.phobos);
+			PHOBOS.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			PHOBOS.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			PHOBOS.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			PHOBOS.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			PHOBOS.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.DEIMOS) {
 			DEIMOS = new Moon("deimos").setParentPlanet(MarsModule.planetMars);
@@ -123,6 +150,12 @@ public class ExtraPlanets_Moons {
 			DEIMOS.setDimensionInfo(Config.DEIMOS_ID, WorldProviderDeimos.class);
 			DEIMOS.setAtmosphere(new AtmosphereInfo(false, false, false, -1.0F, 0.0F, 0.2F));
 			DEIMOS.addChecklistKeys("thermalPadding", "equipOxygenSuit", "equipParachute");
+			DEIMOS.setBiomeInfo(DeimosBiomes.deimos);
+			DEIMOS.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			DEIMOS.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			DEIMOS.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			DEIMOS.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			DEIMOS.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.IO) {
 			IO = new Moon("io").setParentPlanet(ExtraPlanets_Planets.JUPITER);
@@ -136,6 +169,12 @@ public class ExtraPlanets_Moons {
 			IO.setDimensionInfo(Config.IO_ID, WorldProviderIo.class);
 			IO.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 100.0F : 5.0F, 0.0F, 0.2F));
 			IO.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute");
+			IO.setBiomeInfo(IoBiomes.io, IoBiomes.ioAshLands, IoBiomes.ioBurningPlains);
+			IO.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			IO.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			IO.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			IO.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			IO.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.EUROPA) {
 			EUROPA = new Moon("europa").setParentPlanet(ExtraPlanets_Planets.JUPITER);
@@ -149,6 +188,12 @@ public class ExtraPlanets_Moons {
 			EUROPA.setDimensionInfo(Config.EUROPA_ID, WorldProviderEuropa.class);
 			EUROPA.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 100.0F : 5.0F, 0.0F, 0.2F));
 			EUROPA.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute");
+			EUROPA.setBiomeInfo(EuropaBiomes.europa, EuropaBiomes.europaIceValleys, EuropaBiomes.europaSaltSea);
+			EUROPA.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			EUROPA.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			EUROPA.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			EUROPA.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			EUROPA.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 
 		if (Config.GANYMEDE) {
@@ -163,6 +208,12 @@ public class ExtraPlanets_Moons {
 			GANYMEDE.setDimensionInfo(Config.GANYMEDE_ID, WorldProviderGanymede.class);
 			GANYMEDE.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 100.0F : 5.0F, 0.0F, 0.2F));
 			GANYMEDE.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute");
+			GANYMEDE.setBiomeInfo(GanymedeBiomes.ganymede);
+			GANYMEDE.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			GANYMEDE.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			GANYMEDE.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			GANYMEDE.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			GANYMEDE.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.CALLISTO) {
 			CALLISTO = new Moon("callisto").setParentPlanet(ExtraPlanets_Planets.JUPITER);
@@ -176,6 +227,12 @@ public class ExtraPlanets_Moons {
 			CALLISTO.setDimensionInfo(Config.CALLISTO_ID, WorldProviderCallisto.class);
 			CALLISTO.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 100.0F : 5.0F, 0.0F, 0.2F));
 			CALLISTO.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute");
+			CALLISTO.setBiomeInfo(CallistoBiomes.callisto);
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.RHEA) {
 			RHEA = new Moon("rhea").setParentPlanet(ExtraPlanets_Planets.SATURN);
@@ -189,6 +246,12 @@ public class ExtraPlanets_Moons {
 			RHEA.setDimensionInfo(Config.RHEA_ID, WorldProviderRhea.class);
 			RHEA.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 80.0F : 5.0F, 0.0F, 0.2F));
 			RHEA.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
+			CALLISTO.setBiomeInfo(CallistoBiomes.callisto);
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.TITAN) {
 			TITAN = new Moon("titan").setParentPlanet(ExtraPlanets_Planets.SATURN);
@@ -202,6 +265,12 @@ public class ExtraPlanets_Moons {
 			TITAN.setDimensionInfo(Config.TITAN_ID, WorldProviderTitan.class);
 			TITAN.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 80.0F : 5.0F, 0.0F, 0.2F));
 			TITAN.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
+			CALLISTO.setBiomeInfo(CallistoBiomes.callisto);
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.IAPETUS) {
 			IAPETUS = new Moon("iapetus").setParentPlanet(ExtraPlanets_Planets.SATURN);
@@ -215,6 +284,12 @@ public class ExtraPlanets_Moons {
 			IAPETUS.setDimensionInfo(Config.IAPETUS_ID, WorldProviderIapetus.class);
 			IAPETUS.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 40.0F : 5.0F, 4.0F, 0.1F));
 			IAPETUS.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
+			IAPETUS.setBiomeInfo(IapetusBiomes.iapetus);
+			IAPETUS.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			IAPETUS.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			IAPETUS.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			IAPETUS.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			IAPETUS.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.OBERON) {
 			OBERON = new Moon("oberon").setParentPlanet(ExtraPlanets_Planets.URANUS);
@@ -228,6 +303,12 @@ public class ExtraPlanets_Moons {
 			OBERON.setDimensionInfo(Config.OBERON_ID, WorldProviderOberon.class);
 			OBERON.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -120.0F : 5.0F, 4.0F, 0.1F));
 			OBERON.addChecklistKeys("tier_5_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
+			OBERON.setBiomeInfo(OberonBiomes.oberon);
+			OBERON.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			OBERON.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			OBERON.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			OBERON.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			OBERON.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.TITANIA) {
 			TITANIA = new Moon("titania").setParentPlanet(ExtraPlanets_Planets.URANUS);
@@ -241,6 +322,12 @@ public class ExtraPlanets_Moons {
 			TITANIA.setDimensionInfo(Config.TITANIA_ID, WorldProviderTitania.class);
 			TITANIA.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -120.0F : 5.0F, 4.0F, 0.1F));
 			TITANIA.addChecklistKeys("tier_5_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
+			TITANIA.setBiomeInfo(TitaniaBiomes.titania);
+			TITANIA.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
+			TITANIA.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
+			TITANIA.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
+			TITANIA.addMobInfo(new SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
+			TITANIA.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 	}
 

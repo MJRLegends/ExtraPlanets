@@ -2,10 +2,7 @@ package com.mjr.extraplanets.planets.Neptune.worldgen;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -21,31 +18,19 @@ import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneLayeredHills;
 import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneRadioActiveWaterSea;
 
-public class NeptuneBiomes extends BiomeGenBase {
+public class NeptuneBiomes extends BiomeGenBaseGC {
 	public static final BiomeGenBase neptune = new BiomeGenNeptune(Config.NEPTUNE_BIOME_ID).setBiomeName("Neptune").setHeight(new Height(0.125F, 0.05F));
 	public static final BiomeGenBase neptuneRadioActiveWaterSea = new BiomeGenNeptuneRadioActiveWaterSea(Config.NEPTUNE_RADIO_ACTIVE_WATER_SEA_BIOME_ID).setBiomeName("Neptune RadioActive Water Sea").setHeight(new Height(-1.0F, 0.0F));
 	public static final BiomeGenBase neptuneLayeredHills = new BiomeGenNeptuneLayeredHills(Config.NEPTUNE_LAYERED_HILLS_BIOME_ID).setBiomeName("Neptune Layered Hills").setHeight(new Height(1.5F, 0.025F));
 
 	protected NeptuneBiomes(int var1) {
 		super(var1);
-		this.spawnableMonsterList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new BiomeGenBase.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 		this.rainfall = 0F;
 	}
 
 	@Override
 	public BiomeDecorator createBiomeDecorator() {
 		return new BiomeDecoratorNeptuneOther();
-	}
-
-	@Override
-	public float getSpawningChance() {
-		return 0.01F;
 	}
 
 	@Override
