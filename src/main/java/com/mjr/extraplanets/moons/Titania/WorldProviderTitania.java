@@ -168,6 +168,7 @@ public class WorldProviderTitania extends WorldProviderRealisticSpace {
 		return "titania";
 	}
 
+	@Override
 	public List<Block> getSurfaceBlocks() {
 		List<Block> list = new LinkedList<>();
 		list.add(ExtraPlanets_Blocks.TITANIA_BLOCKS);

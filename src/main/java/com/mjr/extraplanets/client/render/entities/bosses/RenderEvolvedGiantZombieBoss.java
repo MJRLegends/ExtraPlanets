@@ -31,11 +31,12 @@ public class RenderEvolvedGiantZombieBoss extends RenderBiped<EntityEvolvedGiant
 	@SuppressWarnings("rawtypes")
 	public RenderEvolvedGiantZombieBoss(RenderManager renderManagerIn) {
 		super(renderManagerIn, new ModelZombie(), 0.5F, 1.0F);
-		LayerRenderer layerrenderer = (LayerRenderer) this.layerRenderers.get(0);
+		LayerRenderer layerrenderer = this.layerRenderers.get(0);
 		this.field_82434_o = this.modelBipedMain;
 		this.zombieVillagerModel = new ModelZombieVillager();
 		this.addLayer(new LayerHeldItem(this));
 		LayerBipedArmor layerbipedarmor = new LayerBipedArmor(this) {
+			@Override
 			protected void initArmor() {
 				this.field_177189_c = new ModelZombie(0.5F, true);
 				this.field_177186_d = new ModelZombie(1.0F, true);
@@ -57,6 +58,7 @@ public class RenderEvolvedGiantZombieBoss extends RenderBiped<EntityEvolvedGiant
 	/**
 	 * Allows the render to do state modifications necessary before the model is rendered.
 	 */
+	@Override
 	protected void preRenderCallback(EntityEvolvedGiantZombieBoss entitylivingbaseIn, float partialTickTime) {
 		super.preRenderCallback(entitylivingbaseIn, partialTickTime);
 		GlStateManager.scale(4.35F, 4.35F, 4.35F);
@@ -66,6 +68,7 @@ public class RenderEvolvedGiantZombieBoss extends RenderBiped<EntityEvolvedGiant
 	/**
 	 * Renders the desired {@code T} type Entity.
 	 */
+	@Override
 	public void doRender(EntityEvolvedGiantZombieBoss entity, double x, double y, double z, float entityYaw, float partialTicks) {
 		this.func_82427_a(entity);
 		super.doRender(entity, x, y, z, entityYaw, partialTicks);
@@ -74,6 +77,7 @@ public class RenderEvolvedGiantZombieBoss extends RenderBiped<EntityEvolvedGiant
 	/**
 	 * Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
 	 */
+	@Override
 	protected ResourceLocation getEntityTexture(EntityEvolvedGiantZombieBoss entity) {
 		return ZOMBIE_TEXTURES;
 	}
@@ -84,6 +88,7 @@ public class RenderEvolvedGiantZombieBoss extends RenderBiped<EntityEvolvedGiant
 		this.modelBipedMain = (ModelBiped) this.mainModel;
 	}
 
+	@Override
 	protected void rotateCorpse(EntityEvolvedGiantZombieBoss bat, float p_77043_2_, float p_77043_3_, float partialTicks) {
 		super.rotateCorpse(bat, p_77043_2_, p_77043_3_, partialTicks);
 	}

@@ -171,6 +171,7 @@ public class WorldProviderIo extends WorldProviderRealisticSpace {
 		return "io";
 	}
 
+	@Override
 	public List<Block> getSurfaceBlocks() {
 		List<Block> list = new LinkedList<>();
 		list.add(ExtraPlanets_Blocks.IO_BLOCKS);

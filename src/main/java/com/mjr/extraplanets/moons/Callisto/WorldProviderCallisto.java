@@ -171,6 +171,7 @@ public class WorldProviderCallisto extends WorldProviderRealisticSpace {
 		return "callisto";
 	}
 
+	@Override
 	public List<Block> getSurfaceBlocks() {
 		List<Block> list = new LinkedList<>();
 		list.add(ExtraPlanets_Blocks.CALLISTO_BLOCKS);

@@ -171,6 +171,7 @@ public class WorldProviderRhea extends WorldProviderRealisticSpace {
 		return "rhea";
 	}
 
+	@Override
 	public List<Block> getSurfaceBlocks() {
 		List<Block> list = new LinkedList<>();
 		list.add(ExtraPlanets_Blocks.RHEA_BLOCKS);

@@ -49,6 +49,7 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget<EntityPlayer>(this, EntityPlayer.class, true));
 	}
 
+	@Override
 	protected void applyEntityAttributes() {
 		super.applyEntityAttributes();
 		this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1300.0D);
@@ -57,6 +58,7 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 		this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(6.0D);
 	}
 
+	@Override
 	protected void entityInit() {
 		super.entityInit();
 	}
@@ -76,6 +78,7 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 	/**
 	 * Called when the entity is attacked.
 	 */
+	@Override
 	public boolean attackEntityFrom(DamageSource source, float amount) {
 		if (super.attackEntityFrom(source, amount)) {
 			EntityLivingBase entitylivingbase = this.getAttackTarget();
@@ -92,10 +95,12 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 	/**
 	 * Called to update the entity's position/logic.
 	 */
+	@Override
 	public void onUpdate() {
 		super.onUpdate();
 	}
 
+	@Override
 	public boolean attackEntityAsMob(Entity entityIn) {
 		boolean flag = super.attackEntityAsMob(entityIn);
 
@@ -131,6 +136,7 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 	/**
 	 * (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
+	@Override
 	public void writeEntityToNBT(NBTTagCompound compound) {
 		super.writeEntityToNBT(compound);
 	}
@@ -138,20 +144,23 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 	/**
 	 * (abstract) Protected helper method to read subclass entity data from NBT.
 	 */
+	@Override
 	public void readEntityFromNBT(NBTTagCompound compound) {
 		super.readEntityFromNBT(compound);
 	}
 
+	@Override
 	public float getEyeHeight() {
 		float f = 1.74F;
 
 		if (this.isChild()) {
-			f = (float) ((double) f - 0.81D);
+			f = (float) (f - 0.81D);
 		}
 
 		return f;
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void handleStatusUpdate(byte id) {
 		super.handleStatusUpdate(id);

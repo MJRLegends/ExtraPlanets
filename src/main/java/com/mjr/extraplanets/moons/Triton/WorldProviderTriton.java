@@ -171,6 +171,7 @@ public class WorldProviderTriton extends WorldProviderRealisticSpace {
 		return "trition";
 	}
 
+	@Override
 	public List<Block> getSurfaceBlocks() {
 		List<Block> list = new LinkedList<>();
 		list.add(ExtraPlanets_Blocks.TRITON_BLOCKS);

@@ -147,6 +147,7 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 		return "phobos";
 	}
 
+	@Override
 	public List<Block> getSurfaceBlocks() {
 		List<Block> list = new LinkedList<>();
 		list.add(ExtraPlanets_Blocks.PHOBOS_BLOCKS);

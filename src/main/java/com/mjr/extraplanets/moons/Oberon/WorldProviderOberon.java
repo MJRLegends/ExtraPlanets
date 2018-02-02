@@ -168,6 +168,7 @@ public class WorldProviderOberon extends WorldProviderRealisticSpace {
 		return "oberon";
 	}
 
+	@Override
 	public List<Block> getSurfaceBlocks() {
 		List<Block> list = new LinkedList<>();
 		list.add(ExtraPlanets_Blocks.OBERON_BLOCKS);

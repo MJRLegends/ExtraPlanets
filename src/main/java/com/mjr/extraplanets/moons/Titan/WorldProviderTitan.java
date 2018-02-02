@@ -171,6 +171,7 @@ public class WorldProviderTitan extends WorldProviderRealisticSpace {
 		return "titan";
 	}
 
+	@Override
 	public List<Block> getSurfaceBlocks() {
 		List<Block> list = new LinkedList<>();
 		list.add(ExtraPlanets_Blocks.TITAN_BLOCKS);
