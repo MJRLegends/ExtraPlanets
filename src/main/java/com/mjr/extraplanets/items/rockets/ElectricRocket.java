@@ -104,6 +104,10 @@ public class ElectricRocket extends Item implements IHoldableItem {
 				if (spaceship.rocketType.getPreFueled()) {
 					spaceship.setCurrentPowerCapacity(spaceship.getPowerMaxCapacity());
 				}
+
+				if (spaceship.rocketType.getPreFueled()) {
+					spaceship.setCurrentPowerCapacity(spaceship.getPowerMaxCapacity());
+				}
 			} else {
 				return false;
 			}
