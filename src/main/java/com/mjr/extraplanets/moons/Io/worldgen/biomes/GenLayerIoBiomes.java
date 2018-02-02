@@ -1,13 +1,14 @@
 package com.mjr.extraplanets.moons.Io.worldgen.biomes;
 
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
 
-import com.mjr.extraplanets.moons.Io.worldgen.IoBiomes;
+import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 
 public class GenLayerIoBiomes extends GenLayer {
-	private static final Biome[] biomes = new Biome[] { IoBiomes.io, IoBiomes.ioAshLands, IoBiomes.ioBurningPlains };
+	private static final Biome[] biomes = BiomeAdaptive.getBiomesListFor(ExtraPlanets_Moons.IO).toArray(new Biome[0]);
 
 	public GenLayerIoBiomes(long l, GenLayer parent) {
 		super(l);

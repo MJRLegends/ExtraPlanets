@@ -1,13 +1,14 @@
 package com.mjr.extraplanets.planets.Neptune.worldgen.biomes;
 
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
 
-import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 
 public class GenLayerNeptuneBiomes extends GenLayer {
-	private static final Biome[] biomes = new Biome[] { NeptuneBiomes.neptune, NeptuneBiomes.neptuneRadioActiveWaterSea, NeptuneBiomes.neptuneLayeredHills };
+	private static final Biome[] biomes = BiomeAdaptive.getBiomesListFor(ExtraPlanets_Planets.NEPTUNE).toArray(new Biome[0]);
 
 	public GenLayerNeptuneBiomes(long l, GenLayer parent) {
 		super(l);

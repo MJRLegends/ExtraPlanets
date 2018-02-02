@@ -6,6 +6,8 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
@@ -17,6 +19,7 @@ import net.minecraft.world.gen.layer.IntCache;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.GenLayerNeptune;
 
 public class BiomeProviderNeptune extends BiomeProvider {
@@ -24,8 +27,10 @@ public class BiomeProviderNeptune extends BiomeProvider {
 	private GenLayer zoomedBiomes;
 	private BiomeCache biomeCache;
 	private List<Biome> biomesToSpawnIn;
+	private CelestialBody body;
 
 	protected BiomeProviderNeptune() {
+		body = ExtraPlanets_Planets.NEPTUNE;
 		biomeCache = new BiomeCache(this);
 		biomesToSpawnIn = new ArrayList<>();
 	}
@@ -48,7 +53,8 @@ public class BiomeProviderNeptune extends BiomeProvider {
 
 	@Override
 	public Biome getBiome(BlockPos pos, Biome defaultBiome) {
-		return this.biomeCache.getBiome(pos.getX(), pos.getZ(), NeptuneBiomes.neptune);
+		BiomeAdaptive.setBodyMultiBiome(body);
+		return this.biomeCache.getBiome(pos.getX(), pos.getZ(), BiomeAdaptive.biomeDefault);
 	}
 
 	@Override
@@ -60,6 +66,7 @@ public class BiomeProviderNeptune extends BiomeProvider {
 	@Override
 	public Biome[] getBiomesForGeneration(Biome[] biomes, int x, int z, int length, int width) {
 		IntCache.resetIntCache();
+		BiomeAdaptive.setBodyMultiBiome(body);
 
 		if (biomes == null || biomes.length < length * width) {
 			biomes = new Biome[length * width];
@@ -71,7 +78,7 @@ public class BiomeProviderNeptune extends BiomeProvider {
 			if (intArray[i] >= 0) {
 				biomes[i] = Biome.getBiome(intArray[i]);
 			} else {
-				biomes[i] = NeptuneBiomes.neptune;
+				biomes[i] = BiomeAdaptive.biomeDefault;
 			}
 		}
 

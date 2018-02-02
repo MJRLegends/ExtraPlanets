@@ -1,17 +1,14 @@
 package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 
 public class GenLayerKepler22bBiomes extends GenLayer {
-	protected Biome[] commonBiomes = { Kepler22bBiomes.kepler22bPlains, Kepler22bBiomes.kepler22bBlueForest, Kepler22bBiomes.kepler22bPurpleForest, Kepler22bBiomes.kepler22bRedForest, Kepler22bBiomes.kepler22bYellowForest,
-			Kepler22bBiomes.kepler22bRedDesert, Kepler22bBiomes.kepler22bWasteLands, Kepler22bBiomes.kepler22bCandyLand };
-
-	protected Biome[] rareBiomes = { Kepler22bBiomes.kepler22bDiamondPlains, Kepler22bBiomes.kepler22bCoalPlains, Kepler22bBiomes.kepler22bIronPlains, Kepler22bBiomes.kepler22bGoldPlains,
-			Kepler22bBiomes.kepler22bEmeraldPlains };
+	private static final Biome[] biomes = BiomeAdaptive.getBiomesListFor(ExtraPlanets_Planets.KEPLER22B).toArray(new Biome[0]);
 
 	public GenLayerKepler22bBiomes(long seed, GenLayer genlayer) {
 		super(seed);
@@ -29,12 +26,7 @@ public class GenLayerKepler22bBiomes extends GenLayer {
 		for (int dz = 0; dz < depth; dz++) {
 			for (int dx = 0; dx < width; dx++) {
 				this.initChunkSeed(dx + x, dz + z);
-
-				if (this.nextInt(150) == 0) {
-					dest[dx + dz * width] = Biome.getIdForBiome(this.rareBiomes[this.nextInt(this.rareBiomes.length)]);
-				} else {
-					dest[dx + dz * width] = Biome.getIdForBiome(this.commonBiomes[this.nextInt(this.commonBiomes.length)]);
-				}
+				dest[dx + dz * width] = Biome.getIdForBiome(biomes[this.nextInt(biomes.length)]);
 			}
 		}
 		return dest;

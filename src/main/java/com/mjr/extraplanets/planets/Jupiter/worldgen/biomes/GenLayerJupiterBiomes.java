@@ -1,13 +1,14 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen.biomes;
 
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
 
-import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 
 public class GenLayerJupiterBiomes extends GenLayer {
-	private static final Biome[] biomes = new Biome[] { JupiterBiomes.jupiter, JupiterBiomes.jupiterMagmaSea, JupiterBiomes.jupiterSands };
+	private static final Biome[] biomes = BiomeAdaptive.getBiomesListFor(ExtraPlanets_Planets.JUPITER).toArray(new Biome[0]);
 
 	public GenLayerJupiterBiomes(long l, GenLayer parent) {
 		super(l);

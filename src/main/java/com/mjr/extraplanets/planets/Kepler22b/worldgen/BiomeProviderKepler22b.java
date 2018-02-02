@@ -6,6 +6,8 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
@@ -13,7 +15,10 @@ import net.minecraft.world.biome.BiomeCache;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.GenLayerKepler22b;
 
 public class BiomeProviderKepler22b extends BiomeProvider {
@@ -21,8 +26,10 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 	private GenLayer zoomedBiomes;
 	private BiomeCache biomeCache;
 	private List<Biome> biomesToSpawn;
+	private CelestialBody body;
 
 	protected BiomeProviderKepler22b() {
+		body = ExtraPlanets_Planets.KEPLER22B;
 		this.biomeCache = new BiomeCache(this);
 		this.biomesToSpawn = new ArrayList<Biome>();
 		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bPlains);
@@ -55,35 +62,37 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 	}
 
 	@Override
-	public Biome getBiome(BlockPos pos, Biome biomeGen) {
-		Biome biome = this.biomeCache.getBiome(pos.getX(), pos.getZ(), biomeGen);
-
-		if (biome == null) {
-			return Kepler22bBiomes.kepler22bPlains;
-		}
-		return biome;
+	public Biome getBiome(BlockPos pos, Biome defaultBiome) {
+		BiomeAdaptive.setBodyMultiBiome(body);
+		return this.biomeCache.getBiome(pos.getX(), pos.getZ(), BiomeAdaptive.biomeDefault);
 	}
 
 	@Override
+	@SideOnly(Side.CLIENT)
 	public float getTemperatureAtHeight(float par1, int par2) {
 		return par1;
 	}
 
 	@Override
-	public Biome[] getBiomesForGeneration(Biome[] par1ArrayOfBiome, int x, int z, int length, int width) {
-		int[] arrayOfInts = this.unzoomedBiomes.getInts(x, z, length, width);
+	public Biome[] getBiomesForGeneration(Biome[] biomes, int x, int z, int length, int width) {
+		IntCache.resetIntCache();
+		BiomeAdaptive.setBodyMultiBiome(body);
 
-		if (par1ArrayOfBiome == null || par1ArrayOfBiome.length < length * width) {
-			par1ArrayOfBiome = new Biome[length * width];
+		if (biomes == null || biomes.length < length * width) {
+			biomes = new Biome[length * width];
 		}
-		for (int i = 0; i < length * width; i++) {
-			if (arrayOfInts[i] >= 0) {
-				par1ArrayOfBiome[i] = Biome.getBiome(arrayOfInts[i]);
+
+		int[] intArray = unzoomedBiomes.getInts(x, z, length, width);
+
+		for (int i = 0; i < length * width; ++i) {
+			if (intArray[i] >= 0) {
+				biomes[i] = Biome.getBiome(intArray[i]);
 			} else {
-				par1ArrayOfBiome[i] = Kepler22bBiomes.kepler22bPlains;
+				biomes[i] = BiomeAdaptive.biomeDefault;
 			}
 		}
-		return par1ArrayOfBiome;
+
+		return biomes;
 	}
 
 	@Override

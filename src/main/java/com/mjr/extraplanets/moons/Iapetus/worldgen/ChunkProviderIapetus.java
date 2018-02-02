@@ -3,6 +3,7 @@ package com.mjr.extraplanets.moons.Iapetus.worldgen;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
@@ -32,7 +33,7 @@ public class ChunkProviderIapetus extends ChunkProviderSingleBiomeSpace {
 
 	@Override
 	protected Biome[] getBiomesForGeneration() {
-		return new Biome[] { IapetusBiomes.iapetus };
+		return new Biome[] { BiomeAdaptive.biomeDefault };
 	}
 
 	@Override

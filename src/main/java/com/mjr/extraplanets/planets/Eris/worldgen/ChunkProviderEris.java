@@ -3,6 +3,7 @@ package com.mjr.extraplanets.planets.Eris.worldgen;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
@@ -42,7 +43,7 @@ public class ChunkProviderEris extends ChunkProviderSingleBiomeSpace {
 
 	@Override
 	protected Biome[] getBiomesForGeneration() {
-		return new Biome[] { ErisBiomes.eris };
+		return new Biome[] { BiomeAdaptive.biomeDefault };
 	}
 
 	@Override

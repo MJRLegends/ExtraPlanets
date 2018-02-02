@@ -1,13 +1,14 @@
 package com.mjr.extraplanets.planets.Saturn.worldgen.biomes;
 
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
 
-import com.mjr.extraplanets.planets.Saturn.worldgen.SaturnBiomes;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 
 public class GenLayerSaturnBiomes extends GenLayer {
-	private static final Biome[] biomes = new Biome[] { SaturnBiomes.saturn, SaturnBiomes.saturnHydroCarbonSea, SaturnBiomes.saturnNuclearLand };
+	private static final Biome[] biomes = BiomeAdaptive.getBiomesListFor(ExtraPlanets_Planets.SATURN).toArray(new Biome[0]);
 
 	public GenLayerSaturnBiomes(long l, GenLayer parent) {
 		super(l);

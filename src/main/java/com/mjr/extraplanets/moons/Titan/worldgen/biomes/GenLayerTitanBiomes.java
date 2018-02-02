@@ -1,13 +1,14 @@
 package com.mjr.extraplanets.moons.Titan.worldgen.biomes;
 
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
 
-import com.mjr.extraplanets.moons.Titan.worldgen.TitanBiomes;
+import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 
 public class GenLayerTitanBiomes extends GenLayer {
-	private static final Biome[] biomes = new Biome[] { TitanBiomes.titan, TitanBiomes.titanMethaneSea, TitanBiomes.titanMethaneHills };
+	private static final Biome[] biomes = BiomeAdaptive.getBiomesListFor(ExtraPlanets_Moons.TITAN).toArray(new Biome[0]);
 
 	public GenLayerTitanBiomes(long l, GenLayer parent) {
 		super(l);

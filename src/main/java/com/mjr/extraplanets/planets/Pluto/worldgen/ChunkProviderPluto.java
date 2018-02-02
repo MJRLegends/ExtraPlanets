@@ -3,6 +3,7 @@ package com.mjr.extraplanets.planets.Pluto.worldgen;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
@@ -42,7 +43,7 @@ public class ChunkProviderPluto extends ChunkProviderSingleBiomeSpace {
 
 	@Override
 	protected Biome[] getBiomesForGeneration() {
-		return new Biome[] { PlutoBiomes.pluto };
+		return new Biome[] { BiomeAdaptive.biomeDefault };
 	}
 
 	@Override

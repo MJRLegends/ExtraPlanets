@@ -3,6 +3,7 @@ package com.mjr.extraplanets.planets.Ceres.worldgen;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import net.minecraft.util.math.ChunkPos;
 import net.minecraft.world.World;
@@ -36,7 +37,7 @@ public class ChunkProviderCeres extends ChunkProviderSingleBiomeSpace {
 
 	@Override
 	protected Biome[] getBiomesForGeneration() {
-		return new Biome[] { CeresBiomes.ceres };
+		return new Biome[] { BiomeAdaptive.biomeDefault };
 	}
 
 	@Override
