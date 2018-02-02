@@ -2,10 +2,7 @@ package com.mjr.extraplanets.planets.Uranus.worldgen;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -21,7 +18,7 @@ import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusFrozenWaterSea;
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusSnowLands;
 
-public class UranusBiomes extends Biome {
+public class UranusBiomes extends BiomeGenBaseGC {
 
 	public static final Biome uranus = new BiomeGenUranus(new BiomeProperties("Uranus").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome uranusFrozenWater = new BiomeGenUranusFrozenWaterSea(new BiomeProperties("Uranus Frozen Water").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
@@ -29,23 +26,11 @@ public class UranusBiomes extends Biome {
 
 	protected UranusBiomes(BiomeProperties properties) {
 		super(properties);
-		this.spawnableMonsterList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 	}
 
 	@Override
 	public BiomeDecorator createBiomeDecorator() {
 		return new BiomeDecoratorUranusOther();
-	}
-
-	@Override
-	public float getSpawningChance() {
-		return 0.01F;
 	}
 
 	@Override
