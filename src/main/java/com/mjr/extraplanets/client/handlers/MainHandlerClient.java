@@ -7,7 +7,9 @@ import java.util.Map;
 import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.Constants;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
+import micdoodle8.mods.galacticraft.core.network.PacketRotateRocket;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
@@ -111,12 +113,55 @@ public class MainHandlerClient {
 			}
 		}
 		if (event.phase == Phase.START && player != null) {
+            boolean inSpaceShip = false;
+            if (player.getRidingEntity() instanceof EntityElectricRocketBase)
+            {
+                inSpaceShip = true;
+                EntityElectricRocketBase rocket = (EntityElectricRocketBase) player.getRidingEntity();
+                if (rocket.prevRotationPitch != rocket.rotationPitch || rocket.prevRotationYaw != rocket.rotationYaw)
+                {
+                    GalacticraftCore.packetPipeline.sendToServer(new PacketRotateRocket(player.getRidingEntity()));
+                }
+            }
+			if (inSpaceShip) {
+				final EntityElectricRocketBase ship = (EntityElectricRocketBase) player.getRidingEntity();
+				boolean hasChanged = false;
+
+				if (minecraft.gameSettings.keyBindLeft.isKeyDown()) {
+					ship.turnYaw(-1.0F);
+					hasChanged = true;
+				}
+
+				if (minecraft.gameSettings.keyBindRight.isKeyDown()) {
+					ship.turnYaw(1.0F);
+					hasChanged = true;
+				}
+
+				if (minecraft.gameSettings.keyBindForward.isKeyDown()) {
+					if (ship.getLaunched()) {
+						ship.turnPitch(-0.7F);
+						hasChanged = true;
+					}
+				}
+
+				if (minecraft.gameSettings.keyBindBack.isKeyDown()) {
+					if (ship.getLaunched()) {
+						ship.turnPitch(0.7F);
+						hasChanged = true;
+					}
+				}
+
+				if (hasChanged) {
+					GalacticraftCore.packetPipeline.sendToServer(new PacketRotateRocket(ship));
+				}
+			}
+
 			boolean isPressed = KeyHandlerClient.spaceKey.isPressed();
 			if (!isPressed) {
 				ClientProxyCore.lastSpacebarDown = false;
 			}
 
-			if (player.getRidingEntity() != null && isPressed) {
+			if (player.getRidingEntity() != null && isPressed && !ClientProxyCore.lastSpacebarDown) {
 				ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_IGNITE_ROCKET, GCCoreUtil.getDimensionID(player.world), new Object[] {}));
 				ClientProxyCore.lastSpacebarDown = true;
 			}
@@ -268,7 +313,7 @@ public class MainHandlerClient {
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
 	public void onRenderFogDensity(EntityViewRenderEvent.FogDensity event) {
-		if(Config.CUSTOM_FOG){
+		if (Config.CUSTOM_FOG) {
 			if (event.getEntity().world.provider.getDimensionType().getId() == Config.JUPITER_ID) {
 				event.setDensity(0.02f);
 				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
