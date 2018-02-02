@@ -2,10 +2,7 @@ package com.mjr.extraplanets.moons.Io.worldgen;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -21,7 +18,7 @@ import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIOBurningPlains;
 import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIo;
 import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIoAshLands;
 
-public class IoBiomes extends Biome {
+public class IoBiomes extends BiomeGenBaseGC {
 
 	public static final Biome io = new BiomeGenIo(new BiomeProperties("Io").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome ioAshLands = new BiomeGenIoAshLands(new BiomeProperties("Io Ash Lands").setBaseHeight(2.0F).setHeightVariation(2.0F).setRainfall(0.0F).setRainDisabled());
@@ -29,13 +26,6 @@ public class IoBiomes extends Biome {
 
 	protected IoBiomes(BiomeProperties properties) {
 		super(properties);
-		this.spawnableMonsterList.clear();
-		this.spawnableWaterCreatureList.clear();
-		this.spawnableCreatureList.clear();
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
-		this.spawnableMonsterList.add(new Biome.SpawnListEntry(EntityEvolvedCreeper.class, 8, 2, 3));
 	}
 
 	@Override
@@ -45,11 +35,6 @@ public class IoBiomes extends Biome {
 
 	protected BiomeDecoratorIoOther getBiomeDecorator() {
 		return (BiomeDecoratorIoOther) this.theBiomeDecorator;
-	}
-
-	@Override
-	public float getSpawningChance() {
-		return 0.01F;
 	}
 
 	@Override
