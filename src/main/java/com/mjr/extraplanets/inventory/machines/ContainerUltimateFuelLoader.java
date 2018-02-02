@@ -53,24 +53,24 @@ public class ContainerUltimateFuelLoader extends Container {
 
 			if (par2 < 2) {
 				if (!this.mergeItemStack(var5, 2, 38, true)) {
-					return null;
+					return ItemStack.EMPTY;
 				}
 			} else {
 				if (EnergyUtil.isElectricItem(var5.getItem())) {
 					if (!this.mergeItemStack(var5, 0, 1, false)) {
-						return null;
+						return ItemStack.EMPTY;
 					}
 				} else {
 					if (FluidUtil.isFuelContainerAny(var5)) {
 						if (!this.mergeItemStack(var5, 1, 2, false)) {
-							return null;
+							return ItemStack.EMPTY;
 						}
 					} else if (par2 < 29) {
 						if (!this.mergeItemStack(var5, 29, 38, false)) {
-							return null;
+							return ItemStack.EMPTY;
 						}
 					} else if (!this.mergeItemStack(var5, 2, 29, false)) {
-						return null;
+						return ItemStack.EMPTY;
 					}
 				}
 			}

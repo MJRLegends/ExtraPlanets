@@ -66,7 +66,7 @@ public class ContainerBasicSolarEvaporationChamber extends Container {
 
 			if (par1 < 3) {
 				if (!this.mergeItemStack(var4, 3, 39, true)) {
-					return null;
+					return ItemStack.EMPTY;
 				}
 
 				if (par1 == 2) {
@@ -75,19 +75,19 @@ public class ContainerBasicSolarEvaporationChamber extends Container {
 			} else {
 				if (EnergyUtil.isElectricItem(var4.getItem())) {
 					if (!this.mergeItemStack(var4, 0, 1, false)) {
-						return null;
+						return ItemStack.EMPTY;
 					}
 				} else if (var4.getItem() == ExtraPlanets_Items.POTASH_SHARDS) {
 					if (!this.mergeItemStack(var4, 1, 2, false)) {
-						return null;
+						return ItemStack.EMPTY;
 					}
 				} else {
 					if (par1 < 30) {
 						if (!this.mergeItemStack(var4, 30, 39, false)) {
-							return null;
+							return ItemStack.EMPTY;
 						}
 					} else if (!this.mergeItemStack(var4, 3, 30, false)) {
-						return null;
+						return ItemStack.EMPTY;
 					}
 				}
 			}
