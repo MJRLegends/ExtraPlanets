@@ -12,13 +12,15 @@ import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.passive.EntitySheep;
 import net.minecraftforge.common.BiomeDictionary;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 
 public class BiomeGenKepler22bBlueMapleForest extends Kepler22bBiomes {
 	public BiomeGenKepler22bBlueMapleForest(BiomeProperties properties) {
 		super(properties);
-		BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DEAD);
 		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_BLUE.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState();
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
