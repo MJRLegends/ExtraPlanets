@@ -99,6 +99,10 @@ public class ElectricRocket extends Item implements IHoldableItem {
 				if (!playerIn.capabilities.isCreativeMode) {
 					stack.shrink(1);
 				}
+
+				if (spaceship.rocketType.getPreFueled()) {
+					spaceship.setCurrentPowerCapacity(spaceship.getPowerMaxCapacity());
+				}
 			} else {
 				return EnumActionResult.FAIL;
 			}
