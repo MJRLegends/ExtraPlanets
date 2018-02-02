@@ -251,11 +251,13 @@ public class MainHandlerClient {
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public void onGuiOpenEvent(GuiOpenEvent event) {
-		if (((event.gui instanceof GuiCelestialSelection))) {
-			if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap) && Config.USE_CUSTOM_CELESTAIAL_SELECTION) {
-				event.gui = new CustomCelestialSelection(true, null);
-			} else {
-				event.gui = new CustomCelestialSelection(false, null);
+		if (Config.USE_CUSTOM_CELESTAIAL_SELECTION) {
+			if (((event.gui instanceof GuiCelestialSelection))) {
+				if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap)) {
+					event.gui = new CustomCelestialSelection(true, null);
+				} else {
+					event.gui = new CustomCelestialSelection(false, null);
+				}
 			}
 		}
 	}
@@ -280,8 +282,7 @@ public class MainHandlerClient {
 				event.density = 0.01f;
 				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_EXP);
 				event.setCanceled(true);
-			} 
-			else
+			} else
 				GL11.glFogi(GL11.GL_FOG_MODE, GL11.GL_LINEAR);
 		}
 	}
