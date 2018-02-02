@@ -55,28 +55,28 @@ public class ContainerUltimateOxygenCompressor extends Container {
 
 			if (par1 < 3) {
 				if (!this.mergeItemStack(stack, b - 36, b, true)) {
-					return null;
+					return ItemStack.EMPTY;
 				}
 			} else {
 				if (EnergyUtil.isElectricItem(stack.getItem())) {
 					if (!this.mergeItemStack(stack, 1, 2, false)) {
-						return null;
+						return ItemStack.EMPTY;
 					}
 				} else if (stack.getItem() instanceof IItemOxygenSupply) {
 					if (!this.mergeItemStack(stack, 2, 3, false)) {
-						return null;
+						return ItemStack.EMPTY;
 					}
 				} else if (stack.getItem() instanceof ItemOxygenTank && stack.getItemDamage() > 0) {
 					if (!this.mergeItemStack(stack, 0, 1, false)) {
-						return null;
+						return ItemStack.EMPTY;
 					}
 				} else {
 					if (par1 < b - 9) {
 						if (!this.mergeItemStack(stack, b - 9, b, false)) {
-							return null;
+							return ItemStack.EMPTY;
 						}
 					} else if (!this.mergeItemStack(stack, b - 36, b - 9, false)) {
-						return null;
+						return ItemStack.EMPTY;
 					}
 				}
 			}
