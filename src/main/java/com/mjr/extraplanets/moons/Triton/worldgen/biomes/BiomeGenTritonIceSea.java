@@ -8,12 +8,16 @@ import net.minecraftforge.common.BiomeDictionary;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicJupiter;
 import com.mjr.extraplanets.moons.Triton.worldgen.TritonBiomes;
 
 public class BiomeGenTritonIceSea extends TritonBiomes {
 
 	public BiomeGenTritonIceSea(BiomeProperties properties) {
 		super(properties);
+		this.topBlock = ExtraPlanets_Blocks.TRITON_BLOCKS.getDefaultState();
+		this.fillerBlock = ExtraPlanets_Blocks.TRITON_BLOCKS.getDefaultState().withProperty(BlockBasicJupiter.BASIC_TYPE, BlockBasicJupiter.EnumBlockBasic.SUB_SURFACE);
 	}
 
 	@Override
