@@ -15,6 +15,11 @@
 
 
 ===========================================Released Updates===========================================
+v0.5.8
+*Fixed issue #222
+*Fixed issue #221
+*Fixed issue #220
+
 v0.5.7
 *Fixed issue #209
 *Fixed issue #216
