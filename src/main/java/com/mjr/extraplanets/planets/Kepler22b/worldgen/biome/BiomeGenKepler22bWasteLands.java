@@ -13,7 +13,8 @@ public class BiomeGenKepler22bWasteLands extends Kepler22bBiomes {
 	public BiomeGenKepler22bWasteLands(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.KEPLER22B_WASTE_LANDS_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.WASTELAND);
 		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_INFECTED.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState();
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityCaveSpider.class, 100, 4, 4));

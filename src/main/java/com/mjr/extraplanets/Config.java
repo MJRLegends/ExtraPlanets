@@ -316,6 +316,7 @@ public class Config {
 
 	public static boolean USE_CUSTOM_CELESTAIAL_SELECTION;
 	public static boolean CUSTOM_GALAXIES;
+	public static boolean REGISTER_BIOME_TYPES;
 
 	public static void load() {
 		config.load();
@@ -636,6 +637,9 @@ public class Config {
 		CUSTOM_GALAXIES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Custom Galaxies on Celestaial Selection Screen", true,
 				"Setting this option to false will disable & remove the Custom Galaxies on Celestaial Selection Screen (Note: Will get disabled by the 'Use Custom Galaxy Map/Celestaial Selection Screen' option)").getBoolean(true);
 
+		REGISTER_BIOME_TYPES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable registering of Biomes Types for ExtraPlanets biomes", true,
+				"Setting this option to false, will disable biome types being assigned to ExtraPlanets biomes").getBoolean(true);
+		
 		MERCURY_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Mercury Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		CERES_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Ceres Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		JUPITER_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Jupiter Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();

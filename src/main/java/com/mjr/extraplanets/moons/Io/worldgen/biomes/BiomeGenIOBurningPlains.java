@@ -13,7 +13,8 @@ public class BiomeGenIOBurningPlains extends IoBiomes {
 	public BiomeGenIOBurningPlains(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.IO_BURNING_PLAINS_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DRY, BiomeDictionary.Type.PLAINS, BiomeDictionary.Type.SPOOKY);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD);
 		this.topBlock = ExtraPlanets_Blocks.VOLCANIC_ROCK.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.ASH_ROCK.getDefaultState();
 	}

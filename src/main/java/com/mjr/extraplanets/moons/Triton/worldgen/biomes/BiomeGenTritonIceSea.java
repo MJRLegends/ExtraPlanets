@@ -16,7 +16,8 @@ public class BiomeGenTritonIceSea extends TritonBiomes {
 	public BiomeGenTritonIceSea(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.TRITON_ICE_SEA_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.OCEAN);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SNOWY, BiomeDictionary.Type.OCEAN);
 	}
 
 	@Override

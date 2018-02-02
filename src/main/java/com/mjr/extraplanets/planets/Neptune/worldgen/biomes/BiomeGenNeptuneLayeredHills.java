@@ -26,7 +26,8 @@ public class BiomeGenNeptuneLayeredHills extends NeptuneBiomes {
 	public BiomeGenNeptuneLayeredHills(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.NEPTUNE_LAYERED_HILLS_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.HILLS);
 		this.topBlock = ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.BLUE_BLOCK);
 		this.thridtopBlocks = ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.LIGHT_BLUE_BLOCK);
 		this.secondtopBlock = ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.GREEN_BLOCK);

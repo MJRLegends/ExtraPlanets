@@ -14,7 +14,8 @@ public class BiomeGenEuropa extends EuropaBiomes {
 	public BiomeGenEuropa(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.EUROPA_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SNOWY);
 		this.topBlock = ExtraPlanets_Blocks.EUROPA_BLOCKS.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.EUROPA_BLOCKS.getDefaultState().withProperty(BlockBasicEuropa.BASIC_TYPE, BlockBasicEuropa.EnumBlockBasic.SUB_SURFACE);
 	}

@@ -17,7 +17,8 @@ public class BiomeGenTitanMethaneSea extends TitanBiomes {
 		super(properties);
 		this.spawnableCreatureList.clear();
 		Biome.registerBiome(Config.TITAN_SEA_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.OCEAN);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.OCEAN);
 		this.topBlock = ExtraPlanets_Fluids.METHANE.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Fluids.METHANE.getDefaultState();
 	}

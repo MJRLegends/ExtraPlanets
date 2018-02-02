@@ -18,7 +18,8 @@ public class BiomeGenSaturnHydroCarbonSea extends SaturnBiomes {
 	public BiomeGenSaturnHydroCarbonSea(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.SATURN_HYDROCARBON_SEA_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.OCEAN);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.HOT, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.OCEAN);
 		this.topBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.SUB_SURFACE);
 	}

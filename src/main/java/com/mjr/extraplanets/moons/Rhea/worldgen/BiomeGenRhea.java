@@ -11,6 +11,7 @@ public class BiomeGenRhea extends RheaBiomes {
 	public BiomeGenRhea(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.RHEA_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD);
 	}
 }

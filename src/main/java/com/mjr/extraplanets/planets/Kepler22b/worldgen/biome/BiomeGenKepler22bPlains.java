@@ -22,7 +22,8 @@ public class BiomeGenKepler22bPlains extends Kepler22bBiomes {
 	public BiomeGenKepler22bPlains(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.KEPLER22B_PLAINS_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD);
 		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_GREEN.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState();
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));

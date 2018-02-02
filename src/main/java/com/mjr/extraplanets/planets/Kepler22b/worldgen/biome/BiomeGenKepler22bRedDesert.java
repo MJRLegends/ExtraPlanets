@@ -22,7 +22,8 @@ public class BiomeGenKepler22bRedDesert extends Kepler22bBiomes {
 	public BiomeGenKepler22bRedDesert(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.KEPLER22B_RED_DESERT_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
 		this.topBlock = ExtraPlanets_Blocks.RED_SAND.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.RED_SAND.getDefaultState();
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));

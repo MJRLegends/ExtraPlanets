@@ -12,7 +12,8 @@ public class BiomeGenKepler22bDiamondPlains extends Kepler22bBiomes {
 	public BiomeGenKepler22bDiamondPlains(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.KEPLER22B_DIAMOND_PLAINS_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.LUSH);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.LUSH);
 		this.topBlock = ExtraPlanets_Blocks.DIAMOND_GRIT.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.DIAMOND_GRIT.getDefaultState();
 		this.getBiomeDecorator().diamondTreesPerChunk = 10;

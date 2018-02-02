@@ -22,7 +22,8 @@ public class BiomeGenKepler22bYellowMapleForest extends Kepler22bBiomes {
 	public BiomeGenKepler22bYellowMapleForest(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.KEPLER22B_YELLOW_FOREST_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SANDY);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.FOREST, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DEAD);
 		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_YELLOW.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState();
 		this.spawnableMonsterList.add(new SpawnListEntry(EntityZombie.class, 100, 4, 4));

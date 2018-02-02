@@ -16,7 +16,8 @@ public class BiomeGenEuropaSaltSea extends EuropaBiomes {
 	public BiomeGenEuropaSaltSea(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.EUROPA_SALT_SEA_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.OCEAN);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.WET, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.SNOWY, BiomeDictionary.Type.OCEAN);
 		this.spawnableCreatureList.clear();
 		this.topBlock = ExtraPlanets_Fluids.SALT.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Fluids.SALT.getDefaultState();

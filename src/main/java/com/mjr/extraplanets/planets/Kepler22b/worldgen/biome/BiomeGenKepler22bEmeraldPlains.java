@@ -12,7 +12,8 @@ public class BiomeGenKepler22bEmeraldPlains extends Kepler22bBiomes {
 	public BiomeGenKepler22bEmeraldPlains(BiomeProperties properties) {
 		super(properties);
 		Biome.registerBiome(Config.KEPLER22B_EMERALD_PLAINS_BIOME_ID, Constants.TEXTURE_PREFIX + this.getBiomeName(), this);
-		BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.LUSH);
+		if (Config.REGISTER_BIOME_TYPES)
+			BiomeDictionary.addTypes(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.LUSH);
 		this.topBlock = ExtraPlanets_Blocks.EMERALD_GRIT.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.EMERALD_GRIT.getDefaultState();
 		this.getBiomeDecorator().emeraldTreesPerChunk = 10;
