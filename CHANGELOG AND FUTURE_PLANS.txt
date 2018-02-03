@@ -14,6 +14,24 @@
 
 
 ===========================================Released Updates===========================================
+v0.9.4
+*Fixed issue #221
+*Fixed issue #227
+*Updated de_DE.lang
+*Fixed issue #224
+*Converted over to using the Galacticraft API for Mobs Spawns & Biome
+*Changed all Biome types for all biomes
+*Added config option to disable them
+*Fixes for custom ocean biomes
+*Fixed crash on load up for biomes due to recent commit
+*Fixed Electric rocket rotation from player controlling
+*Small fix for Custom Celestial Selection screen
+*Fixed Creative Rocket Electric Rocket not having 100% power
+*Fixes for Electric Rocket rotation/rendering
+*Fixed missing rendering of side bar for the Electric Rocket
+*Clean up/Fix Formatting
+*Few fixes for Moon registering for Biome & Mob info methods
+
 v0.9.3
 *Fixed issue #209
 *Fixed issue #216
