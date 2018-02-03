@@ -8,6 +8,12 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.9.7
+*Fixed issue #213
+*Fixed issue #227
+*Fixed issue #211
+*Updated de_DE.lang (Thanks to DerMilchkarton)
+
 v1.9.6
 *Update es_ES.lang
 *Fixed OpenGL Error spam
