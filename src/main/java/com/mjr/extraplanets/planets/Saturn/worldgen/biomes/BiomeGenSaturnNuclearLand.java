@@ -19,5 +19,6 @@ public class BiomeGenSaturnNuclearLand extends SaturnBiomes {
 	@Override
 	public void registerTypes(Biome b) {
 		if (Config.REGISTER_BIOME_TYPES)
-			BiomeDictionary.addTypes(b, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD);	}
+			BiomeDictionary.addTypes(b, BiomeDictionary.Type.HOT, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD);
+	}
 }

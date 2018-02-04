@@ -33,7 +33,7 @@ public class ChunkProviderTitania extends ChunkProviderSingleBiomeSpace {
 
 	@Override
 	protected Biome[] getBiomesForGeneration() {
-        return new Biome[] { BiomeAdaptive.biomeDefault };
+		return new Biome[] { BiomeAdaptive.biomeDefault };
 	}
 
 	@Override

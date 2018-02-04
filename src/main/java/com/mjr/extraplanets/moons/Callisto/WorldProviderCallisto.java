@@ -61,7 +61,7 @@ public class WorldProviderCallisto extends WorldProviderRealisticSpace {
 
 	@Override
 	public Class<? extends BiomeProvider> getBiomeProviderClass() {
-        BiomeAdaptive.setBodyMultiBiome(ExtraPlanets_Moons.CALLISTO);
+		BiomeAdaptive.setBodyMultiBiome(ExtraPlanets_Moons.CALLISTO);
 		return BiomeProviderCallisto.class;
 	}
 

@@ -10,27 +10,22 @@ import net.minecraftforge.fml.client.config.GuiConfig;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 
-public class ConfigGuiFactory implements IModGuiFactory
-{
-    public static class ConfigGUI extends GuiConfig
-    {
-        public ConfigGUI(GuiScreen parent)
-        {
-            super(parent, Config.getConfigElements(), Constants.modID, false, true, Constants.modName);
-        }
-    }
+public class ConfigGuiFactory implements IModGuiFactory {
+	public static class ConfigGUI extends GuiConfig {
+		public ConfigGUI(GuiScreen parent) {
+			super(parent, Config.getConfigElements(), Constants.modID, false, true, Constants.modName);
+		}
+	}
 
-    @Override
-    public void initialize(Minecraft minecraftInstance)
-    {
-    }
+	@Override
+	public void initialize(Minecraft minecraftInstance) {
+	}
 
-    @Override
-    public Set<RuntimeOptionCategoryElement> runtimeGuiCategories()
-    {
-        return null;
-    }
-    
+	@Override
+	public Set<RuntimeOptionCategoryElement> runtimeGuiCategories() {
+		return null;
+	}
+
 	@Override
 	public boolean hasConfigGui() {
 		return true;

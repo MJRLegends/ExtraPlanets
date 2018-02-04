@@ -26,8 +26,8 @@ public class ExtraPlanets_Recipes {
 		registerFurnaceRecipes();
 		registerSatellitesRecipes();
 	}
-	
-	public static void initEvent(){
+
+	public static void initEvent() {
 		registerCompressorRecipes();
 		registerCircuitFabricatorRecipes();
 		registerExtraPlanetMachineRecipes();
@@ -184,7 +184,7 @@ public class ExtraPlanets_Recipes {
 			RecipeUtilities.addSmelting(new ItemStack(ExtraPlanets_Blocks.KEPLER22B_BLOCKS, 1, 10), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 4), 0.0F);
 		}
 		if (Config.ORE_LEAD_GENERATION)
-            RecipeUtilities.addSmelting(new ItemStack(ExtraPlanets_Blocks.ORE_LEAD, 1, 0), new ItemStack(ExtraPlanets_Items.INGOT_LEAD), 0.0F);
+			RecipeUtilities.addSmelting(new ItemStack(ExtraPlanets_Blocks.ORE_LEAD, 1, 0), new ItemStack(ExtraPlanets_Items.INGOT_LEAD), 0.0F);
 	}
 
 	private static void registerCompressorRecipes() {

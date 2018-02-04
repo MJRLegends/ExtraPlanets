@@ -35,7 +35,7 @@ public class OberonBiomes extends BiomeGenBaseGC {
 	protected BiomeDecoratorOberonOther getBiomeDecorator() {
 		return (BiomeDecoratorOberonOther) this.decorator;
 	}
-	
+
 	@Override
 	public void genTerrainBlocks(World world, Random rand, ChunkPrimer chunk, int x, int z, double stoneNoise) {
 		generateOberonBiomeTerrain(rand, chunk, x, z, stoneNoise);

@@ -9,7 +9,7 @@ import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 
 public class BiomeGenKepler22bDiamondPlains extends Kepler22bBiomes {
 	public BiomeGenKepler22bDiamondPlains(BiomeProperties properties) {
-		super(properties);	
+		super(properties);
 		this.topBlock = ExtraPlanets_Blocks.DIAMOND_GRIT.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.DIAMOND_GRIT.getDefaultState();
 		this.getBiomeDecorator().diamondTreesPerChunk = 10;
@@ -19,5 +19,6 @@ public class BiomeGenKepler22bDiamondPlains extends Kepler22bBiomes {
 	@Override
 	public void registerTypes(Biome b) {
 		if (Config.REGISTER_BIOME_TYPES)
-			BiomeDictionary.addTypes(b, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.LUSH);	}
+			BiomeDictionary.addTypes(b, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.LUSH);
+	}
 }

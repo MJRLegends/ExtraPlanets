@@ -129,8 +129,9 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 	}
 
 	protected SoundEvent getHurtSound() {
-        this.playSound(GCSounds.bossOoh, this.getSoundVolume(), this.getSoundPitch() + 1.0F);
-        return null;	}
+		this.playSound(GCSounds.bossOoh, this.getSoundVolume(), this.getSoundPitch() + 1.0F);
+		return null;
+	}
 
 	@Override
 	protected SoundEvent getDeathSound() {

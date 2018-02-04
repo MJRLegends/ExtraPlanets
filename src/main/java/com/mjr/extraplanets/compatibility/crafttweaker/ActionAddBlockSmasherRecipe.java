@@ -7,7 +7,7 @@ import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.minecraft.CraftTweakerMC;
 
 public class ActionAddBlockSmasherRecipe implements IAction {
-	
+
 	private final IItemStack input;
 	private final IItemStack output;
 

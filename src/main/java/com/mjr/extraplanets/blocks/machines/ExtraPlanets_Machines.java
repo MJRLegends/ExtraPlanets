@@ -134,9 +134,9 @@ public class ExtraPlanets_Machines {
 		if (Config.FUEL_LOADER_ULTIMATE)
 			ExtraPlanets_Blocks.registerBlock(FUEL_LOADER_ULTIMATE, ItemBlockDesc.class, FUEL_LOADER_ULTIMATE.getUnlocalizedName().substring(5));
 		if (Config.BASIC_DENSIFIER)
-			ExtraPlanets_Blocks.registerBlock(BASIC_DENSIFIER,  ItemBlockDesc.class, BASIC_DENSIFIER.getUnlocalizedName().substring(5));
+			ExtraPlanets_Blocks.registerBlock(BASIC_DENSIFIER, ItemBlockDesc.class, BASIC_DENSIFIER.getUnlocalizedName().substring(5));
 		if (Config.VEHICLE_CHARGER)
-			ExtraPlanets_Blocks.registerBlock(VEHICLE_CHARGER,  ItemBlockDesc.class, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
+			ExtraPlanets_Blocks.registerBlock(VEHICLE_CHARGER, ItemBlockDesc.class, VEHICLE_CHARGER.getUnlocalizedName().substring(5));
 	}
 
 	private static void registerMachineTileEntitys() {

@@ -63,8 +63,8 @@ public class ExtraPlanets_RecipeGeneration {
 				new ItemStack(ExtraPlanets_Items.THERMAL_CLOTH, 1, 2), 'Y', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 4) });
 
 		// Battery
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "mercury/batteries", new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, ExtraPlanets_Items.BATTERY_MERCURY.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T',
-				new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), 'R', "dustRedstone", 'C', Items.COAL });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "mercury/batteries", new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, ExtraPlanets_Items.BATTERY_MERCURY.getMaxDamage()), new Object[] { " T ", "TRT", "TCT",
+				'T', new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), 'R', "dustRedstone", 'C', Items.COAL });
 
 		// Stone Bricks
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "mercury", new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 4, 8),
@@ -795,7 +795,8 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "fuelloaderadvanced", new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE), new Object[] { "XXX", "XZX", "WYW", 'W',
 				new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'Y', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'Z',
 				new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED) });
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "vehiclecharger", new ItemStack(ExtraPlanets_Machines.VEHICLE_CHARGER), new Object[] { "WXW", "WXW", "WXW", 'W', "ingotDesh", 'X', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "vehiclecharger", new ItemStack(ExtraPlanets_Machines.VEHICLE_CHARGER), new Object[] { "WXW", "WXW", "WXW", 'W', "ingotDesh", 'X',
+				new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
 
 		// Launch pads
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 0), new Object[] { "   ", "BBB", "III", 'I', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'B', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
@@ -829,21 +830,22 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 4), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_BEEF, Items.COOKED_BEEF });
 
 		// Advanced & Ultimate Battery
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "batteries", new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(AsteroidsItems.basicItem, 1, 6), 'R',
-				new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()), 'C', new ItemStack(MarsBlocks.marsBlock, 1, 8) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "batteries", new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T',
+				new ItemStack(AsteroidsItems.basicItem, 1, 6), 'R', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()), 'C', new ItemStack(MarsBlocks.marsBlock, 1, 8) });
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "batteries", new ItemStack(ExtraPlanets_Items.BATTERY_ULTIMATE, 1, ExtraPlanets_Items.BATTERY_ULTIMATE.getMaxDamage()), new Object[] { "WRB", "CPM", "TAZ", 'W',
 				new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 7), 'R', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 11), 'B', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 10), 'C',
 				new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 11), 'P', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 8), 'M', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 7), 'T',
 				new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'A', new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()), 'Z', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5) });
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "batteries", new ItemStack(ExtraPlanets_Items.BATTERY_MASSIVE, 1, ExtraPlanets_Items.BATTERY_MASSIVE.getMaxDamage()), new Object[] { "PPP", "ASA", "NNN", 'P', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 4),
-				'N', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 6), 'S', Items.NETHER_STAR, 'A', new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "batteries", new ItemStack(ExtraPlanets_Items.BATTERY_MASSIVE, 1, ExtraPlanets_Items.BATTERY_MASSIVE.getMaxDamage()),
+				new Object[] { "PPP", "ASA", "NNN", 'P', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 4), 'N', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 6), 'S', Items.NETHER_STAR, 'A',
+						new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()) });
 
 		// Cloth
 		RecipeDumper.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CLOTH, 8, 0), new Object[] { new ItemStack(Blocks.WOOL), new ItemStack(Blocks.WOOL), new ItemStack(Blocks.WOOL), new ItemStack(Blocks.WOOL) });
 
 		// Gravity Controller
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1, 0),
-				new Object[] { "RTR", "TCT", "RTR", 'T', new ItemStack(GCItems.basicItem, 1, 14), 'R', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()), 'C', new ItemStack(GCItems.itemBasicMoon, 1, 0) });
+		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1, 0), new Object[] { "RTR", "TCT", "RTR", 'T', new ItemStack(GCItems.basicItem, 1, 14), 'R',
+				new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()), 'C', new ItemStack(GCItems.itemBasicMoon, 1, 0) });
 
 		// Sledge Hammer
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), new Object[] { "XXX", "YSY", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12), 'Y', new ItemStack(GCItems.itemBasicMoon), 'S', "stickWood" });

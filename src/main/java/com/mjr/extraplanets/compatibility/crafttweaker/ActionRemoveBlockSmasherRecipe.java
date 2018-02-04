@@ -7,7 +7,7 @@ import crafttweaker.api.item.IItemStack;
 import crafttweaker.api.minecraft.CraftTweakerMC;
 
 public class ActionRemoveBlockSmasherRecipe implements IAction {
-	
+
 	private final IItemStack output;
 
 	public ActionRemoveBlockSmasherRecipe(IItemStack output2) {

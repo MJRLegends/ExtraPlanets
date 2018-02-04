@@ -9,24 +9,24 @@ import crafttweaker.api.item.IItemStack;
 @ZenRegister
 @ZenClass("mods.ExtraPlanets")
 public class CraftTweakerCompatibility {
-	
+
 	@ZenMethod
-	public static void addBlockSmasherRecipe(IItemStack output, IItemStack input){
-        CraftTweakerAPI.apply(new ActionAddBlockSmasherRecipe(input, output));
+	public static void addBlockSmasherRecipe(IItemStack output, IItemStack input) {
+		CraftTweakerAPI.apply(new ActionAddBlockSmasherRecipe(input, output));
 	}
-	
+
 	@ZenMethod
-	public static void removeBlockSmasherRecipe(IItemStack output){
-        CraftTweakerAPI.apply(new ActionRemoveBlockSmasherRecipe(output));
+	public static void removeBlockSmasherRecipe(IItemStack output) {
+		CraftTweakerAPI.apply(new ActionRemoveBlockSmasherRecipe(output));
 	}
-	
+
 	@ZenMethod
-	public static void addSolarEvaporationChamberRecipe(IItemStack output, IItemStack input){
-        CraftTweakerAPI.apply(new ActionAddSolarEvaporationChamberRecipe(input, output));
+	public static void addSolarEvaporationChamberRecipe(IItemStack output, IItemStack input) {
+		CraftTweakerAPI.apply(new ActionAddSolarEvaporationChamberRecipe(input, output));
 	}
-	
+
 	@ZenMethod
-	public static void removeSolarEvaporationChamberRecipe(IItemStack output){
-        CraftTweakerAPI.apply(new ActionRemoveSolarEvaporationChamberRecipe(output));
+	public static void removeSolarEvaporationChamberRecipe(IItemStack output) {
+		CraftTweakerAPI.apply(new ActionRemoveSolarEvaporationChamberRecipe(output));
 	}
 }

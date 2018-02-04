@@ -51,7 +51,7 @@ public class WorldProviderCeres extends WorldProviderRealisticSpace {
 
 	@Override
 	public Class<? extends BiomeProvider> getBiomeProviderClass() {
-        BiomeAdaptive.setBodyMultiBiome(ExtraPlanets_Planets.CERES);
+		BiomeAdaptive.setBodyMultiBiome(ExtraPlanets_Planets.CERES);
 		return BiomeProviderCeres.class;
 	}
 

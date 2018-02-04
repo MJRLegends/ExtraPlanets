@@ -195,7 +195,6 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			return itemstack.getItem() == this.producingStack.getItem();
 		}
 
-
 		return false;
 	}
 

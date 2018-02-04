@@ -19,6 +19,6 @@ public class BiomeGenOberonValleys extends OberonBiomes {
 	@Override
 	public void registerTypes(Biome b) {
 		if (Config.REGISTER_BIOME_TYPES)
-			BiomeDictionary.addTypes(b, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD);	
+			BiomeDictionary.addTypes(b, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD);
 	}
 }

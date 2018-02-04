@@ -46,8 +46,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class), S_IGNITE_ROCKET(Side.SERVER),
 
 		// CLIENT
-        C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT),
-		C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class);
+		C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT), C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class);
 
 		private Side targetSide;
 		private Class<?>[] decodeAs;
@@ -145,12 +144,14 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		case C_UPDATE_SOLAR_RADIATION_LEVEL:
 			stats.setRadiationLevel((double) this.data.get(0));
 			break;
-        case C_DISPLAY_ROCKET_CONTROLS:
-            player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.launch.name")));
-            player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.turn.name")));
-            player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.updown.name")));
-            player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.powered.inv.name")));
-            break;
+		case C_DISPLAY_ROCKET_CONTROLS:
+			player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.launch.name")));
+			player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - "
+					+ GCCoreUtil.translate("gui.rocket.turn.name")));
+			player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "  - "
+					+ GCCoreUtil.translate("gui.rocket.updown.name")));
+			player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.powered.inv.name")));
+			break;
 		default:
 			break;
 		}

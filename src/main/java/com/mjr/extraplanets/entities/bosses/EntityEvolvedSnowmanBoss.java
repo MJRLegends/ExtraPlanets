@@ -73,25 +73,22 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 		this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.20000000298023224D);
 	}
 
-    @Override
+	@Override
 	@Nullable
-    protected SoundEvent getAmbientSound()
-    {
-        return SoundEvents.ENTITY_SNOWMAN_AMBIENT;
-    }
+	protected SoundEvent getAmbientSound() {
+		return SoundEvents.ENTITY_SNOWMAN_AMBIENT;
+	}
 
-    @Nullable
-    protected SoundEvent getHurtSound()
-    {
-        return SoundEvents.ENTITY_SNOWMAN_HURT;
-    }
-
-    @Override
 	@Nullable
-    protected SoundEvent getDeathSound()
-    {
-        return SoundEvents.ENTITY_SNOWMAN_DEATH;
-    }
+	protected SoundEvent getHurtSound() {
+		return SoundEvents.ENTITY_SNOWMAN_HURT;
+	}
+
+	@Override
+	@Nullable
+	protected SoundEvent getDeathSound() {
+		return SoundEvents.ENTITY_SNOWMAN_DEATH;
+	}
 
 	@Override
 	protected Item getDropItem() {
