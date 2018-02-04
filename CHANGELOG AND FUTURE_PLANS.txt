@@ -14,7 +14,19 @@
 
 
 ===========================================Released Updates===========================================
-V0.1.9
+v0.2.0
+NOTE: MAKE SURE TO CHECK OUT V0.1.9 CHANGE LOG IF YOU UPDATING FROM A VERSION BEFORE V0.1.9
+
+*Work towards issue #231 & Few biome fixes
+*Few more biome fixes
+*Fixed issue #231
+*Clean up unneeded biome register code
+*Clean up/Fix Formatting
+*Fixed error with Basic Purifier JEI Support
+*Fixed error with Creative Tab sorting for Custom Batteries
+*Few more fixes for Basic Purifier JEI Support
+
+v0.1.9
 NOTE: YOU WILL GET A MESSAGE SAYING 51 EXTRA PLANETS BIOMES ON OLD WORLDS, IT WILL CHANGE BIOME NAMES ALL IN EXTRA PLANETS DIMENSIONS TO PLAINS BIOMES
 
 TO FIX DELETE ALL EXTRA PLANETS DIMENSIONS FILES!!!! PLEASE DON'T REPORT AS A BUG ITS INTENDED
