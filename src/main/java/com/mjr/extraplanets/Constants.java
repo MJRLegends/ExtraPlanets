@@ -5,8 +5,8 @@ public class Constants {
 	public static final String modName = "ExtraPlanets";
 
 	public static final int LOCALMAJVERSION = 0;
-	public static final int LOCALMINVERSION = 1;
-	public static final int LOCALBUILDVERSION = 9;
+	public static final int LOCALMINVERSION = 2;
+	public static final int LOCALBUILDVERSION = 0;
 	public static final String modVersion = "1.12.2" + "-" + LOCALMAJVERSION + "." + LOCALMINVERSION + "." + LOCALBUILDVERSION;
 
 	public static final String MCVERSION = "[1.12.2]";
