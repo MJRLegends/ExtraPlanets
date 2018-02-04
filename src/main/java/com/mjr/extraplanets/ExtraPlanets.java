@@ -252,6 +252,12 @@ public class ExtraPlanets {
 		ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
 
+		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
+		ExtraPlanets_SolarSystems.init();
+		ExtraPlanets_Planets.init();
+		ExtraPlanets_Moons.init();
+		ExtraPlanets_SpaceStations.init();
+
 		// Register RegistrationHandler
 		RegisterUtilities.registerEventHandler(new RegistrationHandler());
 
@@ -266,12 +272,6 @@ public class ExtraPlanets {
 	public void init(FMLInitializationEvent event) {
 		// Register Fluid Submerged Textures
 		registerFluidSubmergedTextures();
-
-		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
-		ExtraPlanets_SolarSystems.init();
-		ExtraPlanets_Planets.init();
-		ExtraPlanets_Moons.init();
-		ExtraPlanets_SpaceStations.init();
 
 		// Initialization/Registering Methods For Entities
 		registerNonMobEntities();
