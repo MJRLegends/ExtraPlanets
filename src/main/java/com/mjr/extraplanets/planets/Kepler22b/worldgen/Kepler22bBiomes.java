@@ -43,9 +43,6 @@ public class Kepler22bBiomes extends BiomeGenBaseGC {
 	public static final Biome kepler22bGoldPlains = new BiomeGenKepler22bGoldPlains(new BiomeProperties("Kepler22b Gold Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome kepler22bEmeraldPlains = new BiomeGenKepler22bEmeraldPlains(new BiomeProperties("Kepler22b Emerald Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
 
-	protected byte topMeta;
-	protected byte fillerMeta;
-
 	public Kepler22bBiomes(BiomeProperties properties) {
 		super(properties, true);
 		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_GREEN.getDefaultState();
