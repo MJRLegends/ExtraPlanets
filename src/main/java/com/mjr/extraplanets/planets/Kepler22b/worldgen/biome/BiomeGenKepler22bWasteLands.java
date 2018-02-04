@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 
-import net.minecraft.entity.monster.EntityCaveSpider;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 
@@ -13,7 +12,6 @@ public class BiomeGenKepler22bWasteLands extends Kepler22bBiomes {
 		super(properties);
 		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_INFECTED.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState();
-		this.spawnableMonsterList.add(new SpawnListEntry(EntityCaveSpider.class, 100, 4, 4));
 		this.getBiomeDecorator().greenShortGrassPerChunk = 50;
 		this.getBiomeDecorator().generateHuts = false;
 		this.getBiomeDecorator().treeWithNoLeafsPerChunk = 2;

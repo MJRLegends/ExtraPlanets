@@ -271,9 +271,20 @@ public class ExtraPlanets_Planets {
 			KEPLER22B.setDimensionInfo(Config.KEPLER22B_ID, WorldProviderKepler22b.class);
 			KEPLER22B.setAtmosphere(new AtmosphereInfo(true, true, false, 0.0F, 5.0F, 0.05F));
 			KEPLER22B.addChecklistKeys("equipParachute");
-			KEPLER22B.setBiomeInfo(Kepler22bBiomes.kepler22bBlueForest, Kepler22bBiomes.kepler22bCandyLand, Kepler22bBiomes.kepler22bCoalPlains, Kepler22bBiomes.kepler22bDiamondPlains, Kepler22bBiomes.kepler22bEmeraldPlains,
-					Kepler22bBiomes.kepler22bGoldPlains, Kepler22bBiomes.kepler22bIronPlains, Kepler22bBiomes.kepler22bPlains, Kepler22bBiomes.kepler22bPurpleForest, Kepler22bBiomes.kepler22bRedDesert, Kepler22bBiomes.kepler22bRedForest,
-					Kepler22bBiomes.kepler22bWasteLands, Kepler22bBiomes.kepler22bYellowForest);
+			KEPLER22B.setBiomeInfo(
+					Kepler22bBiomes.kepler22bBlueForest, 
+					Kepler22bBiomes.kepler22bCandyLand, 
+					Kepler22bBiomes.kepler22bCoalPlains, 
+					Kepler22bBiomes.kepler22bDiamondPlains, 
+					Kepler22bBiomes.kepler22bEmeraldPlains,
+					Kepler22bBiomes.kepler22bGoldPlains, 
+					Kepler22bBiomes.kepler22bIronPlains, 
+					Kepler22bBiomes.kepler22bPlains, 
+					Kepler22bBiomes.kepler22bPurpleForest, 
+					Kepler22bBiomes.kepler22bRedDesert, 
+					Kepler22bBiomes.kepler22bRedForest,
+					Kepler22bBiomes.kepler22bWasteLands, 
+					Kepler22bBiomes.kepler22bYellowForest);
 			KEPLER22B.addMobInfo(new SpawnListEntry(EntityZombie.class, 100, 4, 4));
 			KEPLER22B.addMobInfo(new SpawnListEntry(EntitySpider.class, 100, 4, 4));
 			KEPLER22B.addMobInfo(new SpawnListEntry(EntitySkeleton.class, 100, 4, 4));

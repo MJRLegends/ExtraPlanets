@@ -17,15 +17,16 @@ import com.mjr.mjrlegendslib.world.ChunkProviderMultiBiomeNormal;
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 
 public class ChunkProviderKepler22b extends ChunkProviderMultiBiomeNormal {
+
+	private final MapGenCaveKepler22b caveGenerator = new MapGenCaveKepler22b();
+	private final MapGenRavineKepler22b ravineGenerator = new MapGenRavineKepler22b();
+	private final BiomeDecoratorKepler22bOres BiomeDecorator = new BiomeDecoratorKepler22bOres();
+
 	public ChunkProviderKepler22b(World world, long seed, boolean flag) {
 		super(world, seed, flag);
 		ChunkProviderMultiBiomeNormal.stoneBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState().withProperty(BlockBasicKepler22b.BASIC_TYPE, BlockBasicKepler22b.EnumBlockBasic.STONE);
 		ChunkProviderMultiBiomeNormal.waterBlock = Blocks.WATER.getDefaultState();
 	}
-
-	private final MapGenCaveKepler22b caveGenerator = new MapGenCaveKepler22b();
-	private final MapGenRavineKepler22b ravineGenerator = new MapGenRavineKepler22b();
-	private final BiomeDecoratorKepler22bOres BiomeDecorator = new BiomeDecoratorKepler22bOres();
 
 	@Override
 	public void recreateStructures(Chunk chunk, int x, int z) {

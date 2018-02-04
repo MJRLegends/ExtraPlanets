@@ -10,6 +10,7 @@ import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeCache;
 import net.minecraft.world.biome.BiomeProvider;
@@ -25,40 +26,29 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 	private GenLayer unzoomedBiomes;
 	private GenLayer zoomedBiomes;
 	private BiomeCache biomeCache;
-	private List<Biome> biomesToSpawn;
+	private List<Biome> biomesToSpawnIn;
 	private CelestialBody body;
 
 	protected BiomeProviderKepler22b() {
 		body = ExtraPlanets_Planets.KEPLER22B;
-		this.biomeCache = new BiomeCache(this);
-		this.biomesToSpawn = new ArrayList<Biome>();
-		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bPlains);
-		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bBlueForest);
-		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bPurpleForest);
-		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bRedForest);
-		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bYellowForest);
-		this.biomesToSpawn.add(Kepler22bBiomes.kepler22bRedDesert);
+		biomeCache = new BiomeCache(this);
+		biomesToSpawnIn = new ArrayList<>();
 	}
 
-	public BiomeProviderKepler22b(long seed) {
+	public BiomeProviderKepler22b(long seed, WorldType type) {
 		this();
-		GenLayer[] agenlayer;
-		agenlayer = GenLayerKepler22b.makeTheWorld(seed);
-		this.unzoomedBiomes = agenlayer[0];
-		this.zoomedBiomes = agenlayer[1];
+		GenLayer[] genLayers = GenLayerKepler22b.createWorld(seed);
+		this.unzoomedBiomes = genLayers[0];
+		this.zoomedBiomes = genLayers[1];
 	}
 
 	public BiomeProviderKepler22b(World world) {
-		this(world.getSeed());
-	}
-
-	public Biome getBiome() {
-		return Kepler22bBiomes.kepler22bPlains;
+		this(world.getSeed(), world.getWorldInfo().getTerrainType());
 	}
 
 	@Override
 	public List<Biome> getBiomesToSpawnIn() {
-		return this.biomesToSpawn;
+		return this.biomesToSpawnIn;
 	}
 
 	@Override
@@ -103,6 +93,7 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 	@Override
 	public Biome[] getBiomes(@Nullable Biome[] listToReuse, int x, int z, int width, int length, boolean cacheFlag) {
 		IntCache.resetIntCache();
+		BiomeAdaptive.setBodyMultiBiome(body);
 
 		if (listToReuse == null || listToReuse.length < length * width) {
 			listToReuse = new Biome[width * length];
@@ -120,7 +111,7 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 			if (zoomed[i] >= 0) {
 				listToReuse[i] = Biome.getBiome(zoomed[i]);
 			} else {
-				listToReuse[i] = this.getBiome();
+				listToReuse[i] = BiomeAdaptive.biomeDefault;
 			}
 		}
 
@@ -128,48 +119,50 @@ public class BiomeProviderKepler22b extends BiomeProvider {
 	}
 
 	@Override
-	public boolean areBiomesViable(int par1, int par2, int par3, List<Biome> par4List) {
-		int i = par1 - par3 >> 2;
-		int j = par2 - par3 >> 2;
-		int k = par1 + par3 >> 2;
-		int l = par2 + par3 >> 2;
-		int i1 = k - i + 1;
-		int j1 = l - j + 1;
-		int[] ai = this.unzoomedBiomes.getInts(i, j, i1, j1);
+	public boolean areBiomesViable(int x, int z, int range, List<Biome> viables) {
+		int i = x - range >> 2;
+		int j = z - range >> 2;
+		int k = x + range >> 2;
+		int l = z + range >> 2;
+		int diffX = (k - i) + 1;
+		int diffZ = (l - j) + 1;
+		int[] unzoomed = this.unzoomedBiomes.getInts(i, j, diffX, diffZ);
 
-		for (int k1 = 0; k1 < i1 * j1; k1++) {
-			Biome biomegenbase = Biome.getBiome(ai[k1]);
+		for (int a = 0; a < diffX * diffZ; ++a) {
+			Biome biome = Biome.getBiome(unzoomed[a]);
 
-			if (!par4List.contains(biomegenbase)) {
+			if (!viables.contains(biome)) {
 				return false;
 			}
 		}
+
 		return true;
 	}
 
 	@Override
-	public BlockPos findBiomePosition(int par1, int par2, int par3, List<Biome> par4List, Random par5Random) {
-		int i = par1 - par3 >> 2;
-		int j = par2 - par3 >> 2;
-		int k = par1 + par3 >> 2;
-		int l = par2 + par3 >> 2;
-		int i1 = k - i + 1;
-		int j1 = l - j + 1;
-		int[] ai = this.unzoomedBiomes.getInts(i, j, i1, j1);
-		BlockPos chunkposition = null;
-		int k1 = 0;
+	public BlockPos findBiomePosition(int x, int z, int range, List<Biome> biomes, Random random) {
+		int i = x - range >> 2;
+		int j = z - range >> 2;
+		int k = x + range >> 2;
+		int l = z + range >> 2;
+		int diffX = (k - i) + 1;
+		int diffZ = (l - j) + 1;
+		int[] unzoomed = this.unzoomedBiomes.getInts(i, j, diffX, diffZ);
+		BlockPos blockPos = null;
+		int count = 0;
 
-		for (int l1 = 0; l1 < ai.length; l1++) {
-			int i2 = i + l1 % i1 << 2;
-			int j2 = j + l1 / i1 << 2;
-			Biome biomegenbase = Biome.getBiome(ai[l1]);
+		for (int a = 0; a < unzoomed.length; ++a) {
+			int x0 = i + a % diffX << 2;
+			int z0 = j + a / diffX << 2;
+			Biome biome = Biome.getBiome(unzoomed[a]);
 
-			if (par4List.contains(biomegenbase) && (chunkposition == null || par5Random.nextInt(k1 + 1) == 0)) {
-				chunkposition = new BlockPos(i2, 0, j2);
-				k1++;
+			if (biomes.contains(biome) && (blockPos == null || random.nextInt(count + 1) == 0)) {
+				blockPos = new BlockPos(x0, 0, z0);
+				count++;
 			}
 		}
-		return chunkposition;
+
+		return blockPos;
 	}
 
 	@Override

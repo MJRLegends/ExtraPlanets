@@ -93,6 +93,7 @@ public class BiomeProviderJupiter extends BiomeProvider {
 	@Override
 	public Biome[] getBiomes(@Nullable Biome[] listToReuse, int x, int z, int width, int length, boolean cacheFlag) {
 		IntCache.resetIntCache();
+		BiomeAdaptive.setBodyMultiBiome(body);
 
 		if (listToReuse == null || listToReuse.length < length * width) {
 			listToReuse = new Biome[width * length];
@@ -110,7 +111,7 @@ public class BiomeProviderJupiter extends BiomeProvider {
 			if (zoomed[i] >= 0) {
 				listToReuse[i] = Biome.getBiome(zoomed[i]);
 			} else {
-				listToReuse[i] = JupiterBiomes.jupiter;
+				listToReuse[i] = BiomeAdaptive.biomeDefault;
 			}
 		}
 
