@@ -13,7 +13,6 @@ import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DimensionType;
-import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -22,7 +21,6 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
-import com.mjr.extraplanets.moons.Deimos.worldgen.BiomeProviderDeimos;
 import com.mjr.extraplanets.moons.Deimos.worldgen.ChunkProviderDeimos;
 
 public class WorldProviderDeimos extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
@@ -56,11 +54,6 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 	@Override
 	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderDeimos.class;
-	}
-
-	@Override
-	public Class<? extends BiomeProvider> getBiomeProviderClass() {
-		return BiomeProviderDeimos.class;
 	}
 
 	@Override

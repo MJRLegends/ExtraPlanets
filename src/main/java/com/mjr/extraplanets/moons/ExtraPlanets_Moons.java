@@ -43,8 +43,10 @@ import com.mjr.extraplanets.moons.Phobos.WorldProviderPhobos;
 import com.mjr.extraplanets.moons.Phobos.worldgen.PhobosBiomes;
 import com.mjr.extraplanets.moons.Rhea.TeleportTypeRhea;
 import com.mjr.extraplanets.moons.Rhea.WorldProviderRhea;
+import com.mjr.extraplanets.moons.Rhea.worldgen.RheaBiomes;
 import com.mjr.extraplanets.moons.Titan.TeleportTypeTitan;
 import com.mjr.extraplanets.moons.Titan.WorldProviderTitan;
+import com.mjr.extraplanets.moons.Titan.worldgen.TitanBiomes;
 import com.mjr.extraplanets.moons.Titania.TeleportTypeTitania;
 import com.mjr.extraplanets.moons.Titania.WorldProviderTitania;
 import com.mjr.extraplanets.moons.Titania.worldgen.TitaniaBiomes;
@@ -246,7 +248,7 @@ public class ExtraPlanets_Moons {
 			RHEA.setDimensionInfo(Config.RHEA_ID, WorldProviderRhea.class);
 			RHEA.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 80.0F : 5.0F, 0.0F, 0.2F));
 			RHEA.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
-			RHEA.setBiomeInfo(CallistoBiomes.callisto);
+			RHEA.setBiomeInfo(RheaBiomes.rhea);
 			RHEA.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			RHEA.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 			RHEA.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
@@ -265,7 +267,7 @@ public class ExtraPlanets_Moons {
 			TITAN.setDimensionInfo(Config.TITAN_ID, WorldProviderTitan.class);
 			TITAN.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 80.0F : 5.0F, 0.0F, 0.2F));
 			TITAN.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
-			TITAN.setBiomeInfo(CallistoBiomes.callisto);
+			TITAN.setBiomeInfo(TitanBiomes.titan);
 			TITAN.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			TITAN.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 			TITAN.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));

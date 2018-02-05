@@ -4,14 +4,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.DimensionType;
-import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -21,7 +19,6 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
-import com.mjr.extraplanets.moons.Titania.worldgen.BiomeProviderTitania;
 import com.mjr.extraplanets.moons.Titania.worldgen.ChunkProviderTitania;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 import com.mjr.mjrlegendslib.util.MCUtilities;
@@ -58,13 +55,6 @@ public class WorldProviderTitania extends WorldProviderRealisticSpace {
 	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderTitania.class;
 	}
-
-	@Override
-	public Class<? extends BiomeProvider> getBiomeProviderClass() {
-		BiomeAdaptive.setBodyMultiBiome(ExtraPlanets_Moons.TITANIA);
-		return BiomeProviderTitania.class;
-	}
-
 	@Override
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {

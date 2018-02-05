@@ -4,19 +4,16 @@ import java.util.LinkedList;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
-import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.planets.Ceres.worldgen.BiomeProviderCeres;
 import com.mjr.extraplanets.planets.Ceres.worldgen.ChunkProviderCeres;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
@@ -47,12 +44,6 @@ public class WorldProviderCeres extends WorldProviderRealisticSpace {
 	@Override
 	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderCeres.class;
-	}
-
-	@Override
-	public Class<? extends BiomeProvider> getBiomeProviderClass() {
-		BiomeAdaptive.setBodyMultiBiome(ExtraPlanets_Planets.CERES);
-		return BiomeProviderCeres.class;
 	}
 
 	@Override
