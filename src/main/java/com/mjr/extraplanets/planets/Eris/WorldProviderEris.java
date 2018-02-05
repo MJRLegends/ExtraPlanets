@@ -4,20 +4,17 @@ import java.util.LinkedList;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
-import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.planets.Eris.worldgen.BiomeProviderEris;
 import com.mjr.extraplanets.planets.Eris.worldgen.ChunkProviderEris;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
@@ -49,13 +46,7 @@ public class WorldProviderEris extends WorldProviderRealisticSpace {
 	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderEris.class;
 	}
-
-	@Override
-	public Class<? extends BiomeProvider> getBiomeProviderClass() {
-		BiomeAdaptive.setBodyMultiBiome(ExtraPlanets_Planets.ERIS);
-		return BiomeProviderEris.class;
-	}
-
+	
 	@Override
 	public double getHorizon() {
 		return 44.0D;
