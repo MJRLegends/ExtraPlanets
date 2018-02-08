@@ -1082,6 +1082,7 @@ public class ExtraPlanets_Blocks {
 			RegisterUtilities.registerOre("oreRedGem", new ItemStack(JUPITER_BLOCKS, 1, 11));
 			RegisterUtilities.registerOre("blockPalladium", new ItemStack(JUPITER_BLOCKS, 1, 8));
 			RegisterUtilities.registerOre("blockRedGem", new ItemStack(JUPITER_BLOCKS, 1, 12));
+			RegisterUtilities.registerOre("blockNickel", new ItemStack(JUPITER_BLOCKS, 1, 13));
 		}
 		if (Config.SATURN) {
 			RegisterUtilities.registerOre("oreCopper", new ItemStack(SATURN_BLOCKS, 1, 5));
@@ -1193,6 +1194,7 @@ public class ExtraPlanets_Blocks {
 			RegisterUtilities.registerOre("oreGreenDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 10));
 			RegisterUtilities.registerOre("cobblestone", new ItemStack(KEPLER22B_BLOCKS, 1, 12));
 			RegisterUtilities.registerOre("orePlatinum", new ItemStack(KEPLER22B_BLOCKS, 1, 13));
+			RegisterUtilities.registerOre("blockPlatinum", new ItemStack(KEPLER22B_BLOCKS, 1, 14));
 		}
 		if (Config.ORE_LEAD_GENERATION) {
 			RegisterUtilities.registerOre("oreLead", new ItemStack(ORE_LEAD, 1, 0));
