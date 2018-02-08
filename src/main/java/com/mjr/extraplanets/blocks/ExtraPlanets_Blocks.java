@@ -1182,7 +1182,7 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			RegisterUtilities.registerOre("stone", new ItemStack(KEPLER22B_BLOCKS, 1, 1));
-			RegisterUtilities.registerOre("or	eIron", new ItemStack(KEPLER22B_BLOCKS, 1, 2));
+			RegisterUtilities.registerOre("oreIron", new ItemStack(KEPLER22B_BLOCKS, 1, 2));
 			RegisterUtilities.registerOre("oreCopper", new ItemStack(KEPLER22B_BLOCKS, 1, 3));
 			RegisterUtilities.registerOre("oreTin", new ItemStack(KEPLER22B_BLOCKS, 1, 4));
 			RegisterUtilities.registerOre("oreDenseCoal", new ItemStack(KEPLER22B_BLOCKS, 1, 5));
