@@ -1093,9 +1093,9 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.URANUS) {
 			RegisterUtilities.registerOre("oreCrystal", new ItemStack(URANUS_BLOCKS, 1, 3));
-			RegisterUtilities.registerOre("oreWhiteGem", new ItemStack(URANUS_BLOCKS, 1, 6));
+			RegisterUtilities.registerOre("oreWhiteGem", new ItemStack(URANUS_BLOCKS, 1, 7));
 			RegisterUtilities.registerOre("blockCrystal", new ItemStack(URANUS_BLOCKS, 1, 4));
-			RegisterUtilities.registerOre("blockWhiteGem", new ItemStack(URANUS_BLOCKS, 1, 7));
+			RegisterUtilities.registerOre("blockWhiteGem", new ItemStack(URANUS_BLOCKS, 1, 8));
 		}
 		if (Config.NEPTUNE) {
 			RegisterUtilities.registerOre("oreCopper", new ItemStack(NEPTUNE_BLOCKS, 1, 5));
@@ -1183,8 +1183,8 @@ public class ExtraPlanets_Blocks {
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			RegisterUtilities.registerOre("stone", new ItemStack(KEPLER22B_BLOCKS, 1, 1));
 			RegisterUtilities.registerOre("oreIron", new ItemStack(KEPLER22B_BLOCKS, 1, 2));
-			RegisterUtilities.registerOre("oreCopper", new ItemStack(KEPLER22B_BLOCKS, 1, 3));
-			RegisterUtilities.registerOre("oreTin", new ItemStack(KEPLER22B_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreCopper", new ItemStack(KEPLER22B_BLOCKS, 1, 4));
+			RegisterUtilities.registerOre("oreTin", new ItemStack(KEPLER22B_BLOCKS, 1, 3));
 			RegisterUtilities.registerOre("oreDenseCoal", new ItemStack(KEPLER22B_BLOCKS, 1, 5));
 			RegisterUtilities.registerOre("oreBlueDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 6));
 			RegisterUtilities.registerOre("oreRedDiamond", new ItemStack(KEPLER22B_BLOCKS, 1, 7));
