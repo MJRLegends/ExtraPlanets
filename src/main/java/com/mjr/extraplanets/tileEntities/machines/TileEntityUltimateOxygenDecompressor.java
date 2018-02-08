@@ -199,7 +199,7 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
 
 	@Override
 	public EnumFacing getElectricInputDirection() {
-		return getFront().rotateY();
+		return getFront();
 	}
 
 	@Override
