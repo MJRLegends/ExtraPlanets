@@ -927,6 +927,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreTin", new ItemStack(ceresBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(ceresBlocks, 1, 3));
 			OreDictionary.registerOre("oreUranium", new ItemStack(ceresBlocks, 1, 6));
+			OreDictionary.registerOre("blockUranium", new ItemStack(ceresBlocks, 1, 8));
 		}
 		if (Config.jupiter) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(jupiterBlocks, 1, 5));
@@ -937,6 +938,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreRedGem", new ItemStack(jupiterBlocks, 1, 10));
 			OreDictionary.registerOre("blockPalladium", new ItemStack(jupiterBlocks, 1, 8));
 			OreDictionary.registerOre("blockRedGem", new ItemStack(jupiterBlocks, 1, 11));
+			OreDictionary.registerOre("blockNickel", new ItemStack(jupiterBlocks, 1, 12));
 		}
 		if (Config.saturn) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(saturnBlocks, 1, 5));
@@ -944,6 +946,7 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreIron", new ItemStack(saturnBlocks, 1, 3));
 			OreDictionary.registerOre("oreMagnesium", new ItemStack(saturnBlocks, 1, 6));
 			OreDictionary.registerOre("blockMagnesium", new ItemStack(saturnBlocks, 1, 7));
+			OreDictionary.registerOre("oreSlime", new ItemStack(saturnBlocks, 1, 11));
 		}
 		if (Config.uranus) {
 			OreDictionary.registerOre("oreCrystal", new ItemStack(uranusBlocks, 1, 3));
@@ -971,6 +974,8 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("oreCopper", new ItemStack(erisBlocks, 1, 5));
 			OreDictionary.registerOre("oreTin", new ItemStack(erisBlocks, 1, 4));
 			OreDictionary.registerOre("oreIron", new ItemStack(erisBlocks, 1, 3));
+			OreDictionary.registerOre("oreDarkIron", new ItemStack(erisBlocks, 1, 7));
+			OreDictionary.registerOre("blockDarkIron", new ItemStack(erisBlocks, 1, 8));
 		}
 		if (Config.callisto) {
 			OreDictionary.registerOre("oreCopper", new ItemStack(callistoBlocks, 1, 5));
@@ -1045,7 +1050,9 @@ public class ExtraPlanets_Blocks {
 			OreDictionary.registerOre("orePurpleDiamond", new ItemStack(kepler22bBlocks, 1, 8));
 			OreDictionary.registerOre("oreYellowDiamond", new ItemStack(kepler22bBlocks, 1, 9));
 			OreDictionary.registerOre("oreGreenDiamond", new ItemStack(kepler22bBlocks, 1, 10));
-			OreDictionary.registerOre("cobblestone", new ItemStack(kepler22bBlocks, 1, 16));
+			OreDictionary.registerOre("cobblestone", new ItemStack(kepler22bBlocks, 1, 12));
+			OreDictionary.registerOre("orePlatinum", new ItemStack(kepler22bBlocks, 1, 13));
+			OreDictionary.registerOre("blockPlatinum", new ItemStack(kepler22bBlocks, 1, 14));
 		}
 	}
 
