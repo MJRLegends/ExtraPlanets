@@ -242,7 +242,7 @@ public class TileEntityUltimateFuelLoader extends TileBaseElectricBlockWithInven
 	public EnumFacing getFront() {
 		IBlockState state = this.worldObj.getBlockState(getPos());
 		if (state.getBlock() instanceof UltimateFuelLoader) {
-			return state.getValue(UltimateFuelLoader.FACING).rotateY();
+			return state.getValue(UltimateFuelLoader.FACING);
 		}
 		return EnumFacing.NORTH;
 	}
