@@ -192,7 +192,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 			}
 		}
 
-		return null;
+		return ItemStack.EMPTY;
 	}
 
 	@Override
