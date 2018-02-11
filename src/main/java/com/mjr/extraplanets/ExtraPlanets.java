@@ -26,7 +26,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
@@ -131,6 +130,7 @@ import com.mjr.extraplanets.schematicPages.SchematicTier9Rocket;
 import com.mjr.extraplanets.schematicPages.SchematicTierElectricRocket;
 import com.mjr.extraplanets.schematicPages.SchematicVenusRover;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.NetworkUtilities;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 @Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = Constants.DEPENDENCIES_FORGE + Constants.DEPENDENCIES_MODS, guiFactory = Constants.GUIFACTORY, certificateFingerprint = Constants.CERTIFICATEFINGERPRINT)
@@ -305,7 +305,7 @@ public class ExtraPlanets {
 		// ExtraPlanets_Achievements.init();
 
 		// Register GUI Handler
-		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
+		NetworkUtilities.registerGuiHandler(ExtraPlanets.instance, new GuiHandler());
 
 		// Register Deconstructor Compatibility
 		if (Config.GC_DECONSTRUCTOR_SUPPORT)
