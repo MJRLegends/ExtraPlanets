@@ -7,39 +7,27 @@ import javax.annotation.Nullable;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.EnumAction;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.mjrlegendslib.item.ItemBasicMeta;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class ItemCannedFood extends Item {
-
-	public static final String[] names = { "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken", "dehydrated_beef" };
+public class ItemCannedFood extends ItemBasicMeta {
 
 	public ItemCannedFood(String assetName) {
-		super();
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
-		this.setUnlocalizedName(assetName);
-	}
-
-	@Override
-	public CreativeTabs getCreativeTab() {
-		return ExtraPlanets.ItemsTab;
+		super(assetName, ExtraPlanets.ItemsTab, getItemList());
 	}
 
 	@Override
@@ -48,28 +36,14 @@ public class ItemCannedFood extends Item {
 			return this.getUnlocalizedName() + ".canned_food";
 		}
 
-		return this.getUnlocalizedName() + "." + ItemCannedFood.names[itemStack.getItemDamage()];
-	}
-
-	@Override
-	public void getSubItems(CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
-		if (!this.isInCreativeTab(par2CreativeTabs))
-			return;
-		for (int i = 0; i < ItemCannedFood.names.length; i++) {
-			par3List.add(new ItemStack(this, 1, i));
-		}
-	}
-
-	@Override
-	public int getMetadata(int par1) {
-		return par1;
+		return this.getUnlocalizedName() + "." + getItemList()[itemStack.getItemDamage()];
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> par3List, ITooltipFlag flagIn) {
 		if (par1ItemStack.getItemDamage() < 19) {
-			par3List.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate(this.getUnlocalizedName() + "." + ItemCannedFood.names[par1ItemStack.getItemDamage()] + ".name"));
+			par3List.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate(this.getUnlocalizedName() + "." + getItemList()[par1ItemStack.getItemDamage()] + ".name"));
 		}
 	}
 
@@ -151,6 +125,10 @@ public class ItemCannedFood extends Item {
 		} else {
 			return new ActionResult<ItemStack>(EnumActionResult.FAIL, itemStackIn);
 		}
+	}
+
+	public static String[] getItemList() {
+		return new String[] { "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken", "dehydrated_beef" };
 	}
 
 }
