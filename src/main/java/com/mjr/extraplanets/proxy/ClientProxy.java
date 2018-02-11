@@ -3,11 +3,9 @@ package com.mjr.extraplanets.proxy;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.common.model.TRSRTransformation;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -425,84 +423,50 @@ public class ClientProxy extends CommonProxy {
 
 	@Override
 	public void registerCustomModel() {
-		ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t4", "inventory");
 		if (Config.MERCURY) {
-			for (int i = 0; i < 5; ++i) {
-				ClientUtilities.registerModel(ExtraPlanets_Items.TIER_4_ROCKET, i, modelResourceLocation);
-			}
+			ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_ROCKET, "rocket_t4", 5);
 		}
 		if (Config.JUPITER) {
-			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t5", "inventory");
-			for (int i = 0; i < 5; ++i) {
-				ClientUtilities.registerModel(ExtraPlanets_Items.TIER_5_ROCKET, i, modelResourceLocation);
-			}
+			ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_ROCKET, "rocket_t5", 5);
 		}
 		if (Config.SATURN) {
-			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t6", "inventory");
-			for (int i = 0; i < 5; ++i) {
-				ClientUtilities.registerModel(ExtraPlanets_Items.TIER_6_ROCKET, i, modelResourceLocation);
-			}
+			ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_6_ROCKET, "rocket_t6", 5);
 		}
 		if (Config.URANUS) {
-			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t7", "inventory");
-			for (int i = 0; i < 5; ++i) {
-				ClientUtilities.registerModel(ExtraPlanets_Items.TIER_7_ROCKET, i, modelResourceLocation);
-			}
+			ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_7_ROCKET, "rocket_t7", 5);
 		}
 		if (Config.NEPTUNE) {
-			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t8", "inventory");
-			for (int i = 0; i < 5; ++i) {
-				ClientUtilities.registerModel(ExtraPlanets_Items.TIER_8_ROCKET, i, modelResourceLocation);
-			}
+			ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_8_ROCKET, "rocket_t8", 5);
 		}
 		if (Config.PLUTO) {
 			if (Config.OLD_ROCKET_MODELS) {
-				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t9", "inventory");
-				for (int i = 0; i < 5; ++i) {
-					ClientUtilities.registerModel(ExtraPlanets_Items.TIER_9_ROCKET, i, modelResourceLocation);
-				}
+				ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_9_ROCKET, "rocket_t9", 5);
 			} else {
-				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t9_new", "inventory");
-				for (int i = 0; i < 5; ++i) {
-					ClientUtilities.registerModel(ExtraPlanets_Items.TIER_9_ROCKET, i, modelResourceLocation);
-				}
+				ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_9_ROCKET, "rocket_t9_new", 5);
 			}
 		}
 		if (Config.ERIS) {
 			if (Config.OLD_ROCKET_MODELS) {
-				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t10", "inventory");
-				for (int i = 0; i < 5; ++i) {
-					ClientUtilities.registerModel(ExtraPlanets_Items.TIER_10_ROCKET, i, modelResourceLocation);
-				}
+				ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_ROCKET, "rocket_t10", 5);
 			} else {
-				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t10_new", "inventory");
-				for (int i = 0; i < 5; ++i) {
-					ClientUtilities.registerModel(ExtraPlanets_Items.TIER_10_ROCKET, i, modelResourceLocation);
-				}
+				ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_ROCKET, "rocket_t10_new", 5);
 			}
 		}
 		if (Config.ERIS && Config.KEPLER22B) {
-			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "electric_rocket", "inventory");
-			for (int i = 0; i < 5; ++i) {
-				ClientUtilities.registerModel(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, i, modelResourceLocation);
-			}
+			ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, "electric_rocket", 5);
 		}
 		if (Config.MARS_ROVER) {
 			for (int i = 0; i < 4; ++i) {
-				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "mars_rover" + (i > 0 ? "_" + i : ""), "inventory");
-				ClientUtilities.registerModel(ExtraPlanets_Items.MARS_ROVER, i, modelResourceLocation);
+				ClientUtilities.registerModel(ExtraPlanets_Items.MARS_ROVER, i, new ModelResourceLocation(Constants.TEXTURE_PREFIX + "mars_rover" + (i > 0 ? "_" + i : ""), "inventory"));
 			}
 		}
 		if (Config.VENUS_ROVER) {
 			for (int i = 0; i < 4; ++i) {
-				modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "venus_rover" + (i > 0 ? "_" + i : ""), "inventory");
-				ClientUtilities.registerModel(ExtraPlanets_Items.VENUS_ROVER, i, modelResourceLocation);
+				ClientUtilities.registerModel(ExtraPlanets_Items.VENUS_ROVER, i, new ModelResourceLocation(Constants.TEXTURE_PREFIX + "venus_rover" + (i > 0 ? "_" + i : ""), "inventory"));
 			}
 		}
 		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT) {
-			Item unit = Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT);
-			modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "basic_decontamination_unit", "inventory");
-			ClientUtilities.registerModel(unit, 0, modelResourceLocation);
+			ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT, "basic_decontamination_unit");
 		}
 	}
 
@@ -858,9 +822,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_KEY);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_NOSE_CONE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_SCHEMATIC);
-			for (int i = 0; i < ItemTier4Items.getItemList().length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_ITEMS, i, ItemTier4Items.getItemList()[i]);
-			}
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_ITEMS, ItemTier4Items.getItemList());
 			if (Config.ITEMS_CARBON) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.CARBON_BOOTS);
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.CARBON_CHEST);
@@ -895,9 +857,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_SCHEMATIC);
 			if (Config.BATTERIES)
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BATTERY_NICKEL);
-			for (int i = 0; i < ItemTier5Items.getItemList().length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_ITEMS, i, ItemTier5Items.getItemList()[i]);
-			}
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_ITEMS, ItemTier5Items.getItemList());
 			if (Config.ITEMS_PALLADIUM) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.PALLASIUM_BOOTS);
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.PALLASIUM_CHEST);
@@ -927,9 +887,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_6_KEY);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_6_NOSE_CONE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_6_SCHEMATIC);
-			for (int i = 0; i < ItemTier6Items.getItemList().length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_6_ITEMS, i, ItemTier6Items.getItemList()[i]);
-			}
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_6_ITEMS, ItemTier6Items.getItemList());
 			if (Config.ITEMS_MAGNESIUM) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.MAGNESIUM_BOOTS);
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.MAGNESIUM_CHEST);
@@ -947,9 +905,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_7_KEY);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_7_NOSE_CONE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_7_SCHEMATIC);
-			for (int i = 0; i < ItemTier7Items.getItemList().length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_7_ITEMS, i, ItemTier7Items.getItemList()[i]);
-			}
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_7_ITEMS, ItemTier7Items.getItemList());
 			if (Config.ITEMS_CRYSTAL) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.CRYSTAL_BOOTS);
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.CRYSTAL_CHEST);
@@ -981,9 +937,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_8_SCHEMATIC);
 			if (Config.BATTERIES)
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BATTERY_ZINC);
-			for (int i = 0; i < ItemTier8Items.getItemList().length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_8_ITEMS, i, ItemTier8Items.getItemList()[i]);
-			}
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_8_ITEMS, ItemTier8Items.getItemList());
 			if (Config.ITEMS_ZINC) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.ZINC_BOOTS);
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.ZINC_CHEST);
@@ -1013,9 +967,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_9_KEY);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_9_NOSE_CONE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_9_SCHEMATIC);
-			for (int i = 0; i < ItemTier9Items.getItemList().length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_9_ITEMS, i, ItemTier9Items.getItemList()[i]);
-			}
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_9_ITEMS, ItemTier9Items.getItemList());
 			if (Config.ITEMS_TUNGSTEN) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TUNGSTEN_BOOTS);
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TUNGSTEN_CHEST);
@@ -1033,14 +985,10 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_KEY);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_NOSE_CONE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_SCHEMATIC);
-			for (int i = 0; i < ItemTier10Items.getItemList().length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_ITEMS, i, ItemTier10Items.getItemList()[i]);
-			}
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_ITEMS, ItemTier10Items.getItemList());
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			for (int i = 0; i < ItemTier11Items.getItemList().length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_11_ITEMS, i, ItemTier11Items.getItemList()[i]);
-			}
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_11_ITEMS, ItemTier11Items.getItemList());
 			if (Config.ITEMS_KEPLER22B) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.BLUE_DIAMOND_BOOTS);
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.BLUE_DIAMOND_CHEST);
@@ -1112,18 +1060,10 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BATTERY_MASSIVE);
 		}
 		if (Config.THERMAL_PADDINGS) {
-			for (int i = 0; i < ItemTier3ThermalPadding.names.length / 2; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_3_THERMAL_PADDING, i, ItemTier3ThermalPadding.names[i]);
-			}
-			for (int i = 0; i < ItemTier4ThermalPadding.names.length / 2; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_THERMAL_PADDING, i, ItemTier4ThermalPadding.names[i]);
-			}
-			for (int i = 0; i < ItemTier5ThermalPadding.names.length / 2; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_THERMAL_PADDING, i, ItemTier5ThermalPadding.names[i]);
-			}
-			for (int i = 0; i < ItemThermalCloth.names.length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.THERMAL_CLOTH, i, ItemThermalCloth.names[i]);
-			}
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_3_THERMAL_PADDING, ItemTier3ThermalPadding.names);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_THERMAL_PADDING, ItemTier4ThermalPadding.names);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_THERMAL_PADDING, ItemTier5ThermalPadding.names);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.THERMAL_CLOTH, ItemThermalCloth.names);
 		}
 		if (Config.OXYGEN_TANKS) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY);
@@ -1197,38 +1137,19 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.POTASSIUM);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.POTASSIUM_IODIDE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ANTI_RADIATION);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.WAFERS, ItemWafers.getItemList());
 		}
-		for (int i = 0; i < ItemWafers.getItemList().length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.WAFERS, i, ItemWafers.getItemList()[i]);
-		}
-		for (int i = 0; i < ItemTools.names.length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TOOLS, i, ItemTools.names[i]);
-		}
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TOOLS, ItemTools.names);
 		if (Config.CANNED_FOOD) {
-			for (int i = 0; i < ItemCannedFood.getItemList().length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.CANNED_FOOD, i, ItemCannedFood.getItemList()[i]);
-			}
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.CANNED_FOOD, ItemCannedFood.getItemList());
 		}
-
-		for (int i = 0; i < ItemBasicKit.getItemList().length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, i, "tier1_kit" + ItemBasicKit.getItemList()[i]);
-		}
-		for (int i = 0; i < ItemBasicKit.getItemList().length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, i, "tier2_kit" + ItemBasicKit.getItemList()[i]);
-		}
-		for (int i = 0; i < ItemBasicKit.getItemList().length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, i, "tier3_kit" + ItemBasicKit.getItemList()[i]);
-		}
-		for (int i = 0; i < ItemBasicKit.getItemList().length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, i, "tier4_kit" + ItemBasicKit.getItemList()[i]);
-		}
-		for (int i = 0; i < ItemBasicKit.getItemList().length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, i, "tier5_kit" + ItemBasicKit.getItemList()[i]);
-		}
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, "tier1_kit", ItemBasicKit.getItemList());
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, "tier2_kit", ItemBasicKit.getItemList());
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, "tier3_kit", ItemBasicKit.getItemList());
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, "tier4_kit", ItemBasicKit.getItemList());
+		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, "tier5_kit", ItemBasicKit.getItemList());
 		if (Config.MARS_ROVER || Config.VENUS_ROVER) {
-			for (int i = 0; i < ItemElectricParts.getItemList().length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ELECTRIC_PARTS, i, ItemElectricParts.getItemList()[i]);
-			}
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ELECTRIC_PARTS, ItemElectricParts.getItemList());
 		}
 		if (Config.MARS_ROVER)
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MARS_ROVER_SCHEMATIC);
@@ -1296,55 +1217,53 @@ public class ClientProxy extends CommonProxy {
 	@SideOnly(Side.CLIENT)
 	public void onModelBakeEvent(ModelBakeEvent event) {
 		if (Config.MERCURY)
-			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t4", "rocket_t4.obj", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Tip", "Ring", "FrameWindow1",
-					"FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "Rocket_stabilizer1", "Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4"), ItemModelRocketT4.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t4", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Tip", "Ring", "FrameWindow1", "FrameWindow2",
+					"FrameWindow3", "FrameWindow4", "GlassWindow", "Rocket_stabilizer1", "Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4"), ItemModelRocketT4.class);
 		if (Config.JUPITER)
-			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t5", "rocket_t5.obj", ImmutableList.of("Nozzle", "Body_Rocket", "Rocket_stabilizer1", "Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4", "Tip", "Ring",
-					"FrameWindow1", "FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "CorrectedWind005", "CorrectedWind006", "CorrectedWind007", "CorrectedWind008", "Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004",
-					"Cylinder005", "Cylinder006", "Helix001", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4"), ItemModelRocketT5.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t5", ImmutableList.of("Nozzle", "Body_Rocket", "Rocket_stabilizer1", "Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4", "Tip", "Ring", "FrameWindow1",
+					"FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "CorrectedWind005", "CorrectedWind006", "CorrectedWind007", "CorrectedWind008", "Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005",
+					"Cylinder006", "Helix001", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4"), ItemModelRocketT5.class);
 		if (Config.SATURN)
-			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t6", "rocket_t6.obj", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Rocket_stabilizer1",
-					"Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4", "Tip", "Ring", "FrameWindow1", "FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "CorrectedWind005", "CorrectedWind006", "CorrectedWind007",
-					"CorrectedWind008", "Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Helix001", "SplinePathDeform", "Pipe004", "Pipe005", "Pipe006", "Pipe007", "RocketEngine", "RocketEngine001",
-					"RocketEngine002", "RocketEngine003", "RocketEnginePlut", "RocketEnginePlut001", "RocketEnginePlut002", "RocketEnginePlut003"), ItemModelRocketT6.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t6", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Rocket_stabilizer1", "Rocket_stabilizer2",
+					"Rocket_stabilizer3", "Rocket_stabilizer4", "Tip", "Ring", "FrameWindow1", "FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "CorrectedWind005", "CorrectedWind006", "CorrectedWind007", "CorrectedWind008",
+					"Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Helix001", "SplinePathDeform", "Pipe004", "Pipe005", "Pipe006", "Pipe007", "RocketEngine", "RocketEngine001", "RocketEngine002",
+					"RocketEngine003", "RocketEnginePlut", "RocketEnginePlut001", "RocketEnginePlut002", "RocketEnginePlut003"), ItemModelRocketT6.class);
 		if (Config.URANUS)
-			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t7", "rocket_t7.obj", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Rocket_stabilizer1",
-					"Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4", "Tip", "Ring", "FrameWindow1", "FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "CorrectedWind005", "CorrectedWind006", "CorrectedWind007",
-					"CorrectedWind008", "Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Helix001", "SplinePathDeform", "Pipe004", "Pipe005", "Pipe006", "Pipe007", "RocketEngine", "RocketEngine001",
-					"RocketEngine002", "RocketEngine003", "RocketEngineBottom", "RocketEngineBottom001", "RocketEngineBottom002", "RocketEngineBottom003", "PathDeform2", "Wire1", "Wire2", "WireLight", "RocketEnginePlut", "RocketEnginePlut001",
-					"RocketEnginePlut002", "RocketEnginePlut003"), ItemModelRocketT7.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t7", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Rocket_stabilizer1", "Rocket_stabilizer2",
+					"Rocket_stabilizer3", "Rocket_stabilizer4", "Tip", "Ring", "FrameWindow1", "FrameWindow2", "FrameWindow3", "FrameWindow4", "GlassWindow", "CorrectedWind005", "CorrectedWind006", "CorrectedWind007", "CorrectedWind008",
+					"Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Helix001", "SplinePathDeform", "Pipe004", "Pipe005", "Pipe006", "Pipe007", "RocketEngine", "RocketEngine001", "RocketEngine002",
+					"RocketEngine003", "RocketEngineBottom", "RocketEngineBottom001", "RocketEngineBottom002", "RocketEngineBottom003", "PathDeform2", "Wire1", "Wire2", "WireLight", "RocketEnginePlut", "RocketEnginePlut001", "RocketEnginePlut002",
+					"RocketEnginePlut003"), ItemModelRocketT7.class);
 		if (Config.NEPTUNE)
-			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t8", "rocket_t8.obj", ImmutableList.of("Nozzle", "BodyRocket", "Rocket_stabilizer1", "Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4",
-					"Rocket_stabilizer007", "Rocket_stabilizer008", "Rocket_stabilizer009", "Rocket_stabilizer010", "SplinePathDeform", "RocketEngine", "RocketEngine001", "RocketEngine002", "RocketEngine003", "RocketEngine004", "RocketEngine005",
-					"RocketEngine006", "RocketEngine007", "RocketEngineBottom", "RocketEngineBottom001", "RocketEngineBottom002", "RocketEngineBottom003", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006",
-					"RocketEngineBottom007", "FloorCockPit", "NoseRocket", "NozzleKeeper", "rotary_engine", "rotary_engine2", "rotary_engine3", "rotary_engine4", "RocketEnginePlut", "RocketEnginePlut001", "RocketEnginePlut002",
-					"RocketEnginePlut003", "RocketEnginePlut004", "RocketEnginePlut005", "RocketEnginePlut006", "RocketEnginePlut007"), ItemModelRocketT8.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t8", ImmutableList.of("Nozzle", "BodyRocket", "Rocket_stabilizer1", "Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4", "Rocket_stabilizer007",
+					"Rocket_stabilizer008", "Rocket_stabilizer009", "Rocket_stabilizer010", "SplinePathDeform", "RocketEngine", "RocketEngine001", "RocketEngine002", "RocketEngine003", "RocketEngine004", "RocketEngine005", "RocketEngine006",
+					"RocketEngine007", "RocketEngineBottom", "RocketEngineBottom001", "RocketEngineBottom002", "RocketEngineBottom003", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007",
+					"FloorCockPit", "NoseRocket", "NozzleKeeper", "rotary_engine", "rotary_engine2", "rotary_engine3", "rotary_engine4", "RocketEnginePlut", "RocketEnginePlut001", "RocketEnginePlut002", "RocketEnginePlut003", "RocketEnginePlut004",
+					"RocketEnginePlut005", "RocketEnginePlut006", "RocketEnginePlut007"), ItemModelRocketT8.class);
 		if (Config.PLUTO)
 			if (Config.OLD_ROCKET_MODELS) {
-				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t9", "rocket_t9.obj", ImmutableList.of("Nozzle", "Nozzle001", "Nozzle002", "NozzleKeeper", "NozzleKeeper001", "BodyRocket", "BodyRocket001", "Rocket_stabilizer1",
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t9", ImmutableList.of("Nozzle", "Nozzle001", "Nozzle002", "NozzleKeeper", "NozzleKeeper001", "BodyRocket", "BodyRocket001", "Rocket_stabilizer1",
 						"Rocket_stabilizer2", "Rocket_stabilizer3", "Rocket_stabilizer4", "Rocket_stabilizer007", "Rocket_stabilizer008", "Rocket_stabilizer009", "Rocket_stabilizer010", "Rocket_stabilizer011", "Rocket_stabilizer012",
 						"SplinePathDeform", "RocketEngine", "RocketEngine002", "RocketEngine004", "RocketEngine005", "RocketEngine007", "RocketEngine008", "RocketEngineBottom", "RocketEngineBottom003", "RocketEngineBottom004",
 						"RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007", "RocketEngineBottom008", "FloorCockPit", "Cockoit", "NoseRocket", "rotary_engine", "rotary_engine2", "rotary_engine3", "rotary_engine4",
-						"rotary_engine005", "rotary_engine006", "RocketEnginePlut", "RocketEnginePlut002", "RocketEnginePlut004", "RocketEnginePlut005", "RocketEnginePlut007", "RocketEnginePlut008"), ItemModelRocketT9.class, TRSRTransformation
-						.identity());
+						"rotary_engine005", "rotary_engine006", "RocketEnginePlut", "RocketEnginePlut002", "RocketEnginePlut004", "RocketEnginePlut005", "RocketEnginePlut007", "RocketEnginePlut008"), ItemModelRocketT9.class);
 			} else {
-				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t9_new", "rocket_t9_new.obj",
-						ImmutableList.of("BodyRocket", "Connector", "LampOnSpike", "MainNozzle", "NoseRocket", "NoseRocketMiddle", "SideEngine1", "SideEngine2", "SideEngine3", "SideEngine4", "Spike"), ItemModelRocketT9New.class,
-						TRSRTransformation.identity());
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t9_new",
+						ImmutableList.of("BodyRocket", "Connector", "LampOnSpike", "MainNozzle", "NoseRocket", "NoseRocketMiddle", "SideEngine1", "SideEngine2", "SideEngine3", "SideEngine4", "Spike"), ItemModelRocketT9New.class);
 			}
 		if (Config.ERIS)
 			if (Config.OLD_ROCKET_MODELS) {
-				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t10", "rocket_t10.obj", ImmutableList.of("RocketCockpit", "RoofCockpit", "NoseRocket", "Nozzle001", "NozzleKeeper001", "NozzleKeeper002", "RocketEngine004",
-						"RocketEngine005", "RocketEngine006", "RocketEngine007", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007", "FloorCockPit", "RocketEnginePlut004", "RocketEnginePlut005",
-						"RocketEnginePlut006", "RocketEnginePlut007"), ItemModelRocketT10.class, TRSRTransformation.identity());
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t10", ImmutableList.of("RocketCockpit", "RoofCockpit", "NoseRocket", "Nozzle001", "NozzleKeeper001", "NozzleKeeper002", "RocketEngine004", "RocketEngine005",
+						"RocketEngine006", "RocketEngine007", "RocketEngineBottom004", "RocketEngineBottom005", "RocketEngineBottom006", "RocketEngineBottom007", "FloorCockPit", "RocketEnginePlut004", "RocketEnginePlut005", "RocketEnginePlut006",
+						"RocketEnginePlut007"), ItemModelRocketT10.class);
 			} else {
-				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t10_new", "rocket_t10_new.obj", ImmutableList.of("BigSideWing1", "BigSideWing2", "BodyRocket", "Connector", "LampOnSpike", "MainNozzle", "NoseRocket",
-						"NoseRocketMiddle", "SideEngine1", "SideEngine2", "SideEngine3", "SideEngine3", "SideEngine4", "SideWing1", "SideWing2", "SideWing3", "SideWing4", "Spike"), ItemModelRocketT10New.class, TRSRTransformation.identity());
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t10_new", ImmutableList.of("BigSideWing1", "BigSideWing2", "BodyRocket", "Connector", "LampOnSpike", "MainNozzle", "NoseRocket", "NoseRocketMiddle", "SideEngine1",
+						"SideEngine2", "SideEngine3", "SideEngine3", "SideEngine4", "SideWing1", "SideWing2", "SideWing3", "SideWing4", "Spike"), ItemModelRocketT10New.class);
 			}
 		if (Config.ERIS && Config.KEPLER22B)
-			ClientUtilities.replaceModelDefault(Constants.modID, event, "electric_rocket", "electric_rocket.obj", ImmutableList.of("Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Cylinder007",
-					"Cylinder008", "Cylinder009", "Cylinder010", "Cylinder011", "Cylinder012", "Cylinder013", "Cylinder014", "Cylinder015", "Cylinder016", "Cylinder017", "Cylinder018", "Cylinder019", "Cylinder020", "Cylinder021", "Line001",
-					"Line002", "Torus001", "Torus002", "Torus003", "Torus004", "Torus005", "Torus006", "Torus007", "Torus008", "Tube001"), ItemModelRocketElectricRocket.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefault(Constants.modID, event, "electric_rocket", ImmutableList.of("Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Cylinder007", "Cylinder008", "Cylinder009",
+					"Cylinder010", "Cylinder011", "Cylinder012", "Cylinder013", "Cylinder014", "Cylinder015", "Cylinder016", "Cylinder017", "Cylinder018", "Cylinder019", "Cylinder020", "Cylinder021", "Line001", "Line002", "Torus001", "Torus002",
+					"Torus003", "Torus004", "Torus005", "Torus006", "Torus007", "Torus008", "Tube001"), ItemModelRocketElectricRocket.class);
 
 		if (Config.MARS_ROVER) {
 			for (int i = 0; i < 4; ++i) {
@@ -1382,7 +1301,7 @@ public class ClientProxy extends CommonProxy {
 							"WheelBackRight", "WheelMiddleRight", "WheelFrontLeft", "SolarPlane", "CaseBack1", "CaseBack2", "CaseBack3", "Container", "Container2", "Container3");
 					break;
 				}
-				ClientUtilities.replaceModelDefault(Constants.modID, event, "mars_rover" + (i > 0 ? "_" + i : ""), "mars_rover.obj", objects, ItemModelMarsRover.class, TRSRTransformation.identity());
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "mars_rover" + (i > 0 ? "_" + i : ""), "mars_rover.obj", objects, ItemModelMarsRover.class);
 			}
 		}
 		if (Config.VENUS_ROVER) {
@@ -1409,12 +1328,12 @@ public class ClientProxy extends CommonProxy {
 							"PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003", "RightWheel", "RightWheel001", "LeftWheel", "LeftWheel001", "Container", "Container2", "Container3");
 					break;
 				}
-				ClientUtilities.replaceModelDefault(Constants.modID, event, "venus_rover" + (i > 0 ? "_" + i : ""), "venus_rover.obj", objects, ItemModelVenusRover.class, TRSRTransformation.identity());
+				ClientUtilities.replaceModelDefault(Constants.modID, event, "venus_rover" + (i > 0 ? "_" + i : ""), "venus_rover.obj", objects, ItemModelVenusRover.class);
 			}
 		}
 		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT) {
-			ClientUtilities.replaceModelDefault(Constants.modID, event, "basic_decontamination_unit", "block/decontamination_unit.obj",
-					ImmutableList.of("Body", "Water_Baloons", "AtomizersOne", "AtomizersThree", "AtomizersFive", "AtomizersSix", "AtomizersFour", "The_back_wall", "AtomaziersTwo"), ItemModelDecontaminationUnit.class, TRSRTransformation.identity());
+			ClientUtilities.replaceModelDefaultBlock(Constants.modID, event, "basic_decontamination_unit",
+					ImmutableList.of("Body", "Water_Baloons", "AtomizersOne", "AtomizersThree", "AtomizersFive", "AtomizersSix", "AtomizersFour", "The_back_wall", "AtomaziersTwo"), ItemModelDecontaminationUnit.class);
 		}
 	}
 
