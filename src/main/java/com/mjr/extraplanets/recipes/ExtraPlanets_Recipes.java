@@ -228,7 +228,8 @@ public class ExtraPlanets_Recipes {
 		if (Config.MERCURY) {
 			// Battery
 			if (Config.BATTERIES)
-				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, ExtraPlanets_Items.BATTERY_MERCURY.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), 'R', "dustRedstone", 'C', Items.COAL });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, ExtraPlanets_Items.BATTERY_MERCURY.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T',
+						new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), 'R', "dustRedstone", 'C', Items.COAL });
 
 			// Stone Bricks
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 4, 8), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 2) });
@@ -404,7 +405,8 @@ public class ExtraPlanets_Recipes {
 
 			// Battery
 			if (Config.BATTERIES)
-				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_NICKEL, 1, ExtraPlanets_Items.BATTERY_NICKEL.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 6), 'R', "dustRedstone", 'C', Items.COAL });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_NICKEL, 1, ExtraPlanets_Items.BATTERY_NICKEL.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 6), 'R',
+						"dustRedstone", 'C', Items.COAL });
 			// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.JUPITER_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 0) });
@@ -583,7 +585,8 @@ public class ExtraPlanets_Recipes {
 
 			// Battery
 			if (Config.BATTERIES)
-				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ZINC, 1, ExtraPlanets_Items.BATTERY_ZINC.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'R', "dustRedstone", 'C', Items.COAL });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ZINC, 1, ExtraPlanets_Items.BATTERY_ZINC.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'R',
+						"dustRedstone", 'C', Items.COAL });
 			// Slab's & Stairs
 			if (Config.SLABS_AND_STAIRS) {
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.NEPTUNE_SURFACE_STAIRS, 4, 0), new Object[] { "M  ", "MM ", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 0) });
@@ -800,13 +803,17 @@ public class ExtraPlanets_Recipes {
 		// Machines
 		if (Config.REFINERY_ADVANCED)
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.REFINERY_ADVANCED), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', GCBlocks.refinery, 'Z', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5) });
-		if (Config.REFINERY_ULTIMATE)
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.REFINERY_ULTIMATE), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', ExtraPlanets_Machines.REFINERY_ADVANCED, 'Z', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5) });
-		if (Config.SOLAR_PANELS)
+		if (Config.REFINERY_ULTIMATE) {
+			if (Config.REFINERY_ADVANCED)
+				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.REFINERY_ULTIMATE), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', ExtraPlanets_Machines.REFINERY_ADVANCED, 'Z', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5) });
+			else
+				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.REFINERY_ULTIMATE), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', GCBlocks.refinery, 'Z', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5) });
+		}
+		if (Config.SOLAR_PANELS) {
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.SOLAR_PANEL, 1, 0), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(GCBlocks.solarPanel, 1, 4), 'Z', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 4) });
-		if (Config.SOLAR_PANELS)
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.SOLAR_PANEL, 1, 4),
 					new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(ExtraPlanets_Machines.SOLAR_PANEL, 1, 0), 'Z', new ItemStack(ExtraPlanets_Items.TIER_7_ITEMS, 1, 4) });
+		}
 		if (Config.OXYGEN_COMPRESSOR_ADVANCED) {
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 1, 0), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(GCBlocks.oxygenCompressor, 1, 0), 'Z',
 					new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5) });
@@ -814,17 +821,28 @@ public class ExtraPlanets_Recipes {
 					new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5) });
 		}
 		if (Config.OXYGEN_COMPRESSOR_ULTIMATE) {
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 1, 0), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 1, 0), 'Z',
-					new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 1, 4), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 1, 4), 'Z',
-					new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
+			if (Config.OXYGEN_COMPRESSOR_ADVANCED) {
+				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 1, 0), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 1, 0), 'Z',
+						new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
+				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 1, 4), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 1, 4), 'Z',
+						new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
+			} else {
+				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 1, 0), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(GCBlocks.oxygenCompressor, 1, 0), 'Z',
+						new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
+				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 1, 4), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(GCBlocks.oxygenCompressor, 1, 4), 'Z',
+						new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
+			}
 		}
 		if (Config.FUEL_LOADER_ADVANCED)
 			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED), new Object[] { "XXX", "XZX", "WYW", 'W', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'X',
 					new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 7), 'Y', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 'Z', new ItemStack(GCBlocks.fuelLoader) });
 		if (Config.FUEL_LOADER_ULTIMATE)
-			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE), new Object[] { "XXX", "XZX", "WYW", 'W', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'X',
-					new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'Y', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'Z', new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED) });
+			if (Config.FUEL_LOADER_ADVANCED)
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE), new Object[] { "XXX", "XZX", "WYW", 'W', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'X',
+						new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'Y', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'Z', new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED) });
+			else
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE), new Object[] { "XXX", "XZX", "WYW", 'W', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'X',
+						new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'Y', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'Z', new ItemStack(GCBlocks.fuelLoader) });
 		if (Config.VEHICLE_CHARGER)
 			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Machines.VEHICLE_CHARGER), new Object[] { "WXW", "WXW", "WXW", 'W', "ingotDesh", 'X', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
 
