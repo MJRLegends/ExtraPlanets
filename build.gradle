@@ -30,7 +30,7 @@ repositories {
 
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "1.11.2-0.5.9"
+version = "1.11.2-0.6.0"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -53,7 +53,7 @@ dependencies {
 		"GalacticraftCore-Dev-1.11.2-4.0.1.132.jar",
 		"Galacticraft-Planets-Dev-1.11.2-4.0.1.132.jar",
 		"MicdoodleCore-Dev-1.11.2-4.0.1.132.jar",
-		"MJRLegendsLib-1.11.2-1.0.3-dev.jar"
+		"MJRLegendsLib-1.11.2-1.0.4-dev.jar"
 	)
 	runtime "mezz.jei:jei_${minecraft_version}:${jei_version}"
     runtime "codechicken:NotEnoughItems:${minecraft_version}-${nei_version}:deobf"
@@ -72,6 +72,7 @@ processResources
         exclude 'mcmod.info'
     }
 }
+
 task signJar(type: SignJar, dependsOn: reobfJar) {
     onlyIf {
         project.hasProperty('keyStore')

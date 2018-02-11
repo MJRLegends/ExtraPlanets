@@ -15,6 +15,25 @@
 
 
 ===========================================Released Updates===========================================
+v0.6.0
+*Fixed #240
+*Fixed issue #241
+*Added missing ore dict entries
+*Fixed issue #232
+*Added config options for ore generation on planets/moons
+*Fixed missing gravel generation on Rhea
+*Fixed null pointer on tile entities for getDisplayName
+*Clean up/Fixes/Removed uneeded code
+*Fixed custom name with Advanced Fuel Loader
+*Refactoring of more code to MJRLegendsLib (1/2)
+*Refactoring of more code to MJRLegendsLib (2/2)
+*Clean up/Fixed Formatting
+*Fixed missing machine for commit, Fixed null pointer on tile entities for getDisplayName
+*Refactor code in a few Item classes to MJRLegendsLib
+*Refactor some code from ClientProxy class in to MJRLegendsLib
+*Renamed Decontamination Unit model file
+*Set required GC version requirement to Build 133
+
 v0.5.9
 *Fixed issue #226
 *Fixed issue #227
