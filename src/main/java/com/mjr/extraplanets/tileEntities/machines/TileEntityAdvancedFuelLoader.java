@@ -164,7 +164,7 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 
 	@Override
 	public boolean hasCustomName() {
-		return false;
+		return true;
 	}
 
 	@Override
