@@ -14,7 +14,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fluids.Fluid;
@@ -326,11 +325,6 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 			return direction == pipeSide || direction == pipeSide.getOpposite() || direction == EnumFacing.DOWN;
 		}
 		return false;
-	}
-
-	@Override
-	public ITextComponent getDisplayName() {
-		return null;
 	}
 
 	private EnumFacing getInputPipe() {

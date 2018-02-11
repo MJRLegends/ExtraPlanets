@@ -11,7 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
@@ -214,10 +213,5 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 			return state.getValue(BasicDecrystallizer.FACING);
 		}
 		return EnumFacing.NORTH;
-	}
-
-	@Override
-	public ITextComponent getDisplayName() {
-		return null;
 	}
 }

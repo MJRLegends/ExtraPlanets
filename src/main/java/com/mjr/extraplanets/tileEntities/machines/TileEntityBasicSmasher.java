@@ -11,7 +11,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -207,10 +206,5 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 			return state.getValue(BasicSmasher.FACING);
 		}
 		return EnumFacing.NORTH;
-	}
-
-	@Override
-	public ITextComponent getDisplayName() {
-		return null;
 	}
 }
