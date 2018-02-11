@@ -37,7 +37,29 @@ public class Config {
 	public static boolean GENERATE_JUITPER_SKY_FEATURE;
 	public static boolean JUITPER_LIGHTING;
 	public static boolean CUSTOM_FOG;
-
+	
+	public static boolean GENERATE_ORES_MERCURY;
+	public static boolean GENERATE_ORES_CERES;
+	public static boolean GENERATE_ORES_JUPITER;
+	public static boolean GENERATE_ORES_SATURN;
+	public static boolean GENERATE_ORES_URANUS;
+	public static boolean GENERATE_ORES_NEPTUNE;
+	public static boolean GENERATE_ORES_PLUTO;
+	public static boolean GENERATE_ORES_ERIS;
+	public static boolean GENERATE_ORES_KEPLER22B;
+	public static boolean GENERATE_ORES_CALLISTO;
+	public static boolean GENERATE_ORES_DEIMOS;
+	public static boolean GENERATE_ORES_EUROPA;
+	public static boolean GENERATE_ORES_GANYMEDE;
+	public static boolean GENERATE_ORES_IAPETUS;
+	public static boolean GENERATE_ORES_IO;
+	public static boolean GENERATE_ORES_OBERON;
+	public static boolean GENERATE_ORES_PHOBOS;
+	public static boolean GENERATE_ORES_RHEA;
+	public static boolean GENERATE_ORES_TITAN;
+	public static boolean GENERATE_ORES_TITANIA;
+	public static boolean GENERATE_ORES_TRITON;
+	
 	public static boolean ITEMS_CARBON;
 	public static boolean ITEMS_PALLADIUM;
 	public static boolean ITEMS_MAGNESIUM;
@@ -421,6 +443,28 @@ public class Config {
 		JUITPER_LIGHTING = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable & remove Lighting & Lighting Effects on Jupiter").getBoolean(true);
 		CUSTOM_FOG = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
 				.getBoolean(true);
+		
+		GENERATE_ORES_MERCURY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Mercury", true, "Setting this option to false will disable ore gen for Mercury").getBoolean(true);
+		GENERATE_ORES_CERES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Ceres", true, "Setting this option to false will disable ore gen for Ceres").getBoolean(true);
+		GENERATE_ORES_JUPITER = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Jupiter", true, "Setting this option to false will disable ore gen for Jupiter").getBoolean(true);
+		GENERATE_ORES_SATURN = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Saturn", true, "Setting this option to false will disable ore gen for Saturn").getBoolean(true);
+		GENERATE_ORES_URANUS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Uranus", true, "Setting this option to false will disable ore gen for Uranus").getBoolean(true);
+		GENERATE_ORES_NEPTUNE = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Neptune", true, "Setting this option to false will disable ore gen for Neptune").getBoolean(true);
+		GENERATE_ORES_PLUTO = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Pluto", true, "Setting this option to false will disable ore gen for Pluto").getBoolean(true);
+		GENERATE_ORES_ERIS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Eris", true, "Setting this option to false will disable ore gen for Eris").getBoolean(true);
+		GENERATE_ORES_KEPLER22B = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Kepler22b", true, "Setting this option to false will disable ore gen for Kepler22b").getBoolean(true);
+		GENERATE_ORES_CALLISTO = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Callisto", true, "Setting this option to false will disable ore gen for Callisto").getBoolean(true);
+		GENERATE_ORES_DEIMOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Deimos", true, "Setting this option to false will disable ore gen for Deimos").getBoolean(true);
+		GENERATE_ORES_EUROPA = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Europa", true, "Setting this option to false will disable ore gen for Europa").getBoolean(true);
+		GENERATE_ORES_GANYMEDE = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Ganymede", true, "Setting this option to false will disable ore gen for Ganymede").getBoolean(true);
+		GENERATE_ORES_IAPETUS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Iapetus", true, "Setting this option to false will disable ore gen for Iapetus").getBoolean(true);
+		GENERATE_ORES_IO = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Io", true, "Setting this option to false will disable ore gen for Io").getBoolean(true);
+		GENERATE_ORES_OBERON = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Oberon", true, "Setting this option to false will disable ore gen for Oberon").getBoolean(true);
+		GENERATE_ORES_PHOBOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Phobos", true, "Setting this option to false will disable ore gen for Phobos").getBoolean(true);
+		GENERATE_ORES_RHEA = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Rhea", true, "Setting this option to false will disable ore gen for Rhea").getBoolean(true);
+		GENERATE_ORES_TITAN = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Titan", true, "Setting this option to false will disable ore gen for Titan").getBoolean(true);
+		GENERATE_ORES_TITANIA = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Titania", true, "Setting this option to false will disable ore gen for Titania").getBoolean(true);
+		GENERATE_ORES_TRITON = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Triton", true, "Setting this option to false will disable ore gen for Triton").getBoolean(true);
 
 		TRITON = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Triton", true, "Setting this option to false will remove Triton & all the related items/block/tools/armour/space stations!").getBoolean(true);
 		EUROPA = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Europa", true, "Setting this option to false will remove Europa & all the related items/block/tools/armour/space stations!").getBoolean(true);
