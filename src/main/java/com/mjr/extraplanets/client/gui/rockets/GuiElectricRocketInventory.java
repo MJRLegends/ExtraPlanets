@@ -5,7 +5,6 @@ import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -14,6 +13,7 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.extraplanets.inventory.rockets.ContainerElectricRocketInventory;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SideOnly(Side.CLIENT)
@@ -30,7 +30,7 @@ public class GuiElectricRocketInventory extends GuiContainerGC {
 	private final EnumRocketType rocketType;
 
 	public GuiElectricRocketInventory(IInventory par1IInventory, IInventory par2IInventory, EnumRocketType rocketType) {
-		super(new ContainerElectricRocketInventory(par1IInventory, par2IInventory, rocketType, FMLClientHandler.instance().getClient().thePlayer));
+		super(new ContainerElectricRocketInventory(par1IInventory, par2IInventory, rocketType, MCUtilities.getClient().thePlayer));
 		this.upperChestInventory = par1IInventory;
 		this.allowUserInput = false;
 		this.ySize = rocketType.getInventorySpace() <= 3 ? 145 : 142 + rocketType.getInventorySpace() * 2;

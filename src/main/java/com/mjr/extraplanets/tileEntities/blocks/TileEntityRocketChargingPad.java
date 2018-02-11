@@ -19,7 +19,6 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -29,6 +28,7 @@ import com.mjr.extraplanets.api.IPoweredDockable;
 import com.mjr.extraplanets.blocks.BlockCustomMulti;
 import com.mjr.extraplanets.blocks.BlockCustomMulti.EnumBlockMultiType;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class TileEntityRocketChargingPad extends TileEntityMulti implements IMultiBlock, IPowerable, IPowerDock, ICargoEntity {
 	public TileEntityRocketChargingPad() {
@@ -126,7 +126,7 @@ public class TileEntityRocketChargingPad extends TileEntityMulti implements IMul
 
 			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK && stateAt.getValue(BlockCustomMulti.MULTI_TYPE) == EnumBlockMultiType.ROCKET_POWER_CHARGING_PAD) {
 				if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
-					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, this.worldObj.getBlockState(pos));
+					MCUtilities.getClient().effectRenderer.addBlockDestroyEffects(pos, this.worldObj.getBlockState(pos));
 				}
 				this.worldObj.destroyBlock(pos, false);
 			}

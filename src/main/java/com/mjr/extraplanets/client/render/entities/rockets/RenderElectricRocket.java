@@ -8,7 +8,6 @@ import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -17,6 +16,7 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketElectricRocket;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocket;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
@@ -31,7 +31,7 @@ public class RenderElectricRocket extends Render<EntityElectricRocket> {
 	private void updateModel() {
 		if (this.rocketModel == null) {
 			ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "electric_rocket", "inventory");
-			this.rocketModel = (ItemModelRocketElectricRocket) FMLClientHandler.instance().getClient().getRenderItem().getItemModelMesher().getModelManager().getModel(modelResourceLocation);
+			this.rocketModel = (ItemModelRocketElectricRocket) MCUtilities.getClient().getRenderItem().getItemModelMesher().getModelManager().getModel(modelResourceLocation);
 		}
 	}
 

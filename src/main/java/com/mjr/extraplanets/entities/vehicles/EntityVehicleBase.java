@@ -12,7 +12,6 @@ import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.TransformerHooks;
 import micdoodle8.mods.galacticraft.core.entities.IControllableEntity;
-import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import micdoodle8.mods.galacticraft.core.network.IPacketReceiver;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.network.PacketDynamic;
@@ -38,10 +37,11 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityVehicleBase extends Entity implements IInventoryDefaults, IPacketReceiver, IDockable, IControllableEntity, IEntityFullSync {
@@ -237,7 +237,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	@Override
 	public void setPositionAndRotation2(double x, double y, double z, float yaw, float pitch, int posRotationIncrements, boolean b) {
 		if (this.riddenByEntity != null) {
-			if (this.riddenByEntity instanceof EntityPlayer && FMLClientHandler.instance().getClient().thePlayer.equals(this.riddenByEntity)) {
+			if (this.riddenByEntity instanceof EntityPlayer && MCUtilities.getClient().thePlayer.equals(this.riddenByEntity)) {
 			} else {
 				this.boatPosRotationIncrements = posRotationIncrements + 5;
 				this.boatX = x;
@@ -265,7 +265,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 			this.wheelRotationZ = Math.max(-30.0F, Math.min(30.0F, this.wheelRotationZ * 0.9F));
 		}
 
-		if (this.worldObj.isRemote && !FMLClientHandler.instance().getClient().thePlayer.equals(this.worldObj.getClosestPlayerToEntity(this, -1))) {
+		if (this.worldObj.isRemote && !MCUtilities.getClient().thePlayer.equals(this.worldObj.getClosestPlayerToEntity(this, -1))) {
 			double x;
 			double y;
 			double var12;

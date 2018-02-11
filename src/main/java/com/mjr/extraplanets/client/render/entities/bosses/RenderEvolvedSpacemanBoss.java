@@ -107,13 +107,13 @@ public class RenderEvolvedSpacemanBoss extends Render<EntityEvolvedSpacemanBoss>
 
 	@Override
 	public void doRender(EntityEvolvedSpacemanBoss entity, double x, double y, double z, float entityYaw, float partialTicks) {
-		//float pitch = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * partialTicks;
+		// float pitch = entity.prevRotationPitch + (entity.rotationPitch - entity.prevRotationPitch) * partialTicks;
 		GlStateManager.disableRescaleNormal();
 		GlStateManager.pushMatrix();
 		GlStateManager.translate((float) x, (float) y, (float) z);
 		GlStateManager.scale(4.2F, 4.2F, 4.2F);
 		GlStateManager.rotate(180.0F - entityYaw, 0.0F, 1.0F, 0.0F);
-		//GlStateManager.rotate(-pitch, 0.0F, 0.0F, 1.0F);
+		// GlStateManager.rotate(-pitch, 0.0F, 0.0F, 1.0F);
 
 		this.updateModel();
 		this.bindTexture(TextureMap.locationBlocksTexture);

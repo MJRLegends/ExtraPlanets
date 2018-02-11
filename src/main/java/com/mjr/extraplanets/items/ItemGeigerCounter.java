@@ -8,7 +8,6 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -17,6 +16,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemGeigerCounter extends Item {
@@ -51,8 +51,8 @@ public class ItemGeigerCounter extends Item {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			playerMP.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
-					+ (int) stats.getRadiationLevel() + "%"));
+			PlayerUtilties.sendMessage(playerMP,
+					"" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
 		}
 		return itemStack;
 	}

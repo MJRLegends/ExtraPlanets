@@ -97,10 +97,10 @@ public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 
 	@Override
 	@SideOnly(Side.CLIENT)
-    public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot) {
+	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot) {
 		return getArmorModel(entityLiving, itemStack, armorSlot, null);
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot, ModelBiped _default) {

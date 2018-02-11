@@ -9,7 +9,6 @@ import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -18,6 +17,7 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT10;
 import com.mjr.extraplanets.entities.rockets.EntityTier10Rocket;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
@@ -32,7 +32,7 @@ public class RenderTier10Rocket extends Render<EntityTier10Rocket> {
 	private void updateModel() {
 		if (this.rocketModel == null) {
 			ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t10", "inventory");
-			this.rocketModel = (ItemModelRocketT10) FMLClientHandler.instance().getClient().getRenderItem().getItemModelMesher().getModelManager().getModel(modelResourceLocation);
+			this.rocketModel = (ItemModelRocketT10) MCUtilities.getClient().getRenderItem().getItemModelMesher().getModelManager().getModel(modelResourceLocation);
 		}
 	}
 

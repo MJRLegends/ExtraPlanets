@@ -7,15 +7,16 @@ import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
 
+import com.mjr.mjrlegendslib.util.MCUtilities;
+
 @SideOnly(Side.CLIENT)
 public class OverlayElectricLaunchCountdown extends Overlay {
-	private static Minecraft minecraft = FMLClientHandler.instance().getClient();
+	private static Minecraft minecraft = MCUtilities.getClient();
 
 	public static void renderCountdownOverlay() {
 		GlStateManager.disableLighting();

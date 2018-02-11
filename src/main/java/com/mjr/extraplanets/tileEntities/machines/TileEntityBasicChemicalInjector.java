@@ -203,7 +203,7 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 
 	@Override
 	public boolean shouldUseEnergy() {
-		return this.canProcess();	
+		return this.canProcess();
 	}
 
 	@Override

@@ -30,7 +30,7 @@ public class UranusBiomes extends BiomeGenBaseGC {
 	@Override
 	public BiomeDecorator createBiomeDecorator() {
 		return new BiomeDecoratorUranusOther();
-	}	
+	}
 
 	@Override
 	public void genTerrainBlocks(World world, Random rand, ChunkPrimer chunk, int x, int z, double stoneNoise) {

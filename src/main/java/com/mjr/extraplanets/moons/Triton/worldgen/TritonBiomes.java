@@ -37,7 +37,7 @@ public class TritonBiomes extends BiomeGenBaseGC {
 		return (BiomeDecoratorTritonOther) this.theBiomeDecorator;
 	}
 
-	@Override	
+	@Override
 	public void genTerrainBlocks(World world, Random rand, ChunkPrimer chunk, int x, int z, double stoneNoise) {
 		generateTritonBiomeTerrain(rand, chunk, x, z, stoneNoise);
 	}

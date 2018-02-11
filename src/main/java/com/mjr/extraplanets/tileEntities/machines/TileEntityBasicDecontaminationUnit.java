@@ -10,7 +10,6 @@ import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti.EnumBlockMultiType;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlock;
-import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
@@ -23,7 +22,6 @@ import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IChatComponent;
@@ -36,6 +34,8 @@ import com.mjr.extraplanets.blocks.BlockDecontaminationUnitFake;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock implements IMultiBlock, IInventoryDefaults, ISidedInventory {
@@ -66,21 +66,21 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 					if (level <= 0) {
 						stats.setRadiationLevel(0);
 						if (this.ticks % 40 == 0)
-							player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", You currently have no radiation damage to take!"));
+							PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", You currently have no radiation damage to take!");
 					} else {
 						this.storage.setEnergyStored(0);
 						stats.setRadiationLevel(stats.getRadiationLevel() - level);
-						player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " 10%"));
-						player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message")
-								+ ": " + (int) stats.getRadiationLevel() + "%"));
+						PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " 10%");
+						PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
+								+ (int) stats.getRadiationLevel() + "%");
 					}
 				} else if (this.ticks % 40 == 0)
-					player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD
-							+ ", You need to add more power to use this! The machine needs 1,000,000 gJ or 625,000 RF per use!"));
+					PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD
+							+ ", You need to add more power to use this! The machine needs 1,000,000 gJ or 625,000 RF per use!");
 			} else if (this.ticks % 40 == 0)
 				for (int i = 0; i < containedEntities.size(); i++) {
 					EntityPlayerMP player = (containedEntities.get(i));
-					player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", You currently have to many people within the machine! Only 1 Player is allowed!"));
+					PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", You currently have to many people within the machine! Only 1 Player is allowed!");
 				}
 		}
 		super.update();

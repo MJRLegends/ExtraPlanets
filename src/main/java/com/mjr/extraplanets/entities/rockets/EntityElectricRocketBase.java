@@ -206,7 +206,8 @@ public abstract class EntityElectricRocketBase extends EntityElectricAutoRocket 
 			return true;
 		} else if (par1EntityPlayer instanceof EntityPlayerMP) {
 			if (!this.worldObj.isRemote) {
-				ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket.C_DISPLAY_ROCKET_CONTROLS, this.worldObj.provider.getDimensionId(), new Object[] {}), (EntityPlayerMP) par1EntityPlayer);
+				ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket.C_DISPLAY_ROCKET_CONTROLS, this.worldObj.provider.getDimensionId(), new Object[] {}),
+						(EntityPlayerMP) par1EntityPlayer);
 				GCPlayerStats stats = GCPlayerStats.get(par1EntityPlayer);
 				stats.setChatCooldown(0);
 				par1EntityPlayer.mountEntity(this);

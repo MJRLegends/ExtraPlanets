@@ -16,7 +16,6 @@ import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti.EnumBlockMultiType;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectricalSource;
-import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
@@ -33,12 +32,13 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.machines.BlockSolar;
+import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntitySolar extends TileBaseUniversalElectricalSource implements IMultiBlock, IDisableableMachine, IInventoryDefaults, ISidedInventory, IConnector {
@@ -318,7 +318,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 				EnumBlockMultiType type = (EnumBlockMultiType) stateAt.getValue(BlockMulti.MULTI_TYPE);
 				if ((type == EnumBlockMultiType.SOLAR_PANEL_0 || type == EnumBlockMultiType.SOLAR_PANEL_1)) {
 					if (this.worldObj.isRemote && this.worldObj.rand.nextDouble() < 0.1D) {
-						FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, GCBlocks.solarPanel.getDefaultState());
+						MCUtilities.getClient().effectRenderer.addBlockDestroyEffects(pos, GCBlocks.solarPanel.getDefaultState());
 					}
 
 					this.worldObj.setBlockToAir(pos);

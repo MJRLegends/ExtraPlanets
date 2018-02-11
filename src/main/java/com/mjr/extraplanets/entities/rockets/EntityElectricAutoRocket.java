@@ -15,7 +15,6 @@ import micdoodle8.mods.galacticraft.core.blocks.BlockLandingPadFull;
 import micdoodle8.mods.galacticraft.core.client.sounds.SoundUpdaterRocket;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.event.EventLandingPadRemoval;
-import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import micdoodle8.mods.galacticraft.core.network.PacketDynamic;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityLandingPad;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
@@ -45,6 +44,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.api.IPoweredLandable;
+import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBase implements IPoweredLandable, IInventoryDefaults, IEntityNoisy {

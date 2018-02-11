@@ -18,7 +18,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
@@ -53,6 +52,7 @@ import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.extraplanets.util.DamageSourceEP;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class MainHandlerServer {
@@ -318,9 +318,9 @@ public class MainHandlerServer {
 				stats.setRadiationLevel(0);
 			else {
 				stats.setRadiationLevel(stats.getRadiationLevel() - level);
-				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " 5%"));
-				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
-						+ (int) stats.getRadiationLevel() + "%"));
+				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " 5%");
+				PlayerUtilties.sendMessage(player,
+						"" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
 			}
 		}
 	}
@@ -330,10 +330,10 @@ public class MainHandlerServer {
 		if (event.player.worldObj.isRemote == false) {
 			if (event.player.worldObj.provider instanceof WorldProviderRealisticSpace) {
 				EntityPlayer player = event.player;
-				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " "
-						+ ((WorldProviderRealisticSpace) event.player.worldObj.provider).getSolarRadiationLevel() + "% " + TranslateUtilities.translate("gui.radiation.type.message") + ""));
-				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_GREEN + ", " + TranslateUtilities.translate("gui.radiation.reverse.message") + "!"));
-				player.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.cancel.message") + "!"));
+				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " "
+						+ ((WorldProviderRealisticSpace) event.player.worldObj.provider).getSolarRadiationLevel() + "% " + TranslateUtilities.translate("gui.radiation.type.message") + "");
+				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_GREEN + ", " + TranslateUtilities.translate("gui.radiation.reverse.message") + "!");
+				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.cancel.message") + "!");
 			}
 		}
 	}

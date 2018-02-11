@@ -37,7 +37,7 @@ public class Config {
 	public static boolean GENERATE_JUITPER_SKY_FEATURE;
 	public static boolean JUITPER_LIGHTING;
 	public static boolean CUSTOM_FOG;
-	
+
 	public static boolean GENERATE_ORES_MERCURY;
 	public static boolean GENERATE_ORES_CERES;
 	public static boolean GENERATE_ORES_JUPITER;
@@ -59,7 +59,7 @@ public class Config {
 	public static boolean GENERATE_ORES_TITAN;
 	public static boolean GENERATE_ORES_TITANIA;
 	public static boolean GENERATE_ORES_TRITON;
-	
+
 	public static boolean ITEMS_CARBON;
 	public static boolean ITEMS_PALLADIUM;
 	public static boolean ITEMS_MAGNESIUM;
@@ -252,7 +252,7 @@ public class Config {
 	public static int KEPLER22B_IRON_PLAINS_BIOME_ID;
 	public static int KEPLER22B_GOLD_PLAINS_BIOME_ID;
 	public static int KEPLER22B_EMERALD_PLAINS_BIOME_ID;
-	
+
 	public static boolean ORE_DICTIONARY;
 	public static boolean ORE_DICTIONARY_INGOTS;
 	public static boolean ORE_DICTIONARY_OTHER;
@@ -399,7 +399,7 @@ public class Config {
 		NUCLEAR_BOMB = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Nuclear Bomb", true, "This option will disable & remove the Nuclear Bomb").getBoolean(true);
 		FIRE_BOMB = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Fire Bomb", true, "This option will disable & remove the Fire Bomb").getBoolean(true);
 		VEHICLE_CHARGER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Vehicle Charger", true, "This option will disable & remove the Vehicle Charger").getBoolean(true);
-				
+
 		BASIC_DECRYSTALLIZER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Decrystallizer", true, "This option will disable & remove the Basic Decrystallizer").getBoolean(true);
 		BASIC_CRYSTALLIZER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Crystallizer", true, "This option will disable & remove the Basic Crystallizer").getBoolean(true);
 		BASIC_SMASHER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Block Smasher", true, "This option will disable & remove the Basic Block Smasher").getBoolean(true);
@@ -410,25 +410,30 @@ public class Config {
 		BASIC_DECONTAMINATION_UNIT = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Decontamination Unit", true, "This option will disable & remove the Basic Decontamination Unit").getBoolean(true);
 
 		MOB_SUFFOCATION = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mob Suffocation", true, "Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
-		USE_DEFAULT_BOSSES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Setting this option to false will disable & remove all custom bosses and will replace them with Creeper Bosses!").getBoolean(
-				false);
+		USE_DEFAULT_BOSSES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Setting this option to false will disable & remove all custom bosses and will replace them with Creeper Bosses!")
+				.getBoolean(false);
 
-		GENERATE_KEPLER22B_DUNGEONS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Vanilla Style Dungeons on Kepler22b", true, "Setting this option to false will disable & remove Vanilla Style Dungeons from generating on Kepler22b")
-				.getBoolean(true);
-		GENERATE_KEPLER22B_SMALL_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Small Trees on Kepler22b", true, "Setting this option to false will disable & remove Small Trees from generating on Kepler22b").getBoolean(true);
-		GENERATE_KEPLER22B_NO_LEAF_SMALL_TREES = config
-				.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate No Leaf Small Trees on Kepler22b", true, "Setting this option to false will disable & remove No Leaf Small Trees from generating on Kepler22b").getBoolean(true);
-		GENERATE_KEPLER22B_NO_LEAF_BIG_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate No Leaf Big Trees on Kepler22b", true, "Setting this option to false will disable & remove No Leaf Big Trees from generating on Kepler22b")
-				.getBoolean(true);
-		GENERATE_KEPLER22B_SPHERES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Material Spheres on Kepler22b", true, "Setting this option to false will disable & remove Material Spheres from generating on Kepler22b").getBoolean(true);
-		GENERATE_KEPLER22B_MATERIAL_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Material Trees on Kepler22b", true, "Setting this option to false will disable & remove Material Trees from generating on Kepler22b").getBoolean(
+		GENERATE_KEPLER22B_DUNGEONS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Vanilla Style Dungeons on Kepler22b", true,
+				"Setting this option to false will disable & remove Vanilla Style Dungeons from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_SMALL_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Small Trees on Kepler22b", true, "Setting this option to false will disable & remove Small Trees from generating on Kepler22b").getBoolean(
 				true);
-		GENERATE_KEPLER22B_CANDY_CANES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Candy Canes on Kepler22b", true, "Setting this option to false will disable & remove Candy Canes from generating on Kepler22b").getBoolean(true);
-		GENERATE_KEPLER22B_COOKIE_ROCKS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Cookie Rocks on Kepler22b", true, "Setting this option to false will disable & remove Cookie Rocks from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_NO_LEAF_SMALL_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate No Leaf Small Trees on Kepler22b", true,
+				"Setting this option to false will disable & remove No Leaf Small Trees from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_NO_LEAF_BIG_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate No Leaf Big Trees on Kepler22b", true,
+				"Setting this option to false will disable & remove No Leaf Big Trees from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_SPHERES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Material Spheres on Kepler22b", true, "Setting this option to false will disable & remove Material Spheres from generating on Kepler22b")
+				.getBoolean(true);
+		GENERATE_KEPLER22B_MATERIAL_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Material Trees on Kepler22b", true, "Setting this option to false will disable & remove Material Trees from generating on Kepler22b")
+				.getBoolean(true);
+		GENERATE_KEPLER22B_CANDY_CANES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Candy Canes on Kepler22b", true, "Setting this option to false will disable & remove Candy Canes from generating on Kepler22b").getBoolean(
+				true);
+		GENERATE_KEPLER22B_COOKIE_ROCKS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Cookie Rocks on Kepler22b", true, "Setting this option to false will disable & remove Cookie Rocks from generating on Kepler22b")
+				.getBoolean(true);
 		GENERATE_KEPLER22B_HUTS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Huts on Kepler22b", true, "Setting this option to false will disable & remove Huts from generating on Kepler22b").getBoolean(true);
 		GENERATE_KEPLER22B_TOWERS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Towers on Kepler22b", true, "Setting this option to false will disable & remove Towers from generating on Kepler22b").getBoolean(true);
 		GENERATE_KEPLER22B_BIG_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Big Trees on Kepler22b", true, "Setting this option to false will disable & remove Big Trees from generating on Kepler22b").getBoolean(true);
-		GENERATE_JUPITER_BASIC_HIDEOUTS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Basic Hideouts on Jupiter", true, "Setting this option to false will disable & remove Basic Hideouts from generating on Jupiter").getBoolean(true);
+		GENERATE_JUPITER_BASIC_HIDEOUTS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Basic Hideouts on Jupiter", true, "Setting this option to false will disable & remove Basic Hideouts from generating on Jupiter")
+				.getBoolean(true);
 		GENERATE_IO_VOLCANOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanos on Io", true, "Setting this option to false will disable & remove Volcanos from generating on Io").getBoolean(true);
 		GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Frozen Nitrongen Piles on Neptune", true,
 				"Setting this option to false will disable & remove Frozen Nitrongen Piles from generating on Neptune").getBoolean(true);
@@ -440,7 +445,7 @@ public class Config {
 		JUITPER_LIGHTING = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable & remove Lighting & Lighting Effects on Jupiter").getBoolean(true);
 		CUSTOM_FOG = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
 				.getBoolean(true);
-		
+
 		GENERATE_ORES_MERCURY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Mercury", true, "Setting this option to false will disable ore gen for Mercury").getBoolean(true);
 		GENERATE_ORES_CERES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Ceres", true, "Setting this option to false will disable ore gen for Ceres").getBoolean(true);
 		GENERATE_ORES_JUPITER = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Jupiter", true, "Setting this option to false will disable ore gen for Jupiter").getBoolean(true);
@@ -643,8 +648,8 @@ public class Config {
 		NEI_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable NEI Recipe support", true, "Setting this to false will disable & remove the JEI Support for Custom Machines/Rockets/Vehicles").getBoolean(true);
 		JEI_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable JEI Recipe support", true, "Setting this to false will disable & remove the NEI Support for Custom Machines/Rockets/Vehicles").getBoolean(true);
 
-		ORE_DICTIONARY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of All Planet/Moons Ores to the Ore Dictionary", true, "Setting this to false will disable & remove all Ore Dictionary Support for Planet and Moon Ores!").getBoolean(
-				true);
+		ORE_DICTIONARY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of All Planet/Moons Ores to the Ore Dictionary", true, "Setting this to false will disable & remove all Ore Dictionary Support for Planet and Moon Ores!")
+				.getBoolean(true);
 		ORE_DICTIONARY_INGOTS = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of all Ingots to the Ore Dictionary", true, "Setting this to false will disable & remove all Ore Dictionary Support for All Ingots!").getBoolean(true);
 		ORE_DICTIONARY_OTHER = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of all Items excluding Ingots to the Ore Dictionary", true,
 				"Setting this to false will disable & remove all Ore Dictionary Support for All needed Items excluding Ingots!").getBoolean(true);
@@ -670,9 +675,9 @@ public class Config {
 		CUSTOM_GALAXIES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Custom Galaxies on Celestaial Selection Screen", true,
 				"Setting this option to false will disable & remove the Custom Galaxies on Celestaial Selection Screen (Note: Will get disabled by the 'Use Custom Galaxy Map/Celestaial Selection Screen' option)").getBoolean(true);
 
-		REGISTER_BIOME_TYPES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable registering of Biomes Types for ExtraPlanets biomes", true,
-				"Setting this option to false, will disable biome types being assigned to ExtraPlanets biomes").getBoolean(true);
-		
+		REGISTER_BIOME_TYPES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable registering of Biomes Types for ExtraPlanets biomes", true, "Setting this option to false, will disable biome types being assigned to ExtraPlanets biomes")
+				.getBoolean(true);
+
 		MERCURY_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Mercury Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		CERES_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Ceres Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		JUPITER_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Jupiter Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
@@ -740,7 +745,7 @@ public class Config {
 		ConfigCategory configDimensionSettings = config.getCategory(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS);
 		configDimensionSettings.setComment("Dimension Settings");
 		list.add(new ConfigElement(configDimensionSettings));
-		
+
 		ConfigCategory configBiomeIDs = config.getCategory(Constants.CONFIG_CATEGORY_BIOME_IDS);
 		configBiomeIDs.setComment("Biome IDs;");
 		list.add(new ConfigElement(configBiomeIDs));

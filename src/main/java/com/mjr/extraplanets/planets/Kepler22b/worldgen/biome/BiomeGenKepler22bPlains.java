@@ -19,7 +19,7 @@ import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 public class BiomeGenKepler22bPlains extends Kepler22bBiomes {
 	public BiomeGenKepler22bPlains(int var1) {
 		super(var1);
-		if(Config.REGISTER_BIOME_TYPES)
+		if (Config.REGISTER_BIOME_TYPES)
 			BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD);
 		this.topBlock = ExtraPlanets_Blocks.KEPLER22B_GRASS_GREEN.getDefaultState();
 		this.fillerBlock = ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState();
