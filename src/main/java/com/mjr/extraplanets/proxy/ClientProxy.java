@@ -9,8 +9,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.client.model.TRSRTransformation;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -221,7 +219,7 @@ public class ClientProxy extends CommonProxy {
 
 		// Register Client Key Handler
 		RegisterUtilities.registerEventHandler(new KeyHandlerClient());
-		ClientRegistry.registerKeyBinding(KeyHandlerClient.openPowerGUI);
+		ClientUtilities.registerKeyBinding(KeyHandlerClient.openPowerGUI);
 
 		// Register TileEntity Special Renderers
 		renderBlocksTileEntitySpecialRenderers();
@@ -361,83 +359,83 @@ public class ClientProxy extends CommonProxy {
 	private void registerEntityRenders() {
 		if (Config.MERCURY) {
 			if (Config.USE_DEFAULT_BOSSES)
-				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossMercury.class, (RenderManager manager) -> new RenderCreeperBossMercury(manager));
+				ClientUtilities.registerEntityRenderer(EntityCreeperBossMercury.class, (RenderManager manager) -> new RenderCreeperBossMercury(manager));
 			else
-				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedMagmaCubeBoss.class, (RenderManager manager) -> new RenderEvolvedMagmaCubeBoss(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityMercuryLander.class, (RenderManager manager) -> new RenderMercuryLander(manager));
+				ClientUtilities.registerEntityRenderer(EntityEvolvedMagmaCubeBoss.class, (RenderManager manager) -> new RenderEvolvedMagmaCubeBoss(manager));
+			ClientUtilities.registerEntityRenderer(EntityMercuryLander.class, (RenderManager manager) -> new RenderMercuryLander(manager));
 		}
 		if (Config.JUPITER) {
 			if (Config.USE_DEFAULT_BOSSES)
-				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossJupiter.class, (RenderManager manager) -> new RenderCreeperBossJupiter(manager));
+				ClientUtilities.registerEntityRenderer(EntityCreeperBossJupiter.class, (RenderManager manager) -> new RenderCreeperBossJupiter(manager));
 			else
-				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedFireBatBoss.class, (RenderManager manager) -> new RenderEvolvedFireBatBoss(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityJupiterLander.class, (RenderManager manager) -> new RenderJupiterLander(manager));
+				ClientUtilities.registerEntityRenderer(EntityEvolvedFireBatBoss.class, (RenderManager manager) -> new RenderEvolvedFireBatBoss(manager));
+			ClientUtilities.registerEntityRenderer(EntityJupiterLander.class, (RenderManager manager) -> new RenderJupiterLander(manager));
 		}
 		if (Config.SATURN) {
 			if (Config.USE_DEFAULT_BOSSES)
-				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossSaturn.class, (RenderManager manager) -> new RenderCreeperBossSaturn(manager));
+				ClientUtilities.registerEntityRenderer(EntityCreeperBossSaturn.class, (RenderManager manager) -> new RenderCreeperBossSaturn(manager));
 			else
-				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedGhastBoss.class, (RenderManager manager) -> new RenderEvolvedGhastBoss(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntitySaturnLander.class, (RenderManager manager) -> new RenderSaturnLander(manager));
+				ClientUtilities.registerEntityRenderer(EntityEvolvedGhastBoss.class, (RenderManager manager) -> new RenderEvolvedGhastBoss(manager));
+			ClientUtilities.registerEntityRenderer(EntitySaturnLander.class, (RenderManager manager) -> new RenderSaturnLander(manager));
 		}
 		if (Config.URANUS) {
 			if (Config.USE_DEFAULT_BOSSES)
-				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossUranus.class, (RenderManager manager) -> new RenderCreeperBossUranus(manager));
+				ClientUtilities.registerEntityRenderer(EntityCreeperBossUranus.class, (RenderManager manager) -> new RenderCreeperBossUranus(manager));
 			else
-				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedIceSlimeBoss.class, (RenderManager manager) -> new RenderEvolvedIceSlimeBoss(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityUranusLander.class, (RenderManager manager) -> new RenderUranusLander(manager));
+				ClientUtilities.registerEntityRenderer(EntityEvolvedIceSlimeBoss.class, (RenderManager manager) -> new RenderEvolvedIceSlimeBoss(manager));
+			ClientUtilities.registerEntityRenderer(EntityUranusLander.class, (RenderManager manager) -> new RenderUranusLander(manager));
 		}
 		if (Config.NEPTUNE) {
 			if (Config.USE_DEFAULT_BOSSES)
-				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossNeptune.class, (RenderManager manager) -> new RenderCreeperBossNeptune(manager));
+				ClientUtilities.registerEntityRenderer(EntityCreeperBossNeptune.class, (RenderManager manager) -> new RenderCreeperBossNeptune(manager));
 			else
-				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedSnowmanBoss.class, (RenderManager manager) -> new RenderEvolvedSnowmanBoss(manager));
-			RenderingRegistry.registerEntityRenderingHandler(EntityNeptuneLander.class, (RenderManager manager) -> new RenderNeptuneLander(manager));
+				ClientUtilities.registerEntityRenderer(EntityEvolvedSnowmanBoss.class, (RenderManager manager) -> new RenderEvolvedSnowmanBoss(manager));
+			ClientUtilities.registerEntityRenderer(EntityNeptuneLander.class, (RenderManager manager) -> new RenderNeptuneLander(manager));
 		}
 		if (Config.PLUTO)
 			if (Config.USE_DEFAULT_BOSSES)
-				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossPluto.class, (RenderManager manager) -> new RenderCreeperBossPluto(manager));
+				ClientUtilities.registerEntityRenderer(EntityCreeperBossPluto.class, (RenderManager manager) -> new RenderCreeperBossPluto(manager));
 			else
-				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedSpacemanBoss.class, (RenderManager manager) -> new RenderEvolvedSpacemanBoss(manager));
+				ClientUtilities.registerEntityRenderer(EntityEvolvedSpacemanBoss.class, (RenderManager manager) -> new RenderEvolvedSpacemanBoss(manager));
 
 		if (Config.ERIS) {
 			if (Config.USE_DEFAULT_BOSSES)
-				RenderingRegistry.registerEntityRenderingHandler(EntityCreeperBossEris.class, (RenderManager manager) -> new RenderCreeperBossEris(manager));
+				ClientUtilities.registerEntityRenderer(EntityCreeperBossEris.class, (RenderManager manager) -> new RenderCreeperBossEris(manager));
 			else
-				RenderingRegistry.registerEntityRenderingHandler(EntityEvolvedGiantZombieBoss.class, (RenderManager manager) -> new RenderEvolvedGiantZombieBoss(manager));
+				ClientUtilities.registerEntityRenderer(EntityEvolvedGiantZombieBoss.class, (RenderManager manager) -> new RenderEvolvedGiantZombieBoss(manager));
 		}
 		if (Config.MERCURY)
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier4Rocket.class, (RenderManager manager) -> new RenderTier4Rocket(manager));
+			ClientUtilities.registerEntityRenderer(EntityTier4Rocket.class, (RenderManager manager) -> new RenderTier4Rocket(manager));
 		if (Config.JUPITER)
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier5Rocket.class, (RenderManager manager) -> new RenderTier5Rocket(manager));
+			ClientUtilities.registerEntityRenderer(EntityTier5Rocket.class, (RenderManager manager) -> new RenderTier5Rocket(manager));
 		if (Config.SATURN)
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier6Rocket.class, (RenderManager manager) -> new RenderTier6Rocket(manager));
+			ClientUtilities.registerEntityRenderer(EntityTier6Rocket.class, (RenderManager manager) -> new RenderTier6Rocket(manager));
 		if (Config.URANUS)
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier7Rocket.class, (RenderManager manager) -> new RenderTier7Rocket(manager));
+			ClientUtilities.registerEntityRenderer(EntityTier7Rocket.class, (RenderManager manager) -> new RenderTier7Rocket(manager));
 		if (Config.NEPTUNE)
-			RenderingRegistry.registerEntityRenderingHandler(EntityTier8Rocket.class, (RenderManager manager) -> new RenderTier8Rocket(manager));
+			ClientUtilities.registerEntityRenderer(EntityTier8Rocket.class, (RenderManager manager) -> new RenderTier8Rocket(manager));
 		if (Config.PLUTO)
 			if (Config.OLD_ROCKET_MODELS)
-				RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9Rocket(manager));
+				ClientUtilities.registerEntityRenderer(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9Rocket(manager));
 			else
-				RenderingRegistry.registerEntityRenderingHandler(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9RocketNew(manager));
+				ClientUtilities.registerEntityRenderer(EntityTier9Rocket.class, (RenderManager manager) -> new RenderTier9RocketNew(manager));
 		if (Config.ERIS)
 			if (Config.OLD_ROCKET_MODELS)
-				RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10Rocket(manager));
+				ClientUtilities.registerEntityRenderer(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10Rocket(manager));
 			else
-				RenderingRegistry.registerEntityRenderingHandler(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10RocketNew(manager));
+				ClientUtilities.registerEntityRenderer(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10RocketNew(manager));
 		if (Config.ERIS && Config.KEPLER22B)
-			RenderingRegistry.registerEntityRenderingHandler(EntityElectricRocket.class, (RenderManager manager) -> new RenderElectricRocket(manager));
+			ClientUtilities.registerEntityRenderer(EntityElectricRocket.class, (RenderManager manager) -> new RenderElectricRocket(manager));
 		if (Config.CERES && Config.NUCLEAR_BOMB)
-			RenderingRegistry.registerEntityRenderingHandler(EntityNuclearBombPrimed.class, (RenderManager manager) -> new RenderNuclearBombPrimed(manager));
+			ClientUtilities.registerEntityRenderer(EntityNuclearBombPrimed.class, (RenderManager manager) -> new RenderNuclearBombPrimed(manager));
 		if (Config.CERES && Config.FIRE_BOMB)
-			RenderingRegistry.registerEntityRenderingHandler(EntityFireBombPrimed.class, (RenderManager manager) -> new RenderFireBombPrimed(manager));
+			ClientUtilities.registerEntityRenderer(EntityFireBombPrimed.class, (RenderManager manager) -> new RenderFireBombPrimed(manager));
 		if (Config.MARS_ROVER)
-			RenderingRegistry.registerEntityRenderingHandler(EntityMarsRover.class, (RenderManager manager) -> new RenderMarsRover(manager));
+			ClientUtilities.registerEntityRenderer(EntityMarsRover.class, (RenderManager manager) -> new RenderMarsRover(manager));
 		if (Config.VENUS_ROVER)
-			RenderingRegistry.registerEntityRenderingHandler(EntityVenusRover.class, (RenderManager manager) -> new RenderVenusRover(manager));
-		RenderingRegistry.registerEntityRenderingHandler(EntitySmallSnowball.class, (RenderManager manager) -> new RenderSmallSnowBall(manager, new ItemStack(Items.snowball)));
-		RenderingRegistry.registerEntityRenderingHandler(EntityGeneralLander.class, (RenderManager manager) -> new RenderGeneralLander(manager));
+			ClientUtilities.registerEntityRenderer(EntityVenusRover.class, (RenderManager manager) -> new RenderVenusRover(manager));
+		ClientUtilities.registerEntityRenderer(EntitySmallSnowball.class, (RenderManager manager) -> new RenderSmallSnowBall(manager, new ItemStack(Items.snowball)));
+		ClientUtilities.registerEntityRenderer(EntityGeneralLander.class, (RenderManager manager) -> new RenderGeneralLander(manager));
 	}
 
 	public void registerCustomModel() {
@@ -525,23 +523,23 @@ public class ClientProxy extends CommonProxy {
 	@SideOnly(Side.CLIENT)
 	private static void renderBlocksTileEntitySpecialRenderers() {
 		if (Config.MERCURY)
-			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT4TreasureChest.class, new TileEntityT4TreasureChestRenderer());
+			ClientUtilities.registerTileEntityRenderer(TileEntityT4TreasureChest.class, new TileEntityT4TreasureChestRenderer());
 		if (Config.JUPITER)
-			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT5TreasureChest.class, new TileEntityT5TreasureChestRenderer());
+			ClientUtilities.registerTileEntityRenderer(TileEntityT5TreasureChest.class, new TileEntityT5TreasureChestRenderer());
 		if (Config.SATURN)
-			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT6TreasureChest.class, new TileEntityT6TreasureChestRenderer());
+			ClientUtilities.registerTileEntityRenderer(TileEntityT6TreasureChest.class, new TileEntityT6TreasureChestRenderer());
 		if (Config.URANUS)
-			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT7TreasureChest.class, new TileEntityT7TreasureChestRenderer());
+			ClientUtilities.registerTileEntityRenderer(TileEntityT7TreasureChest.class, new TileEntityT7TreasureChestRenderer());
 		if (Config.NEPTUNE)
-			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT8TreasureChest.class, new TileEntityT8TreasureChestRenderer());
+			ClientUtilities.registerTileEntityRenderer(TileEntityT8TreasureChest.class, new TileEntityT8TreasureChestRenderer());
 		if (Config.PLUTO)
-			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT9TreasureChest.class, new TileEntityT9TreasureChestRenderer());
+			ClientUtilities.registerTileEntityRenderer(TileEntityT9TreasureChest.class, new TileEntityT9TreasureChestRenderer());
 		if (Config.ERIS)
-			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityT10TreasureChest.class, new TileEntityT10TreasureChestRenderer());
+			ClientUtilities.registerTileEntityRenderer(TileEntityT10TreasureChest.class, new TileEntityT10TreasureChestRenderer());
 		if (Config.SOLAR_PANELS)
-			ClientRegistry.bindTileEntitySpecialRenderer(TileEntitySolar.class, new TileEntitySolarPanelRenderer());
+			ClientUtilities.registerTileEntityRenderer(TileEntitySolar.class, new TileEntitySolarPanelRenderer());
 		if (Config.RADIATION && Config.BASIC_DECONTAMINATION_UNIT)
-			ClientRegistry.bindTileEntitySpecialRenderer(TileEntityBasicDecontaminationUnit.class, new TileEntityBasicDecontaminationUnitRenderer());
+			ClientUtilities.registerTileEntityRenderer(TileEntityBasicDecontaminationUnit.class, new TileEntityBasicDecontaminationUnitRenderer());
 	}
 
 	private void registerBlockJsons() {
