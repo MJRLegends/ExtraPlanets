@@ -156,7 +156,7 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 
 	@Override
 	public boolean hasCustomName() {
-		return false;
+		return true;
 	}
 
 	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
