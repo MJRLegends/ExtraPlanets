@@ -9,7 +9,6 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.machines.BasicChemicalInjector;
@@ -220,10 +219,5 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 			return (state.getValue(BasicChemicalInjector.FACING));
 		}
 		return EnumFacing.NORTH;
-	}
-
-	@Override
-	public ITextComponent getDisplayName() {
-		return null;
 	}
 }
