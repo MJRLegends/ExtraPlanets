@@ -35,13 +35,15 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorJupiter() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
-		this.palladiumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
-		this.nickelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 7, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+		if (Config.GENERATE_ORES_JUPITER) {
+			this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+			this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+			this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+			this.palladiumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+			this.nickelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 7, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+			this.redGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 11, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
+		}
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
-		this.redGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.JUPITER_BLOCKS, 4, 11, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 2);
 		this.ashRockGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.ASH_ROCK, 5, 0, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 1);
 		this.volcanicRockGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.VOLCANIC_ROCK, 5, 0, true, ExtraPlanets_Blocks.JUPITER_BLOCKS, 1);
 		if (Config.GENERATE_JUITPER_SKY_FEATURE)
@@ -64,13 +66,15 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 		if (isDecorating)
 			return;
 		isDecorating = true;
-		this.generateOre(26, this.copperGen, 0, 60);
-		this.generateOre(23, this.tinGen, 0, 60);
-		this.generateOre(20, this.ironGen, 0, 64);
-		this.generateOre(20, this.palladiumGen, 0, 32);
-		this.generateOre(20, this.nickelGen, 32, 40);
+		if (Config.GENERATE_ORES_JUPITER) {
+			this.generateOre(26, this.copperGen, 0, 60);
+			this.generateOre(23, this.tinGen, 0, 60);
+			this.generateOre(20, this.ironGen, 0, 64);
+			this.generateOre(20, this.palladiumGen, 0, 32);
+			this.generateOre(20, this.nickelGen, 32, 40);
+			this.generateOre(10, this.redGemGen, 0, 10);
+		}
 		this.generateOre(15, this.gravelGen, 0, 80);
-		this.generateOre(10, this.redGemGen, 0, 10);
 		this.generateOre(10, this.ashRockGen, 0, 256);
 		this.generateOre(10, this.volcanicRockGen, 0, 256);
 		if (Config.GENERATE_JUITPER_SKY_FEATURE)

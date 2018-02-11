@@ -29,9 +29,11 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 	private World currentWorld;
 
 	public BiomeDecoratorEuropa() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.EUROPA_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.EUROPA_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.EUROPA_BLOCKS, 20, 3, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
+		if (Config.GENERATE_ORES_EUROPA) {
+			this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.EUROPA_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
+			this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.EUROPA_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
+			this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.EUROPA_BLOCKS, 20, 3, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
+		}
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.EUROPA_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 1);
 
@@ -50,9 +52,11 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
-		this.generateOre(26, this.copperGen, 0, 60);
-		this.generateOre(23, this.tinGen, 0, 60);
-		this.generateOre(20, this.ironGen, 0, 64);
+		if (Config.GENERATE_ORES_EUROPA) {
+			this.generateOre(26, this.copperGen, 0, 60);
+			this.generateOre(23, this.tinGen, 0, 60);
+			this.generateOre(20, this.ironGen, 0, 64);
+		}
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
 
