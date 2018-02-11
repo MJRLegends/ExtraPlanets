@@ -1,35 +1,26 @@
 package com.mjr.extraplanets.items;
 
-import java.util.List;
-
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import micdoodle8.mods.galacticraft.planets.venus.VenusItems;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumRarity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.mjrlegendslib.item.ItemBasicMeta;
 
-public class ItemBasicKit extends Item {
+public class ItemBasicKit extends ItemBasicMeta {
 	public int tier;
 
-	public static final String[] names = { "full", "basic_setup", "without_oxygen_setup", "without_thermal_padding", "just_oxygen_setup", "just_protection" };
-
 	public ItemBasicKit(String assetName, int tier) {
-		super();
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
-		this.setUnlocalizedName(assetName);
-		this.setCreativeTab(ExtraPlanets.ItemsTab);
+		super(assetName, ExtraPlanets.ItemsTab, getItemList());
 		this.tier = tier;
 	}
 
@@ -37,23 +28,6 @@ public class ItemBasicKit extends Item {
 	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack par1ItemStack) {
 		return ClientProxyCore.galacticraftItem;
-	}
-
-	@Override
-	public String getUnlocalizedName(ItemStack itemStack) {
-		return this.getUnlocalizedName() + "." + ItemBasicKit.names[itemStack.getItemDamage()];
-	}
-
-	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
-		for (int i = 0; i < ItemBasicKit.names.length; i++) {
-			par3List.add(new ItemStack(par1, 1, i));
-		}
-	}
-
-	@Override
-	public int getMetadata(int par1) {
-		return par1;
 	}
 
 	@Override
@@ -263,5 +237,9 @@ public class ItemBasicKit extends Item {
 			itemStack.stackSize = 0;
 		}
 		return itemStack;
+	}
+
+	public static String[] getItemList() {
+		return new String[] { "full", "basic_setup", "without_oxygen_setup", "without_thermal_padding", "just_oxygen_setup", "just_protection" };
 	}
 }
