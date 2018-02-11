@@ -12,12 +12,12 @@ import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.client.FMLClientHandler;
 
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenCompressor;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedOxygenCompressor;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class GuiAdvancedOxygenCompressor extends GuiContainerGC {
@@ -29,7 +29,7 @@ public class GuiAdvancedOxygenCompressor extends GuiContainerGC {
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 112, (this.height - this.ySize) / 2 + 37, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
 	public GuiAdvancedOxygenCompressor(InventoryPlayer par1InventoryPlayer, TileEntityAdvancedOxygenCompressor par2TileEntityAirDistributor) {
-		super(new ContainerAdvancedOxygenCompressor(par1InventoryPlayer, par2TileEntityAirDistributor, FMLClientHandler.instance().getClient().player));
+		super(new ContainerAdvancedOxygenCompressor(par1InventoryPlayer, par2TileEntityAirDistributor, MCUtilities.getClient().player));
 		this.compressor = par2TileEntityAirDistributor;
 		this.ySize = 180;
 	}

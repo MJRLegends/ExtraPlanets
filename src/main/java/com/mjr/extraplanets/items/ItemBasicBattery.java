@@ -38,12 +38,11 @@ public class ItemBasicBattery extends ItemElectricBase implements IItemElectric 
 	public int getTierGC(ItemStack itemStack) {
 		return tier;
 	}
-    @Override
-    public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list)
-    {
-        if (tab == this.getCreativeTab())
-        {
-            list.add(new ItemStack(this, 1, 0));
-        }
-    }
+
+	@Override
+	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
+		if (tab == this.getCreativeTab()) {
+			list.add(new ItemStack(this, 1, 0));
+		}
+	}
 }

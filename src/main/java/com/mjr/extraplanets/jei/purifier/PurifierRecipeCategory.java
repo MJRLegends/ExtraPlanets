@@ -78,7 +78,7 @@ public class PurifierRecipeCategory implements IRecipeCategory<IRecipeWrapper> {
 		itemstacks.init(2, true, 69, 31);
 		itemstacks.init(3, false, 28, 2);
 		itemstacks.init(4, false, 118, 2);
-        itemstacks.set(ingredients);
+		itemstacks.set(ingredients);
 	}
 
 	@Override

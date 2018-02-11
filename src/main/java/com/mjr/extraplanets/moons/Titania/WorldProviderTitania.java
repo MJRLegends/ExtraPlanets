@@ -55,6 +55,7 @@ public class WorldProviderTitania extends WorldProviderRealisticSpace {
 	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderTitania.class;
 	}
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {

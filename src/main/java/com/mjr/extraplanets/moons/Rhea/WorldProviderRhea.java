@@ -55,7 +55,7 @@ public class WorldProviderRhea extends WorldProviderRealisticSpace {
 	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderRhea.class;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {

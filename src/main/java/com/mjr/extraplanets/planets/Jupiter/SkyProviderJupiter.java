@@ -17,10 +17,11 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
 import net.minecraftforge.client.IRenderHandler;
-import net.minecraftforge.fml.client.FMLClientHandler;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
+
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class SkyProviderJupiter extends IRenderHandler {
 	private static final ResourceLocation overworldTexture = new ResourceLocation(com.mjr.extraplanets.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/ceres.png");
@@ -249,7 +250,7 @@ public class SkyProviderJupiter extends IRenderHandler {
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(0.5F, 0.5F, 0.5F, 1.0F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderJupiter.overworldTexture);
+		MCUtilities.getClient().renderEngine.bindTexture(SkyProviderJupiter.overworldTexture);
 		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
 		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
 		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
@@ -263,7 +264,7 @@ public class SkyProviderJupiter extends IRenderHandler {
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(0.6F, 0.6F, 0.6F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderJupiter.overworldTexture2);
+		MCUtilities.getClient().renderEngine.bindTexture(SkyProviderJupiter.overworldTexture2);
 		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
 		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
 		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
@@ -277,7 +278,7 @@ public class SkyProviderJupiter extends IRenderHandler {
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(0.6F, 0.6F, 0.6F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderJupiter.overworldTexture3);
+		MCUtilities.getClient().renderEngine.bindTexture(SkyProviderJupiter.overworldTexture3);
 		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
 		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
 		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
@@ -291,7 +292,7 @@ public class SkyProviderJupiter extends IRenderHandler {
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(0.6F, 0.6F, 0.6F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderJupiter.overworldTexture4);
+		MCUtilities.getClient().renderEngine.bindTexture(SkyProviderJupiter.overworldTexture4);
 		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
 		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
 		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
@@ -305,7 +306,7 @@ public class SkyProviderJupiter extends IRenderHandler {
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(0.6F, 0.6F, 0.6F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderJupiter.overworldTexture5);
+		MCUtilities.getClient().renderEngine.bindTexture(SkyProviderJupiter.overworldTexture5);
 		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
 		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
 		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
@@ -319,7 +320,7 @@ public class SkyProviderJupiter extends IRenderHandler {
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
 		GL11.glColor4f(0.6F, 0.6F, 0.6F, 1F);
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(SkyProviderJupiter.overworldTexture6);
+		MCUtilities.getClient().renderEngine.bindTexture(SkyProviderJupiter.overworldTexture6);
 		worldRenderer1.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
 		worldRenderer1.pos(-f10, -100.0D, f10).tex(0, 1).endVertex();
 		worldRenderer1.pos(f10, -100.0D, f10).tex(1, 1).endVertex();
@@ -440,7 +441,7 @@ public class SkyProviderJupiter extends IRenderHandler {
 	}
 
 	public float getSkyBrightness(float par1) {
-		final float var2 = FMLClientHandler.instance().getClient().world.getCelestialAngle(par1);
+		final float var2 = MCUtilities.getClient().world.getCelestialAngle(par1);
 		float var3 = 1.0F - (MathHelper.sin(var2 * com.mjr.extraplanets.Constants.twoPI) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F) {

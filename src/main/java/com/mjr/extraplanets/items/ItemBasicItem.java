@@ -15,7 +15,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -24,6 +23,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemBasicItem extends Item {
@@ -91,8 +91,8 @@ public class ItemBasicItem extends Item {
 					stats.setRadiationLevel(0);
 				else
 					stats.setRadiationLevel(level);
-				entityplayer.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.GOLD + ", Your Radiation Level has been reduced by 50%"));
-				entityplayer.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
+				PlayerUtilties.sendMessage(entityplayer, "" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.GOLD + ", Your Radiation Level has been reduced by 50%");
+				PlayerUtilties.sendMessage(entityplayer, "" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%");
 			}
 
 			if (entityplayer == null || !entityplayer.capabilities.isCreativeMode) {

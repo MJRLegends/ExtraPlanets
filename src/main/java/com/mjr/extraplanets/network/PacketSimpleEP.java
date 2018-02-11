@@ -10,7 +10,6 @@ import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.items.ItemParaChute;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
-import micdoodle8.mods.galacticraft.core.network.PacketBase;
 import micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
@@ -23,7 +22,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -37,7 +35,9 @@ import com.mjr.extraplanets.entities.rockets.EntityElectricSpaceshipBase.EnumLau
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.util.ExtraPlanetsUtli;
+import com.mjr.mjrlegendslib.network.PacketBase;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class PacketSimpleEP extends PacketBase implements Packet {
@@ -135,7 +135,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			switch ((Integer) this.data.get(1)) {
 			case 0:
 				if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
-					FMLClientHandler.instance().getClient().displayGuiScreen(new GuiPoweredVehicleBase(player.inventory, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType()));
+					MCUtilities.getClient().displayGuiScreen(new GuiPoweredVehicleBase(player.inventory, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType()));
 					player.openContainer.windowId = (Integer) this.data.get(0);
 				}
 				break;
@@ -145,12 +145,12 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			stats.setRadiationLevel((double) this.data.get(0));
 			break;
 		case C_DISPLAY_ROCKET_CONTROLS:
-			player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.launch.name")));
-			player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - "
-					+ GCCoreUtil.translate("gui.rocket.turn.name")));
-			player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "  - "
-					+ GCCoreUtil.translate("gui.rocket.updown.name")));
-			player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.powered.inv.name")));
+			PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.launch.name"));
+			PlayerUtilties.sendMessage(player,
+					GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.turn.name"));
+			PlayerUtilties.sendMessage(player,
+					GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.updown.name"));
+			PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.powered.inv.name"));
 			break;
 		default:
 			break;
@@ -192,12 +192,12 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 							ship.igniteCheckingCooldown();
 							GCPlayerStats.get(playerBase).setLaunchAttempts(0);
 						} else if (stats.getChatCooldown() == 0 && GCPlayerStats.get(playerBase).getLaunchAttempts() == 0) {
-							player.sendMessage(new TextComponentString(TranslateUtilities.translate("gui.rocket.warning.noparachute")));
+							PlayerUtilties.sendMessage(player, TranslateUtilities.translate("gui.rocket.warning.noparachute"));
 							stats.setChatCooldown(250);
 							GCPlayerStats.get(playerBase).setLaunchAttempts(1);
 						}
 					} else if (stats.getChatCooldown() == 0) {
-						player.sendMessage(new TextComponentString(TranslateUtilities.translate("gui.rocket.warning.nofuel")));
+						PlayerUtilties.sendMessage(player, TranslateUtilities.translate("gui.rocket.warning.nofuel"));
 						stats.setChatCooldown(250);
 					}
 				}

@@ -15,7 +15,6 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -23,6 +22,7 @@ import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedRefinery;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedRefinery;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SideOnly(Side.CLIENT)
@@ -38,7 +38,7 @@ public class GuiAdvancedRefinery extends GuiContainerGC {
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
 	public GuiAdvancedRefinery(InventoryPlayer par1InventoryPlayer, TileEntityAdvancedRefinery tileEntity) {
-		super(new ContainerAdvancedRefinery(par1InventoryPlayer, tileEntity, FMLClientHandler.instance().getClient().player));
+		super(new ContainerAdvancedRefinery(par1InventoryPlayer, tileEntity, MCUtilities.getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}

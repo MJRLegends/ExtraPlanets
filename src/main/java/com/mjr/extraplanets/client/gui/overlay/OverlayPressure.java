@@ -10,20 +10,20 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SideOnly(Side.CLIENT)
 public class OverlayPressure extends Overlay {
 	private final static ResourceLocation guiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/gui.png");
 
-	private static Minecraft minecraft = FMLClientHandler.instance().getClient();
+	private static Minecraft minecraft = MCUtilities.getClient();
 
 	/**
 	 * Render the GUI that displays oxygen level in tanks
@@ -36,7 +36,7 @@ public class OverlayPressure extends Overlay {
 		final int j = scaledresolution.getScaledHeight();
 
 		GlStateManager.disableAlpha();
-		FMLClientHandler.instance().getClient().renderEngine.bindTexture(OverlayPressure.guiTexture);
+		MCUtilities.getClient().renderEngine.bindTexture(OverlayPressure.guiTexture);
 		final Tessellator tessellator = Tessellator.getInstance();
 		BufferBuilder worldRenderer = tessellator.getBuffer();
 		GlStateManager.enableDepth();

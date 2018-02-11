@@ -4,7 +4,6 @@ import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -13,6 +12,7 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.inventory.vehicles.ContainerPoweredVehicleBase;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SideOnly(Side.CLIENT)
@@ -29,7 +29,7 @@ public class GuiPoweredVehicleBase extends GuiContainerGC {
 	private final int type;
 
 	public GuiPoweredVehicleBase(IInventory par1IInventory, IInventory par2IInventory, int type) {
-		super(new ContainerPoweredVehicleBase(par1IInventory, par2IInventory, type, FMLClientHandler.instance().getClient().player));
+		super(new ContainerPoweredVehicleBase(par1IInventory, par2IInventory, type, MCUtilities.getClient().player));
 		this.upperChestInventory = par1IInventory;
 		this.allowUserInput = false;
 		this.type = type;

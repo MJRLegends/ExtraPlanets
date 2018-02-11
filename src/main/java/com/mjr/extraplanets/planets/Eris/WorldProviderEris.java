@@ -46,7 +46,7 @@ public class WorldProviderEris extends WorldProviderRealisticSpace {
 	public Class<? extends IChunkGenerator> getChunkProviderClass() {
 		return ChunkProviderEris.class;
 	}
-	
+
 	@Override
 	public double getHorizon() {
 		return 44.0D;

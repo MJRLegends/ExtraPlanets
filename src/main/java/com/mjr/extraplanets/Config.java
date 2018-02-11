@@ -37,7 +37,7 @@ public class Config {
 	public static boolean GENERATE_JUITPER_SKY_FEATURE;
 	public static boolean JUITPER_LIGHTING;
 	public static boolean CUSTOM_FOG;
-	
+
 	public static boolean GENERATE_ORES_MERCURY;
 	public static boolean GENERATE_ORES_CERES;
 	public static boolean GENERATE_ORES_JUPITER;
@@ -59,7 +59,7 @@ public class Config {
 	public static boolean GENERATE_ORES_TITAN;
 	public static boolean GENERATE_ORES_TITANIA;
 	public static boolean GENERATE_ORES_TRITON;
-	
+
 	public static boolean ITEMS_CARBON;
 	public static boolean ITEMS_PALLADIUM;
 	public static boolean ITEMS_MAGNESIUM;
@@ -391,7 +391,7 @@ public class Config {
 		JUITPER_LIGHTING = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable & remove Lighting & Lighting Effects on Jupiter").getBoolean(true);
 		CUSTOM_FOG = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
 				.getBoolean(true);
-		
+
 		GENERATE_ORES_MERCURY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Mercury", true, "Setting this option to false will disable ore gen for Mercury").getBoolean(true);
 		GENERATE_ORES_CERES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Ceres", true, "Setting this option to false will disable ore gen for Ceres").getBoolean(true);
 		GENERATE_ORES_JUPITER = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Jupiter", true, "Setting this option to false will disable ore gen for Jupiter").getBoolean(true);

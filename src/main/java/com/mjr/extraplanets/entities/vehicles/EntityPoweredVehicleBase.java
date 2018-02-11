@@ -10,7 +10,6 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.TransformerHooks;
 import micdoodle8.mods.galacticraft.core.entities.EntityBuggy;
 import micdoodle8.mods.galacticraft.core.entities.IControllableEntity;
-import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import micdoodle8.mods.galacticraft.core.network.IPacketReceiver;
 import micdoodle8.mods.galacticraft.core.network.PacketDynamic;
 import micdoodle8.mods.galacticraft.core.network.PacketEntityUpdate;
@@ -38,9 +37,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -48,6 +45,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.api.IPoweredDockable;
+import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityPoweredVehicleBase extends Entity implements IInventoryDefaults, IPacketReceiver, IPoweredDockable, IControllableEntity, IEntityFullSync {
@@ -241,7 +241,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	@SideOnly(Side.CLIENT)
 	public void setPositionAndRotationDirect(double x, double y, double z, float yaw, float pitch, int posRotationIncrements, boolean b) {
 		if (!this.getPassengers().isEmpty()) {
-			if (this.getPassengers().contains(FMLClientHandler.instance().getClient().player)) {
+			if (this.getPassengers().contains(MCUtilities.getClient().player)) {
 			} else {
 				this.boatPosRotationIncrements = posRotationIncrements + 5;
 				this.boatX = x;
@@ -269,7 +269,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			this.wheelRotationZ = Math.max(-30.0F, Math.min(30.0F, this.wheelRotationZ * 0.9F));
 		}
 
-		if (this.world.isRemote && !FMLClientHandler.instance().getClient().player.equals(this.world.getClosestPlayerToEntity(this, -1))) {
+		if (this.world.isRemote && !MCUtilities.getClient().player.equals(this.world.getClosestPlayerToEntity(this, -1))) {
 			double x;
 			double y;
 			double var12;
@@ -453,11 +453,11 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	public boolean processInitialInteract(EntityPlayer player, EnumHand hand) {
 		if (this.world.isRemote) {
 			if (this.getPassengers().isEmpty()) {
-				player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - "
-						+ TranslateUtilities.translate("gui.buggy.turn.name")));
-				player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.accel.name")));
-				player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.decel.name")));
-				player.sendMessage(new TextComponentString(GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.powered.inv.name")));
+				PlayerUtilties.sendMessage(player,
+						GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - " + TranslateUtilities.translate("gui.buggy.turn.name"));
+				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.accel.name"));
+				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.decel.name"));
+				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.powered.inv.name"));
 			}
 
 			return true;
