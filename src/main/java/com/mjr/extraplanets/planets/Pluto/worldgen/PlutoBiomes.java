@@ -11,4 +11,3 @@ public class PlutoBiomes extends BiomeGenBaseGC {
 		super(properties);
 	}
 }
-	

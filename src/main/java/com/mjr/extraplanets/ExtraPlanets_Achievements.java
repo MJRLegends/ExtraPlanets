@@ -164,7 +164,7 @@ public class ExtraPlanets_Achievements {
 		if (kepler22b_planet != null)
 			achievementslist.add(kepler22b_planet);
 		if (craft_rocket_3 != null)
-			achievementslist.add(craft_rocket_3);		
+			achievementslist.add(craft_rocket_3);
 		if (craft_rocket_4 != null)
 			achievementslist.add(craft_rocket_4);
 		if (craft_rocket_5 != null)

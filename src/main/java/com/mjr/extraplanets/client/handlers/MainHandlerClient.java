@@ -36,7 +36,6 @@ import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.UniversalBucket;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -102,7 +101,7 @@ public class MainHandlerClient {
 
 	@SubscribeEvent
 	public void onClientTick(ClientTickEvent event) {
-		final Minecraft minecraft = FMLClientHandler.instance().getClient();
+		final Minecraft minecraft = MCUtilities.getClient();
 		final WorldClient world = minecraft.theWorld;
 		final EntityPlayerSP player = minecraft.thePlayer;
 
@@ -155,7 +154,7 @@ public class MainHandlerClient {
 				}
 			}
 
-			if (Config.USE_CUSTOM_CELESTAIAL_SELECTION && FMLClientHandler.instance().getClient().currentScreen instanceof CustomCelestialSelection) {
+			if (Config.USE_CUSTOM_CELESTAIAL_SELECTION && MCUtilities.getClient().currentScreen instanceof CustomCelestialSelection) {
 				player.motionY = 0;
 			}
 
@@ -173,7 +172,7 @@ public class MainHandlerClient {
 
 	@SubscribeEvent
 	public void onRenderTick(RenderTickEvent event) {
-		final Minecraft minecraft = FMLClientHandler.instance().getClient();
+		final Minecraft minecraft = MCUtilities.getClient();
 		final EntityPlayerSP player = minecraft.thePlayer;
 		final EntityPlayerSP playerBaseClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
 		if (player != null && player.worldObj.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.worldObj.provider)
@@ -227,7 +226,7 @@ public class MainHandlerClient {
 
 	@SubscribeEvent
 	public void renderLightning(ClientProxyCore.EventSpecialRender event) {
-		final Minecraft minecraft = FMLClientHandler.instance().getClient();
+		final Minecraft minecraft = MCUtilities.getClient();
 		final EntityPlayerSP player = minecraft.thePlayer;
 		if (player != null && Config.JUITPER_LIGHTING) {
 			Iterator<Map.Entry<BlockPos, Integer>> it = lightning.entrySet().iterator();
@@ -242,7 +241,7 @@ public class MainHandlerClient {
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		final Minecraft minecraft = FMLClientHandler.instance().getClient();
+		final Minecraft minecraft = MCUtilities.getClient();
 		final EntityPlayerSP player = minecraft.thePlayer;
 
 		if (player == event.player) {

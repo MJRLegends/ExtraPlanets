@@ -6,7 +6,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.IGuiHandler;
 import net.minecraftforge.fml.relauncher.Side;
@@ -70,6 +69,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecomp
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
 
 public class GuiHandler implements IGuiHandler {
 	@Override
@@ -77,7 +77,7 @@ public class GuiHandler implements IGuiHandler {
 		EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
 
 		if (playerBase == null) {
-			player.addChatMessage(new TextComponentString("ExtraPlanets player instance null server-side. This is a bug."));
+			PlayerUtilties.sendMessage(player, "ExtraPlanets player instance null server-side. This is a bug.");
 			return null;
 		}
 

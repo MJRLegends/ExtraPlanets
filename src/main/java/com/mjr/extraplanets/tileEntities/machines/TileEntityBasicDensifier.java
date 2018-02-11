@@ -390,7 +390,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		}
 		return false;
 	}
-	
+
 	private EnumFacing getInputPipe() {
 		return getFront().rotateY();
 	}

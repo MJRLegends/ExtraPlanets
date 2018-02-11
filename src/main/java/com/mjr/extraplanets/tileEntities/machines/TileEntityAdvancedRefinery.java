@@ -325,7 +325,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 
 		return tankInfo;
 	}
-	
+
 	@Override
 	public boolean canConnect(EnumFacing direction, NetworkType type) {
 		if (direction == null) {

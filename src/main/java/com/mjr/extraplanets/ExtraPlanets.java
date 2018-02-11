@@ -506,7 +506,7 @@ public class ExtraPlanets {
 			Biome.registerBiome(Config.CALLISTO_BIOME_ID, CallistoBiomes.callisto.getBiomeName(), CallistoBiomes.callisto);
 		if (Config.DEIMOS)
 			Biome.registerBiome(Config.DEIMOS_BIOME_ID, DeimosBiomes.deimos.getBiomeName(), DeimosBiomes.deimos);
-		if (Config.EUROPA){
+		if (Config.EUROPA) {
 			Biome.registerBiome(Config.EUROPA_BIOME_ID, EuropaBiomes.europa.getBiomeName(), EuropaBiomes.europa);
 			Biome.registerBiome(Config.EUROPA_SALT_SEA_BIOME_ID, EuropaBiomes.europaSaltSea.getBiomeName(), EuropaBiomes.europaSaltSea);
 			Biome.registerBiome(Config.EUROPA_ICE_VALLEYS_BIOME_ID, EuropaBiomes.europaIceValleys.getBiomeName(), EuropaBiomes.europaIceValleys);

@@ -122,7 +122,7 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_SLIME)
 			return 0;
 		else
-		return state.getBlock().getMetaFromState(state);
+			return state.getBlock().getMetaFromState(state);
 	}
 
 	@Override
