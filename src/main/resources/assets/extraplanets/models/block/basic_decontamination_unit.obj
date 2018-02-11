@@ -1,6 +1,6 @@
-# Blender v2.77 (sub 0) OBJ File: 'decontamination_unit.obj'
+# Blender v2.77 (sub 0) OBJ File: 'basic_decontamination_unit.obj'
 # www.blender.org
-mtllib decontamination_unit.mtl
+mtllib basic_decontamination_unit.mtl
 o Water_Baloons
 v -6.880800 -0.000001 3.416000
 v -9.750800 -0.000001 3.416000
