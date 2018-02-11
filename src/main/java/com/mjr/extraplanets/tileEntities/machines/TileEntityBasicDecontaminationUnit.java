@@ -10,7 +10,6 @@ import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti.EnumBlockMultiType;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
-import micdoodle8.mods.galacticraft.core.inventory.IInventoryDefaults;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
@@ -24,9 +23,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextComponentString;
-import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -37,10 +33,12 @@ import com.mjr.extraplanets.blocks.BlockDecontaminationUnitFake;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWithInventory implements IMultiBlock, IInventoryDefaults, ISidedInventory {
+public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWithInventory implements IMultiBlock, ISidedInventory {
 	private NonNullList<ItemStack> stacks = NonNullList.withSize(1, ItemStack.EMPTY);
+	private ItemStack[] containingItems = new ItemStack[1];
 	@NetworkedField(targetSide = Side.CLIENT)
 	private AxisAlignedBB renderAABB;
 
@@ -67,21 +65,20 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 					if (level <= 0) {
 						stats.setRadiationLevel(0);
 						if (this.ticks % 40 == 0)
-							player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You currently have no radiation damage to take!"));
+							PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You currently have no radiation damage to take!");
 					} else {
 						this.storage.setEnergyStored(0);
 						stats.setRadiationLevel(stats.getRadiationLevel() - level);
-						player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " 10%"));
-						player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
-								+ (int) stats.getRadiationLevel() + "%"));
+						PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " 10%");
+						PlayerUtilties.sendMessage(player,
+								"" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
 					}
 				} else if (this.ticks % 40 == 0)
-					player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD
-							+ ", You need to add more power to use this! The machine needs 1,000,000 gJ or 625,000 RF per use!"));
+					PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You need to add more power to use this! The machine needs 1,000,000 gJ or 625,000 RF per use!");
 			} else if (this.ticks % 40 == 0)
 				for (int i = 0; i < containedEntities.size(); i++) {
 					EntityPlayerMP player = (containedEntities.get(i));
-					player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You currently have to many people within the machine! Only 1 Player is allowed!"));
+					PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You currently have to many people within the machine! Only 1 Player is allowed!");
 				}
 		}
 		super.update();
@@ -216,11 +213,6 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 	@Override
 	public boolean hasCustomName() {
 		return true;
-	}
-
-	@Override
-	public ITextComponent getDisplayName() {
-		return (this.hasCustomName() ? new TextComponentString(this.getName()) : new TextComponentTranslation(this.getName(), new Object[0]));
 	}
 
 	@Override

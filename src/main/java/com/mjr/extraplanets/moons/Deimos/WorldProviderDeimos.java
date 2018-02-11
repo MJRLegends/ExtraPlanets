@@ -149,7 +149,7 @@ public class WorldProviderDeimos extends WorldProviderSpace implements IGalactic
 	public ResourceLocation getDungeonChestType() {
 		return null;
 	}
-	
+
 	@Override
 	public List<Block> getSurfaceBlocks() {
 		List<Block> list = new LinkedList<>();

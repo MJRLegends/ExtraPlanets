@@ -7,18 +7,18 @@ import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.settings.GameSettings;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.entities.landers.EntityMercuryLander;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SideOnly(Side.CLIENT)
 public class OverlayMercuryLander extends Overlay {
-	private static Minecraft minecraft = FMLClientHandler.instance().getClient();
+	private static Minecraft minecraft = MCUtilities.getClient();
 
 	private static long screenTicks;
 

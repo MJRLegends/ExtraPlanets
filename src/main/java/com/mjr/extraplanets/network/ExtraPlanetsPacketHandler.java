@@ -8,8 +8,6 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
 
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.network.IPacket;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.INetHandler;
 import net.minecraft.world.World;
@@ -21,7 +19,9 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Queues;
 import com.mjr.extraplanets.client.handlers.MainHandlerClient;
 import com.mjr.extraplanets.handlers.MainHandlerServer;
+import com.mjr.mjrlegendslib.network.IPacket;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.NetworkUtilities;
 
 @Sharable
 public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPacket> {
@@ -70,7 +70,7 @@ public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPack
 	protected void channelRead0(ChannelHandlerContext ctx, IPacket msg) throws Exception {
 		INetHandler netHandler = ctx.channel().attr(NetworkRegistry.NET_HANDLER).get();
 		Side side = ctx.channel().attr(NetworkRegistry.CHANNEL_SOURCE).get();
-		EntityPlayer player = GalacticraftCore.proxy.getPlayerFromNetHandler(netHandler);
+		EntityPlayer player = NetworkUtilities.getPlayerFromNetHandler(netHandler);
 
 		if (player == null) {
 			return;

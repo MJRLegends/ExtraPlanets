@@ -25,13 +25,13 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.blocks.BlockCustomMulti;
 import com.mjr.extraplanets.blocks.BlockCustomMulti.EnumBlockMultiType;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class TileEntityTier3LandingPad extends TileEntityMulti implements IMultiBlock, IFuelable, IFuelDock, ICargoEntity {
 	public TileEntityTier3LandingPad() {
@@ -129,7 +129,7 @@ public class TileEntityTier3LandingPad extends TileEntityMulti implements IMulti
 
 			if (stateAt.getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK && stateAt.getValue(BlockCustomMulti.MULTI_TYPE) == EnumBlockMultiType.TIER_3_ROCKET_PAD) {
 				if (this.world.isRemote && this.world.rand.nextDouble() < 0.1D) {
-					FMLClientHandler.instance().getClient().effectRenderer.addBlockDestroyEffects(pos, this.world.getBlockState(pos));
+					MCUtilities.getClient().effectRenderer.addBlockDestroyEffects(pos, this.world.getBlockState(pos));
 				}
 				this.world.destroyBlock(pos, false);
 			}

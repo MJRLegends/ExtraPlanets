@@ -32,7 +32,6 @@ import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.client.FMLClientHandler;
 
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
@@ -1252,7 +1251,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 					if (this.renamingString == null) {
 						Satellite selectedSatellite = (Satellite) this.selectedBody;
-						String playerName = FMLClientHandler.instance().getClient().player.getGameProfile().getName();
+						String playerName = MCUtilities.getClient().player.getGameProfile().getName();
 						this.renamingString = this.spaceStationMap.get(getSatelliteParentID(selectedSatellite)).get(playerName).getStationName();
 						if (this.renamingString == null) {
 							this.renamingString = this.spaceStationMap.get(getSatelliteParentID(selectedSatellite)).get(playerName.toLowerCase()).getStationName();

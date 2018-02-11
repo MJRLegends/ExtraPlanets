@@ -8,7 +8,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
@@ -65,12 +64,13 @@ import com.mjr.extraplanets.planets.Uranus.WorldProviderUranus;
 import com.mjr.extraplanets.planets.Uranus.spacestation.WorldProviderUranusOrbit;
 import com.mjr.extraplanets.planets.mars.spacestation.WorldProviderMarsOrbit;
 import com.mjr.extraplanets.planets.venus.spacestation.WorldProviderVenusOrbit;
+import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class SkyProviderHandler {
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public void onClientTick(ClientTickEvent event) {
-		final Minecraft minecraft = FMLClientHandler.instance().getClient();
+		final Minecraft minecraft = MCUtilities.getClient();
 		final WorldClient world = minecraft.world;
 		final EntityPlayerSP player = minecraft.player;
 
@@ -102,7 +102,7 @@ public class SkyProviderHandler {
 				if (world.provider.getCloudRenderer() == null) {
 					world.provider.setCloudRenderer(new CloudRenderJupiter());
 				} else {
-					if (!FMLClientHandler.instance().getClient().isGamePaused()) {
+					if (!MCUtilities.getClient().isGamePaused()) {
 						CloudRenderJupiter.cloudTickCounter += 5;
 					}
 				}

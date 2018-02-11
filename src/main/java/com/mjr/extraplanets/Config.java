@@ -37,7 +37,7 @@ public class Config {
 	public static boolean GENERATE_JUITPER_SKY_FEATURE;
 	public static boolean JUITPER_LIGHTING;
 	public static boolean CUSTOM_FOG;
-	
+
 	public static boolean GENERATE_ORES_MERCURY;
 	public static boolean GENERATE_ORES_CERES;
 	public static boolean GENERATE_ORES_JUPITER;
@@ -59,7 +59,7 @@ public class Config {
 	public static boolean GENERATE_ORES_TITAN;
 	public static boolean GENERATE_ORES_TITANIA;
 	public static boolean GENERATE_ORES_TRITON;
-	
+
 	public static boolean ITEMS_CARBON;
 	public static boolean ITEMS_PALLADIUM;
 	public static boolean ITEMS_MAGNESIUM;
@@ -402,7 +402,7 @@ public class Config {
 		NUCLEAR_BOMB = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Nuclear Bomb", true, "This option will disable & remove the Nuclear Bomb").getBoolean(true);
 		FIRE_BOMB = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Fire Bomb", true, "This option will disable & remove the Fire Bomb").getBoolean(true);
 		VEHICLE_CHARGER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Vehicle Charger", true, "This option will disable & remove the Vehicle Charger").getBoolean(true);
-				
+
 		BASIC_DECRYSTALLIZER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Decrystallizer", true, "This option will disable & remove the Basic Decrystallizer").getBoolean(true);
 		BASIC_CRYSTALLIZER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Crystallizer", true, "This option will disable & remove the Basic Crystallizer").getBoolean(true);
 		BASIC_SMASHER = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Basic Block Smasher", true, "This option will disable & remove the Basic Block Smasher").getBoolean(true);
@@ -448,7 +448,7 @@ public class Config {
 		JUITPER_LIGHTING = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable & remove Lighting & Lighting Effects on Jupiter").getBoolean(true);
 		CUSTOM_FOG = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
 				.getBoolean(true);
-		
+
 		GENERATE_ORES_MERCURY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Mercury", true, "Setting this option to false will disable ore gen for Mercury").getBoolean(true);
 		GENERATE_ORES_CERES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Ceres", true, "Setting this option to false will disable ore gen for Ceres").getBoolean(true);
 		GENERATE_ORES_JUPITER = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ore Gen Jupiter", true, "Setting this option to false will disable ore gen for Jupiter").getBoolean(true);
@@ -681,9 +681,9 @@ public class Config {
 		CUSTOM_GALAXIES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Custom Galaxies on Celestaial Selection Screen", true,
 				"Setting this option to false will disable & remove the Custom Galaxies on Celestaial Selection Screen (Note: Will get disabled by the 'Use Custom Galaxy Map/Celestaial Selection Screen' option)").getBoolean(true);
 
-		REGISTER_BIOME_TYPES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable registering of Biomes Types for ExtraPlanets biomes", true,
-				"Setting this option to false, will disable biome types being assigned to ExtraPlanets biomes").getBoolean(true);
-		
+		REGISTER_BIOME_TYPES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable registering of Biomes Types for ExtraPlanets biomes", true, "Setting this option to false, will disable biome types being assigned to ExtraPlanets biomes")
+				.getBoolean(true);
+
 		MERCURY_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Mercury Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		CERES_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Ceres Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		JUPITER_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Jupiter Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();

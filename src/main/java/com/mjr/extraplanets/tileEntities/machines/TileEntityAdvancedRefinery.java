@@ -317,7 +317,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 
 		return tankInfo;
 	}
-	
+
 	@Override
 	public boolean hasCapability(Capability<?> capability, @Nullable EnumFacing facing) {
 		return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY || super.hasCapability(capability, facing);

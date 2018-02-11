@@ -19,7 +19,6 @@ import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
@@ -54,6 +53,7 @@ import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.extraplanets.util.DamageSourceEP;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class MainHandlerServer {
@@ -317,9 +317,9 @@ public class MainHandlerServer {
 				stats.setRadiationLevel(0);
 			else {
 				stats.setRadiationLevel(stats.getRadiationLevel() - level);
-				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " 5%"));
-				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
-						+ (int) stats.getRadiationLevel() + "%"));
+				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " 5%");
+				PlayerUtilties.sendMessage(player,
+						"" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
 			}
 		}
 	}
@@ -329,10 +329,10 @@ public class MainHandlerServer {
 		if (event.player.world.isRemote == false) {
 			if (event.player.world.provider instanceof WorldProviderRealisticSpace) {
 				EntityPlayer player = event.player;
-				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " "
-						+ ((WorldProviderRealisticSpace) event.player.world.provider).getSolarRadiationLevel() + "% " + TranslateUtilities.translate("gui.radiation.type.message") + ""));
-				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_GREEN + ", " + TranslateUtilities.translate("gui.radiation.reverse.message") + "!"));
-				player.sendMessage(new TextComponentString("" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.cancel.message") + "!"));
+				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " "
+						+ ((WorldProviderRealisticSpace) event.player.world.provider).getSolarRadiationLevel() + "% " + TranslateUtilities.translate("gui.radiation.type.message") + "");
+				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_GREEN + ", " + TranslateUtilities.translate("gui.radiation.reverse.message") + "!");
+				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.cancel.message") + "!");
 			}
 		}
 	}
