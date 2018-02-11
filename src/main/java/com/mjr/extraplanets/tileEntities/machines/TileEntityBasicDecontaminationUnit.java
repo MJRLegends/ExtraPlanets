@@ -24,7 +24,6 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.IChatComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -229,11 +228,6 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 	@Override
 	public boolean hasCustomName() {
 		return true;
-	}
-
-	@Override
-	public IChatComponent getDisplayName() {
-		return null;
 	}
 
 	@Override
