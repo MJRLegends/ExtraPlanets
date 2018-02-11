@@ -10,7 +10,7 @@
   "conditions": [
     {
       "type": "extraplanets:recipe_enabled",
-      "value": "radiation"
+      "value": "radiation_not_ceres"
     }
   ],
   "type": "minecraft:crafting_shaped",

@@ -307,11 +307,11 @@ public class ExtraPlanets_RecipeGeneration {
 		// Block to Magnesium
 		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "saturn", new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 9, 5), new Object[] { new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 7) });
 
-		// Fire Bomb // TODO Check for Config enabling to change recipe
+		// Fire Bomb
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "jupiter", new ItemStack(ExtraPlanets_Blocks.FIRE_BOMB), new Object[] { "GZG", "SVS", "GZG", 'G', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM), 'S', Blocks.SAND,
 				'Z', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10), 'V', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 11) });
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "saturn", new ItemStack(ExtraPlanets_Blocks.FIRE_BOMB), new Object[] { "GZG", "SLS", "GLG", 'G', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM), 'S', Blocks.SAND,
-				'Z', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'L', "ingotLead" });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "saturn_not_jupiter", new ItemStack(ExtraPlanets_Blocks.FIRE_BOMB), new Object[] { "GZG", "SLS", "GLG", 'G', new ItemStack(ExtraPlanets_Items.INGOT_URANIUM), 'S',
+				Blocks.SAND, 'Z', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 5), 'L', "ingotLead" });
 
 		// Tools
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "magnesiumtools", new ItemStack(ExtraPlanets_Tools.MAGNESIUM_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X',
@@ -778,6 +778,8 @@ public class ExtraPlanets_RecipeGeneration {
 				new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5) });
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "refinery_ultimate", new ItemStack(ExtraPlanets_Machines.REFINERY_ULTIMATE), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', ExtraPlanets_Machines.REFINERY_ADVANCED, 'Z',
 				new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "refinery_ultimate_not_advanced", new ItemStack(ExtraPlanets_Machines.REFINERY_ULTIMATE), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', GCBlocks.refinery, 'Z',
+				new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5) });
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "solarpanels", new ItemStack(ExtraPlanets_Machines.SOLAR_PANEL, 1, 0), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y', new ItemStack(GCBlocks.solarPanel, 1, 4), 'Z',
 				new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 4) });
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "solarpanels", new ItemStack(ExtraPlanets_Machines.SOLAR_PANEL, 1, 4), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y',
@@ -790,11 +792,17 @@ public class ExtraPlanets_RecipeGeneration {
 				new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 1, 0), 'Z', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "oxygencompressorultimate", new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 1, 4), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y',
 				new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ADVANCED, 1, 4), 'Z', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "oxygencompressorultimate_not_advanced", new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 1, 0), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y',
+				new ItemStack(GCBlocks.oxygenCompressor, 1, 0), 'Z', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "oxygencompressorultimate_not_advanced", new ItemStack(ExtraPlanets_Machines.OXYGEN_COMPRESSOR_ULTIMATE, 1, 4), new Object[] { "ZYZ", "YZY", "ZYZ", 'Y',
+				new ItemStack(GCBlocks.oxygenCompressor, 1, 4), 'Z', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5) });
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "fuelloaderadvanced", new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED), new Object[] { "XXX", "XZX", "WYW", 'W',
 				new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 7), 'Y', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 8), 'Z', new ItemStack(GCBlocks.fuelLoader) });
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "fuelloaderadvanced", new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE), new Object[] { "XXX", "XZX", "WYW", 'W',
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "fuelloaderultimate", new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE), new Object[] { "XXX", "XZX", "WYW", 'W',
 				new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'Y', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'Z',
 				new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "fuelloaderultimate_not_advanced", new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE), new Object[] { "XXX", "XZX", "WYW", 'W',
+				new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'X', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 5), 'Y', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 6), 'Z', new ItemStack(GCBlocks.fuelLoader) });
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "vehiclecharger", new ItemStack(ExtraPlanets_Machines.VEHICLE_CHARGER), new Object[] { "WXW", "WXW", "WXW", 'W', "ingotDesh", 'X',
 				new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
 
@@ -1025,10 +1033,9 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "radiation", new ItemStack(ExtraPlanets_Machines.BASIC_SMASHER, 1, 0), new Object[] { "MAM", "PPP", "MAM", 'P', Blocks.PISTON, 'M',
 				ExtraPlanets_Items.COMPRESSED_MERCURY, 'A', Blocks.ANVIL });
 
-		// TODO Check for Config enabling to change recipe
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "radiation", new ItemStack(ExtraPlanets_Machines.BASIC_CHEMICAL_INJECTOR, 1, 0), new Object[] { "UUU", "PPP", "UUU", 'P', Blocks.PISTON, 'U',
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "radiation_ceres", new ItemStack(ExtraPlanets_Machines.BASIC_CHEMICAL_INJECTOR, 1, 0), new Object[] { "UUU", "PPP", "UUU", 'P', Blocks.PISTON, 'U',
 				ExtraPlanets_Items.INGOT_URANIUM });
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "radiation", new ItemStack(ExtraPlanets_Machines.BASIC_CHEMICAL_INJECTOR, 1, 0), new Object[] { "UUU", "PPP", "UUU", 'P', Blocks.PISTON, 'U',
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "radiation_not_ceres", new ItemStack(ExtraPlanets_Machines.BASIC_CHEMICAL_INJECTOR, 1, 0), new Object[] { "UUU", "PPP", "UUU", 'P', Blocks.PISTON, 'U',
 				ExtraPlanets_Items.POTASSIUM });
 
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "radiation", new ItemStack(ExtraPlanets_Machines.BASIC_PURIFIER, 1, 0), new Object[] { "FMF", "ESE", "FMF", 'F', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), 'M',

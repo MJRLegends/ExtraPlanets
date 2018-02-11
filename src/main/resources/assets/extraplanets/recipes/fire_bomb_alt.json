@@ -10,7 +10,7 @@
   "conditions": [
     {
       "type": "extraplanets:recipe_enabled",
-      "value": "saturn"
+      "value": "saturn_not_jupiter"
     }
   ],
   "type": "forge:ore_shaped",

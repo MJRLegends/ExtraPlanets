@@ -10,7 +10,7 @@
   "conditions": [
     {
       "type": "extraplanets:recipe_enabled",
-      "value": "fuelloaderultimate"
+      "value": "fuelloaderultimate_not_advanced"
     }
   ],
   "type": "minecraft:crafting_shaped",
@@ -28,7 +28,7 @@
       "data": 6
     },
     "Z": {
-      "item": "extraplanets:advanced_fuel_loader"
+      "item": "galacticraftcore:fuel_loader"
     }
   }
 }

@@ -89,12 +89,16 @@ public class RecipeEnabledCondition implements IConditionFactory {
 		if (JsonUtils.getString(json, "value").equals("plutoslabsandstairs")) {
 			if (Config.PLUTO && Config.SLABS_AND_STAIRS)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("eris"))
 			return () -> Config.ERIS;
 		if (JsonUtils.getString(json, "value").equals("erisslabsandstairs")) {
 			if (Config.ERIS && Config.SLABS_AND_STAIRS)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("kepler22b"))
 			return () -> Config.KEPLER22B;
@@ -112,34 +116,86 @@ public class RecipeEnabledCondition implements IConditionFactory {
 			return () -> Config.CUSTOM_APPLES;
 		if (JsonUtils.getString(json, "value").equals("refinery_advanced"))
 			return () -> Config.REFINERY_ADVANCED;
-		if (JsonUtils.getString(json, "value").equals("refinery_ultimate"))
-			return () -> Config.REFINERY_ULTIMATE;
+		if (JsonUtils.getString(json, "value").equals("refinery_ultimate")) {
+			if (Config.REFINERY_ULTIMATE && Config.REFINERY_ADVANCED)
+				return () -> true;
+			else
+				return () -> false;
+		}
+		if (JsonUtils.getString(json, "value").equals("refinery_ultimate_not_advanced")) {
+			if (Config.REFINERY_ULTIMATE && Config.REFINERY_ADVANCED == false)
+				return () -> true;
+			else
+				return () -> false;
+		}
 		if (JsonUtils.getString(json, "value").equals("solarpanels"))
 			return () -> Config.SOLAR_PANELS;
 		if (JsonUtils.getString(json, "value").equals("vehiclecharger"))
 			return () -> Config.VEHICLE_CHARGER;
 		if (JsonUtils.getString(json, "value").equals("oxygencompressoradvanced"))
 			return () -> Config.OXYGEN_COMPRESSOR_ADVANCED;
-		if (JsonUtils.getString(json, "value").equals("oxygencompressorultimate"))
-			return () -> Config.OXYGEN_COMPRESSOR_ULTIMATE;
+		if (JsonUtils.getString(json, "value").equals("oxygencompressorultimate")) {
+			if (Config.OXYGEN_COMPRESSOR_ULTIMATE && Config.OXYGEN_COMPRESSOR_ADVANCED)
+				return () -> true;
+			else
+				return () -> false;
+		}
+		if (JsonUtils.getString(json, "value").equals("oxygencompressorultimate_not_advanced")) {
+			if (Config.OXYGEN_COMPRESSOR_ULTIMATE && Config.OXYGEN_COMPRESSOR_ADVANCED == false)
+				return () -> true;
+			else
+				return () -> false;
+		}
 		if (JsonUtils.getString(json, "value").equals("fuelloaderadvanced"))
 			return () -> Config.FUEL_LOADER_ADVANCED;
-		if (JsonUtils.getString(json, "value").equals("fuelloaderultimate"))
-			return () -> Config.FUEL_LOADER_ULTIMATE;
+		if (JsonUtils.getString(json, "value").equals("fuelloaderultimate")) {
+			if (Config.FUEL_LOADER_ULTIMATE && Config.FUEL_LOADER_ADVANCED)
+				return () -> true;
+			else
+				return () -> false;
+		}
+		if (JsonUtils.getString(json, "value").equals("fuelloaderultimate_not_advanced")) {
+			if (Config.FUEL_LOADER_ULTIMATE && Config.FUEL_LOADER_ADVANCED == false)
+				return () -> true;
+			else
+				return () -> false;
+		}
 		if (JsonUtils.getString(json, "value").equals("rovers")) {
 			if (Config.MARS_ROVER || Config.VENUS_ROVER)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("batteries"))
 			return () -> Config.BATTERIES;
 		if (JsonUtils.getString(json, "value").equals("pressureandradiation")) {
 			if (Config.PRESSURE || Config.RADIATION)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("radiation"))
 			return () -> Config.RADIATION;
 		if (JsonUtils.getString(json, "value").equals("oxygentanks"))
 			return () -> Config.OXYGEN_TANKS;
+		if (JsonUtils.getString(json, "value").equals("saturn_not_jupiter")) {
+			if (Config.JUPITER == false && Config.SATURN)
+				return () -> true;
+			else
+				return () -> false;
+		}
+		if (JsonUtils.getString(json, "value").equals("radiation_ceres")) {
+			if (Config.RADIATION && Config.CERES)
+				return () -> true;
+			else
+				return () -> false;
+		}
+		if (JsonUtils.getString(json, "value").equals("radiation_not_ceres")) {
+			if (Config.CERES == false && Config.RADIATION)
+				return () -> true;
+			else
+				return () -> false;
+		}
 
 		throw new IllegalStateException("Config defined with recipe_enabled condition without a valid field defined!");
 	}
