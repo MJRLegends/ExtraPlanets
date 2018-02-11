@@ -36,6 +36,7 @@ v1.2.8
 *Refactor code in a few Item classes to MJRLegendsLib
 *Refactor some code from ClientProxy class in to MJRLegendsLib
 *Renamed Decontamination Unit model file
+*Set required GC version requirement to Build 133
 
 v1.2.7
 *Fixed issue #221
