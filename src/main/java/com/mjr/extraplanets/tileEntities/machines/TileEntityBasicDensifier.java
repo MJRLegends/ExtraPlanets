@@ -13,7 +13,6 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.IChatComponent;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
@@ -371,11 +370,6 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 			return direction == this.getInputPipe();
 		}
 		return false;
-	}
-
-	@Override
-	public IChatComponent getDisplayName() {
-		return null;
 	}
 
 	private EnumFacing getInputPipe() {

@@ -20,7 +20,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.IChatComponent;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -157,12 +156,7 @@ public class TileEntityUltimateFuelLoader extends TileBaseElectricBlockWithInven
 
 	@Override
 	public boolean hasCustomName() {
-		return false;
-	}
-
-	@Override
-	public IChatComponent getDisplayName() {
-		return null;
+		return true;
 	}
 
 	@Override

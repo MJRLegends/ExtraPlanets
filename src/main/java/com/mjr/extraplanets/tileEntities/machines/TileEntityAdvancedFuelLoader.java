@@ -20,7 +20,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.IChatComponent;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -160,12 +159,6 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 		return false;
 	}
 
-	@Override
-	public IChatComponent getDisplayName() {
-		return null;
-	}
-
-	@Override
 	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
 		return (slotID == 1 && itemstack != null && itemstack.getItem() == GCItems.fuelCanister) || (slotID == 0 ? ItemElectricBase.isElectricItem(itemstack.getItem()) : false);
 	}

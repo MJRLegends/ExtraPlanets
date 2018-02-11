@@ -11,7 +11,6 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.IChatComponent;
 import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -307,11 +306,6 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 			return direction == pipeSide || direction == pipeSide.getOpposite() || direction == EnumFacing.DOWN;
 		}
 		return false;
-	}
-
-	@Override
-	public IChatComponent getDisplayName() {
-		return null;
 	}
 
 	private EnumFacing getInputPipe() {

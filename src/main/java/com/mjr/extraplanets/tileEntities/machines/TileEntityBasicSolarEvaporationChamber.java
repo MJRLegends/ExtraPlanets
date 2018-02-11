@@ -9,7 +9,6 @@ import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.IChatComponent;
 import net.minecraftforge.fml.relauncher.Side;
 
 import com.mjr.extraplanets.blocks.machines.BasicSolarEvaporationChamber;
@@ -218,10 +217,5 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 			return state.getValue(BasicSolarEvaporationChamber.FACING);
 		}
 		return EnumFacing.NORTH;
-	}
-
-	@Override
-	public IChatComponent getDisplayName() {
-		return null;
 	}
 }
