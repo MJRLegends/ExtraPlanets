@@ -32,9 +32,11 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 
 	public BiomeDecoratorUranus() {
 		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 2);
-		this.crystalGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.URANUS_BLOCKS, 4, 3, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 2);
-		this.denseIceGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.DENSE_ICE, 8, 0, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 0);
-		this.whiteGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.URANUS_BLOCKS, 4, 7, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 2);
+		if (Config.GENERATE_ORES_URANUS) {
+			this.crystalGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.URANUS_BLOCKS, 4, 3, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 2);
+			this.denseIceGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.DENSE_ICE, 8, 0, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 0);
+			this.whiteGemGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.URANUS_BLOCKS, 4, 7, true, ExtraPlanets_Blocks.URANUS_BLOCKS, 2);
+		}
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
@@ -55,9 +57,11 @@ public class BiomeDecoratorUranus extends BiomeDecoratorSpace {
 			return;
 		isDecorating = true;
 		this.generateOre(8, this.iceGen, 50, 120);
-		this.generateOre(20, this.crystalGen, 0, 32);
-		this.generateOre(20, this.denseIceGen, 0, 256);
-		this.generateOre(5, this.whiteGemGen, 0, 10);
+		if (Config.GENERATE_ORES_URANUS) {
+			this.generateOre(20, this.crystalGen, 0, 32);
+			this.generateOre(20, this.denseIceGen, 0, 256);
+			this.generateOre(5, this.whiteGemGen, 0, 10);
+		}
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 

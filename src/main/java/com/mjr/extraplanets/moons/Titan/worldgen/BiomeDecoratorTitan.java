@@ -8,6 +8,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
@@ -26,9 +27,11 @@ public class BiomeDecoratorTitan extends BiomeDecoratorSpace {
 	private World currentWorld;
 
 	public BiomeDecoratorTitan() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 2);
+		if (Config.GENERATE_ORES_TITAN) {
+			this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 2);
+			this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 2);
+			this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 2);
+		}
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 1);
 		this.rocksGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.TITAN_BLOCKS, 12, 8, true, ExtraPlanets_Blocks.TITAN_BLOCKS, 0);
@@ -47,9 +50,11 @@ public class BiomeDecoratorTitan extends BiomeDecoratorSpace {
 
 	@Override
 	protected void decorate() {
-		this.generateOre(26, this.copperGen, 0, 60);
-		this.generateOre(23, this.tinGen, 0, 60);
-		this.generateOre(20, this.ironGen, 0, 64);
+		if (Config.GENERATE_ORES_TITAN) {
+			this.generateOre(26, this.copperGen, 0, 60);
+			this.generateOre(23, this.tinGen, 0, 60);
+			this.generateOre(20, this.ironGen, 0, 64);
+		}
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
 		this.generateOre(60, this.rocksGen, 40, 120);

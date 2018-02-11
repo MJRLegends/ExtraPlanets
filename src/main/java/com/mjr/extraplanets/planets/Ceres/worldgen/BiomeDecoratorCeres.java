@@ -8,6 +8,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
@@ -28,10 +29,12 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorCeres() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
-		this.uraniumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 3, 6, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
+		if (Config.GENERATE_ORES_CERES) {
+			this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
+			this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
+			this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
+			this.uraniumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_BLOCKS, 3, 6, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
+		}
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CERES_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.CERES_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.CERES_BLOCKS, 1);
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
@@ -52,10 +55,12 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 		if (isDecorating)
 			return;
 		isDecorating = true;
-		this.generateOre(26, this.copperGen, 0, 60);
-		this.generateOre(23, this.tinGen, 0, 60);
-		this.generateOre(20, this.ironGen, 0, 64);
-		this.generateOre(10, this.uraniumGen, 0, 64);
+		if (Config.GENERATE_ORES_CERES) {
+			this.generateOre(26, this.copperGen, 0, 60);
+			this.generateOre(23, this.tinGen, 0, 60);
+			this.generateOre(20, this.ironGen, 0, 64);
+			this.generateOre(10, this.uraniumGen, 0, 64);
+		}
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
 

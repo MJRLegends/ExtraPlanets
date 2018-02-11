@@ -36,13 +36,15 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 	private boolean isDecorating = false;
 
 	public BiomeDecoratorSaturn() {
-		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
-		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
-		this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
+		if (Config.GENERATE_ORES_SATURN) {
+			this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
+			this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
+			this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
+			this.magnesiumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
+			this.slimeGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 12, 12, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 10);
+		}
 		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 18, 0, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
-		this.magnesiumGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 4, 6, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 2);
-		this.slimeGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.SATURN_BLOCKS, 12, 12, true, ExtraPlanets_Blocks.SATURN_BLOCKS, 10);
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta,boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
 
@@ -61,13 +63,15 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 		if (isDecorating)
 			return;
 		isDecorating = true;
-		this.generateOre(26, this.copperGen, 0, 60);
-		this.generateOre(23, this.tinGen, 0, 60);
-		this.generateOre(20, this.ironGen, 0, 64);
+		if (Config.GENERATE_ORES_SATURN) {
+			this.generateOre(26, this.copperGen, 0, 60);
+			this.generateOre(23, this.tinGen, 0, 60);
+			this.generateOre(20, this.ironGen, 0, 64);
+			this.generateOre(20, this.magnesiumGen, 0, 32);
+			this.generateOre(10, this.slimeGen, 60, 256);
+		}
 		this.generateOre(4, this.iceGen, 50, 120);
-		this.generateOre(20, this.magnesiumGen, 0, 32);
 		this.generateOre(15, this.gravelGen, 0, 80);
-		this.generateOre(10, this.slimeGen, 60, 256);
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
