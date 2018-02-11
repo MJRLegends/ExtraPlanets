@@ -867,8 +867,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_KEY);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_NOSE_CONE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_SCHEMATIC);
-			for (int i = 0; i < ItemTier4Items.names.length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_ITEMS, i, ItemTier4Items.names[i]);
+			for (int i = 0; i < ItemTier4Items.getItemList().length; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_ITEMS, i, ItemTier4Items.getItemList()[i]);
 			}
 			if (Config.ITEMS_CARBON) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.CARBON_BOOTS);
@@ -904,8 +904,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_SCHEMATIC);
 			if (Config.BATTERIES)
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BATTERY_NICKEL);
-			for (int i = 0; i < ItemTier5Items.names.length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_ITEMS, i, ItemTier5Items.names[i]);
+			for (int i = 0; i < ItemTier5Items.getItemList().length; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_ITEMS, i, ItemTier5Items.getItemList()[i]);
 			}
 			if (Config.ITEMS_PALLADIUM) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.PALLASIUM_BOOTS);
@@ -936,8 +936,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_6_KEY);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_6_NOSE_CONE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_6_SCHEMATIC);
-			for (int i = 0; i < ItemTier6Items.names.length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_6_ITEMS, i, ItemTier6Items.names[i]);
+			for (int i = 0; i < ItemTier6Items.getItemList().length; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_6_ITEMS, i, ItemTier6Items.getItemList()[i]);
 			}
 			if (Config.ITEMS_MAGNESIUM) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.MAGNESIUM_BOOTS);
@@ -956,8 +956,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_7_KEY);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_7_NOSE_CONE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_7_SCHEMATIC);
-			for (int i = 0; i < ItemTier7Items.names.length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_7_ITEMS, i, ItemTier7Items.names[i]);
+			for (int i = 0; i < ItemTier7Items.getItemList().length; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_7_ITEMS, i, ItemTier7Items.getItemList()[i]);
 			}
 			if (Config.ITEMS_CRYSTAL) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.CRYSTAL_BOOTS);
@@ -990,8 +990,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_8_SCHEMATIC);
 			if (Config.BATTERIES)
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BATTERY_ZINC);
-			for (int i = 0; i < ItemTier8Items.names.length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_8_ITEMS, i, ItemTier8Items.names[i]);
+			for (int i = 0; i < ItemTier8Items.getItemList().length; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_8_ITEMS, i, ItemTier8Items.getItemList()[i]);
 			}
 			if (Config.ITEMS_ZINC) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.ZINC_BOOTS);
@@ -1022,8 +1022,8 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_9_KEY);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_9_NOSE_CONE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_9_SCHEMATIC);
-			for (int i = 0; i < ItemTier9Items.names.length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_9_ITEMS, i, ItemTier9Items.names[i]);
+			for (int i = 0; i < ItemTier9Items.getItemList().length; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_9_ITEMS, i, ItemTier9Items.getItemList()[i]);
 			}
 			if (Config.ITEMS_TUNGSTEN) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TUNGSTEN_BOOTS);
@@ -1042,13 +1042,13 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_KEY);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_NOSE_CONE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_SCHEMATIC);
-			for (int i = 0; i < ItemTier10Items.names.length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_ITEMS, i, ItemTier10Items.names[i]);
+			for (int i = 0; i < ItemTier10Items.getItemList().length; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_ITEMS, i, ItemTier10Items.getItemList()[i]);
 			}
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
-			for (int i = 0; i < ItemTier11Items.names.length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_11_ITEMS, i, ItemTier11Items.names[i]);
+			for (int i = 0; i < ItemTier11Items.getItemList().length; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_11_ITEMS, i, ItemTier11Items.getItemList()[i]);
 			}
 			if (Config.ITEMS_KEPLER22B) {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.BLUE_DIAMOND_BOOTS);
@@ -1207,35 +1207,36 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.POTASSIUM_IODIDE);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ANTI_RADIATION);
 		}
-		for (int i = 0; i < ItemWafers.names.length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.WAFERS, i, ItemWafers.names[i]);
+		for (int i = 0; i < ItemWafers.getItemList().length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.WAFERS, i, ItemWafers.getItemList()[i]);
 		}
 		for (int i = 0; i < ItemTools.names.length; i++) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TOOLS, i, ItemTools.names[i]);
 		}
 		if (Config.CANNED_FOOD) {
-			for (int i = 0; i < ItemCannedFood.names.length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.CANNED_FOOD, i, ItemCannedFood.names[i]);
+			for (int i = 0; i < ItemCannedFood.getItemList().length; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.CANNED_FOOD, i, ItemCannedFood.getItemList()[i]);
 			}
 		}
-		for (int i = 0; i < ItemBasicKit.names.length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, i, "tier1_kit" + ItemBasicKit.names[i]);
+
+		for (int i = 0; i < ItemBasicKit.getItemList().length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, i, "tier1_kit" + ItemBasicKit.getItemList()[i]);
 		}
-		for (int i = 0; i < ItemBasicKit.names.length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, i, "tier2_kit" + ItemBasicKit.names[i]);
+		for (int i = 0; i < ItemBasicKit.getItemList().length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, i, "tier2_kit" + ItemBasicKit.getItemList()[i]);
 		}
-		for (int i = 0; i < ItemBasicKit.names.length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, i, "tier3_kit" + ItemBasicKit.names[i]);
+		for (int i = 0; i < ItemBasicKit.getItemList().length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, i, "tier3_kit" + ItemBasicKit.getItemList()[i]);
 		}
-		for (int i = 0; i < ItemBasicKit.names.length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, i, "tier4_kit" + ItemBasicKit.names[i]);
+		for (int i = 0; i < ItemBasicKit.getItemList().length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, i, "tier4_kit" + ItemBasicKit.getItemList()[i]);
 		}
-		for (int i = 0; i < ItemBasicKit.names.length; i++) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, i, "tier5_kit" + ItemBasicKit.names[i]);
+		for (int i = 0; i < ItemBasicKit.getItemList().length; i++) {
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, i, "tier5_kit" + ItemBasicKit.getItemList()[i]);
 		}
 		if (Config.MARS_ROVER || Config.VENUS_ROVER) {
-			for (int i = 0; i < ItemElectricParts.names.length; i++) {
-				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ELECTRIC_PARTS, i, ItemElectricParts.names[i]);
+			for (int i = 0; i < ItemElectricParts.getItemList().length; i++) {
+				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ELECTRIC_PARTS, i, ItemElectricParts.getItemList()[i]);
 			}
 		}
 		if (Config.MARS_ROVER)
