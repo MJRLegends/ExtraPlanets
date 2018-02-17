@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -818,35 +819,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			List<CelestialBody> children = this.getChildren(this.isZoomed() ? this.selectedBody : this.selectedParent);
 
 			if (showGalaxies == false) {
-				for (int i = 0; i < children.size(); i++) {
-					CelestialBody child = children.get(i);
-					int xOffset = 0;
-
-					if (child.equals(this.selectedBody)) {
-						xOffset += 4;
-					}
-
-					scale = (int) Math.min(95.0F, Math.max(0.0F, (this.ticksSinceMenuOpen * 25.0F) - 95 * i));
-
-					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
-					if (child.getReachable()) {
-						GL11.glColor4f(0.0F, 0.6F, 0.0F, scale / 95.0F);
-					} else {
-						GL11.glColor4f(0.6F, 0.0F, 0.0F, scale / 95.0F);
-					}
-					this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 3 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 51 + i * 14, 86, 10, 0, 489, 86,
-							10, false, false);
-					GL11.glColor4f(0.0F, 0.6F, 1.0F, scale / 95.0F);
-					this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 50 + i * 14, 93, 12, 95, 464, 93,
-							12, false, false);
-
-					if (scale > 0) {
-						GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-						str = child.getLocalizedName();
-						int color = 14737632;
-						this.fontRenderer.drawString(str, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 7 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 52 + i * 14, color);
-					}
-				}
+				drawChildren(children, 0, 0);
 			}
 
 			if (this.mapMode) {
@@ -1278,6 +1251,54 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		if (!handledSliderPos) {
 			this.zoomTooltipPos = 0;
 		}
+	}
+
+	private int drawChildren(List<CelestialBody> children, int xOffsetBase, int yOffsetPrior) {
+		xOffsetBase += GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE;
+		final int yOffsetBase = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 50 + yOffsetPrior;
+		int yOffset = 0;
+		for (int i = 0; i < children.size(); i++) {
+			CelestialBody child = children.get(i);
+			int xOffset = xOffsetBase + (child.equals(this.selectedBody) ? 5 : 0);
+			final int scale = (int) Math.min(95.0F, Math.max(0.0F, (this.ticksSinceMenuOpen * 25.0F) - 95 * i));
+
+			this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
+			float brightness = child.equals(this.selectedBody) ? 0.2F : 0.0F;
+			if (child.getReachable()) {
+				GL11.glColor4f(0.0F, 0.6F + brightness, 0.0F, scale / 95.0F);
+			} else {
+				GL11.glColor4f(0.6F + brightness, 0.0F, 0.0F, scale / 95.0F);
+			}
+			this.drawTexturedModalRect(3 + xOffset, yOffsetBase + yOffset + 1, 86, 10, 0, 489, 86, 10, false, false);
+			// GL11.glColor4f(5 * brightness, 0.6F + 2 * brightness, 1.0F - 4 * brightness, scale / 95.0F);
+			GL11.glColor4f(3 * brightness, 0.6F + 2 * brightness, 1.0F, scale / 95.0F);
+			this.drawTexturedModalRect(2 + xOffset, yOffsetBase + yOffset, 93, 12, 95, 464, 93, 12, false, false);
+
+			if (scale > 0) {
+				GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+				int color = 14737632;
+				this.fontRenderer.drawString(child.getLocalizedName(), 7 + xOffset, yOffsetBase + yOffset + 2, color);
+			}
+
+			yOffset += 14;
+			if (child.equals(this.selectedBody)) {
+				List<CelestialBody> grandchildren = this.getChildren(child);
+				if (this.animateGrandchildren == 14 * grandchildren.size()) {
+					yOffset += drawChildren(grandchildren, 10, yOffset);
+				} else {
+					if (this.animateGrandchildren >= 14) {
+						List<CelestialBody> partial = new LinkedList<>();
+						for (int j = 0; j < this.animateGrandchildren / 14; j++) {
+							partial.add(grandchildren.get(j));
+						}
+						drawChildren(partial, 10, yOffset);
+					}
+					yOffset += this.animateGrandchildren;
+					this.animateGrandchildren += 2;
+				}
+			}
+		}
+		return yOffset;
 	}
 
 	@Override
