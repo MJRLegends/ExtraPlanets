@@ -16,7 +16,6 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketElectricRocket;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocket;
-import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
@@ -30,8 +29,7 @@ public class RenderElectricRocket extends Render<EntityElectricRocket> {
 
 	private void updateModel() {
 		if (this.rocketModel == null) {
-			ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "electric_rocket", "inventory");
-			this.rocketModel = (ItemModelRocketElectricRocket) MCUtilities.getClient().getRenderItem().getItemModelMesher().getModelManager().getModel(modelResourceLocation);
+			this.rocketModel = (ItemModelRocketElectricRocket) ModelUtilities.getModelFromRegistry(Constants.TEXTURE_PREFIX, "electric_rocket");
 		}
 	}
 

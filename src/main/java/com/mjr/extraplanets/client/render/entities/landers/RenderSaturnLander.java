@@ -2,30 +2,24 @@ package com.mjr.extraplanets.client.render.entities.landers;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.block.model.IBakedModel;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.ModelLoaderRegistry;
-import net.minecraftforge.client.model.obj.OBJModel;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
 
-import com.google.common.base.Function;
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.landers.EntitySaturnLander;
-import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderSaturnLander extends Render<EntitySaturnLander> {
-	private OBJModel.OBJBakedModel landerModel;
+	private IBakedModel landerModel;
 
 	public RenderSaturnLander(RenderManager manager) {
 		super(manager);
@@ -34,14 +28,8 @@ public class RenderSaturnLander extends Render<EntitySaturnLander> {
 
 	private void updateModels() {
 		if (landerModel == null) {
-			OBJModel model;
 			try {
-				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "saturn_lander.obj"));
-				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
-				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> MCUtilities.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
-
-				landerModel = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Body", "OneLeg", "TwoLeg", "ThirdLeg", "FourLeg"), false), DefaultVertexFormats.ITEM, spriteFunction);
-
+				landerModel = ModelUtilities.modelFromOBJForge(new ResourceLocation(Constants.ASSET_PREFIX, "saturn_lander.obj"), ImmutableList.of("Body", "OneLeg", "TwoLeg", "ThirdLeg", "FourLeg"));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

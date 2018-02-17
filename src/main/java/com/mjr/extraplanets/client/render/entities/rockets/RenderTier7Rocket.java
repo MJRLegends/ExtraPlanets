@@ -17,7 +17,6 @@ import org.lwjgl.opengl.GL11;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT7;
 import com.mjr.extraplanets.entities.rockets.EntityTier7Rocket;
-import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
@@ -31,8 +30,7 @@ public class RenderTier7Rocket extends Render<EntityTier7Rocket> {
 
 	private void updateModel() {
 		if (this.rocketModel == null) {
-			ModelResourceLocation modelResourceLocation = new ModelResourceLocation(Constants.TEXTURE_PREFIX + "rocket_t7", "inventory");
-			this.rocketModel = (ItemModelRocketT7) MCUtilities.getClient().getRenderItem().getItemModelMesher().getModelManager().getModel(modelResourceLocation);
+			this.rocketModel = (ItemModelRocketT7) ModelUtilities.getModelFromRegistry(Constants.TEXTURE_PREFIX, "rocket_t7");
 		}
 	}
 

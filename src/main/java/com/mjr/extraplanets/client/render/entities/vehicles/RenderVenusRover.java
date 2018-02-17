@@ -3,38 +3,32 @@ package com.mjr.extraplanets.client.render.entities.vehicles;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
+import net.minecraft.client.renderer.block.model.IBakedModel;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.model.ModelLoaderRegistry;
-import net.minecraftforge.client.model.obj.OBJModel;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import com.google.common.base.Function;
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
-import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderVenusRover extends Render<EntityVenusRover> {
-	private OBJModel.OBJBakedModel modelRover;
-	private OBJModel.OBJBakedModel modelRoverWindows;
-	private OBJModel.OBJBakedModel modelRoverCase1;
-	private OBJModel.OBJBakedModel modelRoverCase2;
-	private OBJModel.OBJBakedModel modelRoverCase3;
+	private IBakedModel modelRover;
+	private IBakedModel modelRoverWindows;
+	private IBakedModel modelRoverCase1;
+	private IBakedModel modelRoverCase2;
+	private IBakedModel modelRoverCase3;
 
-	private OBJModel.OBJBakedModel modelRoverWheelLeft;
-	private OBJModel.OBJBakedModel modelRoverWheelRight;
+	private IBakedModel modelRoverWheelLeft;
+	private IBakedModel modelRoverWheelRight;
 
 	public RenderVenusRover(RenderManager manager) {
 		super(manager);
@@ -44,32 +38,18 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 
 	private void updateModels() {
 		if (modelRover == null) {
-			OBJModel model;
 			try {
-				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover.obj"));
-				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
-				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> MCUtilities.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
+				modelRover = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover.obj"), ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003",
+						"BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2", "BraceFrontWheelRight003", "BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle",
+						"Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG", "Seat", "Spinka", "Helm", "PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003"));
 
-				modelRover = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003", "BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2",
-								"BraceFrontWheelRight003", "BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle", "Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG",
-								"Seat", "Spinka", "Helm", "PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003"), false), DefaultVertexFormats.ITEM, spriteFunction);
+				modelRoverWindows = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover.obj"), ImmutableList.of("FrontWindow", "LeftWall", "RightWall"));
+				modelRoverCase1 = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover.obj"), ImmutableList.of("Container"));
+				modelRoverCase2 = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover.obj"), ImmutableList.of("Container2"));
+				modelRoverCase3 = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover.obj"), ImmutableList.of("Container3"));
 
-				modelRoverWindows = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("FrontWindow", "LeftWall", "RightWall"), false), DefaultVertexFormats.ITEM, spriteFunction);
-
-				modelRoverCase1 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Container"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				modelRoverCase2 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Container2"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				modelRoverCase3 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Container3"), false), DefaultVertexFormats.ITEM, spriteFunction);
-
-				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover_wheel.obj"));
-				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
-
-				modelRoverWheelLeft = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Wheel"), false), DefaultVertexFormats.ITEM, spriteFunction);
-
-				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover_wheel.obj"));
-				model = (OBJModel) model.process(ImmutableMap.of("flip-v", "true"));
-
-				modelRoverWheelRight = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("Wheel"), false), DefaultVertexFormats.ITEM, spriteFunction);
+				modelRoverWheelLeft = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover_wheel.obj"), ImmutableList.of("Wheel"));
+				modelRoverWheelRight = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover_wheel.obj"), ImmutableList.of("Wheel"));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
