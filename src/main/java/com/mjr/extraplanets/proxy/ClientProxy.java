@@ -1222,22 +1222,6 @@ public class ClientProxy extends CommonProxy {
 
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
-	public void loadTextures(TextureStitchEvent.Pre event) {
-		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket");
-		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_black");
-		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_blue_textured");
-		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_dark_grey");
-		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_grey");
-		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_light_blue_textured");
-		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_orange_textured");
-		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_textured");
-		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_white");
-		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_yellow");
-		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "solar_panel");
-	}
-
-	@SubscribeEvent
-	@SideOnly(Side.CLIENT)
 	public void onModelBakeEvent(ModelBakeEvent event) {
 		if (Config.MERCURY)
 			ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t4", ImmutableList.of("Nozzle", "Body_Rocket", "CorrectedWind1", "CorrectedWind2", "CorrectedWind3", "CorrectedWind4", "Tip", "Ring", "FrameWindow1", "FrameWindow2",
@@ -1358,6 +1342,23 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.replaceModelDefaultBlock(Constants.modID, event, "basic_decontamination_unit",
 					ImmutableList.of("Body", "Water_Baloons", "AtomizersOne", "AtomizersThree", "AtomizersFive", "AtomizersSix", "AtomizersFour", "The_back_wall", "AtomaziersTwo"), ItemModelDecontaminationUnit.class);
 		}
+	}
+
+	@SubscribeEvent
+	@SideOnly(Side.CLIENT)
+	public void loadTextures(TextureStitchEvent.Pre event) {
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket");
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_black");
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_blue_textured");
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_dark_grey");
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_dark_red");
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_grey");
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_light_blue_textured");
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_orange_textured");
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_textured");
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_white");
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_yellow");
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "solar_panel");
 	}
 
 	private void registerFluidVariants() {
