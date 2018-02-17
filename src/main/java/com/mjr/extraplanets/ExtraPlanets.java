@@ -192,13 +192,13 @@ public class ExtraPlanets {
 	public static CreativeTabs ToolsTab = new CreativeTabs("SpaceToolsTab") {
 		@Override
 		public Item getTabIconItem() {
-			if (Config.MERCURY)
+			if (Config.MERCURY && Config.ITEMS_CARBON)
 				return ExtraPlanets_Tools.CARBON_PICKAXE;
-			else if (Config.JUPITER)
+			else if (Config.JUPITER && Config.ITEMS_PALLADIUM)
 				return ExtraPlanets_Tools.PALLADIUM_PICKAXE;
-			else if (Config.SATURN)
+			else if (Config.SATURN && Config.ITEMS_MAGNESIUM)
 				return ExtraPlanets_Tools.MAGNESIUM_PICKAXE;
-			else if (Config.URANUS)
+			else if (Config.URANUS && Config.ITEMS_CRYSTAL)
 				return ExtraPlanets_Tools.CRYSTAL_PICKAXE;
 			return GCItems.steelPickaxe;
 		}
@@ -207,13 +207,13 @@ public class ExtraPlanets {
 	public static CreativeTabs ArmorTab = new CreativeTabs("SpaceArmorTab") {
 		@Override
 		public Item getTabIconItem() {
-			if (Config.MERCURY)
+			if (Config.MERCURY && Config.ITEMS_CARBON)
 				return ExtraPlanets_Armor.CARBON_CHEST;
-			else if (Config.JUPITER)
+			else if (Config.JUPITER && Config.ITEMS_PALLADIUM)
 				return ExtraPlanets_Armor.PALLASIUM_CHEST;
-			else if (Config.SATURN)
+			else if (Config.SATURN && Config.ITEMS_MAGNESIUM)
 				return ExtraPlanets_Armor.MAGNESIUM_CHEST;
-			else if (Config.URANUS)
+			else if (Config.URANUS && Config.ITEMS_CRYSTAL)
 				return ExtraPlanets_Armor.CRYSTAL_CHEST;
 			return GCItems.steelChestplate;
 		}
