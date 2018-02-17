@@ -169,13 +169,13 @@ public class ExtraPlanets {
 	public static CreativeTabs ToolsTab = new CreativeTabs("SpaceToolsTab") {
 		@Override
 		public ItemStack getTabIconItem() {
-			if (Config.MERCURY)
+			if (Config.MERCURY && Config.ITEMS_CARBON)
 				return new ItemStack(ExtraPlanets_Tools.CARBON_PICKAXE);
-			else if (Config.JUPITER)
+			else if (Config.JUPITER && Config.ITEMS_PALLADIUM)
 				return new ItemStack(ExtraPlanets_Tools.PALLADIUM_PICKAXE);
-			else if (Config.SATURN)
+			else if (Config.SATURN && Config.ITEMS_MAGNESIUM)
 				return new ItemStack(ExtraPlanets_Tools.MAGNESIUM_PICKAXE);
-			else if (Config.URANUS)
+			else if (Config.URANUS && Config.ITEMS_CRYSTAL)
 				return new ItemStack(ExtraPlanets_Tools.CRYSTAL_PICKAXE);
 			return new ItemStack(GCItems.steelPickaxe);
 		}
@@ -184,13 +184,13 @@ public class ExtraPlanets {
 	public static CreativeTabs ArmorTab = new CreativeTabs("SpaceArmorTab") {
 		@Override
 		public ItemStack getTabIconItem() {
-			if (Config.MERCURY)
+			if (Config.MERCURY && Config.ITEMS_CARBON)
 				return new ItemStack(ExtraPlanets_Armor.CARBON_CHEST);
-			else if (Config.JUPITER)
+			else if (Config.JUPITER && Config.ITEMS_PALLADIUM)
 				return new ItemStack(ExtraPlanets_Armor.PALLASIUM_CHEST);
-			else if (Config.SATURN)
+			else if (Config.SATURN && Config.ITEMS_MAGNESIUM)
 				return new ItemStack(ExtraPlanets_Armor.MAGNESIUM_CHEST);
-			else if (Config.URANUS)
+			else if (Config.URANUS && Config.ITEMS_CRYSTAL)
 				return new ItemStack(ExtraPlanets_Armor.CRYSTAL_CHEST);
 			return new ItemStack(GCItems.steelChestplate);
 		}
