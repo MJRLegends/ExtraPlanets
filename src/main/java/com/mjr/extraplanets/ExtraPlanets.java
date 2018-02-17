@@ -153,13 +153,13 @@ public class ExtraPlanets {
 	public static CreativeTabs ToolsTab = new CreativeTabs("SpaceToolsTab") {
 		@Override
 		public Item getTabIconItem() {
-			if (Config.venus)
+			if (Config.venus && Config.carbonItems)
 				return ExtraPlanets_Tools.carbonPickaxe;
-			else if (Config.jupiter)
+			else if (Config.jupiter && Config.palladiumItems)
 				return ExtraPlanets_Tools.palladiumPickaxe;
-			else if (Config.saturn)
+			else if (Config.saturn && Config.magnesiumItems)
 				return ExtraPlanets_Tools.magnesiumPickaxe;
-			else if (Config.uranus)
+			else if (Config.uranus && Config.crystalItems)
 				return ExtraPlanets_Tools.crystalPickaxe;
 			return GCItems.steelPickaxe;
 		}
@@ -168,13 +168,13 @@ public class ExtraPlanets {
 	public static CreativeTabs ArmorTab = new CreativeTabs("SpaceArmorTab") {
 		@Override
 		public Item getTabIconItem() {
-			if (Config.venus)
+			if (Config.venus && Config.carbonItems)
 				return ExtraPlanets_Armor.carbonChest;
-			else if (Config.jupiter)
+			else if (Config.jupiter && Config.palladiumItems)
 				return ExtraPlanets_Armor.palladiumChest;
-			else if (Config.saturn)
+			else if (Config.saturn && Config.magnesiumItems)
 				return ExtraPlanets_Armor.magnesiumChest;
-			else if (Config.uranus)
+			else if (Config.uranus && Config.crystalItems)
 				return ExtraPlanets_Armor.crystalChest;
 			return GCItems.steelChestplate;
 		}
