@@ -89,18 +89,18 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.addRecipes(CrystallizerRecipeMaker.getRecipesList());
 			registry.addRecipes(PurifierRecipeMaker.getRecipesList());
 			registry.addRecipes(DensifierRecipeMaker.getRecipesList());
-			
-			ItemStack nasaWorkbench = new ItemStack(GCBlocks.nasaWorkbench);	        
-	        registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T4_ID);
-	        registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T5_ID);
-	        registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T6_ID);
-	        registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T7_ID);
-	        registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T8_ID);
-	        registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T9_ID);
-	        registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T10_ID);
-	        registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T10_ELECTRIC_ID);
-	        registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.MARS_ROVER_ID);
-	        registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.VENUS_ROVER_ID);
+
+			ItemStack nasaWorkbench = new ItemStack(GCBlocks.nasaWorkbench);
+			registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T4_ID);
+			registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T5_ID);
+			registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T6_ID);
+			registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T7_ID);
+			registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T8_ID);
+			registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T9_ID);
+			registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T10_ID);
+			registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.ROCKET_T10_ELECTRIC_ID);
+			registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.MARS_ROVER_ID);
+			registry.addRecipeCategoryCraftingItem(nasaWorkbench, RecipeCategories.VENUS_ROVER_ID);
 			registry.addRecipeCategoryCraftingItem(new ItemStack(ExtraPlanets_Machines.BASIC_CHEMICAL_INJECTOR), RecipeCategories.CHEMAICAL_INJECTOR_ID);
 			registry.addRecipeCategoryCraftingItem(new ItemStack(ExtraPlanets_Machines.BASIC_CRYSALLIZER), RecipeCategories.CRYSTALLIZER_ID);
 			registry.addRecipeCategoryCraftingItem(new ItemStack(ExtraPlanets_Machines.BASIC_DENSIFIER), RecipeCategories.DENSIFIER_ID);
