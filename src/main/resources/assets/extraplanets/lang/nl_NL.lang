@@ -520,6 +520,13 @@ gui.general_features_details.name=General Feature Details ##NEEDS TRANSLATE##
 gui.atmosphere_details.name=Atmosphere Details ##NEEDS TRANSLATE##
 gui.general_details.name=General Details ##NEEDS TRANSLATE##
 gui.parent_solar_system_details.name=Parent Solar System Details ##NEEDS TRANSLATE##
+gui.new_galaxies.name=New Galaxies ##NEEDS TRANSLATE##
+gui.type_planet.name=Planet ##NEEDS TRANSLATE##
+gui.type_moon.name=Moon ##NEEDS TRANSLATE##
+gui.type_satellite.name=Satellite ##NEEDS TRANSLATE##
+gui.type_unknown.name=Unknown ##NEEDS TRANSLATE##
+gui.type_days.name=days ##NEEDS TRANSLATE##
+gui.type_hours.name=hours ##NEEDS TRANSLATE##
 
 gui.celestial_body_type.name=Type ##NEEDS TRANSLATE##
 gui.celestial_body_amount_of_moons.name=Amount of Moons ##NEEDS TRANSLATE##
@@ -534,6 +541,7 @@ gui.celestial_body_corrosive_atmosphere.name=Corrosive Atmosphere ##NEEDS TRANSL
 gui.celestial_body_radiation_level.name=Radiation Level ##NEEDS TRANSLATE##
 gui.celestial_body_pressure_level.name=Pressure Level ##NEEDS TRANSLATE##
 gui.celestial_body_amount_of_planets.name=Amount of Planets ##NEEDS TRANSLATE##
+gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Open Powered Vehicle Inventory ##NEEDS TRANSLATE##

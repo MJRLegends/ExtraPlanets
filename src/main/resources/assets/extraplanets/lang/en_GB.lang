@@ -520,6 +520,13 @@ gui.general_features_details.name=General Feature Details
 gui.atmosphere_details.name=Atmosphere Details
 gui.general_details.name=General Details
 gui.parent_solar_system_details.name=Parent Solar System Details
+gui.new_galaxies.name=New Galaxies
+gui.type_planet.name=Planet
+gui.type_moon.name=Moon
+gui.type_satellite.name=Satellite
+gui.type_unknown.name=Unknown
+gui.type_days.name=days
+gui.type_hours.name=hours
 
 gui.celestial_body_type.name=Type
 gui.celestial_body_amount_of_moons.name=Amount of Moons
@@ -534,6 +541,7 @@ gui.celestial_body_corrosive_atmosphere.name=Corrosive Atmosphere
 gui.celestial_body_radiation_level.name=Radiation Level
 gui.celestial_body_pressure_level.name=Pressure Level
 gui.celestial_body_amount_of_planets.name=Amount of Planets
+gui.celestial_body_has_dungeon.name=Has Dungeon
 
 #GUI Controls/Keybinds
 keybind.vehicleInv.name=Open Powered Vehicle Inventory
