@@ -1162,6 +1162,9 @@ item.tier5_kit.without_thermal_padding.name=Полный комплект 5-го
 item.tier5_kit.just_oxygen_setup.name=Кислородный комплект 5-го уровня
 item.tier5_kit.just_protection.name=Защитный комплект 5-го уровня
 
+item.kit.information.desc=Used for Compact Storage for Space Equipment ##NEEDS TRANSLATE##
+item.kit.information.use=Right Click to Equip Kit ##NEEDS TRANSLATE##
+
 #Sticks
 item.tier11_items.blue_sticks.name=Синяя палка
 item.tier11_items.red_sticks.name=Красная палка
