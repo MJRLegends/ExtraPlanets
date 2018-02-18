@@ -2,12 +2,15 @@ package com.mjr.extraplanets.items;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import micdoodle8.mods.galacticraft.planets.venus.VenusItems;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.EnumRarity;
@@ -38,7 +41,7 @@ public class ItemBasicKit extends ItemBasicMeta {
 	}
 
 	@Override
-	public void addInformation(ItemStack itemStack, EntityPlayer entityPlayer, List<String> tooltip, boolean par4) {
+	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
 		tooltip.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate("item.kit.information.desc"));
 		tooltip.add(EnumColor.YELLOW + TranslateUtilities.translate("item.kit.information.use"));
 	}
