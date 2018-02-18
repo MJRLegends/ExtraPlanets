@@ -1105,6 +1105,9 @@ item.tier5_kit.without_thermal_padding.name=Stufe 5 komplettes Set ohne Thermalp
 item.tier5_kit.just_oxygen_setup.name=Stufe 5 Sauerstoffzubehör
 item.tier5_kit.just_protection.name=Stufe 5 Schutzzubehör
 
+item.kit.information.desc=Used for Compact Storage for Space Equipment ##NEEDS TRANSLATE##
+item.kit.information.use=Right Click to Equip Kit ##NEEDS TRANSLATE##
+
 #Sticks
 item.tier11_items.blue_sticks.name=Blauer Stock
 item.tier11_items.red_sticks.name=Roter Stock

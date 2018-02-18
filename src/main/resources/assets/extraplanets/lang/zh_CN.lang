@@ -1164,6 +1164,9 @@ item.tier5_kit.without_thermal_padding.name=5阶全套工具箱（无热防护�
 item.tier5_kit.just_oxygen_setup.name=5阶氧气设备工具箱
 item.tier5_kit.just_protection.name=5阶热防护套装工具箱
 
+item.kit.information.desc=Used for Compact Storage for Space Equipment ##NEEDS TRANSLATE##
+item.kit.information.use=Right Click to Equip Kit ##NEEDS TRANSLATE##
+
 #Sticks
 item.tier11_items.blue_sticks.name=蓝色木棍
 item.tier11_items.red_sticks.name=红色木棍
