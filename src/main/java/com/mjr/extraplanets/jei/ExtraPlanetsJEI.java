@@ -8,8 +8,11 @@ import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
 import mezz.jei.api.recipe.IRecipeCategoryRegistration;
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
+import micdoodle8.mods.galacticraft.core.GCBlocks;
+import net.minecraft.item.ItemStack;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.jei.blocksmasher.BlockSmasherRecipeCategory;
 import com.mjr.extraplanets.jei.blocksmasher.BlockSmasherRecipeMaker;
 import com.mjr.extraplanets.jei.blocksmasher.BlockSmasherRecipeWrapper;
@@ -21,6 +24,7 @@ import com.mjr.extraplanets.jei.crystallizer.CrystallizerRecipeMaker;
 import com.mjr.extraplanets.jei.crystallizer.CrystallizerRecipeWrapper;
 import com.mjr.extraplanets.jei.densifier.DensifierRecipeCategory;
 import com.mjr.extraplanets.jei.densifier.DensifierRecipeMaker;
+import com.mjr.extraplanets.jei.densifier.DensifierRecipeWrapper;
 import com.mjr.extraplanets.jei.purifier.PurifierRecipeCategory;
 import com.mjr.extraplanets.jei.purifier.PurifierRecipeMaker;
 import com.mjr.extraplanets.jei.purifier.PurifierRecipeWrapper;
@@ -82,6 +86,7 @@ public class ExtraPlanetsJEI implements IModPlugin {
 			registry.handleRecipes(ChemicalInjectorRecipeWrapper.class, recipe -> recipe, RecipeCategories.CHEMAICAL_INJECTOR_ID);
 			registry.handleRecipes(CrystallizerRecipeWrapper.class, recipe -> recipe, RecipeCategories.CRYSTALLIZER_ID);
 			registry.handleRecipes(PurifierRecipeWrapper.class, recipe -> recipe, RecipeCategories.PURIFIER_ID);
+			registry.handleRecipes(DensifierRecipeWrapper.class, recipe -> recipe, RecipeCategories.DENSIFIER_ID);
 
 			registry.addRecipes(Tier4RocketRecipeMaker.getRecipesList(), RecipeCategories.ROCKET_T4_ID);
 			registry.addRecipes(Tier5RocketRecipeMaker.getRecipesList(), RecipeCategories.ROCKET_T5_ID);
@@ -100,6 +105,14 @@ public class ExtraPlanetsJEI implements IModPlugin {
 			registry.addRecipes(PurifierRecipeMaker.getRecipesList(), RecipeCategories.PURIFIER_ID);
 			registry.addRecipes(DensifierRecipeMaker.getRecipesList(), RecipeCategories.DENSIFIER_ID);
 
+			registry.addRecipeCatalyst(new ItemStack(GCBlocks.nasaWorkbench), RecipeCategories.ROCKET_T4_ID, RecipeCategories.ROCKET_T5_ID, RecipeCategories.ROCKET_T6_ID, RecipeCategories.ROCKET_T7_ID, RecipeCategories.ROCKET_T8_ID,
+					RecipeCategories.ROCKET_T9_ID, RecipeCategories.ROCKET_T10_ID, RecipeCategories.ROCKET_T10_ELECTRIC_ID, RecipeCategories.MARS_ROVER_ID, RecipeCategories.VENUS_ROVER_ID);
+			registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_CHEMICAL_INJECTOR), RecipeCategories.CHEMAICAL_INJECTOR_ID);
+			registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_CRYSALLIZER), RecipeCategories.CRYSTALLIZER_ID);
+			registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_DENSIFIER), RecipeCategories.DENSIFIER_ID);
+			registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_PURIFIER), RecipeCategories.PURIFIER_ID);
+			registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_SMASHER), RecipeCategories.BLOCK_SMASHER_ID);
+			registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_SOLAR_EVAPORTATION_CHAMBER), RecipeCategories.SOLAR_EVAPORTATION_CHAMBER_ID);
 		}
 	}
 
