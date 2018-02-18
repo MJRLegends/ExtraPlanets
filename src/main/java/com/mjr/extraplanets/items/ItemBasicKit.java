@@ -1,8 +1,11 @@
 package com.mjr.extraplanets.items;
 
+import java.util.List;
+
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import micdoodle8.mods.galacticraft.planets.venus.VenusItems;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,6 +18,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.mjrlegendslib.item.ItemBasicMeta;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemBasicKit extends ItemBasicMeta {
 	public int tier;
@@ -28,6 +32,12 @@ public class ItemBasicKit extends ItemBasicMeta {
 	@SideOnly(Side.CLIENT)
 	public EnumRarity getRarity(ItemStack par1ItemStack) {
 		return ClientProxyCore.galacticraftItem;
+	}
+
+	@Override
+	public void addInformation(ItemStack itemStack, EntityPlayer entityPlayer, List<String> tooltip, boolean par4) {
+		tooltip.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate("item.kit.information.desc"));
+		tooltip.add(EnumColor.YELLOW + TranslateUtilities.translate("item.kit.information.use"));
 	}
 
 	@Override

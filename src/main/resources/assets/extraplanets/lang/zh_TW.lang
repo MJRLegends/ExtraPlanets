@@ -1163,6 +1163,9 @@ item.tier5_kit.without_thermal_padding.name=Tier 5 Full Kit without Thermal Prot
 item.tier5_kit.just_oxygen_setup.name=Tier 5 Oxygen Kit ##NEEDS TRANSLATE##
 item.tier5_kit.just_protection.name=Tier 5 Protection Kit ##NEEDS TRANSLATE##
 
+item.kit.information.desc=Used for Compact Storage for Space Equipment ##NEEDS TRANSLATE##
+item.kit.information.use=Right Click to Equip Kit ##NEEDS TRANSLATE##
+
 #Sticks
 item.tier11_items.blue_sticks.name=Blue Sticks ##NEEDS TRANSLATE##
 item.tier11_items.red_sticks.name=Red Sticks ##NEEDS TRANSLATE##
