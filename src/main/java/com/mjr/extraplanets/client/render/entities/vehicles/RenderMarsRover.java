@@ -3,11 +3,11 @@ package com.mjr.extraplanets.client.render.entities.vehicles;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
-import net.minecraft.client.renderer.block.model.IBakedModel;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.IFlexibleBakedModel;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -21,14 +21,14 @@ import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderMarsRover extends Render<EntityMarsRover> {
-	private IBakedModel modelRover;
-	private IBakedModel modelRoverWindows;
-	private IBakedModel modelRoverCase1;
-	private IBakedModel modelRoverCase2;
-	private IBakedModel modelRoverCase3;
+	private IFlexibleBakedModel modelRover;
+	private IFlexibleBakedModel modelRoverWindows;
+	private IFlexibleBakedModel modelRoverCase1;
+	private IFlexibleBakedModel modelRoverCase2;
+	private IFlexibleBakedModel modelRoverCase3;
 
-	private IBakedModel modelRoverWheelLeft;
-	private IBakedModel modelRoverWheelRight;
+	private IFlexibleBakedModel modelRoverWheelLeft;
+	private IFlexibleBakedModel modelRoverWheelRight;
 
 	public RenderMarsRover(RenderManager manager) {
 		super(manager);
