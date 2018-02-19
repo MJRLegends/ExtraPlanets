@@ -61,13 +61,16 @@ import com.mjr.extraplanets.handlers.MainHandlerServer;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.armor.ExtraPlanets_Armor;
-import com.mjr.extraplanets.items.schematics.SchematicTier10;
-import com.mjr.extraplanets.items.schematics.SchematicTier4;
-import com.mjr.extraplanets.items.schematics.SchematicTier5;
-import com.mjr.extraplanets.items.schematics.SchematicTier6;
-import com.mjr.extraplanets.items.schematics.SchematicTier7;
-import com.mjr.extraplanets.items.schematics.SchematicTier8;
-import com.mjr.extraplanets.items.schematics.SchematicTier9;
+import com.mjr.extraplanets.items.schematics.ItemSchematicMarsRover;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier10ElectricRocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier10Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier4Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier5Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier6Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier7Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier8Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier9Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicVenusRover;
 import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Callisto.event.CallistoEvents;
@@ -108,6 +111,7 @@ import com.mjr.extraplanets.recipes.Tier8RocketRecipes;
 import com.mjr.extraplanets.recipes.Tier9RocketRecipes;
 import com.mjr.extraplanets.recipes.VenusRoverRecipes;
 import com.mjr.extraplanets.schematicPages.SchematicMarsRover;
+import com.mjr.extraplanets.schematicPages.SchematicTier10ElectricRocket;
 import com.mjr.extraplanets.schematicPages.SchematicTier10Rocket;
 import com.mjr.extraplanets.schematicPages.SchematicTier4Rocket;
 import com.mjr.extraplanets.schematicPages.SchematicTier5Rocket;
@@ -115,7 +119,6 @@ import com.mjr.extraplanets.schematicPages.SchematicTier6Rocket;
 import com.mjr.extraplanets.schematicPages.SchematicTier7Rocket;
 import com.mjr.extraplanets.schematicPages.SchematicTier8Rocket;
 import com.mjr.extraplanets.schematicPages.SchematicTier9Rocket;
-import com.mjr.extraplanets.schematicPages.SchematicTierElectricRocket;
 import com.mjr.extraplanets.schematicPages.SchematicVenusRover;
 import com.mjr.mjrlegendslib.recipe.ShapedNBTRecipe;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
@@ -436,7 +439,7 @@ public class ExtraPlanets {
 		if (Config.ERIS)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier10Rocket());
 		if (Config.ERIS && Config.KEPLER22B)
-			SchematicRegistry.registerSchematicRecipe(new SchematicTierElectricRocket());
+			SchematicRegistry.registerSchematicRecipe(new SchematicTier10ElectricRocket());
 		if (Config.MARS_ROVER)
 			SchematicRegistry.registerSchematicRecipe(new SchematicMarsRover());
 		if (Config.VENUS_ROVER)
@@ -444,13 +447,16 @@ public class ExtraPlanets {
 	}
 
 	private void registerSchematicsItems() {
-		SchematicTier4.registerSchematicItems();
-		SchematicTier5.registerSchematicItems();
-		SchematicTier6.registerSchematicItems();
-		SchematicTier7.registerSchematicItems();
-		SchematicTier8.registerSchematicItems();
-		SchematicTier9.registerSchematicItems();
-		SchematicTier10.registerSchematicItems();
+		ItemSchematicTier4Rocket.registerSchematicItems();
+		ItemSchematicTier5Rocket.registerSchematicItems();
+		ItemSchematicTier6Rocket.registerSchematicItems();
+		ItemSchematicTier7Rocket.registerSchematicItems();
+		ItemSchematicTier8Rocket.registerSchematicItems();
+		ItemSchematicTier9Rocket.registerSchematicItems();
+		ItemSchematicTier10Rocket.registerSchematicItems();
+		ItemSchematicTier10ElectricRocket.registerSchematicItems();
+		ItemSchematicVenusRover.registerSchematicItems();
+		ItemSchematicMarsRover.registerSchematicItems();
 	}
 
 	private void addDungeonLoot() {

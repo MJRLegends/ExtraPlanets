@@ -13,9 +13,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemHangingEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -25,15 +27,12 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class SchematicTier5 extends ItemHangingEntity implements ISchematicItem, ISortableItem {
+public class ItemSchematicVenusRover extends ItemHangingEntity implements ISchematicItem, ISortableItem {
 	private static int indexOffset = 0;
 
-	public SchematicTier5(String assetName) {
+	public ItemSchematicVenusRover(String name) {
 		super(EntityHangingSchematic.class);
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
-		this.setMaxStackSize(1);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
@@ -52,7 +51,7 @@ public class SchematicTier5 extends ItemHangingEntity implements ISchematicItem,
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.tier5.rocket.name"));
+			list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.venus.rover.name"));
 		}
 	}
 
@@ -62,30 +61,24 @@ public class SchematicTier5 extends ItemHangingEntity implements ISchematicItem,
 	}
 
 	@Override
-	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
-		if (side == EnumFacing.DOWN) {
-			return false;
-		} else if (side == EnumFacing.UP) {
-			return false;
-		} else {
-			BlockPos blockpos = pos.offset(side);
+	public EnumActionResult onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+		BlockPos blockpos = pos.offset(facing);
 
-			if (!playerIn.canPlayerEdit(blockpos, side, stack)) {
-				return false;
-			} else {
-				EntityHangingSchematic entityhanging = this.createEntity(worldIn, blockpos, side, this.getIndex(stack.getItemDamage()));
+		if (facing != EnumFacing.DOWN && facing != EnumFacing.UP && playerIn.canPlayerEdit(blockpos, facing, stack)) {
+			EntityHangingSchematic entityhanging = this.createEntity(worldIn, blockpos, facing, this.getIndex(stack.getItemDamage()));
 
-				if (entityhanging != null && entityhanging.onValidSurface()) {
-					if (!worldIn.isRemote) {
-						worldIn.spawnEntityInWorld(entityhanging);
-						entityhanging.sendToClient(worldIn, blockpos);
-					}
-
-					--stack.stackSize;
+			if (entityhanging != null && entityhanging.onValidSurface()) {
+				if (!worldIn.isRemote) {
+					worldIn.spawnEntityInWorld(entityhanging);
+					entityhanging.sendToClient(worldIn, blockpos);
 				}
 
-				return true;
+				--stack.stackSize;
 			}
+
+			return EnumActionResult.SUCCESS;
+		} else {
+			return EnumActionResult.FAIL;
 		}
 	}
 
@@ -104,7 +97,7 @@ public class SchematicTier5 extends ItemHangingEntity implements ISchematicItem,
 	 * Make sure the number of these will match the index values
 	 */
 	public static void registerSchematicItems() {
-		indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(ExtraPlanets_Items.TIER_5_SCHEMATIC));
+		indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(ExtraPlanets_Items.MARS_ROVER_SCHEMATIC));
 	}
 
 	/**
@@ -112,6 +105,6 @@ public class SchematicTier5 extends ItemHangingEntity implements ISchematicItem,
 	 */
 	@SideOnly(value = Side.CLIENT)
 	public static void registerTextures() {
-		SchematicRegistry.registerTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/items/tier5_schematic_rocket.png"));
+		SchematicRegistry.registerTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/items/venus_schematic_rover.png"));
 	}
 }
