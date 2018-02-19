@@ -544,7 +544,7 @@ public class ExtraPlanets_Blocks {
 
 	private static void initializeSpawnerBlocks() {
 		if (Config.MERCURY) {
-			MERCURY_SPAWNER = new BlockMercuryDungeonSpawner("boss_spawner_venus");
+			MERCURY_SPAWNER = new BlockMercuryDungeonSpawner("boss_spawner_mercury");
 		}
 		if (Config.JUPITER) {
 			JUIPTER_SPAWNER = new BlockJupiterDungeonSpawner("boss_spawner_jupiter");
