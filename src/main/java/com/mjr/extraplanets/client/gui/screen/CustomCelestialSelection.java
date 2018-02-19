@@ -674,10 +674,10 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					scale = (int) Math.min(95.0F, Math.max(0.0F, (this.ticksSinceMenuOpen * 25.0F) - 95 * i));
 
 					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
-					GL11.glColor4f(0.0F, 0.6F, 0.0F, scale / 95.0F);
+					GL11.glColor4f(0.0F, 0.6F, 1.0F, scale / 95.0F);
 					this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 3 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 6 + i * 14 + yOffset, 86, 10, 0,
 							489, 86, 10, false, false);
-					GL11.glColor4f(0.0F, 0.6F, 1.0F, scale / 95.0F);
+					GL11.glColor4f(1.0F, 1.0F, 1.0F, scale / 95.0F);
 					this.drawTexturedModalRect(GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 2 + xOffset, GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 5 + i * 14 + yOffset, 93, 12, 95,
 							464, 93, 12, false, false);
 
@@ -1281,9 +1281,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 			xPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 0;
 			yPos = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE + 10;
-			if (this.showGalaxies == false && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 25)
+			if (this.showGalaxies == false && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 15)
 				this.showGalaxies = true;
-			else if (this.showGalaxies && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 25)
+			else if (this.showGalaxies && x >= xPos && x <= xPos + 100 && y >= yPos && y <= yPos + 15)
 				this.showGalaxies = false;
 
 			if (this.showGalaxies == false) {
