@@ -256,7 +256,7 @@ public class ExtraPlanets_Recipes {
 				silicon = new ItemStack(GCItems.basicItem, 1, 2);
 			else
 				silicon = silicons.get(j - 1);
-			NonNullList<ItemStack> input1 = NonNullList.create();
+			NonNullList<Object> input1 = NonNullList.create();
 			input1.add(new ItemStack(Items.DIAMOND));
 			input1.add(silicon);
 			input1.add(silicon);
