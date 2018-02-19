@@ -4,6 +4,7 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -132,8 +133,8 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 		if (par1ItemStack.getItemDamage() != 0) {
 			par2List.add(TranslateUtilities.translate("gui.buggy.storage_space") + ": " + par1ItemStack.getItemDamage() * 18);
 		}
-		par2List.add(TranslateUtilities.translate("gui.rover.information"));
-		par2List.add(TranslateUtilities.translate("gui.rover.information.2"));
+		par2List.add(EnumColor.AQUA + TranslateUtilities.translate("gui.rover.information"));
+		par2List.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate("gui.rover.information.2"));
 	}
 
 	@Override
