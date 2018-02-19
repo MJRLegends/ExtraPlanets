@@ -6,12 +6,12 @@ public class Constants {
 
 	public static final int LOCALMAJVERSION = 0;
 	public static final int LOCALMINVERSION = 9;
-	public static final int LOCALBUILDVERSION = 5;
+	public static final int LOCALBUILDVERSION = 6;
 	public static final String modVersion = "1.10.2" + "-" + LOCALMAJVERSION + "." + LOCALMINVERSION + "." + LOCALBUILDVERSION;
 
 	public static final String MCVERSION = "[1.10.2]";
 	public static final String DEPENDENCIES_FORGE = "required-after:Forge@[12.18.3.2239,);";
-	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib@[1.10.2-1.0.4,); required-after:galacticraftcore@[4.0.1.133,); required-after:galacticraftplanets@[4.0.1.133,);";
+	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib@[1.10.2-1.0.5,); required-after:galacticraftcore@[4.0.1.138,); required-after:galacticraftplanets@[4.0.1.138,);";
 
 	public static final String GUIFACTORY = "com.mjr.extraplanets.client.gui.screen.ConfigGuiFactory";
 	public static final String CERTIFICATEFINGERPRINT = "b02331787272ec3515ebe63ecdeea0d746653468";
