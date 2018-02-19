@@ -27,10 +27,10 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class SchematicTier8 extends ItemHangingEntity implements ISchematicItem, ISortableItem {
+public class ItemSchematicTier6Rocket extends ItemHangingEntity implements ISchematicItem, ISortableItem {
 	private static int indexOffset = 0;
 
-	public SchematicTier8(String assetName) {
+	public ItemSchematicTier6Rocket(String assetName) {
 		super(EntityHangingSchematic.class);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
@@ -54,7 +54,7 @@ public class SchematicTier8 extends ItemHangingEntity implements ISchematicItem,
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.tier8.rocket.name"));
+			list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.tier6.rocket.name"));
 		}
 	}
 
@@ -100,7 +100,7 @@ public class SchematicTier8 extends ItemHangingEntity implements ISchematicItem,
 	 * Make sure the number of these will match the index values
 	 */
 	public static void registerSchematicItems() {
-		indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(ExtraPlanets_Items.TIER_8_SCHEMATIC));
+		indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(ExtraPlanets_Items.TIER_6_SCHEMATIC));
 	}
 
 	/**
@@ -108,6 +108,6 @@ public class SchematicTier8 extends ItemHangingEntity implements ISchematicItem,
 	 */
 	@SideOnly(value = Side.CLIENT)
 	public static void registerTextures() {
-		SchematicRegistry.registerTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/items/tier8_schematic_rocket.png"));
+		SchematicRegistry.registerTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/items/tier6_schematic_rocket.png"));
 	}
 }

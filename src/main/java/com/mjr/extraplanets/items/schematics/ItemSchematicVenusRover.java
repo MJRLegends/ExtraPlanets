@@ -27,15 +27,12 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class SchematicTier6 extends ItemHangingEntity implements ISchematicItem, ISortableItem {
+public class ItemSchematicVenusRover extends ItemHangingEntity implements ISchematicItem, ISortableItem {
 	private static int indexOffset = 0;
 
-	public SchematicTier6(String assetName) {
+	public ItemSchematicVenusRover(String name) {
 		super(EntityHangingSchematic.class);
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
-		this.setMaxStackSize(1);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
@@ -54,7 +51,7 @@ public class SchematicTier6 extends ItemHangingEntity implements ISchematicItem,
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.tier6.rocket.name"));
+			list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.venus.rover.name"));
 		}
 	}
 
@@ -100,7 +97,7 @@ public class SchematicTier6 extends ItemHangingEntity implements ISchematicItem,
 	 * Make sure the number of these will match the index values
 	 */
 	public static void registerSchematicItems() {
-		indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(ExtraPlanets_Items.TIER_6_SCHEMATIC));
+		indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(ExtraPlanets_Items.MARS_ROVER_SCHEMATIC));
 	}
 
 	/**
@@ -108,6 +105,6 @@ public class SchematicTier6 extends ItemHangingEntity implements ISchematicItem,
 	 */
 	@SideOnly(value = Side.CLIENT)
 	public static void registerTextures() {
-		SchematicRegistry.registerTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/items/tier6_schematic_rocket.png"));
+		SchematicRegistry.registerTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/items/venus_schematic_rover.png"));
 	}
 }

@@ -41,16 +41,16 @@ import com.mjr.extraplanets.items.rockets.Tier6Rocket;
 import com.mjr.extraplanets.items.rockets.Tier7Rocket;
 import com.mjr.extraplanets.items.rockets.Tier8Rocket;
 import com.mjr.extraplanets.items.rockets.Tier9Rocket;
-import com.mjr.extraplanets.items.schematics.SchematicMarsRover;
-import com.mjr.extraplanets.items.schematics.SchematicTier10;
-import com.mjr.extraplanets.items.schematics.SchematicTier10ElectricRocket;
-import com.mjr.extraplanets.items.schematics.SchematicTier4;
-import com.mjr.extraplanets.items.schematics.SchematicTier5;
-import com.mjr.extraplanets.items.schematics.SchematicTier6;
-import com.mjr.extraplanets.items.schematics.SchematicTier7;
-import com.mjr.extraplanets.items.schematics.SchematicTier8;
-import com.mjr.extraplanets.items.schematics.SchematicTier9;
-import com.mjr.extraplanets.items.schematics.SchematicVenusRover;
+import com.mjr.extraplanets.items.schematics.ItemSchematicMarsRover;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier10Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier10ElectricRocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier4Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier5Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier6Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier7Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier8Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier9Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicVenusRover;
 import com.mjr.extraplanets.items.thermalPadding.ItemThermalCloth;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
@@ -261,7 +261,7 @@ public class ExtraPlanets_Items {
 			INGOT_MERCURY = new ItemBasicItem("ingot_mercury");
 			COMPRESSED_MERCURY = new ItemMercuryCompressed("compressed_mercury");
 			TIER_4_ROCKET = new Tier4Rocket("item_tier4_rocket");
-			TIER_4_SCHEMATIC = new SchematicTier4("schematic_tier4");
+			TIER_4_SCHEMATIC = new ItemSchematicTier4Rocket("schematic_tier4");
 			TIER_4_NOSE_CONE = new Tier4NoseCone("nose_cone_tier4");
 			TIER_4_ITEMS = new ItemTier4Items("tier4_items");
 			TIER_4_KEY = new ItemKeyT4("T4key");
@@ -273,21 +273,21 @@ public class ExtraPlanets_Items {
 			if (Config.BATTERIES)
 				BATTERY_NICKEL = new ItemBasicBattery("nickel_battery", 85000f, 2);
 			TIER_5_ROCKET = new Tier5Rocket("item_tier5_rocket");
-			TIER_5_SCHEMATIC = new SchematicTier5("schematic_tier5");
+			TIER_5_SCHEMATIC = new ItemSchematicTier5Rocket("schematic_tier5");
 			TIER_5_NOSE_CONE = new Tier5NoseCone("nose_cone_tier5");
 			TIER_5_ITEMS = new ItemTier5Items("tier5_items");
 			TIER_5_KEY = new ItemKeyT5("T5key");
 		}
 		if (Config.SATURN) {
 			TIER_6_ROCKET = new Tier6Rocket("item_tier6_rocket");
-			TIER_6_SCHEMATIC = new SchematicTier6("schematic_tier6");
+			TIER_6_SCHEMATIC = new ItemSchematicTier6Rocket("schematic_tier6");
 			TIER_6_NOSE_CONE = new Tier6NoseCone("nose_cone_tier6");
 			TIER_6_ITEMS = new ItemTier6Items("tier6_items");
 			TIER_6_KEY = new ItemKeyT6("T6key");
 		}
 		if (Config.URANUS) {
 			TIER_7_ROCKET = new Tier7Rocket("item_tier7_rocket");
-			TIER_7_SCHEMATIC = new SchematicTier7("schematic_tier7");
+			TIER_7_SCHEMATIC = new ItemSchematicTier7Rocket("schematic_tier7");
 			TIER_7_NOSE_CONE = new Tier7NoseCone("nose_cone_tier7");
 			TIER_7_ITEMS = new ItemTier7Items("tier7_items");
 			TIER_7_KEY = new ItemKeyT7("T7key");
@@ -296,26 +296,26 @@ public class ExtraPlanets_Items {
 			if (Config.BATTERIES)
 				BATTERY_ZINC = new ItemBasicBattery("zinc_battery", 125000f, 2);
 			TIER_8_ROCKET = new Tier8Rocket("item_tier8_rocket");
-			TIER_8_SCHEMATIC = new SchematicTier8("schematic_tier8");
+			TIER_8_SCHEMATIC = new ItemSchematicTier8Rocket("schematic_tier8");
 			TIER_8_NOSE_CONE = new Tier8NoseCone("nose_cone_tier8");
 			TIER_8_ITEMS = new ItemTier8Items("tier8_items");
 			TIER_8_KEY = new ItemKeyT8("T8key");
 		}
 		if (Config.PLUTO) {
 			TIER_9_ROCKET = new Tier9Rocket("item_tier9_rocket");
-			TIER_9_SCHEMATIC = new SchematicTier9("schematic_tier9");
+			TIER_9_SCHEMATIC = new ItemSchematicTier9Rocket("schematic_tier9");
 			TIER_9_NOSE_CONE = new Tier9NoseCone("nose_cone_tier9");
 			TIER_9_ITEMS = new ItemTier9Items("tier9_items");
 			TIER_9_KEY = new ItemKeyT9("T9key");
 		}
 		if (Config.ERIS) {
 			TIER_10_ROCKET = new Tier10Rocket("item_tier10_rocket");
-			TIER_10_SCHEMATIC = new SchematicTier10("schematic_tier10");
+			TIER_10_SCHEMATIC = new ItemSchematicTier10Rocket("schematic_tier10");
 			TIER_10_NOSE_CONE = new Tier10NoseCone("nose_cone_tier10");
 			TIER_10_ITEMS = new ItemTier10Items("tier10_items");
 			TIER_10_KEY = new ItemKeyT10("T10key");
 			if (Config.KEPLER22B) {
-				TIER_10_ELECTRIC_ROCKET_SCHEMATIC = new SchematicTier10ElectricRocket("schematic_tier10_electric_rocket");
+				TIER_10_ELECTRIC_ROCKET_SCHEMATIC = new ItemSchematicTier10ElectricRocket("schematic_tier10_electric_rocket");
 			}
 		}
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
@@ -385,11 +385,11 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.MARS_ROVER) {
 			MARS_ROVER = new ItemMarsRover("mars_rover");
-			MARS_ROVER_SCHEMATIC = new SchematicMarsRover("schematic_mars_rover");
+			MARS_ROVER_SCHEMATIC = new ItemSchematicMarsRover("schematic_mars_rover");
 		}
 		if (Config.VENUS_ROVER) {
 			VENUS_ROVER = new ItemVenusRover("venus_rover");
-			VENUS_ROVER_SCHEMATIC = new SchematicVenusRover("schematic_venus_rover");
+			VENUS_ROVER_SCHEMATIC = new ItemSchematicVenusRover("schematic_venus_rover");
 		}
 		if (Config.MARS_ROVER || Config.VENUS_ROVER)
 			ELECTRIC_PARTS = new ItemElectricParts("electric_parts");
