@@ -1,19 +1,35 @@
-﻿TODO = Not yet done
-? = Maybe
-
-=====================================Future Ideas/Suggestions=======================================
-
-======================================================================================================
-
-
-
-===========================================Future Updates=============================================
+﻿========================================Not Released Updates==========================================
 
 ======================================================================================================
 
 
 
 ===========================================Released Updates===========================================
+v0.2.3
+*Tweaks to some model textures
+*Refactored some rendering code to MJRLegendsLib
+*Tweaks to Custom Celestial Selection screen to match GC changes
+*Changed JEI Support Icons from being letters to item icons
+*Fixed missing code for Densifier JEI Support
+*Added Tool tips for Kits to say purpose & use
+*Added da_DK.lang (Thanks to Jin16)
+*Updated lang files for some entries that were missing planet name prefix, Removed WIP tags
+*Converted more hard coded text to have language file support
+*Clean up/Fixed formatting
+*Fixed issue to where all tools had a high amount of damage
+*Fixed a key binding having a language key including uppercase letters
+*Fixed small bug with custom celestial selection screen
+*Tweaks for Custom Galaxies selection
+*Added colour to Mars/Venus Rover tool tips
+*Improved Electric Rocket Schematic Texture
+*Added ability to hang Electric Rocket, Mars/Venus rover schematics, Renamed some classes
+*Changes to Rockets/Vehicles JEI Support to match GC changes
+*Fixed some missing json errors
+*Changes for Circuit Fabricator recipe code to match GC changes
+*Fixed Mercury Spawner unlocalized name
+*Set required GC version requirement to Build 138
+*Set required MJRLegendsLib version requirement to v1.0.8
+
 v0.2.2
 *Fixed issue #239
 *Fixed issue #240
