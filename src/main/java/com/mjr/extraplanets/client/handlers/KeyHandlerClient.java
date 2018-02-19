@@ -24,7 +24,7 @@ public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding openPowerGUI;
 
 	static {
-		openPowerGUI = new KeyBinding(TranslateUtilities.translate("keybind.vehicleInv.name"), ConfigManagerCore.keyOverrideFuelLevelI == 0 ? Keyboard.KEY_F : ConfigManagerCore.keyOverrideFuelLevelI, Constants.modName);
+		openPowerGUI = new KeyBinding(TranslateUtilities.translate("keybind.vehicle_inv.name"), ConfigManagerCore.keyOverrideFuelLevelI == 0 ? Keyboard.KEY_F : ConfigManagerCore.keyOverrideFuelLevelI, Constants.modName);
 	}
 
 	public static KeyBinding accelerateKey;
