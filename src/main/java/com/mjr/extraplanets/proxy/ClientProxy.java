@@ -163,13 +163,16 @@ import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier6Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier7Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier8Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier9Items;
-import com.mjr.extraplanets.items.schematics.SchematicTier10;
-import com.mjr.extraplanets.items.schematics.SchematicTier4;
-import com.mjr.extraplanets.items.schematics.SchematicTier5;
-import com.mjr.extraplanets.items.schematics.SchematicTier6;
-import com.mjr.extraplanets.items.schematics.SchematicTier7;
-import com.mjr.extraplanets.items.schematics.SchematicTier8;
-import com.mjr.extraplanets.items.schematics.SchematicTier9;
+import com.mjr.extraplanets.items.schematics.ItemSchematicMarsRover;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier10Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier10ElectricRocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier4Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier5Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier6Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier7Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier8Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier9Rocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicVenusRover;
 import com.mjr.extraplanets.items.thermalPadding.ItemThermalCloth;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier3ThermalPadding;
 import com.mjr.extraplanets.items.thermalPadding.ItemTier4ThermalPadding;
@@ -1373,13 +1376,16 @@ public class ClientProxy extends CommonProxy {
 	}
 
 	private void registerSchematicsTextures() {
-		SchematicTier4.registerTextures();
-		SchematicTier5.registerTextures();
-		SchematicTier6.registerTextures();
-		SchematicTier7.registerTextures();
-		SchematicTier8.registerTextures();
-		SchematicTier9.registerTextures();
-		SchematicTier10.registerTextures();
+		ItemSchematicTier4Rocket.registerTextures();
+		ItemSchematicTier5Rocket.registerTextures();
+		ItemSchematicTier6Rocket.registerTextures();
+		ItemSchematicTier7Rocket.registerTextures();
+		ItemSchematicTier8Rocket.registerTextures();
+		ItemSchematicTier9Rocket.registerTextures();
+		ItemSchematicTier10Rocket.registerTextures();
+		ItemSchematicTier10ElectricRocket.registerTextures();
+		ItemSchematicVenusRover.registerTextures();
+		ItemSchematicMarsRover.registerTextures();
 	}
 
 	@SubscribeEvent

@@ -30,10 +30,10 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class SchematicTier5 extends ItemHangingEntity implements ISchematicItem, ISortableItem {
+public class ItemSchematicTier5Rocket extends ItemHangingEntity implements ISchematicItem, ISortableItem {
 	private static int indexOffset = 0;
 
-	public SchematicTier5(String assetName) {
+	public ItemSchematicTier5Rocket(String assetName) {
 		super(EntityHangingSchematic.class);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);

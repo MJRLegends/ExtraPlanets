@@ -30,15 +30,12 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class SchematicTier7 extends ItemHangingEntity implements ISchematicItem, ISortableItem {
+public class ItemSchematicVenusRover extends ItemHangingEntity implements ISchematicItem, ISortableItem {
 	private static int indexOffset = 0;
 
-	public SchematicTier7(String assetName) {
+	public ItemSchematicVenusRover(String name) {
 		super(EntityHangingSchematic.class);
-		this.setMaxDamage(0);
-		this.setHasSubtypes(true);
-		this.setMaxStackSize(1);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
@@ -56,7 +53,7 @@ public class SchematicTier7 extends ItemHangingEntity implements ISchematicItem,
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
-		list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.tier7.rocket.name"));
+		list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.venus.rover.name"));
 	}
 
 	@Override
@@ -74,7 +71,6 @@ public class SchematicTier7 extends ItemHangingEntity implements ISchematicItem,
 
 			if (entityhanging != null && entityhanging.onValidSurface()) {
 				if (!worldIn.isRemote) {
-					entityhanging.playPlaceSound();
 					worldIn.spawnEntity(entityhanging);
 					entityhanging.sendToClient(worldIn, blockpos);
 				}
@@ -103,7 +99,7 @@ public class SchematicTier7 extends ItemHangingEntity implements ISchematicItem,
 	 * Make sure the number of these will match the index values
 	 */
 	public static void registerSchematicItems() {
-		indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(ExtraPlanets_Items.TIER_7_SCHEMATIC));
+		indexOffset = SchematicRegistry.registerSchematicItem(new ItemStack(ExtraPlanets_Items.MARS_ROVER_SCHEMATIC));
 	}
 
 	/**
@@ -111,6 +107,6 @@ public class SchematicTier7 extends ItemHangingEntity implements ISchematicItem,
 	 */
 	@SideOnly(value = Side.CLIENT)
 	public static void registerTextures() {
-		SchematicRegistry.registerTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/items/tier7_schematic_rocket.png"));
+		SchematicRegistry.registerTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/items/venus_schematic_rover.png"));
 	}
 }

@@ -15,9 +15,9 @@ import com.mjr.extraplanets.client.gui.rockets.GuiSchematicTier10ElectricRocket;
 import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier10ElectricRocket;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-public class SchematicTierElectricRocket extends ItemSchematic implements ISchematicPage {
+public class SchematicTier10ElectricRocket extends ItemSchematic implements ISchematicPage {
 
-	public SchematicTierElectricRocket() {
+	public SchematicTier10ElectricRocket() {
 		super("schematic");
 	}
 
