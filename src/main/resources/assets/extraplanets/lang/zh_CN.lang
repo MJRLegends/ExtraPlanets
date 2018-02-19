@@ -544,7 +544,7 @@ gui.celestial_body_amount_of_planets.name=行星的数量
 gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
 
 #GUI Controls/Keybinds
-keybind.vehicleInv.name=打开电力漫游车的物品栏
+keybind.vehicle_inv.name=打开电力漫游车的物品栏
 
 #Other Blocks
 tile.nuclear_bomb.name=核弹

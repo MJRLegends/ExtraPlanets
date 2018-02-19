@@ -533,7 +533,7 @@ gui.celestial_body_amount_of_planets.name=Anzahl der Planeten
 gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
 
 #GUI Controls/Keybinds
-keybind.vehicleInv.name=Fahrzeuginventar öffnen
+keybind.vehicle_inv.name=Fahrzeuginventar öffnen
 
 #Other Blocks
 tile.nuclear_bomb.name=Atombombe

@@ -543,7 +543,7 @@ gui.celestial_body_amount_of_planets.name=Amount of Planets ##NEEDS TRANSLATE##
 gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
 
 #GUI Controls/Keybinds
-keybind.vehicleInv.name=Open Powered Vehicle Inventory ##NEEDS TRANSLATE##
+keybind.vehicle_inv.name=Open Powered Vehicle Inventory ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=核彈
