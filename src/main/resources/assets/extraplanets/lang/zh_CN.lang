@@ -520,6 +520,13 @@ gui.general_features_details.name=总体特征
 gui.atmosphere_details.name=大气层
 gui.general_details.name=总体
 gui.parent_solar_system_details.name=所处星系
+gui.new_galaxies.name=New Galaxies ##NEEDS TRANSLATE##
+gui.type_planet.name=Planet ##NEEDS TRANSLATE##
+gui.type_moon.name=Moon ##NEEDS TRANSLATE##
+gui.type_satellite.name=Satellite ##NEEDS TRANSLATE##
+gui.type_unknown.name=Unknown ##NEEDS TRANSLATE##
+gui.type_days.name=days ##NEEDS TRANSLATE##
+gui.type_hours.name=hours ##NEEDS TRANSLATE##
 
 gui.celestial_body_type.name=种类
 gui.celestial_body_amount_of_moons.name=卫星的数量
@@ -534,9 +541,10 @@ gui.celestial_body_corrosive_atmosphere.name=腐蚀性气体
 gui.celestial_body_radiation_level.name=放射性等级
 gui.celestial_body_pressure_level.name=压强等级
 gui.celestial_body_amount_of_planets.name=行星的数量
+gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
 
 #GUI Controls/Keybinds
-keybind.vehicleInv.name=打开电力漫游车的物品栏
+keybind.vehicle_inv.name=打开电力漫游车的物品栏
 
 #Other Blocks
 tile.nuclear_bomb.name=核弹

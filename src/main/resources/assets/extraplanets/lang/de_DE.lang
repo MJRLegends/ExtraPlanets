@@ -509,6 +509,13 @@ gui.general_features_details.name=Allgemeine Informationen zu Features
 gui.atmosphere_details.name=Informationen zur Atmosphäre
 gui.general_details.name=Allgemeine Informationen
 gui.parent_solar_system_details.name=Informationen zum Muttersolarsystem
+gui.new_galaxies.name=New Galaxies ##NEEDS TRANSLATE##
+gui.type_planet.name=Planet ##NEEDS TRANSLATE##
+gui.type_moon.name=Moon ##NEEDS TRANSLATE##
+gui.type_satellite.name=Satellite ##NEEDS TRANSLATE##
+gui.type_unknown.name=Unknown ##NEEDS TRANSLATE##
+gui.type_days.name=days ##NEEDS TRANSLATE##
+gui.type_hours.name=hours ##NEEDS TRANSLATE##
 
 gui.celestial_body_type.name=Typus
 gui.celestial_body_amount_of_moons.name=Anzahl der Monde
@@ -523,9 +530,10 @@ gui.celestial_body_corrosive_atmosphere.name=Ätzende Atmosphäre
 gui.celestial_body_radiation_level.name=Schwere der Strahlung
 gui.celestial_body_pressure_level.name=Druck
 gui.celestial_body_amount_of_planets.name=Anzahl der Planeten
+gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
 
 #GUI Controls/Keybinds
-keybind.vehicleInv.name=Fahrzeuginventar öffnen
+keybind.vehicle_inv.name=Fahrzeuginventar öffnen
 
 #Other Blocks
 tile.nuclear_bomb.name=Atombombe
