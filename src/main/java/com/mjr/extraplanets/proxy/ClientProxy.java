@@ -506,6 +506,7 @@ public class ClientProxy extends CommonProxy {
 			}
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.MERCURY_GRAVEL);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_4);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.MERCURY_SPAWNER);
 			if (Config.SLABS_AND_STAIRS) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.MERCURY_SURFACE_STAIRS);
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.MERCURY_SUB_SURFACE_STAIRS);
@@ -537,6 +538,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ASH_ROCK);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ORANGE_SAND);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ORANGE_SANDSTONE);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.JUIPTER_SPAWNER);
 			if (Config.SLABS_AND_STAIRS) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.JUPITER_SURFACE_STAIRS);
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.JUPITER_SUB_SURFACE_STAIRS);
@@ -550,6 +552,7 @@ public class ClientProxy extends CommonProxy {
 			}
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_6);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.SATURN_GRAVEL);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.SATURN_SPAWNER);
 			if (Config.FIRE_BOMB)
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.FIRE_BOMB);
 			if (Config.SLABS_AND_STAIRS) {
@@ -565,6 +568,7 @@ public class ClientProxy extends CommonProxy {
 			}
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_7);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.DENSE_ICE);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.URANUS_SPAWNER);
 			if (Config.SLABS_AND_STAIRS) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.URANUS_SURFACE_STAIRS);
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.URANUS_SUB_SURFACE_STAIRS);
@@ -578,6 +582,7 @@ public class ClientProxy extends CommonProxy {
 			}
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_8);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.FROZEN_NITROGEN);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.NEPTUNE_SPAWNER);
 			if (Config.SLABS_AND_STAIRS) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.NEPTUNE_SURFACE_STAIRS);
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.NEPTUNE_SUB_SURFACE_STAIRS);
@@ -591,6 +596,7 @@ public class ClientProxy extends CommonProxy {
 			}
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_9);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.PLUTO_GRAVEL);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.PLUTO_SPAWNER);
 			if (Config.SLABS_AND_STAIRS) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.PLUTO_SURFACE_STAIRS);
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.PLUTO_SUB_SURFACE_STAIRS);
@@ -604,6 +610,7 @@ public class ClientProxy extends CommonProxy {
 			}
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_10);
 			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ERIS_GRAVEL);
+			ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ERIS_SPAWNER);
 			if (Config.SLABS_AND_STAIRS) {
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ERIS_SURFACE_STAIRS);
 				ClientUtilities.registerBlockJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Blocks.ERIS_SUB_SURFACE_STAIRS);
@@ -1064,9 +1071,9 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.BATTERY_MASSIVE);
 		}
 		if (Config.THERMAL_PADDINGS) {
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_3_THERMAL_PADDING, ItemTier3ThermalPadding.names);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_THERMAL_PADDING, ItemTier4ThermalPadding.names);
-			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_THERMAL_PADDING, ItemTier5ThermalPadding.names);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_3_THERMAL_PADDING, ItemTier3ThermalPadding.names, true);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_THERMAL_PADDING, ItemTier4ThermalPadding.names, true);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_THERMAL_PADDING, ItemTier5ThermalPadding.names, true);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.THERMAL_CLOTH, ItemThermalCloth.names);
 		}
 		if (Config.OXYGEN_TANKS) {
