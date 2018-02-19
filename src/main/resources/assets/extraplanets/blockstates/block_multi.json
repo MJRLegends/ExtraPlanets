@@ -19,6 +19,6 @@
 			"7": { }
         },
 
-        "inventory": [{ "model": "galacticraftcore:block_multi_model" }]
+        "inventory": [{ "model": "extraplanets:block_multi_model" }]
     }
 }
