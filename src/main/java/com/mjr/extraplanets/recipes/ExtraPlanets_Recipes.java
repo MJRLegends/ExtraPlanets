@@ -48,7 +48,7 @@ public class ExtraPlanets_Recipes {
 			Tier9RocketRecipes.registerRocketCraftingRecipe();
 		if (Config.ERIS)
 			Tier10RocketRecipes.registerRocketCraftingRecipe();
-		if (Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			Tier10ElectricRocketRecipes.registerRocketCraftingRecipe();
 		if (Config.MARS_ROVER)
 			MarsRoverRecipes.registerRoverCraftingRecipe();

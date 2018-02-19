@@ -329,7 +329,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addVariants(Constants.modID, "decorative_blocks", "marble", "marble_bricks", "snow_bricks", "ice_bricks", "fire_bricks", "black_white_floor", "marble_titled_floor", "marble_broken_titled_floor", "metal_mesh",
 				"frozen_nitrogen_bricks", "volcanic_rock_bricks", "carbon_titled_floor", "carbon_broken_titled_floor", "magnesium_titled_floor", "magnesium_broken_titled_floor", "ash_bricks");
 		ClientUtilities.addVariants(Constants.modID, "decorative_blocks2", "white_block", "red_block", "blue_block", "light_blue_block", "yellow_block", "green_block");
-		if (Config.MARS_ROVER || Config.VENUS_ROVER)
+		if (Config.MARS_ROVER || Config.VENUS_ROVER || Config.ELECTRIC_ROCKET)
 			ClientUtilities.addVariants(Constants.modID, "electric_parts", "battery_tier1", "battery_tier2", "electric_wheels_tier1", "electric_wheels_tier2");
 		ClientUtilities.addVariants(Constants.modID, "tier1_kit", "tier1_kitfull", "tier1_kitbasic_setup", "tier1_kitwithout_oxygen_setup", "tier1_kitwithout_thermal_padding", "tier1_kitjust_oxygen_setup", "tier1_kitjust_protection");
 		ClientUtilities.addVariants(Constants.modID, "tier2_kit", "tier2_kitfull", "tier2_kitbasic_setup", "tier2_kitwithout_oxygen_setup", "tier2_kitwithout_thermal_padding", "tier2_kitjust_oxygen_setup", "tier2_kitjust_protection");
@@ -411,7 +411,7 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.registerEntityRenderer(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10Rocket(manager));
 			else
 				ClientUtilities.registerEntityRenderer(EntityTier10Rocket.class, (RenderManager manager) -> new RenderTier10RocketNew(manager));
-		if (Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			ClientUtilities.registerEntityRenderer(EntityElectricRocket.class, (RenderManager manager) -> new RenderElectricRocket(manager));
 		if (Config.CERES && Config.NUCLEAR_BOMB)
 			ClientUtilities.registerEntityRenderer(EntityNuclearBombPrimed.class, (RenderManager manager) -> new RenderNuclearBombPrimed(manager));
@@ -456,7 +456,7 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_ROCKET, "rocket_t10_new", 5);
 			}
 		}
-		if (Config.ERIS && Config.KEPLER22B) {
+		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET) {
 			ClientUtilities.registerModel(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET, "electric_rocket", 5);
 		}
 		if (Config.MARS_ROVER) {
@@ -1057,7 +1057,7 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Tools.GREEN_DIAMOND_SWORD);
 			}
 		}
-		if (Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET_SCHEMATIC);
 		if (Config.CUSTOM_APPLES) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.DIAMOND_APPLE);
@@ -1159,7 +1159,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, "tier3_kit", ItemBasicKit.getItemList());
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, "tier4_kit", ItemBasicKit.getItemList());
 		ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, "tier5_kit", ItemBasicKit.getItemList());
-		if (Config.MARS_ROVER || Config.VENUS_ROVER) {
+		if (Config.MARS_ROVER || Config.VENUS_ROVER || Config.ELECTRIC_ROCKET) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.ELECTRIC_PARTS, ItemElectricParts.getItemList());
 		}
 		if (Config.MARS_ROVER)
@@ -1271,7 +1271,7 @@ public class ClientProxy extends CommonProxy {
 				ClientUtilities.replaceModelDefault(Constants.modID, event, "rocket_t10_new", ImmutableList.of("BigSideWing1", "BigSideWing2", "BodyRocket", "Connector", "LampOnSpike", "MainNozzle", "NoseRocket", "NoseRocketMiddle", "SideEngine1",
 						"SideEngine2", "SideEngine3", "SideEngine3", "SideEngine4", "SideWing1", "SideWing2", "SideWing3", "SideWing4", "Spike"), ItemModelRocketT10New.class);
 			}
-		if (Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			ClientUtilities.replaceModelDefault(Constants.modID, event, "electric_rocket", ImmutableList.of("Cylinder001", "Cylinder002", "Cylinder003", "Cylinder004", "Cylinder005", "Cylinder006", "Cylinder007", "Cylinder008", "Cylinder009",
 					"Cylinder010", "Cylinder011", "Cylinder012", "Cylinder013", "Cylinder014", "Cylinder015", "Cylinder016", "Cylinder017", "Cylinder018", "Cylinder019", "Cylinder020", "Cylinder021", "Line001", "Line002", "Torus001", "Torus002",
 					"Torus003", "Torus004", "Torus005", "Torus006", "Torus007", "Torus008", "Tube001"), ItemModelRocketElectricRocket.class);

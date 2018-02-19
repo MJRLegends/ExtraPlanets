@@ -161,7 +161,7 @@ public class RecipeEnabledCondition implements IConditionFactory {
 				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("rovers")) {
-			if (Config.MARS_ROVER || Config.VENUS_ROVER)
+			if (Config.MARS_ROVER || Config.VENUS_ROVER || Config.ELECTRIC_ROCKET)
 				return () -> true;
 			else
 				return () -> false;

@@ -266,6 +266,7 @@ public class Config {
 
 	public static boolean MARS_ROVER;
 	public static boolean VENUS_ROVER;
+	public static boolean ELECTRIC_ROCKET;
 
 	public static boolean OLD_STYLE_GRAVITY;
 	public static boolean OLD_ROCKET_MODELS;
@@ -604,7 +605,8 @@ public class Config {
 
 		MARS_ROVER = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Mars Rover & Its Parts", true, "Setting this option to false will remove the Mars Rover Entity & Schematic & Parts needed to Craft it").getBoolean(true);
 		VENUS_ROVER = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Venus Rover & Its Parts", true, "Setting this option to false will remove the Venus Rover Entity & Schematic & Parts needed to Craft it").getBoolean(true);
-
+		ELECTRIC_ROCKET = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Electric Rocket", true, "Setting this option to false will remove the Electric Rocket Entity & Schematic").getBoolean(true);
+		
 		OLD_STYLE_GRAVITY = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Old Style Gravity", false, "This option will change all the gravity of Planets & Moons back to the old style of gravity").getBoolean(false);
 		OLD_ROCKET_MODELS = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Old Models for Tier 9 & 10 Rockets", false, "This option will change all the Tier 9 & 10 Rockets models to the old type").getBoolean(false);
 

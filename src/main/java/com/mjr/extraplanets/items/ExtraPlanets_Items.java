@@ -317,7 +317,7 @@ public class ExtraPlanets_Items {
 			TIER_10_NOSE_CONE = new Tier10NoseCone("nose_cone_tier10");
 			TIER_10_ITEMS = new ItemTier10Items("tier10_items");
 			TIER_10_KEY = new ItemKeyT10("t10key");
-			if (Config.KEPLER22B) {
+			if (Config.KEPLER22B && Config.ELECTRIC_ROCKET) {
 				TIER_10_ELECTRIC_ROCKET_SCHEMATIC = new ItemSchematicTier10ElectricRocket("schematic_tier10_electric_rocket");
 			}
 		}
@@ -394,7 +394,7 @@ public class ExtraPlanets_Items {
 			VENUS_ROVER = new ItemVenusRover("venus_rover");
 			VENUS_ROVER_SCHEMATIC = new ItemSchematicVenusRover("schematic_venus_rover");
 		}
-		if (Config.MARS_ROVER || Config.VENUS_ROVER)
+		if (Config.MARS_ROVER || Config.VENUS_ROVER || Config.ELECTRIC_ROCKET)
 			ELECTRIC_PARTS = new ItemElectricParts("electric_parts");
 
 		CANNED_FOOD = new ItemCannedFood("canned_food");
@@ -409,7 +409,7 @@ public class ExtraPlanets_Items {
 		TIER_3_EQUIPMENT_KIT = new ItemBasicKit("tier3_kit", 3);
 		TIER_4_EQUIPMENT_KIT = new ItemBasicKit("tier4_kit", 4);
 		TIER_5_EQUIPMENT_KIT = new ItemBasicKit("tier5_kit", 5);
-		if (Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
 		GEIGER_COUNTER = new ItemGeigerCounter("geiger_counter");
 		WHITE_SUGAR_CANE = new ItemBlockSpecial(ExtraPlanets_Blocks.WHITE_SUGAR_CANE).setUnlocalizedName("white_sugar_cane_item").setCreativeTab(ExtraPlanets.ItemsTab);
@@ -529,7 +529,7 @@ public class ExtraPlanets_Items {
 			registerItem(TIER_10_NOSE_CONE, TIER_10_NOSE_CONE.getUnlocalizedName().substring(5));
 			registerItem(TIER_10_ITEMS, TIER_10_ITEMS.getUnlocalizedName().substring(5));
 			registerItem(TIER_10_KEY, TIER_10_KEY.getUnlocalizedName().substring(5));
-			if (Config.KEPLER22B) {
+			if (Config.KEPLER22B && Config.ELECTRIC_ROCKET) {
 				registerItem(TIER_10_ELECTRIC_ROCKET_SCHEMATIC, TIER_10_ELECTRIC_ROCKET_SCHEMATIC.getUnlocalizedName().substring(5));
 			}
 		}
@@ -606,7 +606,7 @@ public class ExtraPlanets_Items {
 			registerItem(VENUS_ROVER, VENUS_ROVER.getUnlocalizedName().substring(5));
 			registerItem(VENUS_ROVER_SCHEMATIC, VENUS_ROVER_SCHEMATIC.getUnlocalizedName().substring(5));
 		}
-		if (Config.MARS_ROVER || Config.VENUS_ROVER)
+		if (Config.MARS_ROVER || Config.VENUS_ROVER || Config.ELECTRIC_ROCKET)
 			registerItem(ELECTRIC_PARTS, ELECTRIC_PARTS.getUnlocalizedName().substring(5));
 		registerItem(CANNED_FOOD, CANNED_FOOD.getUnlocalizedName().substring(5));
 		registerItem(WAFERS, WAFERS.getUnlocalizedName().substring(5));
@@ -620,7 +620,7 @@ public class ExtraPlanets_Items {
 		registerItem(TIER_3_EQUIPMENT_KIT, TIER_3_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		registerItem(TIER_4_EQUIPMENT_KIT, TIER_4_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
 		registerItem(TIER_5_EQUIPMENT_KIT, TIER_5_EQUIPMENT_KIT.getUnlocalizedName().substring(5));
-		if (Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
 		registerItem(GEIGER_COUNTER, GEIGER_COUNTER.getUnlocalizedName().substring(5));
 		registerItem(WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
