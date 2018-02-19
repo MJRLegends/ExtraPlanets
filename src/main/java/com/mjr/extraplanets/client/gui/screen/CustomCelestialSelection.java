@@ -1288,7 +1288,8 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 			if (this.showGalaxies == false) {
 				super.mouseClicked(x, y, button);
-				this.selectedParent = this.currentGalaxyMainSystem;
+				if(!this.currentGalaxyName.equalsIgnoreCase("galaxy.milky_way"))
+					this.selectedParent = this.currentGalaxyMainSystem;
 			}
 
 			if (this.showGalaxies) {
