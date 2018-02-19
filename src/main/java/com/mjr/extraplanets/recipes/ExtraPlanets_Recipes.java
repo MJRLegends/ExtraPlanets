@@ -247,7 +247,7 @@ public class ExtraPlanets_Recipes {
 			Tier9RocketRecipes.registerRocketCraftingRecipe();
 		if (Config.ERIS)
 			Tier10RocketRecipes.registerRocketCraftingRecipe();
-		if (Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			Tier10ElectricRocketRecipes.registerRocketCraftingRecipe();
 		if (Config.MARS_ROVER)
 			MarsRoverRecipes.registerRoverCraftingRecipe();
@@ -1007,7 +1007,7 @@ public class ExtraPlanets_Recipes {
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 3),
 				new Object[] { "   ", "BBB", "III", 'I', new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), 'B', new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 6) });
 
-		if (Config.MARS_ROVER || Config.VENUS_ROVER) {
+		if (Config.MARS_ROVER || Config.VENUS_ROVER || Config.ELECTRIC_ROCKET) {
 			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 0), new Object[] { "XWX", "WXW", "XWX", 'W', TIER_2_HEAVY_PLATING, 'X', "ingotLead" });
 			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', INGOT_DESH, 'X', "ingotLead" });
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 2), new Object[] { " W ", "WXW", " W ", 'W', TIER_2_HEAVY_PLATING, 'X', new ItemStack(GCItems.partBuggy, 1, 0) });

@@ -358,7 +358,7 @@ public class ExtraPlanets {
 			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityTier9Rocket.class, "EntityTier9Rocket", 150, 1, false);
 		if (Config.ERIS)
 			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityTier10Rocket.class, "EntityTier10Rocket", 150, 1, false);
-		if (Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityElectricRocket.class, "EntityTier10ElectricRocket", 150, 1, false);
 		if (Config.MARS_ROVER)
 			RegisterUtilities.registerNonMobEntity(ExtraPlanets.instance, EntityMarsRover.class, "EntityMarsRover", 150, 1, false);
@@ -438,7 +438,7 @@ public class ExtraPlanets {
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier9Rocket());
 		if (Config.ERIS)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier10Rocket());
-		if (Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			SchematicRegistry.registerSchematicRecipe(new SchematicTier10ElectricRocket());
 		if (Config.MARS_ROVER)
 			SchematicRegistry.registerSchematicRecipe(new SchematicMarsRover());
@@ -487,7 +487,7 @@ public class ExtraPlanets {
 			GalacticraftRegistry.addDungeonLoot(9, new ItemStack(ExtraPlanets_Items.TIER_9_SCHEMATIC, 1, 0));
 		if (Config.ERIS)
 			GalacticraftRegistry.addDungeonLoot(10, new ItemStack(ExtraPlanets_Items.TIER_10_SCHEMATIC, 1, 0));
-		if (Config.ERIS && Config.KEPLER22B)
+		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			GalacticraftRegistry.addDungeonLoot(10, new ItemStack(ExtraPlanets_Items.TIER_10_ELECTRIC_ROCKET_SCHEMATIC, 1, 0));
 		if (Config.MARS_ROVER)
 			GalacticraftRegistry.addDungeonLoot(2, new ItemStack(ExtraPlanets_Items.MARS_ROVER_SCHEMATIC, 1, 0));
