@@ -1,5 +1,8 @@
 package com.mjr.extraplanets.inventory.rockets;
 
+import java.util.List;
+
+import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
@@ -10,7 +13,7 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.recipes.Tier10RocketRecipes;
 
 public class SlotSchematicTier10Rocket extends Slot {
 	private final int index;
@@ -34,51 +37,14 @@ public class SlotSchematicTier10Rocket extends Slot {
 
 	@Override
 	public boolean isItemValid(ItemStack par1ItemStack) {
-		switch (this.index) {
-		case 1:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_NOSE_CONE;
-		case 2:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
-		case 3:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
-		case 4:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
-		case 5:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
-		case 6:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
-		case 7:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
-		case 8:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
-		case 9:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
-		case 10:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
-		case 11:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 3;
-		case 12:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 1;
-		case 13:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 2;
-		case 14:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 2;
-		case 15:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 0;
-		case 16:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 1;
-		case 17:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 2;
-		case 18:
-			return par1ItemStack.getItem() == ExtraPlanets_Items.TIER_10_ITEMS && par1ItemStack.getItemDamage() == 2;
-		case 19:
-			return true;
-		case 20:
-			return true;
-		case 21:
-			return true;
-		}
+		if (par1ItemStack == null)
+			return false;
 
+		List<INasaWorkbenchRecipe> recipes = Tier10RocketRecipes.getTier10RocketRecipes();
+		for (INasaWorkbenchRecipe recipe : recipes) {
+			if (ItemStack.areItemsEqual(par1ItemStack, recipe.getRecipeInput().get(this.index)))
+				return true;
+		}
 		return false;
 	}
 
