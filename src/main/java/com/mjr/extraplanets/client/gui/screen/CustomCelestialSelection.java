@@ -832,7 +832,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			List<CelestialBody> children = this.getChildren(this.isZoomed() ? this.selectedBody : this.selectedParent);
 
 			if (showGalaxies == false) {
-				drawChildren(children, 0, 0);
+				drawChildren(children, 0, 0, true);
 			}
 
 			if (this.mapMode) {
