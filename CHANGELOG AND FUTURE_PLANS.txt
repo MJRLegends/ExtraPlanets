@@ -5,6 +5,12 @@
 
 
 ===========================================Released Updates===========================================
+v0.6.2
+*Started work cleaning up recipes class with constants variables
+*NASA workbench slots now accept valid items from all recipes
+*Changes to Celestial Selection screen to match GC changes
+*Added config option for Electric Rocket
+
 v0.6.1
 *Fixed issue #239
 *Fixed issue #242
