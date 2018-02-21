@@ -11,6 +11,8 @@ v0.9.7
 *NASA workbench slots now accept valid items from all recipes
 *Changes to Celestial Selection screen to match GC changes
 *Added config option for Electric Rocket
+*Set required GC version requirement to Build 139
+*Set required MJRLegendsLib version requirement to v1.0.7
 
 v0.9.6
 *Fixed issue #239
