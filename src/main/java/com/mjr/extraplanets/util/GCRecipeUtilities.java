@@ -22,7 +22,7 @@ public class GCRecipeUtilities {
 		CompressorRecipes.addRecipe(output, inputs);
 	}
 
-	public static void addCircuitFabricatorRecipe(ItemStack output, ItemStack[] inputs) {
+	public static void addCircuitFabricatorRecipe(ItemStack output, Object[] inputs) {
 		CircuitFabricatorRecipes.addRecipe(output, inputs);
 	}
 }
