@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v1.3.0
+*Started work cleaning up recipes class with constants variables
+*Changes to Circuit Fabricator registering method to match GC changes
+*NASA workbench slots now accept valid items from all recipes
+*Changes to Celestial Selection screen to match GC changes
+*Added config option for Electric Rocket
+
 v1.2.9
 *Fixed issue #239
 *Fixed issue #242
