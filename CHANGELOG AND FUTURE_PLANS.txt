@@ -5,6 +5,11 @@
 
 
 ===========================================Released Updates===========================================
+v0.2.4
+*NASA workbench slots now accept valid items from all recipes
+*Changes to Celestial Selection screen to match GC changes
+*Added config option for Electric Rocket
+
 v0.2.3
 *Tweaks to some model textures
 *Refactored some rendering code to MJRLegendsLib
