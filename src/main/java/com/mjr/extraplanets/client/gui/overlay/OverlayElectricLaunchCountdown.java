@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.client.gui.overlay;
 
-import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.core.client.gui.overlay.Overlay;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
@@ -12,6 +11,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
 
+import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @SideOnly(Side.CLIENT)
@@ -20,7 +20,7 @@ public class OverlayElectricLaunchCountdown extends Overlay {
 
 	public static void renderCountdownOverlay() {
 		GlStateManager.disableLighting();
-		int count = ((EntitySpaceshipBase) OverlayElectricLaunchCountdown.minecraft.thePlayer.ridingEntity).timeUntilLaunch / 2;
+		int count = ((EntityElectricRocketBase) OverlayElectricLaunchCountdown.minecraft.thePlayer.ridingEntity).timeUntilLaunch / 2;
 
 		count = (int) Math.floor(count / 10.0F);
 
