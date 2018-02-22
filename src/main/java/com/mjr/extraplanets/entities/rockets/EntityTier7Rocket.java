@@ -27,6 +27,7 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
@@ -216,22 +217,23 @@ public class EntityTier7Rocket extends EntityTieredRocket {
 
 	protected void spawnParticles(boolean launched) {
 		if (!this.isDead) {
-			double x1 = 3.2 * Math.cos(this.rotationYaw / 57.2957795D) * Math.sin(this.rotationPitch / 57.2957795D);
-			double z1 = 3.2 * Math.sin(this.rotationYaw / 57.2957795D) * Math.sin(this.rotationPitch / 57.2957795D);
-			double y1 = 3.2 * Math.cos((this.rotationPitch - 180) / 57.2957795D);
+			double sinPitch = Math.sin(this.rotationPitch / Constants.RADIANS_TO_DEGREES_D);
+			double x1 = 3.2 * Math.cos(this.rotationYaw / Constants.RADIANS_TO_DEGREES_D) * sinPitch;
+			double z1 = 3.2 * Math.sin(this.rotationYaw / Constants.RADIANS_TO_DEGREES_D) * sinPitch;
+			double y1 = 3.2 * Math.cos((this.rotationPitch - 180) / Constants.RADIANS_TO_DEGREES_D);
 			if (this.launchPhase == EnumLaunchPhase.LANDING.ordinal() && this.targetVec != null) {
 				double modifier = this.posY - this.targetVec.getY();
-				modifier = Math.max(modifier, 1.0);
-				x1 *= modifier / 60.0D;
-				y1 *= modifier / 60.0D;
-				z1 *= modifier / 60.0D;
+				modifier = Math.max(modifier, 180.0);
+				x1 *= modifier / 200.0D;
+				y1 *= Math.min(modifier / 200.0D, 2.5D);
+				z1 *= modifier / 200.0D;
 			}
 
-			final double y2 = this.prevPosY + (this.posY - this.prevPosY) + y1;
+			final double y2 = this.prevPosY + (this.posY - this.prevPosY) + y1 - 0.75 * this.motionY - 0.3 + 1.2D;
 
-			final double x2 = this.posX + x1;
-			final double z2 = this.posZ + z1;
-			Vector3 motionVec = new Vector3(x1, y1, z1);
+			final double x2 = this.posX + x1 + this.motionX;
+			final double z2 = this.posZ + z1 + this.motionZ;
+			Vector3 motionVec = new Vector3(x1 + this.motionX, y1 + this.motionY, z1 + this.motionZ);
 			Vector3 d1 = new Vector3(y1 * 0.1D, -x1 * 0.1D, z1 * 0.1D).rotate(315 - this.rotationYaw, motionVec);
 			Vector3 d2 = new Vector3(x1 * 0.1D, -z1 * 0.1D, y1 * 0.1D).rotate(315 - this.rotationYaw, motionVec);
 			Vector3 d3 = new Vector3(-y1 * 0.1D, x1 * 0.1D, z1 * 0.1D).rotate(315 - this.rotationYaw, motionVec);
@@ -264,6 +266,10 @@ public class EntityTier7Rocket extends EntityTieredRocket {
 			return;
 		}
 
+		if (this.ticksExisted % 2 == 0)
+			return;
+
+		y2 += 1.2D;
 		double x1 = motionVec.x;
 		double y1 = motionVec.y;
 		double z1 = motionVec.z;
