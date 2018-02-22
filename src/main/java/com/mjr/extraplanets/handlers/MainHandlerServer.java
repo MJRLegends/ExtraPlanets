@@ -5,10 +5,14 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
+import micdoodle8.mods.galacticraft.core.dimension.WorldProviderMoon;
 import micdoodle8.mods.galacticraft.core.entities.EntityLanderBase;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
+import micdoodle8.mods.galacticraft.planets.asteroids.dimension.WorldProviderAsteroids;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
+import micdoodle8.mods.galacticraft.planets.mars.dimension.WorldProviderMars;
+import micdoodle8.mods.galacticraft.planets.venus.dimension.WorldProviderVenus;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -189,7 +193,8 @@ public class MainHandlerServer {
 	}
 
 	private void runChecks(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
-		if (((EntityPlayerMP) entityLiving).capabilities.isCreativeMode)
+		EntityPlayerMP player = (EntityPlayerMP) entityLiving;
+		if (player.capabilities.isCreativeMode)
 			return;
 		if ((entityLiving.getRidingEntity() instanceof EntityLanderBase))
 			return;
@@ -197,18 +202,37 @@ public class MainHandlerServer {
 			return;
 		if ((entityLiving.getRidingEntity() instanceof EntitySpaceshipBase))
 			return;
-		if ((entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) && (((EntityPlayerMP) entityLiving).worldObj.provider instanceof WorldProviderRealisticSpace)) {
-			if (Config.PRESSURE)
-				checkPressure(event, entityLiving);
-			if (Config.RADIATION)
-				checkRadiation(event, entityLiving);
-		} else
-			return;
+		if (entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) {
+			if (((EntityPlayerMP) entityLiving).worldObj.provider instanceof WorldProviderRealisticSpace) {
+				if (Config.PRESSURE)
+					checkPressure(event, player, ((WorldProviderRealisticSpace) player.worldObj.provider).getPressureLevel());
+				if (Config.RADIATION)
+					checkRadiation(event, player, ((WorldProviderRealisticSpace) player.worldObj.provider).getSolarRadiationLevel());
+			} else if (player.worldObj.provider instanceof WorldProviderMoon) {
+				if (Config.GC_PRESSURE)
+					checkPressure(event, player, 80);
+				if (Config.GC_RADIATION)
+					checkRadiation(event, player, 3);
+			} else if (player.worldObj.provider instanceof WorldProviderMars) {
+				if (Config.GC_PRESSURE)
+					checkPressure(event, player, 90);
+				if (Config.GC_RADIATION)
+					checkRadiation(event, player, 5);
+			} else if (player.worldObj.provider instanceof WorldProviderVenus) {
+				if (Config.GC_PRESSURE)
+					checkPressure(event, player, 100);
+				if (Config.GC_RADIATION)
+					checkRadiation(event, player, 5);
+			} else if (player.worldObj.provider instanceof WorldProviderAsteroids) {
+				if (Config.GC_PRESSURE)
+					checkPressure(event, player, 100);
+				if (Config.GC_RADIATION)
+					checkRadiation(event, player, 6);
+			}
+		}
 	}
 
-	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
-		EntityPlayerMP playerMP = (EntityPlayerMP) entityLiving;
-
+	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityPlayerMP playerMP, int amount) {
 		ItemStack helmet = playerMP.inventory.armorInventory[0];
 		ItemStack chest = playerMP.inventory.armorInventory[1];
 		ItemStack leggins = playerMP.inventory.armorInventory[2];
@@ -226,16 +250,13 @@ public class MainHandlerServer {
 			doDamage = true;
 
 		if (doDamage) {
-			float tempLevel = ((WorldProviderRealisticSpace) playerMP.worldObj.provider).getPressureLevel();
+			float tempLevel = amount;
 			tempLevel = (tempLevel / 100) * 8;
 			playerMP.attackEntityFrom(DamageSourceEP.pressure, tempLevel);
 		}
 	}
 
-	private void checkRadiation(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
-		EntityPlayerMP playerMP = (EntityPlayerMP) entityLiving;
-
-		WorldProviderRealisticSpace provider = (WorldProviderRealisticSpace) playerMP.worldObj.provider;
+	private void checkRadiation(LivingEvent.LivingUpdateEvent event, EntityPlayerMP playerMP, int amount) {
 		// Tier 1 Space Suit
 		// 25 Level = 36 mins
 		// 50 Level = 14 mins
@@ -246,7 +267,6 @@ public class MainHandlerServer {
 		boolean doDamage = false;
 		boolean doArmorCheck = false;
 		double damageModifer = 0;
-		int radiationLevel = provider.getSolarRadiationLevel();
 		if (playerMP.inventory.armorInventory[0] == null || playerMP.inventory.armorInventory[1] == null || playerMP.inventory.armorInventory[2] == null || playerMP.inventory.armorInventory[3] == null) {
 			damageModifer = 0.1;
 			doDamage = true;
@@ -278,10 +298,18 @@ public class MainHandlerServer {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
+			//System.out.println("Current Level: " + stats.getRadiationLevel());
 			if (stats.getRadiationLevel() >= 100) {
 				playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
-			} else if (stats.getRadiationLevel() >= 0)
-				stats.setRadiationLevel(stats.getRadiationLevel() + (damageModifer * (radiationLevel / 10) / 6));
+			} else if (stats.getRadiationLevel() >= 0){
+				double tempLevel = 0.0;
+				if(amount < 10)
+					tempLevel = (damageModifer * amount) / 100;
+				else
+					tempLevel = damageModifer * (amount / 10) / 6;
+				//System.out.println("Take ammount: " + tempLevel);
+				stats.setRadiationLevel(stats.getRadiationLevel() + tempLevel);
+			}
 			else
 				stats.setRadiationLevel(0);
 		}
