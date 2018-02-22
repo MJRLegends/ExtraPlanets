@@ -25,9 +25,13 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.recipe.SpaceStationRecipe;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
+import micdoodle8.mods.galacticraft.core.dimension.WorldProviderMoon;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
+import micdoodle8.mods.galacticraft.planets.asteroids.dimension.WorldProviderAsteroids;
+import micdoodle8.mods.galacticraft.planets.mars.dimension.WorldProviderMars;
+import micdoodle8.mods.galacticraft.planets.venus.dimension.WorldProviderVenus;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.WorldProvider;
@@ -639,6 +643,30 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						radiationLevel = ((WorldProviderRealisticSpace) temp).getSolarRadiationLevel();
 						pressureLevel = ((WorldProviderRealisticSpace) temp).getPressureLevel();
 					} catch (Exception ex) {
+						if (temp instanceof WorldProviderMoon) {
+							if (Config.GC_PRESSURE)
+								pressureLevel = 80;
+							if (Config.GC_RADIATION)
+								radiationLevel = 3;
+						} else if (temp instanceof WorldProviderMars) {
+							if (Config.GC_PRESSURE)
+								pressureLevel = 90;
+							if (Config.GC_RADIATION)
+								radiationLevel = 5;
+						} else if (temp instanceof WorldProviderVenus) {
+							if (Config.GC_PRESSURE)
+								pressureLevel = 100;
+							if (Config.GC_RADIATION)
+								radiationLevel = 5;
+						} else if (temp instanceof WorldProviderAsteroids) {
+							if (Config.GC_PRESSURE)
+								pressureLevel = 100;
+							if (Config.GC_RADIATION)
+								radiationLevel = 6;
+						} else{
+							radiationLevel = 0;
+							pressureLevel = 0;
+						}
 					}
 
 					this.drawString(this.fontRendererObj,
