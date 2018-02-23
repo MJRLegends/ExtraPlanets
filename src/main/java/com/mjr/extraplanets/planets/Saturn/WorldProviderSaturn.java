@@ -136,7 +136,7 @@ public class WorldProviderSaturn extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 30;
+		return Config.SATURN_RADIATION_AMOUNT;
 	}
 
 	@Override

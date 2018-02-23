@@ -158,7 +158,7 @@ public class WorldProviderIo extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 45;
+		return Config.IO_RADIATION_AMOUNT;
 	}
 
 	@Override

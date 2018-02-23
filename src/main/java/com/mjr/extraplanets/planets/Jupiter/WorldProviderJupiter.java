@@ -136,7 +136,7 @@ public class WorldProviderJupiter extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 45;
+		return Config.JUPITER_RADIATION_AMOUNT;
 	}
 
 	@Override

@@ -117,7 +117,7 @@ public class WorldProviderEris extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 50;
+		return Config.ERIS_RADIATION_AMOUNT;
 	}
 
 	@Override

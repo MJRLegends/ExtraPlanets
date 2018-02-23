@@ -146,7 +146,7 @@ public class WorldProviderTitania extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 35;
+		return Config.TITANIA_RADIATION_AMOUNT;
 	}
 
 	@Override

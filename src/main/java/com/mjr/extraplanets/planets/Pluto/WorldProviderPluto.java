@@ -112,7 +112,7 @@ public class WorldProviderPluto extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 30;
+		return Config.PLUTO_RADIATION_AMOUNT;
 	}
 
 	@Override

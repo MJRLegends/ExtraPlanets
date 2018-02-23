@@ -149,7 +149,7 @@ public class WorldProviderIapetus extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 30;
+		return Config.IAPETUS_RADIATION_AMOUNT;
 	}
 
 	@Override

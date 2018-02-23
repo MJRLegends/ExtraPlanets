@@ -134,7 +134,7 @@ public class WorldProviderUranus extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 35;
+		return Config.URANUS_RADIATION_AMOUNT;
 	}
 
 	@Override
