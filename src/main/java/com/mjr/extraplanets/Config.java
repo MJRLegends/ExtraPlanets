@@ -287,23 +287,31 @@ public class Config {
 	public static int SCHEMATIC_TIER_10_ELECTRIC_ROCKET_PAGE_ID;
 	public static int SCHEMATIC_MARS_ROVER_PAGE_ID;
 	public static int SCHEMATIC_VENUS_ROVER_PAGE_ID;
-	
+
 	public static boolean ORE_DICTIONARY;
 	public static boolean ORE_DICTIONARY_INGOTS;
 	public static boolean ORE_DICTIONARY_OTHER;
 
+	public static boolean MORE_PLANETS_COMPATIBILITY;
 	public static boolean NEI_SUPPORT;
 	public static boolean JEI_SUPPORT;
 	public static boolean ACHIEVEMENTS;
 	public static boolean GC_DECONSTRUCTOR_SUPPORT;
 
+	public static boolean CUSTOM_GALAXIES;
+	public static boolean USE_CUSTOM_CELESTAIAL_SELECTION;
+	public static boolean REGISTER_BIOME_TYPES;
+	public static boolean ORE_LEAD_GENERATION;
+	public static int ORE_LEAD_GENERATION_AMOUNT;
+
+	public static boolean DEBUG_MODE;
+	public static boolean OLD_STYLE_GRAVITY;
+	public static boolean OLD_ROCKET_MODELS;
+
 	public static boolean PRESSURE;
 	public static boolean RADIATION;
 	public static boolean GC_RADIATION;
 	public static boolean GC_PRESSURE;
-
-	public static boolean ORE_LEAD_GENERATION;
-	public static int ORE_LEAD_GENERATION_AMOUNT;
 
 	public static float MERCURY_DISTANCE_OFFSET;
 	public static float CERES_DISTANCE_OFFSET;
@@ -329,16 +337,6 @@ public class Config {
 	public static float KEPLER69_SYSTEM_X_OFFSET;
 	public static float KEPLER69_SYSTEM_Y_OFFSET;
 	public static float KEPLER69_SYSTEM_Z_OFFSET;
-
-	public static boolean DEBUG_MODE;
-
-	public static boolean OLD_STYLE_GRAVITY;
-	public static boolean OLD_ROCKET_MODELS;
-
-	public static boolean USE_CUSTOM_CELESTAIAL_SELECTION;
-	public static boolean MORE_PLANETS_COMPATIBILITY;
-	public static boolean CUSTOM_GALAXIES;
-	public static boolean REGISTER_BIOME_TYPES;
 
 	public static void load() {
 		config.load();
@@ -678,13 +676,6 @@ public class Config {
 				"FOR THIS TO WORK YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!").getBoolean(false);
 		GC_DECONSTRUCTOR_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galacticraft Deconstuctor Machine Compatibility", true, "Setting this to false will disable Galacticraft Deconstuctor Machine Compatibility!").getBoolean(
 				true);
-		
-		PRESSURE = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Pressure", true, "Setting this option to false will disable & remove the Presssure System").getBoolean(true);
-		RADIATION = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Radiation", true, "Setting this option to false will disable & remove the Radiation System").getBoolean(true);
-		GC_RADIATION = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Radiation for Galacticraft Planets & Moons", true, "Setting this option to false will disable & remove the Radiation System for Galacticraft Planets & Moons")
-				.getBoolean(true);
-		GC_PRESSURE = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Pressure for Galacticraft Planets & Moons", true, "Setting this option to false will disable & remove the Radiation System for Galacticraft Planets & Moons")
-				.getBoolean(true);
 
 		ACHIEVEMENTS = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Achievements", true, "Setting this option to false will disable & remove Achievements for ExtraPlanets").getBoolean(true);
 
@@ -703,6 +694,13 @@ public class Config {
 		DEBUG_MODE = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Debug Mode (For testing purposes and debugging bugs)", false, "Setting this option to false will enable debug messages in to the console").getBoolean(false);
 		OLD_STYLE_GRAVITY = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Old Style Gravity", false, "This option will change all the gravity of Planets & Moons back to the old style of gravity").getBoolean(false);
 		OLD_ROCKET_MODELS = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Old Models for Tier 9 & 10 Rockets", false, "This option will change all the Tier 9 & 10 Rockets models to the old type").getBoolean(false);
+
+		PRESSURE = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Pressure", true, "Setting this option to false will disable & remove the Pressure System").getBoolean(true);
+		RADIATION = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Radiation", true, "Setting this option to false will disable & remove the Radiation System").getBoolean(true);
+		GC_RADIATION = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Radiation for Galacticraft Planets & Moons", true,
+				"Setting this option to false will disable & remove the Radiation System for Galacticraft Planets & Moons").getBoolean(true);
+		GC_PRESSURE = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Pressure for Galacticraft Planets & Moons", true,
+				"Setting this option to false will disable & remove the Radiation System for Galacticraft Planets & Moons").getBoolean(true);
 
 		MERCURY_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Mercury Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		CERES_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Ceres Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
@@ -786,7 +784,7 @@ public class Config {
 		ConfigCategory configGeneralSettings = config.getCategory(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS);
 		configGeneralSettings.setComment("General Settings");
 		list.add(new ConfigElement(configGeneralSettings));
-		
+
 		ConfigCategory configPessureAndRadiationSettings = config.getCategory(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS);
 		configGeneralSettings.setComment("Pressure & Radiation Settings");
 		list.add(new ConfigElement(configPessureAndRadiationSettings));
