@@ -8,6 +8,14 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.9.8
+*Added da_DK.lang (Thanks to Jin16) (Part translated)
+*Added missing ore dict entries & Fixed ore dict entries
+*Fixed issue #242
+*Updated lang files to match 1.8+ changes
+*Updated lang files for some entries that were missing planet name prefix, Removed WIP tags
+*Updated de_DE.lang (Thanks to DerMilchkarton)
+
 v1.9.7
 *Fixed issue #213
 *Fixed issue #227
