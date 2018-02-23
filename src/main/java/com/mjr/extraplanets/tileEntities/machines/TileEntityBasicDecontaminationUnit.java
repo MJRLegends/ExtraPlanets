@@ -28,6 +28,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.BlockDecontaminationUnitFake;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -61,7 +62,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 						stats = (player.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null));
 					}
 					double temp = stats.getRadiationLevel();
-					double level = (temp * 10) / 100;
+					double level = (temp * Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT) / 100;
 					if (level <= 0) {
 						stats.setRadiationLevel(0);
 						if (this.ticks % 40 == 0)
@@ -69,9 +70,9 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 					} else {
 						this.storage.setEnergyStored(0);
 						stats.setRadiationLevel(stats.getRadiationLevel() - level);
-						PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " 10%");
-						PlayerUtilties.sendMessage(player,
-								"" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
+						PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " " + Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT + "%");
+						PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
+								+ (int) stats.getRadiationLevel() + "%");
 					}
 				} else if (this.ticks % 40 == 0)
 					PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You need to add more power to use this! The machine needs 1,000,000 gJ or 625,000 RF per use!");
