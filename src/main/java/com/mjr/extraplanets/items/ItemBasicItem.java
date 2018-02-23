@@ -14,6 +14,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
@@ -80,12 +81,14 @@ public class ItemBasicItem extends Item {
 				if (playerIn != null) {
 					stats = playerIn.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 				}
-				double level = stats.getRadiationLevel() / 2;
+				double temp = stats.getRadiationLevel();
+				double level = (temp * Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT) / 100;
 				if (level < 0)
 					stats.setRadiationLevel(0);
 				else
 					stats.setRadiationLevel(level);
-				playerIn.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerIn.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by 50%"));
+				playerIn.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerIn.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by "
+						+ Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%"));
 				playerIn.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerIn.getName() + EnumChatFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
 			}
 
