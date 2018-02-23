@@ -131,7 +131,7 @@ public class WorldProviderNeptune extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 42;
+		return Config.NEPTUNE_RADIATION_AMOUNT;
 	}
 
 	@Override

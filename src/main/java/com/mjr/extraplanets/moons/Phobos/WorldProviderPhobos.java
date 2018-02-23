@@ -4,10 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldProviderSpace;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.api.world.ISolarLevel;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import net.minecraft.block.Block;
 import net.minecraft.util.MathHelper;
@@ -16,13 +13,15 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Phobos.worldgen.ChunkProviderPhobos;
 import com.mjr.extraplanets.moons.Phobos.worldgen.WorldChunkManagerPhobos;
+import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
-public class WorldProviderPhobos extends WorldProviderSpace implements IGalacticraftWorldProvider, ISolarLevel {
+public class WorldProviderPhobos extends WorldProviderRealisticSpace {
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
@@ -152,5 +151,15 @@ public class WorldProviderPhobos extends WorldProviderSpace implements IGalactic
 		List<Block> list = new LinkedList<>();
 		list.add(ExtraPlanets_Blocks.PHOBOS_BLOCKS);
 		return list;
+	}
+
+	@Override
+	public int getPressureLevel() {
+		return 90;
+	}
+
+	@Override
+	public int getSolarRadiationLevel() {
+		return Config.PHOBOS_RADIATION_AMOUNT;
 	}
 }

@@ -153,7 +153,7 @@ public class WorldProviderTriton extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 42;
+		return Config.TRITON_RADIATION_AMOUNT;
 	}
 
 	@Override

@@ -153,7 +153,7 @@ public class WorldProviderCallisto extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 45;
+		return Config.CALLISTO_RADIATION_AMOUNT;
 	}
 
 	@Override

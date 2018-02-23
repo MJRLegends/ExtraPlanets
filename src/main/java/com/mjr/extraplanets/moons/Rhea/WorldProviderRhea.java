@@ -153,7 +153,7 @@ public class WorldProviderRhea extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 30;
+		return Config.RHEA_RADIATION_AMOUNT;
 	}
 
 	@Override

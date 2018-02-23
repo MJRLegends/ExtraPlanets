@@ -150,7 +150,7 @@ public class WorldProviderOberon extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 35;
+		return Config.OBERON_RADIATION_AMOUNT;
 	}
 
 	@Override

@@ -10,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.chunk.IChunkProvider;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Mercury.worldgen.ChunkProviderMercury;
@@ -112,7 +113,7 @@ public class WorldProviderMercury extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 25;
+		return Config.MERCURY_RADIATION_AMOUNT;
 	}
 
 	@Override

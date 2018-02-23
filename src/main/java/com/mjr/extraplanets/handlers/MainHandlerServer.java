@@ -212,22 +212,22 @@ public class MainHandlerServer {
 				if (Config.GC_PRESSURE)
 					checkPressure(event, player, 80);
 				if (Config.GC_RADIATION)
-					checkRadiation(event, player, 3);
+					checkRadiation(event, player, Config.MOON_RADIATION_AMOUNT);
 			} else if (player.worldObj.provider instanceof WorldProviderMars) {
 				if (Config.GC_PRESSURE)
 					checkPressure(event, player, 90);
 				if (Config.GC_RADIATION)
-					checkRadiation(event, player, 5);
+					checkRadiation(event, player, Config.MARS_RADIATION_AMOUNT);
 			} else if (player.worldObj.provider instanceof WorldProviderVenus) {
 				if (Config.GC_PRESSURE)
 					checkPressure(event, player, 100);
 				if (Config.GC_RADIATION)
-					checkRadiation(event, player, 5);
+					checkRadiation(event, player, Config.VENUS_RADIATION_AMOUNT);
 			} else if (player.worldObj.provider instanceof WorldProviderAsteroids) {
 				if (Config.GC_PRESSURE)
 					checkPressure(event, player, 100);
 				if (Config.GC_RADIATION)
-					checkRadiation(event, player, 6);
+					checkRadiation(event, player, Config.ASTEROIDS_RADIATION_AMOUNT);
 			}
 		}
 	}
