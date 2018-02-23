@@ -156,7 +156,7 @@ public class WorldProviderGanymede extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 45;
+		return Config.GANYMEDE_RADIATION_AMOUNT;
 	}
 
 	@Override

@@ -156,7 +156,7 @@ public class WorldProviderTitan extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 30;
+		return Config.TITAN_RADIATION_AMOUNT;
 	}
 
 	@Override

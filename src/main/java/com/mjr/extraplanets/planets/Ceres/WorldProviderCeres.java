@@ -123,7 +123,7 @@ public class WorldProviderCeres extends WorldProviderRealisticSpace {
 
 	@Override
 	public int getSolarRadiationLevel() {
-		return 50;
+		return Config.CERES_RADIATION_AMOUNT;
 	}
 
 	@Override
