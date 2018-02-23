@@ -232,7 +232,7 @@ public class Config {
 	public static int SCHEMATIC_TIER_10_ELECTRIC_ROCKET_PAGE_ID;
 	public static int SCHEMATIC_MARS_ROVER_PAGE_ID;
 	public static int SCHEMATIC_VENUS_ROVER_PAGE_ID;
-	
+
 	public static boolean ORE_DICTIONARY;
 	public static boolean ORE_DICTIONARY_INGOTS;
 	public static boolean ORE_DICTIONARY_OTHER;
@@ -293,7 +293,7 @@ public class Config {
 
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Change if a dimension ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Setting this option to false will remove the planet with all the related items/block!");
-		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable/Disable dimension settings");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable/Disable options for dimension settings");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Setting this option to false will remove the planet/moon with all the related items/block//space stations!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Change if a Schematic GUI ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS, "Change if a Schematic Page ID is causing conflicts!");
@@ -302,8 +302,9 @@ public class Config {
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_BLOCKS, "Changing to false will disable & remove the blocks/machines");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_SPACE_STATIONS,
 				"Setting this option to false will remove the space station from the planet (Note: Will be auto disbled when disabling a planet, so you dont need to disable them when disabling a planets)");
-		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable/Disable compatibility settings");
-		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable/Disable general settings");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable/Disable options for compatibility settings");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable/Disable options for general settings");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable/Disable options for pressure & radiation settings");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Advanced options for Celestial Body Map to change locations of planets and solar systems! (For Advanced Users ONLY!)");
 
 		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_DIMENSION_IDS, true);
@@ -317,6 +318,7 @@ public class Config {
 		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_SPACE_STATIONS, true);
 		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_COMPATIBILITY, true);
 		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, true);
+		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, true);
 		config.setCategoryRequiresMcRestart(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, true);
 
 		ITEMS_CARBON = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Carbon Tools & Armor", true, "This option will disable & remove all Carbon Tools & Armour").getBoolean(true);
@@ -571,17 +573,18 @@ public class Config {
 
 		EXTREME_REACTORS_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Extreme Reactors Compatibility", true, "Setting this to false will disable & remove Extreme Reactors Compatibility!").getBoolean(true);
 		MC_MULITPART_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable MC MultiPart Compatibility", true, "Setting this to false will disable & remove MC MultiPart Compatibility!").getBoolean(true);
-		GC_DECONSTRUCTOR_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galacticraft Deconstuctor Machine Compatibility", true, "Setting this to false will disable & remove Galacticraft Deconstuctor Machine Compatibility!")
-				.getBoolean(true);
+
+		GC_DECONSTRUCTOR_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galacticraft Deconstuctor Machine Compatibility", true, "Setting this to false will disable Galacticraft Deconstuctor Machine Compatibility!").getBoolean(
+				true);
+
+		PRESSURE = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Pressure", true, "Setting this option to false will disable & remove the Presssure System").getBoolean(true);
+		RADIATION = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Radiation", true, "Setting this option to false will disable & remove the Radiation System").getBoolean(true);
+		GC_RADIATION = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Radiation for Galacticraft Planets & Moons", true,
+				"Setting this option to false will disable & remove the Radiation System for Galacticraft Planets & Moons").getBoolean(true);
+		GC_PRESSURE = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Pressure for Galacticraft Planets & Moons", true,
+				"Setting this option to false will disable & remove the Radiation System for Galacticraft Planets & Moons").getBoolean(true);
 
 		ACHIEVEMENTS = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Achievements", true, "Setting this option to false will disable & remove Achievements for ExtraPlanets").getBoolean(true);
-
-		PRESSURE = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Pressure", true, "Setting this option to false will disable & remove the Presssure System").getBoolean(true);
-		RADIATION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Radiation", true, "Setting this option to false will disable & remove the Radiation System").getBoolean(true);
-		GC_RADIATION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Radiation for Galacticraft Planets & Moons", true, "Setting this option to false will disable & remove the Radiation System for Galacticraft Planets & Moons")
-				.getBoolean(true);
-		GC_PRESSURE = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Pressure for Galacticraft Planets & Moons", true, "Setting this option to false will disable & remove the Radiation System for Galacticraft Planets & Moons")
-				.getBoolean(true);
 
 		ORE_LEAD_GENERATION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable generation of Lead Ore in the Overworld", true, "Setting this option to false will completely remove Lead Ore/Ingot from the world").getBoolean(true);
 		ORE_LEAD_GENERATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Amount of Lead Ore Generation per chunk", 5, "This option is used for changing the Lead Ore Spawn Rate [range: 0 ~ 2147483647, default: 5]").getInt();
@@ -677,6 +680,10 @@ public class Config {
 		ConfigCategory configGeneralSettings = config.getCategory(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS);
 		configGeneralSettings.setComment("General Settings");
 		list.add(new ConfigElement(configGeneralSettings));
+
+		ConfigCategory configPessureAndRadiationSettings = config.getCategory(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS);
+		configGeneralSettings.setComment("Pressure & Radiation Settings");
+		list.add(new ConfigElement(configPessureAndRadiationSettings));
 
 		ConfigCategory configCelestialMapSettings = config.getCategory(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS);
 		configCelestialMapSettings.setComment("Celestial Map Settings");

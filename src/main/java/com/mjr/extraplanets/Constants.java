@@ -115,5 +115,6 @@ public class Constants {
 	public static final String CONFIG_CATEGORY_SCHEMATIC_PAGE_IDS = "schematics Page ID";
 	public static final String CONFIG_CATEGORY_COMPATIBILITY = "compatibility support";
 	public static final String CONFIG_CATEGORY_GENERAL_SETTINGS = "general settings";
+	public static final String CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS = "pressure & radiation settings";
 	public static final String CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS = "celestial body map settings";
 }
