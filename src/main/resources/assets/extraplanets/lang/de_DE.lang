@@ -147,7 +147,7 @@ tile.saturn.ore_slime.name=Saturn Schleimerz
 tile.uranus.surface.name=Uranus Oberflächengestein
 tile.uranus.sub_surface.name=Uranus Untergrundgestein
 tile.uranus.stone.name=Uranus Stein
-tile.uranus.ore_crystal.name=Uranus Crystal Ore ##NEEDS TRANSLATE##
+tile.uranus.ore_crystal.name=Uranus Kristallerz
 tile.uranus.ore_white_gem.name=Uranus Weißes Edelsteinerz
 tile.uranus.stone_bricks.name=Uranus Steinziegel
 tile.uranus.crystal_block.name=Kristallgestein
@@ -160,7 +160,7 @@ tile.neptune.stone.name=Neptun Stein
 tile.neptune.ore_iron.name=Neptun Eisenerz
 tile.neptune.ore_tin.name=Neptun Zinnerz
 tile.neptune.ore_copper.name=Neptun Kupfererz
-tile.neptune.ore_zinc.name=Neptune Zinc Ore ##NEEDS TRANSLATE##
+tile.neptune.ore_zinc.name=Neptun Zinkerz
 tile.neptune.ore_blue_gem.name=Neptun Blaues Edelsteinerz
 tile.neptune.stone_bricks.name=Neptun Steinziegel
 tile.neptune.zinc_block.name=Zinkblock
@@ -509,13 +509,13 @@ gui.general_features_details.name=Allgemeine Informationen zu Features
 gui.atmosphere_details.name=Informationen zur Atmosphäre
 gui.general_details.name=Allgemeine Informationen
 gui.parent_solar_system_details.name=Informationen zum Muttersolarsystem
-gui.new_galaxies.name=New Galaxies ##NEEDS TRANSLATE##
-gui.type_planet.name=Planet ##NEEDS TRANSLATE##
-gui.type_moon.name=Moon ##NEEDS TRANSLATE##
-gui.type_satellite.name=Satellite ##NEEDS TRANSLATE##
-gui.type_unknown.name=Unknown ##NEEDS TRANSLATE##
-gui.type_days.name=days ##NEEDS TRANSLATE##
-gui.type_hours.name=hours ##NEEDS TRANSLATE##
+gui.new_galaxies.name=Neue Galaxien
+gui.type_planet.name=Planet
+gui.type_moon.name=Mond
+gui.type_satellite.name=Satellit
+gui.type_unknown.name=Unbekannt
+gui.type_days.name=Tage
+gui.type_hours.name=Stunden
 
 gui.celestial_body_type.name=Typus
 gui.celestial_body_amount_of_moons.name=Anzahl der Monde
@@ -530,7 +530,7 @@ gui.celestial_body_corrosive_atmosphere.name=Ätzende Atmosphäre
 gui.celestial_body_radiation_level.name=Schwere der Strahlung
 gui.celestial_body_pressure_level.name=Druck
 gui.celestial_body_amount_of_planets.name=Anzahl der Planeten
-gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
+gui.celestial_body_has_dungeon.name=Besitzt Verließ
 
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Fahrzeuginventar öffnen
@@ -1113,8 +1113,8 @@ item.tier5_kit.without_thermal_padding.name=Stufe 5 komplettes Set ohne Thermalp
 item.tier5_kit.just_oxygen_setup.name=Stufe 5 Sauerstoffzubehör
 item.tier5_kit.just_protection.name=Stufe 5 Schutzzubehör
 
-item.kit.information.desc=Used for Compact Storage for Space Equipment ##NEEDS TRANSLATE##
-item.kit.information.use=Right Click to Equip Kit ##NEEDS TRANSLATE##
+item.kit.information.desc=Einfache Lagerung von Weltraumausrüstung
+item.kit.information.use=Rechtsklick um Ausrüstung anzulegen
 
 #Sticks
 item.tier11_items.blue_sticks.name=Blauer Stock
