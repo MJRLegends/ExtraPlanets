@@ -33,7 +33,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 	public static final PropertyEnum<EnumBlockMultiType> MULTI_TYPE = PropertyEnum.create("type", EnumBlockMultiType.class);
 	public static final PropertyInteger RENDER_TYPE = PropertyInteger.create("rendertype", 0, 7);
 
-	protected static final AxisAlignedBB AABB_PAD = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.2F, 1.0F);
+	protected static final AxisAlignedBB AABB_PAD = new AxisAlignedBB(0.0F, 0.0F, 0.0F, 1.0F, 0.1875F, 1.0F);
 
 	public enum EnumBlockMultiType implements IStringSerializable {
 		TIER_2_ROCKET_PAD(0, "tier2_rocket_pad"), TIER_3_ROCKET_PAD(1, "tier3_rocket_pad"), POWER_CHARGING_PAD(2, "powered_charging_pad"), ROCKET_POWER_CHARGING_PAD(3, "rocket_powered_charging_pad");
@@ -73,6 +73,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		case TIER_2_ROCKET_PAD:
 		case TIER_3_ROCKET_PAD:
 		case POWER_CHARGING_PAD:
+		case ROCKET_POWER_CHARGING_PAD:
 			return AABB_PAD;
 		default:
 			return FULL_BLOCK_AABB;
