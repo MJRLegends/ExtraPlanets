@@ -486,7 +486,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	@Override
 	public boolean processInitialInteract(EntityPlayer player, ItemStack stack, EnumHand hand) {
 		if (this.worldObj.isRemote) {
-			if (this.getPassengers().isEmpty()) {
+			if (this.getPassengers() == null) {
 				PlayerUtilties.sendMessage(player,
 						GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - " + TranslateUtilities.translate("gui.buggy.turn.name"));
 				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.accel.name"));
