@@ -465,7 +465,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	@Override
 	public boolean processInitialInteract(EntityPlayer player, EnumHand hand) {
 		if (this.world.isRemote) {
-			if (this.getPassengers().isEmpty()) {
+			if (this.getPassengers() == null) {
 				PlayerUtilties.sendMessage(player,
 						GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - " + TranslateUtilities.translate("gui.buggy.turn.name"));
 				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.accel.name"));

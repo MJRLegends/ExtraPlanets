@@ -35,7 +35,6 @@ import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.text.TextComponentString;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraftforge.common.MinecraftForge;
@@ -47,6 +46,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.api.IPoweredLandable;
 import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBase implements IPoweredLandable, IInventoryDefaults, IEntityNoisy {
@@ -449,19 +449,19 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		this.setLaunchPhase(EnumLaunchPhase.UNIGNITED);
 		this.timeUntilLaunch = 0;
 		if (!this.world.isRemote && !this.getPassengers().isEmpty() && this.getPassengers().get(0) instanceof EntityPlayerMP) {
-			this.getPassengers().get(0).sendMessage(new TextComponentString(TranslateUtilities.translate("gui.rocket.warning.nogyroscope")));
+			PlayerUtilties.sendMessage((EntityPlayerMP) this.getPassengers().get(0), "" + TranslateUtilities.translate("gui.rocket.warning.nogyroscope"));
 		}
 	}
 
 	public void failMessageLaunchController() {
 		if (!this.world.isRemote && !this.getPassengers().isEmpty() && this.getPassengers().get(0) instanceof EntityPlayerMP) {
-			((EntityPlayerMP) this.getPassengers().get(0)).sendMessage(new TextComponentString(TranslateUtilities.translate("gui.rocket.warning.launchcontroller")));
+			PlayerUtilties.sendMessage((EntityPlayerMP) this.getPassengers().get(0), "" + TranslateUtilities.translate("gui.rocket.warning.launchcontroller"));
 		}
 	}
 
 	public void failMessageInsufficientFuel() {
 		if (!this.world.isRemote && !this.getPassengers().isEmpty() && this.getPassengers().get(0) instanceof EntityPlayerMP) {
-			((EntityPlayerMP) this.getPassengers().get(0)).sendMessage(new TextComponentString(TranslateUtilities.translate("gui.rocket.warning.fuelinsufficient")));
+			PlayerUtilties.sendMessage((EntityPlayerMP) this.getPassengers().get(0), "" + TranslateUtilities.translate("gui.rocket.warning.fuelinsufficient"));
 		}
 	}
 
