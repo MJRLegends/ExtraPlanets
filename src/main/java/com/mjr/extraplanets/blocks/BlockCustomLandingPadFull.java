@@ -32,6 +32,7 @@ import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPad;
 
 public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPartialSealableBlock {
 	public static final PropertyEnum<EnumLandingPadFullType> PAD_TYPE = PropertyEnum.create("type", EnumLandingPadFullType.class);
+    private final AxisAlignedBB AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.1875D, 1.0D);
 
 	public enum EnumLandingPadFullType implements IStringSerializable {
 		TIER_2_ROCKET_PAD(0, "tier_2_rocket"), TIER_3_ROCKET_PAD(1, "tier_3_rocket"), POWER_CHARGING_PAD(2, "powered_charging_pad"), ROCKET_POWER_CHARGING_PAD(3, "rocket_powered_charging_pad");
@@ -92,15 +93,11 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 		return Item.getItemFromBlock(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD);
 	}
 
-	@Override
-	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos) {
-		return new AxisAlignedBB(pos.getX() + 0.0D, pos.getY() + 0.0D, pos.getZ() + 0.0D, pos.getX() + 1.0D, pos.getY() + 0.2D, pos.getZ() + 1.0D);
-	}
-
-	@Override
-	public AxisAlignedBB getSelectedBoundingBox(IBlockState state, World worldIn, BlockPos pos) {
-		return new AxisAlignedBB(pos.getX() + 0.0D, pos.getY() + 0.0D, pos.getZ() + 0.0D, pos.getX() + 1.0D, pos.getY() + 0.2D, pos.getZ() + 1.0D);
-	}
+    @Override
+    public AxisAlignedBB getBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos)
+    {
+        return this.AABB;
+    }
 
 	@Override
 	public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
