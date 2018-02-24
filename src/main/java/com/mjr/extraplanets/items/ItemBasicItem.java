@@ -8,7 +8,6 @@ import net.minecraft.init.Items;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -18,6 +17,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemBasicItem extends Item {
@@ -87,9 +87,9 @@ public class ItemBasicItem extends Item {
 					stats.setRadiationLevel(0);
 				else
 					stats.setRadiationLevel(level);
-				playerIn.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerIn.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by "
-						+ Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%"));
-				playerIn.addChatMessage(new ChatComponentText("" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerIn.getName() + EnumChatFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%"));
+				PlayerUtilties.sendMessage(playerIn, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerIn.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by "
+						+ Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%");
+				PlayerUtilties.sendMessage(playerIn, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerIn.getName() + EnumChatFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%");
 			}
 
 			if (!playerIn.capabilities.isCreativeMode) {

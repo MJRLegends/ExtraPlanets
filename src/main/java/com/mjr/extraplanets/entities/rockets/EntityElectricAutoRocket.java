@@ -30,7 +30,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ClassInheritanceMultiMap;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.MathHelper;
@@ -45,6 +44,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.api.IPowerDock;
 import com.mjr.extraplanets.api.IPoweredLandable;
 import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBase implements IPoweredLandable, IInventoryDefaults, IEntityNoisy {
@@ -448,19 +448,19 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		this.setLaunchPhase(EnumLaunchPhase.UNIGNITED);
 		this.timeUntilLaunch = 0;
 		if (!this.worldObj.isRemote && this.riddenByEntity instanceof EntityPlayerMP) {
-			((EntityPlayerMP) this.riddenByEntity).addChatMessage(new ChatComponentText(TranslateUtilities.translate("gui.rocket.warning.nogyroscope")));
+			PlayerUtilties.sendMessage((EntityPlayerMP) this.riddenByEntity, "" + TranslateUtilities.translate("gui.rocket.warning.nogyroscope"));
 		}
 	}
 
 	public void failMessageLaunchController() {
 		if (!this.worldObj.isRemote && this.riddenByEntity instanceof EntityPlayerMP) {
-			((EntityPlayerMP) this.riddenByEntity).addChatMessage(new ChatComponentText(TranslateUtilities.translate("gui.rocket.warning.launchcontroller")));
+			PlayerUtilties.sendMessage((EntityPlayerMP) this.riddenByEntity, "" + TranslateUtilities.translate("gui.rocket.warning.launchcontroller"));
 		}
 	}
 
 	public void failMessageInsufficientFuel() {
 		if (!this.worldObj.isRemote && this.riddenByEntity instanceof EntityPlayerMP) {
-			((EntityPlayerMP) this.riddenByEntity).addChatMessage(new ChatComponentText(TranslateUtilities.translate("gui.rocket.warning.fuelinsufficient")));
+			PlayerUtilties.sendMessage((EntityPlayerMP) this.riddenByEntity, "" + TranslateUtilities.translate("gui.rocket.warning.fuelinsufficient"));
 		}
 	}
 
