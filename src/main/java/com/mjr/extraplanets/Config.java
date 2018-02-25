@@ -245,6 +245,7 @@ public class Config {
 	public static boolean morePlanetsCompatibilityAdv;
 	public static boolean amunRaCompatibility;
 	public static boolean galaxySpaceCompatibility;
+	public static boolean galaxySpaceCompatibility120;
 	public static boolean galaxySpaceCompatibilityAdv;
 	public static boolean extendedPlanetsCompatibility;
 
@@ -569,7 +570,8 @@ public class Config {
 		morePlanetsCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced More Planets Compatibility", false,
 				"This option will do the same as the basic one but will also fix the progression between addons (Note: Will disable blocks/items/entities/recipes)").getBoolean(false);
 		amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false, "This option will disable & remove the Custom Celestial Selection screen & Change Conflicting Dimension Ids, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Ceres, Eris, Kepler22b, Rhea TO -66 ,-67 -68, -69").getBoolean(false);
-		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings & Custom Celestial Selection screen & Change Conflicting Dimension Ids").getBoolean(false);
+		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility (v1.1.9 and below)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings & Custom Celestial Selection screen & Change Conflicting Dimension Ids").getBoolean(false);
+		galaxySpaceCompatibility120 = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility (v1.2.0 and above)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings & Custom Celestial Selection screen & Change Conflicting Dimension Ids").getBoolean(false);
 		// galaxySpaceCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
 		extendedPlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations").getBoolean(
 				false);
@@ -670,6 +672,21 @@ public class Config {
 			titaniaID = -45;
 			useCustomCelestialSelection = false;
 		}
+
+		if (galaxySpaceCompatibility120) {
+			io = false;
+			phobos = false;
+			venus = false;
+			europa = false;
+			ceres = false;
+			ganymede = false;
+			if (kepler47SystemYawOffset == 0)
+				kepler47SystemYawOffset = 40.0F;
+			iapetusID = -44;
+			titaniaID = -45;
+			useCustomCelestialSelection = false;
+		}
+
 		if (extendedPlanetsCompatibility) {
 			neptune = false;
 			uranus = false;
