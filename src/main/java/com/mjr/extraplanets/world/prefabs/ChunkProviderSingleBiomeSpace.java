@@ -16,15 +16,16 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
-import net.minecraft.world.gen.ChunkProviderOverworld;
 
+import com.mjr.mjrlegendslib.world.ChunkProviderBase;
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 
 /*
  * Class from Galacticraft Core
  * Credit micdoodle8, radfast
  */
-public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderOverworld {
+
+public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 	protected final Random rand;
 
 	private final Gradient noiseGen1;
@@ -57,7 +58,7 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderOverwor
 	private List<MapGenBaseMeta> worldGenerators;
 
 	public ChunkProviderSingleBiomeSpace(World par1World, long seed, boolean mapFeaturesEnabled) {
-		super(par1World, seed, mapFeaturesEnabled, "");
+		super();
 		this.worldObj = par1World;
 		this.rand = new Random(seed);
 
@@ -131,9 +132,6 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderOverwor
 		return x;
 	}
 
-	@SuppressWarnings("deprecation")
-	@Override
-	// public void replaceBiomeBlocks(int x, int z, ChunkPrimer primer, Biome[] biomesIn)
 	public void replaceBiomeBlocks(int x, int z, ChunkPrimer primer, Biome[] biomesIn) {
 		final int var5 = 20;
 		final float var6 = 0.03125F;
