@@ -12,21 +12,20 @@ import net.minecraft.block.BlockFalling;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
-import net.minecraft.util.IProgressUpdate;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.ChunkProviderGenerate;
 
+import com.mjr.mjrlegendslib.world.ChunkProviderBase;
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 
 /*
  * Class from Galacticraft Core
  * Credit micdoodle8, radfast
  */
-public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderGenerate {
+public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 	protected final Random rand;
 
 	private final Gradient noiseGen1;
@@ -59,7 +58,7 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderGenerat
 	private List<MapGenBaseMeta> worldGenerators;
 
 	public ChunkProviderSingleBiomeSpace(World par1World, long seed, boolean mapFeaturesEnabled) {
-		super(par1World, seed, mapFeaturesEnabled, "");
+		super();
 		this.worldObj = par1World;
 		this.rand = new Random(seed);
 
@@ -132,7 +131,6 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderGenerat
 		return x;
 	}
 
-	@Override
 	public void replaceBlocksForBiome(int par1, int par2, ChunkPrimer primer, BiomeGenBase[] par4ArrayOfBiomeGenBase) {
 		final int var5 = 20;
 		final float var6 = 0.03125F;
@@ -288,11 +286,6 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderGenerat
 		return 1.0 - (n * (n * n * 15731 + 789221) + 1376312589 & 0x7fffffff) / 1073741824.0;
 	}
 
-	@Override
-	public boolean chunkExists(int par1, int par2) {
-		return true;
-	}
-
 	public void decoratePlanet(World par1World, Random par2Random, int par3, int par4) {
 		this.getBiomeGenerator().decorate(par1World, par2Random, par3, par4);
 	}
@@ -311,21 +304,6 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderGenerat
 		this.onPopulate(par1IChunkProvider, par2, par3);
 
 		BlockFalling.fallInstantly = false;
-	}
-
-	@Override
-	public boolean saveChunks(boolean par1, IProgressUpdate par2IProgressUpdate) {
-		return true;
-	}
-
-	@Override
-	public boolean canSave() {
-		return true;
-	}
-
-	@Override
-	public String makeString() {
-		return "RandomLevelSource";
 	}
 
 	@Override
