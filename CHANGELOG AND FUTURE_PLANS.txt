@@ -5,6 +5,26 @@
 
 
 ===========================================Released Updates===========================================
+v1.3.1
+*Changes to Celestial Selection screen to match GC changes
+*Changes to Rockets to improve FPS in rocket launch sequence
+*Added support for Radiation & Pressure for Galacticraft Planets & Moons
+*Fixed Electric Rocket crash
+*Fixed networking issue
+*Updated de_DE.lang (Thanks to DerMilchkarton)
+*Moved Radiation & Pressure config options to be section
+*Tweaks for some comments
+*Fixed spelling error in comment for config option, Cleaned up Config class a bit
+*Added config options to change Radiation reduce amounts
+*Added config options to change Radiation amounts for Planets & Moons
+*Added Radiation & Pressure to Phobos/Deimos moons
+*Converted remaining addChatMessage methods over to MJRLegendsLib code
+*Clean up: Refactored a bunch of variables, parameters to correct names
+*Fixed/Improved compatibility with JourneyMap and other teleporting mods.
+*Fix compatibility with Finder Compass mod
+*Set required GC version requirement to Build 142
+*Set required MJRLegendsLib version requirement to v1.0.8
+
 v1.3.0
 *Started work cleaning up recipes class with constants variables
 *Changes to Circuit Fabricator registering method to match GC changes
