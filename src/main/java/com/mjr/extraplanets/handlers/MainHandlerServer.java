@@ -87,12 +87,9 @@ public class MainHandlerServer {
 
 	@SubscribeEvent
 	public void onPlayerCloned(PlayerEvent.Clone event) {
-		if (event.wasDeath) {
-			IStatsCapability oldStats = event.original.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
-			IStatsCapability newStats = event.entityPlayer.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
-
-			newStats.copyFrom(oldStats, false);
-		}
+		IStatsCapability oldStats = event.original.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
+		IStatsCapability newStats = event.entityPlayer.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
+		newStats.copyFrom(oldStats, !event.wasDeath|| event.original.worldObj.getGameRules().getBoolean("keepInventory"));
 	}
 
 	@SubscribeEvent
