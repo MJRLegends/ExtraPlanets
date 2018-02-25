@@ -30,10 +30,10 @@ public class WorldGenCandyCaneType1 extends WorldGenerator {
 		int x = position.getX();
 		int y = position.getY();
 		int z = position.getZ();
-		int randomNum = rand.nextInt(11) + 0;
+		int randNum = rand.nextInt(11) + 0;
 		int metaNumber = 0;
-		if (randomNum != 0)
-			metaNumber = randomNum - 1;
+		if (randNum != 0)
+			metaNumber = randNum - 1;
 
 		world.setBlockState(new BlockPos(x + 0, y + 0, z + 0), ExtraPlanets_Blocks.CANDY_BLOCKS.getStateFromMeta(metaNumber), 2);
 		world.setBlockState(new BlockPos(x + 0, y + 1, z + 0), ExtraPlanets_Blocks.CANDY_BLOCKS.getStateFromMeta(metaNumber), 2);

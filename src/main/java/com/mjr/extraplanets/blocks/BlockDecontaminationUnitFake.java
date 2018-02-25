@@ -47,21 +47,21 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 	}
 
 	@Override
-	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state) {
+	public AxisAlignedBB getCollisionBoundingBox(World world, BlockPos pos, IBlockState state) {
 		return AxisAlignedBB.fromBounds((double) pos.getX() + -0.0F, (double) pos.getY() + 0.0F, (double) pos.getZ() + -0.0F, (double) pos.getX() + 1.0F, (double) pos.getY() + 1.4F, (double) pos.getZ() + 1.0F);
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public AxisAlignedBB getSelectedBoundingBox(World worldIn, BlockPos pos) {
-		return this.getCollisionBoundingBox(worldIn, pos, worldIn.getBlockState(pos));
+	public AxisAlignedBB getSelectedBoundingBox(World world, BlockPos pos) {
+		return this.getCollisionBoundingBox(world, pos, world.getBlockState(pos));
 	}
 
 	@Override
-	public MovingObjectPosition collisionRayTrace(World worldIn, BlockPos pos, Vec3 start, Vec3 end) {
+	public MovingObjectPosition collisionRayTrace(World world, BlockPos pos, Vec3 start, Vec3 end) {
 		this.setBlockBounds(-0.0F, 0.0F, -0.0F, 1.0F, 1.4F, 1.0F);
 
-		final MovingObjectPosition r = super.collisionRayTrace(worldIn, pos, start, end);
+		final MovingObjectPosition r = super.collisionRayTrace(world, pos, start, end);
 
 		this.setBlockBounds(-0.0F, 0.0F, -0.0F, 1.0F, 1.4F, 1.0F);
 
@@ -69,9 +69,9 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 	}
 
 	@Override
-	public void addCollisionBoxesToList(World worldIn, BlockPos pos, IBlockState state, AxisAlignedBB mask, List<AxisAlignedBB> list, Entity collidingEntity) {
+	public void addCollisionBoxesToList(World world, BlockPos pos, IBlockState state, AxisAlignedBB mask, List<AxisAlignedBB> list, Entity collidingEntity) {
 		this.setBlockBounds(-0.0F, 0.0F, -0.0F, 1.0F, 1.4F, 1.0F);
-		super.addCollisionBoxesToList(worldIn, pos, state, mask, list, collidingEntity);
+		super.addCollisionBoxesToList(world, pos, state, mask, list, collidingEntity);
 	}
 
 	@Override
@@ -85,14 +85,14 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 	}
 
 	@Override
-	public float getBlockHardness(World worldIn, BlockPos pos) {
-		TileEntity tileEntity = worldIn.getTileEntity(pos);
+	public float getBlockHardness(World world, BlockPos pos) {
+		TileEntity tileEntity = world.getTileEntity(pos);
 
 		if (tileEntity instanceof TileEntityBasicDecontaminationUnitFake) {
 			BlockPos mainBlockPosition = ((TileEntityBasicDecontaminationUnitFake) tileEntity).mainBlockPosition;
 
 			if (mainBlockPosition != null) {
-				return worldIn.getBlockState(mainBlockPosition).getBlock().getBlockHardness(worldIn, mainBlockPosition);
+				return world.getBlockState(mainBlockPosition).getBlock().getBlockHardness(world, mainBlockPosition);
 			}
 		}
 
@@ -100,20 +100,20 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 	}
 
 	@Override
-	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-		TileEntity tileEntity = worldIn.getTileEntity(pos);
+	public void breakBlock(World world, BlockPos pos, IBlockState state) {
+		TileEntity tileEntity = world.getTileEntity(pos);
 
 		if (tileEntity instanceof TileEntityBasicDecontaminationUnitFake) {
 			((TileEntityBasicDecontaminationUnitFake) tileEntity).onBlockRemoval();
 		}
 
-		super.breakBlock(worldIn, pos, state);
+		super.breakBlock(world, pos, state);
 	}
 
 	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
-		TileEntityBasicDecontaminationUnitFake tileEntity = (TileEntityBasicDecontaminationUnitFake) worldIn.getTileEntity(pos);
-		return tileEntity.onActivated(playerIn);
+	public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ) {
+		TileEntityBasicDecontaminationUnitFake tileEntity = (TileEntityBasicDecontaminationUnitFake) world.getTileEntity(pos);
+		return tileEntity.onActivated(player);
 	}
 
 	@Override
@@ -137,7 +137,7 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 	}
 
 	@Override
-	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+	public void randomDisplayTick(World world, BlockPos pos, IBlockState state, Random rand) {
 	}
 
 	@Override

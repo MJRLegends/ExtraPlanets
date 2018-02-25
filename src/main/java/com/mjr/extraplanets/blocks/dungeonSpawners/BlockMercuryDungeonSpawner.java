@@ -14,7 +14,7 @@ public class BlockMercuryDungeonSpawner extends BlockBossSpawner {
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
+	public TileEntity createNewTileEntity(World world, int meta) {
 		if (Config.USE_DEFAULT_BOSSES)
 			return new TileEntityDungeonSpawnerMercuryDefault();
 		else

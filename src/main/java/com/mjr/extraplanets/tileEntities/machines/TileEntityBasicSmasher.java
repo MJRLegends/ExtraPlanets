@@ -57,18 +57,18 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	}
 
 	public boolean canOutput() {
-		ItemStack itemstack = this.producingStack;
-		if (itemstack == null) {
+		ItemStack itemStack = this.producingStack;
+		if (itemStack == null) {
 			return false;
 		}
 		if (this.containingItems[2] == null) {
 			return true;
 		}
-		if (!this.containingItems[2].isItemEqual(itemstack)) {
+		if (!this.containingItems[2].isItemEqual(itemStack)) {
 			return false;
 		}
-		int result = this.containingItems[2].stackSize + itemstack.stackSize;
-		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
+		int result = this.containingItems[2].stackSize + itemStack.stackSize;
+		return result <= this.getInventoryStackLimit() && result <= itemStack.getMaxStackSize();
 	}
 
 	public boolean hasInputs() {
@@ -144,13 +144,13 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	}
 
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canInsertItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (itemStack != null && this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
+				return ItemElectricBase.isElectricItemCharged(itemStack);
 			case 1:
-				return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH);
+				return itemStack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH);
 			default:
 				return false;
 			}
@@ -159,13 +159,13 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	}
 
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canExtractItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (itemStack != null && this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
+				return ItemElectricBase.isElectricItemEmpty(itemStack) || !this.shouldPullEnergy();
 			case 2:
-				return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
+				return itemStack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
 			default:
 				return false;
 			}
@@ -174,14 +174,14 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
 		switch (slotID) {
 		case 0:
-			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
+			return itemStack != null && ItemElectricBase.isElectricItem(itemStack.getItem());
 		case 1:
-			return itemstack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH);
+			return itemStack.getItem() == Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH);
 		case 2:
-			return itemstack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
+			return itemStack.getItem() == ExtraPlanets_Items.POTASH_SHARDS;
 		}
 
 		return false;

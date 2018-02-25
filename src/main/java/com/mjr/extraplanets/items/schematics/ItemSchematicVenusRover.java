@@ -36,7 +36,7 @@ public class ItemSchematicVenusRover extends ItemHangingEntity implements ISchem
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
@@ -59,7 +59,7 @@ public class ItemSchematicVenusRover extends ItemHangingEntity implements ISchem
 	}
 
 	@Override
-	public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
+	public boolean onItemUse(ItemStack itemStack, EntityPlayer player, World world, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
 		if (side == EnumFacing.DOWN) {
 			return false;
 		} else if (side == EnumFacing.UP) {
@@ -67,18 +67,18 @@ public class ItemSchematicVenusRover extends ItemHangingEntity implements ISchem
 		} else {
 			BlockPos blockpos = pos.offset(side);
 
-			if (!playerIn.canPlayerEdit(blockpos, side, stack)) {
+			if (!player.canPlayerEdit(blockpos, side, itemStack)) {
 				return false;
 			} else {
-				EntityHangingSchematic entityhanging = this.createEntity(worldIn, blockpos, side, this.getIndex(stack.getItemDamage()));
+				EntityHangingSchematic entityhanging = this.createEntity(world, blockpos, side, this.getIndex(itemStack.getItemDamage()));
 
 				if (entityhanging != null && entityhanging.onValidSurface()) {
-					if (!worldIn.isRemote) {
-						worldIn.spawnEntityInWorld(entityhanging);
-						entityhanging.sendToClient(worldIn, blockpos);
+					if (!world.isRemote) {
+						world.spawnEntityInWorld(entityhanging);
+						entityhanging.sendToClient(world, blockpos);
 					}
 
-					--stack.stackSize;
+					--itemStack.stackSize;
 				}
 
 				return true;
@@ -86,8 +86,8 @@ public class ItemSchematicVenusRover extends ItemHangingEntity implements ISchem
 		}
 	}
 
-	private EntityHangingSchematic createEntity(World worldIn, BlockPos pos, EnumFacing clickedSide, int index) {
-		return new EntityHangingSchematic(worldIn, pos, clickedSide, index);
+	private EntityHangingSchematic createEntity(World world, BlockPos pos, EnumFacing clickedSide, int index) {
+		return new EntityHangingSchematic(world, pos, clickedSide, index);
 	}
 
 	/**

@@ -93,8 +93,8 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	}
 
 	@Override
-	public float getBlockHardness(World worldIn, BlockPos pos) {
-		IBlockState state = worldIn.getBlockState(pos);
+	public float getBlockHardness(World world, BlockPos pos) {
+		IBlockState state = world.getBlockState(pos);
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DIRT)
 			return 0.5F;
 		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL
@@ -117,15 +117,15 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	}
 
 	@Override
-	public int quantityDropped(IBlockState state, int fortune, Random random) {
+	public int quantityDropped(IBlockState state, int fortune, Random rand) {
 		return 1;
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
+	public void getSubBlocks(Item item, CreativeTabs tabs, List<ItemStack> list) {
 		for (EnumBlockBasic blockBasic : EnumBlockBasic.values()) {
-			par3List.add(new ItemStack(par1, 1, blockBasic.getMeta()));
+			list.add(new ItemStack(item, 1, blockBasic.getMeta()));
 		}
 	}
 

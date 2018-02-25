@@ -30,9 +30,9 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List par3List) {
-		par3List.add(new ItemStack(par1, 1, 0));
-		par3List.add(new ItemStack(par1, 1, this.getMaxDamage()));
+	public void getSubItems(Item item, CreativeTabs tabs, List list) {
+		list.add(new ItemStack(item, 1, 0));
+		list.add(new ItemStack(item, 1, this.getMaxDamage()));
 	}
 
 	@Override
@@ -42,13 +42,13 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
 	@Override
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List<String> tooltip, boolean b) {
-		tooltip.add(TranslateUtilities.translate("gui.tank.oxygen_remaining") + ": " + (par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage()));
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> tooltip, boolean b) {
+		tooltip.add(TranslateUtilities.translate("gui.tank.oxygen_remaining") + ": " + (itemStack.getMaxDamage() - itemStack.getItemDamage()));
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack itemStack, World worldIn, EntityPlayer player) {
+	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
 		if (player instanceof EntityPlayerMP) {
 			GCPlayerStats stats = GCPlayerStats.get(player);
 			ItemStack gear = stats.getExtendedInventory().getStackInSlot(2);

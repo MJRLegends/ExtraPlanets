@@ -190,9 +190,9 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 
 				if (ship.launchPhase != EnumLaunchPhase.LANDING.ordinal()) {
 					if (ship.hasValidPower()) {
-						ItemStack stack2 = GCPlayerStats.get(playerBase).getExtendedInventory().getStackInSlot(4);
+						ItemStack itemStack2 = GCPlayerStats.get(playerBase).getExtendedInventory().getStackInSlot(4);
 
-						if (stack2 != null && stack2.getItem() instanceof ItemParaChute || stats.getLaunchAttempts() > 0) {
+						if (itemStack2 != null && itemStack2.getItem() instanceof ItemParaChute || stats.getLaunchAttempts() > 0) {
 							ship.igniteCheckingCooldown();
 							GCPlayerStats.get(playerBase).setLaunchAttempts(0);
 						} else if (stats.getChatCooldown() == 0 && GCPlayerStats.get(playerBase).getLaunchAttempts() == 0) {

@@ -158,13 +158,13 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
 	}
 
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canInsertItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItemDamage() < itemstack.getMaxDamage();
+				return itemStack.getItemDamage() < itemStack.getMaxDamage();
 			case 1:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
+				return ItemElectricBase.isElectricItemCharged(itemStack);
 			default:
 				return false;
 			}
@@ -173,13 +173,13 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
 	}
 
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canExtractItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItemDamage() == itemstack.getMaxDamage();
+				return itemStack.getItemDamage() == itemStack.getMaxDamage();
 			case 1:
-				return ItemElectricBase.isElectricItemEmpty(itemstack);
+				return ItemElectricBase.isElectricItemEmpty(itemStack);
 			default:
 				return false;
 			}
@@ -188,12 +188,12 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
 		switch (slotID) {
 		case 0:
-			return itemstack.getItem() instanceof ItemOxygenTank;
+			return itemStack.getItem() instanceof ItemOxygenTank;
 		case 1:
-			return ItemElectricBase.isElectricItem(itemstack.getItem());
+			return ItemElectricBase.isElectricItem(itemStack.getItem());
 		}
 
 		return false;

@@ -37,13 +37,13 @@ public class ItemKeyT10 extends Item implements IKeyItem, ISortableItem {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
-		par3List.add(new ItemStack(par1, 1, 0));
+	public void getSubItems(Item item, CreativeTabs tabs, List<ItemStack> list) {
+		list.add(new ItemStack(item, 1, 0));
 	}
 
 	@Override

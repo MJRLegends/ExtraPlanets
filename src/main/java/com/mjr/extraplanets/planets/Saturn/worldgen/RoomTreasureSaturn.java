@@ -25,7 +25,7 @@ public class RoomTreasureSaturn extends RoomTreasure {
 	}
 
 	@Override
-	public boolean addComponentParts(World worldIn, Random random, StructureBoundingBox boundingBox) {
+	public boolean addComponentParts(World world, Random rand, StructureBoundingBox boundingBox) {
 		for (int i = 0; i <= this.sizeX; i++) {
 			for (int j = 0; j <= this.sizeY; j++) {
 				for (int k = 0; k <= this.sizeZ; k++) {
@@ -53,16 +53,16 @@ public class RoomTreasureSaturn extends RoomTreasure {
 							}
 						}
 						if (placeBlock) {
-							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, boundingBox);
+							this.setBlockState(world, this.configuration.getBrickBlock(), i, j, k, boundingBox);
 						} else {
-							this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
+							this.setBlockState(world, Blocks.air.getDefaultState(), i, j, k, boundingBox);
 						}
 					} else if ((i == 1 && k == 1) || (i == 1 && k == this.sizeZ - 1) || (i == this.sizeX - 1 && k == 1) || (i == this.sizeX - 1 && k == this.sizeZ - 1)) {
-						this.setBlockState(worldIn, Blocks.glowstone.getDefaultState(), i, j, k, boundingBox);
+						this.setBlockState(world, Blocks.glowstone.getDefaultState(), i, j, k, boundingBox);
 					} else if (i == this.sizeX / 2 && j == 1 && k == this.sizeZ / 2) {
-						this.setBlockState(worldIn, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_6.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
+						this.setBlockState(world, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_6.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
 					} else {
-						this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
+						this.setBlockState(world, Blocks.air.getDefaultState(), i, j, k, boundingBox);
 					}
 				}
 			}

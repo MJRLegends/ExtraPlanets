@@ -48,8 +48,8 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		final TileEntity te = worldIn.getTileEntity(pos);
+	public void randomDisplayTick(World world, BlockPos pos, IBlockState state, Random rand) {
+		final TileEntity te = world.getTileEntity(pos);
 
 		if (te instanceof TileEntityUltimateRefinery) {
 			final TileEntityUltimateRefinery refinery = (TileEntityUltimateRefinery) te;
@@ -63,8 +63,8 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 
 				for (int i = -1; i <= 1; i++) {
 					for (int j = -1; j <= 1; j++) {
-						worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, var7 + var11 + i * 0.2, var8, var9 + var10 + j * 0.2, 0.0D, 0.01D, 0.0D);
-						worldIn.spawnParticle(EnumParticleTypes.FLAME, var7 + var11 + i * 0.1, var8 - 0.2, var9 + var10 + j * 0.1, 0.0D, 0.0001D, 0.0D);
+						world.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, var7 + var11 + i * 0.2, var8, var9 + var10 + j * 0.2, 0.0D, 0.01D, 0.0D);
+						world.spawnParticle(EnumParticleTypes.FLAME, var7 + var11 + i * 0.1, var8 - 0.2, var9 + var10 + j * 0.1, 0.0D, 0.0001D, 0.0D);
 					}
 				}
 			}
@@ -98,8 +98,8 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 	}
 
 	@Override
-	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-		final TileEntityUltimateRefinery var7 = (TileEntityUltimateRefinery) worldIn.getTileEntity(pos);
+	public void breakBlock(World world, BlockPos pos, IBlockState state) {
+		final TileEntityUltimateRefinery var7 = (TileEntityUltimateRefinery) world.getTileEntity(pos);
 
 		if (var7 != null) {
 			for (int var8 = 0; var8 < var7.getSizeInventory(); ++var8) {
@@ -118,7 +118,7 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 						}
 
 						var9.stackSize -= var13;
-						final EntityItem var14 = new EntityItem(worldIn, pos.getX() + var10, pos.getY() + var11, pos.getZ() + var12, new ItemStack(var9.getItem(), var13, var9.getItemDamage()));
+						final EntityItem var14 = new EntityItem(world, pos.getX() + var10, pos.getY() + var11, pos.getZ() + var12, new ItemStack(var9.getItem(), var13, var9.getItemDamage()));
 
 						if (var9.hasTagCompound()) {
 							var14.getEntityItem().setTagCompound((NBTTagCompound) var9.getTagCompound().copy());
@@ -128,19 +128,19 @@ public class UltimateRefinery extends BlockAdvancedTile implements IShiftDescrip
 						var14.motionX = (float) this.refineryRand.nextGaussian() * var15;
 						var14.motionY = (float) this.refineryRand.nextGaussian() * var15 + 0.2F;
 						var14.motionZ = (float) this.refineryRand.nextGaussian() * var15;
-						worldIn.spawnEntityInWorld(var14);
+						world.spawnEntityInWorld(var14);
 					}
 				}
 			}
 		}
 
-		super.breakBlock(worldIn, pos, state);
+		super.breakBlock(world, pos, state);
 	}
 
 	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack itemStack) {
 		final int angle = MathHelper.floor_double(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
-		worldIn.setBlockState(pos, getStateFromMeta(EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex()), 3);
+		world.setBlockState(pos, getStateFromMeta(EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex()), 3);
 	}
 
 	@Override

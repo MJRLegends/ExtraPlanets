@@ -25,11 +25,11 @@ public class MapGenCaveKepler22b extends MapGenBaseMeta {
 		final double d5 = par4 * 16 + 8;
 		float f3 = 0.0F;
 		float f4 = 0.0F;
-		final Random random = new Random(par1);
+		final Random rand = new Random(par1);
 
 		if (par16 <= 0) {
 			final int j1 = this.range * 16 - 16;
-			par16 = j1 - random.nextInt(j1 / 4);
+			par16 = j1 - rand.nextInt(j1 / 4);
 		}
 
 		boolean flag = false;
@@ -39,9 +39,9 @@ public class MapGenCaveKepler22b extends MapGenBaseMeta {
 			flag = true;
 		}
 
-		final int k1 = random.nextInt(par16 / 2) + par16 / 4;
+		final int k1 = rand.nextInt(par16 / 2) + par16 / 4;
 
-		for (final boolean flag1 = random.nextInt(6) == 0; par15 < par16; ++par15) {
+		for (final boolean flag1 = rand.nextInt(6) == 0; par15 < par16; ++par15) {
 			final double d6 = 1.5D + MathHelper.sin(par15 * Constants.floatPI / par16) * par12 * 1.0F;
 			final double d7 = d6 * par17;
 			final float f5 = MathHelper.cos(par14);
@@ -60,16 +60,16 @@ public class MapGenCaveKepler22b extends MapGenBaseMeta {
 			par13 += f3 * 0.1F;
 			f4 *= 0.9F;
 			f3 *= 0.75F;
-			f4 += (random.nextFloat() - random.nextFloat()) * random.nextFloat() * 2.0F;
-			f3 += (random.nextFloat() - random.nextFloat()) * random.nextFloat() * 4.0F;
+			f4 += (rand.nextFloat() - rand.nextFloat()) * rand.nextFloat() * 2.0F;
+			f3 += (rand.nextFloat() - rand.nextFloat()) * rand.nextFloat() * 4.0F;
 
 			if (!flag && par15 == k1 && par12 > 1.0F && par16 > 0) {
-				this.generateCaveNode(random.nextLong(), par3, par4, primer, par6, par8, par10, random.nextFloat() * 0.5F + 0.5F, par13 - Constants.floatPI / 2F, par14 / 3.0F, par15, par16, 1.0D);
-				this.generateCaveNode(random.nextLong(), par3, par4, primer, par6, par8, par10, random.nextFloat() * 0.5F + 0.5F, par13 + Constants.floatPI / 2F, par14 / 3.0F, par15, par16, 1.0D);
+				this.generateCaveNode(rand.nextLong(), par3, par4, primer, par6, par8, par10, rand.nextFloat() * 0.5F + 0.5F, par13 - Constants.floatPI / 2F, par14 / 3.0F, par15, par16, 1.0D);
+				this.generateCaveNode(rand.nextLong(), par3, par4, primer, par6, par8, par10, rand.nextFloat() * 0.5F + 0.5F, par13 + Constants.floatPI / 2F, par14 / 3.0F, par15, par16, 1.0D);
 				return;
 			}
 
-			if (flag || random.nextInt(4) != 0) {
+			if (flag || rand.nextInt(4) != 0) {
 				final double d8 = par6 - d4;
 				final double d9 = par10 - d5;
 				final double d10 = par16 - par15;
@@ -145,7 +145,7 @@ public class MapGenCaveKepler22b extends MapGenBaseMeta {
 											int metadata = state.getBlock().getMetaFromState(state);
 											if (block == ExtraPlanets_Blocks.KEPLER22B_GRASS_BLUE || block == ExtraPlanets_Blocks.KEPLER22B_GRASS_PURPLE || block == ExtraPlanets_Blocks.KEPLER22B_GRASS_RED
 													|| block == ExtraPlanets_Blocks.KEPLER22B_GRASS_YELLOW) {
-												if (random.nextInt(MapGenCaveKepler22b.BREAK_THROUGH_CHANCE) == 0) {
+												if (rand.nextInt(MapGenCaveKepler22b.BREAK_THROUGH_CHANCE) == 0) {
 													primer.setBlockState(localX, localY, localZ, Blocks.air.getDefaultState());
 												}
 											}

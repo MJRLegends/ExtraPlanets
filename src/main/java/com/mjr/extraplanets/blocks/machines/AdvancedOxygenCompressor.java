@@ -106,23 +106,23 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 	}
 
 	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack itemStack) {
 		final int angle = MathHelper.floor_double(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 		int change = EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex();
 
-		if (stack.getItemDamage() >= AdvancedOxygenCompressor.OXYGEN_DECOMPRESSOR_METADATA) {
+		if (itemStack.getItemDamage() >= AdvancedOxygenCompressor.OXYGEN_DECOMPRESSOR_METADATA) {
 			change += AdvancedOxygenCompressor.OXYGEN_DECOMPRESSOR_METADATA;
-		} else if (stack.getItemDamage() >= AdvancedOxygenCompressor.OXYGEN_COMPRESSOR_METADATA) {
+		} else if (itemStack.getItemDamage() >= AdvancedOxygenCompressor.OXYGEN_COMPRESSOR_METADATA) {
 			change += AdvancedOxygenCompressor.OXYGEN_COMPRESSOR_METADATA;
 		}
 
-		worldIn.setBlockState(pos, getStateFromMeta(change), 3);
+		world.setBlockState(pos, getStateFromMeta(change), 3);
 	}
 
 	@Override
-	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
-		par3List.add(new ItemStack(this, 1, AdvancedOxygenCompressor.OXYGEN_COMPRESSOR_METADATA));
-		par3List.add(new ItemStack(this, 1, AdvancedOxygenCompressor.OXYGEN_DECOMPRESSOR_METADATA));
+	public void getSubBlocks(Item item, CreativeTabs tabs, List<ItemStack> list) {
+		list.add(new ItemStack(this, 1, AdvancedOxygenCompressor.OXYGEN_COMPRESSOR_METADATA));
+		list.add(new ItemStack(this, 1, AdvancedOxygenCompressor.OXYGEN_DECOMPRESSOR_METADATA));
 	}
 
 	@Override

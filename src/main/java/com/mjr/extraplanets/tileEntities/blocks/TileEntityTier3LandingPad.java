@@ -194,9 +194,9 @@ public class TileEntityTier3LandingPad extends TileEntityMulti implements IMulti
 	}
 
 	@Override
-	public EnumCargoLoadingState addCargo(ItemStack stack, boolean doAdd) {
+	public EnumCargoLoadingState addCargo(ItemStack itemStack, boolean doAdd) {
 		if (this.dockedEntity != null) {
-			return this.dockedEntity.addCargo(stack, doAdd);
+			return this.dockedEntity.addCargo(itemStack, doAdd);
 		}
 
 		return EnumCargoLoadingState.NOTARGET;

@@ -122,8 +122,8 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
-		return (slotID == 1 && itemstack != null && itemstack.getItem() == GCItems.fuelCanister) || (slotID == 0 ? ItemElectricBase.isElectricItem(itemstack.getItem()) : false);
+	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
+		return (slotID == 1 && itemStack != null && itemStack.getItem() == GCItems.fuelCanister) || (slotID == 0 ? ItemElectricBase.isElectricItem(itemStack.getItem()) : false);
 	}
 
 	@Override

@@ -18,8 +18,8 @@ public class ItemBlockSolar extends ItemBlockDesc {
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack par1ItemStack) {
-		int index = Math.min(Math.max(par1ItemStack.getItemDamage() / 4, 0), BlockSolar.EnumSolarType.values().length);
+	public String getUnlocalizedName(ItemStack itemStack) {
+		int index = Math.min(Math.max(itemStack.getItemDamage() / 4, 0), BlockSolar.EnumSolarType.values().length);
 
 		String name = BlockSolar.EnumSolarType.values()[index].getName();
 
@@ -28,7 +28,7 @@ public class ItemBlockSolar extends ItemBlockDesc {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 

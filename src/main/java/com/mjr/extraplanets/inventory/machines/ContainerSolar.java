@@ -46,40 +46,40 @@ public class ContainerSolar extends Container {
 		final int b = this.inventorySlots.size();
 
 		if (slot != null && slot.getHasStack()) {
-			final ItemStack stack = slot.getStack();
-			var2 = stack.copy();
+			final ItemStack itemStack = slot.getStack();
+			var2 = itemStack.copy();
 
 			if (par1 == 0) {
-				if (!this.mergeItemStack(stack, b - 36, b, true)) {
+				if (!this.mergeItemStack(itemStack, b - 36, b, true)) {
 					return null;
 				}
 			} else {
-				if (EnergyUtil.isElectricItem(stack.getItem())) {
-					if (!this.mergeItemStack(stack, 0, 1, false)) {
+				if (EnergyUtil.isElectricItem(itemStack.getItem())) {
+					if (!this.mergeItemStack(itemStack, 0, 1, false)) {
 						return null;
 					}
 				} else {
 					if (par1 < b - 9) {
-						if (!this.mergeItemStack(stack, b - 9, b, false)) {
+						if (!this.mergeItemStack(itemStack, b - 9, b, false)) {
 							return null;
 						}
-					} else if (!this.mergeItemStack(stack, b - 36, b - 9, false)) {
+					} else if (!this.mergeItemStack(itemStack, b - 36, b - 9, false)) {
 						return null;
 					}
 				}
 			}
 
-			if (stack.stackSize == 0) {
+			if (itemStack.stackSize == 0) {
 				slot.putStack((ItemStack) null);
 			} else {
 				slot.onSlotChanged();
 			}
 
-			if (stack.stackSize == var2.stackSize) {
+			if (itemStack.stackSize == var2.stackSize) {
 				return null;
 			}
 
-			slot.onPickupFromSlot(par1EntityPlayer, stack);
+			slot.onPickupFromSlot(par1EntityPlayer, itemStack);
 		}
 
 		return var2;

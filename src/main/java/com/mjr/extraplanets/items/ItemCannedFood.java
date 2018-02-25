@@ -32,14 +32,14 @@ public class ItemCannedFood extends ItemBasicMeta {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4) {
-		if (par1ItemStack.getItemDamage() < 19) {
-			par3List.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate(this.getUnlocalizedName() + "." + getItemList()[par1ItemStack.getItemDamage()] + ".name"));
+	public void addInformation(ItemStack itemStack, EntityPlayer entityPlayer, List<String> list, boolean par4) {
+		if (itemStack.getItemDamage() < 19) {
+			list.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate(this.getUnlocalizedName() + "." + getItemList()[itemStack.getItemDamage()] + ".name"));
 		}
 	}
 
-	public int getHealAmount(ItemStack par1ItemStack) {
-		switch (par1ItemStack.getItemDamage()) {
+	public int getHealAmount(ItemStack itemStack) {
+		switch (itemStack.getItemDamage()) {
 		case 0:
 			return 16;
 		case 1:
@@ -55,8 +55,8 @@ public class ItemCannedFood extends ItemBasicMeta {
 		}
 	}
 
-	public float getSaturationModifier(ItemStack par1ItemStack) {
-		switch (par1ItemStack.getItemDamage()) {
+	public float getSaturationModifier(ItemStack itemStack) {
+		switch (itemStack.getItemDamage()) {
 		case 0:
 			return 0.8F;
 		case 1:
@@ -73,47 +73,47 @@ public class ItemCannedFood extends ItemBasicMeta {
 	}
 
 	@Override
-	public ItemStack onItemUseFinish(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
-		if (par3EntityPlayer instanceof EntityPlayer) {
-			if (par1ItemStack.getItemDamage() < 5) {
-				--par1ItemStack.stackSize;
-				EntityPlayer entityplayer = par3EntityPlayer;
-				entityplayer.getFoodStats().addStats(this.getHealAmount(par1ItemStack), this.getSaturationModifier(par1ItemStack));
-				par2World.playSoundAtEntity(par3EntityPlayer, "random.burp", 0.5F, par2World.rand.nextFloat() * 0.1F + 0.9F);
-				if (!par2World.isRemote) {
-					par3EntityPlayer.entityDropItem(new ItemStack(GCItems.canister, 1, 0), 0.0F);
+	public ItemStack onItemUseFinish(ItemStack itemStack, World world, EntityPlayer entityPlayer) {
+		if (entityPlayer instanceof EntityPlayer) {
+			if (itemStack.getItemDamage() < 5) {
+				--itemStack.stackSize;
+				EntityPlayer entityplayer = entityPlayer;
+				entityplayer.getFoodStats().addStats(this.getHealAmount(itemStack), this.getSaturationModifier(itemStack));
+				world.playSoundAtEntity(entityPlayer, "rand.burp", 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
+				if (!world.isRemote) {
+					entityPlayer.entityDropItem(new ItemStack(GCItems.canister, 1, 0), 0.0F);
 				}
-				return par1ItemStack;
+				return itemStack;
 			}
 		}
-		return super.onItemUseFinish(par1ItemStack, par2World, par3EntityPlayer);
+		return super.onItemUseFinish(itemStack, world, entityPlayer);
 	}
 
 	@Override
-	public int getMaxItemUseDuration(ItemStack par1ItemStack) {
-		if (par1ItemStack.getItemDamage() < 5) {
+	public int getMaxItemUseDuration(ItemStack itemStack) {
+		if (itemStack.getItemDamage() < 5) {
 			return 32;
 		}
 
-		return super.getMaxItemUseDuration(par1ItemStack);
+		return super.getMaxItemUseDuration(itemStack);
 	}
 
 	@Override
-	public EnumAction getItemUseAction(ItemStack par1ItemStack) {
-		if (par1ItemStack.getItemDamage() < 5) {
+	public EnumAction getItemUseAction(ItemStack itemStack) {
+		if (itemStack.getItemDamage() < 5) {
 			return EnumAction.EAT;
 		}
 
-		return super.getItemUseAction(par1ItemStack);
+		return super.getItemUseAction(itemStack);
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
-		if (par1ItemStack.getItemDamage() < 5 && par3EntityPlayer.canEat(false)) {
-			par3EntityPlayer.setItemInUse(par1ItemStack, this.getMaxItemUseDuration(par1ItemStack));
+	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer entityPlayer) {
+		if (itemStack.getItemDamage() < 5 && entityPlayer.canEat(false)) {
+			entityPlayer.setItemInUse(itemStack, this.getMaxItemUseDuration(itemStack));
 		}
 
-		return par1ItemStack;
+		return itemStack;
 	}
 
 	public static String[] getItemList() {

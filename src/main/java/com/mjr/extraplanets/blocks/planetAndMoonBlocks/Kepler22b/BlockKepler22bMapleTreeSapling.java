@@ -107,26 +107,26 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 	}
 
 	@Override
-	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		if (!worldIn.isRemote) {
-			super.updateTick(worldIn, pos, state, rand);
+	public void updateTick(World world, BlockPos pos, IBlockState state, Random rand) {
+		if (!world.isRemote) {
+			super.updateTick(world, pos, state, rand);
 
-			if (worldIn.getLightFromNeighbors(pos.up()) >= 9 && rand.nextInt(7) == 0) {
-				this.grow(worldIn, pos, state, rand);
+			if (world.getLightFromNeighbors(pos.up()) >= 9 && rand.nextInt(7) == 0) {
+				this.grow(world, pos, state, rand);
 			}
 		}
 	}
 
-	public void grow(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+	public void grow(World world, BlockPos pos, IBlockState state, Random rand) {
 		if (state.getValue(STAGE).intValue() == 0) {
-			worldIn.setBlockState(pos, state.cycleProperty(STAGE), 4);
+			world.setBlockState(pos, state.cycleProperty(STAGE), 4);
 		} else {
-			this.generateTree(worldIn, pos, state, rand);
+			this.generateTree(world, pos, state, rand);
 		}
 	}
 
-	public void generateTree(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		if (!net.minecraftforge.event.terraingen.TerrainGen.saplingGrowTree(worldIn, rand, pos))
+	public void generateTree(World world, BlockPos pos, IBlockState state, Random rand) {
+		if (!net.minecraftforge.event.terraingen.TerrainGen.saplingGrowTree(world, rand, pos))
 			return;
 		WorldGenerator worldgenerator = rand.nextInt(10) == 0 ? new WorldGenBigTree(true) : new WorldGenTrees(true);
 
@@ -150,18 +150,18 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 			worldgenerator = new WorldGenKepler22bTree(true, 8, ExtraPlanets_Blocks.KEPLER22B_MAPLE_LOG_2.getStateFromMeta(1), ExtraPlanets_Blocks.KEPLER22B_MAPLE_LEAF2.getStateFromMeta(0), false);
 			break;
 		}
-		worldIn.setBlockToAir(pos);
+		world.setBlockToAir(pos);
 
-		if (!worldgenerator.generate(worldIn, rand, pos)) {
-			worldIn.setBlockState(pos, state, 2);
+		if (!worldgenerator.generate(world, rand, pos)) {
+			world.setBlockState(pos, state, 2);
 		}
 	}
 
 	/**
 	 * Check whether the given BlockPos has a Sapling of the given type
 	 */
-	public boolean isTypeAt(World worldIn, BlockPos pos, BlockKepler22bMapleTreeSapling.EnumType type) {
-		IBlockState iblockstate = worldIn.getBlockState(pos);
+	public boolean isTypeAt(World world, BlockPos pos, BlockKepler22bMapleTreeSapling.EnumType type) {
+		IBlockState iblockstate = world.getBlockState(pos);
 		return iblockstate.getBlock() == this && iblockstate.getValue(VARIANT) == type;
 	}
 
@@ -188,18 +188,18 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 	 * Whether this IGrowable can grow
 	 */
 	@Override
-	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
+	public boolean canGrow(World world, BlockPos pos, IBlockState state, boolean isClient) {
 		return true;
 	}
 
 	@Override
-	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-		return worldIn.rand.nextFloat() < 0.45D;
+	public boolean canUseBonemeal(World world, Random rand, BlockPos pos, IBlockState state) {
+		return world.rand.nextFloat() < 0.45D;
 	}
 
 	@Override
-	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-		this.grow(worldIn, pos, state, rand);
+	public void grow(World world, Random rand, BlockPos pos, IBlockState state) {
+		this.grow(world, pos, state, rand);
 	}
 
 	/**

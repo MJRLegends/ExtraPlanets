@@ -138,7 +138,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 				stats.setLaunchpadStack(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 25, 3));
 			}
 
-			this.playSound("random.pop", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+			this.playSound("rand.pop", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
 		}
 	}
 

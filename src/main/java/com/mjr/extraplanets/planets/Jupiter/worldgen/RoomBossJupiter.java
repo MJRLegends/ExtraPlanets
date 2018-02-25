@@ -29,7 +29,7 @@ public class RoomBossJupiter extends RoomBoss {
 	}
 
 	@Override
-	public boolean addComponentParts(World worldIn, Random random, StructureBoundingBox chunkBox) {
+	public boolean addComponentParts(World world, Random rand, StructureBoundingBox chunkBox) {
 		for (int i = 0; i <= this.sizeX; i++) {
 			for (int j = 0; j <= this.sizeY; j++) {
 				for (int k = 0; k <= this.sizeZ; k++) {
@@ -57,22 +57,22 @@ public class RoomBossJupiter extends RoomBoss {
 							}
 						}
 						if (placeBlock) {
-							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, chunkBox);
+							this.setBlockState(world, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						} else {
-							this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, chunkBox);
+							this.setBlockState(world, Blocks.air.getDefaultState(), i, j, k, chunkBox);
 						}
 					} else if (j == this.sizeY) {
-						if ((i <= 2 || k <= 2 || i >= this.sizeX - 2 || k >= this.sizeZ - 2) && random.nextInt(4) == 0) {
-							this.setBlockState(worldIn, Blocks.glowstone.getDefaultState(), i, j, k, chunkBox);
+						if ((i <= 2 || k <= 2 || i >= this.sizeX - 2 || k >= this.sizeZ - 2) && rand.nextInt(4) == 0) {
+							this.setBlockState(world, Blocks.glowstone.getDefaultState(), i, j, k, chunkBox);
 						} else {
-							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, chunkBox);
+							this.setBlockState(world, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						}
 					}
-					// else if (j == 1 && (i <= 2 || k <= 2 || i >= this.sizeX - 2 || k >= this.sizeZ - 2) && random.nextInt(6) == 0) {
-					// this.setBlockState(worldIn, MarsBlocks.creeperEgg.getDefaultState(), i, j, k, chunkBox);
+					// else if (j == 1 && (i <= 2 || k <= 2 || i >= this.sizeX - 2 || k >= this.sizeZ - 2) && rand.nextInt(6) == 0) {
+					// this.setBlockState(world, MarsBlocks.creeperEgg.getDefaultState(), i, j, k, chunkBox);
 					// }
 					else {
-						this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, chunkBox);
+						this.setBlockState(world, Blocks.air.getDefaultState(), i, j, k, chunkBox);
 					}
 				}
 			}
@@ -84,14 +84,14 @@ public class RoomBossJupiter extends RoomBoss {
 		BlockPos blockpos = new BlockPos(this.getXWithOffset(spawnerX, spawnerZ), this.getYWithOffset(spawnerY), this.getZWithOffset(spawnerX, spawnerZ));
 		// Is this position inside the chunk currently being generated?
 		if (chunkBox.isVecInside(blockpos)) {
-			worldIn.setBlockState(blockpos, ExtraPlanets_Blocks.JUIPTER_SPAWNER.getDefaultState(), 2);
+			world.setBlockState(blockpos, ExtraPlanets_Blocks.JUIPTER_SPAWNER.getDefaultState(), 2);
 			if (Config.USE_DEFAULT_BOSSES) {
-				TileEntityDungeonSpawnerJupiterDefault spawner = (TileEntityDungeonSpawnerJupiterDefault) worldIn.getTileEntity(blockpos);
+				TileEntityDungeonSpawnerJupiterDefault spawner = (TileEntityDungeonSpawnerJupiterDefault) world.getTileEntity(blockpos);
 				if (spawner != null) {
 					spawner.setRoom(new Vector3(this.boundingBox.minX + 1, this.boundingBox.minY + 1, this.boundingBox.minZ + 1), new Vector3(this.sizeX - 1, this.sizeY - 1, this.sizeZ - 1));
 				}
 			} else {
-				TileEntityDungeonSpawnerJupiter spawner = (TileEntityDungeonSpawnerJupiter) worldIn.getTileEntity(blockpos);
+				TileEntityDungeonSpawnerJupiter spawner = (TileEntityDungeonSpawnerJupiter) world.getTileEntity(blockpos);
 				if (spawner != null) {
 					spawner.setRoom(new Vector3(this.boundingBox.minX + 1, this.boundingBox.minY + 1, this.boundingBox.minZ + 1), new Vector3(this.sizeX - 1, this.sizeY - 1, this.sizeZ - 1));
 				}

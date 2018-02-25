@@ -7,24 +7,24 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IChatComponent;
 
 public class InventorySchematicTier7Rocket implements IInventory {
-	private final ItemStack[] stackList;
+	private final ItemStack[] itemStackList;
 	private final int inventoryWidth;
 	private final Container eventHandler;
 
 	public InventorySchematicTier7Rocket(Container par1Container) {
-		this.stackList = new ItemStack[22];
+		this.itemStackList = new ItemStack[22];
 		this.eventHandler = par1Container;
 		this.inventoryWidth = 5;
 	}
 
 	@Override
 	public int getSizeInventory() {
-		return this.stackList.length;
+		return this.itemStackList.length;
 	}
 
 	@Override
 	public ItemStack getStackInSlot(int par1) {
-		return par1 >= this.getSizeInventory() ? null : this.stackList[par1];
+		return par1 >= this.getSizeInventory() ? null : this.itemStackList[par1];
 	}
 
 	public ItemStack getStackInRowAndColumn(int par1, int par2) {
@@ -46,9 +46,9 @@ public class InventorySchematicTier7Rocket implements IInventory {
 
 	@Override
 	public ItemStack removeStackFromSlot(int par1) {
-		if (this.stackList[par1] != null) {
-			final ItemStack var2 = this.stackList[par1];
-			this.stackList[par1] = null;
+		if (this.itemStackList[par1] != null) {
+			final ItemStack var2 = this.itemStackList[par1];
+			this.itemStackList[par1] = null;
 			return var2;
 		} else {
 			return null;
@@ -57,19 +57,19 @@ public class InventorySchematicTier7Rocket implements IInventory {
 
 	@Override
 	public ItemStack decrStackSize(int par1, int par2) {
-		if (this.stackList[par1] != null) {
+		if (this.itemStackList[par1] != null) {
 			ItemStack var3;
 
-			if (this.stackList[par1].stackSize <= par2) {
-				var3 = this.stackList[par1];
-				this.stackList[par1] = null;
+			if (this.itemStackList[par1].stackSize <= par2) {
+				var3 = this.itemStackList[par1];
+				this.itemStackList[par1] = null;
 				this.eventHandler.onCraftMatrixChanged(this);
 				return var3;
 			} else {
-				var3 = this.stackList[par1].splitStack(par2);
+				var3 = this.itemStackList[par1].splitStack(par2);
 
-				if (this.stackList[par1].stackSize == 0) {
-					this.stackList[par1] = null;
+				if (this.itemStackList[par1].stackSize == 0) {
+					this.itemStackList[par1] = null;
 				}
 
 				this.eventHandler.onCraftMatrixChanged(this);
@@ -82,7 +82,7 @@ public class InventorySchematicTier7Rocket implements IInventory {
 
 	@Override
 	public void setInventorySlotContents(int par1, ItemStack par2ItemStack) {
-		this.stackList[par1] = par2ItemStack;
+		this.itemStackList[par1] = par2ItemStack;
 		this.eventHandler.onCraftMatrixChanged(this);
 	}
 
@@ -114,7 +114,7 @@ public class InventorySchematicTier7Rocket implements IInventory {
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int i, ItemStack itemStack) {
 		return false;
 	}
 

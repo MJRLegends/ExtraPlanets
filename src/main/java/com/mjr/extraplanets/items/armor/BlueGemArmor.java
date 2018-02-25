@@ -17,10 +17,10 @@ public class BlueGemArmor extends ItemArmor {
 	}
 
 	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-		if (stack.getItem() == ExtraPlanets_Armor.BLUE_GEM_HELMET || stack.getItem() == ExtraPlanets_Armor.BLUE_GEM_CHEST || stack.getItem() == ExtraPlanets_Armor.BLUE_GEM_BOOTS) {
+	public String getArmorTexture(ItemStack itemStack, Entity entity, int slot, String type) {
+		if (itemStack.getItem() == ExtraPlanets_Armor.BLUE_GEM_HELMET || itemStack.getItem() == ExtraPlanets_Armor.BLUE_GEM_CHEST || itemStack.getItem() == ExtraPlanets_Armor.BLUE_GEM_BOOTS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
-		} else if (stack.getItem() == ExtraPlanets_Armor.BLUE_GEM_LEGINGS) {
+		} else if (itemStack.getItem() == ExtraPlanets_Armor.BLUE_GEM_LEGINGS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
 		} else {
 			return null;

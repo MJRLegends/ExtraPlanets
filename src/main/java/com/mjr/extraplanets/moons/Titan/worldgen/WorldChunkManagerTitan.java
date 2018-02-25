@@ -144,7 +144,7 @@ public class WorldChunkManagerTitan extends WorldChunkManager {
 	}
 
 	@Override
-	public BlockPos findBiomePosition(int x, int z, int range, List<BiomeGenBase> biomes, Random random) {
+	public BlockPos findBiomePosition(int x, int z, int range, List<BiomeGenBase> biomes, Random rand) {
 		int i = x - range >> 2;
 		int j = z - range >> 2;
 		int k = x + range >> 2;
@@ -160,7 +160,7 @@ public class WorldChunkManagerTitan extends WorldChunkManager {
 			int z0 = j + a / diffX << 2;
 			BiomeGenBase biome = BiomeGenBase.getBiome(unzoomed[a]);
 
-			if (biomes.contains(biome) && (blockPos == null || random.nextInt(count + 1) == 0)) {
+			if (biomes.contains(biome) && (blockPos == null || rand.nextInt(count + 1) == 0)) {
 				blockPos = new BlockPos(x0, 0, z0);
 				count++;
 			}

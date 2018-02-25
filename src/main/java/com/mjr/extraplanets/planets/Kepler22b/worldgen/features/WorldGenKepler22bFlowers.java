@@ -19,13 +19,13 @@ public class WorldGenKepler22bFlowers extends WorldGenerator {
 	}
 
 	@Override
-	public boolean generate(World worldIn, Random rand, BlockPos position) {
+	public boolean generate(World world, Random rand, BlockPos position) {
 		for (int l = 0; l < 64; ++l) {
 			BlockPos blockpos = position.add(rand.nextInt(8) - rand.nextInt(8), rand.nextInt(4) - rand.nextInt(4), rand.nextInt(8) - rand.nextInt(8));
 			IBlockState state = this.flowerBlock.getStateFromMeta(this.flowerBlockMeta);
 
-			if (worldIn.isAirBlock(blockpos) && (!worldIn.provider.getHasNoSky() || blockpos.getY() < 255) && this.flowerBlock.canBlockStay(worldIn, blockpos, state)) {
-				worldIn.setBlockState(blockpos, state, 2);
+			if (world.isAirBlock(blockpos) && (!world.provider.getHasNoSky() || blockpos.getY() < 255) && this.flowerBlock.canBlockStay(world, blockpos, state)) {
+				world.setBlockState(blockpos, state, 2);
 			}
 		}
 

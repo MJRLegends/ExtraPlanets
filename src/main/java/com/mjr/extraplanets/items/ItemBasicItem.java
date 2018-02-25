@@ -47,39 +47,39 @@ public class ItemBasicItem extends Item {
 	}
 
 	@Override
-	public EnumAction getItemUseAction(ItemStack stack) {
-		if (stack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
+	public EnumAction getItemUseAction(ItemStack itemStack) {
+		if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
 			return EnumAction.DRINK;
 		return null;
 	}
 
 	@Override
-	public int getMaxItemUseDuration(ItemStack stack) {
-		if (stack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
+	public int getMaxItemUseDuration(ItemStack itemStack) {
+		if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
 			return 32;
 		return 0;
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn) {
+	public ItemStack onItemRightClick(ItemStack itemStackIn, World world, EntityPlayer player) {
 		if (itemStackIn.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
-			if (!playerIn.capabilities.isCreativeMode)
-				playerIn.setItemInUse(itemStackIn, this.getMaxItemUseDuration(itemStackIn));
+			if (!player.capabilities.isCreativeMode)
+				player.setItemInUse(itemStackIn, this.getMaxItemUseDuration(itemStackIn));
 		return itemStackIn;
 	}
 
 	@Override
-	public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityPlayer playerIn) {
-		if (stack.getItem() == ExtraPlanets_Items.ANTI_RADIATION) {
-			if (!playerIn.capabilities.isCreativeMode) {
-				--stack.stackSize;
+	public ItemStack onItemUseFinish(ItemStack itemStack, World world, EntityPlayer player) {
+		if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION) {
+			if (!player.capabilities.isCreativeMode) {
+				--itemStack.stackSize;
 			}
 
-			if (!worldIn.isRemote) {
+			if (!world.isRemote) {
 				IStatsCapability stats = null;
 
-				if (playerIn != null) {
-					stats = playerIn.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
+				if (player != null) {
+					stats = player.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 				}
 				double temp = stats.getRadiationLevel();
 				double level = (temp * Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT) / 100;
@@ -87,25 +87,25 @@ public class ItemBasicItem extends Item {
 					stats.setRadiationLevel(0);
 				else
 					stats.setRadiationLevel(level);
-				PlayerUtilties.sendMessage(playerIn, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerIn.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by "
+				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by "
 						+ Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%");
-				PlayerUtilties.sendMessage(playerIn, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerIn.getName() + EnumChatFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%");
+				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%");
 			}
 
-			if (!playerIn.capabilities.isCreativeMode) {
-				if (stack.stackSize <= 0) {
+			if (!player.capabilities.isCreativeMode) {
+				if (itemStack.stackSize <= 0) {
 					return new ItemStack(Items.glass_bottle);
 				}
 
-				playerIn.inventory.addItemStackToInventory(new ItemStack(Items.glass_bottle));
+				player.inventory.addItemStackToInventory(new ItemStack(Items.glass_bottle));
 			}
 		}
-		return stack;
+		return itemStack;
 	}
 
 	@Override
-	public int getItemStackLimit(ItemStack stack) {
-		if (stack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
+	public int getItemStackLimit(ItemStack itemStack) {
+		if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
 			return 1;
 		return this.maxStackSize;
 	}

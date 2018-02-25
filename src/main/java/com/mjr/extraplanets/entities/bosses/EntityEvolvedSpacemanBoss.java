@@ -167,8 +167,8 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 	}
 
 	@Override
-	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+	public EntityItem entityDropItem(ItemStack itemStack, float par2) {
+		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, itemStack);
 		entityitem.motionY = -2.0D;
 		entityitem.setDefaultPickupDelay();
 		if (this.captureDrops) {
@@ -196,8 +196,8 @@ public class EntityEvolvedSpacemanBoss extends EntityBossBase implements IMob, I
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList;
-		stackList = GalacticraftRegistry.getDungeonLoot(9);
-		return stackList.get(rand.nextInt(stackList.size())).copy();
+		List<ItemStack> itemStackList;
+		itemStackList = GalacticraftRegistry.getDungeonLoot(9);
+		return itemStackList.get(rand.nextInt(itemStackList.size())).copy();
 	}
 }

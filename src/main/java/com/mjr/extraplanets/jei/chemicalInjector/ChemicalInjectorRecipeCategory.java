@@ -51,11 +51,11 @@ public class ChemicalInjectorRecipeCategory extends BlankRecipeCategory {
 
 	@Override
 	public void setRecipe(@Nonnull IRecipeLayout recipeLayout, @Nonnull IRecipeWrapper recipeWrapper) {
-		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
+		IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 
-		itemstacks.init(0, true, 26, 30);
-		itemstacks.init(1, true, 66, 30);
-		itemstacks.init(2, false, 116, 30);
+		itemStacks.init(0, true, 26, 30);
+		itemStacks.init(1, true, 66, 30);
+		itemStacks.init(2, false, 116, 30);
 
 		if (recipeWrapper instanceof ChemicalInjectorRecipeWrapper) {
 			ChemicalInjectorRecipeWrapper circuitFabricatorRecipeWrapper = (ChemicalInjectorRecipeWrapper) recipeWrapper;
@@ -64,10 +64,10 @@ public class ChemicalInjectorRecipeCategory extends BlankRecipeCategory {
 			for (int i = 0; i < inputs.size(); ++i) {
 				Object o = inputs.get(i);
 				if (o != null) {
-					itemstacks.setFromRecipe(i, o);
+					itemStacks.setFromRecipe(i, o);
 				}
 			}
-			itemstacks.setFromRecipe(2, circuitFabricatorRecipeWrapper.getOutputs());
+			itemStacks.setFromRecipe(2, circuitFabricatorRecipeWrapper.getOutputs());
 		}
 	}
 }

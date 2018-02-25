@@ -51,10 +51,10 @@ public class DensifierRecipeCategory extends BlankRecipeCategory {
 
 	@Override
 	public void setRecipe(@Nonnull IRecipeLayout recipeLayout, @Nonnull IRecipeWrapper recipeWrapper) {
-		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
+		IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 
-		itemstacks.init(0, true, 3, 2);
-		itemstacks.init(1, false, 108, 30);
+		itemStacks.init(0, true, 3, 2);
+		itemStacks.init(1, false, 108, 30);
 
 		if (recipeWrapper instanceof DensifierRecipeWrapper) {
 			DensifierRecipeWrapper circuitFabricatorRecipeWrapper = (DensifierRecipeWrapper) recipeWrapper;
@@ -63,10 +63,10 @@ public class DensifierRecipeCategory extends BlankRecipeCategory {
 			for (int i = 0; i < inputs.size(); ++i) {
 				Object o = inputs.get(i);
 				if (o != null) {
-					itemstacks.setFromRecipe(i, o);
+					itemStacks.setFromRecipe(i, o);
 				}
 			}
-			itemstacks.setFromRecipe(1, circuitFabricatorRecipeWrapper.getOutputs());
+			itemStacks.setFromRecipe(1, circuitFabricatorRecipeWrapper.getOutputs());
 		}
 	}
 }

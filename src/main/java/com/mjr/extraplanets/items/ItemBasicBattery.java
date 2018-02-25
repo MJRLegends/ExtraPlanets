@@ -23,7 +23,7 @@ public class ItemBasicBattery extends ItemElectricBase implements IItemElectric 
 	}
 
 	@SideOnly(Side.CLIENT)
-	public EnumRarity func_77613_e(ItemStack par1ItemStack) {
+	public EnumRarity func_77613_e(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 

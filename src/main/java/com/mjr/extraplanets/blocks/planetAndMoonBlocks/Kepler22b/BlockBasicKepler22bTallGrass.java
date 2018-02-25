@@ -39,15 +39,15 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	}
 
 	@Override
-	public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state) {
-		return super.canBlockStay(worldIn, pos, state);
+	public boolean canBlockStay(World world, BlockPos pos, IBlockState state) {
+		return super.canBlockStay(world, pos, state);
 	}
 
 	/**
 	 * Whether this Block can be replaced directly by other blocks (true for e.g. tall grass)
 	 */
 	@Override
-	public boolean isReplaceable(World worldIn, BlockPos pos) {
+	public boolean isReplaceable(World world, BlockPos pos) {
 		return true;
 	}
 
@@ -63,18 +63,18 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	 * Get the quantity dropped based on the given fortune level
 	 */
 	@Override
-	public int quantityDroppedWithBonus(int fortune, Random random) {
-		return 1 + random.nextInt(fortune * 2 + 1);
+	public int quantityDroppedWithBonus(int fortune, Random rand) {
+		return 1 + rand.nextInt(fortune * 2 + 1);
 	}
 
 	@Override
-	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te) {
-		super.harvestBlock(worldIn, player, pos, state, te);
+	public void harvestBlock(World world, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te) {
+		super.harvestBlock(world, player, pos, state, te);
 	}
 
 	@Override
-	public int getDamageValue(World worldIn, BlockPos pos) {
-		IBlockState iblockstate = worldIn.getBlockState(pos);
+	public int getDamageValue(World world, BlockPos pos) {
+		IBlockState iblockstate = world.getBlockState(pos);
 		return iblockstate.getBlock().getMetaFromState(iblockstate);
 	}
 
@@ -93,21 +93,21 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	 * Whether this IGrowable can grow
 	 */
 	@Override
-	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
+	public boolean canGrow(World world, BlockPos pos, IBlockState state, boolean isClient) {
 		return true;
 	}
 
 	@Override
-	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
+	public boolean canUseBonemeal(World world, Random rand, BlockPos pos, IBlockState state) {
 		return true;
 	}
 
 	@Override
-	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
+	public void grow(World world, Random rand, BlockPos pos, IBlockState state) {
 		BlockDoublePlant.EnumPlantType blockdoubleplant$enumplanttype = BlockDoublePlant.EnumPlantType.GRASS;
 
-		if (Blocks.double_plant.canPlaceBlockAt(worldIn, pos)) {
-			Blocks.double_plant.placeAt(worldIn, pos, blockdoubleplant$enumplanttype, 2);
+		if (Blocks.double_plant.canPlaceBlockAt(world, pos)) {
+			Blocks.double_plant.placeAt(world, pos, blockdoubleplant$enumplanttype, 2);
 		}
 	}
 

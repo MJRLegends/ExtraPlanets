@@ -96,8 +96,8 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
 	}
 
 	@Override
-	public float getBlockHardness(World worldIn, BlockPos pos) {
-		IBlockState state = worldIn.getBlockState(pos);
+	public float getBlockHardness(World world, BlockPos pos) {
+		IBlockState state = world.getBlockState(pos);
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE || state.getValue(BASIC_TYPE) == EnumBlockBasic.SUB_SURFACE)
 			return 0.5F;
 		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_CRYISTAL || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_GEM)
@@ -120,15 +120,15 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
 	}
 
 	@Override
-	public int quantityDropped(IBlockState state, int fortune, Random random) {
+	public int quantityDropped(IBlockState state, int fortune, Random rand) {
 		return 1;
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
+	public void getSubBlocks(Item item, CreativeTabs tabs, List<ItemStack> list) {
 		for (EnumBlockBasic blockBasic : EnumBlockBasic.values()) {
-			par3List.add(new ItemStack(par1, 1, blockBasic.getMeta()));
+			list.add(new ItemStack(item, 1, blockBasic.getMeta()));
 		}
 	}
 
@@ -162,13 +162,13 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
+	public void randomDisplayTick(World world, BlockPos pos, IBlockState state, Random rand) {
 		if (rand.nextInt(10) == 0) {
 			if (state.getBlock() == this && state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK) {
 				GalacticraftPlanets.spawnParticle("sludgeDrip", new Vector3(pos.getX() + rand.nextDouble(), pos.getY(), pos.getZ() + rand.nextDouble()), new Vector3(0, 0, 0));
 
 				if (rand.nextInt(100) == 0) {
-					worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), Constants.TEXTURE_PREFIX + "ambience.singledrip", 1, 0.8F + rand.nextFloat() / 5.0F, false);
+					world.playSound(pos.getX(), pos.getY(), pos.getZ(), Constants.TEXTURE_PREFIX + "ambience.singledrip", 1, 0.8F + rand.nextFloat() / 5.0F, false);
 				}
 			}
 		}

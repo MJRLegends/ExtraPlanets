@@ -686,21 +686,21 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		int x = position.getX();
 		int y = position.getY();
 		int z = position.getZ();
-		int random = rand.nextInt(15) + 1;
-		if (random < 5) {
+		int rand = rand.nextInt(15) + 1;
+		if (rand < 5) {
 			if (Config.DEBUG_MODE)
 				MessageUtilities.debugMessageToLog(Constants.modID, "Loot Spawned!");
 			int lastNumber = 0;
 			for (int i = 0; i < rand.nextInt(4); i++) {
-				int randomChests;
+				int randChests;
 				do {
-					randomChests = rand.nextInt(9);
-				} while (lastNumber == randomChests);
-				lastNumber = randomChests;
+					randChests = rand.nextInt(9);
+				} while (lastNumber == randChests);
+				lastNumber = randChests;
 				if (Config.DEBUG_MODE)
-					MessageUtilities.debugMessageToLog(Constants.modID, "Chest " + randomChests);
+					MessageUtilities.debugMessageToLog(Constants.modID, "Chest " + randChests);
 				TileEntityChest chest;
-				switch (randomChests) {
+				switch (randChests) {
 				case 1:
 					chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 6, y + 1, z + 1));
 

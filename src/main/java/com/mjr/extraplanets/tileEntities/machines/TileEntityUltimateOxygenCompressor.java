@@ -173,15 +173,15 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
 	}
 
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canInsertItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItemDamage() > 1;
+				return itemStack.getItemDamage() > 1;
 			case 1:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
+				return ItemElectricBase.isElectricItemCharged(itemStack);
 			case 2:
-				return itemstack.getItemDamage() < itemstack.getItem().getMaxDamage();
+				return itemStack.getItemDamage() < itemStack.getItem().getMaxDamage();
 			default:
 				return false;
 			}
@@ -190,28 +190,28 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
 	}
 
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
+	public boolean canExtractItem(int slotID, ItemStack itemStack, EnumFacing side) {
 		switch (slotID) {
 		case 0:
-			return itemstack.getItem() instanceof ItemOxygenTank && itemstack.getItemDamage() == 0;
+			return itemStack.getItem() instanceof ItemOxygenTank && itemStack.getItemDamage() == 0;
 		case 1:
-			return ItemElectricBase.isElectricItemEmpty(itemstack);
+			return ItemElectricBase.isElectricItemEmpty(itemStack);
 		case 2:
-			return FluidUtil.isEmptyContainer(itemstack);
+			return FluidUtil.isEmptyContainer(itemStack);
 		default:
 			return false;
 		}
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
 		switch (slotID) {
 		case 0:
-			return itemstack.getItem() instanceof ItemOxygenTank;
+			return itemStack.getItem() instanceof ItemOxygenTank;
 		case 1:
-			return ItemElectricBase.isElectricItem(itemstack.getItem());
+			return ItemElectricBase.isElectricItem(itemStack.getItem());
 		case 2:
-			return itemstack.getItem() instanceof IItemOxygenSupply;
+			return itemStack.getItem() instanceof IItemOxygenSupply;
 		}
 
 		return false;

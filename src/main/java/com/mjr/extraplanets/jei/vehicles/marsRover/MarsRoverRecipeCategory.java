@@ -51,38 +51,38 @@ public class MarsRoverRecipeCategory extends BlankRecipeCategory {
 
 	@Override
 	public void setRecipe(@Nonnull IRecipeLayout recipeLayout, @Nonnull IRecipeWrapper recipeWrapper) {
-		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
+		IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 
-		itemstacks.init(0, true, 35, 28);
-		itemstacks.init(1, true, 35, 46);
-		itemstacks.init(2, true, 35, 64);
-		itemstacks.init(3, true, 35, 82);
-		itemstacks.init(4, true, 35, 100);
+		itemStacks.init(0, true, 35, 28);
+		itemStacks.init(1, true, 35, 46);
+		itemStacks.init(2, true, 35, 64);
+		itemStacks.init(3, true, 35, 82);
+		itemStacks.init(4, true, 35, 100);
 
-		itemstacks.init(5, true, 53, 28);
-		itemstacks.init(6, true, 53, 46);
-		itemstacks.init(7, true, 53, 64);
-		itemstacks.init(8, true, 53, 82);
-		itemstacks.init(9, true, 53, 100);
+		itemStacks.init(5, true, 53, 28);
+		itemStacks.init(6, true, 53, 46);
+		itemStacks.init(7, true, 53, 64);
+		itemStacks.init(8, true, 53, 82);
+		itemStacks.init(9, true, 53, 100);
 
-		itemstacks.init(10, true, 71, 28);
-		itemstacks.init(11, true, 71, 46);
-		itemstacks.init(12, true, 71, 64);
-		itemstacks.init(13, true, 71, 82);
-		itemstacks.init(14, true, 71, 100);
+		itemStacks.init(10, true, 71, 28);
+		itemStacks.init(11, true, 71, 46);
+		itemStacks.init(12, true, 71, 64);
+		itemStacks.init(13, true, 71, 82);
+		itemStacks.init(14, true, 71, 100);
 
-		itemstacks.init(15, true, 17, 28);
-		itemstacks.init(16, true, 17, 64);
-		itemstacks.init(17, true, 17, 100);
+		itemStacks.init(15, true, 17, 28);
+		itemStacks.init(16, true, 17, 64);
+		itemStacks.init(17, true, 17, 100);
 
-		itemstacks.init(18, true, 89, 28);
-		itemstacks.init(19, true, 89, 64);
-		itemstacks.init(20, true, 89, 100);
+		itemStacks.init(18, true, 89, 28);
+		itemStacks.init(19, true, 89, 64);
+		itemStacks.init(20, true, 89, 100);
 
-		itemstacks.init(21, true, 89, 7);
-		itemstacks.init(22, true, 115, 7);
-		itemstacks.init(23, true, 141, 7);
-		itemstacks.init(24, false, 138, 100);
+		itemStacks.init(21, true, 89, 7);
+		itemStacks.init(22, true, 115, 7);
+		itemStacks.init(23, true, 141, 7);
+		itemStacks.init(24, false, 138, 100);
 
 		if (recipeWrapper instanceof MarsRoverRecipeWrapper) {
 			MarsRoverRecipeWrapper buggyRecipeWrapper = (MarsRoverRecipeWrapper) recipeWrapper;
@@ -91,10 +91,10 @@ public class MarsRoverRecipeCategory extends BlankRecipeCategory {
 			for (int i = 0; i < inputs.size(); ++i) {
 				Object o = inputs.get(i);
 				if (o != null) {
-					itemstacks.setFromRecipe(i, o);
+					itemStacks.setFromRecipe(i, o);
 				}
 			}
-			itemstacks.setFromRecipe(24, buggyRecipeWrapper.getOutputs());
+			itemStacks.setFromRecipe(24, buggyRecipeWrapper.getOutputs());
 		}
 	}
 }

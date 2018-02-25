@@ -67,21 +67,21 @@ public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBl
 	}
 
 	@Override
-	public AxisAlignedBB getCollisionBoundingBox(World worldIn, BlockPos pos, IBlockState state) {
+	public AxisAlignedBB getCollisionBoundingBox(World world, BlockPos pos, IBlockState state) {
 		return AxisAlignedBB.fromBounds((double) pos.getX() + -0.0F, (double) pos.getY() + 0.0F, (double) pos.getZ() + -0.0F, (double) pos.getX() + 1.0F, (double) pos.getY() + 1.4F, (double) pos.getZ() + 1.0F);
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public AxisAlignedBB getSelectedBoundingBox(World worldIn, BlockPos pos) {
-		return this.getCollisionBoundingBox(worldIn, pos, worldIn.getBlockState(pos));
+	public AxisAlignedBB getSelectedBoundingBox(World world, BlockPos pos) {
+		return this.getCollisionBoundingBox(world, pos, world.getBlockState(pos));
 	}
 
 	@Override
-	public MovingObjectPosition collisionRayTrace(World worldIn, BlockPos pos, Vec3 start, Vec3 end) {
+	public MovingObjectPosition collisionRayTrace(World world, BlockPos pos, Vec3 start, Vec3 end) {
 		this.setBlockBounds(-0.0F, 0.0F, -0.0F, 1.0F, 1.4F, 1.0F);
 
-		final MovingObjectPosition r = super.collisionRayTrace(worldIn, pos, start, end);
+		final MovingObjectPosition r = super.collisionRayTrace(world, pos, start, end);
 
 		this.setBlockBounds(-0.0F, 0.0F, -0.0F, 1.0F, 1.4F, 1.0F);
 
@@ -89,16 +89,16 @@ public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBl
 	}
 
 	@Override
-	public void addCollisionBoxesToList(World worldIn, BlockPos pos, IBlockState state, AxisAlignedBB mask, List<AxisAlignedBB> list, Entity collidingEntity) {
+	public void addCollisionBoxesToList(World world, BlockPos pos, IBlockState state, AxisAlignedBB mask, List<AxisAlignedBB> list, Entity collidingEntity) {
 		this.setBlockBounds(-0.0F, 0.0F, -0.0F, 1.0F, 1.4F, 1.0F);
-		super.addCollisionBoxesToList(worldIn, pos, state, mask, list, collidingEntity);
+		super.addCollisionBoxesToList(world, pos, state, mask, list, collidingEntity);
 	}
 
 	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-		super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
+	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack itemStack) {
+		super.onBlockPlacedBy(world, pos, state, placer, itemStack);
 
-		TileEntity tile = worldIn.getTileEntity(pos);
+		TileEntity tile = world.getTileEntity(pos);
 
 		boolean validSpot = true;
 
@@ -106,7 +106,7 @@ public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBl
 			for (int y = 0; y < 4; y++) {
 				for (int z = -1; z <= 2; z++) {
 					if (!(x == 0 && y == 0 && z == 0)) {
-						IBlockState stateAt = worldIn.getBlockState(pos.add(x, y, z));
+						IBlockState stateAt = world.getBlockState(pos.add(x, y, z));
 
 						if (!stateAt.getBlock().getMaterial().isReplaceable()) {
 							validSpot = false;
@@ -117,10 +117,10 @@ public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBl
 		}
 
 		if (!validSpot) {
-			worldIn.setBlockToAir(pos);
+			world.setBlockToAir(pos);
 
 			if (placer instanceof EntityPlayer) {
-				if (!worldIn.isRemote) {
+				if (!world.isRemote) {
 					PlayerUtilties.sendMessage((EntityPlayer) placer, "" + EnumColor.RED + TranslateUtilities.translate("gui.warning.noroom"));
 				}
 				((EntityPlayer) placer).inventory.addItemStackToInventory(new ItemStack(Item.getItemFromBlock(this), 1, 0));
@@ -130,18 +130,18 @@ public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBl
 		}
 
 		if (tile instanceof TileEntityBasicDecontaminationUnit) {
-			((TileEntityBasicDecontaminationUnit) tile).onCreate(worldIn, pos);
+			((TileEntityBasicDecontaminationUnit) tile).onCreate(world, pos);
 		}
 	}
 
 	@Override
-	public boolean onMachineActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
-		return ((IMultiBlock) worldIn.getTileEntity(pos)).onActivated(playerIn);
+	public boolean onMachineActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ) {
+		return ((IMultiBlock) world.getTileEntity(pos)).onActivated(player);
 	}
 
 	@Override
-	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-		final TileEntity tileAt = worldIn.getTileEntity(pos);
+	public void breakBlock(World world, BlockPos pos, IBlockState state) {
+		final TileEntity tileAt = world.getTileEntity(pos);
 
 		int fakeBlockCount = 0;
 
@@ -149,7 +149,7 @@ public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBl
 			for (int y = 0; y < 3; y += 2) {
 				for (int z = -1; z <= 1; z++) {
 					if (!(x == 0 && y == 0 && z == 0)) {
-						if (worldIn.getBlockState(pos.add(x, y, z)).getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK_DECONTAMINATION_UNIT) {
+						if (world.getBlockState(pos.add(x, y, z)).getBlock() == ExtraPlanets_Blocks.FAKE_BLOCK_DECONTAMINATION_UNIT) {
 							fakeBlockCount++;
 						}
 					}
@@ -163,7 +163,7 @@ public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBl
 			}
 		}
 
-		super.breakBlock(worldIn, pos, state);
+		super.breakBlock(world, pos, state);
 	}
 
 	@Override

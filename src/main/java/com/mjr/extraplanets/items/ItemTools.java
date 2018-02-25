@@ -25,7 +25,7 @@ public class ItemTools extends Item {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
@@ -35,9 +35,9 @@ public class ItemTools extends Item {
 	}
 
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
+	public void getSubItems(Item item, CreativeTabs tabs, List<ItemStack> list) {
 		for (int i = 0; i < ItemTools.names.length; i++) {
-			par3List.add(new ItemStack(par1, 1, i));
+			list.add(new ItemStack(item, 1, i));
 		}
 	}
 

@@ -51,30 +51,30 @@ public class Tier4RocketRecipeCategory extends BlankRecipeCategory {
 
 	@Override
 	public void setRecipe(@Nonnull IRecipeLayout recipeLayout, @Nonnull IRecipeWrapper recipeWrapper) {
-		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
+		IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 
-		itemstacks.init(0, true, 44, 0);
-		itemstacks.init(1, true, 35, 18);
-		itemstacks.init(2, true, 35, 36);
-		itemstacks.init(3, true, 35, 54);
-		itemstacks.init(4, true, 35, 72);
-		itemstacks.init(5, true, 35, 90);
-		itemstacks.init(6, true, 53, 18);
-		itemstacks.init(7, true, 53, 36);
-		itemstacks.init(8, true, 53, 54);
-		itemstacks.init(9, true, 53, 72);
-		itemstacks.init(10, true, 53, 90);
-		itemstacks.init(11, true, 17, 72); // Booster left
-		itemstacks.init(12, true, 17, 90);
-		itemstacks.init(13, true, 71, 90);
-		itemstacks.init(14, true, 44, 108); // Rocket
-		itemstacks.init(15, true, 71, 72); // Booster right
-		itemstacks.init(16, true, 17, 108);
-		itemstacks.init(17, true, 71, 108);
-		itemstacks.init(18, true, 89, 7);
-		itemstacks.init(19, true, 115, 7);
-		itemstacks.init(20, true, 141, 7);
-		itemstacks.init(21, false, 138, 95);
+		itemStacks.init(0, true, 44, 0);
+		itemStacks.init(1, true, 35, 18);
+		itemStacks.init(2, true, 35, 36);
+		itemStacks.init(3, true, 35, 54);
+		itemStacks.init(4, true, 35, 72);
+		itemStacks.init(5, true, 35, 90);
+		itemStacks.init(6, true, 53, 18);
+		itemStacks.init(7, true, 53, 36);
+		itemStacks.init(8, true, 53, 54);
+		itemStacks.init(9, true, 53, 72);
+		itemStacks.init(10, true, 53, 90);
+		itemStacks.init(11, true, 17, 72); // Booster left
+		itemStacks.init(12, true, 17, 90);
+		itemStacks.init(13, true, 71, 90);
+		itemStacks.init(14, true, 44, 108); // Rocket
+		itemStacks.init(15, true, 71, 72); // Booster right
+		itemStacks.init(16, true, 17, 108);
+		itemStacks.init(17, true, 71, 108);
+		itemStacks.init(18, true, 89, 7);
+		itemStacks.init(19, true, 115, 7);
+		itemStacks.init(20, true, 141, 7);
+		itemStacks.init(21, false, 138, 95);
 
 		if (recipeWrapper instanceof Tier4RocketRecipeWrapper) {
 			Tier4RocketRecipeWrapper rocketRecipeWrapper = (Tier4RocketRecipeWrapper) recipeWrapper;
@@ -83,10 +83,10 @@ public class Tier4RocketRecipeCategory extends BlankRecipeCategory {
 			for (int i = 0; i < inputs.size(); ++i) {
 				Object o = inputs.get(i);
 				if (o != null) {
-					itemstacks.setFromRecipe(i, o);
+					itemStacks.setFromRecipe(i, o);
 				}
 			}
-			itemstacks.setFromRecipe(21, rocketRecipeWrapper.getOutputs());
+			itemStacks.setFromRecipe(21, rocketRecipeWrapper.getOutputs());
 		}
 	}
 }

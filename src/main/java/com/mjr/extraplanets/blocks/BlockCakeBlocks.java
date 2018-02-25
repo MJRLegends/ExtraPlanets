@@ -68,7 +68,7 @@ public class BlockCakeBlocks extends Block implements IDetectableResource, ISort
 	}
 
 	@Override
-	public float getBlockHardness(World worldIn, BlockPos pos) {
+	public float getBlockHardness(World world, BlockPos pos) {
 		return 1.5F;
 	}
 
@@ -86,7 +86,7 @@ public class BlockCakeBlocks extends Block implements IDetectableResource, ISort
 	}
 
 	@Override
-	public int quantityDropped(IBlockState state, int fortune, Random random) {
+	public int quantityDropped(IBlockState state, int fortune, Random rand) {
 		if (state == this.getDefaultState().withProperty(BASIC_TYPE, EnumBlockBasic.COOKIE_ROCKS))
 			return 6;
 		return 1;
@@ -94,9 +94,9 @@ public class BlockCakeBlocks extends Block implements IDetectableResource, ISort
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
+	public void getSubBlocks(Item item, CreativeTabs tabs, List<ItemStack> list) {
 		for (EnumBlockBasic blockBasic : EnumBlockBasic.values()) {
-			par3List.add(new ItemStack(par1, 1, blockBasic.getMeta()));
+			list.add(new ItemStack(item, 1, blockBasic.getMeta()));
 		}
 	}
 

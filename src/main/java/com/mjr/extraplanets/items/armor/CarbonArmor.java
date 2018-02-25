@@ -17,10 +17,10 @@ public class CarbonArmor extends ItemArmor {
 	}
 
 	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-		if (stack.getItem() == ExtraPlanets_Armor.CARBON_HELMET || stack.getItem() == ExtraPlanets_Armor.CARBON_CHEST || stack.getItem() == ExtraPlanets_Armor.CARBON_BOOTS) {
+	public String getArmorTexture(ItemStack itemStack, Entity entity, int slot, String type) {
+		if (itemStack.getItem() == ExtraPlanets_Armor.CARBON_HELMET || itemStack.getItem() == ExtraPlanets_Armor.CARBON_CHEST || itemStack.getItem() == ExtraPlanets_Armor.CARBON_BOOTS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_1.png";
-		} else if (stack.getItem() == ExtraPlanets_Armor.CARBON_LEGINGS) {
+		} else if (itemStack.getItem() == ExtraPlanets_Armor.CARBON_LEGINGS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/" + name + "_layer_2.png";
 		} else {
 			return null;

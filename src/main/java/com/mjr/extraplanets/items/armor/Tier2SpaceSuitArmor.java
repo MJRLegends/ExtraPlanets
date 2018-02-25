@@ -32,12 +32,12 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	}
 
 	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
-		if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_HELMET || stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_CHEST || stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS) {
+	public String getArmorTexture(ItemStack itemStack, Entity entity, int slot, String type) {
+		if (itemStack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_HELMET || itemStack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_CHEST || itemStack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_main.png";
-		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_LEGINGS) {
+		} else if (itemStack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_LEGINGS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_main.png";
-		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_GRAVITY_BOOTS) {
+		} else if (itemStack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_GRAVITY_BOOTS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_main.png";
 		} else {
 			return null;

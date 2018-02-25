@@ -16,7 +16,7 @@ public class ItemBlockBasicDecontaminationUnit extends ItemBlockDesc {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List<String> par3List, boolean par4) {
-		super.addInformation(par1ItemStack, par2EntityPlayer, par3List, par4);
+	public void addInformation(ItemStack itemStack, EntityPlayer entityPlayer, List<String> list, boolean par4) {
+		super.addInformation(itemStack, entityPlayer, list, par4);
 	}
 }

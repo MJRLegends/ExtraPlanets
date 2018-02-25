@@ -16,21 +16,21 @@ public class BlockFireBomb extends BlockBasicExplosion {
 	}
 
 	@Override
-	public void onBlockDestroyedByExplosion(World worldIn, BlockPos pos, Explosion explosionIn) {
-		if (!worldIn.isRemote) {
-			EntityFireBombPrimed EntityFireBombPrimed = new EntityFireBombPrimed(worldIn, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, explosionIn.getExplosivePlacedBy());
-			EntityFireBombPrimed.fuse = worldIn.rand.nextInt(EntityFireBombPrimed.fuse / 4) + EntityFireBombPrimed.fuse / 8;
-			worldIn.spawnEntityInWorld(EntityFireBombPrimed);
+	public void onBlockDestroyedByExplosion(World world, BlockPos pos, Explosion explosionIn) {
+		if (!world.isRemote) {
+			EntityFireBombPrimed EntityFireBombPrimed = new EntityFireBombPrimed(world, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, explosionIn.getExplosivePlacedBy());
+			EntityFireBombPrimed.fuse = world.rand.nextInt(EntityFireBombPrimed.fuse / 4) + EntityFireBombPrimed.fuse / 8;
+			world.spawnEntityInWorld(EntityFireBombPrimed);
 		}
 	}
 
 	@Override
-	public void explode(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase igniter) {
-		if (!worldIn.isRemote) {
+	public void explode(World world, BlockPos pos, IBlockState state, EntityLivingBase igniter) {
+		if (!world.isRemote) {
 			if (state.getValue(EXPLODE).booleanValue()) {
-				EntityFireBombPrimed EntityFireBombPrimed = new EntityFireBombPrimed(worldIn, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, igniter);
-				worldIn.spawnEntityInWorld(EntityFireBombPrimed);
-				worldIn.playSoundAtEntity(EntityFireBombPrimed, "game.tnt.primed", 1.0F, 1.0F);
+				EntityFireBombPrimed EntityFireBombPrimed = new EntityFireBombPrimed(world, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, igniter);
+				world.spawnEntityInWorld(EntityFireBombPrimed);
+				world.playSoundAtEntity(EntityFireBombPrimed, "game.tnt.primed", 1.0F, 1.0F);
 			}
 		}
 	}

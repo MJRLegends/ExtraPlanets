@@ -501,18 +501,18 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	}
 
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		return this.isItemValidForSlot(slotID, itemstack);
+	public boolean canInsertItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		return this.isItemValidForSlot(slotID, itemStack);
 	}
 
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
+	public boolean canExtractItem(int slotID, ItemStack itemStack, EnumFacing side) {
 		return slotID == 0;
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
-		return slotID == 0 && ItemElectricBase.isElectricItem(itemstack.getItem());
+	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
+		return slotID == 0 && ItemElectricBase.isElectricItem(itemStack.getItem());
 	}
 
 	@Override

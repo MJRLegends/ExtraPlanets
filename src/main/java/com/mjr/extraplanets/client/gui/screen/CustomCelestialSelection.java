@@ -854,7 +854,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			GL11.glColor4f(1, 1, 0, 1);
 			this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
 
-			// Grandparent frame:
+			// Grandomparent frame:
 			this.drawTexturedModalRect(LHS + 2 - 95 + scale, TOP + 14, 93, 17, 95, 436, 93, 17, false, false);
 			str = planetZoomedNotMoon ? this.getParentName() : this.getGrandparentName();
 			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
@@ -1028,8 +1028,8 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 								int amount = 0;
 
-								for (ItemStack stack : items) {
-									amount += getAmountInInventory(stack);
+								for (ItemStack itemStack : items) {
+									amount += getAmountInInventory(itemStack);
 								}
 
 								RenderHelper.enableGUIStandardItemLighting();
@@ -1039,9 +1039,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 								int toRenderIndex = (this.ticksSinceMenuOpen / 20) % items.size();
 								ItemStack toRender = null;
 								while (it.hasNext()) {
-									ItemStack stack = it.next();
+									ItemStack itemStack = it.next();
 									if (count == toRenderIndex) {
-										toRender = stack;
+										toRender = itemStack;
 										break;
 									}
 									count++;

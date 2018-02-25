@@ -30,7 +30,7 @@ public class ItemBasicKit extends ItemBasicMeta {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
@@ -41,7 +41,7 @@ public class ItemBasicKit extends ItemBasicMeta {
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack itemStack, World worldIn, EntityPlayer player) {
+	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
 		if (player instanceof EntityPlayerMP) {
 			GCPlayerStats stats = GCPlayerStats.get(player);
 			// Oxygen Setup

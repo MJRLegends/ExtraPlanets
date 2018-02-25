@@ -39,12 +39,12 @@ public class ItemGeigerCounter extends Item {
 	}
 
 	@Override
-	public EnumAction getItemUseAction(ItemStack stack) {
+	public EnumAction getItemUseAction(ItemStack itemStack) {
 		return EnumAction.NONE;
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack itemStack, World worldIn, EntityPlayer player) {
+	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
 		if (player.worldObj.isRemote == false) {
 			EntityPlayerMP playerMP = (EntityPlayerMP) player;
 			IStatsCapability stats = null;
@@ -58,7 +58,7 @@ public class ItemGeigerCounter extends Item {
 	}
 
 	@Override
-	public int getItemStackLimit(ItemStack stack) {
+	public int getItemStackLimit(ItemStack itemStack) {
 		return 1;
 	}
 }

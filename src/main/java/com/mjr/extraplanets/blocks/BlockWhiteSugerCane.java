@@ -39,12 +39,12 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 	}
 
 	@Override
-	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
-		if (worldIn.getBlockState(pos.down()).getBlock() == Blocks.reeds || this.checkForDrop(worldIn, pos, state)) {
-			if (worldIn.isAirBlock(pos.up())) {
+	public void updateTick(World world, BlockPos pos, IBlockState state, Random rand) {
+		if (world.getBlockState(pos.down()).getBlock() == Blocks.reeds || this.checkForDrop(world, pos, state)) {
+			if (world.isAirBlock(pos.up())) {
 				int i;
 
-				for (i = 1; worldIn.getBlockState(pos.down(i)).getBlock() == this; ++i) {
+				for (i = 1; world.getBlockState(pos.down(i)).getBlock() == this; ++i) {
 					;
 				}
 
@@ -52,10 +52,10 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 					int j = state.getValue(AGE).intValue();
 
 					if (j == 15) {
-						worldIn.setBlockState(pos.up(), this.getDefaultState());
-						worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(0)), 4);
+						world.setBlockState(pos.up(), this.getDefaultState());
+						world.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(0)), 4);
 					} else {
-						worldIn.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 4);
+						world.setBlockState(pos, state.withProperty(AGE, Integer.valueOf(j + 1)), 4);
 					}
 				}
 			}
@@ -63,10 +63,10 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 	}
 
 	@Override
-	public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
-		IBlockState state = worldIn.getBlockState(pos.down());
+	public boolean canPlaceBlockAt(World world, BlockPos pos) {
+		IBlockState state = world.getBlockState(pos.down());
 		Block block = state.getBlock();
-		if (block.canSustainPlant(worldIn, pos.down(), EnumFacing.UP, this))
+		if (block.canSustainPlant(world, pos.down(), EnumFacing.UP, this))
 			return true;
 
 		if (block == this) {
@@ -77,7 +77,7 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 			BlockPos blockpos = pos.down();
 
 			for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL) {
-				IBlockState iblockstate = worldIn.getBlockState(blockpos.offset(enumfacing));
+				IBlockState iblockstate = world.getBlockState(blockpos.offset(enumfacing));
 
 				if (iblockstate.getBlock().getMaterial() == ExtraPlanets_Fluids.CHOCOLATE_MATERIAL) {
 					return true;
@@ -91,26 +91,26 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 	/**
 	 * Called when a neighboring block was changed and marks that this state should perform any checks during a neighbor change. Cases may include when redstone power is updated, cactus blocks popping off due to a neighboring solid block, etc.
 	 */
-	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn) {
-		this.checkForDrop(worldIn, pos, state);
+	public void neighborChanged(IBlockState state, World world, BlockPos pos, Block blockIn) {
+		this.checkForDrop(world, pos, state);
 	}
 
-	protected final boolean checkForDrop(World worldIn, BlockPos pos, IBlockState state) {
-		if (this.canBlockStay(worldIn, pos)) {
+	protected final boolean checkForDrop(World world, BlockPos pos, IBlockState state) {
+		if (this.canBlockStay(world, pos)) {
 			return true;
 		} else {
-			this.dropBlockAsItem(worldIn, pos, state, 0);
-			worldIn.setBlockToAir(pos);
+			this.dropBlockAsItem(world, pos, state, 0);
+			world.setBlockToAir(pos);
 			return false;
 		}
 	}
 
-	public boolean canBlockStay(World worldIn, BlockPos pos) {
-		return this.canPlaceBlockAt(worldIn, pos);
+	public boolean canBlockStay(World world, BlockPos pos) {
+		return this.canPlaceBlockAt(world, pos);
 	}
 
 	@Nullable
-	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World worldIn, BlockPos pos) {
+	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World world, BlockPos pos) {
 		return null;
 	}
 
@@ -134,7 +134,7 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 		return false;
 	}
 
-	public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
+	public ItemStack getItem(World world, BlockPos pos, IBlockState state) {
 		return new ItemStack(ExtraPlanets_Items.WHITE_SUGAR_CANE);
 	}
 

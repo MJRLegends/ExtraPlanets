@@ -33,7 +33,7 @@ public class ItemTier5ThermalPadding extends Item implements IItemThermal {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
@@ -44,16 +44,16 @@ public class ItemTier5ThermalPadding extends Item implements IItemThermal {
 	}
 
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
+	public void getSubItems(Item item, CreativeTabs tabs, List<ItemStack> list) {
 		for (int i = 0; i < ItemTier5ThermalPadding.names.length / 2; i++) {
-			par3List.add(new ItemStack(par1, 1, i));
+			list.add(new ItemStack(item, 1, i));
 		}
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack par1ItemStack) {
-		if (names.length > par1ItemStack.getItemDamage()) {
-			return "item." + ItemTier5ThermalPadding.names[par1ItemStack.getItemDamage()];
+	public String getUnlocalizedName(ItemStack itemStack) {
+		if (names.length > itemStack.getItemDamage()) {
+			return "item." + ItemTier5ThermalPadding.names[itemStack.getItemDamage()];
 		}
 
 		return "unnamed";
@@ -70,8 +70,8 @@ public class ItemTier5ThermalPadding extends Item implements IItemThermal {
 	}
 
 	@Override
-	public boolean isValidForSlot(ItemStack stack, int armorSlot) {
-		return stack.getItemDamage() == armorSlot;
+	public boolean isValidForSlot(ItemStack itemStack, int armorSlot) {
+		return itemStack.getItemDamage() == armorSlot;
 	}
 
 	@Override

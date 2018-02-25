@@ -296,11 +296,11 @@ public class MainHandlerClient {
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public void onToolTip(ItemTooltipEvent event) {
-		ItemStack stack = event.itemStack;
-		if (stack != null && stack.getItem() != null) {
-			if (stack.getItem() instanceof UniversalBucket) {
-				if (FluidUtil.getFluidContained(stack) != null && FluidUtil.getFluidContained(stack).getFluid() != null) {
-					FluidStack fluidStack = FluidUtil.getFluidContained(stack);
+		ItemStack itemStack = event.itemStack;
+		if (itemStack != null && itemStack.getItem() != null) {
+			if (itemStack.getItem() instanceof UniversalBucket) {
+				if (FluidUtil.getFluidContained(itemStack) != null && FluidUtil.getFluidContained(itemStack).getFluid() != null) {
+					FluidStack fluidStack = FluidUtil.getFluidContained(itemStack);
 					Fluid fluid = fluidStack.getFluid();
 					if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.GLOWSTONE_FLUID) || fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID)
 							|| fluid.equals(ExtraPlanets_Fluids.MAGMA_FLUID) || fluid.equals(ExtraPlanets_Fluids.METHANE_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) || fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)
@@ -315,10 +315,10 @@ public class MainHandlerClient {
 						event.toolTip.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate("gui.bucket.message.extreme.reactors.compact"));
 					}
 				}
-			} else if (stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Blocks.VOLCANIC_ROCK))) {
+			} else if (itemStack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Blocks.VOLCANIC_ROCK))) {
 				event.toolTip.add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.block"));
 				event.toolTip.add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.volcanic.rock"));
-			} else if (stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT))) {
+			} else if (itemStack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT))) {
 				event.toolTip.add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.decontamination.unit"));
 			}
 		}

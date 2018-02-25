@@ -19,10 +19,10 @@ public class ItemBlockCustomLandingPad extends ItemBlockDesc {
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack par1ItemStack) {
+	public String getUnlocalizedName(ItemStack itemStack) {
 		String name = "";
 
-		switch (par1ItemStack.getItemDamage()) {
+		switch (itemStack.getItemDamage()) {
 		case 0:
 			name = "tier2LandingPad";
 			break;
@@ -41,15 +41,15 @@ public class ItemBlockCustomLandingPad extends ItemBlockDesc {
 	}
 
 	@Override
-	public void onCreated(ItemStack stack, World world, EntityPlayer player) {
-		if (world.isRemote && stack.getItemDamage() == 0 && player instanceof EntityPlayerSP) {
+	public void onCreated(ItemStack itemStack, World world, EntityPlayer player) {
+		if (world.isRemote && itemStack.getItemDamage() == 0 && player instanceof EntityPlayerSP) {
 			ClientProxyCore.playerClientHandler.onBuild(5, (EntityPlayerSP) player);
 		}
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 

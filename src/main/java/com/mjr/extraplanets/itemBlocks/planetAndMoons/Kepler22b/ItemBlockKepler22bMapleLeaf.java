@@ -17,10 +17,10 @@ public class ItemBlockKepler22bMapleLeaf extends ItemBlock {
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack itemstack) {
+	public String getUnlocalizedName(ItemStack itemStack) {
 		String name = "";
 
-		switch (itemstack.getItemDamage()) {
+		switch (itemStack.getItemDamage()) {
 		case 0: {
 			name = "blue_maple_leaf";
 			break;

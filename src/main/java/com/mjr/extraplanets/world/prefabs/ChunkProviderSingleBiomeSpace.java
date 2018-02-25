@@ -236,10 +236,10 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderGenerat
 			for (int cz = chunkZ - 2; cz <= chunkZ + 2; cz++) {
 				for (int x = 0; x < ChunkProviderSingleBiomeSpace.CHUNK_SIZE_X; x++) {
 					for (int z = 0; z < ChunkProviderSingleBiomeSpace.CHUNK_SIZE_Z; z++) {
-						if (Math.abs(this.randFromPoint(cx * 16 + x, (cz * 16 + z) * 1000)) < this.noiseGen5.getNoise(cx * 16 + x, cz * 16 + z) / this.CRATER_PROB) {
-							final Random random = new Random(cx * 16 + x + (cz * 16 + z) * 5000);
-							final EnumCraterSize cSize = EnumCraterSize.sizeArray[random.nextInt(EnumCraterSize.sizeArray.length)];
-							final int size = random.nextInt(cSize.MAX_SIZE - cSize.MIN_SIZE) + cSize.MIN_SIZE + 15;
+						if (Math.abs(this.randomFromPoint(cx * 16 + x, (cz * 16 + z) * 1000)) < this.noiseGen5.getNoise(cx * 16 + x, cz * 16 + z) / this.CRATER_PROB) {
+							final Random rand = new Random(cx * 16 + x + (cz * 16 + z) * 5000);
+							final EnumCraterSize cSize = EnumCraterSize.sizeArray[rand.nextInt(EnumCraterSize.sizeArray.length)];
+							final int size = rand.nextInt(cSize.MAX_SIZE - cSize.MIN_SIZE) + cSize.MIN_SIZE + 15;
 							this.makeCrater(cx * 16 + x, cz * 16 + z, chunkX * 16, chunkZ * 16, size, primer);
 						}
 					}
@@ -281,7 +281,7 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderGenerat
 		return (x * 16 + z) * 256 + y;
 	}
 
-	private double randFromPoint(int x, int z) {
+	private double randomFromPoint(int x, int z) {
 		int n;
 		n = x + z * 57;
 		n = n << 13 ^ n;

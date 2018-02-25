@@ -48,15 +48,15 @@ public class SolarEvaporationChamberRecipeCategory extends BlankRecipeCategory {
 
 	@Override
 	public void setRecipe(@Nonnull IRecipeLayout recipeLayout, @Nonnull IRecipeWrapper recipeWrapper) {
-		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
+		IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 
-		itemstacks.init(0, true, 46, 30);
-		itemstacks.init(1, false, 108, 30);
+		itemStacks.init(0, true, 46, 30);
+		itemStacks.init(1, false, 108, 30);
 
 		if (recipeWrapper instanceof SolarEvaporationChamberRecipeWrapper) {
 			SolarEvaporationChamberRecipeWrapper circuitFabricatorRecipeWrapper = (SolarEvaporationChamberRecipeWrapper) recipeWrapper;
-			itemstacks.setFromRecipe(0, circuitFabricatorRecipeWrapper.getInputs());
-			itemstacks.setFromRecipe(1, circuitFabricatorRecipeWrapper.getOutputs());
+			itemStacks.setFromRecipe(0, circuitFabricatorRecipeWrapper.getInputs());
+			itemStacks.setFromRecipe(1, circuitFabricatorRecipeWrapper.getOutputs());
 		}
 	}
 }

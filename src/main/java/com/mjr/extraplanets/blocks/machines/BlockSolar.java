@@ -72,9 +72,9 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
-		par3List.add(new ItemStack(par1, 1, BlockSolar.HYBRID_METADATA));
-		par3List.add(new ItemStack(par1, 1, BlockSolar.ULTIMATE_METADATA));
+	public void getSubBlocks(Item item, CreativeTabs tabs, List<ItemStack> list) {
+		list.add(new ItemStack(item, 1, BlockSolar.HYBRID_METADATA));
+		list.add(new ItemStack(item, 1, BlockSolar.ULTIMATE_METADATA));
 	}
 
 	@Override
@@ -83,14 +83,14 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 	}
 
 	@Override
-	public boolean canPlaceBlockOnSide(World worldIn, BlockPos pos, EnumFacing side) {
+	public boolean canPlaceBlockOnSide(World world, BlockPos pos, EnumFacing side) {
 		for (int y = 1; y <= 2; y++) {
 			for (int x = -1; x <= 1; x++) {
 				for (int z = -1; z <= 1; z++) {
 					BlockPos posAt = pos.add(y == 2 ? x : 0, y, y == 2 ? z : 0);
-					Block block = worldIn.getBlockState(posAt).getBlock();
+					Block block = world.getBlockState(posAt).getBlock();
 
-					if (block.getMaterial() != Material.air && !block.isReplaceable(worldIn, posAt)) {
+					if (block.getMaterial() != Material.air && !block.isReplaceable(world, posAt)) {
 						return false;
 					}
 				}
@@ -100,7 +100,7 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 		for (int x = -2; x <= 2; x++) {
 			for (int z = -2; z <= 2; z++) {
 				BlockPos posAt = pos.add(x, 0, z);
-				Block block = worldIn.getBlockState(posAt).getBlock();
+				Block block = world.getBlockState(posAt).getBlock();
 
 				if (block == this) {
 					return false;
@@ -112,34 +112,34 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 	}
 
 	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack itemStack) {
 		final int angle = MathHelper.floor_double(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 		int change = EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex();
 
-		if (stack.getItemDamage() >= ULTIMATE_METADATA) {
+		if (itemStack.getItemDamage() >= ULTIMATE_METADATA) {
 			change += ULTIMATE_METADATA;
-		} else if (stack.getItemDamage() >= HYBRID_METADATA) {
+		} else if (itemStack.getItemDamage() >= HYBRID_METADATA) {
 			change += HYBRID_METADATA;
 		}
 
-		worldIn.setBlockState(pos, getStateFromMeta(change), 3);
+		world.setBlockState(pos, getStateFromMeta(change), 3);
 
-		TileEntity tile = worldIn.getTileEntity(pos);
+		TileEntity tile = world.getTileEntity(pos);
 
 		if (tile instanceof TileEntitySolar) {
-			((TileEntitySolar) tile).onCreate(worldIn, pos);
+			((TileEntitySolar) tile).onCreate(world, pos);
 		}
 	}
 
 	@Override
-	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-		final TileEntity var9 = worldIn.getTileEntity(pos);
+	public void breakBlock(World world, BlockPos pos, IBlockState state) {
+		final TileEntity var9 = world.getTileEntity(pos);
 
 		if (var9 instanceof TileEntitySolar) {
 			((TileEntitySolar) var9).onDestroy(var9);
 		}
 
-		super.breakBlock(worldIn, pos, state);
+		super.breakBlock(world, pos, state);
 	}
 
 	@Override
@@ -158,8 +158,8 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 	}
 
 	@Override
-	public boolean onMachineActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumFacing side, float hitX, float hitY, float hitZ) {
-		playerIn.openGui(ExtraPlanets.instance, -1, worldIn, pos.getX(), pos.getY(), pos.getZ());
+	public boolean onMachineActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumFacing side, float hitX, float hitY, float hitZ) {
+		player.openGui(ExtraPlanets.instance, -1, world, pos.getX(), pos.getY(), pos.getZ());
 		return true;
 	}
 
@@ -208,7 +208,7 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 	}
 
 	@Override
-	public boolean isSealed(World worldIn, BlockPos pos, EnumFacing direction) {
+	public boolean isSealed(World world, BlockPos pos, EnumFacing direction) {
 		return true;
 	}
 

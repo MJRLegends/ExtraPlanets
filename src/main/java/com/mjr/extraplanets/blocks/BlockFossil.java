@@ -11,7 +11,7 @@ import com.mjr.mjrlegendslib.block.BlockBasic;
 
 public class BlockFossil extends BlockBasic {
 
-	int randomItem = 0;
+	int randItem = 0;
 
 	protected BlockFossil(Material material) {
 		super(material);

@@ -21,13 +21,13 @@ public class ModelEvolvedGhastBoss extends ModelBase {
 		this.body = new ModelRenderer(this, 0, 0);
 		this.body.addBox(-8.0F, -8.0F, -8.0F, 16, 16, 16);
 		this.body.rotationPointY += 24 + b0;
-		Random random = new Random(1660L);
+		Random rand = new Random(1660L);
 
 		for (int i = 0; i < this.tentacles.length; ++i) {
 			this.tentacles[i] = new ModelRenderer(this, 0, 0);
 			float f = ((i % 3 - i / 3 % 2 * 0.5F + 0.25F) / 2.0F * 2.0F - 1.0F) * 5.0F;
 			float f1 = (i / 3 / 2.0F * 2.0F - 1.0F) * 5.0F;
-			int j = random.nextInt(7) + 8;
+			int j = rand.nextInt(7) + 8;
 			this.tentacles[i].addBox(-1.0F, 0.0F, -1.0F, 2, j, 2);
 			this.tentacles[i].rotationPointX = f;
 			this.tentacles[i].rotationPointZ = f1;

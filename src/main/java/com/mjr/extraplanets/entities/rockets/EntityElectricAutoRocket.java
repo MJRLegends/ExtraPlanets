@@ -525,7 +525,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 				stats.setLaunchpadStack(amountRemoved == 9 ? new ItemStack(GCBlocks.landingPad, 9, 0) : null);
 			}
 
-			this.playSound("random.pop", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
+			this.playSound("rand.pop", 0.2F, ((this.rand.nextFloat() - this.rand.nextFloat()) * 0.7F + 1.0F) * 2.0F);
 		}
 	}
 
@@ -615,7 +615,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	}
 
 	@Override
-	public EnumCargoLoadingState addCargo(ItemStack stack, boolean doAdd) {
+	public EnumCargoLoadingState addCargo(ItemStack itemStack, boolean doAdd) {
 		if (this.getSizeInventory() <= 3) {
 			return EnumCargoLoadingState.NOINVENTORY;
 		}
@@ -623,28 +623,28 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		int count = 0;
 
 		for (count = 0; count < this.cargoItems.length - 2; count++) {
-			ItemStack stackAt = this.cargoItems[count];
+			ItemStack itemStackAt = this.cargoItems[count];
 
-			if (stackAt != null && stackAt.getItem() == stack.getItem() && stackAt.getItemDamage() == stack.getItemDamage() && stackAt.stackSize < stackAt.getMaxStackSize()) {
-				if (stackAt.stackSize + stack.stackSize <= stackAt.getMaxStackSize()) {
+			if (itemStackAt != null && itemStackAt.getItem() == itemStack.getItem() && itemStackAt.getItemDamage() == itemStack.getItemDamage() && itemStackAt.stackSize < itemStackAt.getMaxStackSize()) {
+				if (itemStackAt.stackSize + itemStack.stackSize <= itemStackAt.getMaxStackSize()) {
 					if (doAdd) {
-						this.cargoItems[count].stackSize += stack.stackSize;
+						this.cargoItems[count].stackSize += itemStack.stackSize;
 						this.markDirty();
 					}
 
 					return EnumCargoLoadingState.SUCCESS;
 				} else {
-					// Part of the stack can fill this slot but there will be some left over
-					int origSize = stackAt.stackSize;
-					int surplus = origSize + stack.stackSize - stackAt.getMaxStackSize();
+					// Part of the itemStack can fill this slot but there will be some left over
+					int origSize = itemStackAt.stackSize;
+					int surplus = origSize + itemStack.stackSize - itemStackAt.getMaxStackSize();
 
 					if (doAdd) {
-						this.cargoItems[count].stackSize = stackAt.getMaxStackSize();
+						this.cargoItems[count].stackSize = itemStackAt.getMaxStackSize();
 						this.markDirty();
 					}
 
-					stack.stackSize = surplus;
-					if (this.addCargo(stack, doAdd) == EnumCargoLoadingState.SUCCESS) {
+					itemStack.stackSize = surplus;
+					if (this.addCargo(itemStack, doAdd) == EnumCargoLoadingState.SUCCESS) {
 						return EnumCargoLoadingState.SUCCESS;
 					}
 
@@ -655,11 +655,11 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 		}
 
 		for (count = 0; count < this.cargoItems.length - 2; count++) {
-			ItemStack stackAt = this.cargoItems[count];
+			ItemStack itemStackAt = this.cargoItems[count];
 
-			if (stackAt == null) {
+			if (itemStackAt == null) {
 				if (doAdd) {
-					this.cargoItems[count] = stack;
+					this.cargoItems[count] = itemStack;
 					this.markDirty();
 				}
 
@@ -672,13 +672,13 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	@Override
 	public RemovalResult removeCargo(boolean doRemove) {
 		for (int i = 0; i < this.cargoItems.length - 2; i++) {
-			ItemStack stackAt = this.cargoItems[i];
+			ItemStack itemStackAt = this.cargoItems[i];
 
-			if (stackAt != null) {
-				ItemStack resultStack = stackAt.copy();
+			if (itemStackAt != null) {
+				ItemStack resultStack = itemStackAt.copy();
 				resultStack.stackSize = 1;
 
-				if (doRemove && --stackAt.stackSize <= 0) {
+				if (doRemove && --itemStackAt.stackSize <= 0) {
 					this.cargoItems[i] = null;
 				}
 
@@ -758,7 +758,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int i, ItemStack itemStack) {
 		return false;
 	}
 

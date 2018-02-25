@@ -9,16 +9,16 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 public class EntitySmallSnowball extends EntitySnowball {
-	public EntitySmallSnowball(World worldIn) {
-		super(worldIn);
+	public EntitySmallSnowball(World world) {
+		super(world);
 	}
 
-	public EntitySmallSnowball(World worldIn, EntityLivingBase throwerIn) {
-		super(worldIn, throwerIn);
+	public EntitySmallSnowball(World world, EntityLivingBase throwerIn) {
+		super(world, throwerIn);
 	}
 
-	public EntitySmallSnowball(World worldIn, double x, double y, double z) {
-		super(worldIn, x, y, z);
+	public EntitySmallSnowball(World world, double x, double y, double z) {
+		super(world, x, y, z);
 	}
 
 	/**

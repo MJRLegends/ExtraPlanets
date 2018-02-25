@@ -53,7 +53,7 @@ public class ContainerBasicDecrystallizer extends Container {
 	}
 
 	/**
-	 * Called to transfer a stack from one inventory to the other eg. when shift clicking.
+	 * Called to transfer a itemStack from one inventory to the other eg. when shift clicking.
 	 */
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {

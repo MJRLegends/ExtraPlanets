@@ -70,15 +70,15 @@ public class MapGenVillageMercury extends MapGenStructure {
 			j -= numChunks - 1;
 		}
 
-		int randX = i / numChunks;
-		int randZ = j / numChunks;
+		int randomX = i / numChunks;
+		int randomZ = j / numChunks;
 		final Random var7 = this.worldObj.setRandomSeed(i, j, 10387312);
-		randX *= numChunks;
-		randZ *= numChunks;
-		randX += var7.nextInt(numChunks - offsetChunks);
-		randZ += var7.nextInt(numChunks - offsetChunks);
+		randomX *= numChunks;
+		randomZ *= numChunks;
+		randomX += var7.nextInt(numChunks - offsetChunks);
+		randomZ += var7.nextInt(numChunks - offsetChunks);
 
-		return oldi == randX && oldj == randZ;
+		return oldi == randomX && oldj == randomZ;
 
 	}
 

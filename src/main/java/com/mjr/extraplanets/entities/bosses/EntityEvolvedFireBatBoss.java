@@ -37,8 +37,8 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	/** Coordinates of where the bat spawned. */
 	private BlockPos spawnPosition;
 
-	public EntityEvolvedFireBatBoss(World worldIn) {
-		super(worldIn);
+	public EntityEvolvedFireBatBoss(World world) {
+		super(world);
 		this.setSize(6.5F, 6.9F);
 		this.isImmuneToFire = true;
 		this.tasks.addTask(7, new EntityEvolvedFireBatBoss.AIFireballAttack(this));
@@ -297,8 +297,8 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	}
 
 	@Override
-	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+	public EntityItem entityDropItem(ItemStack itemStack, float par2) {
+		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, itemStack);
 		entityitem.motionY = -2.0D;
 		entityitem.setDefaultPickupDelay();
 		if (this.captureDrops) {
@@ -326,11 +326,11 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList;
+		List<ItemStack> itemStackList;
 		if (Config.MORE_PLANETS_COMPATIBILITY)
-			stackList = GalacticraftRegistry.getDungeonLoot(4);
+			itemStackList = GalacticraftRegistry.getDungeonLoot(4);
 		else
-			stackList = GalacticraftRegistry.getDungeonLoot(5);
-		return stackList.get(rand.nextInt(stackList.size())).copy();
+			itemStackList = GalacticraftRegistry.getDungeonLoot(5);
+		return itemStackList.get(rand.nextInt(itemStackList.size())).copy();
 	}
 }

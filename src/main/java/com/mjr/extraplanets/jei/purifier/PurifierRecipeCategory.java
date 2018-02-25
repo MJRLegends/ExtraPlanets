@@ -73,13 +73,13 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 
 	@Override
 	public void setRecipe(@Nonnull IRecipeLayout recipeLayout, @Nonnull IRecipeWrapper recipeWrapper) {
-		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
+		IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 
-		itemstacks.init(0, true, 3, 2);
-		itemstacks.init(1, true, 28, 2);
-		itemstacks.init(2, true, 69, 31);
-		itemstacks.init(3, false, 28, 2);
-		itemstacks.init(4, false, 118, 2);
+		itemStacks.init(0, true, 3, 2);
+		itemStacks.init(1, true, 28, 2);
+		itemStacks.init(2, true, 69, 31);
+		itemStacks.init(3, false, 28, 2);
+		itemStacks.init(4, false, 118, 2);
 
 		if (recipeWrapper instanceof PurifierRecipeWrapper) {
 			PurifierRecipeWrapper circuitFabricatorRecipeWrapper = (PurifierRecipeWrapper) recipeWrapper;
@@ -88,7 +88,7 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 			for (int i = 0; i < inputs.size(); ++i) {
 				Object o = inputs.get(i);
 				if (o != null) {
-					itemstacks.setFromRecipe(i, o);
+					itemStacks.setFromRecipe(i, o);
 				}
 			}
 
@@ -97,7 +97,7 @@ public class PurifierRecipeCategory extends BlankRecipeCategory {
 			for (int i = 0; i < outputs.size(); ++i) {
 				Object o = outputs.get(i);
 				if (o != null) {
-					itemstacks.setFromRecipe(i + 3, o);
+					itemStacks.setFromRecipe(i + 3, o);
 				}
 			}
 		}

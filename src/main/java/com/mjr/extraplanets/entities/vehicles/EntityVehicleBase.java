@@ -314,7 +314,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 		}
 
 		if (this.inWater && this.speed > 0.2D) {
-			this.worldObj.playSoundEffect((float) this.posX, (float) this.posY, (float) this.posZ, "random.fizz", 0.5F, 2.6F + (this.worldObj.rand.nextFloat() - this.worldObj.rand.nextFloat()) * 0.8F);
+			this.worldObj.playSoundEffect((float) this.posX, (float) this.posY, (float) this.posZ, "rand.fizz", 0.5F, 2.6F + (this.worldObj.rand.nextFloat() - this.worldObj.rand.nextFloat()) * 0.8F);
 		}
 
 		this.speed *= 0.98D;
@@ -494,24 +494,24 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	}
 
 	@Override
-	public boolean interactFirst(EntityPlayer playerIn) {
+	public boolean interactFirst(EntityPlayer player) {
 		if (this.worldObj.isRemote) {
 			if (this.riddenByEntity == null) {
-				PlayerUtilties.sendMessage(playerIn, GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - "
+				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - "
 						+ TranslateUtilities.translate("gui.buggy.turn.name"));
-				PlayerUtilties.sendMessage(playerIn, GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.accel.name"));
-				PlayerUtilties.sendMessage(playerIn, GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.decel.name"));
-				PlayerUtilties.sendMessage(playerIn, GameSettings.getKeyDisplayString(KeyHandlerClient.openFuelGui.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.inv.name"));
+				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.accel.name"));
+				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.decel.name"));
+				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.openFuelGui.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.inv.name"));
 			}
 
 			return true;
 		} else {
 			if (this.riddenByEntity != null) {
-				if (this.riddenByEntity == playerIn)
-					playerIn.mountEntity(null);
+				if (this.riddenByEntity == player)
+					player.mountEntity(null);
 				return true;
 			} else {
-				playerIn.mountEntity(this);
+				player.mountEntity(this);
 				return true;
 			}
 		}
@@ -547,7 +547,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int i, ItemStack itemStack) {
 		return false;
 	}
 
@@ -565,7 +565,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	}
 
 	@Override
-	public EnumCargoLoadingState addCargo(ItemStack stack, boolean doAdd) {
+	public EnumCargoLoadingState addCargo(ItemStack itemStack, boolean doAdd) {
 		if (this.roverType == 0) {
 			return EnumCargoLoadingState.NOINVENTORY;
 		}
@@ -573,28 +573,28 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 		int count = 0;
 
 		for (count = 0; count < this.cargoItems.length; count++) {
-			ItemStack stackAt = this.cargoItems[count];
+			ItemStack itemStackAt = this.cargoItems[count];
 
-			if (stackAt != null && stackAt.getItem() == stack.getItem() && stackAt.getItemDamage() == stack.getItemDamage() && stackAt.stackSize < stackAt.getMaxStackSize()) {
-				if (stackAt.stackSize + stack.stackSize <= stackAt.getMaxStackSize()) {
+			if (itemStackAt != null && itemStackAt.getItem() == itemStack.getItem() && itemStackAt.getItemDamage() == itemStack.getItemDamage() && itemStackAt.stackSize < itemStackAt.getMaxStackSize()) {
+				if (itemStackAt.stackSize + itemStack.stackSize <= itemStackAt.getMaxStackSize()) {
 					if (doAdd) {
-						this.cargoItems[count].stackSize += stack.stackSize;
+						this.cargoItems[count].stackSize += itemStack.stackSize;
 						this.markDirty();
 					}
 
 					return EnumCargoLoadingState.SUCCESS;
 				} else {
-					// Part of the stack can fill this slot but there will be some left over
-					int origSize = stackAt.stackSize;
-					int surplus = origSize + stack.stackSize - stackAt.getMaxStackSize();
+					// Part of the itemStack can fill this slot but there will be some left over
+					int origSize = itemStackAt.stackSize;
+					int surplus = origSize + itemStack.stackSize - itemStackAt.getMaxStackSize();
 
 					if (doAdd) {
-						this.cargoItems[count].stackSize = stackAt.getMaxStackSize();
+						this.cargoItems[count].stackSize = itemStackAt.getMaxStackSize();
 						this.markDirty();
 					}
 
-					stack.stackSize = surplus;
-					if (this.addCargo(stack, doAdd) == EnumCargoLoadingState.SUCCESS) {
+					itemStack.stackSize = surplus;
+					if (this.addCargo(itemStack, doAdd) == EnumCargoLoadingState.SUCCESS) {
 						return EnumCargoLoadingState.SUCCESS;
 					}
 
@@ -605,11 +605,11 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 		}
 
 		for (count = 0; count < this.cargoItems.length; count++) {
-			ItemStack stackAt = this.cargoItems[count];
+			ItemStack itemStackAt = this.cargoItems[count];
 
-			if (stackAt == null) {
+			if (itemStackAt == null) {
 				if (doAdd) {
-					this.cargoItems[count] = stack;
+					this.cargoItems[count] = itemStack;
 					this.markDirty();
 				}
 
@@ -623,13 +623,13 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	@Override
 	public RemovalResult removeCargo(boolean doRemove) {
 		for (int i = 0; i < this.cargoItems.length; i++) {
-			ItemStack stackAt = this.cargoItems[i];
+			ItemStack itemStackAt = this.cargoItems[i];
 
-			if (stackAt != null) {
-				ItemStack resultStack = stackAt.copy();
+			if (itemStackAt != null) {
+				ItemStack resultStack = itemStackAt.copy();
 				resultStack.stackSize = 1;
 
-				if (doRemove && --stackAt.stackSize <= 0) {
+				if (doRemove && --itemStackAt.stackSize <= 0) {
 					this.cargoItems[i] = null;
 				}
 

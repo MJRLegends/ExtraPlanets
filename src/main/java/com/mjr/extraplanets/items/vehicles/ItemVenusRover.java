@@ -41,25 +41,25 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
+	public void getSubItems(Item item, CreativeTabs tabs, List<ItemStack> list) {
 		for (int i = 0; i < 4; i++) {
-			par3List.add(new ItemStack(par1, 1, i));
+			list.add(new ItemStack(item, 1, i));
 		}
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
+	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer entityPlayer) {
 		final float var4 = 1.0F;
-		final float var5 = par3EntityPlayer.prevRotationPitch + (par3EntityPlayer.rotationPitch - par3EntityPlayer.prevRotationPitch) * var4;
-		final float var6 = par3EntityPlayer.prevRotationYaw + (par3EntityPlayer.rotationYaw - par3EntityPlayer.prevRotationYaw) * var4;
-		final double var7 = par3EntityPlayer.prevPosX + (par3EntityPlayer.posX - par3EntityPlayer.prevPosX) * var4;
-		final double var9 = par3EntityPlayer.prevPosY + (par3EntityPlayer.posY - par3EntityPlayer.prevPosY) * var4 + 1.62D - par3EntityPlayer.getYOffset();
-		final double var11 = par3EntityPlayer.prevPosZ + (par3EntityPlayer.posZ - par3EntityPlayer.prevPosZ) * var4;
+		final float var5 = entityPlayer.prevRotationPitch + (entityPlayer.rotationPitch - entityPlayer.prevRotationPitch) * var4;
+		final float var6 = entityPlayer.prevRotationYaw + (entityPlayer.rotationYaw - entityPlayer.prevRotationYaw) * var4;
+		final double var7 = entityPlayer.prevPosX + (entityPlayer.posX - entityPlayer.prevPosX) * var4;
+		final double var9 = entityPlayer.prevPosY + (entityPlayer.posY - entityPlayer.prevPosY) * var4 + 1.62D - entityPlayer.getYOffset();
+		final double var11 = entityPlayer.prevPosZ + (entityPlayer.posZ - entityPlayer.prevPosZ) * var4;
 		final Vec3 var13 = new Vec3(var7, var9, var11);
 		final float var14 = MathHelper.cos(-var6 / Constants.RADIANS_TO_DEGREES - (float) Math.PI);
 		final float var15 = MathHelper.sin(-var6 / Constants.RADIANS_TO_DEGREES - (float) Math.PI);
@@ -69,15 +69,15 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 		final float var20 = var14 * var16;
 		final double var21 = 5.0D;
 		final Vec3 var23 = var13.addVector(var18 * var21, var17 * var21, var20 * var21);
-		final MovingObjectPosition var24 = par2World.rayTraceBlocks(var13, var23, true);
+		final MovingObjectPosition var24 = world.rayTraceBlocks(var13, var23, true);
 
 		if (var24 == null) {
-			return par1ItemStack;
+			return itemStack;
 		} else {
-			final Vec3 var25 = par3EntityPlayer.getLook(var4);
+			final Vec3 var25 = entityPlayer.getLook(var4);
 			boolean var26 = false;
 			final float var27 = 1.0F;
-			final List<?> var28 = par2World.getEntitiesWithinAABBExcludingEntity(par3EntityPlayer, par3EntityPlayer.getEntityBoundingBox().addCoord(var25.xCoord * var21, var25.yCoord * var21, var25.zCoord * var21).expand(var27, var27, var27));
+			final List<?> var28 = world.getEntitiesWithinAABBExcludingEntity(entityPlayer, entityPlayer.getEntityBoundingBox().addCoord(var25.xCoord * var21, var25.yCoord * var21, var25.zCoord * var21).expand(var27, var27, var27));
 			int var29;
 
 			for (var29 = 0; var29 < var28.size(); ++var29) {
@@ -94,42 +94,42 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 			}
 
 			if (var26) {
-				return par1ItemStack;
+				return itemStack;
 			} else {
 				if (var24.typeOfHit == MovingObjectType.BLOCK) {
 					var29 = var24.getBlockPos().getX();
 					int var33 = var24.getBlockPos().getY();
 					final int var34 = var24.getBlockPos().getZ();
 
-					if (par2World.getBlockState(new BlockPos(var29, var33, var34)) == Blocks.snow) {
+					if (world.getBlockState(new BlockPos(var29, var33, var34)) == Blocks.snow) {
 						--var33;
 					}
 
-					final EntityVenusRover var35 = new EntityVenusRover(par2World, var29 + 0.5F, var33 + 1.0F, var34 + 0.5F, par1ItemStack.getItemDamage());
+					final EntityVenusRover var35 = new EntityVenusRover(world, var29 + 0.5F, var33 + 1.0F, var34 + 0.5F, itemStack.getItemDamage());
 
-					if (!par2World.getCollidingBoundingBoxes(var35, var35.getEntityBoundingBox().expand(-0.1D, -0.1D, -0.1D)).isEmpty()) {
-						return par1ItemStack;
+					if (!world.getCollidingBoundingBoxes(var35, var35.getEntityBoundingBox().expand(-0.1D, -0.1D, -0.1D)).isEmpty()) {
+						return itemStack;
 					}
 
-					if (!par2World.isRemote) {
-						par2World.spawnEntityInWorld(var35);
+					if (!world.isRemote) {
+						world.spawnEntityInWorld(var35);
 					}
 
-					if (!par3EntityPlayer.capabilities.isCreativeMode) {
-						--par1ItemStack.stackSize;
+					if (!entityPlayer.capabilities.isCreativeMode) {
+						--itemStack.stackSize;
 					}
 				}
 
-				return par1ItemStack;
+				return itemStack;
 			}
 		}
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List<String> par2List, boolean b) {
-		if (par1ItemStack.getItemDamage() != 0) {
-			par2List.add(TranslateUtilities.translate("gui.buggy.storage_space") + ": " + par1ItemStack.getItemDamage() * 18);
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> par2List, boolean b) {
+		if (itemStack.getItemDamage() != 0) {
+			par2List.add(TranslateUtilities.translate("gui.buggy.storage_space") + ": " + itemStack.getItemDamage() * 18);
 		}
 		par2List.add(EnumColor.AQUA + TranslateUtilities.translate("gui.rover.information"));
 		par2List.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate("gui.rover.information.2"));

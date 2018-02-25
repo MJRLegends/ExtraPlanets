@@ -42,8 +42,8 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEntityBreathable {
 	private int explosionStrength = 1;
 
-	public EntityEvolvedGhastBoss(World worldIn) {
-		super(worldIn);
+	public EntityEvolvedGhastBoss(World world) {
+		super(world);
 		this.setSize(4.0F, 4.0F);
 		this.isImmuneToFire = true;
 		this.experienceValue = 5;
@@ -343,10 +343,10 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 		 */
 		@Override
 		public void startExecuting() {
-			Random random = this.parentEntity.getRNG();
-			double d0 = this.parentEntity.posX + (random.nextFloat() * 2.0F - 1.0F) * 16.0F;
-			double d1 = this.parentEntity.posY + (random.nextFloat() * 2.0F - 1.0F) * 16.0F;
-			double d2 = this.parentEntity.posZ + (random.nextFloat() * 2.0F - 1.0F) * 16.0F;
+			Random rand = this.parentEntity.getRNG();
+			double d0 = this.parentEntity.posX + (rand.nextFloat() * 2.0F - 1.0F) * 16.0F;
+			double d1 = this.parentEntity.posY + (rand.nextFloat() * 2.0F - 1.0F) * 16.0F;
+			double d2 = this.parentEntity.posZ + (rand.nextFloat() * 2.0F - 1.0F) * 16.0F;
 			this.parentEntity.getMoveHelper().setMoveTo(d0, d1, d2, 1.0D);
 		}
 	}
@@ -426,8 +426,8 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	}
 
 	@Override
-	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+	public EntityItem entityDropItem(ItemStack itemStack, float par2) {
+		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, itemStack);
 		entityitem.motionY = -2.0D;
 		entityitem.setDefaultPickupDelay();
 		if (this.captureDrops) {
@@ -455,11 +455,11 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 
 	@Override
 	public ItemStack getGuaranteedLoot(Random rand) {
-		List<ItemStack> stackList;
+		List<ItemStack> itemStackList;
 		if (Config.MORE_PLANETS_COMPATIBILITY)
-			stackList = GalacticraftRegistry.getDungeonLoot(5);
+			itemStackList = GalacticraftRegistry.getDungeonLoot(5);
 		else
-			stackList = GalacticraftRegistry.getDungeonLoot(6);
-		return stackList.get(rand.nextInt(stackList.size())).copy();
+			itemStackList = GalacticraftRegistry.getDungeonLoot(6);
+		return itemStackList.get(rand.nextInt(itemStackList.size())).copy();
 	}
 }

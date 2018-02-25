@@ -26,7 +26,7 @@ public class ItemThermalCloth extends Item {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
@@ -36,14 +36,14 @@ public class ItemThermalCloth extends Item {
 	}
 
 	@Override
-	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
+	public void getSubItems(Item item, CreativeTabs tabs, List<ItemStack> list) {
 		for (int i = 0; i < ItemThermalCloth.names.length; i++) {
-			par3List.add(new ItemStack(par1, 1, i));
+			list.add(new ItemStack(item, 1, i));
 		}
 	}
 
 	@Override
-	public int getMetadata(int par1) {
-		return par1;
+	public int getMetadata(int item) {
+		return item;
 	}
 }

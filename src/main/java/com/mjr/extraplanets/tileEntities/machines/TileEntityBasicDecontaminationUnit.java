@@ -247,7 +247,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 	}
 
 	@Override
-	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction) {
+	public boolean canExtractItem(int index, ItemStack itemStack, EnumFacing direction) {
 		return index == 0;
 	}
 

@@ -69,7 +69,7 @@ public class BlockCandyBlocksHorizontal extends Block implements IDetectableReso
 	}
 
 	@Override
-	public float getBlockHardness(World worldIn, BlockPos pos) {
+	public float getBlockHardness(World world, BlockPos pos) {
 		return 1.5F;
 	}
 
@@ -85,15 +85,15 @@ public class BlockCandyBlocksHorizontal extends Block implements IDetectableReso
 	}
 
 	@Override
-	public int quantityDropped(IBlockState state, int fortune, Random random) {
+	public int quantityDropped(IBlockState state, int fortune, Random rand) {
 		return 1;
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
+	public void getSubBlocks(Item item, CreativeTabs tabs, List<ItemStack> list) {
 		for (EnumBlockBasic blockBasic : EnumBlockBasic.values()) {
-			par3List.add(new ItemStack(par1, 1, blockBasic.getMeta()));
+			list.add(new ItemStack(item, 1, blockBasic.getMeta()));
 		}
 	}
 

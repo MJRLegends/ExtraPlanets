@@ -14,7 +14,7 @@ public class T9TreasureChest extends BlockTier1TreasureChest {
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
+	public TileEntity createNewTileEntity(World world, int meta) {
 		return new TileEntityT9TreasureChest();
 	}
 

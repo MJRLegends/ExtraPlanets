@@ -18,7 +18,7 @@ public class MapGenRavineKepler22b extends MapGenBase {
 
 	protected void func_180707_a(long p_180707_1_, int p_180707_3_, int p_180707_4_, ChunkPrimer p_180707_5_, double p_180707_6_, double p_180707_8_, double p_180707_10_, float p_180707_12_, float p_180707_13_, float p_180707_14_, int p_180707_15_,
 			int p_180707_16_, double p_180707_17_) {
-		Random random = new Random(p_180707_1_);
+		Random rand = new Random(p_180707_1_);
 		double d0 = p_180707_3_ * 16 + 8;
 		double d1 = p_180707_4_ * 16 + 8;
 		float f = 0.0F;
@@ -26,7 +26,7 @@ public class MapGenRavineKepler22b extends MapGenBase {
 
 		if (p_180707_16_ <= 0) {
 			int i = this.range * 16 - 16;
-			p_180707_16_ = i - random.nextInt(i / 4);
+			p_180707_16_ = i - rand.nextInt(i / 4);
 		}
 
 		boolean flag1 = false;
@@ -39,8 +39,8 @@ public class MapGenRavineKepler22b extends MapGenBase {
 		float f2 = 1.0F;
 
 		for (int j = 0; j < 256; ++j) {
-			if (j == 0 || random.nextInt(3) == 0) {
-				f2 = 1.0F + random.nextFloat() * random.nextFloat() * 1.0F;
+			if (j == 0 || rand.nextInt(3) == 0) {
+				f2 = 1.0F + rand.nextFloat() * rand.nextFloat() * 1.0F;
 			}
 
 			this.field_75046_d[j] = f2 * f2;
@@ -49,8 +49,8 @@ public class MapGenRavineKepler22b extends MapGenBase {
 		for (; p_180707_15_ < p_180707_16_; ++p_180707_15_) {
 			double d9 = 1.5D + MathHelper.sin(p_180707_15_ * Constants.floatPI / p_180707_16_) * p_180707_12_ * 1.0F;
 			double d2 = d9 * p_180707_17_;
-			d9 = d9 * (random.nextFloat() * 0.25D + 0.75D);
-			d2 = d2 * (random.nextFloat() * 0.25D + 0.75D);
+			d9 = d9 * (rand.nextFloat() * 0.25D + 0.75D);
+			d2 = d2 * (rand.nextFloat() * 0.25D + 0.75D);
 			float f3 = MathHelper.cos(p_180707_14_);
 			float f4 = MathHelper.sin(p_180707_14_);
 			p_180707_6_ += MathHelper.cos(p_180707_13_) * f3;
@@ -61,10 +61,10 @@ public class MapGenRavineKepler22b extends MapGenBase {
 			p_180707_13_ += f * 0.05F;
 			f1 = f1 * 0.8F;
 			f = f * 0.5F;
-			f1 = f1 + (random.nextFloat() - random.nextFloat()) * random.nextFloat() * 2.0F;
-			f = f + (random.nextFloat() - random.nextFloat()) * random.nextFloat() * 4.0F;
+			f1 = f1 + (rand.nextFloat() - rand.nextFloat()) * rand.nextFloat() * 2.0F;
+			f = f + (rand.nextFloat() - rand.nextFloat()) * rand.nextFloat() * 4.0F;
 
-			if (flag1 || random.nextInt(4) != 0) {
+			if (flag1 || rand.nextInt(4) != 0) {
 				double d3 = p_180707_6_ - d0;
 				double d4 = p_180707_10_ - d1;
 				double d5 = p_180707_16_ - p_180707_15_;
@@ -158,7 +158,7 @@ public class MapGenRavineKepler22b extends MapGenBase {
 	}
 
 	@Override
-	protected void recursiveGenerate(World worldIn, int chunkX, int chunkZ, int p_180701_4_, int p_180701_5_, ChunkPrimer chunkPrimerIn) {
+	protected void recursiveGenerate(World world, int chunkX, int chunkZ, int p_180701_4_, int p_180701_5_, ChunkPrimer chunkPrimerIn) {
 		if (this.rand.nextInt(50) == 0) {
 			double d0 = chunkX * 16 + this.rand.nextInt(16);
 			double d1 = this.rand.nextInt(this.rand.nextInt(40) + 8) + 20;

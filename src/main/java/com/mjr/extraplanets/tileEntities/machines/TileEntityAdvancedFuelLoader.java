@@ -142,14 +142,14 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 	}
 
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		return this.isItemValidForSlot(slotID, itemstack);
+	public boolean canInsertItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		return this.isItemValidForSlot(slotID, itemStack);
 	}
 
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (slotID == 1 && itemstack != null) {
-			return FluidUtil.isEmptyContainer(itemstack);
+	public boolean canExtractItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (slotID == 1 && itemStack != null) {
+			return FluidUtil.isEmptyContainer(itemStack);
 		}
 		return false;
 	}
@@ -160,8 +160,8 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
-		return (slotID == 1 && itemstack != null && itemstack.getItem() == GCItems.fuelCanister) || (slotID == 0 ? ItemElectricBase.isElectricItem(itemstack.getItem()) : false);
+	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
+		return (slotID == 1 && itemStack != null && itemStack.getItem() == GCItems.fuelCanister) || (slotID == 0 ? ItemElectricBase.isElectricItem(itemStack.getItem()) : false);
 	}
 
 	@Override

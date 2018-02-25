@@ -13,7 +13,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeDecoratorIoOther extends BiomeDecorator {
 	private World worldObj;
-	private Random randomGenerator;
+	private Random randGenerator;
 
 	private WorldGenerator volcanicRockGen;
 
@@ -25,26 +25,26 @@ public class BiomeDecoratorIoOther extends BiomeDecorator {
 	}
 
 	@Override
-	public void decorate(World worldIn, Random random, BiomeGenBase p_180292_3_, BlockPos pos) {
+	public void decorate(World world, Random rand, BiomeGenBase p_180292_3_, BlockPos pos) {
 		if (this.worldObj != null) {
 			throw new RuntimeException("Already decorating!!");
 		} else {
-			this.worldObj = worldIn;
-			this.randomGenerator = random;
+			this.worldObj = world;
+			this.randGenerator = rand;
 			this.field_180294_c = pos;
 			this.generate();
 			this.worldObj = null;
-			this.randomGenerator = null;
+			this.randGenerator = null;
 		}
 	}
 
 	private void genStandardOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY) {
 		World currentWorld = this.worldObj;
 		for (int var5 = 0; var5 < amountPerChunk; ++var5) {
-			final int var6 = this.field_180294_c.getX() + this.randomGenerator.nextInt(16);
-			final int var7 = this.randomGenerator.nextInt(maxY - minY) + minY;
-			final int var8 = this.field_180294_c.getZ() + this.randomGenerator.nextInt(16);
-			worldGenerator.generate(currentWorld, this.randomGenerator, new BlockPos(var6, var7, var8));
+			final int var6 = this.field_180294_c.getX() + this.randGenerator.nextInt(16);
+			final int var7 = this.randGenerator.nextInt(maxY - minY) + minY;
+			final int var8 = this.field_180294_c.getZ() + this.randGenerator.nextInt(16);
+			worldGenerator.generate(currentWorld, this.randGenerator, new BlockPos(var6, var7, var8));
 		}
 	}
 

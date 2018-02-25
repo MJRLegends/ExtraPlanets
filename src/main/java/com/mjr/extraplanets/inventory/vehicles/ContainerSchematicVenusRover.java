@@ -87,7 +87,7 @@ public class ContainerSchematicVenusRover extends Container {
 	}
 
 	/**
-	 * Called to transfer a stack from one inventory to the other eg. when shift clicking.
+	 * Called to transfer a itemStack from one inventory to the other eg. when shift clicking.
 	 */
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
@@ -143,9 +143,9 @@ public class ContainerSchematicVenusRover extends Container {
 		return var2;
 	}
 
-	protected boolean mergeOneItem(ItemStack par1ItemStack, int par2, int par3, boolean par4) {
+	protected boolean mergeOneItem(ItemStack itemStack, int par2, int par3, boolean par4) {
 		boolean flag1 = false;
-		if (par1ItemStack.stackSize > 0) {
+		if (itemStack.stackSize > 0) {
 			Slot slot;
 			ItemStack slotStack;
 
@@ -154,10 +154,10 @@ public class ContainerSchematicVenusRover extends Container {
 				slotStack = slot.getStack();
 
 				if (slotStack == null) {
-					ItemStack stackOneItem = par1ItemStack.copy();
-					stackOneItem.stackSize = 1;
-					par1ItemStack.stackSize--;
-					slot.putStack(stackOneItem);
+					ItemStack itemStackOneItem = itemStack.copy();
+					itemStackOneItem.stackSize = 1;
+					itemStack.stackSize--;
+					slot.putStack(itemStackOneItem);
 					slot.onSlotChanged();
 					flag1 = true;
 					break;
