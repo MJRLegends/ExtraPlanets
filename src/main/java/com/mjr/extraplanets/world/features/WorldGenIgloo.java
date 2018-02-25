@@ -244,8 +244,8 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 7, y + 4, z + 8), Blocks.snow.getDefaultState(), 3);
 
 		// Determined if loot should be generated using a 1/2 chance
-		int rand = rand.nextInt(10) + 1;
-		if (rand < 5) {
+		int random = rand.nextInt(10) + 1;
+		if (random < 5) {
 			TileEntityChest chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 9, y + 1, z + 5));
 
 			if (chest != null) {
@@ -526,8 +526,8 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 7, y + 6, z + 8), Blocks.snow.getDefaultState(), 3);
 
 		// Determined if loot should be generated using a 1/2 chance
-		int rand = rand.nextInt(10) + 1;
-		if (rand < 5) {
+		int random = rand.nextInt(10) + 1;
+		if (random < 5) {
 			if (Config.DEBUG_MODE)
 				MessageUtilities.debugMessageToLog(Constants.modID, "Loot Spawned!");
 			TileEntityChest chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 9, y + 3, z + 5));

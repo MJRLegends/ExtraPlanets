@@ -686,8 +686,8 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		int x = position.getX();
 		int y = position.getY();
 		int z = position.getZ();
-		int rand = rand.nextInt(15) + 1;
-		if (rand < 5) {
+		int random = rand.nextInt(15) + 1;
+		if (random < 5) {
 			if (Config.DEBUG_MODE)
 				MessageUtilities.debugMessageToLog(Constants.modID, "Loot Spawned!");
 			int lastNumber = 0;

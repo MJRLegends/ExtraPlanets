@@ -352,8 +352,8 @@ public class WorldGenBlueTower extends WorldGenerator {
 		int y = position.getY();
 		int z = position.getZ();
 		// Determined if loot should be generated using a 1/2 chance
-		int rand = rand.nextInt(10) + 1;
-		if (rand <= 6) {
+		int random = rand.nextInt(10) + 1;
+		if (random <= 6) {
 			TileEntityChest chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 5, y + 6, z + 5));
 
 			if (chest != null) {

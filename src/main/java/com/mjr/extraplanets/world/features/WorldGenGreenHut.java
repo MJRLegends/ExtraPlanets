@@ -534,8 +534,8 @@ public class WorldGenGreenHut extends WorldGenerator {
 		int y = position.getY();
 		int z = position.getZ();
 		// Determined if loot should be generated using a 1/2 chance
-		int rand = rand.nextInt(10) + 1;
-		if (rand < 5) {
+		int random = rand.nextInt(10) + 1;
+		if (random < 5) {
 			TileEntityChest chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 2, y + 3, z + 2));
 
 			if (chest != null) {
