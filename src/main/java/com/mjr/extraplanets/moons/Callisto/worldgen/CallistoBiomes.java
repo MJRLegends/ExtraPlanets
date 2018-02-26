@@ -11,7 +11,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.ChunkPrimer;
 
-import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
 import com.mjr.extraplanets.moons.Callisto.worldgen.biomes.BiomeGenCallisto;
@@ -21,10 +20,8 @@ import com.mjr.extraplanets.moons.Callisto.worldgen.biomes.BiomeGenCallistoShale
 public class CallistoBiomes extends BiomeGenBaseGC {
 
 	public static final Biome callisto = new BiomeGenCallisto(new BiomeProperties("Callisto").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());
-	public static final Biome callistoShaleLargeMountains = new BiomeGenCallistoShaleMountains(new BiomeProperties("Callisto Shale Small Mountains").setBaseHeight(1.0F).setHeightVariation(1.5F).setRainfall(0.0F).setRainDisabled(),
-			Config.CALLISTO_LARGE_SHALE_MOUNTAINS_BIOME_ID);
-	public static final Biome callistoShaleSmallMountains = new BiomeGenCallistoShaleMountains(new BiomeProperties("Callisto Shale Large Mountains").setBaseHeight(3.0F).setHeightVariation(3.0F).setRainfall(0.0F).setRainDisabled(),
-			Config.CALLISTO_SMALL_SHALE_MOUNTAINS_BIOME_ID);
+	public static final Biome callistoShaleLargeMountains = new BiomeGenCallistoShaleMountains(new BiomeProperties("Callisto Shale Small Mountains").setBaseHeight(1.0F).setHeightVariation(1.5F).setRainfall(0.0F).setRainDisabled());
+	public static final Biome callistoShaleSmallMountains = new BiomeGenCallistoShaleMountains(new BiomeProperties("Callisto Shale Large Mountains").setBaseHeight(3.0F).setHeightVariation(3.0F).setRainfall(0.0F).setRainDisabled());
 	public static final Biome callistoSaltSea = new BiomeGenCallistoSaltSea(new BiomeProperties("Callisto Salt Sea").setBaseHeight(-1.0F).setHeightVariation(0.0F).setRainfall(0.0F).setRainDisabled());
 
 	protected CallistoBiomes(BiomeProperties properties) {

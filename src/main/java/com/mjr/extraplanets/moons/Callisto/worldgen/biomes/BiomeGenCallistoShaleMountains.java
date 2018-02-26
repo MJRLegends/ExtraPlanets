@@ -9,7 +9,7 @@ import com.mjr.extraplanets.moons.Callisto.worldgen.CallistoBiomes;
 
 public class BiomeGenCallistoShaleMountains extends CallistoBiomes {
 
-	public BiomeGenCallistoShaleMountains(BiomeProperties properties, int id) {
+	public BiomeGenCallistoShaleMountains(BiomeProperties properties) {
 		super(properties);
 		if (Config.REGISTER_BIOME_TYPES)
 			BiomeDictionary.registerBiomeType(this, BiomeDictionary.Type.COLD, BiomeDictionary.Type.DRY, BiomeDictionary.Type.DEAD, BiomeDictionary.Type.DENSE, BiomeDictionary.Type.MOUNTAIN);
