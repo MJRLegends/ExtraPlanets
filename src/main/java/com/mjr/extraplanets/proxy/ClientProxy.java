@@ -164,8 +164,8 @@ import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier7Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier8Items;
 import com.mjr.extraplanets.items.planetAndMoonItems.ItemTier9Items;
 import com.mjr.extraplanets.items.schematics.ItemSchematicMarsRover;
-import com.mjr.extraplanets.items.schematics.ItemSchematicTier10Rocket;
 import com.mjr.extraplanets.items.schematics.ItemSchematicTier10ElectricRocket;
+import com.mjr.extraplanets.items.schematics.ItemSchematicTier10Rocket;
 import com.mjr.extraplanets.items.schematics.ItemSchematicTier4Rocket;
 import com.mjr.extraplanets.items.schematics.ItemSchematicTier5Rocket;
 import com.mjr.extraplanets.items.schematics.ItemSchematicTier6Rocket;
@@ -257,7 +257,7 @@ public class ClientProxy extends CommonProxy {
 			ClientUtilities.addVariants(Constants.modID, "kepler22b", "kepler22b_dirt", "kepler22b_stone", "kepler22b_ore_iron", "kepler22b_ore_tin", "kepler22b_ore_copper", "kepler22b_ore_dense_coal", "kepler22b_ore_blue_diamond",
 					"kepler22b_ore_red_diamond", "kepler22b_ore_purple_diamond", "kepler22b_ore_yellow_diamond", "kepler22b_ore_green_diamond", "kepler22b_stonebricks", "kepler22b_cobblestone", "kepler22b_ore_platinum", "kepler22b_platinum_block");
 		if (Config.CALLISTO)
-			ClientUtilities.addVariants(Constants.modID, "callisto", "callisto_surface", "callisto_sub_surface", "callisto_stone", "callisto_ore_iron", "callisto_ore_tin", "callisto_ore_copper");
+			ClientUtilities.addVariants(Constants.modID, "callisto", "callisto_surface", "callisto_sub_surface", "callisto_stone", "callisto_ore_iron", "callisto_ore_tin", "callisto_ore_copper", "callisto_dried_oil", "callisto_shale_oil");
 		if (Config.DEIMOS)
 			ClientUtilities.addVariants(Constants.modID, "deimos", "deimos_surface", "deimos_sub_surface", "deimos_stone", "deimos_ore_iron", "deimos_ore_tin", "deimos_ore_copper");
 		if (Config.EUROPA)

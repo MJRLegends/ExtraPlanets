@@ -45,6 +45,14 @@ public class ItemBlockCallisto extends ItemBlock {
 			name = "ore_copper";
 			break;
 		}
+		case 6: {
+			name = "dried_oil";
+			break;
+		}
+		case 7: {
+			name = "shale_oil";
+			break;
+		}
 		default:
 			name = "null";
 		}
