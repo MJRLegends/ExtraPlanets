@@ -513,8 +513,12 @@ public class ExtraPlanets {
 			Biome.registerBiome(Config.KEPLER22B_EMERALD_PLAINS_BIOME_ID, Kepler22bBiomes.kepler22bEmeraldPlains.getBiomeName(), Kepler22bBiomes.kepler22bEmeraldPlains);
 		}
 		// Moons
-		if (Config.CALLISTO)
+		if (Config.CALLISTO){
 			Biome.registerBiome(Config.CALLISTO_BIOME_ID, CallistoBiomes.callisto.getBiomeName(), CallistoBiomes.callisto);
+			Biome.registerBiome(Config.CALLISTO_LARGE_SHALE_MOUNTAINS_BIOME_ID, CallistoBiomes.callistoShaleLargeMountains.getBiomeName(), CallistoBiomes.callistoShaleLargeMountains);
+			Biome.registerBiome(Config.CALLISTO_SALT_SEA_BIOME_ID, CallistoBiomes.callistoSaltSea.getBiomeName(), CallistoBiomes.callistoSaltSea);
+			Biome.registerBiome(Config.CALLISTO_SMALL_SHALE_MOUNTAINS_BIOME_ID, CallistoBiomes.callistoShaleSmallMountains.getBiomeName(), CallistoBiomes.callistoShaleSmallMountains);
+		}
 		if (Config.DEIMOS)
 			Biome.registerBiome(Config.DEIMOS_BIOME_ID, DeimosBiomes.deimos.getBiomeName(), DeimosBiomes.deimos);
 		if (Config.EUROPA) {
