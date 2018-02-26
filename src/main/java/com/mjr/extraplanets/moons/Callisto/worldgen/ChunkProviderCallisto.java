@@ -26,7 +26,6 @@ public class ChunkProviderCallisto extends ChunkProviderMultiBiomeSpace {
 		super(par1World, seed, mapFeaturesEnabled);
 		this.stoneBlock = ExtraPlanets_Blocks.CALLISTO_BLOCKS.getStateFromMeta(2);
 		this.waterBlock = ExtraPlanets_Fluids.SALT.getDefaultState();
-		this.seaLevel = 50;
 	}
 
 	@Override
