@@ -241,6 +241,9 @@ public class Config {
 	public static int DEIMOS_BIOME_ID;
 	public static int PHOBOS_BIOME_ID;
 	public static int CALLISTO_BIOME_ID;
+	public static int CALLISTO_SALT_SEA_BIOME_ID;
+	public static int CALLISTO_SMALL_SHALE_MOUNTAINS_BIOME_ID;
+	public static int CALLISTO_LARGE_SHALE_MOUNTAINS_BIOME_ID;
 	public static int GANYMEDE_BIOME_ID;
 	public static int RHEA_BIOME_ID;
 	public static int TITAN_BIOME_ID;
@@ -670,7 +673,10 @@ public class Config {
 		KEPLER22B_EMERALD_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Emerald Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
 		EUROPA_SALT_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Salt Sea Biome ID", 205, "[range: 0 ~ 255, default: 205]").getInt();
 		EUROPA_ICE_VALLEYS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Valleys Biome ID", 206, "[range: 0 ~ 255, default: 206]").getInt();
-
+		CALLISTO_SALT_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Callisto Salt Sea Biome ID", 207, "[range: 0 ~ 255, default: 207]").getInt();
+		CALLISTO_SMALL_SHALE_MOUNTAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Callisto Small Shale Mountains Biome ID", 208, "[range: 0 ~ 255, default: 208]").getInt();
+		CALLISTO_LARGE_SHALE_MOUNTAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Callisto Large Shale Mountains Biome ID", 209, "[range: 0 ~ 255, default: 209]").getInt();
+		
 		SCHEMATIC_TIER_4_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555, "[range: -2147483647 ~ 2147483647, default: 5555]").getInt();
 		SCHEMATIC_TIER_5_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556, "[range: -2147483647 ~ 2147483647, default: 5556]").getInt();
 		SCHEMATIC_TIER_6_GUI_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 6 GUI ID", 5557, "[range: -2147483647 ~ 2147483647, default: 5557]").getInt();

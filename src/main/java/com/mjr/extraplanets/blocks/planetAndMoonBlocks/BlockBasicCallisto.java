@@ -7,6 +7,7 @@ import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
+import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
@@ -15,11 +16,13 @@ import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
@@ -28,6 +31,7 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IPlantable;
+import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -38,7 +42,8 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypecallisto", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		SURFACE(0, "callisto_surface"), SUB_SURFACE(1, "callisto_sub_surface"), STONE(2, "callisto_stone"), ORE_IRON(3, "callisto_ore_iron"), ORE_TIN(4, "callisto_ore_tin"), ORE_COPPER(5, "callisto_ore_copper");
+		SURFACE(0, "callisto_surface"), SUB_SURFACE(1, "callisto_sub_surface"), STONE(2, "callisto_stone"), ORE_IRON(3, "callisto_ore_iron"), ORE_TIN(4, "callisto_ore_tin"), ORE_COPPER(5, "callisto_ore_copper"), DRIED_OIL(6, "callisto_dried_oil"), SHALE_OIL(
+				7, "callisto_shale_oil");
 
 		private final int meta;
 		private final String name;
@@ -200,5 +205,27 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
 			return EnumSortCategoryBlock.ORE;
 		}
 		return EnumSortCategoryBlock.GENERAL;
+	}
+
+	@Override
+	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te) {
+		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.SHALE_OIL) {
+			if (this.canSilkHarvest(worldIn, pos, worldIn.getBlockState(pos), player) && EnchantmentHelper.getSilkTouchModifier(player)) {
+				java.util.List<ItemStack> items = new java.util.ArrayList<ItemStack>();
+				ItemStack itemstack = this.createStackedBlock(state);
+
+				if (itemstack != null)
+					items.add(itemstack);
+
+				net.minecraftforge.event.ForgeEventFactory.fireBlockHarvesting(items, worldIn, pos, worldIn.getBlockState(pos), 0, 1.0f, true, player);
+
+				for (ItemStack is : items)
+					spawnAsEntity(worldIn, pos, is);
+			} else {
+				String oilID = ConfigManagerCore.useOldOilFluidID ? "oilgc" : "oil";
+				worldIn.setBlockState(pos, FluidRegistry.getFluid(oilID).getBlock().getDefaultState(), 1);
+			}
+		} else
+			super.harvestBlock(worldIn, player, pos, state, te);
 	}
 }

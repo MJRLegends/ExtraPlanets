@@ -227,7 +227,7 @@ public class ExtraPlanets_Moons {
 			CALLISTO.setDimensionInfo(Config.CALLISTO_ID, WorldProviderCallisto.class);
 			CALLISTO.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 100.0F : 5.0F, 0.0F, 0.2F));
 			CALLISTO.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute");
-			CALLISTO.setBiomeInfo(CallistoBiomes.callisto);
+			CALLISTO.setBiomeInfo(CallistoBiomes.callisto, CallistoBiomes.callistoShaleSmallMountains, CallistoBiomes.callistoShaleLargeMountains, CallistoBiomes.callistoSaltSea);
 			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
