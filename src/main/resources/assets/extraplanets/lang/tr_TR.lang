@@ -257,6 +257,8 @@ tile.callisto.stone.name=Callisto Taşı
 tile.callisto.ore_iron.name=Callisto Demir Cevheri
 tile.callisto.ore_tin.name=Callisto Kalay Cevheri
 tile.callisto.ore_copper.name=Callisto Bakır Cevheri
+tile.callisto.dried_oil.name=Callisto Dried Oil ##NEEDS TRANSLATE##
+tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
 
 tile.deimos.surface.name=Deimos Yüzey Kayası
 tile.deimos.sub_surface.name=Deimos Yeraltı Kayası

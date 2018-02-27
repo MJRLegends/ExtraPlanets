@@ -257,6 +257,8 @@ tile.callisto.stone.name=Kallisto Stein
 tile.callisto.ore_iron.name=Kallisto Eisenerz
 tile.callisto.ore_tin.name=Kallisto Zinnerz
 tile.callisto.ore_copper.name=Kallisto Kupfererz
+tile.callisto.dried_oil.name=Callisto Dried Oil ##NEEDS TRANSLATE##
+tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
 
 tile.deimos.surface.name=Deimos Oberflächengestein
 tile.deimos.sub_surface.name=Deimos Untergrundgestein

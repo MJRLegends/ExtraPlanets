@@ -257,6 +257,8 @@ tile.callisto.stone.name=Roca de Calisto
 tile.callisto.ore_iron.name=Mena de Hierro de Calisto
 tile.callisto.ore_tin.name=Mena de Estaño de Calisto
 tile.callisto.ore_copper.name=Mena de Cobre de Calisto
+tile.callisto.dried_oil.name=Callisto Dried Oil ##NEEDS TRANSLATE##
+tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
 
 tile.deimos.surface.name=Roca Superficial de Deimos
 tile.deimos.sub_surface.name=Roca Subterránea de Deimos

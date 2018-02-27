@@ -257,6 +257,8 @@ tile.callisto.stone.name=Kámen z Callisto
 tile.callisto.ore_iron.name=Železná ruda z Callisto
 tile.callisto.ore_tin.name=Cínová ruda z Callisto
 tile.callisto.ore_copper.name=Měděná ruda z Callisto
+tile.callisto.dried_oil.name=Callisto Dried Oil ##NEEDS TRANSLATE##
+tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
 
 tile.deimos.surface.name=Povrchový kámen z Deimosu
 tile.deimos.sub_surface.name=Podpovrchový kámen z Deimosu
