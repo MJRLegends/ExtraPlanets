@@ -16,6 +16,8 @@ v0.2.6
 *Fixed issue #247
 *Updated lang files
 *Fixed missing world gen on Saturn and IO due to GC bug
+*Reduced dimension size for some textures, to a smaller size
+*Set required GC version requirement to Build 144
 
 v0.2.5
 *Fix player getting stuck inside newly built Launch Pads
