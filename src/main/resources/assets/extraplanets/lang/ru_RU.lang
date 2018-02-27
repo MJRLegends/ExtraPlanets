@@ -257,6 +257,8 @@ tile.callisto.stone.name=Камень Каллисто
 tile.callisto.ore_iron.name=Железная руда Каллисто
 tile.callisto.ore_tin.name=Оловянная руда Каллисто
 tile.callisto.ore_copper.name=Медная руда Каллисто
+tile.callisto.dried_oil.name=Callisto Dried Oil ##NEEDS TRANSLATE##
+tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
 
 tile.deimos.surface.name=Поверхность Деймоса
 tile.deimos.sub_surface.name=Подповерхностный грунт Деймоса

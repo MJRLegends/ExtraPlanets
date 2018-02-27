@@ -257,6 +257,8 @@ tile.callisto.stone.name=木衛四石頭
 tile.callisto.ore_iron.name=木衛四鐵礦石
 tile.callisto.ore_tin.name=木衛四錫礦石
 tile.callisto.ore_copper.name=木衛四銅礦石
+tile.callisto.dried_oil.name=Callisto Dried Oil ##NEEDS TRANSLATE##
+tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
 
 tile.deimos.surface.name=火衛二地表岩石
 tile.deimos.sub_surface.name=火衛二地底岩石
