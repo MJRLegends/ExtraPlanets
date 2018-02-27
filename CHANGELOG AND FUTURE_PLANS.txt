@@ -5,6 +5,17 @@
 
 
 ===========================================Released Updates===========================================
+v0.9.9
+*Changes to blocks to match GC changes
+*Converted Callisto over to multi biome system
+*Added Callisto Large Shale Mountain Biome
+*Added Callisto Small Shale Mountain Biome
+*Added Callisto Salt Sea Biome
+*Added Callisto Dried Oil & Shale Oil blocks
+*Fixed issue with Callisto Salt Sea biome for MC 1.8.9
+*Fixed issue #247
+*Updated lang files
+
 v0.9.8
 *Fix player getting stuck inside newly built Launch Pads
 *Changes to Celestial Selection screen to match GC changes
