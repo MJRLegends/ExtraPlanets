@@ -15,6 +15,8 @@ v1.3.2
 *Fixed issue with Callisto Salt Sea biome for MC 1.8.9
 *Fixed issue #247
 *Updated lang files
+*Reduced dimension size for some textures, to a smaller size
+*Set required GC version requirement to Build 144
 
 v1.3.1
 *Changes to Celestial Selection screen to match GC changes
