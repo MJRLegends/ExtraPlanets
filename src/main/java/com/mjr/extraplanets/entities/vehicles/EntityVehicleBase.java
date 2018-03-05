@@ -539,7 +539,6 @@ public abstract class EntityVehicleBase extends Entity implements IInventory, IP
 
 	@Override
 	public boolean pressKey(int key) {
-		System.out.println(key);
 		if (this.worldObj.isRemote && (key == 6 || key == 8 || key == 9)) {
 			GalacticraftCore.packetPipeline.sendToServer(new PacketControllableEntity(key));
 			return true;
