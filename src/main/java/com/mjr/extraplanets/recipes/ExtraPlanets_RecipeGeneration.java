@@ -916,14 +916,14 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.CAKE_BLOCKS, 1, 7), new Object[] { "CCC", "CCC", "CCC", 'C', new ItemStack(Items.COOKIE) });
 
 		// Tier 1 - 4 Radiation Layers
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LCL", "LCL", 'L',
-				OreDictionary.getOres("ingotLead").get(0), 'C', ExtraPlanets_Items.CLOTH });
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L',
-				OreDictionary.getOres("ingotLead").get(0), 'C', ExtraPlanets_Items.CLOTH, 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER });
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L',
-				OreDictionary.getOres("ingotLead").get(0), 'C', ExtraPlanets_Items.CLOTH, 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER });
-		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L',
-				OreDictionary.getOres("ingotLead").get(0), 'C', ExtraPlanets_Items.CLOTH, 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LCL", "LCL", 'L', "ingotLead", 'C',
+				ExtraPlanets_Items.CLOTH });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', "ingotLead", 'C',
+				ExtraPlanets_Items.CLOTH, 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', "ingotLead", 'C',
+				ExtraPlanets_Items.CLOTH, 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 1, 0), new Object[] { "LCL", "LRL", "LCL", 'L', "ingotLead", 'C',
+				ExtraPlanets_Items.CLOTH, 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER });
 
 		// Tier 1 - 4 Pressure Layers
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.TIER_1_PRESSURE_LAYER, 1, 0), new Object[] { "CCC", "O O", "CCC", 'O', GCItems.oxygenConcentrator, 'C',

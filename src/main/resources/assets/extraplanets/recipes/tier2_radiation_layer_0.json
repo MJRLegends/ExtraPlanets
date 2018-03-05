@@ -14,7 +14,7 @@
       "value": "pressureandradiation"
     }
   ],
-  "type": "minecraft:crafting_shaped",
+  "type": "forge:ore_shaped",
   "key": {
     "R": {
       "item": "extraplanets:tier1_radiation_layer",
@@ -25,8 +25,7 @@
       "data": 0
     },
     "L": {
-      "item": "extraplanets:ingot_lead",
-      "data": 0
+      "item": "#INGOTLEAD"
     }
   }
 }
