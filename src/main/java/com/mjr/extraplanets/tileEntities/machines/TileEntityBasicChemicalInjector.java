@@ -72,7 +72,6 @@ public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithIn
 			return false;
 		}
 		int result = this.getStackInSlot(3).getCount() + itemstack.getCount();
-		System.out.println(result);
 		return result <= this.getInventoryStackLimit() && result <= itemstack.getMaxStackSize();
 	}
 
