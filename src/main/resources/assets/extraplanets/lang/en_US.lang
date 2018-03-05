@@ -752,6 +752,7 @@ item.tier5_items.compressed_nickel.name=Compressed Nickel
 item.compressed_mercury.name=Compressed Mercury
 item.tier9_items.compressed_tungsten.name=Compressed Tungsten
 item.tier10_items.compressed_dark_iron.name=Compressed Dark Iron
+item.tier11_items.compressed_platinum.name=Compressed Platinum
 
 #Ingots
 item.tier4_items.ingot_carbon.name=Carbon Ingot
@@ -766,6 +767,7 @@ item.tier9_items.ingot_tungsten.name=Tungsten Ingot
 item.tier10_items.ingot_dark_iron.name=Dark Iron Ingot
 item.ingot_lead.name=Lead Ingot
 item.tier5_items.ingot_volcanic.name=Volcanic Ingot
+item.tier11_items.ingot_platinum.name=Platinum Ingot
 
 #Shards
 item.tier5_items.volcanic_shard.name=Volcanic Shard
@@ -1003,8 +1005,6 @@ item.green_diamond_helmet.name=Green Diamond Helmet
 item.green_diamond_chest.name=Green Diamond Chestplate
 item.green_diamond_legings.name=Green Diamond Leggings
 item.green_diamond_boots.name=Green Diamond Boots
-item.tier11_items.ingot_platinum.name=Platinum Ingot
-item.tier11_items.compressed_platinum.name=Compressed Platinum
 
 item.tier1_space_suit_helmet.name=Tier 1 Space Suit Helmet
 item.tier1_space_suit_chest.name=Tier 1 Space Suit Chestplate
@@ -1060,10 +1060,10 @@ item.tier2_radiation_layer.name=Tier 2 Radiation Layer
 item.tier3_radiation_layer.name=Tier 3 Radiation Layer
 item.tier4_radiation_layer.name=Tier 4 Radiation Layer
 
-item.tier1_armor_layer.name=Tier 1 Armor Layer
-item.tier2_armor_layer.name=Tier 2 Armor Layer
-item.tier3_armor_layer.name=Tier 3 Armor Layer
-item.tier4_armor_layer.name=Tier 4 Armor Layer
+item.tier1_armor_layer.name=Tier 1 Armour Layer
+item.tier2_armor_layer.name=Tier 2 Armour Layer
+item.tier3_armor_layer.name=Tier 3 Armour Layer
+item.tier4_armor_layer.name=Tier 4 Armour Layer
 
 tier1_armor_layer.desc=Compressor Recipe: 4 Aluminum Ingots
 tier2_armor_layer.desc=Compressor Recipe: 4 Titanium Ingots
@@ -1283,7 +1283,6 @@ entity.extraplanets.EvolvedBlaze.name=Evolved Blaze
 entity.extraplanets.EvolvedBlueCreeper.name=Evolved Blue Creeper
 entity.extraplanets.EvolvedRedCreeper.name=Evolved Red Creeper
 entity.extraplanets.EvolvedPowerSkeleton.name=Evolved Power Skeleton
-entity.extraplanets.EvolvedPowerSkeleton.name=Evolved Power Skeleton
 entity.extraplanets.EvolvedGiantSpider.name=Evolved Giant Spider
 entity.extraplanets.EvolvedMiniEnderman.name=Evolved Mini Enderman
 
@@ -1418,11 +1417,6 @@ tile.venus.titanium_block.name=Block of Titanium
 tile.veuns.dungeon_brick.name=Venus Dungeon Brick
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Liquid Glowstone
-tile.magma_fluid.name=Liquid Magma
-tile.nitrogen_fluid.name=Liquid Nitrogen
-tile.frozen_water_fluid.name=Frozen Water
-tile.salt_fluid.name=Liquid Crystallized Water
 tile.glowstone_fluid.name=Liquid Glowstone
 tile.magma_fluid.name=Liquid Magma
 tile.nitrogen_fluid.name=Liquid Nitrogen

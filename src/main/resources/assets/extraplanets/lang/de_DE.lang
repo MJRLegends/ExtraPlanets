@@ -741,6 +741,7 @@ item.tier5_items.compressed_nickel.name=Gepresstes Nickel
 item.compressed_mercury.name=Gepresstes Quecksilber
 item.tier9_items.compressed_tungsten.name=Gepresstes Wolfram
 item.tier10_items.compressed_dark_iron.name=Gepresstes dunkles Eisen
+item.tier11_items.compressed_platinum.name=Gepresstes Platin
 
 #Ingots
 item.tier4_items.ingot_carbon.name=Kohlenstoffbarren
@@ -755,6 +756,7 @@ item.tier9_items.ingot_tungsten.name=Wolframbarren
 item.tier10_items.ingot_dark_iron.name=Dunkler Eisenbarren
 item.ingot_lead.name=Bleibarren
 item.tier5_items.ingot_volcanic.name=Vulkanbarren
+item.tier11_items.ingot_platinum.name=Platinbarren
 
 #Shards
 item.tier5_items.volcanic_shard.name=Vulkansplitter
@@ -992,8 +994,6 @@ item.green_diamond_helmet.name=Helm aus grünem Diamant
 item.green_diamond_chest.name=Brustpanzer aus grünem Diamant
 item.green_diamond_legings.name=Beinschutz aus grünem Diamant
 item.green_diamond_boots.name=Stiefel aus grünem Diamant
-item.tier11_items.ingot_platinum.name=Platinbarren
-item.tier11_items.compressed_platinum.name=Gepresstes Platin
 
 item.tier1_space_suit_helmet.name=Stufe 1 Raumanzug-Helm
 item.tier1_space_suit_chest.name=Stufe 1 Raumanzug-Brustschutz
@@ -1353,11 +1353,6 @@ tile.venus.titanium_block.name=Titanblock
 tile.veuns.dungeon_brick.name=Venus Verließziegel
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Flüssiger Glowstone
-tile.magma_fluid.name=Flüssige Magma
-tile.nitrogen_fluid.name=Flüssiger Stickstoff
-tile.frozen_water_fluid.name=Eingefrorenes Wasser
-tile.salt_fluid.name=Flüssiges Kristallisiertes Wasser
 tile.glowstone_fluid.name=Flüssiger Glowstone
 tile.magma_fluid.name=Flüssige Magma
 tile.nitrogen_fluid.name=Flüssige Stickstoff
