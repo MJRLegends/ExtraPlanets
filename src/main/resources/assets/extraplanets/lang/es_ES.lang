@@ -751,6 +751,7 @@ item.tier5_items.compressed_nickel.name=Estaño comprimido
 item.compressed_mercury.name=Mercurio comprimido
 item.tier9_items.compressed_tungsten.name=Tungsteno comprimido
 item.tier10_items.compressed_dark_iron.name=Hierro oscuro comprimido
+item.tier11_items.compressed_platinum.name=Platino comprimido
 
 #Ingots
 item.tier4_items.ingot_carbon.name=Lingote de carbono
@@ -765,6 +766,7 @@ item.tier9_items.ingot_tungsten.name=Lingote de tungsteno
 item.tier10_items.ingot_dark_iron.name=Lingote de hierro oscuro
 item.ingot_lead.name=Lingote de plomo
 item.tier5_items.ingot_volcanic.name=Lingote volcánico
+item.tier11_items.ingot_platinum.name=Lingote de platino
 
 #Shards
 item.tier5_items.volcanic_shard.name=Fragmento Volcánico
@@ -1002,8 +1004,6 @@ item.green_diamond_helmet.name=Casco de diamante verde
 item.green_diamond_chest.name=Peto de diamante verde
 item.green_diamond_legings.name=Grebas de diamante verde
 item.green_diamond_boots.name=Botas de diamante verde
-item.tier11_items.ingot_platinum.name=Lingote de platino
-item.tier11_items.compressed_platinum.name=Platino comprimido
 
 item.tier1_space_suit_helmet.name=Tier 1 Space Suit Helmet ##NEEDS TRANSLATE##
 item.tier1_space_suit_chest.name=Tier 1 Space Suit Chestplate ##NEEDS TRANSLATE##
@@ -1416,11 +1416,6 @@ tile.venus.titanium_block.name=Block of Titanium ##NEEDS TRANSLATE##
 tile.veuns.dungeon_brick.name=Venus Dungeon Brick ##NEEDS TRANSLATE##
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Liquid Glowstone ##NEEDS TRANSLATE##
-tile.magma_fluid.name=Liquid Magma ##NEEDS TRANSLATE##
-tile.nitrogen_fluid.name=Liquid Nitrogen ##NEEDS TRANSLATE##
-tile.frozen_water_fluid.name=Frozen Water ##NEEDS TRANSLATE##
-tile.salt_fluid.name=Liquid Crystallized Water ##NEEDS TRANSLATE##
 tile.glowstone_fluid.name=Liquid Glowstone ##NEEDS TRANSLATE##
 tile.magma_fluid.name=Liquid Magma ##NEEDS TRANSLATE##
 tile.nitrogen_fluid.name=Liquid Nitrogen ##NEEDS TRANSLATE##

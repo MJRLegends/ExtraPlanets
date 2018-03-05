@@ -752,6 +752,7 @@ item.tier5_items.compressed_nickel.name=致密镍板
 item.compressed_mercury.name=致密汞板
 item.tier9_items.compressed_tungsten.name=致密钨板
 item.tier10_items.compressed_dark_iron.name=致密玄铁板
+item.tier11_items.compressed_platinum.name=致密铂板
 
 #Ingots
 item.tier4_items.ingot_carbon.name=碳锭
@@ -766,6 +767,7 @@ item.tier9_items.ingot_tungsten.name=钨锭
 item.tier10_items.ingot_dark_iron.name=玄铁锭
 item.ingot_lead.name=铅锭
 item.tier5_items.ingot_volcanic.name=火山岩锭
+item.tier11_items.ingot_platinum.name=铂锭
 
 #Shards
 item.tier5_items.volcanic_shard.name=火山岩锭碎片
@@ -1003,8 +1005,6 @@ item.green_diamond_helmet.name=绿色钻石头盔
 item.green_diamond_chest.name=绿色钻石胸甲
 item.green_diamond_legings.name=绿色钻石护腿
 item.green_diamond_boots.name=绿色钻石靴子
-item.tier11_items.ingot_platinum.name=铂锭
-item.tier11_items.compressed_platinum.name=致密铂板
 
 item.tier1_space_suit_helmet.name=1阶太空服头盔
 item.tier1_space_suit_chest.name=1阶太空服胸甲
@@ -1417,11 +1417,6 @@ tile.venus.titanium_block.name=金星锡块
 tile.veuns.dungeon_brick.name=金星地牢砖
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=液态萤石
-tile.magma_fluid.name=岩浆水
-tile.nitrogen_fluid.name=液氮
-tile.frozen_water_fluid.name=冰
-tile.salt_fluid.name=盐水
 tile.glowstone_fluid.name=液态萤石
 tile.magma_fluid.name=岩浆水
 tile.nitrogen_fluid.name=液氮
