@@ -416,6 +416,7 @@ tile.advanced_fuel_loader.name=Fortgeschrittener Treibstofftanker
 tile.ultimate_fuel_loader.name=Ultimativer Treibstofftanker
 tile.vehicle_charger.name=Ladedock für Fahrzeuge
 tile.basic_purifier.name=Einfacher Reiniger
+tile.basic_densifier.name=Basic Densifier ##NEEDS TRANSLATE##
 tile.basic_decontamination_unit.name=Einfache Dekontaminationseinheit
 tile.basic_decontamination_unit_fake_block.name=Einfache Dekontaminationseinheit
 
@@ -450,6 +451,7 @@ container.ultimate.fuelloader.name=Ultimativer Treibstofftanker
 container.basic.solar.evaporation.chamber.name=Einfache Solarverdampfungskammer 
 container.vehicle.charger.name=Ladedock für Fahrzeuge
 container.basic.purifier.name=Einfacher Reiniger
+container.basic.densifier.name=Basic Densifier ##NEEDS TRANSLATE##
 container.basic.decontamination.unit.name=Einfache Dekontaminationseinheit
 
 #GUI Components/Messages
@@ -501,6 +503,15 @@ gui.bucket.message.finding.2.nitrogen_ice_fluid=auf Triton
 gui.bucket.message.crafting=Drücke R um zu sehen wie man sie aufnimmt
 gui.status.missing.inputs.name=Fehlende Gegenstände/Flüssigkeiten
 gui.status.missing.power.name=Fehlender Strom
+gui.densifier_input.desc.0=You can place the following  ##NEEDS TRANSLATE##
+gui.densifier_input.desc.1=buckets in this slot: ##NEEDS TRANSLATE##
+gui.densifier_input.desc.2=Liquid Caramel ##NEEDS TRANSLATE##
+gui.densifier_input.desc.3=Liquid Chocolate ##NEEDS TRANSLATE##
+gui.densifier_input.desc.4=Nitrogen Ice ##NEEDS TRANSLATE##
+gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb ##NEEDS TRANSLATE##
+gui.message.general.tank.name=Fluid Tank ##NEEDS TRANSLATE##
+gui.message.general.tank.fluid.name=Fluid ##NEEDS TRANSLATE##
+gui.status.densifier.name=Densifying ##NEEDS TRANSLATE##
 gui.bucket.message.extreme.reactors.compact=Diese Flüssigkeit ist kompatibel mit Extreme Reactors
 gui.radiation.reduced.message=Die Schwere deiner Verstrahlung wurde reduziert um
 gui.radiation.current.message=So schwer bist du aktuell verstrahlt
@@ -1084,6 +1095,54 @@ item.tier4_un_prepared_space_suit_boots.name=Stufe 4 Unvollständiger Raumanzug-
 item.oxygen_tank_very_heavy_full.name=Sehr großer Sauerstofftank
 item.oxygen_tank_extremely_heavy_full.name=Extrem großer Sauerstofftank
 
+item.oxygen_tank_light_full_black.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_red.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_green.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_brown.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_blue.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_purple.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_cyan.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_light_gray.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_gray.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_pink.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_yellow.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_light_blue.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_magenta.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_orange.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_white.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+
+item.oxygen_tank_med_full_black.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_red.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_green.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_brown.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_purple.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_cyan.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_light_gray.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_gray.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_pink.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_yellow.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_light_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_magenta.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_orange.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_white.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+
+item.oxygen_tank_heavy_full_black.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_lime.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_green.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_brown.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_blue.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_purple.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_cyan.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_light_gray.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_gray.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_pink.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_yellow.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_light_blue.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_magenta.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_orange.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_white.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+
 #Radiation Items
 item.iodide_salt.name=Iodsalz
 item.potassium_iodide.name=Kaliumiodid
@@ -1148,6 +1207,10 @@ item.tools.filter.name=Filter
 #Other Blocks
 tile.slime_block.name=Schleimblock
 
+#Other Blocks
+tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
+tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
+
 #Other Items
 item.apple_diamond.name=Diamantapfel
 item.apple_iron.name=Eisenapfel
@@ -1162,9 +1225,10 @@ item.thermal_cloth.tier5_thermal_cloth.name=Stufe 5 Thermalpolster
 item.tier5_items.ash.name=Asche
 item.geiger_counter.name=Geigerzähler
 item.white_sugar_cane_item.name=Weißer Zuckerrohr
-
 geiger.counter.desc=Rechtsklick um die Schwere deiner Verstrahlung zu sehen!
 geiger.counter.location.desc=Kann in einem Merkurverließ erziehlt werden!
+item.chocolate_bar.name=Chocolate Bar ##NEEDS TRANSLATE##
+item.caramel_bar.name=Caramel Bar ##NEEDS TRANSLATE##
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=Getrocknetes Schweinefleisch
@@ -1398,14 +1462,14 @@ tile.neptuneStoneBrickStairs.name=Neptun Steinziegeltreppen
 tile.plutoStoneBrickStairs.name=Pluto Steinziegeltreppen
 tile.erisStoneBrickStairs.name=Eris Steinziegeltreppen
 
-#Verließ Bricks Slabs
+#Dungeon Bricks Slabs
 tile.ExtraPlanets_venusVerließBrickStoneBlockhalfslab.name=Venus Verließziegelstufe
 tile.ExtraPlanets_jupiterVerließBrickStoneBlockhalfslab.name=Jupiter Verließziegelstufe
 tile.ExtraPlanets_saturnVerließBrickStoneBlockhalfslab.name=Saturn Verließziegelstufe
 tile.ExtraPlanets_uranusVerließBrickStoneBlockhalfslab.name=Uranus Verließziegelstufe
 tile.ExtraPlanets_neptuneVerließBrickStoneBlockhalfslab.name=Neptune Verließziegelstufe
 
-#Verließ Bricks Stairs
+#Dungeon Bricks Stairs
 tile.venusVerließBrickStoneStairs.name=Venus Verließziegeltreppen 
 tile.jupiterVerließBrickStoneStairs.name=Jupiter Verließziegeltreppen 
 tile.saturnVerließBrickStoneStairs.name=Saturn Verließziegeltreppen 
@@ -1414,10 +1478,6 @@ tile.neptuneVerließBrickStoneStairs.name=Neptun Verließziegeltreppen
 
 #Planets
 planet.Venus=Venus
-
-#Other Blocks
-tile.deimos.ore_lead.name=Deimos Bleierz
-tile.phobos.ore_lead.name=Phobos Bleierz
 
 #Other Items
 item.tier4_items.ash_shard.name=Aschenstück
@@ -1428,6 +1488,12 @@ item.tier4_items.ash.name=Asche
 item.tier4_items.sledge_hammer.name=Vorschlaghammer
 item.tier4_items.grinding_wheel.name=Schleifscheibe
 item.thermal_cloth.tier2_thermal_cloth.name=Stufe 2 Thermalpolster
+
+#MorePlanetsCompactBlocks&Items
+tile.treasure_chest_t4_saturn.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
+tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
+tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest ##NEEDS TRANSLATE##
+tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest ##NEEDS TRANSLATE##
 
 #Keys
 item.key.T4_saturn.name=Schlüssel für Stufe 4 Verließkiste
