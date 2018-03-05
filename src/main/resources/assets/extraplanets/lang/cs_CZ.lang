@@ -420,6 +420,19 @@ tile.basic_densifier.name=Basic Densifier ##NEEDS TRANSLATE##
 tile.basic_decontamination_unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 
+tile.advanced_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
+tile.ultimate_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
+tile.advanced_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
+tile.ultimate_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
+tile.basic_decrystallizer.description=Used to convert Iodized Salt into Crystallized Water ##NEEDS TRANSLATE##
+tile.basic_crystallizer.description=Used to convert Crystallized Water into Iodized Salt ##NEEDS TRANSLATE##
+tile.basic_smasher.description=Used to smash blocks into pieces ##NEEDS TRANSLATE##
+tile.basic_chemical_injector.description=Used to combine a Blocks/Items into a chemical ##NEEDS TRANSLATE##
+tile.basic_solar_evaporation_chamber.description=Used to subject the input resource to evaporation ##NEEDS TRANSLATE##
+tile.basic_purifier.name.description=Used to Purify Infected & Radioactive Water ##NEEDS TRANSLATE##
+tile.basic_densifier.name.description=Used to compress Fluids into a dense form ##NEEDS TRANSLATE##
+tile.vehicle_charger.description=Place next to Vehicle Charging Pad or Powered Rocket Launch Pad to provide charging abilities ##NEEDS TRANSLATE##
+
 #Machine Containers
 container.solarhybrid.name=Hybridní solární panel
 container.solarultimate.name=Ultimátlní solární panel
