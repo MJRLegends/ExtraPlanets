@@ -257,6 +257,8 @@ tile.callisto.stone.name=Callisto Stone
 tile.callisto.ore_iron.name=Callisto Iron Ore
 tile.callisto.ore_tin.name=Callisto Tin Ore
 tile.callisto.ore_copper.name=Callisto Copper Ore
+tile.callisto.dried_oil.name=Callisto Dried Oil
+tile.callisto.shale_oil.name=Callisto Shale Oil
 
 tile.deimos.surface.name=Deimos Surface Rock
 tile.deimos.sub_surface.name=Deimos Sub-Surface Rock
@@ -418,6 +420,19 @@ tile.basic_densifier.name=Basic Densifier
 tile.basic_decontamination_unit.name=Basic Decontamination Unit
 tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit
 
+tile.advanced_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle.
+tile.ultimate_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle.
+tile.advanced_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles.
+tile.ultimate_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles.
+tile.basic_decrystallizer.description=Used to convert Iodized Salt into Crystallized Water
+tile.basic_crystallizer.description=Used to convert Crystallized Water into Iodized Salt
+tile.basic_smasher.description=Used to smash blocks into pieces
+tile.basic_chemical_injector.description=Used to combine a Blocks/Items into a chemical
+tile.basic_solar_evaporation_chamber.description=Used to subject the input resource to evaporation
+tile.basic_purifier.description=Used to Purify Infected & Radioactive Water
+tile.basic_densifier.description=Used to compress Fluids into a dense form
+tile.vehicle_charger.description=Place next to Vehicle Charging Pad or Powered Rocket Launch Pad to provide charging abilities
+
 #Machine Containers
 container.solarhybrid.name=Hybrid Solar Panel
 container.solarultimate.name=Ultimate Solar Panel
@@ -442,9 +457,9 @@ container.basic.decontamination.unit.name=Basic Decontamination Unit
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=Liquid Crystallized Water Tank
 gui.message.salt_water.name=Crystallized Water
-gui.salt_water_input.desc.0=Place Crystallized bucket into
+gui.salt_water_input.desc.0=Place Liquid Crystallized Water bucket into
 gui.salt_water_input.desc.1=this slot to fill the tank.
-gui.salt_water_input.desc.2=Each Crystallized Bucket will give 1000
+gui.salt_water_input.desc.2=Each Liquid Crystallized Water Bucket will give 1000
 gui.salt_water_output.desc.0=Place empty vanilla bucket into
 gui.salt_water_output.desc.1=this slot to fill them from the tank
 gui.status.injecting.name=Injecting
@@ -732,25 +747,27 @@ item.tier5_items.compressed_palladium.name=Compressed Palladium
 item.tier6_items.compressed_magnesium.name=Compressed Magnesium
 item.tier7_items.compressed_reinforced_crystal.name=Compressed Reinforced Crystal
 item.tier7_items.compressed_crystal.name=Compressed Crystal
-item.compressedZinc.name=Compressed Zinc
-item.compressed_nickel.name=Compressed Nickel
+item.tier8_items.compressed_zinc.name=Compressed Zinc
+item.tier5_items.compressed_nickel.name=Compressed Nickel
 item.compressed_mercury.name=Compressed Mercury
 item.tier9_items.compressed_tungsten.name=Compressed Tungsten
 item.tier10_items.compressed_dark_iron.name=Compressed Dark Iron
+item.tier11_items.compressed_platinum.name=Compressed Platinum
 
 #Ingots
 item.tier4_items.ingot_carbon.name=Carbon Ingot
 item.tier5_items.ingot_palladium.name=Palladium Ingot
 item.tier6_items.ingot_magnesium.name=Magnesium Ingot
 item.tier7_items.ingot_crystal.name=Crystal Ingot
-item.ingot_zinc.name=Zinc Ingot
-item.ingot_nickel.name=Nickel Ingot
+item.tier8_items.ingot_zinc.name=Zinc Ingot
+item.tier5_items.ingot_nickel.name=Nickel Ingot
 item.ingot_mercury.name=Mercury Ingot
 item.ingot_uranium.name=Uranium Ingot
 item.tier9_items.ingot_tungsten.name=Tungsten Ingot
 item.tier10_items.ingot_dark_iron.name=Dark Iron Ingot
 item.ingot_lead.name=Lead Ingot
 item.tier5_items.ingot_volcanic.name=Volcanic Ingot
+item.tier11_items.ingot_platinum.name=Platinum Ingot
 
 #Shards
 item.tier5_items.volcanic_shard.name=Volcanic Shard
@@ -988,8 +1005,6 @@ item.green_diamond_helmet.name=Green Diamond Helmet
 item.green_diamond_chest.name=Green Diamond Chestplate
 item.green_diamond_legings.name=Green Diamond Leggings
 item.green_diamond_boots.name=Green Diamond Boots
-item.tier11_items.ingot_platinum.name=Platinum Ingot
-item.tier11_items.compressed_platinum.name=Compressed Platinum
 
 item.tier1_space_suit_helmet.name=Tier 1 Space Suit Helmet
 item.tier1_space_suit_chest.name=Tier 1 Space Suit Chestplate
@@ -1323,6 +1338,7 @@ achievement.craft_rocket_5.desc=Craft Tier 5 Rocket
 achievement.craft_rocket_6.desc=Craft Tier 6 Rocket
 achievement.craft_rocket_7.desc=Craft Tier 7 Rocket
 achievement.craft_rocket_8.desc=Craft Tier 8 Rocket
+achievement.craft_rocket_9.desc=Craft Tier 9 Rocket
 achievement.craft_rocket_10.desc=Craft Tier 10 Rocket
 
 #Liquids/Fluid
@@ -1401,11 +1417,6 @@ tile.venus.titanium_block.name=Block of Titanium
 tile.veuns.dungeon_brick.name=Venus Dungeon Brick
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Liquid Glowstone
-tile.magma_fluid.name=Liquid Magma
-tile.nitrogen_fluid.name=Liquid Nitrogen
-tile.frozen_water_fluid.name=Frozen Water
-tile.salt_fluid.name=Liquid Crystallized Water
 tile.glowstone_fluid.name=Liquid Glowstone
 tile.magma_fluid.name=Liquid Magma
 tile.nitrogen_fluid.name=Liquid Nitrogen

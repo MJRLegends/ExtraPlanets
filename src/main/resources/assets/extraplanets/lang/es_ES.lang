@@ -257,6 +257,8 @@ tile.callisto.stone.name=Roca de Calisto
 tile.callisto.ore_iron.name=Mena de Hierro de Calisto
 tile.callisto.ore_tin.name=Mena de Estaño de Calisto
 tile.callisto.ore_copper.name=Mena de Cobre de Calisto
+tile.callisto.dried_oil.name=Callisto Dried Oil ##NEEDS TRANSLATE##
+tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
 
 tile.deimos.surface.name=Roca Superficial de Deimos
 tile.deimos.sub_surface.name=Roca Subterránea de Deimos
@@ -416,6 +418,19 @@ tile.basic_purifier.name=Purificador Básico
 tile.basic_densifier.name=Densificador Básico
 tile.basic_decontamination_unit.name=Unidad de Descontaminación Básica
 tile.basic_decontamination_unit_fake_block.name=Unidad de Descontaminación Básica
+
+tile.advanced_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
+tile.ultimate_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
+tile.advanced_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
+tile.ultimate_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
+tile.basic_decrystallizer.description=Used to convert Iodized Salt into Crystallized Water ##NEEDS TRANSLATE##
+tile.basic_crystallizer.description=Used to convert Crystallized Water into Iodized Salt ##NEEDS TRANSLATE##
+tile.basic_smasher.description=Used to smash blocks into pieces ##NEEDS TRANSLATE##
+tile.basic_chemical_injector.description=Used to combine a Blocks/Items into a chemical ##NEEDS TRANSLATE##
+tile.basic_solar_evaporation_chamber.description=Used to subject the input resource to evaporation ##NEEDS TRANSLATE##
+tile.basic_purifier.description=Used to Purify Infected & Radioactive Water ##NEEDS TRANSLATE##
+tile.basic_densifier.description=Used to compress Fluids into a dense form ##NEEDS TRANSLATE##
+tile.vehicle_charger.description=Place next to Vehicle Charging Pad or Powered Rocket Launch Pad to provide charging abilities ##NEEDS TRANSLATE##
 
 #Machine Containers
 container.solarhybrid.name=Panel Solar Híbrido
@@ -736,6 +751,7 @@ item.tier5_items.compressed_nickel.name=Estaño comprimido
 item.compressed_mercury.name=Mercurio comprimido
 item.tier9_items.compressed_tungsten.name=Tungsteno comprimido
 item.tier10_items.compressed_dark_iron.name=Hierro oscuro comprimido
+item.tier11_items.compressed_platinum.name=Platino comprimido
 
 #Ingots
 item.tier4_items.ingot_carbon.name=Lingote de carbono
@@ -750,6 +766,7 @@ item.tier9_items.ingot_tungsten.name=Lingote de tungsteno
 item.tier10_items.ingot_dark_iron.name=Lingote de hierro oscuro
 item.ingot_lead.name=Lingote de plomo
 item.tier5_items.ingot_volcanic.name=Lingote volcánico
+item.tier11_items.ingot_platinum.name=Lingote de platino
 
 #Shards
 item.tier5_items.volcanic_shard.name=Fragmento Volcánico
@@ -987,8 +1004,6 @@ item.green_diamond_helmet.name=Casco de diamante verde
 item.green_diamond_chest.name=Peto de diamante verde
 item.green_diamond_legings.name=Grebas de diamante verde
 item.green_diamond_boots.name=Botas de diamante verde
-item.tier11_items.ingot_platinum.name=Lingote de platino
-item.tier11_items.compressed_platinum.name=Platino comprimido
 
 item.tier1_space_suit_helmet.name=Tier 1 Space Suit Helmet ##NEEDS TRANSLATE##
 item.tier1_space_suit_chest.name=Tier 1 Space Suit Chestplate ##NEEDS TRANSLATE##
@@ -1401,11 +1416,6 @@ tile.venus.titanium_block.name=Block of Titanium ##NEEDS TRANSLATE##
 tile.veuns.dungeon_brick.name=Venus Dungeon Brick ##NEEDS TRANSLATE##
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Liquid Glowstone ##NEEDS TRANSLATE##
-tile.magma_fluid.name=Liquid Magma ##NEEDS TRANSLATE##
-tile.nitrogen_fluid.name=Liquid Nitrogen ##NEEDS TRANSLATE##
-tile.frozen_water_fluid.name=Frozen Water ##NEEDS TRANSLATE##
-tile.salt_fluid.name=Liquid Crystallized Water ##NEEDS TRANSLATE##
 tile.glowstone_fluid.name=Liquid Glowstone ##NEEDS TRANSLATE##
 tile.magma_fluid.name=Liquid Magma ##NEEDS TRANSLATE##
 tile.nitrogen_fluid.name=Liquid Nitrogen ##NEEDS TRANSLATE##

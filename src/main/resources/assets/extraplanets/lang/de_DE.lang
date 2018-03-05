@@ -257,6 +257,8 @@ tile.callisto.stone.name=Kallisto Stein
 tile.callisto.ore_iron.name=Kallisto Eisenerz
 tile.callisto.ore_tin.name=Kallisto Zinnerz
 tile.callisto.ore_copper.name=Kallisto Kupfererz
+tile.callisto.dried_oil.name=Callisto Dried Oil ##NEEDS TRANSLATE##
+tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
 
 tile.deimos.surface.name=Deimos Oberflächengestein
 tile.deimos.sub_surface.name=Deimos Untergrundgestein
@@ -416,6 +418,19 @@ tile.vehicle_charger.name=Ladedock für Fahrzeuge
 tile.basic_purifier.name=Einfacher Reiniger
 tile.basic_decontamination_unit.name=Einfache Dekontaminationseinheit
 tile.basic_decontamination_unit_fake_block.name=Einfache Dekontaminationseinheit
+
+tile.advanced_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
+tile.ultimate_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
+tile.advanced_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
+tile.ultimate_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
+tile.basic_decrystallizer.description=Used to convert Iodized Salt into Crystallized Water ##NEEDS TRANSLATE##
+tile.basic_crystallizer.description=Used to convert Crystallized Water into Iodized Salt ##NEEDS TRANSLATE##
+tile.basic_smasher.description=Used to smash blocks into pieces ##NEEDS TRANSLATE##
+tile.basic_chemical_injector.description=Used to combine a Blocks/Items into a chemical ##NEEDS TRANSLATE##
+tile.basic_solar_evaporation_chamber.description=Used to subject the input resource to evaporation ##NEEDS TRANSLATE##
+tile.basic_purifier.description=Used to Purify Infected & Radioactive Water ##NEEDS TRANSLATE##
+tile.basic_densifier.description=Used to compress Fluids into a dense form ##NEEDS TRANSLATE##
+tile.vehicle_charger.description=Place next to Vehicle Charging Pad or Powered Rocket Launch Pad to provide charging abilities ##NEEDS TRANSLATE##
 
 #Machine Containers
 container.solarhybrid.name=Hybrides Solarmodul
@@ -726,6 +741,7 @@ item.tier5_items.compressed_nickel.name=Gepresstes Nickel
 item.compressed_mercury.name=Gepresstes Quecksilber
 item.tier9_items.compressed_tungsten.name=Gepresstes Wolfram
 item.tier10_items.compressed_dark_iron.name=Gepresstes dunkles Eisen
+item.tier11_items.compressed_platinum.name=Gepresstes Platin
 
 #Ingots
 item.tier4_items.ingot_carbon.name=Kohlenstoffbarren
@@ -740,6 +756,7 @@ item.tier9_items.ingot_tungsten.name=Wolframbarren
 item.tier10_items.ingot_dark_iron.name=Dunkler Eisenbarren
 item.ingot_lead.name=Bleibarren
 item.tier5_items.ingot_volcanic.name=Vulkanbarren
+item.tier11_items.ingot_platinum.name=Platinbarren
 
 #Shards
 item.tier5_items.volcanic_shard.name=Vulkansplitter
@@ -977,8 +994,6 @@ item.green_diamond_helmet.name=Helm aus grünem Diamant
 item.green_diamond_chest.name=Brustpanzer aus grünem Diamant
 item.green_diamond_legings.name=Beinschutz aus grünem Diamant
 item.green_diamond_boots.name=Stiefel aus grünem Diamant
-item.tier11_items.ingot_platinum.name=Platinbarren
-item.tier11_items.compressed_platinum.name=Gepresstes Platin
 
 item.tier1_space_suit_helmet.name=Stufe 1 Raumanzug-Helm
 item.tier1_space_suit_chest.name=Stufe 1 Raumanzug-Brustschutz
@@ -1338,11 +1353,6 @@ tile.venus.titanium_block.name=Titanblock
 tile.veuns.dungeon_brick.name=Venus Verließziegel
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Flüssiger Glowstone
-tile.magma_fluid.name=Flüssige Magma
-tile.nitrogen_fluid.name=Flüssiger Stickstoff
-tile.frozen_water_fluid.name=Eingefrorenes Wasser
-tile.salt_fluid.name=Flüssiges Kristallisiertes Wasser
 tile.glowstone_fluid.name=Flüssiger Glowstone
 tile.magma_fluid.name=Flüssige Magma
 tile.nitrogen_fluid.name=Flüssige Stickstoff

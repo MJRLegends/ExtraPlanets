@@ -257,6 +257,8 @@ tile.callisto.stone.name=Callisto Stone ##NEEDS TRANSLATE##
 tile.callisto.ore_iron.name=Callisto Jernmalm
 tile.callisto.ore_tin.name=Callisto Tin Ore ##NEEDS TRANSLATE##
 tile.callisto.ore_copper.name=Callisto Kobber
+tile.callisto.dried_oil.name=Callisto Dried Oil ##NEEDS TRANSLATE##
+tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
 
 tile.deimos.surface.name=Deimos Surface Rock ##NEEDS TRANSLATE##
 tile.deimos.sub_surface.name=Deimos Sub-Surface Rock ##NEEDS TRANSLATE##
@@ -417,6 +419,19 @@ tile.basic_purifier.name=Basic Purifier ##NEEDS TRANSLATE##
 tile.basic_densifier.name=Basic Densifier ##NEEDS TRANSLATE##
 tile.basic_decontamination_unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
 tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
+
+tile.advanced_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
+tile.ultimate_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
+tile.advanced_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
+tile.ultimate_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
+tile.basic_decrystallizer.description=Used to convert Iodized Salt into Crystallized Water ##NEEDS TRANSLATE##
+tile.basic_crystallizer.description=Used to convert Crystallized Water into Iodized Salt ##NEEDS TRANSLATE##
+tile.basic_smasher.description=Used to smash blocks into pieces ##NEEDS TRANSLATE##
+tile.basic_chemical_injector.description=Used to combine a Blocks/Items into a chemical ##NEEDS TRANSLATE##
+tile.basic_solar_evaporation_chamber.description=Used to subject the input resource to evaporation ##NEEDS TRANSLATE##
+tile.basic_purifier.description=Used to Purify Infected & Radioactive Water ##NEEDS TRANSLATE##
+tile.basic_densifier.description=Used to compress Fluids into a dense form ##NEEDS TRANSLATE##
+tile.vehicle_charger.description=Place next to Vehicle Charging Pad or Powered Rocket Launch Pad to provide charging abilities ##NEEDS TRANSLATE##
 
 #Machine Containers
 container.solarhybrid.name=Hybrid Solar Panel ##NEEDS TRANSLATE##
@@ -737,6 +752,7 @@ item.compressed_nickel.name=Compressed Nickel ##NEEDS TRANSLATE##
 item.compressed_mercury.name=Compressed Mercury ##NEEDS TRANSLATE##
 item.tier9_items.compressed_tungsten.name=Compressed Tungsten ##NEEDS TRANSLATE##
 item.tier10_items.compressed_dark_iron.name=Compressed Dark Iron ##NEEDS TRANSLATE##
+item.tier11_items.compressed_platinum.name=Compressed Platinum ##NEEDS TRANSLATE##
 
 #Ingots
 item.tier4_items.ingot_carbon.name=Carbon Ingot ##NEEDS TRANSLATE##
@@ -751,6 +767,7 @@ item.tier9_items.ingot_tungsten.name=Tungsten Ingot ##NEEDS TRANSLATE##
 item.tier10_items.ingot_dark_iron.name=Dark Iron Ingot ##NEEDS TRANSLATE##
 item.ingot_lead.name=Lead Ingot ##NEEDS TRANSLATE##
 item.tier5_items.ingot_volcanic.name=Volcanic Ingot ##NEEDS TRANSLATE##
+item.tier11_items.ingot_platinum.name=Platinum Ingot ##NEEDS TRANSLATE##
 
 #Shards
 item.tier5_items.volcanic_shard.name=Volcanic Shard ##NEEDS TRANSLATE##
@@ -988,8 +1005,6 @@ item.green_diamond_helmet.name=Green Diamond Helmet ##NEEDS TRANSLATE##
 item.green_diamond_chest.name=Green Diamond Chestplate ##NEEDS TRANSLATE##
 item.green_diamond_legings.name=Green Diamond Leggings ##NEEDS TRANSLATE##
 item.green_diamond_boots.name=Green Diamond Boots ##NEEDS TRANSLATE##
-item.tier11_items.ingot_platinum.name=Platinum Ingot ##NEEDS TRANSLATE##
-item.tier11_items.compressed_platinum.name=Compressed Platinum ##NEEDS TRANSLATE##
 
 item.tier1_space_suit_helmet.name=Tier 1 Rumdragt Helmet ##NEEDS TRANSLATE##
 item.tier1_space_suit_chest.name=Tier 1 Rumdragt Chestplate ##NEEDS TRANSLATE##
@@ -1401,11 +1416,6 @@ tile.venus.titanium_block.name=Block of Titanium ##NEEDS TRANSLATE##
 tile.veuns.dungeon_brick.name=Venus Dungeon Brick ##NEEDS TRANSLATE##
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Flydende Glowstone ##NEEDS TRANSLATE##
-tile.magma_fluid.name=Flydende Magma ##NEEDS TRANSLATE##
-tile.nitrogen_fluid.name=Flydende Nitrogen ##NEEDS TRANSLATE##
-tile.frozen_water_fluid.name=Frozen Water ##NEEDS TRANSLATE##
-tile.salt_fluid.name=Flydende Crystallized Water ##NEEDS TRANSLATE##
 tile.glowstone_fluid.name=Flydende Glowstone ##NEEDS TRANSLATE##
 tile.magma_fluid.name=Flydende Magma ##NEEDS TRANSLATE##
 tile.nitrogen_fluid.name=Flydende Nitrogen ##NEEDS TRANSLATE##
