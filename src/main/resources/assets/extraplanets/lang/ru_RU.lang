@@ -5,32 +5,32 @@ itemGroup.SpaceToolsTab=Extra Planets: Инструменты
 itemGroup.SpaceArmorTab=Extra Planets: Броня
 
 #Galaxies
-galaxy.whirlpool=Whirlpool ##NEEDS TRANSLATE##
-galaxy.andromeda=Andromeda ##NEEDS TRANSLATE##
-galaxy.black_eye=Black Eye ##NEEDS TRANSLATE##
-galaxy.proxima_centauri=Proxima Centauri ##NEEDS TRANSLATE##
+galaxy.whirlpool=Вхирлпул
+galaxy.andromeda=Андромеда
+galaxy.black_eye=Черный Глаз
+galaxy.proxima_centauri=Проксима Центавра
 
 #Solar Systems
-solarsystem.kepler22=Система Кеплер 22
-solarsystem.kepler47=Система Кеплер 47
-solarsystem.kepler62=Система Кеплер 62
-solarsystem.kepler69=Система Кеплер 69
+solarsystem.kepler22=Система Кеплер-22
+solarsystem.kepler47=Система Кеплер-47
+solarsystem.kepler62=Система Кеплер-62
+solarsystem.kepler69=Система Кеплер-69
 
-solarsystem.xenos157=Xenos 157 ##NEEDS TRANSLATE##
-solarsystem.deltiri10=Deltiri 10 ##NEEDS TRANSLATE##
-solarsystem.vendrizi161=Vendrizi 161 ##NEEDS TRANSLATE##
-solarsystem.epsilonSolaria=Epsilon Solaria ##NEEDS TRANSLATE##
+solarsystem.xenos157=Ксенос 157
+solarsystem.deltiri10=Делтири 10
+solarsystem.vendrizi161=Вендризи 161
+solarsystem.epsilonSolaria=Эпсилон Соляриа
 
 #Stars
-star.kepler22=Звезда Кеплер 22
-star.kepler47=Звезда Кеплер 47
-star.kepler62=Звезда Кеплер 62
-star.kepler69=Звезда Кеплер 69
+star.kepler22=Звезда Кеплер-22
+star.kepler47=Звезда Кеплер-47
+star.kepler62=Звезда Кеплер-62
+star.kepler69=Звезда Кеплер-69
 
-star.xenos157=Xenos 157 Star ##NEEDS TRANSLATE##
-star.deltiri10=Deltiri 10 Star ##NEEDS TRANSLATE##
-star.vendrizi161=Vendrizi 161 Star ##NEEDS TRANSLATE##
-star.epsilonSolaria=Epsilon Solaria Star ##NEEDS TRANSLATE##
+star.xenos157=Звезда Ксенос 157
+star.deltiri10=Звезда Делтири 10
+star.vendrizi161=Звезда Вендризи 161
+star.epsilonSolaria=Звезда Эпсилон Соляриа
 
 #Planets
 planet.Mercury=Меркурий
@@ -45,33 +45,33 @@ planet.kuiperBelt=Пояс Койпера
 planet.makemake=Макемаке
 planet.haumea=Хаумеа
 
-planet.kepler62b=Кеплер 62b
-planet.kepler62c=Кеплер 62c
-planet.kepler62d=Кеплер 62d
-planet.kepler62e=Кеплер 62e
-planet.kepler62f=Кеплер 62f
-planet.kepler22b=Кеплер 22b
-planet.kepler47b=Кеплер 47b
-planet.kepler47c=Кеплер 47c
-planet.kepler69b=Кеплер 69b
-planet.kepler69c=Кеплер 69c
+planet.kepler62b=Кеплер-62 b
+planet.kepler62c=Кеплер-62 c
+planet.kepler62d=Кеплер-62 d
+planet.kepler62e=Кеплер-62 e
+planet.kepler62f=Кеплер-62 f
+planet.kepler22b=Кеплер-22 b
+planet.kepler47b=Кеплер-47 b
+planet.kepler47c=Кеплер-47 c
+planet.kepler69b=Кеплер-69 b
+planet.kepler69c=Кеплер-69 c
 
-planet.tatooine=Tatooine ##NEEDS TRANSLATE##
-planet.crait=Crait ##NEEDS TRANSLATE##
-planet.hoth=Hoth ##NEEDS TRANSLATE##
-planet.aqua=Aqua ##NEEDS TRANSLATE##
+planet.tatooine=Татуин
+planet.crait=Крэйт
+planet.hoth=Хот
+planet.aqua=Аква
 
-planet.qustroithea=Qustroithea ##NEEDS TRANSLATE##
-planet.jetraruta=Jetraruta ##NEEDS TRANSLATE##
-planet.moswion=Moswion ##NEEDS TRANSLATE##
-planet.ketherth=Ketherth ##NEEDS TRANSLATE##
-planet.xovis=Xovis ##NEEDS TRANSLATE##
+planet.qustroithea=Кустройтея
+planet.jetraruta=Джетрарута
+planet.moswion=Мосвион
+planet.ketherth=Кетерз
+planet.xovis=Ксовис
 
-planet.oarilia=Oarilia ##NEEDS TRANSLATE##
-planet.struronides=Struronides ##NEEDS TRANSLATE##
-planet.brajutov=Brajutov ##NEEDS TRANSLATE##
-planet.speshani16=Speshani 16 ##NEEDS TRANSLATE##
-planet.trars9=Trars 9 ##NEEDS TRANSLATE##
+planet.oarilia=Оарилиа
+planet.struronides=Струронидес
+planet.brajutov=Бражутов
+planet.speshani16=Спешани 16
+planet.trars9=Трарс 9
 
 #Moons
 moon.triton=Тритон
@@ -128,7 +128,7 @@ tile.jupiter.stone_bricks.name=Каменные кирпичи Юпитера
 tile.jupiter.palladium_block.name=Палладиевый блок
 tile.jupiter.red_gem_block.name=Блок красного драгоценного камня
 tile.jupiter.dungeon_brick.name=Кирпич сокровищницы Юпитера
-tile.jupiter.nickel_block.name=Block of Nickel ##NEEDS TRANSLATE##
+tile.jupiter.nickel_block.name=Никелевый блок
 
 tile.saturn.surface.name=Поверхность Сатурна
 tile.saturn.sub_surface.name=Подповерхностный грунт Сатурна
@@ -140,14 +140,14 @@ tile.saturn.ore_magnesium.name=Магниевая руда Сатурна
 tile.saturn.stone_bricks.name=Каменные кирпичи Сатурна
 tile.saturn.magnesium_block.name=Магниевый блок
 tile.saturn.dungeon_brick.name=Кирпич сокровищницы Сатурна
-tile.saturn.broken_infected_stone.name=Saturn Broken Infected Stone
-tile.saturn.infected_stone.name=Saturn Infected Stone
-tile.saturn.ore_slime.name=Saturn Slime Ore
+tile.saturn.broken_infected_stone.name=Сломанный зараженный камень Сатурна
+tile.saturn.infected_stone.name=Зараженный камень Сатурна
+tile.saturn.ore_slime.name=Слизневая руда Сатурна
 
 tile.uranus.surface.name=Поверхность Урана
 tile.uranus.sub_surface.name=Подповерхностный грунт Урана
 tile.uranus.stone.name=Камень Урана
-tile.uranus.ore_crystal.name=Uranus Crystal Ore ##NEEDS TRANSLATE##
+tile.uranus.ore_crystal.name=Кристалльная руда Урана
 tile.uranus.ore_white_gem.name=Руда белого драгоценного камня Урана
 tile.uranus.stone_bricks.name=Каменные кирпичи Урана
 tile.uranus.crystal_block.name=Кристалльный блок
@@ -160,7 +160,7 @@ tile.neptune.stone.name=Камень Нептуна
 tile.neptune.ore_iron.name=Железная руда Нептуна
 tile.neptune.ore_tin.name=Оловянная руда Нептуна
 tile.neptune.ore_copper.name=Медная руда Нептуна
-tile.neptune.ore_zinc.name=Neptune Zinc Ore ##NEEDS TRANSLATE##
+tile.neptune.ore_zinc.name=Цинкова руда Нептуна
 tile.neptune.ore_blue_gem.name=Руда синего драгоценного камня Нептуна
 tile.neptune.stone_bricks.name=Каменные кирпичи Нептуна
 tile.neptune.zinc_block.name=Цинковый блок
@@ -189,66 +189,66 @@ tile.eris.dungeon_brick.name=Кирпич сокровищницы Эриды
 tile.eris.ore_dark_iron.name=Руда тёмного железа Эриды
 tile.eris.dark_iron_block.name=Блок тёмного железа Эриды
 
-tile.kepler22b.dirt.name=Земля Кеплера 22b
-tile.kepler22b.stone.name=Камень Кеплера 22b
-tile.kepler22b_grass.name=Блок травы Кеплера 22b
-tile.kepler22b_blue_grass.name=Блок синей травы Кеплера 22b
-tile.kepler22b_purple_grass.name=Блок фиолетовой травы Кеплера 22b
-tile.kepler22b_red_grass.name=Блок красной травы Кеплера 22b
-tile.kepler22b_yellow_grass.name=Блок жёлтой травы Кеплера 22b
-tile.kepler22b_infected_grass.name=Зараженное стекло Кеплера 22b
-tile.kepler22b.ore_iron.name=Железная руда Кеплера 22b
-tile.kepler22b.ore_tin.name=Оловянная руда Кеплера 22b
-tile.kepler22b.ore_copper.name=Медная руда Кеплера 22b
-tile.kepler22b.ore_dense_coal.name=Руда плотного угля Кеплера 22b
-tile.kepler22b.ore_blue_diamonds.name=Руда синего алмаза Кеплера 22b
-tile.kepler22b.ore_red_diamonds.name=Руда красного алмаза Кеплера 22b
-tile.kepler22b.ore_purple_diamonds.name=Руда фиолетового алмаза Кеплера 22b
-tile.kepler22b.ore_yellow_diamonds.name=Руда жёлтого алмаза Кеплера 22b
-tile.kepler22b.ore_green_diamonds.name=Руда зелёного алмаза Кеплера 22b
-tile.kepler22b_planks.plank_maple_blue.name=Синие доски Кеплера 22b
-tile.kepler22b_planks.plank_maple_red.name=Красные доски Кеплера 22b
-tile.kepler22b_planks.plank_maple_purple.name=Фиолетовые доски Кеплера 22b
-tile.kepler22b_planks.plank_maple_yellow.name=Жёлтые доски Кеплера 22b
-tile.kepler22b_planks.plank_maple_green.name=Зелёные доски Кеплера 22b
-tile.kepler22b_planks.plank_maple_brown.name=Коричневые доски Кеплера 22b
-tile.kepler22b.stone_bricks.name=Каменные кирпичи Кеплера 22b
-tile.kepler22b_maple_logs.maple_blue_log.name=Синий дуб Кеплера 22b
-tile.kepler22b_maple_logs.maple_red_log.name=Красный дуб Кеплера 22b
-tile.kepler22b_maple_logs.maple_purple_log.name=Фиолетовый дуб Кеплера 22b
-tile.kepler22b_maple_logs.maple_yellow_log.name=Жёлтый дуб Кеплера 22b
-tile.kepler22b_maple_logs2.maple_green_log.name=Зелёный дуб Кеплера 22b
-tile.kepler22b_maple_logs2.maple_brown_log.name=Коричневый дуб Кеплера 22b
-tile.kepler22b_maple_saplings.blue_maple_sapling.name=Саженец синего дуба Кеплера 22b
-tile.kepler22b_maple_saplings.red_maple_sapling.name=Саженец красного дуба Кеплера 22b
-tile.kepler22b_maple_saplings.purple_maple_sapling.name=Саженец фиолетового дуба Кеплера 22b
-tile.kepler22b_maple_saplings.yellow_maple_sapling.name=Саженец жёлтого дуба Кеплера 22b
-tile.kepler22b_maple_saplings.green_maple_sapling.name=Саженец зелёного дуба Кеплера 22b
-tile.kepler22b_maple_saplings.brown_maple_sapling.name=Саженец коричневого дуба Кеплера 22b
-tile.kepler22b_new_maple_leaves.blue_maple_leaf.name=Листва синего дуба Кеплера 22b
-tile.kepler22b_new_maple_leaves.red_maple_leaf.name=Листва красного дуба Кеплера 22b
-tile.kepler22b_new_maple_leaves.purple_maple_leaf.name=Листва фиолетового дуба Кеплера 22b
-tile.kepler22b_new_maple_leaves.yellow_maple_leaf.name=Листва жёлтого дуба Кеплера 22b
-tile.kepler22b_new_maple_leaves_2.green_maple_leaf.name=Листва зелёного дуба Кеплера 22b
-tile.kepler22b_new_maple_leaves_2.brown_maple_leaf.name=Листва коричневого дуба Кеплера 22b
-tile.kepler22b_flowers.blue_maple_short_grass.name=Низкая синяя трава Кеплера 22b
-tile.kepler22b_flowers.blue_maple_med_grass.name=Средняя синяя трава Кеплера 22b
-tile.kepler22b_flowers.blue_maple_tall_grass.name=Высокая синяя трава Кеплера 22b
-tile.kepler22b_flowers.red_maple_short_grass.name=Низкая красная трава Кеплера 22b
-tile.kepler22b_flowers.red_maple_med_grass.name=Средняя красная трава Кеплера 22b
-tile.kepler22b_flowers.red_maple_tall_grass.name=Высокая красная трава Кеплера 22b
-tile.kepler22b_flowers.yellow_maple_short_grass.name=Низкая жёлтая трава Кеплера 22b
-tile.kepler22b_flowers.yellow_maple_med_grass.name=Средняя жёлтая трава Кеплера 22b
-tile.kepler22b_flowers.yellow_maple_tall_grass.name=Высокая жёлтая трава Кеплера 22b
-tile.kepler22b_flowers.purple_maple_short_grass.name=Низкая фиолетовая трава Кеплера 22b
-tile.kepler22b_flowers.purple_maple_med_grass.name=Средняя фиолетовая трава Кеплера 22b
-tile.kepler22b_flowers.purple_maple_tall_grass.name=Высокая фиолетовая трава Кеплера 22b
-tile.kepler22b_flowers.green_maple_short_grass.name=Низкая коричневая трава Кеплера 22b
-tile.kepler22b_flowers.green_maple_med_grass.name=Средняя коричневая трава Кеплера 22b
-tile.kepler22b_flowers.green_maple_tall_grass.name=Высокая коричневая трава Кеплера 22b
-tile.kepler22b.cobblestone.name=Булыжник Кеплера 22b
-tile.kepler22b.ore_platinum.name=Платиновая руда Кеплера 22b
-tile.kepler22b.platinum_block.name=Block of Platinum ##NEEDS TRANSLATE##
+tile.kepler22b.dirt.name=Земля Кеплер-22 b
+tile.kepler22b.stone.name=Камень Кеплер-22 b
+tile.kepler22b_grass.name=Блок травы Кеплер-22 b
+tile.kepler22b_blue_grass.name=Блок синей травы Кеплер-22 b
+tile.kepler22b_purple_grass.name=Блок фиолетовой травы Кеплер-22 b
+tile.kepler22b_red_grass.name=Блок красной травы Кеплер-22 b
+tile.kepler22b_yellow_grass.name=Блок жёлтой травы Кеплер-22 b
+tile.kepler22b_infected_grass.name=Зараженное стекло Кеплер-22 b
+tile.kepler22b.ore_iron.name=Железная руда Кеплер-22 b
+tile.kepler22b.ore_tin.name=Оловянная руда Кеплер-22 b
+tile.kepler22b.ore_copper.name=Медная руда Кеплер-22 b
+tile.kepler22b.ore_dense_coal.name=Руда плотного угля Кеплер-22 b
+tile.kepler22b.ore_blue_diamonds.name=Руда синего алмаза Кеплер-22 b
+tile.kepler22b.ore_red_diamonds.name=Руда красного алмаза Кеплер-22 b
+tile.kepler22b.ore_purple_diamonds.name=Руда фиолетового алмаза Кеплер-22 b
+tile.kepler22b.ore_yellow_diamonds.name=Руда жёлтого алмаза Кеплер-22 b
+tile.kepler22b.ore_green_diamonds.name=Руда зелёного алмаза Кеплер-22 b
+tile.kepler22b_planks.plank_maple_blue.name=Синие доски Кеплер-22 b
+tile.kepler22b_planks.plank_maple_red.name=Красные доски Кеплер-22 b
+tile.kepler22b_planks.plank_maple_purple.name=Фиолетовые доски Кеплер-22 b
+tile.kepler22b_planks.plank_maple_yellow.name=Жёлтые доски Кеплер-22 b
+tile.kepler22b_planks.plank_maple_green.name=Зелёные доски Кеплер-22 b
+tile.kepler22b_planks.plank_maple_brown.name=Коричневые доски Кеплер-22 b
+tile.kepler22b.stone_bricks.name=Каменные кирпичи Кеплер-22 b
+tile.kepler22b_maple_logs.maple_blue_log.name=Синий дуб Кеплер-22 b
+tile.kepler22b_maple_logs.maple_red_log.name=Красный дуб Кеплер-22 b
+tile.kepler22b_maple_logs.maple_purple_log.name=Фиолетовый дуб Кеплер-22 b
+tile.kepler22b_maple_logs.maple_yellow_log.name=Жёлтый дуб Кеплер-22 b
+tile.kepler22b_maple_logs2.maple_green_log.name=Зелёный дуб Кеплер-22 b
+tile.kepler22b_maple_logs2.maple_brown_log.name=Коричневый дуб Кеплер-22 b
+tile.kepler22b_maple_saplings.blue_maple_sapling.name=Саженец синего дуба Кеплер-22 b
+tile.kepler22b_maple_saplings.red_maple_sapling.name=Саженец красного дуба Кеплер-22 b
+tile.kepler22b_maple_saplings.purple_maple_sapling.name=Саженец фиолетового дуба Кеплер-22 b
+tile.kepler22b_maple_saplings.yellow_maple_sapling.name=Саженец жёлтого дуба Кеплер-22 b
+tile.kepler22b_maple_saplings.green_maple_sapling.name=Саженец зелёного дуба Кеплер-22 b
+tile.kepler22b_maple_saplings.brown_maple_sapling.name=Саженец коричневого дуба Кеплер-22 b
+tile.kepler22b_new_maple_leaves.blue_maple_leaf.name=Листва синего дуба Кеплер-22 b
+tile.kepler22b_new_maple_leaves.red_maple_leaf.name=Листва красного дуба Кеплер-22 b
+tile.kepler22b_new_maple_leaves.purple_maple_leaf.name=Листва фиолетового дуба Кеплер-22 b
+tile.kepler22b_new_maple_leaves.yellow_maple_leaf.name=Листва жёлтого дуба Кеплер-22 b
+tile.kepler22b_new_maple_leaves_2.green_maple_leaf.name=Листва зелёного дуба Кеплер-22 b
+tile.kepler22b_new_maple_leaves_2.brown_maple_leaf.name=Листва коричневого дуба Кеплер-22 b
+tile.kepler22b_flowers.blue_maple_short_grass.name=Низкая синяя трава Кеплер-22 b
+tile.kepler22b_flowers.blue_maple_med_grass.name=Средняя синяя трава Кеплер-22 b
+tile.kepler22b_flowers.blue_maple_tall_grass.name=Высокая синяя трава Кеплер-22 b
+tile.kepler22b_flowers.red_maple_short_grass.name=Низкая красная трава Кеплер-22 b
+tile.kepler22b_flowers.red_maple_med_grass.name=Средняя красная трава Кеплер-22 b
+tile.kepler22b_flowers.red_maple_tall_grass.name=Высокая красная трава Кеплер-22 b
+tile.kepler22b_flowers.yellow_maple_short_grass.name=Низкая жёлтая трава Кеплер-22 b
+tile.kepler22b_flowers.yellow_maple_med_grass.name=Средняя жёлтая трава Кеплер-22 b
+tile.kepler22b_flowers.yellow_maple_tall_grass.name=Высокая жёлтая трава Кеплер-22 b
+tile.kepler22b_flowers.purple_maple_short_grass.name=Низкая фиолетовая трава Кеплер-22 b
+tile.kepler22b_flowers.purple_maple_med_grass.name=Средняя фиолетовая трава Кеплер-22 b
+tile.kepler22b_flowers.purple_maple_tall_grass.name=Высокая фиолетовая трава Кеплер-22 b
+tile.kepler22b_flowers.green_maple_short_grass.name=Низкая коричневая трава Кеплер-22 b
+tile.kepler22b_flowers.green_maple_med_grass.name=Средняя коричневая трава Кеплер-22 b
+tile.kepler22b_flowers.green_maple_tall_grass.name=Высокая коричневая трава Кеплер-22 b
+tile.kepler22b.cobblestone.name=Булыжник Кеплер-22 b
+tile.kepler22b.ore_platinum.name=Платиновая руда Кеплер-22 b
+tile.kepler22b.platinum_block.name=Платиновый блок
 
 #Moon Blocks
 tile.callisto.surface.name=Поверхность Каллисто
@@ -257,8 +257,8 @@ tile.callisto.stone.name=Камень Каллисто
 tile.callisto.ore_iron.name=Железная руда Каллисто
 tile.callisto.ore_tin.name=Оловянная руда Каллисто
 tile.callisto.ore_copper.name=Медная руда Каллисто
-tile.callisto.dried_oil.name=Callisto Dried Oil ##NEEDS TRANSLATE##
-tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
+tile.callisto.dried_oil.name=Сухая нефть Каллисто
+tile.callisto.shale_oil.name=Сланцевая нефть Каллисто
 
 tile.deimos.surface.name=Поверхность Деймоса
 tile.deimos.sub_surface.name=Подповерхностный грунт Деймоса
@@ -315,9 +315,9 @@ tile.titan.stone.name=Камень Титана
 tile.titan.ore_iron.name=Железная руда Титана
 tile.titan.ore_tin.name=Оловянная руда Титана
 tile.titan.ore_copper.name=Медная руда Титана
-tile.titan.titan_methane_surface.name=Titan Methane Surface ##NEEDS TRANSLATE##
-tile.titan.titan_methane_sub_surface.name=Titan Methane Sub-Surface ##NEEDS TRANSLATE##
-tile.titan.titan_rocks.name=Titan Rocks ##NEEDS TRANSLATE##
+tile.titan.titan_methane_surface.name=Метановая поверхность Титана
+tile.titan.titan_methane_sub_surface.name=Метановый подповерхностный грунт Титана
+tile.titan.titan_rocks.name=Камни Титана
 
 tile.oberon.surface.name=Поверхность Оберона
 tile.oberon.sub_surface.name=Подповерхностный грунт Оберона
@@ -365,11 +365,11 @@ tile.uranus_gravel.name=Гравий Урана
 tile.neptune_gravel.name=Гравий Нептуна
 
 #Girt Blocks
-tile.diamond_grit.name=Diamond Grit ##NEEDS TRANSLATE##
-tile.coal_grit.name=Coal Grit ##NEEDS TRANSLATE##
-tile.iron_grit.name=Iron Grit ##NEEDS TRANSLATE##
-tile.gold_grit.name=Gold Grit ##NEEDS TRANSLATE##
-tile.emerald_grit.name=Emerald Grit ##NEEDS TRANSLATE##
+tile.diamond_grit.name=Diamond Grit
+tile.coal_grit.name=Coal Grit
+tile.iron_grit.name=Iron Grit
+tile.gold_grit.name=Gold Grit
+tile.emerald_grit.name=Emerald Grit
 
 #Treasure Chests
 tile.treasure_chest_t4.name=Сундук с сокровищами 4-го уровня
@@ -416,22 +416,22 @@ tile.advanced_fuel_loader.name=Улучшенный загрузчик топл�
 tile.ultimate_fuel_loader.name=Максимальный загрузчик топлива
 tile.vehicle_charger.name=Зарядное устройство для транспорта
 tile.basic_purifier.name=Базовый очиститель
-tile.basic_densifier.name=Basic Densifier ##NEEDS TRANSLATE##
-tile.basic_decontamination_unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
-tile.basic_decontamination_unit_fake_block.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
+tile.basic_densifier.name=Базовый уплотнитель
+tile.basic_decontamination_unit.name=Базовый оббезараживающий блок
+tile.basic_decontamination_unit_fake_block.name=Базовый оббезараживающий блок
 
-tile.advanced_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
-tile.ultimate_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
-tile.advanced_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
-tile.ultimate_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
-tile.basic_decrystallizer.description=Used to convert Iodized Salt into Crystallized Water ##NEEDS TRANSLATE##
-tile.basic_crystallizer.description=Used to convert Crystallized Water into Iodized Salt ##NEEDS TRANSLATE##
-tile.basic_smasher.description=Used to smash blocks into pieces ##NEEDS TRANSLATE##
-tile.basic_chemical_injector.description=Used to combine a Blocks/Items into a chemical ##NEEDS TRANSLATE##
-tile.basic_solar_evaporation_chamber.description=Used to subject the input resource to evaporation ##NEEDS TRANSLATE##
-tile.basic_purifier.description=Used to Purify Infected & Radioactive Water ##NEEDS TRANSLATE##
-tile.basic_densifier.description=Used to compress Fluids into a dense form ##NEEDS TRANSLATE##
-tile.vehicle_charger.description=Place next to Vehicle Charging Pad or Powered Rocket Launch Pad to provide charging abilities ##NEEDS TRANSLATE##
+tile.advanced_fuel_loader.description=После подключения к стартовой площадке Топливный загрузчик позволит топливу проходить в подключенную ракету или другое транспортное средство.
+tile.ultimate_fuel_loader.description=После подключения к стартовой площадке Топливный загрузчик позволит топливу проходить в подключенную ракету или другое транспортное средство.
+tile.advanced_refinery.description=Нефтеперерабатывающий завод будет использовать нефть и энергию, и выведет топливо для ракет и транспортных средств.
+tile.ultimate_refinery.description=Нефтеперерабатывающий завод будет использовать нефть и энергию, и выведет топливо для ракет и транспортных средств.
+tile.basic_decrystallizer.description=Используется для превращения иодированной соли в кристаллизованную воду
+tile.basic_crystallizer.description=Используется для превращения кристаллизированнной воды в иодированную соль
+tile.basic_smasher.description=Используется для разбивания блоков на куски
+tile.basic_chemical_injector.description=Используется для объединения блоков/предметов химически
+tile.basic_solar_evaporation_chamber.description=Используется для подачи входного ресурса на испарение
+tile.basic_purifier.description=Используется для очистки зараженной и радиоактивной воды
+tile.basic_densifier.description=Используется для сжатия жидкостей в плотную форму
+tile.vehicle_charger.description=Поместите рядом с зарядным устройством для транспорта или взлётной площадкой для электрической ракеты, чтобы обеспечить зарядные способности
 
 #Machine Containers
 container.solarhybrid.name=Гибридная солнечная панель
@@ -451,8 +451,8 @@ container.ultimate.fuelloader.name=Максимальный загрузчик �
 container.basic.solar.evaporation.chamber.name=Базовая солнечная испарительная камера
 container.vehicle.charger.name=Зарядное устройство для транспорта
 container.basic.purifier.name=Очиститель
-container.basic.densifier.name=Basic Densifier ##NEEDS TRANSLATE##
-container.basic.decontamination.unit.name=Basic Decontamination Unit ##NEEDS TRANSLATE##
+container.basic.densifier.name=Базовый уплотнитель
+container.basic.decontamination.unit.name=Базовый оббезараживающий блок
 
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=Бак с жидкой кристаллической водой
@@ -488,73 +488,73 @@ gui.infected_water_input.desc.2=Каждое ведро с зараженной 
 gui.clean_water_output.desc.0=Поместите пустое ванильное ведро в
 gui.clean_water_output.desc.1=этот слот для заполнения его из бака
 gui.bucket.message.finding=Вы можете получить эту жидкость,
-gui.bucket.message.finding.2.infected_water_fluid=on Mercury ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.radioactive_water_fluid=on Ceres & Europa ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.nitrogen_fluid=on Neptune ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.glowstone_fluid=on Saturn ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.magma_fluid=on Jupiter & IO ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.liquid_caramel_fluid=on Kepler22b ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.liquid_chocolate_fluid=on Kepler22b ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.liquid_hydrocarbon_fluid=on Saturn ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.salt_fluid=on Ceres & Europa ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.methane_fluid=on Titan ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.frozen_water_fluid=on Uranus & Triton ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.nitrogen_ice_fluid=on Triton ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.infected_water_fluid=на Меркурие
+gui.bucket.message.finding.2.radioactive_water_fluid=на Церере и Европе
+gui.bucket.message.finding.2.nitrogen_fluid=на Нептуне
+gui.bucket.message.finding.2.glowstone_fluid=на Сатурне
+gui.bucket.message.finding.2.magma_fluid=на Юпитере и Ио
+gui.bucket.message.finding.2.liquid_caramel_fluid=на Кеплер-22 b
+gui.bucket.message.finding.2.liquid_chocolate_fluid=на Кеплер-22 b
+gui.bucket.message.finding.2.liquid_hydrocarbon_fluid=на Сатурне
+gui.bucket.message.finding.2.salt_fluid=на Церере и Европе
+gui.bucket.message.finding.2.methane_fluid=на Титане
+gui.bucket.message.finding.2.frozen_water_fluid=на Уране и Тритоне
+gui.bucket.message.finding.2.nitrogen_ice_fluid=на Тритоне
 gui.bucket.message.crafting=Нажмите R, чтобы посмотреть как получить
 gui.status.missing.inputs.name=Отсутствуют предметы или жидкости
 gui.status.missing.power.name=Отсутствует мощность
-gui.densifier_input.desc.0=You can place the following ##NEEDS TRANSLATE##
-gui.densifier_input.desc.1=buckets in this slot: ##NEEDS TRANSLATE##
-gui.densifier_input.desc.2=Liquid Caramel ##NEEDS TRANSLATE##
-gui.densifier_input.desc.3=Liquid Chocolate ##NEEDS TRANSLATE##
-gui.densifier_input.desc.4=Nitrogen Ice ##NEEDS TRANSLATE##
-gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb ##NEEDS TRANSLATE##
-gui.message.general.tank.name=Fluid Tank ##NEEDS TRANSLATE##
-gui.message.general.tank.fluid.name=Fluid ##NEEDS TRANSLATE##
-gui.status.densifier.name=Densifying ##NEEDS TRANSLATE##
-gui.bucket.message.extreme.reactors.compact=This Fluid has Extreme Reactors Compatibility ##NEEDS TRANSLATE##
-gui.radiation.subject.message=You're now subject to ##NEEDS TRANSLATE##
-gui.radiation.reverse.message=You can use the following ways: Sleeping, Decontamination Unit, Anti Rad Drinks to help reverse the damage ##NEEDS TRANSLATE##
-gui.radiation.type.message=Radiation ##NEEDS TRANSLATE##
-gui.status.waiting.on.player.name=No Player in Machine ##NEEDS TRANSLATE##
-gui.message.finding.block=Can be found on ##NEEDS TRANSLATE##
-gui.message.finding.volcanic.rock=Jupiter & Io ##NEEDS TRANSLATE##
-gui.message.decontamination.unit=Reduces Radiation Level by 10% ##NEEDS TRANSLATE##
-gui.battery_slot.desc.custom=Recommended to use a Massive Battery ##NEEDS TRANSLATE##
-gui.radiation.cancel.message=You can use Oxygen Sealers with a Ambient Thermal Controller upgrade for full protection from Radiation & Pressure ##NEEDS TRANSLATE##
-currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
-wafter.uses.information=Used for Space Station Recipes ##NEEDS TRANSLATE##
-gui.rover.information=Use with a Vehicle Charging Pad ##NEEDS TRANSLATE##
-gui.rover.information.2=Attach a Vehicle Charger to the pad to charge ##NEEDS TRANSLATE##
+gui.densifier_input.desc.0=В этом слоте вы можете поместить
+gui.densifier_input.desc.1=следующие ведра:
+gui.densifier_input.desc.2=Жидкая карамель
+gui.densifier_input.desc.3=Жидкий шоколад
+gui.densifier_input.desc.4=Замороженный азот
+gui.densifier_input.desc.5=1 ведро с жидкостью = 1000mb
+gui.message.general.tank.name=Бак с жидкостью
+gui.message.general.tank.fluid.name=Жидкость
+gui.status.densifier.name=Уплотнение
+gui.bucket.message.extreme.reactors.compact=Эта жидкость совместима с Экстремальными реакторами
+gui.radiation.subject.message=Вы теперь подвержены
+gui.radiation.reverse.message=Вы можете использовать следующие способы: сон, блок дезактивации, антирадиационные напитки, чтобы помочь обратить вспять ущерб
+gui.radiation.type.message=Радиация
+gui.status.waiting.on.player.name=Нет игроков в машине
+gui.message.finding.block=Можно найти на
+gui.message.finding.volcanic.rock=Юпитер и Ио
+gui.message.decontamination.unit=Снижает уровень радиации на 10%
+gui.battery_slot.desc.custom=Рекомендуется использовать в Массивном аккумуляторе
+gui.radiation.cancel.message=Вы можете использовать кислородные уплотнители с улучшением температурного контроллера для полной защиты от излучения и давления
+currently.unused.name=В настоящее время не используется!
+wafter.uses.information=Используется для рецептов Космической станции
+gui.rover.information=Используется с зарядным устройством для автомобиля
+gui.rover.information.2=Прикрепите зарядное устройство к площадке для зарядки
 
 #Celestial Selection Screen GUI Components
-gui.celestial_details.name=Celestial Details ##NEEDS TRANSLATE##
-gui.general_features_details.name=General Feature Details ##NEEDS TRANSLATE##
-gui.atmosphere_details.name=Atmosphere Details ##NEEDS TRANSLATE##
-gui.general_details.name=General Details ##NEEDS TRANSLATE##
-gui.parent_solar_system_details.name=Parent Solar System Details ##NEEDS TRANSLATE##
-gui.new_galaxies.name=New Galaxies ##NEEDS TRANSLATE##
-gui.type_planet.name=Planet ##NEEDS TRANSLATE##
-gui.type_moon.name=Moon ##NEEDS TRANSLATE##
-gui.type_satellite.name=Satellite ##NEEDS TRANSLATE##
-gui.type_unknown.name=Unknown ##NEEDS TRANSLATE##
-gui.type_days.name=days ##NEEDS TRANSLATE##
-gui.type_hours.name=hours ##NEEDS TRANSLATE##
+gui.celestial_details.name=Астрономические детали
+gui.general_features_details.name=Общие характерные детали
+gui.atmosphere_details.name=Атмосферные детали
+gui.general_details.name=Общие детали
+gui.parent_solar_system_details.name=Детали родительской звёздной системы
+gui.new_galaxies.name=Новые галактики
+gui.type_planet.name=Планета
+gui.type_moon.name=Луна
+gui.type_satellite.name=Спутник
+gui.type_unknown.name=Неизвестно
+gui.type_days.name=дней
+gui.type_hours.name=часов
 
-gui.celestial_body_type.name=Type ##NEEDS TRANSLATE##
-gui.celestial_body_amount_of_moons.name=Amount of Moons ##NEEDS TRANSLATE##
-gui.celestial_body_orbit_time.name=Orbit Time ##NEEDS TRANSLATE##
-gui.celestial_body_gravity.name=Gravity ##NEEDS TRANSLATE##
-gui.celestial_body_day_lengh.name=Day Length ##NEEDS TRANSLATE##
-gui.celestial_body_meteor_frequency.name=Meteor Frequency ##NEEDS TRANSLATE##
-gui.celestial_body_wind_level.name=Wind Level ##NEEDS TRANSLATE##
-gui.celestial_body_temperature.name=Temperature ##NEEDS TRANSLATE##
-gui.celestial_body_breathable.name=Breathable ##NEEDS TRANSLATE##
-gui.celestial_body_corrosive_atmosphere.name=Corrosive Atmosphere ##NEEDS TRANSLATE##
-gui.celestial_body_radiation_level.name=Radiation Level ##NEEDS TRANSLATE##
-gui.celestial_body_pressure_level.name=Pressure Level ##NEEDS TRANSLATE##
-gui.celestial_body_amount_of_planets.name=Amount of Planets ##NEEDS TRANSLATE##
-gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
+gui.celestial_body_type.name=Тип
+gui.celestial_body_amount_of_moons.name=Количество лун
+gui.celestial_body_orbit_time.name=Орбитальный период
+gui.celestial_body_gravity.name=Гравитация
+gui.celestial_body_day_lengh.name=Продолжительность дня
+gui.celestial_body_meteor_frequency.name=Частота метеоров
+gui.celestial_body_wind_level.name=Уровень ветра
+gui.celestial_body_temperature.name=Температура
+gui.celestial_body_breathable.name=Воздухопроницаемость
+gui.celestial_body_corrosive_atmosphere.name=Коррозионная атмосфера
+gui.celestial_body_radiation_level.name=Уровень радиации
+gui.celestial_body_pressure_level.name=Уровень давления
+gui.celestial_body_amount_of_planets.name=Количество планет
+gui.celestial_body_has_dungeon.name=Сокровищницы
 
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Открыть инвентарь заряженного транспорта
@@ -575,38 +575,38 @@ tile.orange_sand.name=Оранжевый песок
 tile.orange_sandstone.name=Оранжевый песчаник
 
 #CandyCane/Cake/Icing Blocks
-tile.candy_blocks.candy_cane_red.name=Red Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_green.name=Green Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_blue.name=Blue Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_orange.name=Orange Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_magenta.name=Magenta Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_pink.name=Pink Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_lime.name=Lime Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_purple.name=Purple Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_brown.name=Brown Candy Cane ##NEEDS TRANSLATE##
-tile.candy_blocks.candy_cane_black.name=Black Candy Cane ##NEEDS TRANSLATE##
+tile.candy_blocks.candy_cane_red.name=Красный леденец
+tile.candy_blocks.candy_cane_green.name=Зелёный леденец
+tile.candy_blocks.candy_cane_blue.name=Синий леденец
+tile.candy_blocks.candy_cane_orange.name=Оранжевый леденец
+tile.candy_blocks.candy_cane_magenta.name=Пурпурный леденец
+tile.candy_blocks.candy_cane_pink.name=Розовый леденец
+tile.candy_blocks.candy_cane_lime.name=Лаймовый леденец
+tile.candy_blocks.candy_cane_purple.name=Фиолетовый леденец
+tile.candy_blocks.candy_cane_brown.name=Коричневый леденец
+tile.candy_blocks.candy_cane_black.name=Чёрный леденец
 
-tile.candy_blocks_horizontal.candy_cane_red_horizontal.name=Red Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_green_horizontal.name=Green Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_blue_horizontal.name=Blue Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_orange_horizontal.name=Orange Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_magenta_horizontal.name=Magenta Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_pink_horizontal.name=Pink Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_lime_horizontal.name=Lime Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_purple_horizontal.name=Purple Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_brown_horizontal.name=Brown Candy Cane (Horizontal) ##NEEDS TRANSLATE##
-tile.candy_blocks_horizontal.candy_cane_black_horizontal.name=Black Candy Cane (Horizontal) ##NEEDS TRANSLATE##
+tile.candy_blocks_horizontal.candy_cane_red_horizontal.name=Красный леденец (горизонтальный)
+tile.candy_blocks_horizontal.candy_cane_green_horizontal.name=Зелёный леденец (горизонтальный)
+tile.candy_blocks_horizontal.candy_cane_blue_horizontal.name=Синий леденец (горизонтальный)
+tile.candy_blocks_horizontal.candy_cane_orange_horizontal.name=Оранжевый леденец (горизонтальный)
+tile.candy_blocks_horizontal.candy_cane_magenta_horizontal.name=Пурпурный леденец (горизонтальный)
+tile.candy_blocks_horizontal.candy_cane_pink_horizontal.name=Розовый леденец (горизонтальный)
+tile.candy_blocks_horizontal.candy_cane_lime_horizontal.name=Лаймовый леденец (горизонтальный)
+tile.candy_blocks_horizontal.candy_cane_purple_horizontal.name=Фиолетовый леденец (горизонтальный)
+tile.candy_blocks_horizontal.candy_cane_brown_horizontal.name=Коричневый леденец (горизонтальный)
+tile.candy_blocks_horizontal.candy_cane_black_horizontal.name=Чёрный леденец (горизонтальный)
 
-tile.cake_blocks.cake_block.name=Cake Block ##NEEDS TRANSLATE##
-tile.cake_blocks.cake_block_red_velvet.name=Red Velvet Cake Block ##NEEDS TRANSLATE##
-tile.cake_blocks.cake_block_chocolate.name=Chocolate Cake Block ##NEEDS TRANSLATE##
-tile.cake_blocks.white_icing_red_dots.name=White Icing with Red Dots ##NEEDS TRANSLATE##
-tile.cake_blocks.white_icing_green_dots.name=White Icing with Green Dots ##NEEDS TRANSLATE##
-tile.cake_blocks.white_icing_pink_dots.name=White Icing with Pink Dots ##NEEDS TRANSLATE##
-tile.cake_blocks.white_icing_orange_dots.name=White Icing with Orange Dots ##NEEDS TRANSLATE##
-tile.cake_blocks.cookie_rocks.name=Cookie Rocks ##NEEDS TRANSLATE##
+tile.cake_blocks.cake_block.name=Блок кекса
+tile.cake_blocks.cake_block_red_velvet.name=Красный бархатный блок кекса
+tile.cake_blocks.cake_block_chocolate.name=Шоколадный блок кекса
+tile.cake_blocks.white_icing_red_dots.name=Белое облеленение с красными точками
+tile.cake_blocks.white_icing_green_dots.name=Белое облеленение с зелёными точками
+tile.cake_blocks.white_icing_pink_dots.name=Белое облеленение с розовыми точками
+tile.cake_blocks.white_icing_orange_dots.name=Белое облеленение с оранжевыми точками
+tile.cake_blocks.cookie_rocks.name=Каменное печенье
 
-tile.white_sugar_cane.name=White Sugar Cane Block ##NEEDS TRANSLATE##
+tile.white_sugar_cane.name=Блок белого сахарного тростника
 
 #Decorative Blocks
 tile.decorative_blocks.marble.name=Мрамор
@@ -627,10 +627,10 @@ tile.decorative_blocks.magnesium_broken_titled_floor.name=Сломанный м�
 tile.decorative_blocks.ash_bricks.name=Пепельные кирпичи
 tile.decorative_blocks2.white_block.name=Белый блок
 tile.decorative_blocks2.red_block.name=Красный блок
-tile.decorative_blocks2.blue_block.name=Blue Block ##NEEDS TRANSLATE##
-tile.decorative_blocks2.light_blue_block.name=Light Blue Block ##NEEDS TRANSLATE##
-tile.decorative_blocks2.yellow_block.name=Yellow Block ##NEEDS TRANSLATE##
-tile.decorative_blocks2.green_block.name=Green Block ##NEEDS TRANSLATE##
+tile.decorative_blocks2.blue_block.name=Синий блок
+tile.decorative_blocks2.light_blue_block.name=Светло-синий блок
+tile.decorative_blocks2.yellow_block.name=Жёлтый блок
+tile.decorative_blocks2.green_block.name=Зелёный блок
 
 #Stairs
 tile.mercury_stairs_surface.name=Ступеньки из поверхности Меркурия
@@ -750,6 +750,7 @@ item.tier5_items.compressed_nickel.name=Сжатый никель
 item.compressed_mercury.name=Сжатая ртуть
 item.tier9_items.compressed_tungsten.name=Сжатый вольфрам
 item.tier10_items.compressed_dark_iron.name=Сжатое тёмное железо
+item.tier11_items.compressed_platinum.name=Сжатая платина
 
 #Ingots
 item.tier4_items.ingot_carbon.name=Углеродный слиток
@@ -764,6 +765,7 @@ item.tier9_items.ingot_tungsten.name=Вольфрамовый слиток
 item.tier10_items.ingot_dark_iron.name=Слиток тёмного железа
 item.ingot_lead.name=Свинцовый слиток
 item.tier5_items.ingot_volcanic.name=Вулканический слиток
+item.tier11_items.ingot_platinum.name=Платиновый слиток
 
 #Shards
 item.tier5_items.volcanic_shard.name=Вулканический осколок
@@ -800,8 +802,8 @@ item.bucket_radioactive_water.name=Ведро радиоактивной вод�
 item.bucket_methane.name=Ведро жидкого метана
 item.bucket_nitrogen_ice.name=Ведро замороженного азота
 item.bucket_liquid_hydrocarbon.name=Ведро жидкого водорода
-item.bucket_liquid_caramel.name=Liquid Caramel Bucket ##NEEDS TRANSLATE##
-item.bucket_liquid_chocolate.name=Liquid Chocolate Bucket ##NEEDS TRANSLATE##
+item.bucket_liquid_caramel.name=Ведро жидкой карамели
+item.bucket_liquid_chocolate.name=Ведро жидкого шоколада
 
 #Keys
 item.T4key.name=Ключ от подземелья 4-го уровня
@@ -934,7 +936,7 @@ item.nickel_battery.name=Никелевый аккумулятор
 item.zinc_battery.name=Цинковый аккумулятор
 item.advanced_battery.name=Улучшенный аккумулятор
 item.ultimate_battery.name=Максимальный аккумулятор
-item.massive_battery.name=Massive Battery ##NEEDS TRANSLATE##
+item.massive_battery.name=Массивный аккумулятор
 
 #Armor
 item.carbon_helmet.name=Углеродный шлем
@@ -1001,8 +1003,6 @@ item.green_diamond_helmet.name=Шлем из зелёного алмаза
 item.green_diamond_chest.name=Нагрудник из зелёного алмаза
 item.green_diamond_legings.name=Поножи из зелёного алмаза
 item.green_diamond_boots.name=Ботинки из зелёного алмаза
-item.tier11_items.ingot_platinum.name=Платиновый слиток
-item.tier11_items.compressed_platinum.name=Сжатая платина
 
 item.tier1_space_suit_helmet.name=Шлем космического скафандра 1-го уровня
 item.tier1_space_suit_chest.name=Нагрудник космического скафандра 1-го уровня
@@ -1020,10 +1020,10 @@ item.tier3_space_suit_legings.name=Поножи космического ска�
 item.tier3_space_suit_boots.name=Ботинки космического скафандра 3-го уровня
 item.tier3_space_suit_gravity_boots.name=Гравитационные ботинки космического скафандра 3-го уровня
 item.tier4_space_suit_helmet.name=Шлем космического скафандра 4-го уровня
-item.tier4_space_suit_chest.name=НагрудникШлем космического скафандра 4-го уровня
-item.tier4_space_suit_legings.name=ПоножиШлем космического скафандра 4-го уровня
-item.tier4_space_suit_boots.name=БотинкиШлем космического скафандра 4-го уровня
-item.tier4_space_suit_gravity_boots.name=Гравитационные ботинкиШлем космического скафандра 4-го уровня
+item.tier4_space_suit_chest.name=Нагрудник космического скафандра 4-го уровня
+item.tier4_space_suit_legings.name=Поножи космического скафандра 4-го уровня
+item.tier4_space_suit_boots.name=Ботинки космического скафандра 4-го уровня
+item.tier4_space_suit_gravity_boots.name=Гравитационные ботинки космического скафандра 4-го уровня
 
 tier1.space.suit.information=Требуется для Меркурия и Цереры
 tier2.space.suit.information=Требуется для Юпитера, в том числе и их спутников
@@ -1048,20 +1048,20 @@ tier4.thermal.padding.information=Требуется для Юпитера, Са
 tier5.thermal.padding.information=Требуется для Урана, Нептуна, Плутона, Эриды, в том числе и их спутников
 
 #Space Suit Layers
-item.tier1_pressure_layer.name=Слой "Давление" 1-го уровня
-item.tier2_pressure_layer.name=Слой "Давление" 2-го уровня
-item.tier3_pressure_layer.name=Слой "Давление" 3-го уровня
-item.tier4_pressure_layer.name=Слой "Давление" 4-го уровня
+item.tier1_pressure_layer.name=Слой «Давление» 1-го уровня
+item.tier2_pressure_layer.name=Слой «Давление» 2-го уровня
+item.tier3_pressure_layer.name=Слой «Давление» 3-го уровня
+item.tier4_pressure_layer.name=Слой «Давление» 4-го уровня
 
-item.tier1_radiation_layer.name=Слой "Радиация" 1-го уровня
-item.tier2_radiation_layer.name=Слой "Радиация" 2-го уровня
-item.tier3_radiation_layer.name=Слой "Радиация" 3-го уровня
-item.tier4_radiation_layer.name=Слой "Радиация" 4-го уровня
+item.tier1_radiation_layer.name=Слой «Радиация» 1-го уровня
+item.tier2_radiation_layer.name=Слой «Радиация» 2-го уровня
+item.tier3_radiation_layer.name=Слой «Радиация» 3-го уровня
+item.tier4_radiation_layer.name=Слой «Радиация» 4-го уровня
 
-item.tier1_armor_layer.name=Слой "Броня" 1-го уровня
-item.tier2_armor_layer.name=Слой "Броня" 2-го уровня
-item.tier3_armor_layer.name=Слой "Броня" 3-го уровня
-item.tier4_armor_layer.name=Слой "Броня" 4-го уровня
+item.tier1_armor_layer.name=Слой «Броня» 1-го уровня
+item.tier2_armor_layer.name=Слой «Броня» 2-го уровня
+item.tier3_armor_layer.name=Слой «Броня» 3-го уровня
+item.tier4_armor_layer.name=Слой «Броня» 4-го уровня
 
 tier1_armor_layer.desc=Рецепт Компрессора: 4 Алюминиевых слитка
 tier2_armor_layer.desc=Рецепт Компрессора: 4 Титановых слитка
@@ -1093,57 +1093,57 @@ item.tier4_un_prepared_space_suit_boots.name=Ботинки неподготов
 item.oxygen_tank_very_heavy_full.name=Очень большой кислородный баллон
 item.oxygen_tank_extremely_heavy_full.name=Черезвычайно большой кислородный баллон
 
-item.oxygen_tank_light_full_black.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_red.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_green.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_brown.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_blue.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_purple.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_cyan.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_light_gray.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_gray.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_pink.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_yellow.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_light_blue.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_magenta.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_orange.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_white.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_black.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_red.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_green.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_brown.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_blue.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_purple.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_cyan.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_light_gray.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_gray.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_pink.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_yellow.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_light_blue.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_magenta.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_orange.name=Лёгкий кислородный баллон
+item.oxygen_tank_light_full_white.name=Лёгкий кислородный баллон
 
-item.oxygen_tank_med_full_black.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_red.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_green.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_brown.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_purple.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_cyan.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_light_gray.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_gray.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_pink.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_yellow.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_light_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_magenta.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_orange.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_white.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_black.name=Средний кислородный баллон
+item.oxygen_tank_med_full_red.name=Средний кислородный баллон
+item.oxygen_tank_med_full_green.name=Средний кислородный баллон
+item.oxygen_tank_med_full_brown.name=Средний кислородный баллон
+item.oxygen_tank_med_full_blue.name=Средний кислородный баллон
+item.oxygen_tank_med_full_purple.name=Средний кислородный баллон
+item.oxygen_tank_med_full_cyan.name=Средний кислородный баллон
+item.oxygen_tank_med_full_light_gray.name=Средний кислородный баллон
+item.oxygen_tank_med_full_gray.name=Средний кислородный баллон
+item.oxygen_tank_med_full_pink.name=Средний кислородный баллон
+item.oxygen_tank_med_full_yellow.name=Средний кислородный баллон
+item.oxygen_tank_med_full_light_blue.name=Средний кислородный баллон
+item.oxygen_tank_med_full_magenta.name=Средний кислородный баллон
+item.oxygen_tank_med_full_orange.name=Средний кислородный баллон
+item.oxygen_tank_med_full_white.name=Средний кислородный баллон
 
-item.oxygen_tank_heavy_full_black.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_lime.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_green.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_brown.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_blue.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_purple.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_cyan.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_light_gray.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_gray.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_pink.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_yellow.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_light_blue.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_magenta.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_orange.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_white.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_black.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_lime.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_green.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_brown.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_blue.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_purple.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_cyan.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_light_gray.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_gray.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_pink.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_yellow.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_light_blue.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_magenta.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_orange.name=Тяжёлый кислородный баллон
+item.oxygen_tank_heavy_full_white.name=Тяжёлый кислородный баллон
 
 #Radiation Items
-item.iodide_salt.name=Йодированная соль
-item.potassium_iodide.name=Йодид калия
+item.iodide_salt.name=Иодированная соль
+item.potassium_iodide.name=Иодид калия
 item.potassium.name=Калий
 item.potash_shards.name=Осколок калия
 item.anti_radiation.name=Анти-рад
@@ -1185,8 +1185,8 @@ item.tier5_kit.without_thermal_padding.name=Полный комплект 5-го
 item.tier5_kit.just_oxygen_setup.name=Кислородный комплект 5-го уровня
 item.tier5_kit.just_protection.name=Защитный комплект 5-го уровня
 
-item.kit.information.desc=Used for Compact Storage for Space Equipment ##NEEDS TRANSLATE##
-item.kit.information.use=Right Click to Equip Kit ##NEEDS TRANSLATE##
+item.kit.information.desc=Используется для компактного хранения для космического оборудования
+item.kit.information.use=Щелкните ПКМ, чтобы экипировать
 
 #Sticks
 item.tier11_items.blue_sticks.name=Синяя палка
@@ -1203,11 +1203,11 @@ item.tools.mesh.name=Строчная сетка
 item.tools.filter.name=Фильтр
 
 #Other Blocks
-tile.slime_block.name=Slime Block
+tile.slime_block.name=Слизневый блок
 
 #Other Blocks
-tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
-tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
+tile.deimos.ore_lead.name=Свинцовая руда Деймоса
+tile.phobos.ore_lead.name=Свинцовая руда Фобоса
 
 #Other Items
 item.apple_diamond.name=Алмазное яблоко
@@ -1222,11 +1222,11 @@ item.thermal_cloth.tier4_thermal_cloth.name=Теплоустойчивая тк�
 item.thermal_cloth.tier5_thermal_cloth.name=Теплоустойчивая ткань 5-го уровня
 item.tier5_items.ash.name=Порошковая зола
 item.geiger_counter.name=Счётчик Гейгера
-item.white_sugar_cane_item.name=White Sugar Cane
+item.white_sugar_cane_item.name=Белый сахарный тростник
 geiger.counter.desc=Щелкните ПКМ, чтобы увидеть ваш текущий уровень радиации!
 geiger.counter.location.desc=Могут быть получены из подземелья Меркурия!
-item.chocolate_bar.name=Chocolate Bar ##NEEDS TRANSLATE##
-item.caramel_bar.name=Caramel Bar ##NEEDS TRANSLATE##
+item.chocolate_bar.name=Плитка шоколада
+item.caramel_bar.name=Плитка карамели
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=Дегидратированная жаренная свинина
@@ -1270,8 +1270,8 @@ entity.extraplanets.EvolvedIceSlimeBoss.name=Эволюционировавши�
 entity.extraplanets.EvolvedGhastBoss.name=Эволюционировавший гаст-босс
 entity.extraplanets.EvolvedSnowmanBoss.name=Эволюционировавший снеговик-босс
 entity.extraplanets.EvolvedFireBatBoss.name=Эволюционировавшая огненная летучая мышь-босс
-entity.extraplanets.EvolvedGiantZombieBoss.name=Evolved Giant Zombie Boss ##NEEDS TRANSLATE##
-entity.extraplanets.EvolvedSpaceManBoss.name=Evolved Space Man Boss ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedGiantZombieBoss.name=Эволюционировавший гигантский зомби-босс
+entity.extraplanets.EvolvedSpaceManBoss.name=Эволюционировавший астронавт-босс
 
 entity.extraplanets.EvolvedWitch.name=Эволюционировавшая ведьма
 entity.extraplanets.EvolvedMagmaCube.name=Эволюционировавший адский слизень
@@ -1281,8 +1281,8 @@ entity.extraplanets.EvolvedBlaze.name=Эволюционировавший иф�
 entity.extraplanets.EvolvedBlueCreeper.name=Эволюционировавший синий крипер
 entity.extraplanets.EvolvedRedCreeper.name=Эволюционировавший красный крипер
 entity.extraplanets.EvolvedPowerSkeleton.name=Эволюционировавший мощный скелет
-entity.extraplanets.EvolvedGiantSpider.name=Evolved Giant Spider ##NEEDS TRANSLATE##
-entity.extraplanets.EvolvedMiniEnderman.name=Evolved Mini Enderman ##NEEDS TRANSLATE##
+entity.extraplanets.EvolvedGiantSpider.name=Эволюционировавший гигантский паук
+entity.extraplanets.EvolvedMiniEnderman.name=Эволюционировавший мини эндермен
 
 #Achievements
 achievement.mercury_planet=Приземлитесь на Меркурий!
@@ -1293,7 +1293,7 @@ achievement.uranus_planet=Приземлитесь на Уран!
 achievement.neptune_planet=Приземлитесь на Нептун!
 achievement.pluto_planet=Приземлитесь на Плутон!
 achievement.eris_planet=Приземлитесь на Эриду!
-achievement.kepler22b_planet=Приземлитесь на Кеплер 22b!
+achievement.kepler22b_planet=Приземлитесь на Кеплер-22 b!
 
 achievement.mercury_planet.desc=Посадите ракету 3-го уровня на Меркурий
 achievement.ceres_planet.desc=Посадите ракету 4-го уровня на Цереру
@@ -1303,7 +1303,7 @@ achievement.uranus_planet.desc=Посадите ракету 6-го уровня
 achievement.neptune_planet.desc=Посадите ракету 7-го уровня на Нептун
 achievement.pluto_planet.desc=Посадите ракету 8-го уровня на Плутон
 achievement.eris_planet.desc=Посадите ракету 9-го уровня на Эриду
-achievement.kepler22b_planet.desc=Посадите ракету 10-го уровня на Кеплер 22b
+achievement.kepler22b_planet.desc=Посадите ракету 10-го уровня на Кеплер-22 b
 
 achievement.mercury_boss=Победить босса 4-го уровня!
 achievement.jupiter_boss=Победить босса 5-го уровня!
@@ -1351,22 +1351,22 @@ tile.infected_water.name=Зараженная вода
 tile.methane.name=Жидкий метан
 tile.nitrogen_ice.name=Жидкий замерзший азот
 tile.liquid_hydrocarbon.name=Жидкий углеводород
-tile.liquid_chocolate.name=Liquid Chocolate
-tile.liquid_caramel.name=Liquid Caramel
+tile.liquid_chocolate.name=Жидкий шоколад
+tile.liquid_caramel.name=Жидкая карамель
 
 fluid.glowstone_fluid=Жидкая светящиеся пыль
 fluid.magma_fluid=Жидкая магма
 fluid.nitrogen_fluid=Жидкий азот
-fluid.frozen_water_fluid=Замерзшая вода
+fluid.frozen_water_fluid=Замёрзшая вода
 fluid.salt_fluid=Жидкая кристаллическая вода
 fluid.radioactive_water_fluid=Радиоактивная вода
 fluid.clean_water_fluid=Чистая вода
-fluid.infected_water_fluid=Зараженная вода
+fluid.infected_water_fluid=Заражённая вода
 fluid.methane_fluid=Жидкий метан
-fluid.nitrogen_ice_fluid=Жидкий замерзший азот
+fluid.nitrogen_ice_fluid=Жидкий замёрзший азот
 fluid.liquid_hydrocarbon_fluid=Жидкий углеводород
-fluid.liquid_chocolate_fluid=Liquid Chocolate
-fluid.liquid_caramel_fluid=Liquid Caramel
+fluid.liquid_chocolate_fluid=Жидкий шоколад
+fluid.liquid_caramel_fluid=Жидкая карамель
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Предупреждение о высоком давлении
@@ -1398,123 +1398,118 @@ satellite.space_station.uranus=Космическая станция Урана
 satellite.space_station.neptune=Космическая станция Нептуна
 satellite.space_station.pluto=Космическая станция Плутона
 satellite.space_station.eris=Космическая станция Эриды
-satellite.space_station.kepler22b=Космическая станция Кеплера 22b
+satellite.space_station.kepler22b=Космическая станция Кеплер-22 b
 
 #------------------1.7.10 Only Section------------------
 #Venus Blocks
-tile.venus.surface.name=Venus Surface Rock ##NEEDS TRANSLATE##
-tile.venus.sub_surface.name=Venus Sub-Surface Rock ##NEEDS TRANSLATE##
-tile.venus.stone.name=Venus Stone ##NEEDS TRANSLATE##
-tile.venus.ore_iron.name=Venus Iron Ore ##NEEDS TRANSLATE##
-tile.venus.ore_tin.name=Venus Tin Ore ##NEEDS TRANSLATE##
-tile.venus.ore_copper.name=Venus Copper Ore ##NEEDS TRANSLATE##
-tile.venus.ore_carbon.name=Carbon Ore ##NEEDS TRANSLATE##
-tile.venus.stone_bricks.name=Venus Stone Bricks ##NEEDS TRANSLATE##
-tile.venus.carbon_block.name=Block of Carbon ##NEEDS TRANSLATE##
-tile.venus.titanium_block.name=Block of Titanium ##NEEDS TRANSLATE##
-tile.veuns.dungeon_brick.name=Venus Dungeon Brick ##NEEDS TRANSLATE##
+tile.venus.surface.name=Поверхность Венеры
+tile.venus.sub_surface.name=Подповерхностный грунт Венеры
+tile.venus.stone.name=Камень Венеры
+tile.venus.ore_iron.name=Железная руда Венеры
+tile.venus.ore_tin.name=Оловянная руда Венеры
+tile.venus.ore_copper.name=Медная руда Венеры
+tile.venus.ore_carbon.name=Углеродная руда
+tile.venus.stone_bricks.name=Каменные кирпичи Венеры
+tile.venus.carbon_block.name=Углеродный блок
+tile.venus.titanium_block.name=Титановый блок
+tile.veuns.dungeon_brick.name=Кирпич сокровищницы Венеры
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Liquid Glowstone ##NEEDS TRANSLATE##
-tile.magma_fluid.name=Liquid Magma ##NEEDS TRANSLATE##
-tile.nitrogen_fluid.name=Liquid Nitrogen ##NEEDS TRANSLATE##
-tile.frozen_water_fluid.name=Frozen Water ##NEEDS TRANSLATE##
-tile.salt_fluid.name=Liquid Crystallized Water ##NEEDS TRANSLATE##
-tile.glowstone_fluid.name=Liquid Glowstone ##NEEDS TRANSLATE##
-tile.magma_fluid.name=Liquid Magma ##NEEDS TRANSLATE##
-tile.nitrogen_fluid.name=Liquid Nitrogen ##NEEDS TRANSLATE##
-tile.frozen_water_fluid.name=Frozen Water ##NEEDS TRANSLATE##
-tile.salt_fluid.name=Liquid Crystallized Water ##NEEDS TRANSLATE##
-tile.radioactive_water_fluid.name=Radioactive Water ##NEEDS TRANSLATE##
-tile.infected_water_fluid.name=Infected Water ##NEEDS TRANSLATE##
-tile.methane_fluid.name=Liquid Methane ##NEEDS TRANSLATE##
-tile.nitrogen_ice_fluid.name=Liquid Nitrogen Ice ##NEEDS TRANSLATE##
-tile.liquid_hydrocarbon_fluid.name=Liquid Hydrocarbon ##NEEDS TRANSLATE##
-tile.liquid_chocolate_fluid.name=Liquid Chocolate ##NEEDS TRANSLATE##
-tile.liquid_caramel_fluid.name=Liquid Caramel ##NEEDS TRANSLATE##
+tile.glowstone_fluid.name=Жидкая светящиеся пыль
+tile.magma_fluid.name=Жидкая магма
+tile.nitrogen_fluid.name=Жидкий азот
+tile.frozen_water_fluid.name=Замёрзшая аожа
+tile.salt_fluid.name=Жидкая кристаллическая вода
+tile.radioactive_water_fluid.name=Радиоактивная вода
+tile.infected_water_fluid.name=Заражённая вода
+tile.methane_fluid.name=Жидкий метан
+tile.nitrogen_ice_fluid.name=Жидкий замёрзший азот
+tile.liquid_hydrocarbon_fluid.name=Жидкий углеводород
+tile.liquid_chocolate_fluid.name=Жидкий шоколад
+tile.liquid_caramel_fluid.name=Жидкая карамель
 
 #Planet Blocks Slabs
-tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Mercury Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_venusStoneBlockhalfslab.name=Venus Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Ceres Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Jupiter Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Saturn Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Uranus Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Neptune Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Pluto Stone Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_erisStoneBlockhalfslab.name=Eris Stone Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Полублок из камня Меркурия
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=Полублок из камня Венеры
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Полублок из камня Цереры
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Полублок из камня Юпитера
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Полублок из камня Сатурна
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Полублок из камня Урана
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Полублок из камня Нептуна
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Полублок из камня Плутона
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=Полублок из камня Эриды
 
 #Planet Blocks Stairs
-tile.mercuryStoneStairs.name=Mercury Stone Stairs ##NEEDS TRANSLATE##
-tile.venusStoneStairs.name=Venus Stone Stairs ##NEEDS TRANSLATE##
-tile.ceresStoneStairs.name=Ceres Stone Stairs ##NEEDS TRANSLATE##
-tile.jupiterStoneStairs.name=Jupiter Stone Stairs ##NEEDS TRANSLATE##
-tile.saturnStoneStairs.name=Saturn Stone Stairs ##NEEDS TRANSLATE##
-tile.uranusStoneStairs.name=Uranus Stone Stairs ##NEEDS TRANSLATE##
-tile.neptuneStoneStairs.name=Neptune Stone Stairs ##NEEDS TRANSLATE##
-tile.plutoStoneStairs.name=Pluto Stone Stairs ##NEEDS TRANSLATE##
-tile.erisStoneStairs.name=Eris Stone Stairs ##NEEDS TRANSLATE##
+tile.mercuryStoneStairs.name=Ступеньки из камня Меркурия
+tile.venusStoneStairs.name=Ступеньки из камня Венеры
+tile.ceresStoneStairs.name=Ступеньки из камня Цереры
+tile.jupiterStoneStairs.name=Ступеньки из камня Юпитера
+tile.saturnStoneStairs.name=Ступеньки из камня Сатурна
+tile.uranusStoneStairs.name=Ступеньки из камня Урана
+tile.neptuneStoneStairs.name=Ступеньки из камня Нептуна
+tile.plutoStoneStairs.name=Ступеньки из камня Плутона
+tile.erisStoneStairs.name=Ступеньки из камня Эриды
 
-tile.mercuryStoneBrickStairs.name=Mercury Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.venusStoneBrickStairs.name=Venus Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.ceresStoneBrickStairs.name=Ceres Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.jupiterStoneBrickStairs.name=Jupiter Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.saturnStoneBrickStairs.name=Saturn Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.uranusStoneBrickStairs.name=Uranus Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.neptuneStoneBrickStairs.name=Neptune Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.plutoStoneBrickStairs.name=Pluto Stone Bricks Stairs ##NEEDS TRANSLATE##
-tile.erisStoneBrickStairs.name=Eris Stone Bricks Stairs ##NEEDS TRANSLATE##
+tile.mercuryStoneBrickStairs.name=Ступеньки из кирпича сокровищницы Меркурия
+tile.venusStoneBrickStairs.name=Ступеньки из кирпича сокровищницы Венеры
+tile.ceresStoneBrickStairs.name=Ступеньки из кирпича сокровищницы Цереры
+tile.jupiterStoneBrickStairs.name=Ступеньки из кирпича сокровищницы Юпитера
+tile.saturnStoneBrickStairs.name=Ступеньки из кирпича сокровищницы Сатурна
+tile.uranusStoneBrickStairs.name=Ступеньки из кирпича сокровищницы Урана
+tile.neptuneStoneBrickStairs.name=Ступеньки из кирпича сокровищницы Нептуна
+tile.plutoStoneBrickStairs.name=Ступеньки из кирпича сокровищницы Плутона
+tile.erisStoneBrickStairs.name=Ступеньки из кирпича сокровищницы Эриды
 
 #Dungeon Bricks Slabs
-tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Venus Dungeon Brick Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Jupiter Dungeon Brick Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Saturn Dungeon Brick Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Uranus Dungeon Brick Slab ##NEEDS TRANSLATE##
-tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Neptune Dungeon Brick Slab ##NEEDS TRANSLATE##
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Полублок из кирпича сокровищницы Венеры
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Полублок из кирпича сокровищницы Юпитера
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Полублок из кирпича сокровищницы Сатурна
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Полублок из кирпича сокровищницы Урана
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Полублок из кирпича сокровищницы Нептуна
 
 #Dungeon Bricks Stairs
-tile.venusDungeonBrickStoneStairs.name=Venus Dungeon Brick Stairs ##NEEDS TRANSLATE##
-tile.jupiterDungeonBrickStoneStairs.name=Jupiter Dungeon Brick Stairs ##NEEDS TRANSLATE##
-tile.saturnDungeonBrickStoneStairs.name=Saturn Dungeon Brick Stairs ##NEEDS TRANSLATE##
-tile.uranusDungeonBrickStoneStairs.name=Uranus Dungeon Brick Stairs ##NEEDS TRANSLATE##
-tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs ##NEEDS TRANSLATE##
+tile.venusDungeonBrickStoneStairs.name=Ступеньки из кирпича сокровищницы Венеры
+tile.jupiterDungeonBrickStoneStairs.name=Ступеньки из кирпича сокровищницы Юпитера
+tile.saturnDungeonBrickStoneStairs.name=Ступеньки из кирпича сокровищницы Сатурна
+tile.uranusDungeonBrickStoneStairs.name=Ступеньки из кирпича сокровищницы Урана
+tile.neptuneDungeonBrickStoneStairs.name=Ступеньки из кирпича сокровищницы Нептуна
 
 #Planets
-planet.Venus=Venus ##NEEDS TRANSLATE##
+planet.Venus=Венера
 
 #Other Items
-item.tier4_items.ash_shard.name=Ash Shard ##NEEDS TRANSLATE##
-item.tier4_items.volcanic_shard.name=Volcanic Shard ##NEEDS TRANSLATE##
-item.tier4_items.ingot_volcanic.name=Volcanic Ingot ##NEEDS TRANSLATE##
-item.tier6_items.magnesium_shard.name=Magnesium Shard ##NEEDS TRANSLATE##
-item.tier4_items.ash.name=Ash ##NEEDS TRANSLATE##
-item.tier4_items.sledge_hammer.name=Sledge Hammer ##NEEDS TRANSLATE##
-item.tier4_items.grinding_wheel.name=Grinding Wheel ##NEEDS TRANSLATE##
-item.thermal_cloth.tier2_thermal_cloth.name=Tier 2 Thermal Cloth ##NEEDS TRANSLATE##
+item.tier4_items.ash_shard.name=Пепельный осколок
+item.tier4_items.volcanic_shard.name=Вулканический осколок
+item.tier4_items.ingot_volcanic.name=Вулканический слиток
+item.tier6_items.magnesium_shard.name=Магниевый осколок
+item.tier4_items.ash.name=Пепел
+item.tier4_items.sledge_hammer.name=Кувалда
+item.tier4_items.grinding_wheel.name=Шлифовальный круг
+item.thermal_cloth.tier2_thermal_cloth.name=Термическое покрытие 2-го уровня
 
 #MorePlanetsCompactBlocks&Items
-tile.treasure_chest_t4_saturn.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
-tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
-tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest ##NEEDS TRANSLATE##
-tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest ##NEEDS TRANSLATE##
+tile.treasure_chest_t4_saturn.name=Сундук с сокровищами 4-го уровня
+tile.treasure_chest_t4_uranus.name=Сундук с сокровищами 4-го уровня
+tile.treasure_chest_t5_neptune.name=Сундук с сокровищами 5-го уровня
+tile.treasure_chest_t6_eris.name=Сундук с сокровищами 6-го уровня
 
 #Keys
-item.key.T4_saturn.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.key.T4_uranus.name=Tier 4 Dungeon Key ##NEEDS TRANSLATE##
-item.key.T5_neptune.name=Tier 5 Dungeon Key ##NEEDS TRANSLATE##
-item.key.T6_eris.name=Tier 6 Dungeon Key ##NEEDS TRANSLATE##
+item.key.T4_saturn.name=Ключ от подземелья 4-го уровня
+item.key.T4_uranus.name=Ключ от подземелья 4-го уровня
+item.key.T5_neptune.name=Ключ от подземелья 5-го уровня
+item.key.T6_eris.name=Ключ от подземелья 6-го уровня
 
 #Thermal Paddings
-item.tier2_thermal_helm.name=Tier 2 Thermal Padding Helm ##NEEDS TRANSLATE##
-item.tier2_thermal_chestplate.name=Tier 2 Thermal Padding Chestpiece ##NEEDS TRANSLATE##
-item.tier2_thermal_leggings.name=Tier 2 Thermal Padding Leggings ##NEEDS TRANSLATE##
-item.tier2_thermal_boots.name=Tier 2 Thermal Padding Boots ##NEEDS TRANSLATE##
+item.tier2_thermal_helm.name=Термозащитный шлем 2-го уровня
+item.tier2_thermal_chestplate.name=Термозащитный нагрудник 2-го кровня
+item.tier2_thermal_leggings.name=Термозащитные поножи 2-го уровня
+item.tier2_thermal_boots.name=Термозащитные ботинки 2-го уровня
 
 #Messages
-currently.unused.name=Currently Unused! ##NEEDS TRANSLATE##
-tier2.information=Required for Venus and Mercury ##NEEDS TRANSLATE##
-tier3.information=Required for Jupiter and Saturn including their moons ##NEEDS TRANSLATE##
-tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons ##NEEDS TRANSLATE##
+currently.unused.name=В настоящее время не используется!
+tier2.information=Требуется для Венеры и Меркурия
+tier3.information=Требуется для Юпитера и Сатурна, включая их луны
+tier4.information=Требуется для Урана, Нептуна, Плутона и Эриды, включая их луны
 
 #------------------1.11.2 & 1.12.2 Only Section------------------
 item.t4key.name=Ключ от подземелья 4-го уровня
