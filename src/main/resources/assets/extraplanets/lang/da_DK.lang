@@ -429,8 +429,8 @@ tile.basic_crystallizer.description=Used to convert Crystallized Water into Iodi
 tile.basic_smasher.description=Used to smash blocks into pieces ##NEEDS TRANSLATE##
 tile.basic_chemical_injector.description=Used to combine a Blocks/Items into a chemical ##NEEDS TRANSLATE##
 tile.basic_solar_evaporation_chamber.description=Used to subject the input resource to evaporation ##NEEDS TRANSLATE##
-tile.basic_purifier.name.description=Used to Purify Infected & Radioactive Water ##NEEDS TRANSLATE##
-tile.basic_densifier.name.description=Used to compress Fluids into a dense form ##NEEDS TRANSLATE##
+tile.basic_purifier.description=Used to Purify Infected & Radioactive Water ##NEEDS TRANSLATE##
+tile.basic_densifier.description=Used to compress Fluids into a dense form ##NEEDS TRANSLATE##
 tile.vehicle_charger.description=Place next to Vehicle Charging Pad or Powered Rocket Launch Pad to provide charging abilities ##NEEDS TRANSLATE##
 
 #Machine Containers
