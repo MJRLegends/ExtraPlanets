@@ -513,6 +513,8 @@ gui.message.general.tank.name=Бак с жидкостью
 gui.message.general.tank.fluid.name=Жидкость
 gui.status.densifier.name=Уплотнение
 gui.bucket.message.extreme.reactors.compact=Эта жидкость совместима с Экстремальными реакторами
+gui.radiation.reduced.message=Your Radiation Level has been reduced by ##NEEDS TRANSLATE##
+gui.radiation.current.message=Your Current Radiation Level is ##NEEDS TRANSLATE##
 gui.radiation.subject.message=Вы теперь подвержены
 gui.radiation.reverse.message=Вы можете использовать следующие способы: сон, блок дезактивации, антирадиационные напитки, чтобы помочь обратить вспять ущерб
 gui.radiation.type.message=Радиация
@@ -1202,13 +1204,6 @@ item.tools.grinding_wheel.name=Шлифовальный круг
 item.tools.mesh.name=Строчная сетка
 item.tools.filter.name=Фильтр
 
-#Other Blocks
-tile.slime_block.name=Слизневый блок
-
-#Other Blocks
-tile.deimos.ore_lead.name=Свинцовая руда Деймоса
-tile.phobos.ore_lead.name=Свинцовая руда Фобоса
-
 #Other Items
 item.apple_diamond.name=Алмазное яблоко
 item.apple_iron.name=Железное яблоко
@@ -1477,6 +1472,11 @@ tile.neptuneDungeonBrickStoneStairs.name=Ступеньки из кирпича 
 #Planets
 planet.Venus=Венера
 
+#Other Blocks
+tile.slime_block.name=Слизневый блок
+tile.deimos.ore_lead.name=Свинцовая руда Деймоса
+tile.phobos.ore_lead.name=Свинцовая руда Фобоса
+
 #Other Items
 item.tier4_items.ash_shard.name=Пепельный осколок
 item.tier4_items.volcanic_shard.name=Вулканический осколок
@@ -1506,7 +1506,6 @@ item.tier2_thermal_leggings.name=Термозащитные поножи 2-го 
 item.tier2_thermal_boots.name=Термозащитные ботинки 2-го уровня
 
 #Messages
-currently.unused.name=В настоящее время не используется!
 tier2.information=Требуется для Венеры и Меркурия
 tier3.information=Требуется для Юпитера и Сатурна, включая их луны
 tier4.information=Требуется для Урана, Нептуна, Плутона и Эриды, включая их луны

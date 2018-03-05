@@ -1204,13 +1204,6 @@ item.tools.grinding_wheel.name=Schleifscheibe
 item.tools.mesh.name=Netz
 item.tools.filter.name=Filter
 
-#Other Blocks
-tile.slime_block.name=Schleimblock
-
-#Other Blocks
-tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
-tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
-
 #Other Items
 item.apple_diamond.name=Diamantapfel
 item.apple_iron.name=Eisenapfel
@@ -1478,6 +1471,11 @@ tile.neptuneVerließBrickStoneStairs.name=Neptun Verließziegeltreppen
 
 #Planets
 planet.Venus=Venus
+
+#Other Blocks
+tile.slime_block.name=Schleimblock
+tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
+tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
 
 #Other Items
 item.tier4_items.ash_shard.name=Aschenstück

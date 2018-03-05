@@ -355,9 +355,10 @@ tile.callisto_gravel.name=木衛四沙礫
 tile.ganymede_gravel.name=木衛三沙礫
 tile.rhea_gravel.name=土衛五沙礫
 tile.titan_gravel.name=土衛一沙礫
-tile.oberon_gravel.name=OberonGravel ##NEEDS TRANSLATE##
-tile.titania_gravel.name=TitaniaGravel ##NEEDS TRANSLATE##
-tile.iapetus_gravel.name=IapetusGravel ##NEEDS TRANSLATE##
+tile.oberon_gravel.name=Oberon Gravel ##NEEDS TRANSLATE##
+tile.titania_gravel.name=Titania Gravel ##NEEDS TRANSLATE##
+tile.iapetus_gravel.name=Iapetus Gravel ##NEEDS TRANSLATE##
+tile.venus_gravel.name=Venus Gravel ##NEEDS TRANSLATE##
 tile.jupiter_gravel.name=木星沙礫
 tile.saturn_gravel.name=土星沙礫
 tile.uranus_gravel.name=天王星沙礫
@@ -1203,13 +1204,6 @@ item.tools.grinding_wheel.name=Grinding Wheel ##NEEDS TRANSLATE##
 item.tools.mesh.name=String Mesh ##NEEDS TRANSLATE##
 item.tools.filter.name=Filter ##NEEDS TRANSLATE##
 
-#Other Blocks
-tile.slime_block.name=Slime Block
-
-#Other Blocks
-tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
-tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
-
 #Other Items
 item.apple_diamond.name=鑽石蘋果
 item.apple_iron.name=Iron Apple ##NEEDS TRANSLATE##
@@ -1477,6 +1471,11 @@ tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs ##NEEDS TR
 
 #Planets
 planet.Venus=Venus ##NEEDS TRANSLATE##
+
+#Other Blocks
+tile.slime_block.name=Slime Block
+tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
+tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
 
 #Other Items
 item.tier4_items.ash_shard.name=Ash Shard ##NEEDS TRANSLATE##

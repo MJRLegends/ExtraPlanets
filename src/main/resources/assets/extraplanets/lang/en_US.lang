@@ -1204,13 +1204,6 @@ item.tools.grinding_wheel.name=Grinding Wheel
 item.tools.mesh.name=String Mesh
 item.tools.filter.name=Filter
 
-#Other Blocks
-tile.slime_block.name=Slime Block
-
-#Other Blocks
-tile.deimos.ore_lead.name=Deimos Lead Ore
-tile.phobos.ore_lead.name=Phobos Lead Ore
-
 #Other Items
 item.apple_diamond.name=Diamond Apple
 item.apple_iron.name=Iron Apple
@@ -1478,6 +1471,11 @@ tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs
 
 #Planets
 planet.Venus=Venus
+
+#Other Blocks
+tile.slime_block.name=Slime Block
+tile.deimos.ore_lead.name=Deimos Lead Ore
+tile.phobos.ore_lead.name=Phobos Lead Ore
 
 #Other Items
 item.tier4_items.ash_shard.name=Ash Shard
