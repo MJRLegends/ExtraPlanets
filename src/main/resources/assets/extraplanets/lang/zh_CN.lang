@@ -1204,13 +1204,6 @@ item.tools.grinding_wheel.name=砂轮
 item.tools.mesh.name=线网
 item.tools.filter.name=过滤器
 
-#Other Blocks
-tile.slime_block.name=史莱姆块
-
-#Other Blocks
-tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
-tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
-
 #Other Items
 item.apple_diamond.name=钻石苹果
 item.apple_iron.name=铁苹果
@@ -1478,6 +1471,11 @@ tile.neptuneDungeonBrickStoneStairs.name=海王星地牢砖台阶
 
 #Planets
 planet.Venus=金星
+
+#Other Blocks
+tile.slime_block.name=史莱姆块
+tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
+tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
 
 #Other Items
 item.tier4_items.ash_shard.name=余烬碎片
