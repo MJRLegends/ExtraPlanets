@@ -262,6 +262,7 @@ tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
 
 tile.deimos.surface.name=Roca Superficial de Deimos
 tile.deimos.sub_surface.name=Roca Subterránea de Deimos
+tile.deimos.stone.name=Deimos Stone ##NEEDS TRANSLATE##
 tile.deimos.ore_iron.name=Mena de Hierro de Deimos
 tile.deimos.ore_tin.name=Mena de Estaño de Deimos
 tile.deimos.ore_copper.name=Mena de Cobre de Deimos
@@ -1203,13 +1204,6 @@ item.tools.grinding_wheel.name=Muela
 item.tools.mesh.name=Malla de cuerda
 item.tools.filter.name=Filtro
 
-#Other Blocks
-tile.slime_block.name=Bloque de Slime
-
-#Other Blocks
-tile.deimos.ore_lead.name=Mena de Plomo de Deimos
-tile.phobos.ore_lead.name=Mena de Plomo de Fobos
-
 #Other Items
 item.apple_diamond.name=Manzana de diamante
 item.apple_iron.name=Manzana de hierro
@@ -1329,7 +1323,7 @@ achievement.craft_rocket_6=¡Cohete Nivel 6!
 achievement.craft_rocket_7=¡Cohete Nivel 7!
 achievement.craft_rocket_8=¡Cohete Nivel 8!
 achievement.craft_rocket_9=¡Cohete Nivel 9!
-achievement.craft_rocket_9=¡Cohete Nivel 10!
+achievement.craft_rocket_10=¡Cohete Nivel 10!
 
 achievement.craft_rocket_3.desc=Crea un Cohete Nivel 3
 achievement.craft_rocket_4.desc=Crea un Cohete Nivel 4
@@ -1477,6 +1471,11 @@ tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs ##NEEDS TR
 
 #Planets
 planet.Venus=Venus
+
+#Other Blocks
+tile.slime_block.name=Bloque de Slime
+tile.deimos.ore_lead.name=Mena de Plomo de Deimos
+tile.phobos.ore_lead.name=Mena de Plomo de Fobos
 
 #Other Items
 item.tier4_items.ash_shard.name=Ash Shard ##NEEDS TRANSLATE##

@@ -1204,13 +1204,6 @@ item.tools.grinding_wheel.name=Grinding Wheel ##NEEDS TRANSLATE##
 item.tools.mesh.name=String Mesh ##NEEDS TRANSLATE##
 item.tools.filter.name=Filter ##NEEDS TRANSLATE##
 
-#Other Blocks
-tile.slime_block.name=Slime Block ##NEEDS TRANSLATE##
-
-#Other Blocks
-tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
-tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
-
 #Other Items
 item.apple_diamond.name=Diamond Apple ##NEEDS TRANSLATE##
 item.apple_iron.name=Jern Apple ##NEEDS TRANSLATE##
@@ -1338,6 +1331,7 @@ achievement.craft_rocket_5.desc=Craft Tier 5 Rocket ##NEEDS TRANSLATE##
 achievement.craft_rocket_6.desc=Craft Tier 6 Rocket ##NEEDS TRANSLATE##
 achievement.craft_rocket_7.desc=Craft Tier 7 Rocket ##NEEDS TRANSLATE##
 achievement.craft_rocket_8.desc=Craft Tier 8 Rocket ##NEEDS TRANSLATE##
+achievement.craft_rocket_9.desc=Craft Tier 9 Rocket ##NEEDS TRANSLATE##
 achievement.craft_rocket_10.desc=Craft Tier 10 Rocket ##NEEDS TRANSLATE##
 
 #Liquids/Fluid
@@ -1477,6 +1471,11 @@ tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs ##NEEDS TR
 
 #Planets
 planet.Venus=Venus ##NEEDS TRANSLATE##
+
+#Other Blocks
+tile.slime_block.name=Slime Block ##NEEDS TRANSLATE##
+tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
+tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
 
 #Other Items
 item.tier4_items.ash_shard.name=Ash Shard ##NEEDS TRANSLATE##
