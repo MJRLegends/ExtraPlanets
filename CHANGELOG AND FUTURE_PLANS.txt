@@ -5,6 +5,10 @@
 
 
 ===========================================Released Updates===========================================
+v0.2.8
+*Fixed recipe crash issue when disabling certain config options, found via issue #255
+*Added erroring field to the crash message with message about reporting the bug
+
 v0.2.7
 *Fixed for landing properly on Space Stations for any future Electric Launch controlled rockets
 *Added missing machine descriptions
