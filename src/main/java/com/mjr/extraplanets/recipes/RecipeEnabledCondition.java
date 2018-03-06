@@ -19,6 +19,8 @@ public class RecipeEnabledCondition implements IConditionFactory {
 		if (JsonUtils.getString(json, "value").equals("mercury/batteries")) {
 			if (Config.MERCURY && Config.BATTERIES)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("mercurytools"))
 			return () -> Config.ITEMS_MERCURY;
@@ -27,6 +29,8 @@ public class RecipeEnabledCondition implements IConditionFactory {
 		if (JsonUtils.getString(json, "value").equals("mercuryslabsandstairs")) {
 			if (Config.MERCURY && Config.SLABS_AND_STAIRS)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("ceres"))
 			return () -> Config.CERES;
@@ -35,6 +39,8 @@ public class RecipeEnabledCondition implements IConditionFactory {
 		if (JsonUtils.getString(json, "value").equals("ceresslabsandstairs")) {
 			if (Config.CERES && Config.SLABS_AND_STAIRS)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("jupiter"))
 			return () -> Config.JUPITER;
@@ -45,10 +51,14 @@ public class RecipeEnabledCondition implements IConditionFactory {
 		if (JsonUtils.getString(json, "value").equals("jupiter/batteries")) {
 			if (Config.JUPITER && Config.BATTERIES)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("jupiterslabsandstairs")) {
 			if (Config.JUPITER && Config.SLABS_AND_STAIRS)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("saturn"))
 			return () -> Config.SATURN;
@@ -57,6 +67,8 @@ public class RecipeEnabledCondition implements IConditionFactory {
 		if (JsonUtils.getString(json, "value").equals("saturnslabsandstairs")) {
 			if (Config.SATURN && Config.SLABS_AND_STAIRS)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("uranus"))
 			return () -> Config.URANUS;
@@ -67,6 +79,8 @@ public class RecipeEnabledCondition implements IConditionFactory {
 		if (JsonUtils.getString(json, "value").equals("uranusslabsandstairs")) {
 			if (Config.URANUS && Config.SLABS_AND_STAIRS)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("neptune"))
 			return () -> Config.NEPTUNE;
@@ -77,10 +91,14 @@ public class RecipeEnabledCondition implements IConditionFactory {
 		if (JsonUtils.getString(json, "value").equals("neptuneslabsandstairs")) {
 			if (Config.NEPTUNE && Config.SLABS_AND_STAIRS)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("neptune/batteries")) {
 			if (Config.NEPTUNE && Config.BATTERIES)
 				return () -> true;
+			else
+				return () -> false;
 		}
 		if (JsonUtils.getString(json, "value").equals("pluto"))
 			return () -> Config.PLUTO;
@@ -197,6 +215,6 @@ public class RecipeEnabledCondition implements IConditionFactory {
 				return () -> false;
 		}
 
-		throw new IllegalStateException("Config defined with recipe_enabled condition without a valid field defined!");
+		throw new IllegalStateException("Config defined with recipe_enabled condition without a valid field defined! field was: " + JsonUtils.getString(json, "value") + " - PLEASE REPORT THIS ON THE EXTRAPLANETS ISSUE TRACKER!");
 	}
 }
