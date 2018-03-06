@@ -8,6 +8,14 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v1.9.9
+*Some work for support for Galaxy Space v1.2.0 for compatibility
+*Removed not needed console logging
+*Updated lang files to match 1.8+ changes
+*Fixed missing entries in de_DE.lang file
+*Moved entries around in lang files
+*Tweaks to comments on mod compatibility support config options
+
 v1.9.8
 *Added da_DK.lang (Thanks to Jin16) (Part translated)
 *Added missing ore dict entries & Fixed ore dict entries
