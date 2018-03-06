@@ -808,11 +808,11 @@ public class ExtraPlanets_RecipeGeneration {
 
 		// Launch pads
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 0), new Object[] { "   ", "BBB", "III", 'I', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'B', new ItemStack(AsteroidsItems.basicItem, 1, 6) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 1), new Object[] { "   ", "BBB", "III", 'I', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'B',
-				new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 7) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "neptune", new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 1), new Object[] { "   ", "BBB", "III", 'I',
+				new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), 'B', new ItemStack(ExtraPlanets_Blocks.PLUTO_BLOCKS, 1, 7) });
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 2), new Object[] { "   ", "BBB", "III", 'I', new ItemStack(MarsItems.marsItemBasic, 1, 2), 'B', new ItemStack(MarsBlocks.marsBlock, 1, 8) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 3), new Object[] { "   ", "BBB", "III", 'I', new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), 'B',
-				new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 6) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 3), new Object[] { "   ", "BBB", "III", 'I',
+				new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), 'B', new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 6) });
 
 		List<ItemStack> items2 = OreDictionary.getOres("ingotLead");
 		int count2 = items2.size();
@@ -831,11 +831,11 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "rovers", new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3), new Object[] { " W ", "WXW", " W ", 'W', "ingotDesh", 'X',
 				new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 2) });
 		// Can of Food
-		RecipeDumper.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 0), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_PORKCHOP, Items.COOKED_PORKCHOP });
-		RecipeDumper.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 1), new Object[] { new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 0) });
-		RecipeDumper.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 2), new Object[] { new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 1), new ItemStack(Items.COOKED_FISH, 1, 1) });
-		RecipeDumper.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 3), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_CHICKEN, Items.COOKED_CHICKEN });
-		RecipeDumper.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 4), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_BEEF, Items.COOKED_BEEF });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 0), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_PORKCHOP, Items.COOKED_PORKCHOP });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 1), new Object[] { new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 0) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 2), new Object[] { new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 1), new ItemStack(Items.COOKED_FISH, 1, 1) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 3), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_CHICKEN, Items.COOKED_CHICKEN });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 4), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_BEEF, Items.COOKED_BEEF });
 
 		// Advanced & Ultimate Battery
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "batteries", new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T',
@@ -856,11 +856,12 @@ public class ExtraPlanets_RecipeGeneration {
 				new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()), 'C', new ItemStack(GCItems.itemBasicMoon, 1, 0) });
 
 		// Sledge Hammer
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), new Object[] { "XXX", "YSY", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12), 'Y', new ItemStack(GCItems.itemBasicMoon), 'S', "stickWood" });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "jupiter", new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), new Object[] { "XXX", "YSY", " S ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12), 'Y',
+				new ItemStack(GCItems.itemBasicMoon), 'S', "stickWood" });
 
 		// Grinding Wheel
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 1), new Object[] { "ZXZ", "XHX", "ZXZ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10), 'H', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), 'Z',
-				new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "jupiter", new ItemStack(ExtraPlanets_Items.TOOLS, 1, 1), new Object[] { "ZXZ", "XHX", "ZXZ", 'X', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10), 'H',
+				new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), 'Z', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 12) });
 
 		// Mesh
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 2), new Object[] { "SSS", "SSS", "SSS", 'S', Items.STRING });
@@ -1149,7 +1150,8 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 1), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 0) });
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 2), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(Blocks.SNOW) });
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 3), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(Blocks.ICE) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 5), new Object[] { "BSW", "SBS", "BSW", 'S', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 2), 'B', "dyeWhite", 'W', "dyeBlack" });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "mercury", new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 5), new Object[] { "BSW", "SBS", "BSW", 'S',
+				new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 2), 'B', "dyeWhite", 'W', "dyeBlack" });
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 6), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 0) });
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 7), new Object[] { " FF", " FF", "   ", 'F', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 6) });
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "jupiter", new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 4), new Object[] { "MMM", "MBM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.VOLCANIC_ROCK),
@@ -1157,7 +1159,8 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "jupiter", new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 8),
 				new Object[] { "   ", "CC ", "CC ", 'C', new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5) });
 
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 9), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.FROZEN_NITROGEN) });
+		RecipeDumper
+				.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "neptune", new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 9), new Object[] { "   ", "FF ", "FF ", 'F', new ItemStack(ExtraPlanets_Blocks.FROZEN_NITROGEN) });
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "mercury", new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 10), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.VOLCANIC_ROCK) });
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "mercury", new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 11), new Object[] { "   ", "FF ", "FF ", 'F',
 				new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 5) });
@@ -1207,45 +1210,48 @@ public class ExtraPlanets_RecipeGeneration {
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(GCItems.oxTankHeavy), 'P', new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 5), 'A', new ItemStack(GCItems.parachute) });
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 1), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T',
 				new ItemStack(GCItems.oxTankHeavy), 'P', new ItemStack(GCItems.parachute) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 2), new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 0),
-				'B', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 3), 'S',
-				new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "thermalpadding", new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 2), new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19),
+				'A', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 2), 'D',
+				new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 3), new Object[] { "MGF", "TPT", " S ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(GCItems.oxTankHeavy), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
 		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 4), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T',
 				new ItemStack(GCItems.oxTankHeavy) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 5), new Object[] { "ABC", " D ", " S ", 'A', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 0), 'B',
-				new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 3), 'S',
-				new ItemStack(VenusItems.basicItem, 1, 0) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "thermalpadding", new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 5), new Object[] { "ABC", " D ", " S ", 'A',
+				new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 2), 'D',
+				new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0) });
 
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 0), new Object[] { "MGF", "TAT", " P ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
-				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'P', new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 5), 'A', new ItemStack(GCItems.parachute) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 1), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T',
-				new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'P', new ItemStack(GCItems.parachute) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 2), new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 0),
-				'B', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 3), 'S',
-				new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 3), new Object[] { "MGF", "T T", " S ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
-				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'S', new ItemStack(VenusItems.basicItem, 1, 0) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 4), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T',
-				new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'P', new ItemStack(GCItems.parachute) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 5), new Object[] { "ABC", " D ", " S ", 'A', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 0), 'B',
-				new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 3), 'S',
-				new ItemStack(VenusItems.basicItem, 1, 0) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "oxygentanks", new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 0), new Object[] { "MGF", "TAT", " P ", 'M', new ItemStack(GCItems.oxMask), 'G',
+				new ItemStack(GCItems.oxygenGear), 'F', new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'P', new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 5), 'A',
+				new ItemStack(GCItems.parachute) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "oxygentanks", new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 1), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G',
+				new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'P', new ItemStack(GCItems.parachute) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "thermalpadding", new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 2), new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19),
+				'A', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 2), 'D',
+				new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "oxygentanks", new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 3), new Object[] { "MGF", "T T", " S ", 'M', new ItemStack(GCItems.oxMask), 'G',
+				new ItemStack(GCItems.oxygenGear), 'F', new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'S', new ItemStack(VenusItems.basicItem, 1, 0) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "oxygentanks", new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 4), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G',
+				new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'P', new ItemStack(GCItems.parachute) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "thermalpadding", new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 5), new Object[] { "ABC", " D ", " S ", 'A',
+				new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 2), 'D',
+				new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0) });
 
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 0), new Object[] { "MGF", "TAT", " P ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
-				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY), 'P', new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 5), 'A', new ItemStack(GCItems.parachute) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 1), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T',
-				new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY), 'P', new ItemStack(GCItems.parachute) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 2), new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 0),
-				'B', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 3), 'S',
-				new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 3), new Object[] { "MGF", "TPT", " S ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
-				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 4), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T',
-				new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY) });
-		RecipeDumper.addShapedRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 5), new Object[] { "ABC", " D ", " S ", 'A', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 0), 'B',
-				new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 3), 'S',
-				new ItemStack(VenusItems.basicItem, 1, 0) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "oxygentanks", new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 0), new Object[] { "MGF", "TAT", " P ", 'M', new ItemStack(GCItems.oxMask), 'G',
+				new ItemStack(GCItems.oxygenGear), 'F', new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY), 'P', new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 5), 'A',
+				new ItemStack(GCItems.parachute) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "oxygentanks", new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 1), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G',
+				new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY), 'P', new ItemStack(GCItems.parachute) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "thermalpadding", new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 2), new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19),
+				'A', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 2), 'D',
+				new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "oxygentanks", new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 3), new Object[] { "MGF", "TPT", " S ", 'M', new ItemStack(GCItems.oxMask), 'G',
+				new ItemStack(GCItems.oxygenGear), 'F', new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P',
+				new ItemStack(GCItems.parachute) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "oxygentanks", new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 4), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G',
+				new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "thermalpadding", new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 5), new Object[] { "ABC", " D ", " S ", 'A',
+				new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 2), 'D',
+				new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0) });
 	}
 }

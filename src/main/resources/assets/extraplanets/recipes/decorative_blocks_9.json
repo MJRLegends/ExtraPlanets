@@ -8,6 +8,12 @@
     "FF ",
     "FF "
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "neptune"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "F": {

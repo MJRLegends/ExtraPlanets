@@ -17,5 +17,11 @@
       "data": 0
     }
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "canned_food"
+    }
+  ],
   "type": "minecraft:crafting_shapeless"
 }

@@ -214,6 +214,12 @@ public class RecipeEnabledCondition implements IConditionFactory {
 			else
 				return () -> false;
 		}
+		if (JsonUtils.getString(json, "value").equals("canned_food")) {
+			if (Config.CANNED_FOOD)
+				return () -> true;
+			else
+				return () -> false;
+		}
 
 		throw new IllegalStateException("Config defined with recipe_enabled condition without a valid field defined! field was: " + JsonUtils.getString(json, "value") + " - PLEASE REPORT THIS ON THE EXTRAPLANETS ISSUE TRACKER!");
 	}

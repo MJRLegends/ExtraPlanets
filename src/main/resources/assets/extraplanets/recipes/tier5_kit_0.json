@@ -8,6 +8,12 @@
     "TAT",
     " P "
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "oxygentanks"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "P": {

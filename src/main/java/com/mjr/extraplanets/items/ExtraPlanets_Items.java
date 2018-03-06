@@ -608,7 +608,8 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.MARS_ROVER || Config.VENUS_ROVER || Config.ELECTRIC_ROCKET)
 			registerItem(ELECTRIC_PARTS, ELECTRIC_PARTS.getUnlocalizedName().substring(5));
-		registerItem(CANNED_FOOD, CANNED_FOOD.getUnlocalizedName().substring(5));
+		if(Config.CANNED_FOOD)
+			registerItem(CANNED_FOOD, CANNED_FOOD.getUnlocalizedName().substring(5));
 		registerItem(WAFERS, WAFERS.getUnlocalizedName().substring(5));
 		registerItem(INGOT_LEAD, INGOT_LEAD.getUnlocalizedName().substring(5));
 		registerItem(CLOTH, CLOTH.getUnlocalizedName().substring(5));

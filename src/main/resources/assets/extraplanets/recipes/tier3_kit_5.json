@@ -8,6 +8,12 @@
     " D ",
     " S "
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "thermalpadding"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "A": {

@@ -15,5 +15,11 @@
       "item": "minecraft:cooked_beef"
     }
   ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "canned_food"
+    }
+  ],
   "type": "minecraft:crafting_shapeless"
 }
