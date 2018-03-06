@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v0.6.5
+*Removed not needed console logging, Fixed issue #254
+*Fixed for landing properly on Space Stations for any future Electric Launch controlled rockets
+*Added missing machine descriptions
+*Updated lang file for missing entries and duplicate entries
+*Updated ru_RU.lang (Thanks to rykllan)
+
 v0.6.4
 *Changes to blocks to match GC changes
 *Converted Callisto over to multi biome system
