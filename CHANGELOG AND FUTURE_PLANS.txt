@@ -5,6 +5,16 @@
 
 
 ===========================================Released Updates===========================================
+v0.2.7
+*Fixed for landing properly on Space Stations for any future Electric Launch controlled rockets
+*Added missing machine descriptions
+*Updated lang file for missing entries and duplicate entries
+*Updated ru_RU.lang (Thanks to rykllan)
+*Fix torch placement on a few blocks for MC 1.12+
+*Removed not needed console logging, Fixed issue #254
+*Fixed issue #253
+*Moved entries around in lang files
+
 v0.2.6
 *Changes to blocks to match GC changes
 *Converted Callisto over to multi biome system
