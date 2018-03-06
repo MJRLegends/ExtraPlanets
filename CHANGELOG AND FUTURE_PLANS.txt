@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v1.3.3
+*Fixed for landing properly on Space Stations for any future Electric Launch controlled rockets
+*Added missing machine descriptions
+*Updated lang file for missing entries and duplicate entries
+*Updated ru_RU.lang (Thanks to rykllan)
+*Moved entries around in lang files
+
 v1.3.2
 *Changes to blocks to match GC changes
 *Converted Callisto over to multi biome system
