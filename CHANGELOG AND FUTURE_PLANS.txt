@@ -8,6 +8,8 @@
 v0.2.8
 *Fixed recipe crash issue when disabling certain config options, found via issue #255
 *Added erroring field to the crash message with message about reporting the bug
+*Fixed crash issue when disabling Basic Purifier via config
+*Fixed a few recipe errors when disabling certain config options found through when testing for issue #256
 
 v0.2.7
 *Fixed for landing properly on Space Stations for any future Electric Launch controlled rockets
