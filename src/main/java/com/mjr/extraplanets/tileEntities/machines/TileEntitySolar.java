@@ -319,7 +319,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 			IBlockState stateAt = this.world.getBlockState(pos);
 
 			if (stateAt.getBlock() == GCBlocks.fakeBlock) {
-				EnumBlockMultiType type = (EnumBlockMultiType) stateAt.getValue(BlockMulti.MULTI_TYPE);
+				EnumBlockMultiType type = stateAt.getValue(BlockMulti.MULTI_TYPE);
 				if ((type == EnumBlockMultiType.SOLAR_PANEL_0 || type == EnumBlockMultiType.SOLAR_PANEL_1)) {
 					if (this.world.isRemote && this.world.rand.nextDouble() < 0.1D) {
 						MCUtilities.getClient().effectRenderer.addBlockDestroyEffects(pos, GCBlocks.solarPanel.getDefaultState());

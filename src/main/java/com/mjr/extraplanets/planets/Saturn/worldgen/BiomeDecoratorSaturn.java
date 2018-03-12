@@ -77,7 +77,7 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Pre(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 
-		if (((BiomeAdaptive)this.getCurrentWorld().getBiome(new BlockPos(this.posX, 0, this.posZ))).isInstance(BiomeGenSaturn.class))
+		if (((BiomeAdaptive) this.getCurrentWorld().getBiome(new BlockPos(this.posX, 0, this.posZ))).isInstance(BiomeGenSaturn.class))
 			for (int i = 0; i < this.LakesPerChunk; i++) {
 				if (this.rand.nextInt(10) == 0) {
 					WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.GLOWSTONE,
@@ -85,7 +85,7 @@ public class BiomeDecoratorSaturn extends BiomeDecoratorSpace {
 				}
 			}
 
-		if (((BiomeAdaptive)this.getCurrentWorld().getBiome(new BlockPos(this.posX, 0, this.posZ))).isInstance(BiomeGenSaturnNuclearLand.class)){
+		if (((BiomeAdaptive) this.getCurrentWorld().getBiome(new BlockPos(this.posX, 0, this.posZ))).isInstance(BiomeGenSaturnNuclearLand.class)) {
 			for (int i = 0; i < LakesPerChunk * 2; i++) {
 				if (this.rand.nextInt(10) == 0) {
 					WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.METHANE,

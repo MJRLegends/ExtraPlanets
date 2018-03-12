@@ -191,8 +191,8 @@ public class MainHandlerClient {
 		final Minecraft minecraft = MCUtilities.getClient();
 		final EntityPlayerSP player = minecraft.player;
 		final EntityPlayerSP playerBaseClient = PlayerUtil.getPlayerBaseClientFromPlayer(player, false);
-		if (player != null && player.world.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.world.provider)
-				&& !playerBaseClient.isSpectator() && !minecraft.gameSettings.showDebugInfo) {
+		if (player != null && player.world.provider instanceof IGalacticraftWorldProvider && OxygenUtil.shouldDisplayTankGui(minecraft.currentScreen) && OxygenUtil.noAtmosphericCombustion(player.world.provider) && !playerBaseClient.isSpectator()
+				&& !minecraft.gameSettings.showDebugInfo) {
 			IStatsClientCapability stats = null;
 
 			if (player != null) {

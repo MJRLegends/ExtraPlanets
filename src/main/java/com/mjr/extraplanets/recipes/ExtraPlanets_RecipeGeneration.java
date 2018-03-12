@@ -831,10 +831,14 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "rovers", new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3), new Object[] { " W ", "WXW", " W ", 'W', "ingotDesh", 'X',
 				new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 2) });
 		// Can of Food
-		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 0), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_PORKCHOP, Items.COOKED_PORKCHOP });
-		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 1), new Object[] { new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 0) });
-		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 2), new Object[] { new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 1), new ItemStack(Items.COOKED_FISH, 1, 1) });
-		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 3), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_CHICKEN, Items.COOKED_CHICKEN });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 0), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_PORKCHOP,
+				Items.COOKED_PORKCHOP });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 1), new Object[] { new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 0),
+				new ItemStack(Items.COOKED_FISH, 1, 0) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 2), new Object[] { new ItemStack(GCItems.canister, 1, 0), new ItemStack(Items.COOKED_FISH, 1, 1),
+				new ItemStack(Items.COOKED_FISH, 1, 1) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 3), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_CHICKEN,
+				Items.COOKED_CHICKEN });
 		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 4), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_BEEF, Items.COOKED_BEEF });
 
 		// Advanced & Ultimate Battery

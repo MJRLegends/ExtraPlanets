@@ -328,8 +328,8 @@ public class ExtraPlanets {
 			ExtraPlanets_RecipeGeneration.generate();
 			ExtraPlanets_RecipeGeneration.generateConstants();
 		}
-		
-		if(Config.GC_PRESSURE || Config.GC_RADIATION){
+
+		if (Config.GC_PRESSURE || Config.GC_RADIATION) {
 			MarsModule.planetMars.addChecklistKeys("tier_1_space_suit");
 			GalacticraftCore.moonMoon.addChecklistKeys("tier_1_space_suit");
 			VenusModule.planetVenus.addChecklistKeys("tier_1_space_suit");

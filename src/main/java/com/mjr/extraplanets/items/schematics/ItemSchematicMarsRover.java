@@ -53,7 +53,7 @@ public class ItemSchematicMarsRover extends ItemHangingEntity implements ISchema
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
-			list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.mars.rover.name"));
+		list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.mars.rover.name"));
 	}
 
 	@Override
