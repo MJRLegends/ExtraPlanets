@@ -770,21 +770,13 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.wooden_pressure_plate, 8, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5),
 					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5) });
 
-			// Planks to Buttons (1 Plank per 4 Buttons)
+			// Planks to Buttons (2 Planks per 4 Buttons)
 			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.wooden_button, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0) });
 			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.wooden_button, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1) });
 			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.wooden_button, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2) });
 			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.wooden_button, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3) });
 			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.wooden_button, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4) });
 			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.wooden_button, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5) });
-
-			// Planks to Crafting table (4 Planks per 1 Crafting Table)
-			GameRegistry.addRecipe(new ItemStack(Blocks.crafting_table, 1, 0), new Object[] { "   ", "DD ", "DD ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0) });
-			GameRegistry.addRecipe(new ItemStack(Blocks.crafting_table, 1, 0), new Object[] { "   ", "DD ", "DD ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1) });
-			GameRegistry.addRecipe(new ItemStack(Blocks.crafting_table, 1, 0), new Object[] { "   ", "DD ", "DD ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2) });
-			GameRegistry.addRecipe(new ItemStack(Blocks.crafting_table, 1, 0), new Object[] { "   ", "DD ", "DD ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3) });
-			GameRegistry.addRecipe(new ItemStack(Blocks.crafting_table, 1, 0), new Object[] { "   ", "DD ", "DD ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4) });
-			GameRegistry.addRecipe(new ItemStack(Blocks.crafting_table, 1, 0), new Object[] { "   ", "DD ", "DD ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5) });
 
 			// Planks to Doors (6 Planks per 4 Doors)
 			GameRegistry.addRecipe(new ItemStack(Items.wooden_door, 4, 0), new Object[] { "DD ", "DD ", "DD ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0) });
@@ -795,12 +787,62 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(Items.wooden_door, 4, 0), new Object[] { "DD ", "DD ", "DD ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5) });
 
 			// Planks to Signs (6 Planks per 6 Signs)
-			GameRegistry.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0), 'S', new ItemStack(Items.stick) });
-			GameRegistry.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1), 'S', new ItemStack(Items.stick) });
-			GameRegistry.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2), 'S', new ItemStack(Items.stick) });
-			GameRegistry.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3), 'S', new ItemStack(Items.stick) });
-			GameRegistry.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4), 'S', new ItemStack(Items.stick) });
-			GameRegistry.addRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5), 'S', new ItemStack(Items.stick) });
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0), 'S', "stickWood" }));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1), 'S', "stickWood" }));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2), 'S', "stickWood" }));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3), 'S', "stickWood" }));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4), 'S', "stickWood" }));
+			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Items.sign, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5), 'S', "stickWood" }));
+
+			// Planks to Crafting Table (4 Planks per 2 Crafting Tables)
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.crafting_table, 2, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.crafting_table, 2, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.crafting_table, 2, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.crafting_table, 2, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.crafting_table, 2, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.crafting_table, 2, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5) });
+
+			// Planks to Trap Doors (4 Planks per 4 Trap Doors)
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.trapdoor, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.trapdoor, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.trapdoor, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.trapdoor, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.trapdoor, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4) });
+			GameRegistry.addShapelessRecipe(new ItemStack(Blocks.trapdoor, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5), new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5),
+					new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5) });
+
+			// Planks to Chests (8 Planks per 2 Chests)
+			GameRegistry.addRecipe(new ItemStack(Blocks.chest, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0) });
+			GameRegistry.addRecipe(new ItemStack(Blocks.chest, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1) });
+			GameRegistry.addRecipe(new ItemStack(Blocks.chest, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2) });
+			GameRegistry.addRecipe(new ItemStack(Blocks.chest, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3) });
+			GameRegistry.addRecipe(new ItemStack(Blocks.chest, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4) });
+			GameRegistry.addRecipe(new ItemStack(Blocks.chest, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5) });
+
+			// Planks to Boats (5 Planks per Boat)
+			GameRegistry.addRecipe(new ItemStack(Items.boat, 1, 0), new Object[] { "   ", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 0) });
+			GameRegistry.addRecipe(new ItemStack(Items.boat, 1, 0), new Object[] { "   ", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 1) });
+			GameRegistry.addRecipe(new ItemStack(Items.boat, 1, 0), new Object[] { "   ", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 2) });
+			GameRegistry.addRecipe(new ItemStack(Items.boat, 1, 0), new Object[] { "   ", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 3) });
+			GameRegistry.addRecipe(new ItemStack(Items.boat, 1, 0), new Object[] { "   ", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 4) });
+			GameRegistry.addRecipe(new ItemStack(Items.boat, 1, 0), new Object[] { "   ", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.kepler22bPlanks, 1, 5) });
 
 			if (Config.kepler22bItems) {
 				// Tools
