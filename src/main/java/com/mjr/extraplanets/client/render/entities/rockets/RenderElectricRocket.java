@@ -75,7 +75,7 @@ public class RenderElectricRocket extends Render<EntityElectricRocket> {
 
 	@Override
 	public boolean shouldRender(EntityElectricRocket rocket, ICamera camera, double camX, double camY, double camZ) {
-		AxisAlignedBB axisalignedbb = rocket.getEntityBoundingBox().expand(0.6D, 0, 0.6D);
+		AxisAlignedBB axisalignedbb = rocket.getEntityBoundingBox().grow(0.6D, 0, 0.6D);
 
 		return rocket.isInRangeToRender3d(camX, camY, camZ) && camera.isBoundingBoxInFrustum(axisalignedbb);
 	}

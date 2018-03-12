@@ -81,7 +81,7 @@ public class RenderNeptuneLander extends Render<EntityNeptuneLander> {
 
 	@Override
 	public boolean shouldRender(EntityNeptuneLander lander, ICamera camera, double camX, double camY, double camZ) {
-		AxisAlignedBB axisalignedbb = lander.getEntityBoundingBox().expand(2D, 1D, 2D);
+		AxisAlignedBB axisalignedbb = lander.getEntityBoundingBox().grow(2D, 1D, 2D);
 		return lander.isInRangeToRender3d(camX, camY, camZ) && camera.isBoundingBoxInFrustum(axisalignedbb);
 	}
 }
