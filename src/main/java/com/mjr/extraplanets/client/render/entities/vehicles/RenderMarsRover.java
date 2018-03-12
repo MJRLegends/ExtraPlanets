@@ -3,9 +3,11 @@ package com.mjr.extraplanets.client.render.entities.vehicles;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
+import net.minecraft.client.renderer.culling.ICamera;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureMap;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.IFlexibleBakedModel;
 import net.minecraftforge.fml.relauncher.Side;
@@ -141,5 +143,11 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 
 		GL11.glPopMatrix();
 		RenderHelper.enableStandardItemLighting();
+	}
+
+	@Override
+	public boolean shouldRender(EntityMarsRover lander, ICamera camera, double camX, double camY, double camZ) {
+		AxisAlignedBB axisalignedbb = lander.getEntityBoundingBox().expand(2D, 1D, 2D);
+		return lander.isInRangeToRender3d(camX, camY, camZ) && camera.isBoundingBoxInFrustum(axisalignedbb);
 	}
 }

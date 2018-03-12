@@ -3,9 +3,11 @@ package com.mjr.extraplanets.client.render.entities.rockets;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
+import net.minecraft.client.renderer.culling.ICamera;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureMap;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
@@ -71,5 +73,12 @@ public class RenderTier6Rocket extends Render<EntityTier6Rocket> {
 		GlStateManager.popMatrix();
 
 		RenderHelper.enableStandardItemLighting();
+	}
+
+	@Override
+	public boolean shouldRender(EntityTier6Rocket rocket, ICamera camera, double camX, double camY, double camZ) {
+		AxisAlignedBB axisalignedbb = rocket.getEntityBoundingBox().expand(0.6D, 0, 0.6D);
+
+		return rocket.isInRangeToRender3d(camX, camY, camZ) && camera.isBoundingBoxInFrustum(axisalignedbb);
 	}
 }

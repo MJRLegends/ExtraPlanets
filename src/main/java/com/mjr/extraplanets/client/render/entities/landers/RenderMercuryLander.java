@@ -2,9 +2,11 @@ package com.mjr.extraplanets.client.render.entities.landers;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.culling.ICamera;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.client.renderer.texture.TextureMap;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.IFlexibleBakedModel;
 import net.minecraftforge.fml.relauncher.Side;
@@ -74,5 +76,11 @@ public class RenderMercuryLander extends Render<EntityMercuryLander> {
 		ModelUtilities.drawBakedModel(this.landerModel);
 
 		GlStateManager.popMatrix();
+	}
+
+	@Override
+	public boolean shouldRender(EntityMercuryLander lander, ICamera camera, double camX, double camY, double camZ) {
+		AxisAlignedBB axisalignedbb = lander.getEntityBoundingBox().expand(2D, 1D, 2D);
+		return lander.isInRangeToRender3d(camX, camY, camZ) && camera.isBoundingBoxInFrustum(axisalignedbb);
 	}
 }
