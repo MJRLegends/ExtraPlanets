@@ -667,10 +667,10 @@ public class Config {
 		TITAN_METHANE_HILLS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Methane Hills Biome ID", 202, "[range: 0 ~ 255, default: 202]").getInt();
 		IO_BURNING_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Burning Plains Biome ID", 203, "[range: 0 ~ 255, default: 203]").getInt();
 		KEPLER22B_DIAMOND_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Diamond Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
-		KEPLER22B_COAL_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Coal Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
-		KEPLER22B_IRON_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Iron Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
-		KEPLER22B_GOLD_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Gold Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
-		KEPLER22B_EMERALD_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Emerald Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
+		KEPLER22B_COAL_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Coal Plains Biome ID", 210, "[range: 0 ~ 255, default: 210]").getInt();
+		KEPLER22B_IRON_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Iron Plains Biome ID", 211, "[range: 0 ~ 255, default: 211]").getInt();
+		KEPLER22B_GOLD_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Gold Plains Biome ID", 212, "[range: 0 ~ 255, default: 212]").getInt();
+		KEPLER22B_EMERALD_PLAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Emerald Plains Biome ID", 213, "[range: 0 ~ 255, default: 213]").getInt();
 		EUROPA_SALT_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Salt Sea Biome ID", 205, "[range: 0 ~ 255, default: 205]").getInt();
 		EUROPA_ICE_VALLEYS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Valleys Biome ID", 206, "[range: 0 ~ 255, default: 206]").getInt();
 		CALLISTO_SALT_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Callisto Salt Sea Biome ID", 207, "[range: 0 ~ 255, default: 207]").getInt();
