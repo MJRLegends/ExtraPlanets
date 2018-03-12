@@ -19,7 +19,7 @@ public class Config {
 	public static boolean genJupiterSkyFeature;
 	public static boolean jupiterLighting;
 	public static boolean customFog;
-	
+
 	public static boolean carbonItems;
 	public static boolean palladiumItems;
 	public static boolean magnesiumItems;
@@ -201,7 +201,7 @@ public class Config {
 	public static int kepler22bIronPlainsBiomeID;
 	public static int kepler22bGoldPlainsBiomeID;
 	public static int kepler22bEmeraldPlainsBiomeID;
-	
+
 	public static boolean oreDictionary;
 
 	public static int schematicTier4GUIID;
@@ -285,7 +285,7 @@ public class Config {
 	public static boolean neptuneVillages;
 	public static boolean plutoVillages;
 	public static boolean erisVillages;
-	
+
 	public static boolean tritonVillages;
 	public static boolean europaVillages;
 	public static boolean ioVillages;
@@ -298,7 +298,7 @@ public class Config {
 	public static boolean oberonVillages;
 	public static boolean titaniaVillages;
 	public static boolean iapetusVillages;
-	
+
 	public static boolean useCustomCelestialSelection;
 	public static boolean debugMode;
 
@@ -358,9 +358,10 @@ public class Config {
 		solarPanels = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Hybrid/Ultimate Solar Panel", true, "This option will disable & remove the Hybrid/Ulimate Solar Panels").getBoolean(true);
 		nuclearBomb = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Nuclear Bomb", true, "This option will disable & remove the Nuclear Bomb").getBoolean(true);
 		fireBomb = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Fire Bomb", true, "This option will disable & remove the Fire Bomb").getBoolean(true);
-		
+
 		mobSuffocation = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mob Suffocation", true, "Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
-		useDefaultBosses = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Setting this option to false will disable & remove all custom bosses and will replace them with Creeper Bosses!").getBoolean(false);
+		useDefaultBosses = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Setting this option to false will disable & remove all custom bosses and will replace them with Creeper Bosses!")
+				.getBoolean(false);
 
 		mercuryRocketTier = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mercury Rocket required", 4, "Changing this will change the Tier required to go to Mercury").getInt();
 		ceresRocketTier = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Ceres Rocket required", 4, "Changing this will change the Tier required to go to Ceres").getInt();
@@ -370,7 +371,8 @@ public class Config {
 		genUranusIceSpikes = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Setting this option to false will disable & remove Ice Spikes from generating on Uranus").getBoolean(true);
 		genJupiterSkyFeature = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Jupiter", true, "Setting this option to false will disable & remove the Sky Feature on Jupiter").getBoolean(true);
 		jupiterLighting = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable & remove Lighting & Lighting Effects on Jupiter").getBoolean(true);
-		customFog = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune").getBoolean(true);
+		customFog = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
+				.getBoolean(true);
 
 		ceres = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Ceres", true, "Setting this option to false will remove Ceres & all the related items/block/tools/armour/space stations!").getBoolean(true);
 		mercury = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Mercury", true, "Setting this option to false will remove Mercury & all the related items/block/tools/armour/space stations!").getBoolean(true);
@@ -518,13 +520,16 @@ public class Config {
 		saturnNuclearLandBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Saturn Nuclear Land Biome ID", 201, "[range: 0 ~ 255, default: 201]").getInt();
 		titanMethaneHillsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Titan Methane Hills Biome ID", 202, "[range: 0 ~ 255, default: 202]").getInt();
 		ioBurningPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Io Burning Plains Biome ID", 203, "[range: 0 ~ 255, default: 203]").getInt();
-		kepler22bDiamondPlainsBiomeID= config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Diamond Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
+		kepler22bDiamondPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Diamond Plains Biome ID", 204, "[range: 0 ~ 255, default: 204]").getInt();
 		kepler22bCoalPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Coal Plains Biome ID", 210, "[range: 0 ~ 255, default: 210]").getInt();
 		kepler22bIronPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Iron Plains Biome ID", 211, "[range: 0 ~ 255, default: 211]").getInt();
 		kepler22bGoldPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Gold Plains Biome ID", 212, "[range: 0 ~ 255, default: 212]").getInt();
 		kepler22bEmeraldPlainsBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Kepler22b Emerald Plains Biome ID", 213, "[range: 0 ~ 255, default: 213]").getInt();
-		//EUROPA_SALT_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Salt Sea Biome ID", 205, "[range: 0 ~ 255, default: 205]").getInt();
-		//EUROPA_ICE_VALLEYS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Valleys Biome ID", 206, "[range: 0 ~ 255, default: 206]").getInt();
+		// EUROPA_SALT_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Salt Sea Biome ID", 205, "[range: 0 ~ 255, default: 205]").getInt();
+		// EUROPA_ICE_VALLEYS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Europa Valleys Biome ID", 206, "[range: 0 ~ 255, default: 206]").getInt();
+		// CALLISTO_SALT_SEA_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Callisto Salt Sea Biome ID", 207, "[range: 0 ~ 255, default: 207]").getInt();
+		// CALLISTO_SMALL_SHALE_MOUNTAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Callisto Small Shale Mountains Biome ID", 208, "[range: 0 ~ 255, default: 208]").getInt();
+		// CALLISTO_LARGE_SHALE_MOUNTAINS_BIOME_ID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Callisto Large Shale Mountains Biome ID", 209, "[range: 0 ~ 255, default: 209]").getInt();
 
 		schematicTier4GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 4 GUI ID", 5555, "[range: -2147483647 ~ 2147483647, default: 5555]").getInt();
 		schematicTier5GUIID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Tier 5 GUI ID", 5556, "[range: -2147483647 ~ 2147483647, default: 5556]").getInt();
@@ -566,15 +571,18 @@ public class Config {
 		evolvedGiantSpider = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Giant Spider", true, "").getBoolean(true);
 		evolvedMiniEnderman = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Mini Enderman", true, "").getBoolean(true);
 
-		morePlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic More Planets Compatibility", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings").getBoolean(false);
+		morePlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic More Planets Compatibility", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings").getBoolean(
+				false);
 		morePlanetsCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced More Planets Compatibility", false,
 				"This option will do the same as the basic one but will also fix the progression between ExtraPlanets & MorePlanets").getBoolean(false);
-		amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false, "This option will disable & remove the Custom Celestial Selection screen & Change Conflicting Dimension Ids, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Ceres, Eris, Kepler22b, Rhea TO -66 ,-67 -68, -69").getBoolean(false);
-		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility (v1.1.9 and below)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings & Custom Celestial Selection screen, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Iapetus & Titania TO -44 & -45").getBoolean(false);
-		galaxySpaceCompatibility120 = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility (v1.2.0 and above)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings & Custom Celestial Selection screen, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Iapetus & Titania TO -44 & -45").getBoolean(false);
+		amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false,
+				"This option will disable & remove the Custom Celestial Selection screen & Change Conflicting Dimension Ids, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Ceres, Eris, Kepler22b, Rhea TO -66 ,-67 -68, -69").getBoolean(false);
+		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility (v1.1.9 and below)", false,
+				"This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings & Custom Celestial Selection screen, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Iapetus & Titania TO -44 & -45").getBoolean(false);
+		galaxySpaceCompatibility120 = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility (v1.2.0 and above)", false,
+				"This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings & Custom Celestial Selection screen, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Iapetus & Titania TO -44 & -45").getBoolean(false);
 		// galaxySpaceCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
-		extendedPlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations").getBoolean(
-				false);
+		extendedPlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations").getBoolean(false);
 
 		kepler22SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		kepler22SystemPitchOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
@@ -612,22 +620,22 @@ public class Config {
 		neptuneVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Neptune Villages", true, "Setting this option to false will disable & remove the Neptune Villages generation").getBoolean(true);
 		plutoVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Pluto Villages", true, "Setting this option to false will disable & remove the Pluto Villages generation").getBoolean(true);
 		erisVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Eris Villages", true, "Setting this option to false will disable & remove the Eris Villages generation").getBoolean(true);
-		
-		tritonVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Triton Villages", true, "Setting this option to false will disable & remove the Triton Villages generation").getBoolean(true);
-		europaVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Europa Villages", true, "Setting this option to false will disable & remove the Europa Villages generation").getBoolean(true);
-		ioVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Io Villages", true, "Setting this option to false will disable & remove the Io Villages generation").getBoolean(true);
-		deimosVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Deimos Villages", true, "Setting this option to false will disable & remove the Deimos Villages generation").getBoolean(true);
-		phobosVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Phobos Villages", true, "Setting this option to false will disable & remove the Phobos Villages generation").getBoolean(true);
-		callistoVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Callisto Villages", true, "Setting this option to false will disable & remove the Callisto Villages generation").getBoolean(true);
-		ganymedeVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ganymede Villages", true, "Setting this option to false will disable & remove the Ganymede Villages generation").getBoolean(true);
-		rheaVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Rhea Villages", true, "Setting this option to false will disable & remove the Rhea Villages generation").getBoolean(true);
-		titanVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Titan Villages", true, "Setting this option to false will disable & remove the Titan Villages generation").getBoolean(true);
-		oberonVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Oberon Villages", true, "Setting this option to false will disable & remove the Oberon Villages generation").getBoolean(true);
-		titaniaVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Titania Villages", true, "Setting this option to false will disable & remove the Titania Villages generation").getBoolean(true);
-		iapetusVillages= config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Iapetus Villages", true, "Setting this option to false will disable & remove the Iapetus Villages generation").getBoolean(true);
 
-		useCustomCelestialSelection = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestial Selection Screen", true,
-				"Setting this option to false make it use the Galacticraft Galaxy Map/Celestial Selection Screen").getBoolean(true);
+		tritonVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Triton Villages", true, "Setting this option to false will disable & remove the Triton Villages generation").getBoolean(true);
+		europaVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Europa Villages", true, "Setting this option to false will disable & remove the Europa Villages generation").getBoolean(true);
+		ioVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Io Villages", true, "Setting this option to false will disable & remove the Io Villages generation").getBoolean(true);
+		deimosVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Deimos Villages", true, "Setting this option to false will disable & remove the Deimos Villages generation").getBoolean(true);
+		phobosVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Phobos Villages", true, "Setting this option to false will disable & remove the Phobos Villages generation").getBoolean(true);
+		callistoVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Callisto Villages", true, "Setting this option to false will disable & remove the Callisto Villages generation").getBoolean(true);
+		ganymedeVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Ganymede Villages", true, "Setting this option to false will disable & remove the Ganymede Villages generation").getBoolean(true);
+		rheaVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Rhea Villages", true, "Setting this option to false will disable & remove the Rhea Villages generation").getBoolean(true);
+		titanVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Titan Villages", true, "Setting this option to false will disable & remove the Titan Villages generation").getBoolean(true);
+		oberonVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Oberon Villages", true, "Setting this option to false will disable & remove the Oberon Villages generation").getBoolean(true);
+		titaniaVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Titania Villages", true, "Setting this option to false will disable & remove the Titania Villages generation").getBoolean(true);
+		iapetusVillages = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Iapetus Villages", true, "Setting this option to false will disable & remove the Iapetus Villages generation").getBoolean(true);
+
+		useCustomCelestialSelection = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestial Selection Screen", true, "Setting this option to false make it use the Galacticraft Galaxy Map/Celestial Selection Screen")
+				.getBoolean(true);
 
 		config.save();
 	}
@@ -699,14 +707,14 @@ public class Config {
 			titania = false;
 			titan = false;
 		}
-		if(amunRaCompatibility){
+		if (amunRaCompatibility) {
 			ceresID = -66;
 			erisID = -67;
 			kepler22bID = -68;
 			rheaID = -69;
 			useCustomCelestialSelection = false;
 		}
-		
+
 	}
 
 }

@@ -133,8 +133,8 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 		if (par1ItemStack.getItemDamage() != 0) {
 			par2List.add(GCCoreUtil.translate("gui.buggy.storageSpace") + ": " + par1ItemStack.getItemDamage() * 18);
 		}
-        par2List.add(GCCoreUtil.translate("gui.rover.information"));
-        par2List.add(GCCoreUtil.translate("gui.rover.information.2"));
+		par2List.add(GCCoreUtil.translate("gui.rover.information"));
+		par2List.add(GCCoreUtil.translate("gui.rover.information.2"));
 	}
 
 	@Override

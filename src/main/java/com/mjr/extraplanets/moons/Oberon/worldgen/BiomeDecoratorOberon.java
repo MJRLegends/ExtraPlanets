@@ -24,6 +24,7 @@ public class BiomeDecoratorOberon extends BiomeDecorator {
 	protected int chunkZ;
 
 	private boolean isDecorating = false;
+
 	public BiomeDecoratorOberon() {
 		this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.oberonBlocks, 4, 5, true, ExtraPlanets_Blocks.oberonBlocks, 2);
 		this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.oberonBlocks, 4, 4, true, ExtraPlanets_Blocks.oberonBlocks, 2);
@@ -58,7 +59,7 @@ public class BiomeDecoratorOberon extends BiomeDecorator {
 		this.generateOre(20, this.ironGen, 0, 64);
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
-		
+
 		isDecorating = false;
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);

@@ -280,7 +280,7 @@ public class ExtraPlanets_Items {
 		tier2EquipmentKit = new ItemBasicKit("tier2_kit", 2);
 		tier3EquipmentKit = new ItemBasicKit("tier3_kit", 3);
 		tier4EquipmentKit = new ItemBasicKit("tier4_kit", 4);
-		
+
 		nitrogen_bucket = new ItemBasicItemBucket("bucket_nitrogen", ExtraPlanets_Fluids.nitrogen);
 		frozen_water_bucket = new ItemBasicItemBucket("bucket_frozen_water", ExtraPlanets_Fluids.frozen_water);
 		glowstone_bucket = new ItemBasicItemBucket("bucket_glowstone", ExtraPlanets_Fluids.glowstone);
@@ -405,7 +405,7 @@ public class ExtraPlanets_Items {
 		GameRegistry.registerItem(tier2EquipmentKit, tier2EquipmentKit.getUnlocalizedName());
 		GameRegistry.registerItem(tier3EquipmentKit, tier3EquipmentKit.getUnlocalizedName());
 		GameRegistry.registerItem(tier4EquipmentKit, tier4EquipmentKit.getUnlocalizedName());
-		
+
 		GameRegistry.registerItem(nitrogen_bucket, "bucket_nitrogen");
 		GameRegistry.registerItem(frozen_water_bucket, "bucket_frozen_water");
 		GameRegistry.registerItem(glowstone_bucket, "bucket_glowstone");

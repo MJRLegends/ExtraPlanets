@@ -129,13 +129,13 @@ public class ChunkProviderMercury extends ChunkProviderSpace {
 
 	@Override
 	public void onPopulate(IChunkProvider provider, int cX, int cZ) {
-		if(Config.mercuryVillages)
+		if (Config.mercuryVillages)
 			this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
 	}
 
 	@Override
 	public void recreateStructures(int par1, int par2) {
-		if(Config.mercuryVillages)
+		if (Config.mercuryVillages)
 			this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
 	}
 }

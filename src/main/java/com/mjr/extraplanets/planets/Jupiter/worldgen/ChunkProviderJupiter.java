@@ -66,7 +66,7 @@ public class ChunkProviderJupiter extends ChunkProviderCustomSpace {
 
 	@Override
 	public void recreateStructures(int par1, int par2) {
-		if(Config.jupiterVillages)
+		if (Config.jupiterVillages)
 			this.villageGenerator.func_151539_a(this, this.worldObj, par1, par2, (Block[]) null);
 	}
 
@@ -82,7 +82,7 @@ public class ChunkProviderJupiter extends ChunkProviderCustomSpace {
 
 	@Override
 	public void onPopulate(int cX, int cZ) {
-		if(Config.jupiterVillages)
+		if (Config.jupiterVillages)
 			this.villageGenerator.generateStructuresInChunk(this.worldObj, this.rand, cX, cZ);
 		this.dungeonGenerator.handleTileEntities(this.rand);
 	}
