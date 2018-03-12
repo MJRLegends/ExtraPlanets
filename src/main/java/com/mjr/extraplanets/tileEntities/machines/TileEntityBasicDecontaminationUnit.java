@@ -69,9 +69,10 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 					} else {
 						this.storage.setEnergyStored(0);
 						stats.setRadiationLevel(stats.getRadiationLevel() - level);
-						PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " " + Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT + "%");
-						PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
-								+ (int) stats.getRadiationLevel() + "%");
+						PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
+								+ Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT + "%");
+						PlayerUtilties.sendMessage(player,
+								"" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
 					}
 				} else if (this.ticks % 40 == 0)
 					PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You need to add more power to use this! The machine needs 1,000,000 gJ or 625,000 RF per use!");

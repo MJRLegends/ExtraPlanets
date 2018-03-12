@@ -8,6 +8,7 @@ import com.mjr.extraplanets.moons.Callisto.worldgen.CallistoBiomes;
 
 public class GenLayerCallistoBiomes extends GenLayer {
 	private static final Biome[] biomes = new Biome[] { CallistoBiomes.callisto, CallistoBiomes.callistoSaltSea, CallistoBiomes.callistoShaleLargeMountains, CallistoBiomes.callistoShaleSmallMountains };
+
 	public GenLayerCallistoBiomes(long l, GenLayer parent) {
 		super(l);
 		this.parent = parent;

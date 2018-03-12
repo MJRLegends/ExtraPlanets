@@ -90,7 +90,7 @@ public class MainHandlerServer {
 	public void onPlayerCloned(PlayerEvent.Clone event) {
 		IStatsCapability oldStats = event.getOriginal().getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 		IStatsCapability newStats = event.getEntityPlayer().getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
-		newStats.copyFrom(oldStats, !event.isWasDeath()|| event.getOriginal().worldObj.getGameRules().getBoolean("keepInventory"));
+		newStats.copyFrom(oldStats, !event.isWasDeath() || event.getOriginal().worldObj.getGameRules().getBoolean("keepInventory"));
 	}
 
 	@SubscribeEvent
@@ -295,19 +295,18 @@ public class MainHandlerServer {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			//System.out.println("Current Level: " + stats.getRadiationLevel());
+			// System.out.println("Current Level: " + stats.getRadiationLevel());
 			if (stats.getRadiationLevel() >= 100) {
 				playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
-			} else if (stats.getRadiationLevel() >= 0){
+			} else if (stats.getRadiationLevel() >= 0) {
 				double tempLevel = 0.0;
-				if(amount < 10)
+				if (amount < 10)
 					tempLevel = (damageModifer * amount) / 100;
 				else
 					tempLevel = damageModifer * (amount / 10) / 6;
-				//System.out.println("Take ammount: " + tempLevel);
+				// System.out.println("Take ammount: " + tempLevel);
 				stats.setRadiationLevel(stats.getRadiationLevel() + tempLevel);
-			}
-			else
+			} else
 				stats.setRadiationLevel(0);
 		}
 	}
@@ -343,7 +342,8 @@ public class MainHandlerServer {
 				stats.setRadiationLevel(0);
 			else {
 				stats.setRadiationLevel(stats.getRadiationLevel() - level);
-				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " " + Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "%");
+				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
+						+ Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "%");
 				PlayerUtilties.sendMessage(player,
 						"" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
 			}

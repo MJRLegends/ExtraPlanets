@@ -209,17 +209,16 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
 	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, @Nullable TileEntity te, ItemStack stack) {
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.SHALE_OIL) {
 			if (this.canSilkHarvest(worldIn, pos, state, player) && EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, stack) > 0) {
-	            java.util.List<ItemStack> items = new java.util.ArrayList<ItemStack>();
-	            ItemStack itemstack = this.createStackedBlock(state);
+				java.util.List<ItemStack> items = new java.util.ArrayList<ItemStack>();
+				ItemStack itemstack = this.createStackedBlock(state);
 
-	            if (itemstack != null)
-	            {
-	                items.add(itemstack);
-	            }
+				if (itemstack != null) {
+					items.add(itemstack);
+				}
 
-	            net.minecraftforge.event.ForgeEventFactory.fireBlockHarvesting(items, worldIn, pos, state, 0, 1.0f, true, player);
-	            for (ItemStack is : items)
-	                spawnAsEntity(worldIn, pos, is);
+				net.minecraftforge.event.ForgeEventFactory.fireBlockHarvesting(items, worldIn, pos, state, 0, 1.0f, true, player);
+				for (ItemStack is : items)
+					spawnAsEntity(worldIn, pos, is);
 			} else {
 				String oilID = ConfigManagerCore.useOldOilFluidID ? "oilgc" : "oil";
 				worldIn.setBlockState(pos, FluidRegistry.getFluid(oilID).getBlock().getDefaultState(), 1);
