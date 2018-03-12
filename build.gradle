@@ -29,7 +29,7 @@ repositories {
 
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "1.12.2-0.2.8"
+version = "1.12.2-0.2.9"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -47,10 +47,10 @@ dependencies {
     deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-${version_minetweaker}"
     compile "mezz.jei:jei_${minecraft_version}:${jei_version}:api"
 	compile files (
-		"Galacticraft-API-1.12.2-4.0.1.144.jar",
-		"GalacticraftCore-Dev-1.12.2-4.0.1.144.jar",
-		"Galacticraft-Planets-Dev-1.12.2-4.0.1.144.jar",
-		"MicdoodleCore-Dev-1.12.2-4.0.1.144.jar",
+		"Galacticraft-API-1.12.2-4.0.1.152.jar",
+		"GalacticraftCore-Dev-1.12.2-4.0.1.152.jar",
+		"Galacticraft-Planets-Dev-1.12.2-4.0.1.152.jar",
+		"MicdoodleCore-Dev-1.12.2-4.0.1.152.jar",
 		"MJRLegendsLib-1.12.2-1.1.1-dev.jar"
 	)
 	runtime "mezz.jei:jei_${minecraft_version}:${jei_version}"

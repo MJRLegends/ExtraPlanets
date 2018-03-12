@@ -5,6 +5,15 @@
 
 
 ===========================================Released Updates===========================================
+v0.2.9
+*Fixed issue #258
+*Space Suit model changes to match GC changes
+*Changes to Rocket, Lander, Vehicles rendering for improving performance
+*More changes to Rocket, Lander, Vehicles rendering (MC 1.12 only)
+*Fix Custom GC Batteries not craftable in AE2 due to stacking
+*Resized all celestial body textures to 16 x 16
+*Clean up/Fix Formatting
+
 v0.2.8
 *Fixed recipe crash issue when disabling certain config options, found via issue #255
 *Added erroring field to the crash message with message about reporting the bug
