@@ -2,6 +2,7 @@ package com.mjr.extraplanets.client.model;
 
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.item.EntityArmorStand;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -57,7 +58,8 @@ public abstract class ArmorCustomModel extends ModelBiped {
 			GL11.glRotatef(bipedHead.rotateAngleY * (180F / (float) Math.PI), 0F, 1F, 0F);
 			GL11.glRotatef(bipedHead.rotateAngleX * (180F / (float) Math.PI), 1F, 0F, 0F);
 			GL11.glRotatef(180F, 1F, 0F, 0F);
-			GL11.glRotatef(180F, 0F, 1F, 0F);
+			if (!(entityIn instanceof EntityArmorStand))
+				GL11.glRotatef(180F, 0F, 1F, 0F);
 			if (isSneak) {
 				GL11.glTranslatef(0F, -0.125F, 0F);
 				if (bipedHead.rotateAngleX < 0.48)
