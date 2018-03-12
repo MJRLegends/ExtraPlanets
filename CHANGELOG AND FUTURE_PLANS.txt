@@ -8,6 +8,15 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v2.0.0
+*Fixed Kepler22 Material Plains Biomes Ids being the same (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
+*Fixed issue #258
+*Fixed Kepler22b cobblestone to stone smelting recipe
+*Added missing Platinum Ore to Platinum Ingot smelting recipe
+*Resized all celestial body textures to 16 x 16
+*Clean up/Fix Formatting
+*Changed Ceres, Venus Biome ids due to a conflict with a very rare mc biome (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
+
 v1.9.9
 *Some work for support for Galaxy Space v1.2.0 for compatibility
 *Removed not needed console logging
@@ -76,13 +85,9 @@ v1.9.5
 
 v1.9.4
 *Fixed some compatibility issues with other addons
-
 *Fixed missing comments in config
-
 *Fixed spelling error in config
-
 *Added AmunRa Compatibility
-
 *Updated comments on config options
 
 

@@ -30,7 +30,7 @@ repositories {
 
 apply plugin: 'forge'
 
-version = "1.7.10-1.9.9"
+version = "1.7.10-2.0.0"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
