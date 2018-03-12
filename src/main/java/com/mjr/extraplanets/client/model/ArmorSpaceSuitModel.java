@@ -130,7 +130,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	@Override
 	public void partBody() {
 		if (partType == 3) {
-			GL11.glScalef(1.0F, 1.0F, 1.0F);
+			GL11.glScalef(1.2F, 1.0F, 1.0F);
 			GL11.glTranslatef(0F, -1.50F, 0F);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ModelUtilities.drawBakedModel(armourModelBody);
@@ -148,7 +148,8 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	@Override
 	public void partRightArm() {
 		if (partType == 3) {
-			GL11.glTranslatef(-0.3525F, -1.375F, 0F);
+			GL11.glScalef(1.35F, 1.2F, 1.4F);
+			GL11.glTranslatef(-0.3505F, -1.350F, 0F);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ModelUtilities.drawBakedModel(armourModelRightArm);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
@@ -159,7 +160,8 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	@Override
 	public void partLeftArm() {
 		if (partType == 3) {
-			GL11.glTranslatef(0.3525F, -1.375F, 0F);
+			GL11.glScalef(1.35F, 1.2F, 1.43F);
+			GL11.glTranslatef(0.3505F, -1.350F, 0F);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ModelUtilities.drawBakedModel(armourModelLeftArm);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
