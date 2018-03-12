@@ -476,8 +476,8 @@ public class Config {
 		kepler22bSpaceStationStaticID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Kepler 22b SpaceStation Static Dimension ID", -80, "[range: -2147483647 ~ 2147483647, default: -80]").getInt();
 
 		mercuryBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Mercury Biome ID", 148, "[range: 0 ~ 255, default: 148]").getInt();
-		venusBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Venus Biome ID", 149, "[range: 0 ~ 255, default: 149]").getInt();
-		ceresBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Ceres Biome ID", 155, "[range: 0 ~ 255, default: 155]").getInt();
+		venusBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Venus Biome ID", 145, "[range: 0 ~ 255, default: 145]").getInt();
+		ceresBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Ceres Biome ID", 146, "[range: 0 ~ 255, default: 146]").getInt();
 		jupiterBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Jupiter Biome ID", 150, "[range: 0 ~ 255, default: 150]").getInt();
 		saturnBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Saturn Biome ID", 147, "[range: 0 ~ 255, default: 147]").getInt();
 		uranusBiomeID = config.get(Constants.CONFIG_CATEGORY_BIOME_IDS, "Uranus Biome ID", 152, "[range: 0 ~ 255, default: 152]").getInt();
