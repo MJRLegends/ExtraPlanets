@@ -45,4 +45,11 @@ public class ItemBasicBattery extends ItemElectricBase implements IItemElectric 
 			list.add(new ItemStack(this, 1, 0));
 		}
 	}
+
+	public int getItemStackLimit(ItemStack stack) {
+		if (stack.getItemDamage() < 100 || stack.hasTagCompound() && stack.getTagCompound().hasKey("electricity")) {
+			return 1;
+		}
+		return this.getItemStackLimit();
+	}
 }
