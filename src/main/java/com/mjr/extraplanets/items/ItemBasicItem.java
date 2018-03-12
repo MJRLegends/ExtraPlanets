@@ -87,8 +87,7 @@ public class ItemBasicItem extends Item {
 					stats.setRadiationLevel(0);
 				else
 					stats.setRadiationLevel(level);
-				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by "
-						+ Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%");
+				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by " + Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%");
 				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%");
 			}
 

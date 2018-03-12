@@ -497,8 +497,8 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	public boolean interactFirst(EntityPlayer player) {
 		if (this.worldObj.isRemote) {
 			if (this.riddenByEntity == null) {
-				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - "
-						+ TranslateUtilities.translate("gui.buggy.turn.name"));
+				PlayerUtilties.sendMessage(player,
+						GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - " + TranslateUtilities.translate("gui.buggy.turn.name"));
 				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.accel.name"));
 				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.decel.name"));
 				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.openFuelGui.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.inv.name"));
