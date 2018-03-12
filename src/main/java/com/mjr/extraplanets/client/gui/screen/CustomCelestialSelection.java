@@ -663,7 +663,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 								pressureLevel = 100;
 							if (Config.GC_RADIATION)
 								radiationLevel = 6;
-						} else{
+						} else {
 							radiationLevel = 0;
 							pressureLevel = 0;
 						}
@@ -729,6 +729,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		}
 	}
 
+	@Override
 	public void drawButtons(int mousePosX, int mousePosY) {
 		this.drawCustomButtons(mousePosX, mousePosY);
 		this.zLevel = 0.0F;

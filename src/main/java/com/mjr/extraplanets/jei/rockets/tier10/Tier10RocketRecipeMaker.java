@@ -14,10 +14,10 @@ public class Tier10RocketRecipeMaker {
 
 		int chestCount = -1;
 		for (INasaWorkbenchRecipe recipe : Tier10RocketRecipes.getTier10RocketRecipes()) {
-            int chests = Tier1RocketRecipeMaker.countChests(recipe); 
-            if (chests == chestCount)
-                continue;
-            chestCount = chests;
+			int chests = Tier1RocketRecipeMaker.countChests(recipe);
+			if (chests == chestCount)
+				continue;
+			chestCount = chests;
 			Tier10RocketRecipeWrapper wrapper = new Tier10RocketRecipeWrapper(recipe);
 			recipes.add(wrapper);
 		}

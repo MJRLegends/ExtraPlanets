@@ -38,7 +38,7 @@ public class SlotSchematicTier7Rocket extends Slot {
 	@Override
 	public boolean isItemValid(ItemStack par1ItemStack) {
 		if (par1ItemStack == null)
-			return false;	
+			return false;
 
 		List<INasaWorkbenchRecipe> recipes = Tier7RocketRecipes.getTier7RocketRecipes();
 		for (INasaWorkbenchRecipe recipe : recipes) {
