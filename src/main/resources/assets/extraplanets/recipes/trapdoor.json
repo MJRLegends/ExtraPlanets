@@ -1,0 +1,39 @@
+{
+  "result": {
+    "item": "minecraft:trapdoor",
+    "count": 4
+  },
+  "ingredients": [
+    {
+      "item": "extraplanets:kepler22b_planks",
+      "data": 0
+    },
+    {
+      "item": "extraplanets:kepler22b_planks",
+      "data": 0
+    },
+    {
+      "item": "extraplanets:kepler22b_planks",
+      "data": 0
+    },
+    {
+      "item": "extraplanets:kepler22b_planks",
+      "data": 0
+    },
+    {
+      "item": "extraplanets:kepler22b_planks",
+      "data": 0
+    },
+    {
+      "item": "extraplanets:kepler22b_planks",
+      "data": 0
+    }
+  ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "kepler22b"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

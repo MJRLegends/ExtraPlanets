@@ -655,6 +655,56 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Items.SIGN, 6, 0), new Object[] { "DDD", "DDD", " S ", 'D', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), 'S',
 				"stickWood" });
 
+		// Planks to Crafting Table (4 Planks per 2 Crafting Tables)
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.CRAFTING_TABLE, 2, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.CRAFTING_TABLE, 2, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.CRAFTING_TABLE, 2, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.CRAFTING_TABLE, 2, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.CRAFTING_TABLE, 2, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.CRAFTING_TABLE, 2, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5) });
+
+		// Planks to Trap Doors (4 Planks per 4 Trap Doors)
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.TRAPDOOR, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.TRAPDOOR, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.TRAPDOOR, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.TRAPDOOR, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.TRAPDOOR, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4) });
+		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.TRAPDOOR, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5),
+				new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5) });
+
+		// Planks to Chests (8 Planks per 2 Chests)
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.CHEST, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.CHEST, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.CHEST, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.CHEST, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.CHEST, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Blocks.CHEST, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5) });
+
+		// Planks to Boats (5 Planks per Boat)
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Items.BOAT, 1, 0), new Object[] { "   ", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Items.BOAT, 1, 0), new Object[] { "   ", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Items.BOAT, 1, 0), new Object[] { "   ", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Items.BOAT, 1, 0), new Object[] { "   ", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Items.BOAT, 1, 0), new Object[] { "   ", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(Items.BOAT, 1, 0), new Object[] { "   ", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5) });
+
 		// Tools
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "bluediamondtools", new ItemStack(ExtraPlanets_Tools.BLUE_DIAMOND_PICKAXE), new Object[] { "XXX", " S ", " S ", 'X',
 				new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 0), 'S', "stickWood" });

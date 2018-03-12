@@ -1,0 +1,24 @@
+{
+  "result": {
+    "item": "minecraft:chest",
+    "count": 2
+  },
+  "pattern": [
+    "WWW",
+    "W W",
+    "WWW"
+  ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "kepler22b"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "extraplanets:kepler22b_planks",
+      "data": 0
+    }
+  }
+}
