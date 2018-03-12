@@ -36,4 +36,12 @@ public class ItemBasicBattery extends ItemElectricBase implements IItemElectric 
 	public int getTierGC(ItemStack itemStack) {
 		return tier;
 	}
+
+	@Override
+	public int getItemStackLimit(ItemStack stack) {
+		if (stack.getItemDamage() < 100 || stack.hasTagCompound() && stack.getTagCompound().hasKey("electricity")) {
+			return 1;
+		}
+		return this.getItemStackLimit();
+	}
 }
