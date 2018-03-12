@@ -1,6 +1,6 @@
 package com.mjr.extraplanets.client.model;
 
-import micdoodle8.mods.galacticraft.core.client.model.ModelBipedGC;
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -8,7 +8,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 
 @SideOnly(Side.CLIENT)
-public abstract class ArmorCustomModel extends ModelBipedGC {
+public abstract class ArmorCustomModel extends ModelBiped {
 
 	public ArmorCustomModel() {
 		super(1.0F);
