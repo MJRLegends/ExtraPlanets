@@ -107,8 +107,6 @@ public class BlockBasicOberon extends Block implements IDetectableResource, IPla
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> par3List) {
-		if (!(this.getCreativeTabToDisplayOn() == tab))
-			return;
 		for (EnumBlockBasic blockBasic : EnumBlockBasic.values()) {
 			par3List.add(new ItemStack(this, 1, blockBasic.getMeta()));
 		}

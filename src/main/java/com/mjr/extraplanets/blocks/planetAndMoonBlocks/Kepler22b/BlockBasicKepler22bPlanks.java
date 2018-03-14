@@ -25,38 +25,24 @@ public class BlockBasicKepler22bPlanks extends Block {
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
-	/**
-	 * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It returns the metadata of the dropped item based on the old metadata of the block.
-	 */
 	@Override
 	public int damageDropped(IBlockState state) {
 		return state.getValue(VARIANT).getMetadata();
 	}
 
-	/**
-	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
-	 */
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
-		if (!(this.getCreativeTabToDisplayOn() == tab))
-			return;
 		for (BlockBasicKepler22bPlanks.EnumType blockplanks$enumtype : BlockBasicKepler22bPlanks.EnumType.values()) {
 			list.add(new ItemStack(this, 1, blockplanks$enumtype.getMetadata()));
 		}
 	}
 
-	/**
-	 * Convert the given metadata into a BlockState for this Block
-	 */
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(VARIANT, BlockBasicKepler22bPlanks.EnumType.byMetadata(meta));
 	}
 
-	/**
-	 * Convert the BlockState into the correct metadata value
-	 */
 	@Override
 	public int getMetaFromState(IBlockState state) {
 		return state.getValue(VARIANT).getMetadata();
@@ -74,18 +60,12 @@ public class BlockBasicKepler22bPlanks extends Block {
 		private static final BlockBasicKepler22bPlanks.EnumType[] META_LOOKUP = new BlockBasicKepler22bPlanks.EnumType[values().length];
 		private final int meta;
 		private final String name;
-		private final String unlocalizedName;
-		private final MapColor field_181071_k;
+		private final MapColor map_color;
 
-		private EnumType(int p_i46388_3_, String p_i46388_4_, MapColor p_i46388_5_) {
-			this(p_i46388_3_, p_i46388_4_, p_i46388_4_, p_i46388_5_);
-		}
-
-		private EnumType(int p_i46389_3_, String p_i46389_4_, String p_i46389_5_, MapColor p_i46389_6_) {
-			this.meta = p_i46389_3_;
-			this.name = p_i46389_4_;
-			this.unlocalizedName = p_i46389_5_;
-			this.field_181071_k = p_i46389_6_;
+		private EnumType(int meta, String name, MapColor map_color) {
+			this.meta = meta;
+			this.name = name;
+			this.map_color = map_color;
 		}
 
 		public int getMetadata() {
@@ -93,7 +73,7 @@ public class BlockBasicKepler22bPlanks extends Block {
 		}
 
 		public MapColor func_181070_c() {
-			return this.field_181071_k;
+			return this.map_color;
 		}
 
 		@Override
@@ -112,10 +92,6 @@ public class BlockBasicKepler22bPlanks extends Block {
 		@Override
 		public String getName() {
 			return this.name;
-		}
-
-		public String getUnlocalizedName() {
-			return this.unlocalizedName;
 		}
 
 		static {

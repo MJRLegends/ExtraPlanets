@@ -44,18 +44,12 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 		private static final BlockKepler22bMapleTreeSapling.EnumType[] META_LOOKUP = new BlockKepler22bMapleTreeSapling.EnumType[values().length];
 		private final int meta;
 		private final String name;
-		private final String unlocalizedName;
-		private final MapColor field_181071_k;
+		private final MapColor map_color;
 
-		private EnumType(int p_i46388_3_, String p_i46388_4_, MapColor p_i46388_5_) {
-			this(p_i46388_3_, p_i46388_4_, p_i46388_4_, p_i46388_5_);
-		}
-
-		private EnumType(int p_i46389_3_, String p_i46389_4_, String p_i46389_5_, MapColor p_i46389_6_) {
-			this.meta = p_i46389_3_;
-			this.name = p_i46389_4_;
-			this.unlocalizedName = p_i46389_5_;
-			this.field_181071_k = p_i46389_6_;
+		private EnumType(int meta, String name, MapColor map_color) {
+			this.meta = meta;
+			this.name = name;
+			this.map_color = map_color;
 		}
 
 		public int getMetadata() {
@@ -63,7 +57,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 		}
 
 		public MapColor func_181070_c() {
-			return this.field_181071_k;
+			return this.map_color;
 		}
 
 		@Override
@@ -84,10 +78,6 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 			return this.name;
 		}
 
-		public String getUnlocalizedName() {
-			return this.unlocalizedName;
-		}
-
 		static {
 			for (BlockKepler22bMapleTreeSapling.EnumType blockleafs$enumtype : values()) {
 				META_LOOKUP[blockleafs$enumtype.getMetadata()] = blockleafs$enumtype;
@@ -105,12 +95,9 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 		return SAPLING_AABB;
 	}
 
-	/**
-	 * Gets the localized name of this block. Used for the statistics page.
-	 */
 	@Override
 	public String getLocalizedName() {
-		return I18n.translateToLocal(this.getUnlocalizedName() + "." + BlockKepler22bMapleTreeSapling.EnumType.MAPLE_BLUE.getUnlocalizedName() + ".name");
+		return I18n.translateToLocal(this.getUnlocalizedName() + "." + this.getUnlocalizedName() + ".name");
 	}
 
 	@Override
@@ -164,37 +151,23 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 		}
 	}
 
-	/**
-	 * Check whether the given BlockPos has a Sapling of the given type
-	 */
 	public boolean isTypeAt(World worldIn, BlockPos pos, BlockKepler22bMapleTreeSapling.EnumType type) {
 		IBlockState iblockstate = worldIn.getBlockState(pos);
 		return iblockstate.getBlock() == this && iblockstate.getValue(VARIANT) == type;
 	}
 
-	/**
-	 * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It returns the metadata of the dropped item based on the old metadata of the block.
-	 */
 	@Override
 	public int damageDropped(IBlockState state) {
 		return state.getValue(VARIANT).getMetadata();
 	}
 
-	/**
-	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
-	 */
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
-		if (!(this.getCreativeTabToDisplayOn() == tab))
-			return;
 		for (BlockKepler22bMapleTreeSapling.EnumType blockplanks$enumtype : BlockKepler22bMapleTreeSapling.EnumType.values()) {
 			list.add(new ItemStack(itemIn, 1, blockplanks$enumtype.getMetadata()));
 		}
 	}
 
-	/**
-	 * Whether this IGrowable can grow
-	 */
 	@Override
 	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
 		return true;
@@ -210,17 +183,11 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 		this.grow(worldIn, pos, state, rand);
 	}
 
-	/**
-	 * Convert the given metadata into a BlockState for this Block
-	 */
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(VARIANT, BlockKepler22bMapleTreeSapling.EnumType.byMetadata(meta & 7)).withProperty(STAGE, Integer.valueOf((meta & 8) >> 3));
 	}
 
-	/**
-	 * Convert the BlockState into the correct metadata value
-	 */
 	@Override
 	public int getMetaFromState(IBlockState state) {
 		int i = 0;
