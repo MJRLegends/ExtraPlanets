@@ -1027,6 +1027,8 @@ item.tier4_space_suit_legings.name=Поножи космического ска�
 item.tier4_space_suit_boots.name=Ботинки космического скафандра 4-го уровня
 item.tier4_space_suit_gravity_boots.name=Гравитационные ботинки космического скафандра 4-го уровня
 
+tier1.space.suit.information.gc=Required for Moon, Mars, Venus, Asteroids ##NEEDS TRANSLATE##
+tier1.space.suit.information.gc.2=Mercury and Ceres including their moons ##NEEDS TRANSLATE##
 tier1.space.suit.information=Требуется для Меркурия и Цереры
 tier2.space.suit.information=Требуется для Юпитера, в том числе и их спутников
 tier3.space.suit.information=Требуется для Сатурна, Урана в том числе и их спутников
