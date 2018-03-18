@@ -1027,6 +1027,8 @@ item.tier4_space_suit_legings.name=4阶太空服护腿
 item.tier4_space_suit_boots.name=4阶太空服靴子
 item.tier4_space_suit_gravity_boots.name=4阶太空服重力靴子
 
+tier1.space.suit.information.gc=Required for Moon, Mars, Venus, Asteroids ##NEEDS TRANSLATE##
+tier1.space.suit.information.gc.2=Mercury and Ceres including their moons ##NEEDS TRANSLATE##
 tier1.space.suit.information=适用于水星、谷神星及它们的卫星
 tier2.space.suit.information=适用于木星及其卫星
 tier3.space.suit.information=适用于土星、天王星及它们的卫星

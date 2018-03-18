@@ -1027,6 +1027,8 @@ item.tier4_space_suit_legings.name=Stufe 4 Raumanzug-Hose
 item.tier4_space_suit_boots.name=Stufe 4 Raumanzug-Stiefel
 item.tier4_space_suit_gravity_boots.name=Stufe 4 Raumanzug-Stiefel mit Gravitationshilfe
 
+tier1.space.suit.information.gc=Required for Moon, Mars, Venus, Asteroids ##NEEDS TRANSLATE##
+tier1.space.suit.information.gc.2=Mercury and Ceres including their moons ##NEEDS TRANSLATE##
 tier1.space.suit.information=Benötigt für Merkur, Ceres und deren Monde.
 tier2.space.suit.information=Benötigt für Jupiter und seine Monde.
 tier3.space.suit.information=Benötigt für Saturn, Uranus und deren Monde.

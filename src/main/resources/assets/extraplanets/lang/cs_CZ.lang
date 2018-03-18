@@ -1027,6 +1027,8 @@ item.tier4_space_suit_legings.name=Tier 4 Space Suit Leggings ##NEEDS TRANSLATE#
 item.tier4_space_suit_boots.name=Tier 4 Space Suit Boots ##NEEDS TRANSLATE##
 item.tier4_space_suit_gravity_boots.name=Tier 4 Space Suit Gravity Boots ##NEEDS TRANSLATE##
 
+tier1.space.suit.information.gc=Required for Moon, Mars, Venus, Asteroids ##NEEDS TRANSLATE##
+tier1.space.suit.information.gc.2=Mercury and Ceres including their moons ##NEEDS TRANSLATE##
 tier1.space.suit.information=Required for Mercury, Ceres including their moons ##NEEDS TRANSLATE##
 tier2.space.suit.information=Required for Jupiter including their moons ##NEEDS TRANSLATE##
 tier3.space.suit.information=Required for Saturn, Uranus including their moons ##NEEDS TRANSLATE##
