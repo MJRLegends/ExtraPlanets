@@ -19,6 +19,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPressureSuit;
@@ -85,7 +86,12 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
-		list.add(EnumColor.AQUA + TranslateUtilities.translate("tier1.space.suit.information"));
+		if (Config.GC_PRESSURE || Config.GC_RADIATION){
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("tier1.space.suit.information.gc"));
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("tier1.space.suit.information.gc.2"));
+		}
+		else if (Config.GC_PRESSURE == false && Config.GC_RADIATION == false)
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("tier1.space.suit.information"));
 	}
 
 	public static ModelBiped fillingArmorModel(ModelBiped model, EntityLivingBase entityLiving) {
