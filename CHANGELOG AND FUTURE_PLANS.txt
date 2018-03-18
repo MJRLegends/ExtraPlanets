@@ -5,6 +5,15 @@
 
 
 ===========================================Released Updates===========================================
+v0.3.0
+*Fixed Space Suit Helmet being rendered backwards on Armour Stands
+*Added more uses for Kepler22b Planks, towards suggestion #163
+*Fixed some blocks not showing in search & mod creative tabs
+*Clean up for some block classes
+*Fixed spreading of Kepler22b grass
+*Fixed missing information for Tier 1 Space Suit Tool tip
+*Made pressure and radiation damage be performed less often
+
 v0.2.9
 *Fixed issue #258
 *Space Suit model changes to match GC changes
