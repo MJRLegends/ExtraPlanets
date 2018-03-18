@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v1.3.5
+*Fixed Space Suit Helmet being rendered backwards on Armour Stands
+*Added more uses for Kepler22b Planks, towards suggestion #163
+*Fixed spreading of Kepler22b grass
+*Fixed missing information for Tier 1 Space Suit Tool tip
+*Made pressure and radiation damage be performed less often
+
 v1.3.4
 *Fixed Kepler22 Material Plains Biomes Ids being the same (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
 *Fixed issue #258
