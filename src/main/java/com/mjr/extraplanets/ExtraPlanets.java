@@ -329,10 +329,10 @@ public class ExtraPlanets {
 		RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
 
 		if (Config.GC_PRESSURE || Config.GC_RADIATION) {
-			MarsModule.planetMars.addChecklistKeys("tier_1_space_suit");
-			GalacticraftCore.moonMoon.addChecklistKeys("tier_1_space_suit");
-			VenusModule.planetVenus.addChecklistKeys("tier_1_space_suit");
-			AsteroidsModule.planetAsteroids.addChecklistKeys("tier_1_space_suit");
+			MarsModule.planetMars.addChecklistKeys("space_suit");
+			GalacticraftCore.moonMoon.addChecklistKeys("space_suit");
+			VenusModule.planetVenus.addChecklistKeys("space_suit");
+			AsteroidsModule.planetAsteroids.addChecklistKeys("space_suit");
 		}
 
 		// Proxy PostInit Method
