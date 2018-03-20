@@ -1027,12 +1027,9 @@ item.tier4_space_suit_legings.name=Tier 4 Space Suit Leggings
 item.tier4_space_suit_boots.name=Tier 4 Space Suit Boots
 item.tier4_space_suit_gravity_boots.name=Tier 4 Space Suit Gravity Boots
 
-tier1.space.suit.information.gc=Required for Moon, Mars, Venus, Asteroids
-tier1.space.suit.information.gc.2=Mercury and Ceres including their moons
-tier1.space.suit.information=Required for Mercury, Ceres including their moons
-tier2.space.suit.information=Required for Jupiter including their moons
-tier3.space.suit.information=Required for Saturn, Uranus including their moons
-tier4.space.suit.information=Required for Neptune, Pluto, Eris including their moons
+space.suit.information=Used to full stop pressure damage & slow down radiation damage
+space.suit.information.extra=The Tier of each part of the Space Suits counts towards the amount of radiation gained
+space.suit.information.extra.2=The Higher the Space Suit Tier the slower radiation will be gained
 
 item.tier3_thermal_helm.name=Tier 3 Thermal Padding Helm
 item.tier3_thermal_chestplate.name=Tier 3 Thermal Padding Chestpiece

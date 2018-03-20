@@ -113,7 +113,7 @@ public class ExtraPlanets_Moons {
 			TRITON.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/triton.png"));
 			TRITON.setDimensionInfo(Config.TRITON_ID, WorldProviderTriton.class);
 			TRITON.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -140.0F : 5.0F, 0.0F, 0.2F));
-			TRITON.addChecklistKeys("tier_5_thermal_padding", "tier_4_space_suit", "equipOxygenSuit", "equipParachute");
+			TRITON.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
 			TRITON.setBiomeInfo(TritonBiomes.triton, TritonBiomes.tritonIceLands, TritonBiomes.tritonIceSea);
 			TRITON.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			TRITON.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -170,7 +170,7 @@ public class ExtraPlanets_Moons {
 			IO.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/io.png"));
 			IO.setDimensionInfo(Config.IO_ID, WorldProviderIo.class);
 			IO.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 100.0F : 5.0F, 0.0F, 0.2F));
-			IO.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute");
+			IO.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
 			IO.setBiomeInfo(IoBiomes.io, IoBiomes.ioAshLands, IoBiomes.ioBurningPlains);
 			IO.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			IO.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -189,7 +189,7 @@ public class ExtraPlanets_Moons {
 			EUROPA.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/europa.png"));
 			EUROPA.setDimensionInfo(Config.EUROPA_ID, WorldProviderEuropa.class);
 			EUROPA.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 100.0F : 5.0F, 0.0F, 0.2F));
-			EUROPA.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute");
+			EUROPA.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
 			EUROPA.setBiomeInfo(EuropaBiomes.europa, EuropaBiomes.europaIceValleys, EuropaBiomes.europaSaltSea);
 			EUROPA.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			EUROPA.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -209,7 +209,7 @@ public class ExtraPlanets_Moons {
 			GANYMEDE.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/ganymede.png"));
 			GANYMEDE.setDimensionInfo(Config.GANYMEDE_ID, WorldProviderGanymede.class);
 			GANYMEDE.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 100.0F : 5.0F, 0.0F, 0.2F));
-			GANYMEDE.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute");
+			GANYMEDE.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
 			GANYMEDE.setBiomeInfo(GanymedeBiomes.ganymede);
 			GANYMEDE.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			GANYMEDE.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -228,7 +228,7 @@ public class ExtraPlanets_Moons {
 			CALLISTO.setBodyIcon(new ResourceLocation(micdoodle8.mods.galacticraft.core.Constants.ASSET_PREFIX, "textures/gui/celestialbodies/callisto.png"));
 			CALLISTO.setDimensionInfo(Config.CALLISTO_ID, WorldProviderCallisto.class);
 			CALLISTO.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 100.0F : 5.0F, 0.0F, 0.2F));
-			CALLISTO.addChecklistKeys("tier_4_thermal_padding", "tier_2_space_suit", "equipOxygenSuit", "equipParachute");
+			CALLISTO.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
 			CALLISTO.setBiomeInfo(CallistoBiomes.callisto, CallistoBiomes.callistoShaleSmallMountains, CallistoBiomes.callistoShaleLargeMountains, CallistoBiomes.callistoSaltSea);
 			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -247,7 +247,7 @@ public class ExtraPlanets_Moons {
 			RHEA.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/rhea.png"));
 			RHEA.setDimensionInfo(Config.RHEA_ID, WorldProviderRhea.class);
 			RHEA.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 80.0F : 5.0F, 0.0F, 0.2F));
-			RHEA.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
+			RHEA.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
 			RHEA.setBiomeInfo(RheaBiomes.rhea);
 			RHEA.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			RHEA.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -266,7 +266,7 @@ public class ExtraPlanets_Moons {
 			TITAN.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titan.png"));
 			TITAN.setDimensionInfo(Config.TITAN_ID, WorldProviderTitan.class);
 			TITAN.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 80.0F : 5.0F, 0.0F, 0.2F));
-			TITAN.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
+			TITAN.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
 			TITAN.setBiomeInfo(TitanBiomes.titan);
 			TITAN.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			TITAN.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -285,7 +285,7 @@ public class ExtraPlanets_Moons {
 			IAPETUS.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/iapetus.png"));
 			IAPETUS.setDimensionInfo(Config.IAPETUS_ID, WorldProviderIapetus.class);
 			IAPETUS.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 40.0F : 5.0F, 4.0F, 0.1F));
-			IAPETUS.addChecklistKeys("tier_4_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
+			IAPETUS.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
 			IAPETUS.setBiomeInfo(IapetusBiomes.iapetus);
 			IAPETUS.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			IAPETUS.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -304,7 +304,7 @@ public class ExtraPlanets_Moons {
 			OBERON.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/oberon.png"));
 			OBERON.setDimensionInfo(Config.OBERON_ID, WorldProviderOberon.class);
 			OBERON.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -120.0F : 5.0F, 4.0F, 0.1F));
-			OBERON.addChecklistKeys("tier_5_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
+			OBERON.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
 			OBERON.setBiomeInfo(OberonBiomes.oberon);
 			OBERON.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			OBERON.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -323,7 +323,7 @@ public class ExtraPlanets_Moons {
 			TITANIA.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/titania.png"));
 			TITANIA.setDimensionInfo(Config.TITANIA_ID, WorldProviderTitania.class);
 			TITANIA.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -120.0F : 5.0F, 4.0F, 0.1F));
-			TITANIA.addChecklistKeys("tier_5_thermal_padding", "tier_3_space_suit", "equipOxygenSuit", "equipParachute");
+			TITANIA.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
 			TITANIA.setBiomeInfo(TitaniaBiomes.titania);
 			TITANIA.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			TITANIA.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));

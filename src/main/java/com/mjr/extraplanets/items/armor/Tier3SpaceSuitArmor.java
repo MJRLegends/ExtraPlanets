@@ -85,7 +85,12 @@ public class Tier3SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
-		list.add(EnumColor.AQUA + TranslateUtilities.translate("tier3.space.suit.information"));
+		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information"));
+		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.2"));
+		list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra"));
+		list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra.2"));
+		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.3"));
+		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.4"));
 	}
 
 	public static ModelBiped fillingArmorModel(ModelBiped model, EntityLivingBase entityLiving) {
