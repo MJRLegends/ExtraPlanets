@@ -82,7 +82,12 @@ public class Tier4SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			list.add(EnumColor.AQUA + TranslateUtilities.translate("tier4.space.suit.information"));
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information"));
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.2"));
+			list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra"));
+			list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra.2"));
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.3"));
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.4"));
 		}
 	}
 

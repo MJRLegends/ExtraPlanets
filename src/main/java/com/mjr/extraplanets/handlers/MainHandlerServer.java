@@ -180,7 +180,7 @@ public class MainHandlerServer {
 			if (isInGlowstone((EntityPlayerMP) entityLiving))
 				entityLiving.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 500, 0));
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
-			if ((entityLiving.ticksExisted - 1) % 50 == 0 && OxygenUtil.isAABBInBreathableAirBlock(entityLiving.worldObj, entityLiving.getEntityBoundingBox(), true) == false)
+			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.worldObj, entityLiving.getEntityBoundingBox(), true) == false)
 				runChecks(event, entityLiving);
 		}
 	}
@@ -230,26 +230,28 @@ public class MainHandlerServer {
 	}
 
 	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityPlayerMP playerMP, int amount) {
-		ItemStack helmet = playerMP.inventory.armorInventory[0];
-		ItemStack chest = playerMP.inventory.armorInventory[1];
-		ItemStack leggins = playerMP.inventory.armorInventory[2];
-		ItemStack boots = playerMP.inventory.armorInventory[3];
-
-		boolean doDamage = false;
-
-		if (helmet == null || !(helmet.getItem() instanceof IPressureSuit))
-			doDamage = true;
-		else if (chest == null || !(chest.getItem() instanceof IPressureSuit))
-			doDamage = true;
-		else if (leggins == null || !(leggins.getItem() instanceof IPressureSuit))
-			doDamage = true;
-		else if (boots == null || !(boots.getItem() instanceof IPressureSuit))
-			doDamage = true;
-
-		if (doDamage) {
-			float tempLevel = amount;
-			tempLevel = (tempLevel / 100) * 8;
-			playerMP.attackEntityFrom(DamageSourceEP.pressure, tempLevel);
+		if((playerMP.ticksExisted - 1) % 50 == 0){
+			ItemStack helmet = playerMP.inventory.armorInventory[0];
+			ItemStack chest = playerMP.inventory.armorInventory[1];
+			ItemStack leggins = playerMP.inventory.armorInventory[2];
+			ItemStack boots = playerMP.inventory.armorInventory[3];
+	
+			boolean doDamage = false;
+	
+			if (helmet == null || !(helmet.getItem() instanceof IPressureSuit))
+				doDamage = true;
+			else if (chest == null || !(chest.getItem() instanceof IPressureSuit))
+				doDamage = true;
+			else if (leggins == null || !(leggins.getItem() instanceof IPressureSuit))
+				doDamage = true;
+			else if (boots == null || !(boots.getItem() instanceof IPressureSuit))
+				doDamage = true;
+	
+			if (doDamage) {
+				float tempLevel = amount;
+				tempLevel = (tempLevel / 100) * 8;
+				playerMP.attackEntityFrom(DamageSourceEP.pressure, tempLevel);
+			}
 		}
 	}
 
@@ -295,9 +297,10 @@ public class MainHandlerServer {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			// System.out.println("Current Level: " + stats.getRadiationLevel());
+			//System.out.println("Current Level: " + stats.getRadiationLevel());
 			if (stats.getRadiationLevel() >= 100) {
-				playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
+				if((playerMP.ticksExisted - 1) % 50 == 0)
+					playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
 			} else if (stats.getRadiationLevel() >= 0) {
 				double tempLevel = 0.0;
 				if (amount < 10)
