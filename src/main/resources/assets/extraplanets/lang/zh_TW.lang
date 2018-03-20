@@ -1,16 +1,16 @@
-#創造標籤
+#Creative Tabs
 itemGroup.SpaceItemsTab=額外行星|物品
 itemGroup.SpaceBlocksTab=額外行星|方塊
 itemGroup.SpaceToolsTab=額外行星|工具
 itemGroup.SpaceArmorTab=額外行星|裝備
 
-#星系
+#Galaxies
 galaxy.whirlpool=渦狀
 galaxy.andromeda=仙女座
 galaxy.black_eye=黑眼
 galaxy.proxima_centauri=比鄰星
 
-#恆星系
+#Solar Systems
 solarsystem.kepler22=開普勒22星系
 solarsystem.kepler47=開普勒47星系
 solarsystem.kepler62=開普勒62星系
@@ -21,7 +21,7 @@ solarsystem.deltiri10=德爾理10星系 ##音譯##
 solarsystem.vendrizi161=望德里奇161星系 ##音譯##
 solarsystem.epsilonSolaria=小日浴星系 ##暫譯##
 
-#恆星
+#Stars
 star.kepler22=開普勒22
 star.kepler47=開普勒47
 star.kepler62=開普勒62
@@ -32,7 +32,7 @@ star.deltiri10=德爾理10 ##音譯##
 star.vendrizi161=望德里奇161 ##音譯##
 star.epsilonSolaria=小日浴 ##暫譯##
 
-#行星
+#Planets
 planet.Mercury=水星
 planet.Ceres=穀神星
 planet.Jupiter=木星
@@ -73,7 +73,7 @@ planet.brajutov=波拉多芬 ##音譯##
 planet.speshani16=斯匹肖尼16 ##音譯##
 planet.trars9=特拉耳9 ##音譯##
 
-#衛星
+#Moons
 moon.triton=海衛一
 moon.io=木衛一
 moon.europa=木衛二
@@ -91,7 +91,7 @@ moon.nix=冥衛二
 moon.hydra=冥衛三
 moon.dysnomia=鬩衛一
 
-#行星方塊
+#Planet Blocks
 tile.mercury.surface.name=水星地表岩石
 tile.mercury.sub_surface.name=水星地底岩石
 tile.mercury.stone.name=水星石頭
@@ -250,7 +250,7 @@ tile.kepler22b.cobblestone.name=開普勒22b鵝卵石
 tile.kepler22b.ore_platinum.name=開普勒22b鉑礦
 tile.kepler22b.platinum_block.name=鉑磚
 
-#衛星方塊
+#Moon Blocks
 tile.callisto.surface.name=木衛四地表岩石
 tile.callisto.sub_surface.name=木衛四地底岩石
 tile.callisto.stone.name=木衛四石頭
@@ -341,7 +341,7 @@ tile.iapetus.ore_tin.name=土衛八錫礦
 tile.iapetus.ore_copper.name=土衛八銅礦
 tile.iapetus.ice.name=土衛八冰塊
 
-#行星/衛星礫石方塊
+#Planet/Moon Gravel Blocks
 tile.mercury_gravel.name=水星礫石
 tile.ceres_gravel.name=穀神星礫石
 tile.pluto_gravel.name=冥王星礫石
@@ -364,14 +364,14 @@ tile.saturn_gravel.name=土星礫石
 tile.uranus_gravel.name=天王星礫石
 tile.neptune_gravel.name=海王星礫石
 
-#礫石方塊
+#Girt Blocks
 tile.diamond_grit.name=鑽石礫石
 tile.coal_grit.name=煤炭礫石
 tile.iron_grit.name=鐵礫石
 tile.gold_grit.name=金礫石
 tile.emerald_grit.name=綠寶石礫石
 
-#寶箱
+#Treasure Chests
 tile.treasure_chest_t4.name=四階寶箱
 tile.treasure_chest_t5.name=五階寶箱
 tile.treasure_chest_t6.name=六階寶箱
@@ -387,7 +387,7 @@ tile.treasure_chest_t8.description=八階寶箱會在海王星地牢形成。當
 tile.treasure_chest_t9.description=九階寶箱會在冥王星地牢形成。當你擊敗了冥王星地牢BOSS後，就能拿到鑰匙來打開寶箱。
 tile.treasure_chest_t10.description=十階寶箱會在鬩神星地牢形成。當你擊敗了鬩神星地牢BOSS後，就能拿到鑰匙來打開寶箱。
 
-#機器
+#Machines
 tile.advanced_refinery.name=高級精煉機
 tile.ultimate_refinery.name=終級精煉機
 tile.solar.hybrid_solar.name=混合型高級太陽能電池板
@@ -433,7 +433,7 @@ tile.basic_purifier.description=用於淨化感染和放射性水
 tile.basic_densifier.description=用於將流體壓縮成稠密的形式
 tile.vehicle_charger.description=放置在漫遊車充能平台或電力火箭發射平台旁邊以提供充電功能
 
-#機器容器
+#Machine Containers
 container.solarhybrid.name=混合型高級太陽能電池板
 container.solarultimate.name=最終混合型高級太陽能電池板
 container.advanced.refinery.name=高級精煉機
@@ -454,7 +454,7 @@ container.basic.purifier.name=基礎淨化器
 container.basic.densifier.name=基礎濃縮機
 container.basic.decontamination.unit.name=基礎去污單元
 
-#GUI組件/信息
+#GUI Components/Messages
 gui.salt_water_tank.desc.4=液態結晶水罐
 gui.message.salt_water.name=結晶水
 gui.salt_water_input.desc.0=放置液態結晶水桶在
@@ -529,7 +529,7 @@ wafter.uses.information=用於空間站配方
 gui.rover.information=與漫遊車充能平台一同使用
 gui.rover.information.2=將漫遊車充能器連接到充電座上
 
-#天體選擇屏幕GUI組件
+#Celestial Selection Screen GUI Components
 gui.celestial_details.name=天體細節
 gui.general_features_details.name=一般功能細節
 gui.atmosphere_details.name=大氣細節
