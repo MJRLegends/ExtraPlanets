@@ -558,10 +558,10 @@ gui.celestial_body_pressure_level.name=壓力水平
 gui.celestial_body_amount_of_planets.name=行星數量
 gui.celestial_body_has_dungeon.name=有地牢
 
-#GUI控制/快捷鍵
+#GUI Controls/Keybinds
 keybind.vehicle_inv.name=打開電力漫遊車的物品欄
 
-#其它方塊
+#Other Blocks
 tile.nuclear_bomb.name=核彈
 tile.fire_bomb.name=火焰炸彈
 tile.volcanic_rock.name=火山岩
@@ -576,7 +576,7 @@ tile.red_sandstone.name=紅沙石
 tile.orange_sand.name=橙沙
 tile.orange_sandstone.name=橙沙石
 
-#焦糖/蛋糕/糖衣方塊
+#CandyCane/Cake/Icing Blocks
 tile.candy_blocks.candy_cane_red.name=紅色焦糖
 tile.candy_blocks.candy_cane_green.name=綠色焦糖
 tile.candy_blocks.candy_cane_blue.name=藍色焦糖
@@ -610,7 +610,7 @@ tile.cake_blocks.cookie_rocks.name=曲奇岩石
 
 tile.white_sugar_cane.name=白色甘蔗方塊
 
-#裝飾塊
+#Decorative Blocks
 tile.decorative_blocks.marble.name=大理石
 tile.decorative_blocks.marble_bricks.name=大理石磚
 tile.decorative_blocks.snow_bricks.name=雪磚
@@ -634,7 +634,7 @@ tile.decorative_blocks2.light_blue_block.name=淺藍色方塊
 tile.decorative_blocks2.yellow_block.name=黃色方塊
 tile.decorative_blocks2.green_block.name=綠色方塊
 
-#階梯
+#Stairs
 tile.mercury_stairs_surface.name=水星地表階梯
 tile.mercury_stairs_sub_surface.name=水星地底階梯
 tile.mercury_stairs_stone.name=水星石頭階梯
@@ -675,7 +675,7 @@ tile.eris_stairs_sub_surface.name=鬩神星地底階梯
 tile.eris_stairs_stone.name=鬩神星石頭階梯
 tile.eris_stairs_stone_bricks.name=鬩神星石頭磚階梯
 
-#火箭物品
+#Rocket Items
 item.item_tier4_rocket.t4Rocket.name=四階火箭
 item.item_tier5_rocket.t5Rocket.name=五階火箭
 item.item_tier6_rocket.t6Rocket.name=六階火箭
@@ -688,11 +688,11 @@ rocket_pad.tier2.desc=需要放置在二階發射平台上
 rocket_pad.tier3.desc=需要放置在三階發射平台上
 rocket_pad.electric.desc=需要放置在電力火箭發射平台上
 
-#漫遊車
+#Vehicles
 item.mars_rover.name=火星漫遊車
 item.venus_rover.name=金星漫遊車
 
-#火箭分階物品
+#Rocket Tiered Items
 item.nose_cone_tier4.name=四階鼻錐
 item.nose_cone_tier5.name=五階鼻錐
 item.nose_cone_tier6.name=六階鼻錐
@@ -741,7 +741,7 @@ tier8.heavy_duty_plate.name=八階
 tier9.heavy_duty_plate.name=九階
 tier10.heavy_duty_plate.name=十階
 
-#緻密物品
+#Compressed Items
 item.tier4_items.compressed_carbon.name=緻密碳板
 item.tier5_items.compressed_palladium.name=緻密鈀板
 item.tier6_items.compressed_magnesium.name=緻密鎂板
@@ -754,7 +754,7 @@ item.tier9_items.compressed_tungsten.name=緻密鎢板
 item.tier10_items.compressed_dark_iron.name=緻密暗鐵板
 item.tier11_items.compressed_platinum.name=緻密鉑板
 
-#錠
+#Ingots
 item.tier4_items.ingot_carbon.name=碳錠
 item.tier5_items.ingot_palladium.name=鈀錠
 item.tier6_items.ingot_magnesium.name=鎂錠
@@ -792,7 +792,7 @@ item.wafer.red_gem_wafer.name=紅寶石晶圓
 item.wafer.blue_gem_wafer.name=藍寶石晶圓
 item.wafer.white_gem_wafer.name=白寶石晶圓
 
-#水桶
+#Buckets
 item.bucket_glowstone.name=熒石水桶
 item.bucket_salt.name=液態結晶水桶
 item.bucket_magma.name=岩漿水桶
@@ -1051,7 +1051,7 @@ tier3.thermal.padding.information=登陸水星所需
 tier4.thermal.padding.information=登陸木星、土星以及它們的衛星所需
 tier5.thermal.padding.information=登陸天王星、海王星、冥王星和鬩神星及它們的衛星所需
 
-#太空服層
+#Space Suit Layers
 item.tier1_pressure_layer.name=一階抗壓層
 item.tier2_pressure_layer.name=二階抗壓層
 item.tier3_pressure_layer.name=三階抗壓層
@@ -1072,7 +1072,7 @@ tier2_armor_layer.desc=壓縮機合成表：四個鈦錠
 tier3_armor_layer.desc=壓縮機合成表：四個鉑錠
 tier4_armor_layer.desc=壓縮機合成表：四個鋅錠
 
-#未完成太空服
+#UnPrepared Space Suits
 item.tier1_un_prepared_space_suit_helmet.name=一階未完成太空服頭盔
 item.tier1_un_prepared_space_suit_chest.name=一階未完成太空服胸甲
 item.tier1_un_prepared_space_suit_legings.name=一階未完成太空服護腿
@@ -1093,7 +1093,7 @@ item.tier4_un_prepared_space_suit_chest.name=四階未完成太空服胸甲
 item.tier4_un_prepared_space_suit_legings.name=四階未完成太空服護腿
 item.tier4_un_prepared_space_suit_boots.name=四階未完成太空服靴子
 
-#氧氣罐
+#Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=超重型氧氣罐
 item.oxygen_tank_extremely_heavy_full.name=極重型氧氣罐
 
@@ -1145,7 +1145,7 @@ item.oxygen_tank_heavy_full_magenta.name=重型氧氣罐
 item.oxygen_tank_heavy_full_orange.name=重型氧氣罐
 item.oxygen_tank_heavy_full_white.name=重型氧氣罐
 
-#輻射性物品
+#Radiation Items
 item.iodide_salt.name=碘化鹽
 item.potassium_iodide.name=碘化鉀
 item.potassium.name=鉀
@@ -1153,7 +1153,7 @@ item.potash_shards.name=鉀肥碎片
 item.anti_radiation.name=防輻射
 anti_radiation.desc=將輻射水平降低50%
 
-#工具箱
+#Kits
 item.tier1_kit.full.name=一階全套工具箱
 item.tier1_kit.basic_setup.name=一階基礎基礎工具箱
 item.tier1_kit.without_oxygen_setup.name=一階全套工具箱（無氧氣設備）
@@ -1192,7 +1192,7 @@ item.tier5_kit.just_protection.name=五階熱防護套裝工具箱
 item.kit.information.desc=用於太空設備的緊湊存儲
 item.kit.information.use=右鍵點擊裝備工具箱
 
-#木棍
+#Sticks
 item.tier11_items.blue_sticks.name=藍色木棍
 item.tier11_items.red_sticks.name=紅色木棍
 item.tier11_items.yellow_sticks.name=黃色木棍
@@ -1200,13 +1200,13 @@ item.tier11_items.purple_sticks.name=紫色木棍
 item.tier11_items.green_sticks.name=綠色木棍
 item.tier11_items.brown_sticks.name=棕色木棍
 
-#工具
+#Tools
 item.tools.sledge_hammer.name=大錘
 item.tools.grinding_wheel.name=砂輪
 item.tools.mesh.name=線網
 item.tools.filter.name=過濾器
 
-#其它物品
+#Other Items
 item.apple_diamond.name=鑽石蘋果
 item.apple_iron.name=鐵蘋果
 item.canned_food.canned_food.name=罐頭食品
@@ -1225,21 +1225,21 @@ geiger.counter.location.desc=可以從水星地牢獲得！
 item.chocolate_bar.name=巧克力棒
 item.caramel_bar.name=焦糖棒
 
-#罐頭食品
+#Canned Food
 item.canned_food.dehydrated_porkchop.name=脫水豬排
 item.canned_food.dehydrated_fish.name=脫水魚
 item.canned_food.dehydrated_salmon.name=脫水鮭魚
 item.canned_food.dehydrated_chicken.name=脫水雞肉
 item.canned_food.dehydrated_beef.name=脫水牛肉
 
-#電子零件
+#Electric Parts
 item.electric_parts.battery_tier1.name=一階電池
 item.electric_parts.battery_tier2.name=二階電池
 item.electric_parts.spark_plug.name=火花塞
 item.electric_parts.electric_wheels_tier1.name=一階輪子
 item.electric_parts.electric_wheels_tier2.name=二階輪子
 
-#實體
+#Entities
 entity.ProjectileTNT.name=飛行的TNT
 
 entity.extraplanets.EntityTier4Rocket.name=四階火箭
@@ -1281,7 +1281,7 @@ entity.extraplanets.EvolvedPowerSkeleton.name=骷髏（進化體）
 entity.extraplanets.EvolvedGiantSpider.name=巨型蜘蛛（進化體）
 entity.extraplanets.EvolvedMiniEnderman.name=迷你終界使者（進化體）
 
-#成就
+#Achievements
 achievement.mercury_planet=登陸水星！
 achievement.ceres_planet=登陸穀神星！
 achievement.jupiter_planet=登在木星！
@@ -1336,7 +1336,7 @@ achievement.craft_rocket_8.desc=製作八階火箭
 achievement.craft_rocket_9.desc=製作九階火箭
 achievement.craft_rocket_10.desc=製作十階火箭
 
-#液體/流體
+#Liquids/Fluid
 tile.glowstone.name=熒石水
 tile.magma.name=岩漿水
 tile.nitrogen.name=液態氮
@@ -1365,7 +1365,7 @@ fluid.liquid_hydrocarbon_fluid=液態烴
 fluid.liquid_chocolate_fluid=液態巧克力
 fluid.liquid_caramel_fluid=液態焦糖
 
-#Gui/損傷來源
+#Gui/Damage Sources
 gui.warning.high.pressure=警告：高壓
 gui.warning.high.radiation=警告：高輻射
 death.attack.radiation=%1$s忘記了防輻射保護
@@ -1375,7 +1375,7 @@ death.attack.magma=%1$s被岩漿燒死
 death.attack.radiationLiquid=%1$s忘了輻射會殺了他
 death.attack.infection=%1$s被感染接管了
 
-#清單GUI消息
+#CheckList GUI Messages
 checklist.tier_3_thermal_padding.key=裝備三階熱力充能服
 checklist.tier_4_thermal_padding.key=裝備四階熱力充能服
 checklist.tier_5_thermal_padding.key=裝備五階熱力充能服
@@ -1397,8 +1397,8 @@ satellite.space_station.pluto=冥王星太空站
 satellite.space_station.eris=鬩神星太空站
 satellite.space_station.kepler22b=開普勒22b太空站
 
-#------------------1.7.10 只有部分------------------
-#金星方塊
+#------------------1.7.10 Only Section------------------
+#Venus Blocks
 tile.venus.surface.name=金星地表岩石
 tile.venus.sub_surface.name=金星地底岩石
 tile.venus.stone.name=金星石頭
@@ -1411,7 +1411,7 @@ tile.venus.carbon_block.name=碳磚
 tile.venus.titanium_block.name=鈦磚
 tile.veuns.dungeon_brick.name=金星地牢磚
 
-#液體/流體
+#Liquids/Fluid
 tile.glowstone_fluid.name=熒石水
 tile.magma_fluid.name=岩漿水
 tile.nitrogen_fluid.name=液態氮
@@ -1425,7 +1425,7 @@ tile.liquid_hydrocarbon_fluid.name=液態烴
 tile.liquid_chocolate_fluid.name=液態巧克力
 tile.liquid_caramel_fluid.name=液態焦糖
 
-#行星方塊半磚
+#Planet Blocks Slabs
 tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=水星石頭半磚
 tile.ExtraPlanets_venusStoneBlockhalfslab.name=金星石頭半磚
 tile.ExtraPlanets_ceresStoneBlockhalfslab.name=穀神星石頭半磚
@@ -1436,7 +1436,7 @@ tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=海王星石頭半磚
 tile.ExtraPlanets_plutoStoneBlockhalfslab.name=冥王星石頭半磚
 tile.ExtraPlanets_erisStoneBlockhalfslab.name=鬩神星石頭半磚
 
-#Planet 方塊階梯
+#Planet Blocks Stairs
 tile.mercuryStoneStairs.name=水星石頭階梯
 tile.venusStoneStairs.name=金星石頭階梯
 tile.ceresStoneStairs.name=穀神星石頭階梯
@@ -1457,29 +1457,29 @@ tile.neptuneStoneBrickStairs.name=海王星石頭磚階梯
 tile.plutoStoneBrickStairs.name=冥王星石頭磚階梯
 tile.erisStoneBrickStairs.name=鬩神星石頭磚階梯
 
-#地牢磚半磚
+#Dungeon Bricks Slabs
 tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=金星地牢磚半磚
 tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=木星地牢磚半磚
 tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=土星地牢磚半磚
 tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=天王星地牢磚半磚
 tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=海王星地牢磚半磚
 
-#地牢磚階梯
+#Dungeon Bricks Stairs
 tile.venusDungeonBrickStoneStairs.name=金星地牢磚階梯
 tile.jupiterDungeonBrickStoneStairs.name=木星地牢磚階梯
 tile.saturnDungeonBrickStoneStairs.name=土星地牢磚階梯
 tile.uranusDungeonBrickStoneStairs.name=天王星地牢磚階梯
 tile.neptuneDungeonBrickStoneStairs.name=海王星地牢磚階梯
 
-#行星
+#Planets
 planet.Venus=金星
 
-#其它方塊
+#Other Blocks
 tile.slime_block.name=史萊姆方塊
 tile.deimos.ore_lead.name=火衛二鉛礦
 tile.phobos.ore_lead.name=火衛一鉛礦
 
-#其它物品
+#Other Items
 item.tier4_items.ash_shard.name=灰燼碎片
 item.tier4_items.volcanic_shard.name=火山碎片
 item.tier4_items.ingot_volcanic.name=火山錠
@@ -1489,30 +1489,30 @@ item.tier4_items.sledge_hammer.name=大錘
 item.tier4_items.grinding_wheel.name=砂輪
 item.thermal_cloth.tier2_thermal_cloth.name=二階熱力布料
 
-#更多行星緊湊方塊和物品
+#MorePlanetsCompactBlocks&Items
 tile.treasure_chest_t4_saturn.name=四階寶箱
 tile.treasure_chest_t4_uranus.name=四階寶箱
 tile.treasure_chest_t5_neptune.name=五階寶箱
 tile.treasure_chest_t6_eris.name=六階寶箱
 
-#鑰匙
+#Keys
 item.key.T4_saturn.name=四階地牢鑰匙
 item.key.T4_uranus.name=四階地牢鑰匙
 item.key.T5_neptune.name=五階地牢鑰匙
 item.key.T6_eris.name=六階地牢鑰匙
 
-#熱力充能
+#Thermal Paddings
 item.tier2_thermal_helm.name=二階熱力充能頭盔
 item.tier2_thermal_chestplate.name=二階熱力充能
 item.tier2_thermal_leggings.name=二階熱力充能護腿
 item.tier2_thermal_boots.name=二階熱力充能靴子
 
-#信息
+#Messages
 tier2.information=登陸金星和水星所需
 tier3.information=登陸木星和土星以及它們的衛星所需
 tier4.information=登陸海王星、天王星、冥王星和鬩神星以及它們的衛星所需
 
-#------------------1.11.2 & 1.12.2 只有部分------------------
+#------------------1.11.2 & 1.12.2 Only Section------------------
 item.t4key.name=四階寶箱鑰匙
 item.t5key.name=五階寶箱鑰匙
 item.t6key.name=六階寶箱鑰匙
