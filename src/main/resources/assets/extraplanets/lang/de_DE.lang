@@ -257,8 +257,8 @@ tile.callisto.stone.name=Kallisto Stein
 tile.callisto.ore_iron.name=Kallisto Eisenerz
 tile.callisto.ore_tin.name=Kallisto Zinnerz
 tile.callisto.ore_copper.name=Kallisto Kupfererz
-tile.callisto.dried_oil.name=Callisto Dried Oil ##NEEDS TRANSLATE##
-tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
+tile.callisto.dried_oil.name=Callisto Trockenöl
+tile.callisto.shale_oil.name=Callisto Schiefernöl
 
 tile.deimos.surface.name=Deimos Oberflächengestein
 tile.deimos.sub_surface.name=Deimos Untergrundgestein
@@ -416,22 +416,22 @@ tile.advanced_fuel_loader.name=Fortgeschrittener Treibstofftanker
 tile.ultimate_fuel_loader.name=Ultimativer Treibstofftanker
 tile.vehicle_charger.name=Ladedock für Fahrzeuge
 tile.basic_purifier.name=Einfacher Reiniger
-tile.basic_densifier.name=Basic Densifier ##NEEDS TRANSLATE##
+tile.basic_densifier.name=Einfacher Verdichter
 tile.basic_decontamination_unit.name=Einfache Dekontaminationseinheit
 tile.basic_decontamination_unit_fake_block.name=Einfache Dekontaminationseinheit
 
-tile.advanced_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
-tile.ultimate_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
-tile.advanced_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
-tile.ultimate_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
-tile.basic_decrystallizer.description=Used to convert Iodized Salt into Crystallized Water ##NEEDS TRANSLATE##
-tile.basic_crystallizer.description=Used to convert Crystallized Water into Iodized Salt ##NEEDS TRANSLATE##
-tile.basic_smasher.description=Used to smash blocks into pieces ##NEEDS TRANSLATE##
-tile.basic_chemical_injector.description=Used to combine a Blocks/Items into a chemical ##NEEDS TRANSLATE##
-tile.basic_solar_evaporation_chamber.description=Used to subject the input resource to evaporation ##NEEDS TRANSLATE##
-tile.basic_purifier.description=Used to Purify Infected & Radioactive Water ##NEEDS TRANSLATE##
-tile.basic_densifier.description=Used to compress Fluids into a dense form ##NEEDS TRANSLATE##
-tile.vehicle_charger.description=Place next to Vehicle Charging Pad or Powered Rocket Launch Pad to provide charging abilities ##NEEDS TRANSLATE##
+tile.advanced_fuel_loader.description=Nach einer Verbindung mit einer Startrampe ist der Tanker fähig, eine verbundene Rakete oder andere Vehikel zu betanken.
+tile.ultimate_fuel_loader.description=Nach einer Verbindung mit einer Startrampe ist der Tanker fähig, eine verbundene Rakete oder andere Vehikel zu betanken.
+tile.advanced_refinery.description=Die Raffinierie benötgt Rohöl und Energie und stellt Treibstoff für Raketen und Fahrzeuge her.
+tile.ultimate_refinery.description=Die Raffinierie benötgt Rohöl und Energie und stellt Treibstoff für Raketen und Fahrzeuge her.
+tile.basic_decrystallizer.description=Wird genutzt, um iodiertes Salz in kristallisiertes Wasser umzuwandeln.
+tile.basic_crystallizer.description=Wird genutzt, um kristallisiertes Wasser in iodiertes Salz umzuwandeln.
+tile.basic_smasher.description=Wird genutzt, um Blöcke klein zu brechen.
+tile.basic_chemical_injector.description=Wird genutzt, um Blöcke oder Items in chemische Bestandteile zu wandeln.
+tile.basic_solar_evaporation_chamber.description=Wird genutzt, um die Eingangsresource der Verdampfung auszusetzen.
+tile.basic_purifier.description=Wird genutzt, um infiziertes oder verstrahltes Wasser zu reinigen.
+tile.basic_densifier.description=Wird genutzt, um Flüssigkeiten in Feststoffe zu komprimieren.
+tile.vehicle_charger.description=Neben Ladedock platzieren um Aufladung zu ermöglichen.
 
 #Machine Containers
 container.solarhybrid.name=Hybrides Solarmodul
@@ -451,7 +451,7 @@ container.ultimate.fuelloader.name=Ultimativer Treibstofftanker
 container.basic.solar.evaporation.chamber.name=Einfache Solarverdampfungskammer 
 container.vehicle.charger.name=Ladedock für Fahrzeuge
 container.basic.purifier.name=Einfacher Reiniger
-container.basic.densifier.name=Basic Densifier ##NEEDS TRANSLATE##
+container.basic.densifier.name=Einfacher Verdichter
 container.basic.decontamination.unit.name=Einfache Dekontaminationseinheit
 
 #GUI Components/Messages
@@ -503,15 +503,15 @@ gui.bucket.message.finding.2.nitrogen_ice_fluid=auf Triton
 gui.bucket.message.crafting=Drücke R um zu sehen wie man sie aufnimmt
 gui.status.missing.inputs.name=Fehlende Gegenstände/Flüssigkeiten
 gui.status.missing.power.name=Fehlender Strom
-gui.densifier_input.desc.0=You can place the following  ##NEEDS TRANSLATE##
-gui.densifier_input.desc.1=buckets in this slot: ##NEEDS TRANSLATE##
-gui.densifier_input.desc.2=Liquid Caramel ##NEEDS TRANSLATE##
-gui.densifier_input.desc.3=Liquid Chocolate ##NEEDS TRANSLATE##
-gui.densifier_input.desc.4=Nitrogen Ice ##NEEDS TRANSLATE##
-gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb ##NEEDS TRANSLATE##
-gui.message.general.tank.name=Fluid Tank ##NEEDS TRANSLATE##
-gui.message.general.tank.fluid.name=Fluid ##NEEDS TRANSLATE##
-gui.status.densifier.name=Densifying ##NEEDS TRANSLATE##
+gui.densifier_input.desc.0=Du kannst die Folgenden Eimer
+gui.densifier_input.desc.1=in diesem Slot platzieren:
+gui.densifier_input.desc.2=Flüssiges Karamell
+gui.densifier_input.desc.3=Flüssige Schokolade
+gui.densifier_input.desc.4=Stickstoffeis
+gui.densifier_input.desc.5=1 Eimer Flüssigkeit = 1000mb
+gui.message.general.tank.name=Flüssigkeitstank
+gui.message.general.tank.fluid.name=Flüssigkeit
+gui.status.densifier.name=Verdichten
 gui.bucket.message.extreme.reactors.compact=Diese Flüssigkeit ist kompatibel mit Extreme Reactors
 gui.radiation.reduced.message=Die Schwere deiner Verstrahlung wurde reduziert um
 gui.radiation.current.message=So schwer bist du aktuell verstrahlt
@@ -1027,8 +1027,8 @@ item.tier4_space_suit_legings.name=Stufe 4 Raumanzug-Hose
 item.tier4_space_suit_boots.name=Stufe 4 Raumanzug-Stiefel
 item.tier4_space_suit_gravity_boots.name=Stufe 4 Raumanzug-Stiefel mit Gravitationshilfe
 
-tier1.space.suit.information.gc=Required for Moon, Mars, Venus, Asteroids ##NEEDS TRANSLATE##
-tier1.space.suit.information.gc.2=Mercury and Ceres including their moons ##NEEDS TRANSLATE##
+tier1.space.suit.information.gc=Benötigt für Mond, Mars, Venus, Asteroiden,
+tier1.space.suit.information.gc.2=Merkur und Ceres und deren Monde.
 tier1.space.suit.information=Benötigt für Merkur, Ceres und deren Monde.
 tier2.space.suit.information=Benötigt für Jupiter und seine Monde.
 tier3.space.suit.information=Benötigt für Saturn, Uranus und deren Monde.
@@ -1097,53 +1097,53 @@ item.tier4_un_prepared_space_suit_boots.name=Stufe 4 Unvollständiger Raumanzug-
 item.oxygen_tank_very_heavy_full.name=Sehr großer Sauerstofftank
 item.oxygen_tank_extremely_heavy_full.name=Extrem großer Sauerstofftank
 
-item.oxygen_tank_light_full_black.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_red.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_green.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_brown.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_blue.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_purple.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_cyan.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_light_gray.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_gray.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_pink.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_yellow.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_light_blue.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_magenta.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_orange.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_white.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_black.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_red.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_green.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_brown.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_blue.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_purple.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_cyan.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_light_gray.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_gray.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_pink.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_yellow.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_light_blue.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_magenta.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_orange.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_white.name=Kleiner Sauerstofftank
 
-item.oxygen_tank_med_full_black.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_red.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_green.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_brown.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_purple.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_cyan.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_light_gray.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_gray.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_pink.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_yellow.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_light_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_magenta.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_orange.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_white.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_black.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_red.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_green.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_brown.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_blue.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_purple.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_cyan.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_light_gray.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_gray.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_pink.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_yellow.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_light_blue.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_magenta.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_orange.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_white.name=Mittlerer Sauerstofftank
 
-item.oxygen_tank_heavy_full_black.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_lime.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_green.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_brown.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_blue.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_purple.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_cyan.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_light_gray.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_gray.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_pink.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_yellow.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_light_blue.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_magenta.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_orange.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_white.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_black.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_lime.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_green.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_brown.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_blue.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_purple.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_cyan.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_light_gray.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_gray.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_pink.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_yellow.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_light_blue.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_magenta.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_orange.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_white.name=Großer Sauerstofftank
 
 #Radiation Items
 item.iodide_salt.name=Iodsalz
@@ -1222,8 +1222,8 @@ item.geiger_counter.name=Geigerzähler
 item.white_sugar_cane_item.name=Weißer Zuckerrohr
 geiger.counter.desc=Rechtsklick um die Schwere deiner Verstrahlung zu sehen!
 geiger.counter.location.desc=Kann in einem Merkurverließ erziehlt werden!
-item.chocolate_bar.name=Chocolate Bar ##NEEDS TRANSLATE##
-item.caramel_bar.name=Caramel Bar ##NEEDS TRANSLATE##
+item.chocolate_bar.name=Schokoladentafel
+item.caramel_bar.name=Karamelltafel
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=Getrocknetes Schweinefleisch
@@ -1476,8 +1476,8 @@ planet.Venus=Venus
 
 #Other Blocks
 tile.slime_block.name=Schleimblock
-tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
-tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
+tile.deimos.ore_lead.name=Deimos Bleierz
+tile.phobos.ore_lead.name=Phobos Bleierz
 
 #Other Items
 item.tier4_items.ash_shard.name=Aschenstück
@@ -1490,10 +1490,10 @@ item.tier4_items.grinding_wheel.name=Schleifscheibe
 item.thermal_cloth.tier2_thermal_cloth.name=Stufe 2 Thermalpolster
 
 #MorePlanetsCompactBlocks&Items
-tile.treasure_chest_t4_saturn.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
-tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
-tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest ##NEEDS TRANSLATE##
-tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest ##NEEDS TRANSLATE##
+tile.treasure_chest_t4_saturn.name=Stufe 4 Schatztruhe
+tile.treasure_chest_t4_uranus.name=Stufe 4 Schatztruhe
+tile.treasure_chest_t5_neptune.name=Stufe 5 Schatztruhe
+tile.treasure_chest_t6_eris.name=Stufe 6 Schatztruhe
 
 #Keys
 item.key.T4_saturn.name=Schlüssel für Stufe 4 Verließkiste
