@@ -147,7 +147,7 @@ tile.saturn.ore_slime.name=Saturn Schleimerz
 tile.uranus.surface.name=Uranus Oberflächengestein
 tile.uranus.sub_surface.name=Uranus Untergrundgestein
 tile.uranus.stone.name=Uranus Stein
-tile.uranus.ore_crystal.name=Kristallerz
+tile.uranus.ore_crystal.name=Uranus Kristallerz
 tile.uranus.ore_white_gem.name=Uranus Weißes Edelsteinerz
 tile.uranus.stone_bricks.name=Uranus Steinziegel
 tile.uranus.crystal_block.name=Kristallgestein
@@ -257,6 +257,8 @@ tile.callisto.stone.name=Kallisto Stein
 tile.callisto.ore_iron.name=Kallisto Eisenerz
 tile.callisto.ore_tin.name=Kallisto Zinnerz
 tile.callisto.ore_copper.name=Kallisto Kupfererz
+tile.callisto.dried_oil.name=Callisto Trockenöl
+tile.callisto.shale_oil.name=Callisto Schiefernöl
 
 tile.deimos.surface.name=Deimos Oberflächengestein
 tile.deimos.sub_surface.name=Deimos Untergrundgestein
@@ -412,10 +414,24 @@ tile.advanced_launch_pad.powered.desc=Wird benutzt um den Mars Rover und den Ven
 tile.advanced_launch_pad.powered.rocket.desc=Wird benutzt um die Stufe 10 Elektrische Rakete aufzuladen. Muss quadratisch(5x5) platziert werden
 tile.advanced_fuel_loader.name=Fortgeschrittener Treibstofftanker
 tile.ultimate_fuel_loader.name=Ultimativer Treibstofftanker
-tile.vehicle_charger.name=Ladedock für Fahrzeuge (WIP)
+tile.vehicle_charger.name=Ladedock für Fahrzeuge
 tile.basic_purifier.name=Einfacher Reiniger
+tile.basic_densifier.name=Einfacher Verdichter
 tile.basic_decontamination_unit.name=Einfache Dekontaminationseinheit
 tile.basic_decontamination_unit_fake_block.name=Einfache Dekontaminationseinheit
+
+tile.advanced_fuel_loader.description=Nach einer Verbindung mit einer Startrampe ist der Tanker fähig, eine verbundene Rakete oder andere Vehikel zu betanken.
+tile.ultimate_fuel_loader.description=Nach einer Verbindung mit einer Startrampe ist der Tanker fähig, eine verbundene Rakete oder andere Vehikel zu betanken.
+tile.advanced_refinery.description=Die Raffinierie benötgt Rohöl und Energie und stellt Treibstoff für Raketen und Fahrzeuge her.
+tile.ultimate_refinery.description=Die Raffinierie benötgt Rohöl und Energie und stellt Treibstoff für Raketen und Fahrzeuge her.
+tile.basic_decrystallizer.description=Wird genutzt, um iodiertes Salz in kristallisiertes Wasser umzuwandeln.
+tile.basic_crystallizer.description=Wird genutzt, um kristallisiertes Wasser in iodiertes Salz umzuwandeln.
+tile.basic_smasher.description=Wird genutzt, um Blöcke klein zu brechen.
+tile.basic_chemical_injector.description=Wird genutzt, um Blöcke oder Items in chemische Bestandteile zu wandeln.
+tile.basic_solar_evaporation_chamber.description=Wird genutzt, um die Eingangsresource der Verdampfung auszusetzen.
+tile.basic_purifier.description=Wird genutzt, um infiziertes oder verstrahltes Wasser zu reinigen.
+tile.basic_densifier.description=Wird genutzt, um Flüssigkeiten in Feststoffe zu komprimieren.
+tile.vehicle_charger.description=Neben Ladedock platzieren um Aufladung zu ermöglichen.
 
 #Machine Containers
 container.solarhybrid.name=Hybrides Solarmodul
@@ -435,6 +451,7 @@ container.ultimate.fuelloader.name=Ultimativer Treibstofftanker
 container.basic.solar.evaporation.chamber.name=Einfache Solarverdampfungskammer 
 container.vehicle.charger.name=Ladedock für Fahrzeuge
 container.basic.purifier.name=Einfacher Reiniger
+container.basic.densifier.name=Einfacher Verdichter
 container.basic.decontamination.unit.name=Einfache Dekontaminationseinheit
 
 #GUI Components/Messages
@@ -486,6 +503,15 @@ gui.bucket.message.finding.2.nitrogen_ice_fluid=auf Triton
 gui.bucket.message.crafting=Drücke R um zu sehen wie man sie aufnimmt
 gui.status.missing.inputs.name=Fehlende Gegenstände/Flüssigkeiten
 gui.status.missing.power.name=Fehlender Strom
+gui.densifier_input.desc.0=Du kannst die Folgenden Eimer
+gui.densifier_input.desc.1=in diesem Slot platzieren:
+gui.densifier_input.desc.2=Flüssiges Karamell
+gui.densifier_input.desc.3=Flüssige Schokolade
+gui.densifier_input.desc.4=Stickstoffeis
+gui.densifier_input.desc.5=1 Eimer Flüssigkeit = 1000mb
+gui.message.general.tank.name=Flüssigkeitstank
+gui.message.general.tank.fluid.name=Flüssigkeit
+gui.status.densifier.name=Verdichten
 gui.bucket.message.extreme.reactors.compact=Diese Flüssigkeit ist kompatibel mit Extreme Reactors
 gui.radiation.reduced.message=Die Schwere deiner Verstrahlung wurde reduziert um
 gui.radiation.current.message=So schwer bist du aktuell verstrahlt
@@ -509,6 +535,13 @@ gui.general_features_details.name=Allgemeine Informationen zu Features
 gui.atmosphere_details.name=Informationen zur Atmosphäre
 gui.general_details.name=Allgemeine Informationen
 gui.parent_solar_system_details.name=Informationen zum Muttersolarsystem
+gui.new_galaxies.name=Neue Galaxien
+gui.type_planet.name=Planet
+gui.type_moon.name=Mond
+gui.type_satellite.name=Satellit
+gui.type_unknown.name=Unbekannt
+gui.type_days.name=Tage
+gui.type_hours.name=Stunden
 
 gui.celestial_body_type.name=Typus
 gui.celestial_body_amount_of_moons.name=Anzahl der Monde
@@ -523,9 +556,10 @@ gui.celestial_body_corrosive_atmosphere.name=Ätzende Atmosphäre
 gui.celestial_body_radiation_level.name=Schwere der Strahlung
 gui.celestial_body_pressure_level.name=Druck
 gui.celestial_body_amount_of_planets.name=Anzahl der Planeten
+gui.celestial_body_has_dungeon.name=Besitzt Verließ
 
 #GUI Controls/Keybinds
-keybind.vehicleInv.name=Fahrzeuginventar öffnen
+keybind.vehicle_inv.name=Fahrzeuginventar öffnen
 
 #Other Blocks
 tile.nuclear_bomb.name=Atombombe
@@ -718,6 +752,7 @@ item.tier5_items.compressed_nickel.name=Gepresstes Nickel
 item.compressed_mercury.name=Gepresstes Quecksilber
 item.tier9_items.compressed_tungsten.name=Gepresstes Wolfram
 item.tier10_items.compressed_dark_iron.name=Gepresstes dunkles Eisen
+item.tier11_items.compressed_platinum.name=Gepresstes Platin
 
 #Ingots
 item.tier4_items.ingot_carbon.name=Kohlenstoffbarren
@@ -732,6 +767,7 @@ item.tier9_items.ingot_tungsten.name=Wolframbarren
 item.tier10_items.ingot_dark_iron.name=Dunkler Eisenbarren
 item.ingot_lead.name=Bleibarren
 item.tier5_items.ingot_volcanic.name=Vulkanbarren
+item.tier11_items.ingot_platinum.name=Platinbarren
 
 #Shards
 item.tier5_items.volcanic_shard.name=Vulkansplitter
@@ -969,30 +1005,30 @@ item.green_diamond_helmet.name=Helm aus grünem Diamant
 item.green_diamond_chest.name=Brustpanzer aus grünem Diamant
 item.green_diamond_legings.name=Beinschutz aus grünem Diamant
 item.green_diamond_boots.name=Stiefel aus grünem Diamant
-item.tier11_items.ingot_platinum.name=Platinbarren
-item.tier11_items.compressed_platinum.name=Gepresstes Platin
 
-item.tier1_space_suit_helmet.name=Stufe 1 Raumanzug-Helm (WIP)
-item.tier1_space_suit_chest.name=Stufe 1 Raumanzug-Brustschutz (WIP)
-item.tier1_space_suit_legings.name=Stufe 1 Raumanzug-Hose (WIP)
-item.tier1_space_suit_boots.name=Stufe 1 Raumanzug-Stiefel (WIP)
-item.tier1_space_suit_gravity_boots.name=Stufe 1 Raumanzug-Stiefel mit Gravitationshilfe (WIP)
-item.tier2_space_suit_helmet.name=Stufe 2 Raumanzug-Helm (WIP)
-item.tier2_space_suit_chest.name=Stufe 2 Raumanzug-Brustschutz (WIP)
-item.tier2_space_suit_legings.name=Stufe 2 Raumanzug-Hose (WIP)
-item.tier2_space_suit_boots.name=Stufe 2 Raumanzug-Stiefel (WIP)
-item.tier2_space_suit_gravity_boots.name=Stufe 2 Raumanzug-Stiefel mit Gravitationshilfe (WIP)
-item.tier3_space_suit_helmet.name=Stufe 3 Raumanzug-Helm (WIP)
-item.tier3_space_suit_chest.name=Stufe 3 Raumanzug-Brustschutz (WIP)
-item.tier3_space_suit_legings.name=Stufe 3 Raumanzug-Hose (WIP)
-item.tier3_space_suit_boots.name=Stufe 3 Raumanzug-Stiefel (WIP)
-item.tier3_space_suit_gravity_boots.name=Stufe 3 Raumanzug-Stiefel mit Gravitationshilfe (WIP)
-item.tier4_space_suit_helmet.name=Stufe 4 Raumanzug-Helm (WIP)
-item.tier4_space_suit_chest.name=Stufe 4 Raumanzug-Brustschutz (WIP)
-item.tier4_space_suit_legings.name=Stufe 4 Raumanzug-Hose (WIP)
-item.tier4_space_suit_boots.name=Stufe 4 Raumanzug-Stiefel (WIP)
-item.tier4_space_suit_gravity_boots.name=Stufe 4 Raumanzug-Stiefel mit Gravitationshilfe (WIP)
+item.tier1_space_suit_helmet.name=Stufe 1 Raumanzug-Helm
+item.tier1_space_suit_chest.name=Stufe 1 Raumanzug-Brustschutz
+item.tier1_space_suit_legings.name=Stufe 1 Raumanzug-Hose
+item.tier1_space_suit_boots.name=Stufe 1 Raumanzug-Stiefel
+item.tier1_space_suit_gravity_boots.name=Stufe 1 Raumanzug-Stiefel mit Gravitationshilfe
+item.tier2_space_suit_helmet.name=Stufe 2 Raumanzug-Helm
+item.tier2_space_suit_chest.name=Stufe 2 Raumanzug-Brustschutz
+item.tier2_space_suit_legings.name=Stufe 2 Raumanzug-Hose
+item.tier2_space_suit_boots.name=Stufe 2 Raumanzug-Stiefel
+item.tier2_space_suit_gravity_boots.name=Stufe 2 Raumanzug-Stiefel mit Gravitationshilfe
+item.tier3_space_suit_helmet.name=Stufe 3 Raumanzug-Helm
+item.tier3_space_suit_chest.name=Stufe 3 Raumanzug-Brustschutz
+item.tier3_space_suit_legings.name=Stufe 3 Raumanzug-Hose
+item.tier3_space_suit_boots.name=Stufe 3 Raumanzug-Stiefel
+item.tier3_space_suit_gravity_boots.name=Stufe 3 Raumanzug-Stiefel mit Gravitationshilfe
+item.tier4_space_suit_helmet.name=Stufe 4 Raumanzug-Helm
+item.tier4_space_suit_chest.name=Stufe 4 Raumanzug-Brustschutz
+item.tier4_space_suit_legings.name=Stufe 4 Raumanzug-Hose
+item.tier4_space_suit_boots.name=Stufe 4 Raumanzug-Stiefel
+item.tier4_space_suit_gravity_boots.name=Stufe 4 Raumanzug-Stiefel mit Gravitationshilfe
 
+tier1.space.suit.information.gc=Benötigt für Mond, Mars, Venus, Asteroiden,
+tier1.space.suit.information.gc.2=Merkur und Ceres und deren Monde.
 tier1.space.suit.information=Benötigt für Merkur, Ceres und deren Monde.
 tier2.space.suit.information=Benötigt für Jupiter und seine Monde.
 tier3.space.suit.information=Benötigt für Saturn, Uranus und deren Monde.
@@ -1061,6 +1097,54 @@ item.tier4_un_prepared_space_suit_boots.name=Stufe 4 Unvollständiger Raumanzug-
 item.oxygen_tank_very_heavy_full.name=Sehr großer Sauerstofftank
 item.oxygen_tank_extremely_heavy_full.name=Extrem großer Sauerstofftank
 
+item.oxygen_tank_light_full_black.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_red.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_green.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_brown.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_blue.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_purple.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_cyan.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_light_gray.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_gray.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_pink.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_yellow.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_light_blue.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_magenta.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_orange.name=Kleiner Sauerstofftank
+item.oxygen_tank_light_full_white.name=Kleiner Sauerstofftank
+
+item.oxygen_tank_med_full_black.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_red.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_green.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_brown.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_blue.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_purple.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_cyan.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_light_gray.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_gray.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_pink.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_yellow.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_light_blue.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_magenta.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_orange.name=Mittlerer Sauerstofftank
+item.oxygen_tank_med_full_white.name=Mittlerer Sauerstofftank
+
+item.oxygen_tank_heavy_full_black.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_lime.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_green.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_brown.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_blue.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_purple.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_cyan.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_light_gray.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_gray.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_pink.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_yellow.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_light_blue.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_magenta.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_orange.name=Großer Sauerstofftank
+item.oxygen_tank_heavy_full_white.name=Großer Sauerstofftank
+
 #Radiation Items
 item.iodide_salt.name=Iodsalz
 item.potassium_iodide.name=Kaliumiodid
@@ -1105,6 +1189,9 @@ item.tier5_kit.without_thermal_padding.name=Stufe 5 komplettes Set ohne Thermalp
 item.tier5_kit.just_oxygen_setup.name=Stufe 5 Sauerstoffzubehör
 item.tier5_kit.just_protection.name=Stufe 5 Schutzzubehör
 
+item.kit.information.desc=Einfache Lagerung von Weltraumausrüstung
+item.kit.information.use=Rechtsklick um Ausrüstung anzulegen
+
 #Sticks
 item.tier11_items.blue_sticks.name=Blauer Stock
 item.tier11_items.red_sticks.name=Roter Stock
@@ -1118,9 +1205,6 @@ item.tools.sledge_hammer.name=Vorschlaghammer
 item.tools.grinding_wheel.name=Schleifscheibe
 item.tools.mesh.name=Netz
 item.tools.filter.name=Filter
-
-#Other Blocks
-tile.slime_block.name=Schleimblock
 
 #Other Items
 item.apple_diamond.name=Diamantapfel
@@ -1136,9 +1220,10 @@ item.thermal_cloth.tier5_thermal_cloth.name=Stufe 5 Thermalpolster
 item.tier5_items.ash.name=Asche
 item.geiger_counter.name=Geigerzähler
 item.white_sugar_cane_item.name=Weißer Zuckerrohr
-
 geiger.counter.desc=Rechtsklick um die Schwere deiner Verstrahlung zu sehen!
 geiger.counter.location.desc=Kann in einem Merkurverließ erziehlt werden!
+item.chocolate_bar.name=Schokoladentafel
+item.caramel_bar.name=Karamelltafel
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=Getrocknetes Schweinefleisch
@@ -1329,11 +1414,6 @@ tile.veuns.dungeon_brick.name=Venus Verließziegel
 #Liquids/Fluid
 tile.glowstone_fluid.name=Flüssiger Glowstone
 tile.magma_fluid.name=Flüssige Magma
-tile.nitrogen_fluid.name=Flüssiger Stickstoff
-tile.frozen_water_fluid.name=Eingefrorenes Wasser
-tile.salt_fluid.name=Flüssiges Kristallisiertes Wasser
-tile.glowstone_fluid.name=Flüssiger Glowstone
-tile.magma_fluid.name=Flüssige Magma
 tile.nitrogen_fluid.name=Flüssige Stickstoff
 tile.frozen_water_fluid.name=Gefrorenes Wasser
 tile.salt_fluid.name=Flüssiges Kirstallisiertes Wasser
@@ -1377,14 +1457,14 @@ tile.neptuneStoneBrickStairs.name=Neptun Steinziegeltreppen
 tile.plutoStoneBrickStairs.name=Pluto Steinziegeltreppen
 tile.erisStoneBrickStairs.name=Eris Steinziegeltreppen
 
-#Verließ Bricks Slabs
+#Dungeon Bricks Slabs
 tile.ExtraPlanets_venusVerließBrickStoneBlockhalfslab.name=Venus Verließziegelstufe
 tile.ExtraPlanets_jupiterVerließBrickStoneBlockhalfslab.name=Jupiter Verließziegelstufe
 tile.ExtraPlanets_saturnVerließBrickStoneBlockhalfslab.name=Saturn Verließziegelstufe
 tile.ExtraPlanets_uranusVerließBrickStoneBlockhalfslab.name=Uranus Verließziegelstufe
 tile.ExtraPlanets_neptuneVerließBrickStoneBlockhalfslab.name=Neptune Verließziegelstufe
 
-#Verließ Bricks Stairs
+#Dungeon Bricks Stairs
 tile.venusVerließBrickStoneStairs.name=Venus Verließziegeltreppen 
 tile.jupiterVerließBrickStoneStairs.name=Jupiter Verließziegeltreppen 
 tile.saturnVerließBrickStoneStairs.name=Saturn Verließziegeltreppen 
@@ -1395,6 +1475,7 @@ tile.neptuneVerließBrickStoneStairs.name=Neptun Verließziegeltreppen
 planet.Venus=Venus
 
 #Other Blocks
+tile.slime_block.name=Schleimblock
 tile.deimos.ore_lead.name=Deimos Bleierz
 tile.phobos.ore_lead.name=Phobos Bleierz
 
@@ -1407,6 +1488,12 @@ item.tier4_items.ash.name=Asche
 item.tier4_items.sledge_hammer.name=Vorschlaghammer
 item.tier4_items.grinding_wheel.name=Schleifscheibe
 item.thermal_cloth.tier2_thermal_cloth.name=Stufe 2 Thermalpolster
+
+#MorePlanetsCompactBlocks&Items
+tile.treasure_chest_t4_saturn.name=Stufe 4 Schatztruhe
+tile.treasure_chest_t4_uranus.name=Stufe 4 Schatztruhe
+tile.treasure_chest_t5_neptune.name=Stufe 5 Schatztruhe
+tile.treasure_chest_t6_eris.name=Stufe 6 Schatztruhe
 
 #Keys
 item.key.T4_saturn.name=Schlüssel für Stufe 4 Verließkiste
