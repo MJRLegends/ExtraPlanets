@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.client.render.tile;
 
 import micdoodle8.mods.galacticraft.core.client.model.block.ModelTreasureChest;
-import net.minecraft.block.Block;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.util.ResourceLocation;
@@ -24,12 +23,7 @@ public class TileEntityT8TreasureChestRenderer extends TileEntitySpecialRenderer
 		if (!chest.hasWorldObj()) {
 			var9 = 0;
 		} else {
-			final Block var10 = chest.getBlockType();
 			var9 = chest.getBlockMetadata();
-
-			if (var10 != null && var9 == 0) {
-				var9 = chest.getBlockMetadata();
-			}
 		}
 
 		ModelTreasureChest var14 = null;
