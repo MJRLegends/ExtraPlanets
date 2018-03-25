@@ -1380,14 +1380,7 @@ checklist.tier_3_thermal_padding.key=需要 3 阶热防护服
 checklist.tier_4_thermal_padding.key=需要 4 阶热防护服
 checklist.tier_5_thermal_padding.key=需要 5 阶热防护服
 
-<<<<<<< HEAD
 checklist.space_suit.key=Any Tier of Space Suit ##NEEDS TRANSLATE##
-=======
-checklist.tier_1_space_suit.key=需要 1 阶太空服
-checklist.tier_2_space_suit.key=需要 2 阶太空服
-checklist.tier_3_space_suit.key=需要 3 阶太空服
-checklist.tier_4_space_suit.key=需要 4 阶太空服
->>>>>>> 26087bff7... Update zh_CN.lang
 
 satellite.space_station.mercury=水星空间站
 satellite.space_station.venus=金星空间站
