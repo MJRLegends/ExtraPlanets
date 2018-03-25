@@ -4,6 +4,7 @@ import micdoodle8.mods.galacticraft.api.item.IItemElectric;
 import micdoodle8.mods.galacticraft.core.energy.EnergyUtil;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlock;
 import micdoodle8.mods.galacticraft.core.inventory.SlotSpecific;
+import micdoodle8.mods.galacticraft.core.items.ItemCanisterOxygenInfinite;
 import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -50,6 +51,7 @@ public class ContainerAdvancedOxygenDecompressor extends Container {
 		if (slot != null && slot.getHasStack()) {
 			final ItemStack stack = slot.getStack();
 			var2 = stack.copy();
+			boolean movedToMachineSlot = false;
 
 			if (par1 < 2) {
 				if (!this.mergeItemStack(stack, b - 36, b, true)) {
@@ -60,10 +62,12 @@ public class ContainerAdvancedOxygenDecompressor extends Container {
 					if (!this.mergeItemStack(stack, 1, 2, false)) {
 						return ItemStack.EMPTY;
 					}
-				} else if (stack.getItem() instanceof ItemOxygenTank && stack.getItemDamage() < stack.getMaxDamage()) {
+					movedToMachineSlot = true;
+				} else if (stack.getItem() instanceof ItemCanisterOxygenInfinite || (stack.getItem() instanceof ItemOxygenTank && stack.getItemDamage() < stack.getMaxDamage())) {
 					if (!this.mergeItemStack(stack, 0, 1, false)) {
 						return ItemStack.EMPTY;
 					}
+					movedToMachineSlot = true;
 				} else {
 					if (par1 < b - 9) {
 						if (!this.mergeItemStack(stack, b - 9, b, false)) {
@@ -76,7 +80,14 @@ public class ContainerAdvancedOxygenDecompressor extends Container {
 			}
 
 			if (stack.getCount() == 0) {
-				slot.putStack(ItemStack.EMPTY);
+				// Needed where tile has inventoryStackLimit of 1
+				if (movedToMachineSlot && var2.getCount() > 1) {
+					ItemStack remainder = var2.copy();
+					remainder.shrink(1);
+					slot.putStack(remainder);
+				} else {
+					slot.putStack(ItemStack.EMPTY);
+				}
 			} else {
 				slot.onSlotChanged();
 			}
