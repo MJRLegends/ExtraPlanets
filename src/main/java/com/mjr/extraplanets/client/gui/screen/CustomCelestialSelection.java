@@ -624,7 +624,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 							temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
 						} catch (Exception e) {
 						}
-					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_temperature.name") + ": " + (this.selectedBody.getReachable() ? temperature + "°C" : TranslateUtilities.translate("gui.type_unknown.name")),
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_temperature.name") + ": " + (this.selectedBody.getReachable() ? temperature + "C" : TranslateUtilities.translate("gui.type_unknown.name")),
 							xOffset + 10, yOffset + 70, 14737632);
 					boolean breathable = false;
 					if (temp != null && !(this.selectedBody instanceof Satellite))
