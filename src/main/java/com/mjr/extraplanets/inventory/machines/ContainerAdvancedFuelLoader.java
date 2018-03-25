@@ -50,6 +50,7 @@ public class ContainerAdvancedFuelLoader extends Container {
 		if (slot != null && slot.getHasStack()) {
 			final ItemStack var5 = slot.getStack();
 			var3 = var5.copy();
+			boolean movedToMachineSlot = false;
 
 			if (par2 < 2) {
 				if (!this.mergeItemStack(var5, 2, 38, true)) {
@@ -60,11 +61,13 @@ public class ContainerAdvancedFuelLoader extends Container {
 					if (!this.mergeItemStack(var5, 0, 1, false)) {
 						return ItemStack.EMPTY;
 					}
+					movedToMachineSlot = true;
 				} else {
 					if (FluidUtil.isFuelContainerAny(var5)) {
 						if (!this.mergeItemStack(var5, 1, 2, false)) {
 							return ItemStack.EMPTY;
 						}
+						movedToMachineSlot = true;
 					} else if (par2 < 29) {
 						if (!this.mergeItemStack(var5, 29, 38, false)) {
 							return ItemStack.EMPTY;
@@ -76,7 +79,17 @@ public class ContainerAdvancedFuelLoader extends Container {
 			}
 
 			if (var5.getCount() == 0) {
-				slot.putStack(ItemStack.EMPTY);
+				// Needed where tile has inventoryStackLimit of 1
+                if (movedToMachineSlot && var3.getCount() > 1)
+                {
+                    ItemStack remainder = var3.copy();
+                    remainder.shrink(1);
+                    slot.putStack(remainder);
+                }
+                else
+                {
+                    slot.putStack(ItemStack.EMPTY);
+                }
 			} else {
 				slot.onSlotChanged();
 			}

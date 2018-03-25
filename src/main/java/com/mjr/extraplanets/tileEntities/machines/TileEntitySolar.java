@@ -472,7 +472,7 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 	@Override
 	public int getInventoryStackLimit() {
-		return 64;
+		return 1;
 	}
 
 	@Override
