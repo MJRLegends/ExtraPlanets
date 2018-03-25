@@ -45,11 +45,12 @@ public class ContainerAdvancedFuelLoader extends Container {
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
 		ItemStack var3 = null;
-		final Slot slot = this.inventorySlots.get(par2);
+		final Slot slot = (Slot) this.inventorySlots.get(par2);
 
 		if (slot != null && slot.getHasStack()) {
 			final ItemStack var5 = slot.getStack();
 			var3 = var5.copy();
+			boolean movedToMachineSlot = false;
 
 			if (par2 < 2) {
 				if (!this.mergeItemStack(var5, 2, 38, true)) {
@@ -60,11 +61,13 @@ public class ContainerAdvancedFuelLoader extends Container {
 					if (!this.mergeItemStack(var5, 0, 1, false)) {
 						return null;
 					}
+					movedToMachineSlot = true;
 				} else {
 					if (FluidUtil.isFuelContainerAny(var5)) {
 						if (!this.mergeItemStack(var5, 1, 2, false)) {
 							return null;
 						}
+						movedToMachineSlot = true;
 					} else if (par2 < 29) {
 						if (!this.mergeItemStack(var5, 29, 38, false)) {
 							return null;
@@ -76,7 +79,14 @@ public class ContainerAdvancedFuelLoader extends Container {
 			}
 
 			if (var5.stackSize == 0) {
-				slot.putStack((ItemStack) null);
+				// Needed where tile has inventoryStackLimit of 1
+				if (movedToMachineSlot && var3.stackSize > 1) {
+					ItemStack remainder = var3.copy();
+					--remainder.stackSize;
+					slot.putStack(remainder);
+				} else {
+					slot.putStack((ItemStack) null);
+				}
 			} else {
 				slot.onSlotChanged();
 			}

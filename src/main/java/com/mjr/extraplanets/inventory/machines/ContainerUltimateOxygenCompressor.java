@@ -46,52 +46,63 @@ public class ContainerUltimateOxygenCompressor extends Container {
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
 		ItemStack var2 = null;
-		final Slot slot = this.inventorySlots.get(par1);
+		final Slot slot = (Slot) this.inventorySlots.get(par1);
 		final int b = this.inventorySlots.size();
 
 		if (slot != null && slot.getHasStack()) {
-			final ItemStack itemStack = slot.getStack();
-			var2 = itemStack.copy();
+			final ItemStack stack = slot.getStack();
+			var2 = stack.copy();
+			boolean movedToMachineSlot = false;
 
 			if (par1 < 3) {
-				if (!this.mergeItemStack(itemStack, b - 36, b, true)) {
+				if (!this.mergeItemStack(stack, b - 36, b, true)) {
 					return null;
 				}
 			} else {
-				if (EnergyUtil.isElectricItem(itemStack.getItem())) {
-					if (!this.mergeItemStack(itemStack, 1, 2, false)) {
+				if (EnergyUtil.isElectricItem(stack.getItem())) {
+					if (!this.mergeItemStack(stack, 1, 2, false)) {
 						return null;
 					}
-				} else if (itemStack.getItem() instanceof IItemOxygenSupply) {
-					if (!this.mergeItemStack(itemStack, 2, 3, false)) {
+					movedToMachineSlot = true;
+				} else if (stack.getItem() instanceof IItemOxygenSupply) {
+					if (!this.mergeItemStack(stack, 2, 3, false)) {
 						return null;
 					}
-				} else if (itemStack.getItem() instanceof ItemOxygenTank && itemStack.getItemDamage() > 0) {
-					if (!this.mergeItemStack(itemStack, 0, 1, false)) {
+					movedToMachineSlot = true;
+				} else if (stack.getItem() instanceof ItemOxygenTank && stack.getItemDamage() > 0) {
+					if (!this.mergeItemStack(stack, 0, 1, false)) {
 						return null;
 					}
+					movedToMachineSlot = true;
 				} else {
 					if (par1 < b - 9) {
-						if (!this.mergeItemStack(itemStack, b - 9, b, false)) {
+						if (!this.mergeItemStack(stack, b - 9, b, false)) {
 							return null;
 						}
-					} else if (!this.mergeItemStack(itemStack, b - 36, b - 9, false)) {
+					} else if (!this.mergeItemStack(stack, b - 36, b - 9, false)) {
 						return null;
 					}
 				}
 			}
 
-			if (itemStack.stackSize == 0) {
-				slot.putStack((ItemStack) null);
+			if (stack.stackSize == 0) {
+				// Needed where tile has inventoryStackLimit of 1
+				if (movedToMachineSlot && var2.stackSize > 1) {
+					ItemStack remainder = var2.copy();
+					--remainder.stackSize;
+					slot.putStack(remainder);
+				} else {
+					slot.putStack((ItemStack) null);
+				}
 			} else {
 				slot.onSlotChanged();
 			}
 
-			if (itemStack.stackSize == var2.stackSize) {
+			if (stack.stackSize == var2.stackSize) {
 				return null;
 			}
 
-			slot.onPickupFromSlot(par1EntityPlayer, itemStack);
+			slot.onPickupFromSlot(par1EntityPlayer, stack);
 		}
 
 		return var2;
