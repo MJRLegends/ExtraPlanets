@@ -146,7 +146,7 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeaves {
 	 */
 	@Override
 	public int damageDropped(IBlockState state) {
-		return state.getValue(VARIANT).getMetadata() + 4;
+		return state.getValue(VARIANT).getMetadata();
 	}
 
 	@Override
