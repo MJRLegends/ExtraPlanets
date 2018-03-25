@@ -1230,7 +1230,6 @@ item.canned_food.dehydrated_porkchop.name=Дегидратированная ж�
 item.canned_food.dehydrated_fish.name=Дегидратированная рыба
 item.canned_food.dehydrated_salmon.name=Дегидратированный лосось
 item.canned_food.dehydrated_chicken.name=Дегидратированная жареная курица
-item.canned_food.dehydrated_beef.name=Дегидратированный стейк
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=Аккумулятор 1-го уровня
