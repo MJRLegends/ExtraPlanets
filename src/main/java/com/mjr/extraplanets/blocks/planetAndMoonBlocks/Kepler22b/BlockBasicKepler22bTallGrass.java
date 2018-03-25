@@ -22,6 +22,7 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -73,6 +74,14 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 		return iblockstate.getBlock().getMetaFromState(iblockstate);
 	}
 
+	@Override
+	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+		return new ItemStack(this, 1, this.getMetaFromState(state));
+	}
+
+	/**
+	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+	 */
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> par3List) {
