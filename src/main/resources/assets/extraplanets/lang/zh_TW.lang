@@ -1230,7 +1230,6 @@ item.canned_food.dehydrated_porkchop.name=脫水豬排
 item.canned_food.dehydrated_fish.name=脫水魚
 item.canned_food.dehydrated_salmon.name=脫水鮭魚
 item.canned_food.dehydrated_chicken.name=脫水雞肉
-item.canned_food.dehydrated_beef.name=脫水牛肉
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=一階電池
