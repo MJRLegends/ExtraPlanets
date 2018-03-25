@@ -46,12 +46,13 @@ public class ContainerUltimateOxygenCompressor extends Container {
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
 		ItemStack var2 = null;
-		final Slot slot = this.inventorySlots.get(par1);
+		final Slot slot = (Slot) this.inventorySlots.get(par1);
 		final int b = this.inventorySlots.size();
 
 		if (slot != null && slot.getHasStack()) {
 			final ItemStack stack = slot.getStack();
 			var2 = stack.copy();
+			boolean movedToMachineSlot = false;
 
 			if (par1 < 3) {
 				if (!this.mergeItemStack(stack, b - 36, b, true)) {
@@ -62,14 +63,17 @@ public class ContainerUltimateOxygenCompressor extends Container {
 					if (!this.mergeItemStack(stack, 1, 2, false)) {
 						return null;
 					}
+					movedToMachineSlot = true;
 				} else if (stack.getItem() instanceof IItemOxygenSupply) {
 					if (!this.mergeItemStack(stack, 2, 3, false)) {
 						return null;
 					}
+					movedToMachineSlot = true;
 				} else if (stack.getItem() instanceof ItemOxygenTank && stack.getItemDamage() > 0) {
 					if (!this.mergeItemStack(stack, 0, 1, false)) {
 						return null;
 					}
+					movedToMachineSlot = true;
 				} else {
 					if (par1 < b - 9) {
 						if (!this.mergeItemStack(stack, b - 9, b, false)) {
@@ -82,7 +86,14 @@ public class ContainerUltimateOxygenCompressor extends Container {
 			}
 
 			if (stack.stackSize == 0) {
-				slot.putStack((ItemStack) null);
+				// Needed where tile has inventoryStackLimit of 1
+				if (movedToMachineSlot && var2.stackSize > 1) {
+					ItemStack remainder = var2.copy();
+					--remainder.stackSize;
+					slot.putStack(remainder);
+				} else {
+					slot.putStack((ItemStack) null);
+				}
 			} else {
 				slot.onSlotChanged();
 			}
