@@ -5,6 +5,21 @@
 
 
 ===========================================Released Updates===========================================
+v0.3.1
+*Updated ru_RU.lang (Thanks to rykllan)
+*Updated zh_TW.lang (Thanks to sfs131010)
+*Updated de_DE.lang (Thanks to DerMilchkarton)
+*Updated zh_CN.lang (Thanks to SihenZhang)
+*Changed Space Suit tool tips to be more helpful and not give false sense of you need to use upgraded space suits
+*Simplify Treasure Chests rendering.
+*Fix various battery slot issues. Match GC Changes
+*Removed Canned Beef as now added by GC
+*Removed Canned Beef recipe
+*Removed bugged symbol from Celestial body temperature text on Celestial Selection screen
+*Fixed issue with Kepler22b Brown & Green Leaves when picking the block in creative mode
+*Fixed issue with Kepler22b Tall Grass when picking the block in creative mode
+*Fixed using bone meal on Kepler22b Tall Grass
+
 v0.3.0
 *Fixed Space Suit Helmet being rendered backwards on Armour Stands
 *Added more uses for Kepler22b Planks, towards suggestion #163
