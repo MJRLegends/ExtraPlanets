@@ -21,6 +21,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -78,6 +79,11 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	public int getDamageValue(World worldIn, BlockPos pos) {
 		IBlockState iblockstate = worldIn.getBlockState(pos);
 		return iblockstate.getBlock().getMetaFromState(iblockstate);
+	}
+
+	@Override
+	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+		return new ItemStack(this, 1, this.getMetaFromState(state));
 	}
 
 	/**
