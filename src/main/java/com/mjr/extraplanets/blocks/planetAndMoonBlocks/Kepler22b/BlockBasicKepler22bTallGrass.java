@@ -5,7 +5,6 @@ import java.util.Random;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
-import net.minecraft.block.BlockDoublePlant;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -92,7 +91,12 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 
 	@Override
 	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
-		return true;
+		if (this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_BLUE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_GREEN_TALL.getMeta()
+				&& this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_PURPLE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_RED_TALL.getMeta()
+				&& this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_YELLOW_TALL.getMeta())
+			return true;
+		else
+			return false;
 	}
 
 	@Override
@@ -102,10 +106,10 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 
 	@Override
 	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-		BlockDoublePlant.EnumPlantType blockdoubleplant$enumplanttype = BlockDoublePlant.EnumPlantType.GRASS;
-
-		if (Blocks.DOUBLE_PLANT.canPlaceBlockAt(worldIn, pos)) {
-			Blocks.DOUBLE_PLANT.placeAt(worldIn, pos, blockdoubleplant$enumplanttype, 2);
+		if (this.canPlaceBlockAt(worldIn, pos) && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_BLUE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_GREEN_TALL.getMeta()
+				&& this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_PURPLE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_RED_TALL.getMeta()
+				&& this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_YELLOW_TALL.getMeta()) {
+			worldIn.setBlockState(pos, this.getStateFromMeta(this.getMetaFromState(state) + 1));
 		}
 	}
 
