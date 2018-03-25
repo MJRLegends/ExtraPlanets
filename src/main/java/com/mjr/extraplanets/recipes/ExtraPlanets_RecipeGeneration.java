@@ -889,7 +889,6 @@ public class ExtraPlanets_RecipeGeneration {
 				new ItemStack(Items.COOKED_FISH, 1, 1) });
 		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 3), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_CHICKEN,
 				Items.COOKED_CHICKEN });
-		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "canned_food", new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 4), new Object[] { new ItemStack(GCItems.canister, 1, 0), Items.COOKED_BEEF, Items.COOKED_BEEF });
 
 		// Advanced & Ultimate Battery
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "batteries", new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T',
