@@ -311,7 +311,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addVariants(Constants.modID, "wafer", "diamond_wafer", "carbon_wafer", "titanium_wafer", "red_gem_wafer", "blue_gem_wafer", "white_gem_wafer");
 		ClientUtilities.addVariants(Constants.modID, "tools", "sledge_hammer", "grinding_wheel", "mesh", "filter");
 		if (Config.CANNED_FOOD)
-			ClientUtilities.addVariants(Constants.modID, "canned_food", "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken", "dehydrated_beef");
+			ClientUtilities.addVariants(Constants.modID, "canned_food", "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken");
 		if (Config.THERMAL_PADDINGS) {
 			ClientUtilities.addVariants(Constants.modID, "thermal_cloth", "tier3_thermal_cloth", "tier4_thermal_cloth", "tier5_thermal_cloth");
 			ClientUtilities.addVariants(Constants.modID, "tier3_thermal_padding", "tier3_thermal_helm", "tier3_thermal_chestplate", "tier3_thermal_leggings", "tier3_thermal_boots");
