@@ -48,8 +48,6 @@ public class ItemCannedFood extends ItemBasicMeta {
 			return 4;
 		case 3:
 			return 12;
-		case 4:
-			return 16;
 		default:
 			return 0;
 		}
@@ -65,8 +63,6 @@ public class ItemCannedFood extends ItemBasicMeta {
 			return 0.1F;
 		case 3:
 			return 0.6F;
-		case 4:
-			return 0.8F;
 		default:
 			return 0.0F;
 		}
@@ -117,7 +113,7 @@ public class ItemCannedFood extends ItemBasicMeta {
 	}
 
 	public static String[] getItemList() {
-		return new String[] { "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken", "dehydrated_beef" };
+		return new String[] { "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken"};
 	}
 
 }

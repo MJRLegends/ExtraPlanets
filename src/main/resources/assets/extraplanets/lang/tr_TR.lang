@@ -1230,7 +1230,6 @@ item.canned_food.dehydrated_porkchop.name=Susuz Domuz Pirzolası
 item.canned_food.dehydrated_fish.name=Susuz Balık
 item.canned_food.dehydrated_salmon.name=Susuz Somon Balığı
 item.canned_food.dehydrated_chicken.name=Susuz Tavuk
-item.canned_food.dehydrated_beef.name=Susuz Biftek
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=Tier 1 Battery ##NEEDS TRANSLATE##
