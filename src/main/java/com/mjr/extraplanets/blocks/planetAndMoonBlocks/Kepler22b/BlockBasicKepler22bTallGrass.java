@@ -78,6 +78,11 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 		return iblockstate.getBlock().getMetaFromState(iblockstate);
 	}
 
+	@Override
+	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
+		return new ItemStack(this, 1, this.getMetaFromState(state));
+	}
+
 	/**
 	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
 	 */
