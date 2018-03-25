@@ -1050,7 +1050,6 @@ public class ExtraPlanets_Recipes {
 		RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 1), new Object[] { TIN_CANISTER, new ItemStack(Items.cooked_fish, 1, 0), new ItemStack(Items.cooked_fish, 1, 0) });
 		RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 2), new Object[] { TIN_CANISTER, new ItemStack(Items.cooked_fish, 1, 1), new ItemStack(Items.cooked_fish, 1, 1) });
 		RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 3), new Object[] { TIN_CANISTER, Items.cooked_chicken, Items.cooked_chicken });
-		RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CANNED_FOOD, 1, 4), new Object[] { TIN_CANISTER, Items.cooked_beef, Items.cooked_beef });
 
 		// Advanced & Ultimate Battery
 		if (Config.BATTERIES) {
