@@ -304,7 +304,7 @@ tile.ganymede.ore_copper.name=Медная руда Ганимеда
 
 tile.rhea.surface.name=Поверхность Реи
 tile.rhea.sub_surface.name=Подповерхностный грунт Реи
-tile.rhea.stone.name=Камени Реи
+tile.rhea.stone.name=Камень Реи
 tile.rhea.ore_iron.name=Железная руда Реи
 tile.rhea.ore_tin.name=Оловянная руда Реи
 tile.rhea.ore_copper.name=Медная руда Реи
@@ -365,11 +365,11 @@ tile.uranus_gravel.name=Гравий Урана
 tile.neptune_gravel.name=Гравий Нептуна
 
 #Girt Blocks
-tile.diamond_grit.name=Diamond Grit
-tile.coal_grit.name=Coal Grit
-tile.iron_grit.name=Iron Grit
-tile.gold_grit.name=Gold Grit
-tile.emerald_grit.name=Emerald Grit
+tile.diamond_grit.name=Алмазная крошка
+tile.coal_grit.name=Угольная крошка
+tile.iron_grit.name=Железная крошка
+tile.gold_grit.name=Золотая крошка
+tile.emerald_grit.name=Изумрудная крошка
 
 #Treasure Chests
 tile.treasure_chest_t4.name=Сундук с сокровищами 4-го уровня
@@ -1027,12 +1027,12 @@ item.tier4_space_suit_legings.name=Поножи космического ска�
 item.tier4_space_suit_boots.name=Ботинки космического скафандра 4-го уровня
 item.tier4_space_suit_gravity_boots.name=Гравитационные ботинки космического скафандра 4-го уровня
 
-space.suit.information=Used to full stop pressure damage ##NEEDS TRANSLATE##
-space.suit.information.2=& slow down the rate of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra=The Tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
-space.suit.information.extra.2=towards reducing the amount of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra.3=The Higher the Space Suit Tier the ##NEEDS TRANSLATE##
-space.suit.information.extra.4=slower radiation will be gained ##NEEDS TRANSLATE##
+space.suit.information=Используется для полной остановки повреждения давления
+space.suit.information.2=и замедляет скорость получения излучения
+space.suit.information.extra=Уровень каждой части скафандра подсчитывается
+space.suit.information.extra.2=к уменьшению количества полученной радиации
+space.suit.information.extra.3=Чем выше уровень скафандра, тем
+space.suit.information.extra.4=более медленная радиация будет получена
 
 item.tier3_thermal_helm.name=Теплоустойчивый шлем 3-го уровня
 item.tier3_thermal_chestplate.name=Теплоустойчивый нагрудник 3-го уровня
@@ -1379,7 +1379,7 @@ checklist.tier_3_thermal_padding.key=Оборудовать тепловой к�
 checklist.tier_4_thermal_padding.key=Оборудовать тепловой костюм 4-го уровня
 checklist.tier_5_thermal_padding.key=Оборудовать тепловой костюм 5-го уровня
 
-checklist.space_suit.key=Any Tier of Space Suit ##NEEDS TRANSLATE##
+checklist.space_suit.key=Любой уровень скафандра
 
 satellite.space_station.mercury=Космическая станция Меркурия
 satellite.space_station.venus=Космическая станция Венеры
