@@ -118,7 +118,7 @@ public class ExtraPlanets_Planets {
 			MERCURY.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"));
 			MERCURY.setDimensionInfo(Config.MERCURY_ID, WorldProviderMercury.class);
 			MERCURY.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 50.0F : 5.0F, 0.0F, 0.1F));
-			MERCURY.addChecklistKeys("tier_3_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
+			MERCURY.addChecklistKeys("tier_3_thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute");
 			MERCURY.setBiomeInfo(MercuryBiomes.mercury);
 			MERCURY.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			MERCURY.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -137,7 +137,7 @@ public class ExtraPlanets_Planets {
 			CERES.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"));
 			CERES.setDimensionInfo(Config.CERES_ID, WorldProviderCeres.class);
 			CERES.setAtmosphere(new AtmosphereInfo(false, false, false, -1.5F, 5.0F, 0.1F));
-			CERES.addChecklistKeys("thermalPadding", "space_suit", "equipOxygenSuit", "equipParachute");
+			CERES.addChecklistKeys("thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute");
 			CERES.setBiomeInfo(CeresBiomes.ceres);
 			CERES.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			CERES.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -156,7 +156,7 @@ public class ExtraPlanets_Planets {
 			JUPITER.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/jupiter.png"));
 			JUPITER.setDimensionInfo(Config.JUPITER_ID, WorldProviderJupiter.class);
 			JUPITER.setAtmosphere(new AtmosphereInfo(false, false, true, 100.0F, 3.0F, 0.1F));
-			JUPITER.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute", "equipShieldController");
+			JUPITER.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute", "equip_shield_controller");
 			JUPITER.setBiomeInfo(JupiterBiomes.jupiter, JupiterBiomes.jupiterMagmaSea, JupiterBiomes.jupiterSands);
 			JUPITER.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			JUPITER.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -175,7 +175,7 @@ public class ExtraPlanets_Planets {
 			SATURN.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"));
 			SATURN.setDimensionInfo(Config.SATURN_ID, WorldProviderSaturn.class);
 			SATURN.setAtmosphere(new AtmosphereInfo(false, false, true, 80.0F, 0.0F, 0.1F));
-			SATURN.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute", "equipShieldController");
+			SATURN.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute", "equip_shield_controller");
 			SATURN.setBiomeInfo(SaturnBiomes.saturn, SaturnBiomes.saturnHydroCarbonSea, SaturnBiomes.saturnNuclearLand);
 			SATURN.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			SATURN.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -194,7 +194,7 @@ public class ExtraPlanets_Planets {
 			URANUS.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"));
 			URANUS.setDimensionInfo(Config.URANUS_ID, WorldProviderUranus.class);
 			URANUS.setAtmosphere(new AtmosphereInfo(false, false, true, -120.0F, 4.0F, 0.1F));
-			URANUS.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute", "equipShieldController");
+			URANUS.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute", "equip_shield_controller");
 			URANUS.setBiomeInfo(UranusBiomes.uranus, UranusBiomes.uranusFrozenWater, UranusBiomes.uranusSnowLands);
 			URANUS.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			URANUS.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -213,7 +213,7 @@ public class ExtraPlanets_Planets {
 			NEPTUNE.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"));
 			NEPTUNE.setDimensionInfo(Config.NEPTUNE_ID, WorldProviderNeptune.class);
 			NEPTUNE.setAtmosphere(new AtmosphereInfo(false, false, true, -140.0F, 5.0F, 0.1F));
-			NEPTUNE.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute", "equipShieldController");
+			NEPTUNE.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute", "equip_shield_controller");
 			NEPTUNE.setBiomeInfo(NeptuneBiomes.neptune, NeptuneBiomes.neptuneLayeredHills, NeptuneBiomes.neptuneRadioActiveWaterSea);
 			NEPTUNE.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			NEPTUNE.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -232,7 +232,7 @@ public class ExtraPlanets_Planets {
 			PLUTO.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"));
 			PLUTO.setDimensionInfo(Config.PLUTO_ID, WorldProviderPluto.class);
 			PLUTO.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -140.0F : 5.0F, 5.0F, 0.1F));
-			PLUTO.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
+			PLUTO.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute");
 			PLUTO.setBiomeInfo(PlutoBiomes.pluto);
 			PLUTO.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			PLUTO.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -251,7 +251,7 @@ public class ExtraPlanets_Planets {
 			ERIS.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"));
 			ERIS.setDimensionInfo(Config.ERIS_ID, WorldProviderEris.class);
 			ERIS.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -150.0F : 5.0F, 5.0F, 0.1F));
-			ERIS.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equipOxygenSuit", "equipParachute");
+			ERIS.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute");
 			ERIS.setBiomeInfo(ErisBiomes.eris);
 			ERIS.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			ERIS.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
@@ -270,7 +270,7 @@ public class ExtraPlanets_Planets {
 			KEPLER22B.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"));
 			KEPLER22B.setDimensionInfo(Config.KEPLER22B_ID, WorldProviderKepler22b.class);
 			KEPLER22B.setAtmosphere(new AtmosphereInfo(true, true, false, 0.0F, 5.0F, 0.05F));
-			KEPLER22B.addChecklistKeys("equipParachute");
+			KEPLER22B.addChecklistKeys("equip_parachute");
 			KEPLER22B.setBiomeInfo(Kepler22bBiomes.kepler22bBlueForest, Kepler22bBiomes.kepler22bCandyLand, Kepler22bBiomes.kepler22bCoalPlains, Kepler22bBiomes.kepler22bDiamondPlains, Kepler22bBiomes.kepler22bEmeraldPlains,
 					Kepler22bBiomes.kepler22bGoldPlains, Kepler22bBiomes.kepler22bIronPlains, Kepler22bBiomes.kepler22bPlains, Kepler22bBiomes.kepler22bPurpleForest, Kepler22bBiomes.kepler22bRedDesert, Kepler22bBiomes.kepler22bRedForest,
 					Kepler22bBiomes.kepler22bWasteLands, Kepler22bBiomes.kepler22bYellowForest);
