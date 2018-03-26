@@ -160,7 +160,7 @@ public class ExtraPlanets_SpaceStations {
 			KEPLER22B_SPACE_STATION.setTierRequired(ExtraPlanets_Planets.KEPLER22B.getTierRequirement());
 			KEPLER22B_SPACE_STATION.setDimensionInfo(Config.KEPLER22B_SPACE_STATION_ID, Config.KEPLER22B_SPACE_STATION_STATIC_ID, WorldProviderKepler22bOrbit.class);
 			KEPLER22B_SPACE_STATION.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/space_station.png"));
-			KEPLER22B_SPACE_STATION.addChecklistKeys("equip_parachute");
+			KEPLER22B_SPACE_STATION.addChecklistKeys("thermal_padding", "equip_oxygen_suit", "equip_parachute");
 		}
 	}
 
