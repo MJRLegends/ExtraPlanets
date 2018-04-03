@@ -534,22 +534,22 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 							if (Config.GC_PRESSURE)
 								pressureLevel = 80;
 							if (Config.GC_RADIATION)
-								radiationLevel = 3;
+								radiationLevel = Config.MOON_RADIATION_AMOUNT;
 						} else if (temp instanceof WorldProviderMars) {
 							if (Config.GC_PRESSURE)
 								pressureLevel = 90;
 							if (Config.GC_RADIATION)
-								radiationLevel = 5;
+								radiationLevel = Config.MARS_RADIATION_AMOUNT;
 						} else if (temp instanceof WorldProviderVenus) {
 							if (Config.GC_PRESSURE)
 								pressureLevel = 100;
 							if (Config.GC_RADIATION)
-								radiationLevel = 5;
+								radiationLevel = Config.VENUS_RADIATION_AMOUNT;
 						} else if (temp instanceof WorldProviderAsteroids) {
 							if (Config.GC_PRESSURE)
 								pressureLevel = 100;
 							if (Config.GC_RADIATION)
-								radiationLevel = 6;
+								radiationLevel = Config.ASTEROIDS_RADIATION_AMOUNT;
 						} else {
 							radiationLevel = 0;
 							pressureLevel = 0;
