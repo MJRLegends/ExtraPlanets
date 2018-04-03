@@ -112,19 +112,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 				if (star != null && star.getBodyIcon() != null) {
 					GL11.glPushMatrix();
-					Matrix4f worldMatrix0 = new Matrix4f(worldMatrix);
-
-					Matrix4f.translate(this.getCelestialBodyPosition(star), worldMatrix0, worldMatrix0);
-
-					Matrix4f worldMatrix1 = new Matrix4f();
-					Matrix4f.rotate((float) Math.toRadians(45), new Vector3f(0, 0, 1), worldMatrix1, worldMatrix1);
-					Matrix4f.rotate((float) Math.toRadians(-55), new Vector3f(1, 0, 0), worldMatrix1, worldMatrix1);
-					worldMatrix1 = Matrix4f.mul(worldMatrix0, worldMatrix1, worldMatrix1);
-
-					fb.rewind();
-					worldMatrix1.store(fb);
-					fb.flip();
-					GL11.glMultMatrix(fb);
+					Matrix4f worldMatrix1 = setupMatrix(star, worldMatrix, fb);
 
 					float alpha = 1.0F;
 
@@ -176,19 +164,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 				if (planet.getBodyIcon() != null) {
 					GL11.glPushMatrix();
-					Matrix4f worldMatrix0 = new Matrix4f(worldMatrix);
-
-					Matrix4f.translate(this.getCelestialBodyPosition(planet), worldMatrix0, worldMatrix0);
-
-					Matrix4f worldMatrix1 = new Matrix4f();
-					Matrix4f.rotate((float) Math.toRadians(45), new Vector3f(0, 0, 1), worldMatrix1, worldMatrix1);
-					Matrix4f.rotate((float) Math.toRadians(-55), new Vector3f(1, 0, 0), worldMatrix1, worldMatrix1);
-					worldMatrix1 = Matrix4f.mul(worldMatrix0, worldMatrix1, worldMatrix1);
-
-					fb.rewind();
-					worldMatrix1.store(fb);
-					fb.flip();
-					GL11.glMultMatrix(fb);
+					Matrix4f worldMatrix1 = setupMatrix(planet, worldMatrix, fb);
 
 					float alpha = 1.0F;
 
@@ -216,7 +192,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						if (!preEvent.isCanceled()) {
 							int size = getWidthForCelestialBodyStatic(planet);
 							matrixMap.put(planet, worldMatrix1);
-							this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, preEvent.textureSize, preEvent.textureSize);
+	                        this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, 16, 16);  // Celestial body textures are 12x12 in a 16x16 .png
 						}
 
 						CelestialBodyRenderEvent.Post postEvent = new CelestialBodyRenderEvent.Post(planet);
@@ -230,90 +206,44 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		}
 
 		if (this.selectedBody != null) {
-			Matrix4f worldMatrix0 = new Matrix4f(worldMatrix);
+			List<CelestialBody> objects = Lists.newArrayList();
+			objects.addAll(GalaxyRegistry.getRegisteredSatellites().values());
+			objects.addAll(GalaxyRegistry.getRegisteredMoons().values());
 
-			for (Moon moon : GalaxyRegistry.getRegisteredMoons().values()) {
-				if (moon.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
-
-					if ((moon == this.selectedBody || (moon.getParentPlanet() == this.selectedBody && this.selectionState != EnumSelection.SELECTED))
-							&& (this.ticksSinceSelection > 35 || this.selectedBody == moon || (this.lastSelectedBody instanceof Moon && GalaxyRegistry.getMoonsForPlanet(((Moon) this.lastSelectedBody).getParentPlanet()).contains(moon)))
-							|| getSiblings(this.selectedBody).contains(moon)) {
-						GL11.glPushMatrix();
-						Matrix4f worldMatrix1 = new Matrix4f(worldMatrix0);
-						Matrix4f.translate(this.getCelestialBodyPosition(moon), worldMatrix1, worldMatrix1);
-
-						Matrix4f worldMatrix2 = new Matrix4f();
-						Matrix4f.rotate((float) Math.toRadians(45), new Vector3f(0, 0, 1), worldMatrix2, worldMatrix2);
-						Matrix4f.rotate((float) Math.toRadians(-55), new Vector3f(1, 0, 0), worldMatrix2, worldMatrix2);
-						Matrix4f.scale(new Vector3f(0.25F, 0.25F, 1.0F), worldMatrix2, worldMatrix2);
-						worldMatrix2 = Matrix4f.mul(worldMatrix1, worldMatrix2, worldMatrix2);
-
-						fb.rewind();
-						worldMatrix2.store(fb);
-						fb.flip();
-						GL11.glMultMatrix(fb);
-
-						CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(moon, moon.getBodyIcon(), 8);
-						MinecraftForge.EVENT_BUS.post(preEvent);
-
-						GL11.glColor4f(1, 1, 1, 1);
-						if (preEvent.celestialBodyTexture != null) {
-							this.mc.renderEngine.bindTexture(preEvent.celestialBodyTexture);
-						}
-
-						if (!preEvent.isCanceled()) {
-							int size = getWidthForCelestialBodyStatic(moon);
-							this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, preEvent.textureSize, preEvent.textureSize);
-							matrixMap.put(moon, worldMatrix1);
-						}
-
-						CelestialBodyRenderEvent.Post postEvent = new CelestialBodyRenderEvent.Post(moon);
-						MinecraftForge.EVENT_BUS.post(postEvent);
-						fb.clear();
-						GL11.glPopMatrix();
-					}
-				}
-			}
-		}
-
-		if (this.selectedBody != null) {
-			Matrix4f worldMatrix0 = new Matrix4f(worldMatrix);
-
-			for (Satellite satellite : GalaxyRegistry.getRegisteredSatellites().values()) {
-				if (satellite.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName)) {
-
-					if (this.possibleBodies != null && this.possibleBodies.contains(satellite)) {
-						if ((satellite == this.selectedBody || (satellite.getParentPlanet() == this.selectedBody && this.selectionState != EnumSelection.SELECTED))
-								&& (this.ticksSinceSelection > 35 || this.selectedBody == satellite || (this.lastSelectedBody instanceof Satellite && GalaxyRegistry.getSatellitesForCelestialBody(((Satellite) this.lastSelectedBody).getParentPlanet())
-										.contains(satellite)))) {
+			for (CelestialBody sat : objects) {
+				boolean selected = sat == this.selectedBody || (((IChildBody) sat).getParentPlanet() == this.selectedBody && this.selectionState != EnumSelection.SELECTED);
+				boolean ready = this.lastSelectedBody != null || this.ticksSinceSelection > 35;
+				boolean isSibling = getSiblings(this.selectedBody).contains(sat);
+				boolean isPossible = !(sat instanceof Satellite) || (this.possibleBodies != null && this.possibleBodies.contains(sat));
+				if (((selected && ready) || isSibling) && isPossible) {
+					boolean render = false;
+					if (sat instanceof Satellite)
+						if (((Satellite) sat).getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
+							render = true;
+					if (sat instanceof Moon)
+						if (((Moon) sat).getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
+							render = true;
+					if (render) {
+						if (((selected && ready) || isSibling) && isPossible) {
 							GL11.glPushMatrix();
-							Matrix4f worldMatrix1 = new Matrix4f(worldMatrix0);
-							Matrix4f.translate(this.getCelestialBodyPosition(satellite), worldMatrix1, worldMatrix1);
 
-							Matrix4f worldMatrix2 = new Matrix4f();
-							Matrix4f.rotate((float) Math.toRadians(45), new Vector3f(0, 0, 1), worldMatrix2, worldMatrix2);
-							Matrix4f.rotate((float) Math.toRadians(-55), new Vector3f(1, 0, 0), worldMatrix2, worldMatrix2);
-							Matrix4f.scale(new Vector3f(0.25F, 0.25F, 1.0F), worldMatrix2, worldMatrix2);
-							worldMatrix2 = Matrix4f.mul(worldMatrix1, worldMatrix2, worldMatrix2);
+							Matrix4f worldMatrix1 = setupMatrix(sat, worldMatrix, fb, 0.25F);
 
-							fb.rewind();
-							worldMatrix2.store(fb);
-							fb.flip();
-							GL11.glMultMatrix(fb);
-
-							CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(satellite, satellite.getBodyIcon(), 8);
+							CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(sat, sat.getBodyIcon(), 8);
 							MinecraftForge.EVENT_BUS.post(preEvent);
 
 							GL11.glColor4f(1, 1, 1, 1);
-							this.mc.renderEngine.bindTexture(preEvent.celestialBodyTexture);
-
-							if (!preEvent.isCanceled()) {
-								int size = getWidthForCelestialBodyStatic(satellite);
-								this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, preEvent.textureSize, preEvent.textureSize);
-								matrixMap.put(satellite, worldMatrix1);
+							if (preEvent.celestialBodyTexture != null) {
+								this.mc.renderEngine.bindTexture(preEvent.celestialBodyTexture);
 							}
 
-							CelestialBodyRenderEvent.Post postEvent = new CelestialBodyRenderEvent.Post(satellite);
+							if (!preEvent.isCanceled()) {
+								int size = getWidthForCelestialBodyStatic(sat);
+								this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, preEvent.textureSize, preEvent.textureSize);
+								matrixMap.put(sat, worldMatrix1);
+							}
+
+							CelestialBodyRenderEvent.Post postEvent = new CelestialBodyRenderEvent.Post(sat);
 							MinecraftForge.EVENT_BUS.post(postEvent);
 							fb.clear();
 							GL11.glPopMatrix();
@@ -408,25 +338,21 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 			GL11.glTranslatef(planetPos.x, planetPos.y, 0);
 
-			for (Moon moon : GalaxyRegistry.getRegisteredMoons().values()) {
-				if ((moon.getParentPlanet() == this.selectedBody && this.selectionState != EnumSelection.SELECTED) || moon == this.selectedBody || getSiblings(this.selectedBody).contains(moon)) {
-					if (this.drawCircle(moon, count, sin, cos)) {
+			List<CelestialBody> objects = Lists.newArrayList();
+			objects.addAll(GalaxyRegistry.getRegisteredSatellites().values());
+			objects.addAll(GalaxyRegistry.getRegisteredMoons().values());
+
+			for (CelestialBody sat : objects) {
+				boolean selected = sat == this.selectedBody || (((IChildBody) sat).getParentPlanet() == this.selectedBody && this.selectionState != EnumSelection.SELECTED);
+				boolean isSibling = getSiblings(this.selectedBody).contains(sat);
+				boolean isPossible = !(sat instanceof Satellite) || (this.possibleBodies != null && this.possibleBodies.contains(sat));
+				if ((selected || isSibling) && isPossible) {
+					if (this.drawCircle(sat, count, sin, cos)) {
 						count++;
 					}
 				}
 			}
-
-			for (Satellite satellite : GalaxyRegistry.getRegisteredSatellites().values()) {
-				if (this.possibleBodies != null && this.possibleBodies.contains(satellite)) {
-					if ((satellite.getParentPlanet() == this.selectedBody && this.selectionState != EnumSelection.SELECTED) && this.ticksSinceSelection > 24 || satellite == this.selectedBody || this.lastSelectedBody instanceof IChildBody) {
-						if (this.drawCircle(satellite, count, sin, cos)) {
-							count++;
-						}
-					}
-				}
-			}
 		}
-
 		GL11.glLineWidth(1);
 	}
 
@@ -439,23 +365,18 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		float x = this.getScale(body);
 		float y = 0;
 
-		float alpha = 1;
+		float alpha = 1.0F;
 
-		if (this.isZoomed()) {
-			alpha = this.selectedBody instanceof IChildBody ? 1.0F : Math.min(Math.max((this.ticksSinceSelection - 30) / 15.0F, 0.0F), 1.0F);
-
-			if (this.lastSelectedBody instanceof Moon && body instanceof Moon) {
-				if (GalaxyRegistry.getMoonsForPlanet(((Moon) this.lastSelectedBody).getParentPlanet()).contains(body)) {
-					alpha = 1.0F;
-				}
-			} else if (this.lastSelectedBody instanceof Satellite && body instanceof Satellite) {
-				if (GalaxyRegistry.getSatellitesForCelestialBody(((Satellite) this.lastSelectedBody).getParentPlanet()).contains(body)) {
-					alpha = 1.0F;
-				}
-			}
+		boolean selected = body == this.selectedBody || (((IChildBody) body).getParentPlanet() == this.selectedBody && this.selectionState != EnumSelection.SELECTED);
+		boolean ready = this.lastSelectedBody != null || this.ticksSinceSelection > 35;
+		boolean isSibling = getSiblings(this.selectedBody).contains(body);
+		boolean isPossible = !(body instanceof Satellite) || (this.possibleBodies != null && this.possibleBodies.contains(body));
+		if (this.isZoomed() && (((!selected || !ready) && !isSibling) || !isPossible)) {
+			// Fade in when first selected
+			alpha = Math.min(Math.max((this.ticksSinceSelection - 30) / 15.0F, 0.0F), 1.0F);
 		}
 
-		if (alpha != 0) {
+		if (alpha > 0.0F) {
 			switch (count % 2) {
 			case 0:
 				GL11.glColor4f(0.0F, 0.6F, 1.0F, alpha);
@@ -489,41 +410,6 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		}
 
 		return false;
-	}
-
-	@Override
-	protected Vector3f getCelestialBodyPosition(CelestialBody cBody) {
-		if (cBody instanceof Star) {
-			if (cBody.getUnlocalizedName().equalsIgnoreCase("star.sol"))
-			// Return zero vector for Sol, different location for other solar systems
-			{
-				return new Vector3f();
-			}
-			return ((Star) cBody).getParentSolarSystem().getMapPosition().toVector3f();
-		}
-
-		if (this.celestialBodyTicks.get(cBody) != null) {
-			int cBodyTicks = this.celestialBodyTicks.get(cBody);
-			float timeScale = cBody instanceof Planet ? 200.0F : 2.0F;
-			float distanceFromCenter = this.getScale(cBody);
-			Vector3f cBodyPos = new Vector3f((float) Math.sin(cBodyTicks / (timeScale * cBody.getRelativeOrbitTime()) + cBody.getPhaseShift()) * distanceFromCenter, (float) Math.cos(cBodyTicks / (timeScale * cBody.getRelativeOrbitTime())
-					+ cBody.getPhaseShift())
-					* distanceFromCenter, 0);
-
-			if (cBody instanceof Planet) {
-				Vector3f parentVec = this.getCelestialBodyPosition(((Planet) cBody).getParentSolarSystem().getMainStar());
-				return Vector3f.add(cBodyPos, parentVec, null);
-			}
-
-			if (cBody instanceof IChildBody) {
-				Vector3f parentVec = this.getCelestialBodyPosition(((IChildBody) cBody).getParentPlanet());
-				return Vector3f.add(cBodyPos, parentVec, null);
-			}
-
-			return cBodyPos;
-
-		}
-		return new Vector3f(0, 0, 0);
 	}
 
 	public void drawCustomButtons(int mousePosX, int mousePosY) {
