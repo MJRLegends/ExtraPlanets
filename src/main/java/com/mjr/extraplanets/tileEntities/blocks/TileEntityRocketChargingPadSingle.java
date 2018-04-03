@@ -12,16 +12,18 @@ import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class TileEntityRocketChargingPadSingle extends TileEntity implements ITickable {
+	private int corner = 0;
+
 	@Override
 	public void update() {
-		if (!this.worldObj.isRemote) {
+		if (!this.worldObj.isRemote && this.corner == 0) {
 			final ArrayList<TileEntity> attachedLaunchPads = new ArrayList<TileEntity>();
 
 			for (int x = this.getPos().getX() - 2; x < this.getPos().getX() + 3; x++) {
 				for (int z = this.getPos().getZ() - 2; z < this.getPos().getZ() + 3; z++) {
 					final TileEntity tile = this.worldObj.getTileEntity(new BlockPos(x, this.getPos().getY(), z));
 
-					if (tile instanceof TileEntityRocketChargingPadSingle) {
+					if (tile instanceof TileEntityRocketChargingPadSingle && !tile.isInvalid() && ((TileEntityRocketChargingPadSingle) tile).corner == 0) {
 						attachedLaunchPads.add(tile);
 					}
 				}
