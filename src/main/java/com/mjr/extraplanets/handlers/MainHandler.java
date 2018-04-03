@@ -80,9 +80,9 @@ public class MainHandler {
 		if (Config.useCustomCelestialSelection) {
 			if (((event.gui instanceof GuiCelestialSelection))) {
 				if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap)) {
-					event.gui = new CustomCelestialSelection(true, null);
+					event.gui = new CustomCelestialSelection(true, ((GuiCelestialSelection)event.gui).possibleBodies);
 				} else {
-					event.gui = new CustomCelestialSelection(false, null);
+					event.gui = new CustomCelestialSelection(false, ((GuiCelestialSelection)event.gui).possibleBodies);
 				}
 			}
 		}
