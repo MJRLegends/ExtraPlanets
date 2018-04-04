@@ -45,7 +45,7 @@ public class ContainerUltimateFuelLoader extends Container {
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
 		ItemStack var3 = ItemStack.EMPTY;
-		final Slot slot = (Slot) this.inventorySlots.get(par2);
+		final Slot slot = this.inventorySlots.get(par2);
 
 		if (slot != null && slot.getHasStack()) {
 			final ItemStack var5 = slot.getStack();
@@ -80,16 +80,13 @@ public class ContainerUltimateFuelLoader extends Container {
 
 			if (var5.getCount() == 0) {
 				// Needed where tile has inventoryStackLimit of 1
-                if (movedToMachineSlot && var3.getCount() > 1)
-                {
-                    ItemStack remainder = var3.copy();
-                    remainder.shrink(1);
-                    slot.putStack(remainder);
-                }
-                else
-                {
-                    slot.putStack(ItemStack.EMPTY);
-                }
+				if (movedToMachineSlot && var3.getCount() > 1) {
+					ItemStack remainder = var3.copy();
+					remainder.shrink(1);
+					slot.putStack(remainder);
+				} else {
+					slot.putStack(ItemStack.EMPTY);
+				}
 			} else {
 				slot.onSlotChanged();
 			}
