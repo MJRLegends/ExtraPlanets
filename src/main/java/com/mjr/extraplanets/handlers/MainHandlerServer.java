@@ -356,7 +356,7 @@ public class MainHandlerServer {
 	@SubscribeEvent
 	public void onWorldChange(PlayerChangedDimensionEvent event) {
 		if (event.player.worldObj.isRemote == false) {
-			if (event.player.worldObj.provider instanceof WorldProviderRealisticSpace) {
+			if (event.player.worldObj.provider instanceof WorldProviderRealisticSpace || event.player.worldObj.provider instanceof WorldProviderMoon || event.player.worldObj.provider instanceof WorldProviderMars || event.player.worldObj.provider instanceof WorldProviderAsteroids || event.player.worldObj.provider instanceof WorldProviderVenus) {
 				EntityPlayer player = event.player;
 				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " "
 						+ ((WorldProviderRealisticSpace) event.player.worldObj.provider).getSolarRadiationLevel() + "% " + TranslateUtilities.translate("gui.radiation.type.message") + "");
