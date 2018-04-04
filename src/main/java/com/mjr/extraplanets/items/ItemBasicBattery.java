@@ -46,6 +46,7 @@ public class ItemBasicBattery extends ItemElectricBase implements IItemElectric 
 		}
 	}
 
+	@Override
 	public int getItemStackLimit(ItemStack stack) {
 		if (stack.getItemDamage() < 100 || stack.hasTagCompound() && stack.getTagCompound().hasKey("electricity")) {
 			return 1;

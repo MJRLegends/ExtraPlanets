@@ -80,16 +80,13 @@ public class ContainerUltimateFuelLoader extends Container {
 
 			if (var5.getCount() == 0) {
 				// Needed where tile has inventoryStackLimit of 1
-                if (movedToMachineSlot && var3.getCount() > 1)
-                {
-                    ItemStack remainder = var3.copy();
-                    remainder.shrink(1);
-                    slot.putStack(remainder);
-                }
-                else
-                {
-                    slot.putStack(ItemStack.EMPTY);
-                }
+				if (movedToMachineSlot && var3.getCount() > 1) {
+					ItemStack remainder = var3.copy();
+					remainder.shrink(1);
+					slot.putStack(remainder);
+				} else {
+					slot.putStack(ItemStack.EMPTY);
+				}
 			} else {
 				slot.onSlotChanged();
 			}

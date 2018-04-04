@@ -74,6 +74,7 @@ public class BlockKepler22bMapleTreeLog extends BlockLog {
 	}
 
 	public static final PropertyEnum<BlockKepler22bMapleTreeLog.EnumType> VARIANT = PropertyEnum.<BlockKepler22bMapleTreeLog.EnumType> create("variant", BlockKepler22bMapleTreeLog.EnumType.class, new Predicate<BlockKepler22bMapleTreeLog.EnumType>() {
+		@Override
 		public boolean apply(BlockKepler22bMapleTreeLog.EnumType type) {
 			return type.getMetadata() < 4;
 		}

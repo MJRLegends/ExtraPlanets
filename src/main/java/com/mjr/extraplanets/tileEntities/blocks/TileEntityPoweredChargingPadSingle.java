@@ -32,7 +32,7 @@ public class TileEntityPoweredChargingPadSingle extends TileEntity implements IT
 			if (attachedLaunchPads.size() == 25) {
 				for (final TileEntity tile : attachedLaunchPads) {
 					this.world.markTileEntityForRemoval(tile);
-					((TileEntityPoweredChargingPadSingle)tile).corner = 1;
+					((TileEntityPoweredChargingPadSingle) tile).corner = 1;
 				}
 
 				this.getPos().south(1);
