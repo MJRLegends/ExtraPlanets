@@ -230,14 +230,14 @@ public class MainHandlerServer {
 	}
 
 	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityPlayerMP playerMP, int amount) {
-		if((playerMP.ticksExisted - 1) % 50 == 0){
+		if ((playerMP.ticksExisted - 1) % 50 == 0) {
 			ItemStack helmet = playerMP.inventory.armorInventory[0];
 			ItemStack chest = playerMP.inventory.armorInventory[1];
 			ItemStack leggins = playerMP.inventory.armorInventory[2];
 			ItemStack boots = playerMP.inventory.armorInventory[3];
-	
+
 			boolean doDamage = false;
-	
+
 			if (helmet == null || !(helmet.getItem() instanceof IPressureSuit))
 				doDamage = true;
 			else if (chest == null || !(chest.getItem() instanceof IPressureSuit))
@@ -246,7 +246,7 @@ public class MainHandlerServer {
 				doDamage = true;
 			else if (boots == null || !(boots.getItem() instanceof IPressureSuit))
 				doDamage = true;
-	
+
 			if (doDamage) {
 				float tempLevel = amount;
 				tempLevel = (tempLevel / 100) * 8;
@@ -297,9 +297,9 @@ public class MainHandlerServer {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			//System.out.println("Current Level: " + stats.getRadiationLevel());
+			// System.out.println("Current Level: " + stats.getRadiationLevel());
 			if (stats.getRadiationLevel() >= 100) {
-				if((playerMP.ticksExisted - 1) % 50 == 0)
+				if ((playerMP.ticksExisted - 1) % 50 == 0)
 					playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
 			} else if (stats.getRadiationLevel() >= 0) {
 				double tempLevel = 0.0;
@@ -356,7 +356,8 @@ public class MainHandlerServer {
 	@SubscribeEvent
 	public void onWorldChange(PlayerChangedDimensionEvent event) {
 		if (event.player.worldObj.isRemote == false) {
-			if (event.player.worldObj.provider instanceof WorldProviderRealisticSpace || event.player.worldObj.provider instanceof WorldProviderMoon || event.player.worldObj.provider instanceof WorldProviderMars || event.player.worldObj.provider instanceof WorldProviderAsteroids || event.player.worldObj.provider instanceof WorldProviderVenus) {
+			if (event.player.worldObj.provider instanceof WorldProviderRealisticSpace || event.player.worldObj.provider instanceof WorldProviderMoon || event.player.worldObj.provider instanceof WorldProviderMars
+					|| event.player.worldObj.provider instanceof WorldProviderAsteroids || event.player.worldObj.provider instanceof WorldProviderVenus) {
 				EntityPlayer player = event.player;
 				int amount = 0;
 				if (event.player.worldObj.provider instanceof WorldProviderRealisticSpace)
@@ -369,8 +370,8 @@ public class MainHandlerServer {
 					amount = Config.ASTEROIDS_RADIATION_AMOUNT;
 				if (event.player.worldObj.provider instanceof WorldProviderVenus)
 					amount = Config.VENUS_RADIATION_AMOUNT;
-				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " "
-						+ amount + "% " + TranslateUtilities.translate("gui.radiation.type.message") + "");
+				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " " + amount + "% "
+						+ TranslateUtilities.translate("gui.radiation.type.message") + "");
 				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_GREEN + ", " + TranslateUtilities.translate("gui.radiation.reverse.message") + "!");
 				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.cancel.message") + "!");
 			}

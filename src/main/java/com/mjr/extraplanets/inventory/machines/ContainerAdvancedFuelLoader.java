@@ -45,7 +45,7 @@ public class ContainerAdvancedFuelLoader extends Container {
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
 		ItemStack var3 = null;
-		final Slot slot = (Slot) this.inventorySlots.get(par2);
+		final Slot slot = this.inventorySlots.get(par2);
 
 		if (slot != null && slot.getHasStack()) {
 			final ItemStack var5 = slot.getStack();

@@ -109,7 +109,7 @@ public class SkyProviderCallisto extends IRenderHandler {
 		GL11.glEnable(GL11.GL_FOG);
 		GL11.glColor3f(f1, f2, f3);
 		GL11.glCallList(this.glSkyList);
-        GL11.glDisable(GL11.GL_FOG);
+		GL11.glDisable(GL11.GL_FOG);
 		GL11.glDisable(GL11.GL_ALPHA_TEST);
 		GL11.glEnable(GL11.GL_BLEND);
 		OpenGlHelper.glBlendFunc(770, 771, 1, 0);
