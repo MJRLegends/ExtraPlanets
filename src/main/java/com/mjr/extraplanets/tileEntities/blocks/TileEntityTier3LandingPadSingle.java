@@ -32,6 +32,7 @@ public class TileEntityTier3LandingPadSingle extends TileEntity implements ITick
 			if (attachedLaunchPads.size() == 25) {
 				for (final TileEntity tile : attachedLaunchPads) {
 					this.world.markTileEntityForRemoval(tile);
+					((TileEntityTier3LandingPadSingle)tile).corner = 1;
 				}
 
 				this.getPos().south(1);
