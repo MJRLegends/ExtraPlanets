@@ -34,16 +34,15 @@ public class BlockBasicGrass extends Block implements IGrowable {
 			} else {
 				if (worldIn.getLightFromNeighbors(pos.up()) >= 9) {
 					for (int i = 0; i < 4; ++i) {
-                        BlockPos blockpos = pos.add(rand.nextInt(3) - 1, rand.nextInt(5) - 3, rand.nextInt(3) - 1);
+						BlockPos blockpos = pos.add(rand.nextInt(3) - 1, rand.nextInt(5) - 3, rand.nextInt(3) - 1);
 
-                        if (blockpos.getY() >= 0 && blockpos.getY() < 256 && !worldIn.isBlockLoaded(blockpos))
-                        {
-                            return;
-                        }
+						if (blockpos.getY() >= 0 && blockpos.getY() < 256 && !worldIn.isBlockLoaded(blockpos)) {
+							return;
+						}
 
-                        IBlockState iblockstate = worldIn.getBlockState(blockpos.up());
-                        IBlockState iblockstate1 = worldIn.getBlockState(blockpos);
-                        
+						IBlockState iblockstate = worldIn.getBlockState(blockpos.up());
+						IBlockState iblockstate1 = worldIn.getBlockState(blockpos);
+
 						if (iblockstate1 == ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState() && worldIn.getLightFromNeighbors(blockpos.up()) >= 4 && iblockstate.getLightOpacity(worldIn, pos.up()) <= 2) {
 							worldIn.setBlockState(blockpos, this.getDefaultState());
 						}

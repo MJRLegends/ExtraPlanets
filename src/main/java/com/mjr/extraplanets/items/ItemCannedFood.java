@@ -120,7 +120,7 @@ public class ItemCannedFood extends ItemBasicMeta {
 	}
 
 	public static String[] getItemList() {
-		return new String[] { "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken"};
+		return new String[] { "dehydrated_porkchop", "dehydrated_fish", "dehydrated_salmon", "dehydrated_chicken" };
 	}
 
 }

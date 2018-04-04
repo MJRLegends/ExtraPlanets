@@ -192,7 +192,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						if (!preEvent.isCanceled()) {
 							int size = getWidthForCelestialBodyStatic(planet);
 							matrixMap.put(planet, worldMatrix1);
-	                        this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, 16, 16);  // Celestial body textures are 12x12 in a 16x16 .png
+							this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, 16, 16); // Celestial body textures are 12x12 in a 16x16 .png
 						}
 
 						CelestialBodyRenderEvent.Post postEvent = new CelestialBodyRenderEvent.Post(planet);
