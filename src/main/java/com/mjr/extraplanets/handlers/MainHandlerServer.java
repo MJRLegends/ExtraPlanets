@@ -358,8 +358,19 @@ public class MainHandlerServer {
 		if (event.player.world.isRemote == false) {
 			if (event.player.world.provider instanceof WorldProviderRealisticSpace || event.player.world.provider instanceof WorldProviderMoon || event.player.world.provider instanceof WorldProviderMars || event.player.world.provider instanceof WorldProviderAsteroids || event.player.world.provider instanceof WorldProviderVenus) {
 				EntityPlayer player = event.player;
+				int amount = 0;
+				if (event.player.world.provider instanceof WorldProviderRealisticSpace)
+					amount = ((WorldProviderRealisticSpace) event.player.world.provider).getSolarRadiationLevel();
+				if (event.player.world.provider instanceof WorldProviderMoon)
+					amount = Config.MOON_RADIATION_AMOUNT;
+				if (event.player.world.provider instanceof WorldProviderMars)
+					amount = Config.MARS_RADIATION_AMOUNT;
+				if (event.player.world.provider instanceof WorldProviderAsteroids)
+					amount = Config.ASTEROIDS_RADIATION_AMOUNT;
+				if (event.player.world.provider instanceof WorldProviderVenus)
+					amount = Config.VENUS_RADIATION_AMOUNT;
 				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " "
-						+ ((WorldProviderRealisticSpace) event.player.world.provider).getSolarRadiationLevel() + "% " + TranslateUtilities.translate("gui.radiation.type.message") + "");
+						+ amount + "% " + TranslateUtilities.translate("gui.radiation.type.message") + "");
 				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_GREEN + ", " + TranslateUtilities.translate("gui.radiation.reverse.message") + "!");
 				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.cancel.message") + "!");
 			}
