@@ -5,6 +5,18 @@
 
 
 ===========================================Released Updates===========================================
+v1.0.4
+*Fixed issue #274
+*Fixed missing checklist entries from Kepler22b Space Station
+*Updated ru_RU.lang (Thanks to kellixon)
+*Fixed Celestial Selection screen not displaying correct info when GC Planets & Moons Radiation amounts are changed
+*Changes to Celestial Selection screen to match GC changes
+*Fixed issue with Custom Celestial Selection launch button not working at first
+*Fix various edge-case Launch/Charging Pad building issues
+*Fixed fog not rendering correctly at all heights
+*Fixed radiation/pressure info message not showing for GC planets/moons
+*Clean up/Fix Formatting
+
 v1.0.3
 *Updated ru_RU.lang (Thanks to rykllan)
 *Updated zh_TW.lang (Thanks to sfs131010)
