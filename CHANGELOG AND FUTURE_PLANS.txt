@@ -8,6 +8,17 @@ TODO = Not yet done
 
 
 ===========================================Released Updates===========================================
+v2.0.1
+*Added more uses for Kepler22b Planks, towards suggestion #163
+*Updated ru_RU.lang (Thanks to rykllan)
+*Updated lang files to match 1.8+ changes
+*Updated zh_TW.lang (Thanks to sfs131010)
+*Updated de_DE.lang (Thanks to DerMilchkarton)
+*Updated zh_CN.lang (Thanks to SihenZhang)
+*Fixed issue with Custom Celestial Selection launch button not working at first
+*Updated ru_RU.lang (Thanks to kellixon)
+*Clean up/Fix Formatting
+
 v2.0.0
 *Fixed Kepler22 Material Plains Biomes Ids being the same (YOU WILL NEED TO RE-GENERATE YOUR CONFIG FILE)
 *Fixed issue #258
