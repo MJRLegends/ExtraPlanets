@@ -16,6 +16,7 @@ v0.6.9
 *Fixed fog not rendering correctly at all heights
 *Fixed radiation/pressure info message not showing for GC planets/moons
 *Clean up/Fix Formatting
+*Set required GC version requirement to Build 169
 
 v0.6.8
 *Updated ru_RU.lang (Thanks to rykllan)
