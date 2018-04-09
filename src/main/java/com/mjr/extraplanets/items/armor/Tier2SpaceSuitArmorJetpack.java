@@ -104,6 +104,6 @@ public class Tier2SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 
 	@Override
 	public float powerPerTick() {
-		return 0.7F;
+		return 1.7F;
 	}
 }
