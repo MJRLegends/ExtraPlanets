@@ -117,24 +117,28 @@ public class ExtraPlanets_Armor {
 
 	public static Item TIER_1_SPACE_SUIT_HELMET;
 	public static Item TIER_1_SPACE_SUIT_CHEST;
+	public static Item TIER_1_SPACE_SUIT_JETPACK_CHEST;
 	public static Item TIER_1_SPACE_SUIT_LEGINGS;
 	public static Item TIER_1_SPACE_SUIT_BOOTS;
 	public static Item TIER_1_SPACE_SUIT_GRAVITY_BOOTS;
 
 	public static Item TIER_2_SPACE_SUIT_HELMET;
 	public static Item TIER_2_SPACE_SUIT_CHEST;
+	public static Item TIER_2_SPACE_SUIT_JETPACK_CHEST;
 	public static Item TIER_2_SPACE_SUIT_LEGINGS;
 	public static Item TIER_2_SPACE_SUIT_BOOTS;
 	public static Item TIER_2_SPACE_SUIT_GRAVITY_BOOTS;
 
 	public static Item TIER_3_SPACE_SUIT_HELMET;
 	public static Item TIER_3_SPACE_SUIT_CHEST;
+	public static Item TIER_3_SPACE_SUIT_JETPACK_CHEST;
 	public static Item TIER_3_SPACE_SUIT_LEGINGS;
 	public static Item TIER_3_SPACE_SUIT_BOOTS;
 	public static Item TIER_3_SPACE_SUIT_GRAVITY_BOOTS;
 
 	public static Item TIER_4_SPACE_SUIT_HELMET;
 	public static Item TIER_4_SPACE_SUIT_CHEST;
+	public static Item TIER_4_SPACE_SUIT_JETPACK_CHEST;
 	public static Item TIER_4_SPACE_SUIT_LEGINGS;
 	public static Item TIER_4_SPACE_SUIT_BOOTS;
 	public static Item TIER_4_SPACE_SUIT_GRAVITY_BOOTS;
@@ -242,24 +246,28 @@ public class ExtraPlanets_Armor {
 		if (Config.PRESSURE || Config.RADIATION) {
 			TIER_1_SPACE_SUIT_HELMET = new Tier1SpaceSuitArmor("tier1_space_suit", TIER_1_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.HEAD).setUnlocalizedName("tier1_space_suit_helmet");
 			TIER_1_SPACE_SUIT_CHEST = new Tier1SpaceSuitArmor("tier1_space_suit", TIER_1_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier1_space_suit_chest");
+			TIER_1_SPACE_SUIT_JETPACK_CHEST = new Tier1SpaceSuitArmorJetpack("tier1_space_suit", TIER_1_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier1_space_suit_jetpack_chest");
 			TIER_1_SPACE_SUIT_LEGINGS = new Tier1SpaceSuitArmor("tier1_space_suit", TIER_1_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.LEGS).setUnlocalizedName("tier1_space_suit_legings");
 			TIER_1_SPACE_SUIT_BOOTS = new Tier1SpaceSuitArmor("tier1_space_suit", TIER_1_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.FEET).setUnlocalizedName("tier1_space_suit_boots");
 			TIER_1_SPACE_SUIT_GRAVITY_BOOTS = new Tier1SpaceSuitArmor("tier1_space_suit", TIER_1_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.FEET).setUnlocalizedName("tier1_space_suit_gravity_boots");
 
 			TIER_2_SPACE_SUIT_HELMET = new Tier2SpaceSuitArmor("tier1_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.HEAD).setUnlocalizedName("tier2_space_suit_helmet");
 			TIER_2_SPACE_SUIT_CHEST = new Tier2SpaceSuitArmor("tier1_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier2_space_suit_chest");
+			TIER_1_SPACE_SUIT_JETPACK_CHEST = new Tier2SpaceSuitArmorJetpack("tier1_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier2_space_suit_jetpack_chest");
 			TIER_2_SPACE_SUIT_LEGINGS = new Tier2SpaceSuitArmor("tier1_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.LEGS).setUnlocalizedName("tier2_space_suit_legings");
 			TIER_2_SPACE_SUIT_BOOTS = new Tier2SpaceSuitArmor("tier1_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.FEET).setUnlocalizedName("tier2_space_suit_boots");
 			TIER_2_SPACE_SUIT_GRAVITY_BOOTS = new Tier2SpaceSuitArmor("tier2_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.FEET).setUnlocalizedName("tier2_space_suit_gravity_boots");
 
 			TIER_3_SPACE_SUIT_HELMET = new Tier3SpaceSuitArmor("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.HEAD).setUnlocalizedName("tier3_space_suit_helmet");
 			TIER_3_SPACE_SUIT_CHEST = new Tier3SpaceSuitArmor("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier3_space_suit_chest");
+			TIER_1_SPACE_SUIT_JETPACK_CHEST = new Tier3SpaceSuitArmorJetpack("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier3_space_suit_jetpack_chest");
 			TIER_3_SPACE_SUIT_LEGINGS = new Tier3SpaceSuitArmor("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.LEGS).setUnlocalizedName("tier3_space_suit_legings");
 			TIER_3_SPACE_SUIT_BOOTS = new Tier3SpaceSuitArmor("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.FEET).setUnlocalizedName("tier3_space_suit_boots");
 			TIER_3_SPACE_SUIT_GRAVITY_BOOTS = new Tier3SpaceSuitArmor("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.FEET).setUnlocalizedName("tier3_space_suit_gravity_boots");
 
 			TIER_4_SPACE_SUIT_HELMET = new Tier4SpaceSuitArmor("tier1_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.HEAD).setUnlocalizedName("tier4_space_suit_helmet");
 			TIER_4_SPACE_SUIT_CHEST = new Tier4SpaceSuitArmor("tier1_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier4_space_suit_chest");
+			TIER_1_SPACE_SUIT_JETPACK_CHEST = new Tier4SpaceSuitArmorJetpack("tier1_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier4_space_suit_jetpack_chest");
 			TIER_4_SPACE_SUIT_LEGINGS = new Tier4SpaceSuitArmor("tier1_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.LEGS).setUnlocalizedName("tier4_space_suit_legings");
 			TIER_4_SPACE_SUIT_BOOTS = new Tier4SpaceSuitArmor("tier1_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.FEET).setUnlocalizedName("tier4_space_suit_boots");
 			TIER_4_SPACE_SUIT_GRAVITY_BOOTS = new Tier4SpaceSuitArmor("tier4_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.FEET).setUnlocalizedName("tier4_space_suit_gravity_boots");
@@ -368,24 +376,28 @@ public class ExtraPlanets_Armor {
 		if (Config.PRESSURE || Config.RADIATION) {
 			ExtraPlanets_Items.registerItem(TIER_1_SPACE_SUIT_HELMET, TIER_1_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_1_SPACE_SUIT_CHEST, TIER_1_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			ExtraPlanets_Items.registerItem(TIER_1_SPACE_SUIT_JETPACK_CHEST, TIER_1_SPACE_SUIT_JETPACK_CHEST.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_1_SPACE_SUIT_LEGINGS, TIER_1_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_1_SPACE_SUIT_BOOTS, TIER_1_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_1_SPACE_SUIT_GRAVITY_BOOTS, TIER_1_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
 
 			ExtraPlanets_Items.registerItem(TIER_2_SPACE_SUIT_HELMET, TIER_2_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_2_SPACE_SUIT_CHEST, TIER_2_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			ExtraPlanets_Items.registerItem(TIER_2_SPACE_SUIT_JETPACK_CHEST, TIER_2_SPACE_SUIT_JETPACK_CHEST.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_2_SPACE_SUIT_LEGINGS, TIER_2_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_2_SPACE_SUIT_BOOTS, TIER_2_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_2_SPACE_SUIT_GRAVITY_BOOTS, TIER_2_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
 
 			ExtraPlanets_Items.registerItem(TIER_3_SPACE_SUIT_HELMET, TIER_3_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_3_SPACE_SUIT_CHEST, TIER_3_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			ExtraPlanets_Items.registerItem(TIER_3_SPACE_SUIT_JETPACK_CHEST, TIER_3_SPACE_SUIT_JETPACK_CHEST.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_3_SPACE_SUIT_LEGINGS, TIER_3_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_3_SPACE_SUIT_BOOTS, TIER_3_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_3_SPACE_SUIT_GRAVITY_BOOTS, TIER_3_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
 
 			ExtraPlanets_Items.registerItem(TIER_4_SPACE_SUIT_HELMET, TIER_4_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_4_SPACE_SUIT_CHEST, TIER_4_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			ExtraPlanets_Items.registerItem(TIER_4_SPACE_SUIT_JETPACK_CHEST, TIER_4_SPACE_SUIT_JETPACK_CHEST.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_4_SPACE_SUIT_LEGINGS, TIER_4_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_4_SPACE_SUIT_BOOTS, TIER_4_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
 			ExtraPlanets_Items.registerItem(TIER_4_SPACE_SUIT_GRAVITY_BOOTS, TIER_4_SPACE_SUIT_GRAVITY_BOOTS.getUnlocalizedName().substring(5));
