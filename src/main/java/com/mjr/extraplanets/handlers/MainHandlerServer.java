@@ -42,6 +42,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
@@ -58,6 +59,7 @@ import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.extraplanets.util.DamageSourceEP;
 import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
@@ -237,8 +239,10 @@ public class MainHandlerServer {
 
 	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityPlayerMP playerMP, int amount) {
 		if ((playerMP.ticksExisted - 1) % 50 == 0) {
-			if(amount == 0)
+			if (amount == 0)
 				return;
+			if ((playerMP.ticksExisted - 1) % 300 == 0 && Config.DEBUG_MODE)
+				MessageUtilities.debugMessageToLog(Constants.modID, "Environment Pressure Amount: " + amount);
 			ItemStack helmet = playerMP.inventory.armorInventory.get(0);
 			ItemStack chest = playerMP.inventory.armorInventory.get(1);
 			ItemStack leggins = playerMP.inventory.armorInventory.get(2);
@@ -258,6 +262,8 @@ public class MainHandlerServer {
 			if (doDamage) {
 				float tempLevel = amount;
 				tempLevel = (tempLevel / 100) * 8;
+				if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE)
+					MessageUtilities.debugMessageToLog(Constants.modID, "Damage Amount for Pressure: " + tempLevel);
 				playerMP.attackEntityFrom(DamageSourceEP.pressure, tempLevel);
 			}
 		}
@@ -271,9 +277,10 @@ public class MainHandlerServer {
 		// 25 Level = 38 mins
 		// 50 Level = 15 mins
 
-		if(amount == 0)
+		if (amount == 0)
 			return;
-		
+		if ((playerMP.ticksExisted - 1) % 300 == 0 && Config.DEBUG_MODE)
+			MessageUtilities.debugMessageToLog(Constants.modID, "Environment Radiation Amount: " + amount);
 		boolean doDamage = false;
 		boolean doArmorCheck = false;
 		double damageModifer = 0;
@@ -308,7 +315,8 @@ public class MainHandlerServer {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			//System.out.println("Current Level: " + stats.getRadiationLevel());
+			if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE)
+				MessageUtilities.debugMessageToLog(Constants.modID, "Player Current Radiation Amount: " + stats.getRadiationLevel());
 			if (stats.getRadiationLevel() >= 100) {
 				if ((playerMP.ticksExisted - 1) % 50 == 0)
 					playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
@@ -318,7 +326,8 @@ public class MainHandlerServer {
 					tempLevel = (damageModifer * amount) / 100;
 				else
 					tempLevel = damageModifer * (amount / 10) / 6;
-				//System.out.println("Take amount: " + tempLevel);
+				if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE)
+					MessageUtilities.debugMessageToLog(Constants.modID, "Gained amount of Radiation: " + tempLevel);
 				stats.setRadiationLevel(stats.getRadiationLevel() + tempLevel);
 			} else
 				stats.setRadiationLevel(0);
