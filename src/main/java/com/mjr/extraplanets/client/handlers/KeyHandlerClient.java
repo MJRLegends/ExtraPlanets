@@ -12,6 +12,7 @@ import org.lwjgl.input.Keyboard;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.IJetpackArmour;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
@@ -72,10 +73,26 @@ public class KeyHandlerClient extends KeyHandler {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_POWER_GUI, mc.theWorld.provider.getDimension(), new Object[] { playerBase.getGameProfile().getName() }));
 				}
 			}
+			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode()) {
+				if (playerBase.inventory.armorItemInSlot(2).getItem() instanceof IJetpackArmour) {
+					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.world.provider.getDimension(), new Object[] { 1 }));
+				}
+			}
 		}
 	}
 
 	@Override
 	public void keyUp(Type types, KeyBinding kb, boolean tickEnd) {
+		if (KeyHandlerClient.mc.player != null && tickEnd) {
+			EntityPlayerSP playerBase = PlayerUtil.getPlayerBaseClientFromPlayer(KeyHandlerClient.mc.player, false);
+			if (playerBase == null) {
+				return;
+			}
+			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode()) {
+				if (playerBase.inventory.armorItemInSlot(2).getItem() instanceof IJetpackArmour) {
+					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.world.provider.getDimension(), new Object[] { 0 }));
+				}
+			}
+		}
 	}
 }
