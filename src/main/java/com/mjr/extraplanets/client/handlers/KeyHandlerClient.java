@@ -72,7 +72,7 @@ public class KeyHandlerClient extends KeyHandler {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_POWER_GUI, mc.world.provider.getDimension(), new Object[] { playerBase.getGameProfile().getName() }));
 				}
 			}
-			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode()) {
+			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
 				if (playerBase.inventory.armorItemInSlot(2).getItem() instanceof IJetpackArmour) {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.world.provider.getDimension(), new Object[] { 1 }));
 				}
@@ -87,7 +87,7 @@ public class KeyHandlerClient extends KeyHandler {
 			if (playerBase == null) {
 				return;
 			}
-			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode()) {
+			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
 				if (playerBase.inventory.armorItemInSlot(2).getItem() instanceof IJetpackArmour) {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.world.provider.getDimension(), new Object[] { 0 }));
 				}
