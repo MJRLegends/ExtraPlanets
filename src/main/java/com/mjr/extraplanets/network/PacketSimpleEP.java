@@ -19,6 +19,7 @@ import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.Packet;
@@ -35,6 +36,7 @@ import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
+import com.mjr.extraplanets.items.armor.bases.JetpackArmorBase;
 import com.mjr.extraplanets.util.ExtraPlanetsUtli;
 import com.mjr.mjrlegendslib.network.PacketBase;
 import com.mjr.mjrlegendslib.util.MCUtilities;
@@ -44,7 +46,7 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class PacketSimpleEP extends PacketBase implements Packet {
 	public enum EnumSimplePacket {
 		// SERVER
-		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class), S_IGNITE_ROCKET(Side.SERVER),
+		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class), S_IGNITE_ROCKET(Side.SERVER), S_UPDATE_JETPACK(Side.SERVER, Integer.class),
 
 		// CLIENT
 		C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT), C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class);
@@ -205,6 +207,15 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 						stats.setChatCooldown(250);
 					}
 				}
+			}
+			break;
+		case S_UPDATE_JETPACK:
+			if ((int) this.data.get(0) == 1) {
+				Item jetpack = player.inventory.armorItemInSlot(2).getItem();
+				((JetpackArmorBase) jetpack).activeJetPack = true;
+			} else if ((int) this.data.get(0) == 0) {
+				Item jetpack = player.inventory.armorItemInSlot(2).getItem();
+				((JetpackArmorBase) jetpack).activeJetPack = false;
 			}
 			break;
 		default:

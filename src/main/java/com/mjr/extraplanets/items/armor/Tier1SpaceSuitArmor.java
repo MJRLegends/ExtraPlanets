@@ -6,11 +6,13 @@ import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.model.ModelBiped;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -27,7 +29,7 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 
 	public Tier1SpaceSuitArmor(String name, ArmorMaterial material, int placement) {
 		super(material, 0, placement);
-		setCreativeTab(ExtraPlanets.ArmorTab);
+		this.setCreativeTab(ExtraPlanets.ArmorTab);
 		this.name = name;
 	}
 
@@ -116,5 +118,12 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 				((ArmorCustomModel) armorModel).color = getColor(itemStack);
 		}
 		return armorModel;
+	}
+
+	@Override
+	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
+		if (tab == this.getCreativeTab()) {
+			list.add(new ItemStack(this, 1, 0));
+		}
 	}
 }
