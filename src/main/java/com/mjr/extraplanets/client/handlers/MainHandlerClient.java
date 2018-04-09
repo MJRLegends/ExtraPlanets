@@ -11,6 +11,7 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.overlay.OverlayRocket;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderMoon;
+import micdoodle8.mods.galacticraft.core.dimension.WorldProviderSpaceStation;
 import micdoodle8.mods.galacticraft.core.network.PacketRotateRocket;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
@@ -199,25 +200,42 @@ public class MainHandlerClient {
 				stats = playerBaseClient.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
 			}
 			int pressureLevel = 0;
+			int radiationLevel = 0;
 			if ((player.world.provider instanceof WorldProviderRealisticSpace)) {
 				pressureLevel = ((WorldProviderRealisticSpace) player.world.provider).getPressureLevel();
+				radiationLevel = ((WorldProviderRealisticSpace) player.world.provider).getSolarRadiationLevel();
 			}
 			if (player.world.provider instanceof WorldProviderMoon) {
 				if (Config.GC_PRESSURE)
 					pressureLevel = 80;
+				if (Config.GC_RADIATION)
+					radiationLevel = Config.MOON_RADIATION_AMOUNT;
 			} else if (player.world.provider instanceof WorldProviderMars) {
 				if (Config.GC_PRESSURE)
 					pressureLevel = 90;
+				if (Config.GC_RADIATION)
+					radiationLevel = Config.MARS_RADIATION_AMOUNT;
 			} else if (player.world.provider instanceof WorldProviderVenus) {
 				if (Config.GC_PRESSURE)
 					pressureLevel = 100;
+				if (Config.GC_RADIATION)
+					radiationLevel = Config.VENUS_RADIATION_AMOUNT;
 			} else if (player.world.provider instanceof WorldProviderAsteroids) {
 				if (Config.GC_PRESSURE)
 					pressureLevel = 100;
+				if (Config.GC_RADIATION)
+					radiationLevel = Config.ASTEROIDS_RADIATION_AMOUNT;
+			} else if (player.world.provider instanceof WorldProviderSpaceStation) {
+				if (Config.GC_PRESSURE || Config.PRESSURE)
+					pressureLevel = 100;
+				if (Config.GC_RADIATION || Config.RADIATION)
+					radiationLevel = Config.SPACE_STATION_RADIATION_AMOUNT;
 			}
 			if (pressureLevel != 0)
 				showPressureHUD(Config.PRESSURE, pressureLevel);
-			showRadiationHUD(Config.RADIATION, (int) Math.floor(stats.getRadiationLevel()));
+			radiationLevel = (int) Math.floor(radiationLevel);
+			if (radiationLevel != 0)
+				showRadiationHUD(Config.RADIATION, radiationLevel);
 		}
 
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {

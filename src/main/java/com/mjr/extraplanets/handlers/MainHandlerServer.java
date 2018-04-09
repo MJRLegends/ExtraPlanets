@@ -6,6 +6,7 @@ import java.util.Random;
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderMoon;
+import micdoodle8.mods.galacticraft.core.dimension.WorldProviderSpaceStation;
 import micdoodle8.mods.galacticraft.core.entities.EntityLanderBase;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
@@ -225,12 +226,19 @@ public class MainHandlerServer {
 					checkPressure(event, player, 100);
 				if (Config.GC_RADIATION)
 					checkRadiation(event, player, Config.ASTEROIDS_RADIATION_AMOUNT);
+			} else if (player.world.provider instanceof WorldProviderSpaceStation) {
+				if (Config.GC_PRESSURE || Config.PRESSURE)
+					checkPressure(event, player, 100);
+				if (Config.GC_RADIATION || Config.RADIATION)
+					checkRadiation(event, player, Config.SPACE_STATION_RADIATION_AMOUNT);
 			}
 		}
 	}
 
 	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityPlayerMP playerMP, int amount) {
 		if ((playerMP.ticksExisted - 1) % 50 == 0) {
+			if(amount == 0)
+				return;
 			ItemStack helmet = playerMP.inventory.armorInventory.get(0);
 			ItemStack chest = playerMP.inventory.armorInventory.get(1);
 			ItemStack leggins = playerMP.inventory.armorInventory.get(2);
@@ -263,6 +271,9 @@ public class MainHandlerServer {
 		// 25 Level = 38 mins
 		// 50 Level = 15 mins
 
+		if(amount == 0)
+			return;
+		
 		boolean doDamage = false;
 		boolean doArmorCheck = false;
 		double damageModifer = 0;
@@ -297,7 +308,7 @@ public class MainHandlerServer {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			// System.out.println("Current Level: " + stats.getRadiationLevel());
+			//System.out.println("Current Level: " + stats.getRadiationLevel());
 			if (stats.getRadiationLevel() >= 100) {
 				if ((playerMP.ticksExisted - 1) % 50 == 0)
 					playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
@@ -307,7 +318,7 @@ public class MainHandlerServer {
 					tempLevel = (damageModifer * amount) / 100;
 				else
 					tempLevel = damageModifer * (amount / 10) / 6;
-				// System.out.println("Take ammount: " + tempLevel);
+				//System.out.println("Take amount: " + tempLevel);
 				stats.setRadiationLevel(stats.getRadiationLevel() + tempLevel);
 			} else
 				stats.setRadiationLevel(0);
@@ -357,7 +368,7 @@ public class MainHandlerServer {
 	public void onWorldChange(PlayerChangedDimensionEvent event) {
 		if (event.player.world.isRemote == false) {
 			if (event.player.world.provider instanceof WorldProviderRealisticSpace || event.player.world.provider instanceof WorldProviderMoon || event.player.world.provider instanceof WorldProviderMars
-					|| event.player.world.provider instanceof WorldProviderAsteroids || event.player.world.provider instanceof WorldProviderVenus) {
+					|| event.player.world.provider instanceof WorldProviderAsteroids || event.player.world.provider instanceof WorldProviderVenus || event.player.world.provider instanceof WorldProviderSpaceStation) {
 				EntityPlayer player = event.player;
 				int amount = 0;
 				if (event.player.world.provider instanceof WorldProviderRealisticSpace)
@@ -370,6 +381,8 @@ public class MainHandlerServer {
 					amount = Config.ASTEROIDS_RADIATION_AMOUNT;
 				if (event.player.world.provider instanceof WorldProviderVenus)
 					amount = Config.VENUS_RADIATION_AMOUNT;
+				if (player.world.provider instanceof WorldProviderSpaceStation)
+					amount = Config.SPACE_STATION_RADIATION_AMOUNT;
 				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " " + amount + "% "
 						+ TranslateUtilities.translate("gui.radiation.type.message") + "");
 				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_GREEN + ", " + TranslateUtilities.translate("gui.radiation.reverse.message") + "!");
