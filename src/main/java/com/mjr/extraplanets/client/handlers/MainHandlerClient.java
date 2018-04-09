@@ -228,10 +228,10 @@ public class MainHandlerClient {
 				if (Config.GC_RADIATION || Config.RADIATION)
 					radiationLevel = Config.SPACE_STATION_RADIATION_AMOUNT;
 			}
-			if (pressureLevel != 0)
+			if (pressureLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false)
 				showPressureHUD(Config.PRESSURE, pressureLevel);
 			radiationLevel = (int) Math.floor(radiationLevel);
-			if (radiationLevel != 0)
+			if (radiationLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false)
 				showRadiationHUD(Config.RADIATION, radiationLevel);
 		}
 
