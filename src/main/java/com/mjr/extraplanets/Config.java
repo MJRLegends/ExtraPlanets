@@ -321,6 +321,8 @@ public class Config {
 	public static int RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT;
 	public static int RADIATION_ANTI_RAD_REDUCE_AMOUNT;
 
+	public static int SPACE_STATION_RADIATION_AMOUNT;
+
 	public static int MERCURY_RADIATION_AMOUNT;
 	public static int VENUS_RADIATION_AMOUNT;
 	public static int MARS_RADIATION_AMOUNT;
@@ -748,31 +750,33 @@ public class Config {
 		RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Decontamination Unit", 10, "[range: -2147483647 ~ 2147483647, default: 10]").getInt();
 		RADIATION_ANTI_RAD_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Anti Rad Drinks", 50, "[range: -2147483647 ~ 2147483647, default: 50]").getInt();
 
-		MERCURY_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Mercury (in %)", 25, "[range: 0 ~ 100, default: 25]").getInt();
-		VENUS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Venus (in %)", 5, "[range: 0 ~ 100, default: 5]").getInt();
-		MARS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Mars (in %)", 5, "[range: 0 ~ 100, default: 5]").getInt();
-		ASTEROIDS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Asteroids (in %)", 6, "[range: 0 ~ 100, default: 6]").getInt();
-		CERES_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Ceres (in %)", 50, "[range: 0 ~ 100, default: 50]").getInt();
-		JUPITER_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Jupiter (in %)", 45, "[range: 0 ~ 100, default: 45]").getInt();
-		SATURN_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Saturn (in %)", 30, "[range: 0 ~ 100, default: 30]").getInt();
-		URANUS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Uranus (in %)", 35, "[range: 0 ~ 100, default: 35]").getInt();
-		NEPTUNE_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Neptune (in %)", 42, "[range: 0 ~ 100, default: 42]").getInt();
-		PLUTO_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Pluto (in %)", 30, "[range: 0 ~ 100, default: 30]").getInt();
-		ERIS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Eris (in %)", 50, "[range: 0 ~ 100, default: 50]").getInt();
+		SPACE_STATION_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Space Stations (in %)", 4, "[0 = Disabled. range: 0 ~ 100, default: 4]").getInt();
+		
+		MERCURY_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Mercury (in %)", 25, "[0 = Disabled. range: 0 ~ 100, default: 25]").getInt();
+		VENUS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Venus (in %)", 5, "[0 = Disabled. range: 0 ~ 100, default: 5]").getInt();
+		MARS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Mars (in %)", 5, "[0 = Disabled. range: 0 ~ 100, default: 5]").getInt();
+		ASTEROIDS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Asteroids (in %)", 6, "[0 = Disabled. range: 0 ~ 100, default: 6]").getInt();
+		CERES_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Ceres (in %)", 50, "[0 = Disabled. range: 0 ~ 100, default: 50]").getInt();
+		JUPITER_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Jupiter (in %)", 45, "[0 = Disabled. : 0 ~ 100, default: 45]").getInt();
+		SATURN_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Saturn (in %)", 30, "[0 = Disabled. : 0 ~ 100, default: 30]").getInt();
+		URANUS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Uranus (in %)", 35, "[0 = Disabled. : 0 ~ 100, default: 35]").getInt();
+		NEPTUNE_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Neptune (in %)", 42, "[0 = Disabled. : 0 ~ 100, default: 42]").getInt();
+		PLUTO_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Pluto (in %)", 30, "[0 = Disabled. : 0 ~ 100, default: 30]").getInt();
+		ERIS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Eris (in %)", 50, "[0 = Disabled. : 0 ~ 100, default: 50]").getInt();
 
-		MOON_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Moon (in %)", 3, "[range: 0 ~ 100, default: 3]").getInt();
-		PHOBOS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Phobos (in %)", 5, "[range: 0 ~ 100, default: 5]").getInt();
-		DEIMOS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Deimos (in %)", 5, "[range: 0 ~ 100, default: 5]").getInt();
-		IO_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Io (in %)", 45, "[range: 0 ~ 100, default: 45]").getInt();
-		EUROPA_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Europa (in %)", 45, "[range: 0 ~ 100, default: 45]").getInt();
-		GANYMEDE_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Ganymede (in %)", 45, "[range: 0 ~ 100, default: 45]").getInt();
-		CALLISTO_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Callisto (in %)", 45, "[range: 0 ~ 100, default: 45]").getInt();
-		RHEA_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Rhea (in %)", 30, "[range: 0 ~ 100, default: 30]").getInt();
-		TITAN_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Titan (in %)", 30, "[range: 0 ~ 100, default: 30]").getInt();
-		IAPETUS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Iapetus (in %)", 30, "[range: 0 ~ 100, default: 30]").getInt();
-		TITANIA_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Titania (in %)", 35, "[range: 0 ~ 100, default: 35]").getInt();
-		OBERON_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Oberon (in %)", 35, "[range: 0 ~ 100, default: 35]").getInt();
-		TRITON_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Trition (in %)", 42, "[range: 0 ~ 100, default: 42]").getInt();
+		MOON_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Moon (in %)", 3, "[0 = Disabled. : 0 ~ 100, default: 3]").getInt();
+		PHOBOS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Phobos (in %)", 5, "[0 = Disabled. : 0 ~ 100, default: 5]").getInt();
+		DEIMOS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Deimos (in %)", 5, "[0 = Disabled. : 0 ~ 100, default: 5]").getInt();
+		IO_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Io (in %)", 45, "[0 = Disabled. : 0 ~ 100, default: 45]").getInt();
+		EUROPA_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Europa (in %)", 45, "[0 = Disabled. : 0 ~ 100, default: 45]").getInt();
+		GANYMEDE_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Ganymede (in %)", 45, "[0 = Disabled. : 0 ~ 100, default: 45]").getInt();
+		CALLISTO_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Callisto (in %)", 45, "[0 = Disabled. : 0 ~ 100, default: 45]").getInt();
+		RHEA_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Rhea (in %)", 30, "[0 = Disabled. : 0 ~ 100, default: 30]").getInt();
+		TITAN_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Titan (in %)", 30, "[0 = Disabled. : 0 ~ 100, default: 30]").getInt();
+		IAPETUS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Iapetus (in %)", 30, "[0 = Disabled. : 0 ~ 100, default: 30]").getInt();
+		TITANIA_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Titania (in %)", 35, "[0 = Disabled. : 0 ~ 100, default: 35]").getInt();
+		OBERON_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Oberon (in %)", 35, "[0 = Disabled. : 0 ~ 100, default: 35]").getInt();
+		TRITON_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Trition (in %)", 42, "[0 = Disabled. : 0 ~ 100, default: 42]").getInt();
 
 		MERCURY_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Mercury Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		CERES_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Ceres Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
