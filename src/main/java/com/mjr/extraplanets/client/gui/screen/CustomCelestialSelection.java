@@ -26,6 +26,7 @@ import micdoodle8.mods.galacticraft.api.recipe.SpaceStationRecipe;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.screen.GuiCelestialSelection;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderMoon;
+import micdoodle8.mods.galacticraft.core.dimension.WorldProviderSpaceStation;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
@@ -549,6 +550,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 								pressureLevel = 100;
 							if (Config.GC_RADIATION)
 								radiationLevel = Config.ASTEROIDS_RADIATION_AMOUNT;
+						} else if (temp instanceof WorldProviderSpaceStation || this.selectedBody instanceof Satellite) {
+							if (Config.GC_PRESSURE || Config.PRESSURE)
+								pressureLevel = 100;
+							if (Config.GC_RADIATION || Config.RADIATION)
+								radiationLevel = Config.SPACE_STATION_RADIATION_AMOUNT;
 						} else {
 							radiationLevel = 0;
 							pressureLevel = 0;
