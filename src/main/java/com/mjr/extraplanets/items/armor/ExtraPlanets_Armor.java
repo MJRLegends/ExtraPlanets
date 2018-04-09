@@ -251,21 +251,21 @@ public class ExtraPlanets_Armor {
 
 			TIER_2_SPACE_SUIT_HELMET = new Tier2SpaceSuitArmor("tier1_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, 0).setUnlocalizedName("tier2_space_suit_helmet");
 			TIER_2_SPACE_SUIT_CHEST = new Tier2SpaceSuitArmor("tier1_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, 1).setUnlocalizedName("tier2_space_suit_chest");
-			TIER_1_SPACE_SUIT_JETPACK_CHEST = new Tier2SpaceSuitArmorJetpack("tier1_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, 1).setUnlocalizedName("tier2_space_suit_jetpack_chest");
+			TIER_2_SPACE_SUIT_JETPACK_CHEST = new Tier2SpaceSuitArmorJetpack("tier1_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, 1).setUnlocalizedName("tier2_space_suit_jetpack_chest");
 			TIER_2_SPACE_SUIT_LEGINGS = new Tier2SpaceSuitArmor("tier1_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, 2).setUnlocalizedName("tier2_space_suit_legings");
 			TIER_2_SPACE_SUIT_BOOTS = new Tier2SpaceSuitArmor("tier1_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, 3).setUnlocalizedName("tier2_space_suit_boots");
 			TIER_2_SPACE_SUIT_GRAVITY_BOOTS = new Tier2SpaceSuitArmor("tier2_space_suit", TIER_2_SPACE_SUIT_ARMOR_MATERIAL, 3).setUnlocalizedName("tier2_space_suit_gravity_boots");
 
 			TIER_3_SPACE_SUIT_HELMET = new Tier3SpaceSuitArmor("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, 0).setUnlocalizedName("tier3_space_suit_helmet");
 			TIER_3_SPACE_SUIT_CHEST = new Tier3SpaceSuitArmor("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, 1).setUnlocalizedName("tier3_space_suit_chest");
-			TIER_1_SPACE_SUIT_JETPACK_CHEST = new Tier3SpaceSuitArmorJetpack("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, 1).setUnlocalizedName("tier3_space_suit_jetpack_chest");
+			TIER_3_SPACE_SUIT_JETPACK_CHEST = new Tier3SpaceSuitArmorJetpack("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, 1).setUnlocalizedName("tier3_space_suit_jetpack_chest");
 			TIER_3_SPACE_SUIT_LEGINGS = new Tier3SpaceSuitArmor("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, 2).setUnlocalizedName("tier3_space_suit_legings");
 			TIER_3_SPACE_SUIT_BOOTS = new Tier3SpaceSuitArmor("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, 3).setUnlocalizedName("tier3_space_suit_boots");
 			TIER_3_SPACE_SUIT_GRAVITY_BOOTS = new Tier3SpaceSuitArmor("tier1_space_suit", TIER_3_SPACE_SUIT_ARMOR_MATERIAL, 3).setUnlocalizedName("tier3_space_suit_gravity_boots");
 
 			TIER_4_SPACE_SUIT_HELMET = new Tier4SpaceSuitArmor("tier1_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, 0).setUnlocalizedName("tier4_space_suit_helmet");
 			TIER_4_SPACE_SUIT_CHEST = new Tier4SpaceSuitArmor("tier1_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, 1).setUnlocalizedName("tier4_space_suit_chest");
-			TIER_1_SPACE_SUIT_JETPACK_CHEST = new Tier4SpaceSuitArmorJetpack("tier1_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, 1).setUnlocalizedName("tier4_space_suit_jetpack_chest");
+			TIER_4_SPACE_SUIT_JETPACK_CHEST = new Tier4SpaceSuitArmorJetpack("tier1_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, 1).setUnlocalizedName("tier4_space_suit_jetpack_chest");
 			TIER_4_SPACE_SUIT_LEGINGS = new Tier4SpaceSuitArmor("tier1_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, 2).setUnlocalizedName("tier4_space_suit_legings");
 			TIER_4_SPACE_SUIT_BOOTS = new Tier4SpaceSuitArmor("tier1_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, 3).setUnlocalizedName("tier4_space_suit_boots");
 			TIER_4_SPACE_SUIT_GRAVITY_BOOTS = new Tier4SpaceSuitArmor("tier4_space_suit", TIER_4_SPACE_SUIT_ARMOR_MATERIAL, 3).setUnlocalizedName("tier4_space_suit_gravity_boots");
