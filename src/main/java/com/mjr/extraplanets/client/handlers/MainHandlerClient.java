@@ -28,6 +28,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.settings.GameSettings;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -46,6 +47,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
+import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -57,6 +59,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.IModularArmor;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
@@ -79,6 +82,8 @@ import com.mjr.extraplanets.entities.landers.EntityNeptuneLander;
 import com.mjr.extraplanets.entities.landers.EntitySaturnLander;
 import com.mjr.extraplanets.entities.landers.EntityUranusLander;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
+import com.mjr.extraplanets.items.armor.modules.Module;
+import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
@@ -311,7 +316,38 @@ public class MainHandlerClient {
 					lightning.put(new BlockPos(posX, posY, posZ), 20);
 				}
 			}
+			tickModules(event, player);
 		}
+	}
+
+	private void tickModules(PlayerTickEvent event, EntityLivingBase entityLiving) {
+		EntityPlayerSP player = (EntityPlayerSP) entityLiving;
+
+		ItemStack helmet = player.inventory.armorInventory.get(3);
+		ItemStack chest = player.inventory.armorInventory.get(2);
+		ItemStack leggins = player.inventory.armorInventory.get(1);
+		ItemStack boots = player.inventory.armorInventory.get(0);
+
+		if (helmet.getItem() instanceof IModularArmor)
+			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
+				if (hemletModules.isActive())
+					hemletModules.tickClient(player);
+			}
+		if (chest.getItem() instanceof IModularArmor)
+			for (Module chestModules : ModuleHelper.getModules(chest)) {
+				if (chestModules.isActive())
+					chestModules.tickClient(player);
+			}
+		if (leggins.getItem() instanceof IModularArmor)
+			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
+				if (legginsModules.isActive())
+					legginsModules.tickClient(player);
+			}
+		if (boots.getItem() instanceof IModularArmor)
+			for (Module bootsModules : ModuleHelper.getModules(boots)) {
+				if (bootsModules.isActive())
+					bootsModules.tickClient(player);
+			}
 	}
 
 	@SideOnly(Side.CLIENT)
