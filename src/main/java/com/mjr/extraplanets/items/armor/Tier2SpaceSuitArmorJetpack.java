@@ -2,18 +2,14 @@ package com.mjr.extraplanets.items.armor;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
-
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.model.ModelBiped;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -61,14 +57,14 @@ public class Tier2SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information"));
 		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.2"));
 		list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra"));
 		list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra.2"));
 		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.3"));
 		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.4"));
-		super.addInformation(itemStack, worldIn, list, flagIn);
+		super.addInformation(itemStack, player, list, par4);
 	}
 
 	public static ModelBiped fillingArmorModel(ModelBiped model, EntityLivingBase entityLiving) {
