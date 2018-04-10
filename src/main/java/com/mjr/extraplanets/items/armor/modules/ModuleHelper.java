@@ -31,7 +31,9 @@ public class ModuleHelper {
 				for (int j = 0; j < ExtraPlanets_Modules.modules.size(); j++) {
 					final NBTTagCompound nbttagcompound = tagList.getCompoundTagAt(i);
 					if (ExtraPlanets_Modules.modules.get(j).getName().equalsIgnoreCase(nbttagcompound.getString("module"))) {
-						temp.add(ExtraPlanets_Modules.modules.get(j));
+						Module tempModule = ExtraPlanets_Modules.modules.get(j);
+						tempModule.setActive(nbttagcompound.getBoolean("active"));
+						temp.add(tempModule);
 					}
 				}
 			}
@@ -40,9 +42,9 @@ public class ModuleHelper {
 		return new ArrayList<Module>();
 	}
 
-	public static void setModules(ItemStack item, ArrayList<Module> modules) {
+	public static void setModules(ItemStack item, List<Module> temp) {
 		item.setTagCompound(new NBTTagCompound());
-		for (Module module : modules) {
+		for (Module module : temp) {
 			addModule(item, module);
 		}
 	}
@@ -55,9 +57,33 @@ public class ModuleHelper {
 		NBTTagList tagList = nbt.getTagList("modules", 10);
 		NBTTagCompound moduleNBT = new NBTTagCompound();
 		moduleNBT.setString("module", module.getName());
+		moduleNBT.setBoolean("active", module.isActive());
 		tagList.appendTag(moduleNBT);
 		nbt.setTag("modules", tagList);
 		item.setTagCompound(nbt);
+	}
+
+	public static void addModule(ItemStack item, Module module, boolean active) {
+		if (!item.hasTagCompound())
+			setupModulesNBT(item);
+
+		final NBTTagCompound nbt = item.getTagCompound();
+		NBTTagList tagList = nbt.getTagList("modules", 10);
+		NBTTagCompound moduleNBT = new NBTTagCompound();
+		moduleNBT.setString("module", module.getName());
+		moduleNBT.setBoolean("active", active);
+		tagList.appendTag(moduleNBT);
+		nbt.setTag("modules", tagList);
+		item.setTagCompound(nbt);
+	}
+
+	public static void updateModuleActiveState(ItemStack item, Module module, boolean active) {
+		List<Module> temp = getModules(item);
+		for (Module tempModule : temp) {
+			if (tempModule.getName().equalsIgnoreCase(module.getName()))
+				tempModule.setActive(active);
+		}
+		setModules(item, temp);
 	}
 
 	public static void removeModule(ItemStack item, Module module) {
