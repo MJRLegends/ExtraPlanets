@@ -8,29 +8,28 @@ import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 
 public abstract class Module {
 	private String name;
 	private List<ItemStack> requirements = new ArrayList<ItemStack>();
 	private int slotType;
-	private ResourceLocation iconTexture;
+	private ItemStack icon;
 	private boolean active;
 
-	public Module(String name, List<ItemStack> requirements, int slotType, ResourceLocation iconTexture, boolean active) {
+	public Module(String name, List<ItemStack> requirements, int slotType, ItemStack icon, boolean active) {
 		super();
 		this.name = name;
 		this.requirements = requirements;
 		this.slotType = slotType;
-		this.iconTexture = iconTexture;
+		this.icon = icon;
 		this.active = active;
 	}
 
-	public Module(String name, int slotType, ResourceLocation iconTexture, boolean active) {
+	public Module(String name, int slotType, ItemStack icon, boolean active) {
 		super();
 		this.name = name;
 		this.slotType = slotType;
-		this.setIconTexture(iconTexture);
+		this.setIcon(icon);
 		this.active = active;
 	}
 
@@ -58,12 +57,12 @@ public abstract class Module {
 		this.slotType = slotType;
 	}
 
-	public ResourceLocation getIconTexture() {
-		return iconTexture;
+	public ItemStack getIcon() {
+		return icon;
 	}
 
-	public void setIconTexture(ResourceLocation iconTexture) {
-		this.iconTexture = iconTexture;
+	public void setIcon(ItemStack icon) {
+		this.icon = icon;
 	}
 
 	public boolean isActive() {
@@ -75,6 +74,8 @@ public abstract class Module {
 	}
 
 	public abstract void tickServer(EntityPlayerMP player);
+
 	public abstract void tickClient(EntityPlayerSP player);
+
 	public abstract void renderHelmetOverlay(ItemStack stack, EntityPlayer player, ScaledResolution resolution, float partialTicks);
 }

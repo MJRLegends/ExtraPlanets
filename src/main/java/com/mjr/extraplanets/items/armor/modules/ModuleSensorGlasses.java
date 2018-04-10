@@ -1,19 +1,19 @@
 package com.mjr.extraplanets.items.armor.modules;
 
+import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.client.gui.overlay.OverlaySensorGlasses;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class ModuleSensorGlasses extends Module {
 
 	public ModuleSensorGlasses(String name) {
-		super(name, 3, new ResourceLocation("minecraft:", "textures/items/arrow.png"), true);
+		super(name, 3, new ItemStack(GCItems.sensorGlasses), true);
 	}
 
 	@Override
