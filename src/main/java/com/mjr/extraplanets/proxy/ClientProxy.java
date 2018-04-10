@@ -214,6 +214,7 @@ public class ClientProxy extends CommonProxy {
 		// Register Client Key Handler
 		RegisterUtilities.registerEventHandler(new KeyHandlerClient());
 		ClientUtilities.registerKeyBinding(KeyHandlerClient.openPowerGUI);
+		ClientUtilities.registerKeyBinding(KeyHandlerClient.openModuleManagerGUI);
 
 		super.init(event);
 	}

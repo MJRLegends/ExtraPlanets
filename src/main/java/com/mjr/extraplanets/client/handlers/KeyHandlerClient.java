@@ -13,6 +13,7 @@ import org.lwjgl.input.Keyboard;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.IJetpackArmour;
+import com.mjr.extraplanets.api.IModularArmor;
 import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
@@ -23,9 +24,11 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding openPowerGUI;
+	public static KeyBinding openModuleManagerGUI;
 
 	static {
 		openPowerGUI = new KeyBinding(TranslateUtilities.translate("keybind.vehicle_inv.name"), ConfigManagerCore.keyOverrideFuelLevelI == 0 ? Keyboard.KEY_F : ConfigManagerCore.keyOverrideFuelLevelI, Constants.modName);
+		openModuleManagerGUI = new KeyBinding(TranslateUtilities.translate("keybind.module.mananger.name"), Keyboard.KEY_H, Constants.modName);
 	}
 
 	public static KeyBinding accelerateKey;
@@ -39,7 +42,7 @@ public class KeyHandlerClient extends KeyHandler {
 	private static Minecraft mc = MCUtilities.getMinecraft();
 
 	public KeyHandlerClient() {
-		super(new KeyBinding[] { KeyHandlerClient.openPowerGUI }, new boolean[] { false, false, false }, KeyHandlerClient.getVanillaKeyBindings(), new boolean[] { false, true, true, true, true, true, true });
+		super(new KeyBinding[] { KeyHandlerClient.openPowerGUI, KeyHandlerClient.openModuleManagerGUI }, new boolean[] { false, false, false }, KeyHandlerClient.getVanillaKeyBindings(), new boolean[] { false, true, true, true, true, true, true });
 	}
 
 	private static KeyBinding[] getVanillaKeyBindings() {
@@ -76,6 +79,12 @@ public class KeyHandlerClient extends KeyHandler {
 				if (playerBase.inventory.armorItemInSlot(2).getItem() instanceof IJetpackArmour) {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.world.provider.getDimension(), new Object[] { 1 }));
 				}
+			}
+
+			if (kb.getKeyCode() == KeyHandlerClient.openModuleManagerGUI.getKeyCode()) {
+				if (playerBase.inventory.armorItemInSlot(0).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor
+						|| playerBase.inventory.armorItemInSlot(2).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(3).getItem() instanceof IModularArmor)
+					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_MODULE_MANANGER_GUI, mc.world.provider.getDimension(), new Object[] { playerBase.getGameProfile().getName() }));
 			}
 		}
 	}

@@ -29,6 +29,7 @@ import net.minecraft.world.WorldServer;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
+import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerWakeUpEvent;
 import net.minecraftforge.event.world.WorldEvent;
@@ -44,6 +45,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.IModularArmor;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
@@ -54,6 +56,8 @@ import com.mjr.extraplanets.handlers.capabilities.CapabilityProviderStats;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.items.armor.modules.Module;
+import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
@@ -180,12 +184,39 @@ public class MainHandlerServer {
 	public void onEntityUpdate(LivingEvent.LivingUpdateEvent event) {
 		final EntityLivingBase entityLiving = event.getEntityLiving();
 		if (entityLiving instanceof EntityPlayerMP) {
+			tickModules(event, entityLiving);
 			if (isInGlowstone((EntityPlayerMP) entityLiving))
 				entityLiving.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 500, 0));
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
 			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.world, entityLiving.getEntityBoundingBox(), true) == false)
 				runChecks(event, entityLiving);
 		}
+	}
+
+	private void tickModules(LivingUpdateEvent event, EntityLivingBase entityLiving) {
+		EntityPlayerMP player = (EntityPlayerMP) entityLiving;
+
+		ItemStack helmet = player.inventory.armorInventory.get(3);
+		ItemStack chest = player.inventory.armorInventory.get(1);
+		ItemStack leggins = player.inventory.armorInventory.get(2);
+		ItemStack boots = player.inventory.armorInventory.get(0);
+
+		if (helmet.getItem() instanceof IModularArmor)
+			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
+				hemletModules.tick(player);
+			}
+		if (chest.getItem() instanceof IModularArmor)
+			for (Module chestModules : ModuleHelper.getModules(chest)) {
+				chestModules.tick(player);
+			}
+		if (leggins.getItem() instanceof IModularArmor)
+			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
+				legginsModules.tick(player);
+			}
+		if (boots.getItem() instanceof IModularArmor)
+			for (Module bootsModules : ModuleHelper.getModules(boots)) {
+				bootsModules.tick(player);
+			}
 	}
 
 	public boolean isInGlowstone(EntityPlayerMP player) {

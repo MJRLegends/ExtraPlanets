@@ -23,13 +23,16 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.IModularArmor;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
 import com.mjr.extraplanets.client.model.ArmorCustomModel;
 import com.mjr.extraplanets.client.model.ArmorSpaceSuitModel;
+import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
+import com.mjr.extraplanets.items.armor.modules.TestModule;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor {
+public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor, IModularArmor {
 	public String name;
 
 	public Tier1SpaceSuitArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
@@ -116,11 +119,19 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 		}
 		return armorModel;
 	}
-	
+
 	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
 		if (tab == this.getCreativeTab()) {
 			list.add(new ItemStack(this, 1, 0));
+		}
+	}
+
+	@Override
+	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
+		if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_HELMET && !stack.hasTagCompound()) {
+			ModuleHelper.setupModulesNBT(stack);
+			ModuleHelper.addModule(stack, new TestModule("test"));
 		}
 	}
 }
