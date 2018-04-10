@@ -561,6 +561,13 @@ gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Güçlü Araç Envanterini Aç.
 
+#GUI Module Manager
+gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
+gui.modules_helmet.name=Helmet Modules ##NEEDS TRANSLATE##
+gui.modules_chest.name=Chest Modules ##NEEDS TRANSLATE##
+gui.modules_leggings.name=Leggings Modules ##NEEDS TRANSLATE##
+gui.modules_boots.name=Boots Modules ##NEEDS TRANSLATE##
+
 #Other Blocks
 tile.nuclear_bomb.name=Nükleer Bomba
 tile.fire_bomb.name=Ateş Bombası
