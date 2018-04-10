@@ -16,15 +16,15 @@ public class ContainerModuleManager extends Container {
 
 		// Player inv:
 
-		for (var6 = 0; var6 < 3; ++var6) {
-			for (var7 = 0; var7 < 9; ++var7) {
-				this.addSlotToContainer(new Slot(par1IInventory, var7 + var6 * 9 + 9, 8 + var7 * 18, 91 + 58 + var6 * 18));
-			}
-		}
-
-		for (var6 = 0; var6 < 9; ++var6) {
-			this.addSlotToContainer(new Slot(par1IInventory, var6, 8 + var6 * 18, 91 + 116));
-		}
+//		for (var6 = 0; var6 < 3; ++var6) {
+//			for (var7 = 0; var7 < 9; ++var7) {
+//				this.addSlotToContainer(new Slot(par1IInventory, var7 + var6 * 9 + 9, 8 + var7 * 18, 91 + 58 + var6 * 18));
+//			}
+//		}
+//
+//		for (var6 = 0; var6 < 9; ++var6) {
+//			this.addSlotToContainer(new Slot(par1IInventory, var6, 8 + var6 * 18, 91 + 116));
+//		}
 	}
 
 	@Override
