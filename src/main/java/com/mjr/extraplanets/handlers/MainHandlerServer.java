@@ -203,19 +203,23 @@ public class MainHandlerServer {
 
 		if (helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
-				hemletModules.tick(player);
+				if (hemletModules.isActive())
+					hemletModules.tickServer(player);
 			}
 		if (chest.getItem() instanceof IModularArmor)
 			for (Module chestModules : ModuleHelper.getModules(chest)) {
-				chestModules.tick(player);
+				if (chestModules.isActive())
+					chestModules.tickServer(player);
 			}
 		if (leggins.getItem() instanceof IModularArmor)
 			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
-				legginsModules.tick(player);
+				if (legginsModules.isActive())
+					legginsModules.tickServer(player);
 			}
 		if (boots.getItem() instanceof IModularArmor)
 			for (Module bootsModules : ModuleHelper.getModules(boots)) {
-				bootsModules.tick(player);
+				if (bootsModules.isActive())
+					bootsModules.tickServer(player);
 			}
 	}
 

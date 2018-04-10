@@ -5,6 +5,7 @@ import java.util.List;
 import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
+import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -23,8 +24,9 @@ import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
 import com.mjr.extraplanets.client.model.ArmorCustomModel;
 import com.mjr.extraplanets.client.model.ArmorSpaceSuitModel;
+import com.mjr.extraplanets.items.armor.modules.ExtraPlanets_Modules;
+import com.mjr.extraplanets.items.armor.modules.Module;
 import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
-import com.mjr.extraplanets.items.armor.modules.TestModule;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor, IModularArmor {
@@ -124,17 +126,46 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	}
 
 	@Override
-	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
-		if (tab == this.getCreativeTab()) {
-			list.add(new ItemStack(this, 1, 0));
-		}
+	@SideOnly(Side.CLIENT)
+	public void renderHelmetOverlay(ItemStack stack, EntityPlayer player, ScaledResolution resolution, float partialTicks) {
+		ItemStack helmet = player.inventory.armorInventory.get(3);
+		ItemStack chest = player.inventory.armorInventory.get(2);
+		ItemStack leggins = player.inventory.armorInventory.get(1);
+		ItemStack boots = player.inventory.armorInventory.get(0);
+
+		if (helmet.getItem() instanceof IModularArmor)
+			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
+				if (hemletModules.isActive())
+					hemletModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+			}
+		if (chest.getItem() instanceof IModularArmor)
+			for (Module chestModules : ModuleHelper.getModules(chest)) {
+				if (chestModules.isActive())
+					chestModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+			}
+		if (leggins.getItem() instanceof IModularArmor)
+			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
+				if (legginsModules.isActive())
+					legginsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+			}
+		if (boots.getItem() instanceof IModularArmor)
+			for (Module bootsModules : ModuleHelper.getModules(boots)) {
+				if (bootsModules.isActive())
+					bootsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+			}
 	}
+
+	/*
+	 * Testing Purposes
+	 */
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
 		if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_HELMET && !stack.hasTagCompound()) {
 			ModuleHelper.setupModulesNBT(stack);
-			ModuleHelper.addModule(stack, new TestModule("test"));
+			ModuleHelper.addModule(stack, ExtraPlanets_Modules.getModules().get(0), true);
+			ModuleHelper.addModule(stack, ExtraPlanets_Modules.getModules().get(1), true);
 		}
 	}
+
 }

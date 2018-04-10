@@ -8,6 +8,7 @@ public class ExtraPlanets_Modules {
 
 	public static void init() {
 		modules.add(new TestModule("test"));
+		modules.add(new ModuleSensorGlasses("sensor_glasses"));
 	}
 
 	public static List<Module> getModules() {
