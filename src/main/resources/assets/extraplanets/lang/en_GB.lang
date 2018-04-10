@@ -567,6 +567,11 @@ gui.modules_helmet.name=Helmet Modules
 gui.modules_chest.name=Chest Modules
 gui.modules_leggings.name=Leggings Modules
 gui.modules_boots.name=Boots Modules
+gui.module_list.name=Modules List
+gui.button.install.name=Install Module
+gui.button.uninstall.name=Uninstall Module
+gui.button.disable_module.name=Enable Module
+gui.button.enable_module.name=Disable Module
 
 #Other Blocks
 tile.nuclear_bomb.name=Nuclear Bomb
