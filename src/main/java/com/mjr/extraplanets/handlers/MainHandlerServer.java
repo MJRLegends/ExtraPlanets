@@ -197,8 +197,8 @@ public class MainHandlerServer {
 		EntityPlayerMP player = (EntityPlayerMP) entityLiving;
 
 		ItemStack helmet = player.inventory.armorInventory.get(3);
-		ItemStack chest = player.inventory.armorInventory.get(1);
-		ItemStack leggins = player.inventory.armorInventory.get(2);
+		ItemStack chest = player.inventory.armorInventory.get(2);
+		ItemStack leggins = player.inventory.armorInventory.get(1);
 		ItemStack boots = player.inventory.armorInventory.get(0);
 
 		if (helmet.getItem() instanceof IModularArmor)
@@ -274,10 +274,10 @@ public class MainHandlerServer {
 				return;
 			if ((playerMP.ticksExisted - 1) % 300 == 0 && Config.DEBUG_MODE)
 				MessageUtilities.debugMessageToLog(Constants.modID, "Environment Pressure Amount: " + amount);
-			ItemStack helmet = playerMP.inventory.armorInventory.get(0);
-			ItemStack chest = playerMP.inventory.armorInventory.get(1);
-			ItemStack leggins = playerMP.inventory.armorInventory.get(2);
-			ItemStack boots = playerMP.inventory.armorInventory.get(3);
+			ItemStack helmet = playerMP.inventory.armorInventory.get(3);
+			ItemStack chest = playerMP.inventory.armorInventory.get(2);
+			ItemStack leggins = playerMP.inventory.armorInventory.get(1);
+			ItemStack boots = playerMP.inventory.armorInventory.get(0);
 
 			boolean doDamage = false;
 
