@@ -4,8 +4,6 @@ import ic2.api.item.IElectricItemManager;
 
 import java.util.List;
 
-import javax.annotation.Nullable;
-
 import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
 import micdoodle8.mods.galacticraft.api.item.IItemElectricBase;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -15,7 +13,6 @@ import micdoodle8.mods.galacticraft.core.energy.item.ElectricItemManagerIC2;
 import micdoodle8.mods.galacticraft.core.items.ItemBatteryInfinite;
 import micdoodle8.mods.galacticraft.core.util.CompatibilityManager;
 import micdoodle8.mods.miccore.Annotations.RuntimeInterface;
-import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -62,7 +59,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	}
 
 	@Override
-	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+	public void addInformation(ItemStack itemStack, EntityPlayer entityPlayer, List<String> tooltip, boolean par4) {
 		String color = "";
 		float joules = this.getElectricityStored(itemStack);
 
@@ -170,7 +167,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	}
 
 	@Override
-	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
+	public void getSubItems(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
 		if (tab == GalacticraftCore.galacticraftItemsTab || tab == CreativeTabs.SEARCH) {
 			list.add(ElectricItemHelper.getUncharged(new ItemStack(this)));
 			list.add(ElectricItemHelper.getWithCharge(new ItemStack(this), this.getMaxElectricityStored(new ItemStack(this))));

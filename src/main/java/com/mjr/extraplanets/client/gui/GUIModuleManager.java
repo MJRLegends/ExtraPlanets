@@ -64,9 +64,9 @@ public class GUIModuleManager extends GuiContainerGC {
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		this.fontRenderer.drawString(TranslateUtilities.translate("gui.module_manager.name"), 8, 5, 4210752);
+		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module_manager.name"), 8, 5, 4210752);
 
-		this.fontRenderer.drawString(TranslateUtilities.translate("gui.modules_helmet.name"), 8, 20, 4210752);
+		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.modules_helmet.name"), 8, 20, 4210752);
 		int x = 0;
 		int y = 0;
 		ItemStack helmet = MCUtilities.getClient().player.inventory.armorItemInSlot(3);
@@ -82,7 +82,7 @@ public class GUIModuleManager extends GuiContainerGC {
 			x += 1;
 		}
 
-		this.fontRenderer.drawString(TranslateUtilities.translate("gui.modules_chest.name"), 8, 50, 4210752);
+		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.modules_chest.name"), 8, 50, 4210752);
 		x = 0;
 		y = 0;
 		ItemStack chest = MCUtilities.getClient().player.inventory.armorItemInSlot(2);
@@ -95,7 +95,7 @@ public class GUIModuleManager extends GuiContainerGC {
 			x += 1;
 		}
 
-		this.fontRenderer.drawString(TranslateUtilities.translate("gui.modules_leggings.name"), 8, 80, 4210752);
+		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.modules_leggings.name"), 8, 80, 4210752);
 		x = 0;
 		y = 0;
 		ItemStack legs = MCUtilities.getClient().player.inventory.armorItemInSlot(1);
@@ -108,7 +108,7 @@ public class GUIModuleManager extends GuiContainerGC {
 			x += 1;
 		}
 
-		this.fontRenderer.drawString(TranslateUtilities.translate("gui.modules_boots.name"), 8, 110, 4210752);
+		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.modules_boots.name"), 8, 110, 4210752);
 		x = 0;
 		y = 0;
 		ItemStack boots = MCUtilities.getClient().player.inventory.armorItemInSlot(0);
@@ -121,7 +121,7 @@ public class GUIModuleManager extends GuiContainerGC {
 			x += 1;
 		}
 
-		this.fontRenderer.drawString(TranslateUtilities.translate("gui.module_list.name"), -75, 5, 4210752);
+		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module_list.name"), -75, 5, 4210752);
 		int moduleNumber = 0;
 		x = 0;
 		y = 0;
