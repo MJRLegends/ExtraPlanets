@@ -65,6 +65,7 @@ import com.mjr.extraplanets.handlers.MainHandlerServer;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.armor.ExtraPlanets_Armor;
+import com.mjr.extraplanets.items.armor.modules.ExtraPlanets_Modules;
 import com.mjr.extraplanets.items.schematics.ItemSchematicMarsRover;
 import com.mjr.extraplanets.items.schematics.ItemSchematicTier10ElectricRocket;
 import com.mjr.extraplanets.items.schematics.ItemSchematicTier10Rocket;
@@ -268,6 +269,7 @@ public class ExtraPlanets {
 		ExtraPlanets_Tools.init();
 		ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
+		ExtraPlanets_Modules.init();
 
 		// Bone Meal Handler
 		RegisterUtilities.registerEventHandler(new BoneMealHandler());
