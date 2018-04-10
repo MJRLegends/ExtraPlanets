@@ -32,7 +32,7 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 
 	public Tier2SpaceSuitArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
 		super(material, 0, placement);
-		setCreativeTab(ExtraPlanets.ItemsTab);
+		this.setCreativeTab(ExtraPlanets.ItemsTab);
 		this.name = name;
 	}
 

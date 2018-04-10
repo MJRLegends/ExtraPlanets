@@ -8,11 +8,13 @@ import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -31,7 +33,7 @@ public class Tier1SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 
 	public Tier1SpaceSuitArmorJetpack(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
 		super(material, 1, placement);
-		setCreativeTab(ExtraPlanets.ItemsTab);
+		this.setCreativeTab(ExtraPlanets.ItemsTab);
 		this.name = name;
 	}
 
@@ -91,6 +93,13 @@ public class Tier1SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 				((ArmorCustomModel) armorModel).color = getColor(itemStack);
 		}
 		return armorModel;
+	}
+
+	@Override
+	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
+		if (tab == this.getCreativeTab()) {
+			list.add(new ItemStack(this, 1, 0));
+		}
 	}
 
 	public double getJetpackAccelSpeed() {
