@@ -567,6 +567,11 @@ gui.modules_helmet.name=Helmet Modules ##NEEDS TRANSLATE##
 gui.modules_chest.name=Chest Modules ##NEEDS TRANSLATE##
 gui.modules_leggings.name=Leggings Modules ##NEEDS TRANSLATE##
 gui.modules_boots.name=Boots Modules ##NEEDS TRANSLATE##
+gui.module_list.name=Modules List ##NEEDS TRANSLATE##
+gui.button.install.name=Install Module ##NEEDS TRANSLATE##
+gui.button.uninstall.name=Uninstall Module ##NEEDS TRANSLATE##
+gui.button.disable_module.name=Enable Module ##NEEDS TRANSLATE##
+gui.button.enable_module.name=Disable Module ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=核弹
