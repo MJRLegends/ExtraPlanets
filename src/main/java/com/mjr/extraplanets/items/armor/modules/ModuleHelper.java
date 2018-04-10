@@ -3,6 +3,9 @@ package com.mjr.extraplanets.items.armor.modules;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -87,6 +90,64 @@ public class ModuleHelper {
 	}
 
 	public static void removeModule(ItemStack item, Module module) {
+		List<Module> oldModules = getModules(item);
+		List<Module> newModules = new ArrayList<Module>();
+		for (Module tempModule : oldModules) {
+			if (!tempModule.getName().equalsIgnoreCase(module.getName()))
+				newModules.add(tempModule);
+		}
+		setModules(item, newModules);
+	}
+
+	public static boolean installModule(ItemStack item, Module module, EntityPlayer player) {
+		if (!checkModuleCompact(item, module))
+			return false;
+		boolean hadRequirements = true;
+		for (ItemStack itemTemp : module.getRequirements())
+			if (!player.inventory.hasItemStack(itemTemp))
+				hadRequirements = false;
+		if (hadRequirements) {
+			for (ItemStack itemTemp : module.getRequirements()) {
+				if (player.inventory.hasItemStack(itemTemp)) {
+					for (int i = 0; i < player.inventory.getSizeInventory(); i++) {
+						ItemStack testStack = player.inventory.getStackInSlot(i);
+						if (testStack.equals(itemTemp) && testStack.getCount() >= itemTemp.getCount() && testStack.getMetadata() == itemTemp.getMetadata()) {
+							ItemStack newStack = player.inventory.getStackInSlot(i);
+							if (testStack.getCount() > itemTemp.getCount()) {
+								newStack.setCount(itemTemp.getCount());
+								player.inventory.setInventorySlotContents(i, newStack);
+							} else if (testStack.getCount() == itemTemp.getCount()) {
+								player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
+							}
+						}
+					}
+				}
+			}
+			addModule(item, module);
+			return true;
+		} else
+			return false;
+	}
+
+	public static void uninstallModule(ItemStack item, Module module, EntityPlayer player) {
+		removeModule(item, module);
+		for (ItemStack itemTemp : module.getRequirements()) {
+			player.inventory.addItemStackToInventory(itemTemp);
+		}
+	}
+
+	public static boolean checkModuleCompact(ItemStack item, Module module) {
+		try {
+			EntityEquipmentSlot slotTemp = EntityLiving.getSlotForItemStack(item);
+			int slot = slotTemp.getIndex();
+			if (slot == module.getSlotType())
+				return true;
+			else
+				return false;
+		} catch (Exception ex) {
+			System.out.println(ex.getStackTrace());
+			return false;
+		}
 
 	}
 }

@@ -11,8 +11,8 @@ public class ContainerModuleManager extends Container {
 
 	public ContainerModuleManager(IInventory par1IInventory, EntityPlayer player) {
 		this.inventory = par1IInventory;
-		int var6;
-		int var7;
+//		int var6;
+//		int var7;
 
 		// Player inv:
 

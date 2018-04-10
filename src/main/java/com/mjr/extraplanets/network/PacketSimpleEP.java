@@ -38,6 +38,9 @@ import com.mjr.extraplanets.entities.rockets.EntityElectricSpaceshipBase.EnumLau
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.items.armor.bases.JetpackArmorBase;
+import com.mjr.extraplanets.items.armor.modules.ExtraPlanets_Modules;
+import com.mjr.extraplanets.items.armor.modules.Module;
+import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.extraplanets.util.ExtraPlanetsUtli;
 import com.mjr.mjrlegendslib.network.PacketBase;
 import com.mjr.mjrlegendslib.util.MCUtilities;
@@ -52,12 +55,14 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		S_IGNITE_ROCKET(Side.SERVER), 
 		S_UPDATE_JETPACK(Side.SERVER, Integer.class), 
 		S_OPEN_MODULE_MANANGER_GUI(Side.SERVER, String.class),
+		S_UNINSTALL_MODULE(Side.SERVER, String.class),
+		S_INSTALL_MODULE(Side.SERVER, String.class),
 
 		// CLIENT
 		C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT), 
 		C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), 
 		C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class), 
-		C_OPEN_MODULE_MANANGER_GUI(Side.CLIENT, Integer.class,Integer.class, Integer.class), ;
+		C_OPEN_MODULE_MANANGER_GUI(Side.CLIENT, Integer.class,Integer.class, Integer.class);
 
 		private Side targetSide;
 		private Class<?>[] decodeAs;
@@ -236,6 +241,48 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			break;
 		case S_OPEN_MODULE_MANANGER_GUI:
 			ExtraPlanetsUtli.openModuleManagerGUI(playerBase);
+			break;
+		case S_UNINSTALL_MODULE:
+			Module uninstallModule = null;
+			for(Module temp : ExtraPlanets_Modules.getModules()){
+				if(temp.getName().equalsIgnoreCase((String) this.data.get(0)))
+					uninstallModule = temp;
+			}
+			if(uninstallModule != null){
+				ItemStack stack = player.inventory.armorItemInSlot(3);
+				if(ModuleHelper.checkModuleCompact(stack, uninstallModule))
+					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
+				stack = player.inventory.armorItemInSlot(2);
+				if(ModuleHelper.checkModuleCompact(stack, uninstallModule))
+					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
+				stack = player.inventory.armorItemInSlot(1);
+				if(ModuleHelper.checkModuleCompact(stack, uninstallModule))
+					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
+				stack = player.inventory.armorItemInSlot(0);
+				if(ModuleHelper.checkModuleCompact(stack, uninstallModule))
+					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
+			}
+			break;
+		case S_INSTALL_MODULE:
+			Module installModule = null;
+			for(Module temp : ExtraPlanets_Modules.getModules()){
+				if(temp.getName().equalsIgnoreCase((String) this.data.get(0)))
+					installModule = temp;
+			}
+			if(installModule != null){
+				ItemStack stack = player.inventory.armorItemInSlot(3);
+				if(ModuleHelper.checkModuleCompact(stack, installModule))
+					ModuleHelper.installModule(stack, installModule, playerBase);
+				stack = player.inventory.armorItemInSlot(2);
+				if(ModuleHelper.checkModuleCompact(stack, installModule))
+					ModuleHelper.installModule(stack, installModule, playerBase);
+				stack = player.inventory.armorItemInSlot(1);
+				if(ModuleHelper.checkModuleCompact(stack, installModule))
+					ModuleHelper.installModule(stack, installModule, playerBase);
+				stack = player.inventory.armorItemInSlot(0);
+				if(ModuleHelper.checkModuleCompact(stack, installModule))
+					ModuleHelper.installModule(stack, installModule, playerBase);
+			}
 			break;
 		default:
 			break;
