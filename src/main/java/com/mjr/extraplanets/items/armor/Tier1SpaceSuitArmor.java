@@ -161,5 +161,4 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 			ModuleHelper.addModule(stack, ExtraPlanets_Modules.getModules().get(1), true);
 		}
 	}
-
 }

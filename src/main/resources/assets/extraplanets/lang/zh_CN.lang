@@ -561,6 +561,13 @@ gui.celestial_body_has_dungeon.name=有无地牢
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=打开电力漫游车物品栏
 
+#GUI Module Manager
+gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
+gui.modules_helmet.name=Helmet Modules ##NEEDS TRANSLATE##
+gui.modules_chest.name=Chest Modules ##NEEDS TRANSLATE##
+gui.modules_leggings.name=Leggings Modules ##NEEDS TRANSLATE##
+gui.modules_boots.name=Boots Modules ##NEEDS TRANSLATE##
+
 #Other Blocks
 tile.nuclear_bomb.name=核弹
 tile.fire_bomb.name=火焰炸弹

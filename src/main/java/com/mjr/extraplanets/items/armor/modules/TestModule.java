@@ -9,12 +9,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 
 public class TestModule extends Module {
 
 	public TestModule(String name) {
-		super(name, 3, new ResourceLocation("minecraft:", "textures/items/arrow.png"), true);
+		super(name, 3, new ItemStack(Items.ARROW), true);
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(Items.DIAMOND));
 		this.setRequirements(items);
@@ -27,11 +26,11 @@ public class TestModule extends Module {
 
 	@Override
 	public void tickClient(EntityPlayerSP player) {
-		
+
 	}
 
 	@Override
 	public void renderHelmetOverlay(ItemStack stack, EntityPlayer player, ScaledResolution resolution, float partialTicks) {
-		
+
 	}
 }
