@@ -196,10 +196,10 @@ public class MainHandlerServer {
 	private void tickModules(LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP player = (EntityPlayerMP) entityLiving;
 
-		ItemStack helmet = player.inventory.armorInventory[3];
-		ItemStack chest = player.inventory.armorInventory[2];
-		ItemStack leggins = player.inventory.armorInventory[1];
-		ItemStack boots = player.inventory.armorInventory[0];
+		ItemStack helmet = player.inventory.armorInventory[0];
+		ItemStack chest = player.inventory.armorInventory[1];
+		ItemStack leggins = player.inventory.armorInventory[2];
+		ItemStack boots = player.inventory.armorInventory[3];
 
 		if (helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
@@ -280,10 +280,10 @@ public class MainHandlerServer {
 			if ((playerMP.ticksExisted - 1) % 300 == 0 && Config.DEBUG_MODE)
 				MessageUtilities.debugMessageToLog(Constants.modID, "Environment Pressure Amount: " + amount);
 
-			ItemStack helmet = playerMP.inventory.armorInventory[3];
-			ItemStack chest = playerMP.inventory.armorInventory[2];
-			ItemStack leggins = playerMP.inventory.armorInventory[1];
-			ItemStack boots = playerMP.inventory.armorInventory[0];
+			ItemStack helmet = playerMP.inventory.armorInventory[0];
+			ItemStack chest = playerMP.inventory.armorInventory[1];
+			ItemStack leggins = playerMP.inventory.armorInventory[2];
+			ItemStack boots = playerMP.inventory.armorInventory[3];
 
 			boolean doDamage = false;
 
