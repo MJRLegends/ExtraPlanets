@@ -16,7 +16,7 @@ public abstract class JetpackArmorBase extends ElectricArmorBase implements IJet
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
-		if (activeJetPack){
+		if (activeJetPack) {
 			useJetPack(player);
 			this.discharge(stack, this.powerPerTick(), true);
 		}
@@ -29,5 +29,6 @@ public abstract class JetpackArmorBase extends ElectricArmorBase implements IJet
 
 	@Override
 	public abstract double getJetpackAccelSpeed();
+
 	public abstract float powerPerTick();
 }

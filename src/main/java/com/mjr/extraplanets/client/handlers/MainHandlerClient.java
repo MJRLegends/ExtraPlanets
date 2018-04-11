@@ -320,10 +320,10 @@ public class MainHandlerClient {
 	private void tickModules(PlayerTickEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerSP player = (EntityPlayerSP) entityLiving;
 
-		ItemStack helmet = player.inventory.armorInventory.get(3);
-		ItemStack chest = player.inventory.armorInventory.get(2);
-		ItemStack leggins = player.inventory.armorInventory.get(1);
-		ItemStack boots = player.inventory.armorInventory.get(0);
+		ItemStack helmet = player.inventory.armorInventory[3];
+		ItemStack chest = player.inventory.armorInventory[2];
+		ItemStack leggins = player.inventory.armorInventory[1];
+		ItemStack boots = player.inventory.armorInventory[0];
 
 		if (helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
