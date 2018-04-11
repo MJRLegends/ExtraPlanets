@@ -14,9 +14,9 @@ import com.mjr.extraplanets.api.IModularArmor;
 public class ModuleHelper {
 
 	public static void setupModulesNBT(ItemStack item) {
-		if (item.getItem() instanceof IModularArmor) {
+		if (item != null && item.getItem() instanceof IModularArmor) {
 			final NBTTagCompound nbt = new NBTTagCompound();
-			if (!item.hasTagCompound()) {
+			if (item != null && !item.hasTagCompound()) {
 				NBTTagList tagList = new NBTTagList();
 				nbt.setTag("modules", tagList);
 				item.setTagCompound(nbt);
@@ -26,7 +26,7 @@ public class ModuleHelper {
 
 	public static List<Module> getModules(ItemStack item) {
 		List<Module> temp = new ArrayList<Module>();
-		if (item.hasTagCompound()) {
+		if (item != null && item.hasTagCompound()) {
 			NBTTagCompound nbt = item.getTagCompound();
 			NBTTagList tagList = nbt.getTagList("modules", 10);
 			for (int i = 0; i < tagList.tagCount(); i++) {
@@ -52,7 +52,7 @@ public class ModuleHelper {
 	}
 
 	public static void addModule(ItemStack item, Module module) {
-		if (!item.hasTagCompound())
+		if (item != null && !item.hasTagCompound())
 			setupModulesNBT(item);
 
 		final NBTTagCompound nbt = item.getTagCompound();
@@ -66,7 +66,7 @@ public class ModuleHelper {
 	}
 
 	public static void addModule(ItemStack item, Module module, boolean active) {
-		if (!item.hasTagCompound())
+		if (item != null && !item.hasTagCompound())
 			setupModulesNBT(item);
 
 		final NBTTagCompound nbt = item.getTagCompound();

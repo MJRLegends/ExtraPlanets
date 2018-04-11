@@ -201,22 +201,22 @@ public class MainHandlerServer {
 		ItemStack leggins = player.inventory.armorInventory[2];
 		ItemStack boots = player.inventory.armorInventory[3];
 
-		if (helmet.getItem() instanceof IModularArmor)
+		if (helmet != null && helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
 				if (hemletModules.isActive())
 					hemletModules.tickServer(player);
 			}
-		if (chest.getItem() instanceof IModularArmor)
+		if (chest != null && chest.getItem() instanceof IModularArmor)
 			for (Module chestModules : ModuleHelper.getModules(chest)) {
 				if (chestModules.isActive())
 					chestModules.tickServer(player);
 			}
-		if (leggins.getItem() instanceof IModularArmor)
+		if (leggins != null && leggins.getItem() instanceof IModularArmor)
 			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
 				if (legginsModules.isActive())
 					legginsModules.tickServer(player);
 			}
-		if (boots.getItem() instanceof IModularArmor)
+		if (boots != null && boots.getItem() instanceof IModularArmor)
 			for (Module bootsModules : ModuleHelper.getModules(boots)) {
 				if (bootsModules.isActive())
 					bootsModules.tickServer(player);
