@@ -26,7 +26,7 @@ public class Tier1SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 
 	public Tier1SpaceSuitArmorJetpack(String name, ArmorMaterial material, int placement) {
 		super(material, 1, placement);
-		setCreativeTab(ExtraPlanets.ItemsTab);
+		this.setCreativeTab(ExtraPlanets.ArmorTab);
 		this.name = name;
 	}
 
