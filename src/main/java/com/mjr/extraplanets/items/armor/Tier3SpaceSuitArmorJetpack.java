@@ -8,7 +8,6 @@ import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -25,14 +24,14 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class Tier3SpaceSuitArmorJetpack extends JetpackArmorBase implements IPressureSuit, IRadiationSuit, IBreathableArmor {
 	public String name;
 
-	public Tier3SpaceSuitArmorJetpack(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
-		super(material, 1, placement);
-		setCreativeTab(ExtraPlanets.ItemsTab);
+	public Tier3SpaceSuitArmorJetpack(String name, ArmorMaterial material, int placement) {
+		super(material, 0, placement);
+		this.setCreativeTab(ExtraPlanets.ItemsTab);
 		this.name = name;
 	}
 
 	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
 		if (stack.getItem() == ExtraPlanets_Armor.TIER_3_SPACE_SUIT_JETPACK_CHEST) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_main.png";
 		} else {
@@ -79,7 +78,7 @@ public class Tier3SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {
+	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot, ModelBiped _default) {
 		ModelBiped armorModel = new ArmorSpaceSuitModel(armorSlot);
 		if (itemStack.getItem() instanceof Tier3SpaceSuitArmorJetpack) {
 			armorModel = fillingArmorModel(armorModel, entityLiving);
@@ -95,7 +94,7 @@ public class Tier3SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 
 	@Override
 	public float getMaxElectricityStored(ItemStack theItem) {
-		return 10000*4;
+		return 10000 * 4;
 	}
 
 	@Override

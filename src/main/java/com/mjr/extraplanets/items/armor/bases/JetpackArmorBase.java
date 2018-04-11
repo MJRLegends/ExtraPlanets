@@ -1,7 +1,6 @@
 package com.mjr.extraplanets.items.armor.bases;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
@@ -10,8 +9,8 @@ import com.mjr.extraplanets.api.IJetpackArmour;
 public abstract class JetpackArmorBase extends ElectricArmorBase implements IJetpackArmour {
 	public boolean activeJetPack = false;
 
-	public JetpackArmorBase(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(materialIn, renderIndexIn, equipmentSlotIn);
+	public JetpackArmorBase(ArmorMaterial materialIn, int renderIndexIn, int placement) {
+		super(materialIn, renderIndexIn, placement);
 	}
 
 	@Override

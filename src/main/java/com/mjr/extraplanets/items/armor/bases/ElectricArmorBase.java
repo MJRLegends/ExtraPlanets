@@ -6,7 +6,6 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
 import micdoodle8.mods.galacticraft.api.item.IItemElectricBase;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.energy.EnergyConfigHandler;
 import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
 import micdoodle8.mods.galacticraft.core.energy.item.ElectricItemManagerIC2;
@@ -14,7 +13,6 @@ import micdoodle8.mods.galacticraft.core.items.ItemBatteryInfinite;
 import micdoodle8.mods.miccore.Annotations.RuntimeInterface;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -30,8 +28,8 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	public float transferMax;
 	private static final int DAMAGE_RANGE = 100;
 
-	public ElectricArmorBase(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
-		super(materialIn, renderIndexIn, equipmentSlotIn);
+	public ElectricArmorBase(ArmorMaterial materialIn, int renderIndexIn, int placement) {
+		super(materialIn, renderIndexIn, placement);
 		this.setMaxStackSize(1);
 		this.setMaxDamage(DAMAGE_RANGE);
 		this.setNoRepair();
@@ -166,10 +164,8 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 
 	@Override
 	public void getSubItems(Item par1, CreativeTabs tab, List<ItemStack> list) {
-		if (tab == GalacticraftCore.galacticraftItemsTab || tab == CreativeTabs.SEARCH) {
-			list.add(ElectricItemHelper.getUncharged(new ItemStack(this)));
-			list.add(ElectricItemHelper.getWithCharge(new ItemStack(this), this.getMaxElectricityStored(new ItemStack(this))));
-		}
+		list.add(ElectricItemHelper.getUncharged(new ItemStack(this)));
+		list.add(ElectricItemHelper.getWithCharge(new ItemStack(this), this.getMaxElectricityStored(new ItemStack(this))));
 	}
 
 	public static boolean isElectricItem(Item item) {

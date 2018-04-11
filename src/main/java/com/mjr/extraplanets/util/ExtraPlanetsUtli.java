@@ -39,6 +39,6 @@ public class ExtraPlanetsUtli {
 		ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_OPEN_MODULE_MANANGER_GUI, GCCoreUtil.getDimensionID(player.worldObj), new Object[] { id, 0, 0 }), player);
 		player.openContainer = new ContainerModuleManager(player.inventory, player);
 		player.openContainer.windowId = id;
-		player.openContainer.addListener(player);
+		player.openContainer.onCraftGuiOpened(player);
 	}
 }

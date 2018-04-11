@@ -5,7 +5,6 @@ import java.util.List;
 
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -138,8 +137,7 @@ public class ModuleHelper {
 
 	public static boolean checkModuleCompact(ItemStack item, Module module) {
 		try {
-			EntityEquipmentSlot slotTemp = EntityLiving.getSlotForItemStack(item);
-			int slot = slotTemp.getIndex();
+			int slot = EntityLiving.getArmorPosition(item);
 			if (slot == module.getSlotType())
 				return true;
 			else

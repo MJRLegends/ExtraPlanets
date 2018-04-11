@@ -44,11 +44,11 @@ public class GUIModuleManager extends GuiContainerGC {
 			ModuleHelper.updateModuleActiveState(temp, this.selectedModule, this.selectedModule.isActive());
 			break;
 		case 1:
-			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_INSTALL_MODULE, this.mc.theWorld.provider.getDimensionType().getId(), new Object[] { this.selectedInstallModule.getName() }));
+			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_INSTALL_MODULE, this.mc.theWorld.provider.getDimensionId(), new Object[] { this.selectedInstallModule.getName() }));
 			Minecraft.getMinecraft().thePlayer.closeScreen();
 			break;
 		case 2:
-			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UNINSTALL_MODULE, this.mc.theWorld.provider.getDimensionType().getId(), new Object[] { this.selectedModule.getName() }));
+			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UNINSTALL_MODULE, this.mc.theWorld.provider.getDimensionId(), new Object[] { this.selectedModule.getName() }));
 			Minecraft.getMinecraft().thePlayer.closeScreen();
 			break;
 		}
