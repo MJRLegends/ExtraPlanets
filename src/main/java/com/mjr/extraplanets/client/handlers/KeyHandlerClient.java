@@ -77,14 +77,15 @@ public class KeyHandlerClient extends KeyHandler {
 				}
 			}
 			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
-				if (playerBase.inventory.armorItemInSlot(2).getItem() instanceof IJetpackArmour) {
+				if (playerBase.inventory.armorItemInSlot(2) != null && playerBase.inventory.armorItemInSlot(2).getItem() instanceof IJetpackArmour) {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.theWorld.provider.getDimension(), new Object[] { 1 }));
 				}
 			}
 
 			if (kb.getKeyCode() == KeyHandlerClient.openModuleManagerGUI.getKeyCode()) {
-				if (playerBase.inventory.armorItemInSlot(0).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor
-						|| playerBase.inventory.armorItemInSlot(2).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(3).getItem() instanceof IModularArmor)
+				if (playerBase.inventory.armorItemInSlot(0) != null && playerBase.inventory.armorItemInSlot(0).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(1) != null
+						&& playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(2) != null && playerBase.inventory.armorItemInSlot(2).getItem() instanceof IModularArmor
+						|| playerBase.inventory.armorItemInSlot(3) != null && playerBase.inventory.armorItemInSlot(3).getItem() instanceof IModularArmor)
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_MODULE_MANANGER_GUI, mc.theWorld.provider.getDimension(), new Object[] { playerBase.getGameProfile().getName() }));
 			}
 		}
@@ -98,7 +99,7 @@ public class KeyHandlerClient extends KeyHandler {
 				return;
 			}
 			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
-				if (playerBase.inventory.armorItemInSlot(2).getItem() instanceof IJetpackArmour) {
+				if (playerBase.inventory.armorItemInSlot(2) != null && playerBase.inventory.armorItemInSlot(2).getItem() instanceof IJetpackArmour) {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.theWorld.provider.getDimension(), new Object[] { 0 }));
 				}
 			}
