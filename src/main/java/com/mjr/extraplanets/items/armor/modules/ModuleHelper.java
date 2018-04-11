@@ -137,7 +137,7 @@ public class ModuleHelper {
 
 	public static boolean checkModuleCompact(ItemStack item, Module module) {
 		try {
-			int slot = EntityLiving.getArmorPosition(item);
+			int slot = EntityLiving.getArmorPosition(item)-1;
 			if (slot == module.getSlotType())
 				return true;
 			else
