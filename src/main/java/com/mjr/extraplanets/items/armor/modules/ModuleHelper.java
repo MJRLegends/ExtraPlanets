@@ -111,13 +111,13 @@ public class ModuleHelper {
 				if (player.inventory.hasItemStack(itemTemp)) {
 					for (int i = 0; i < player.inventory.getSizeInventory(); i++) {
 						ItemStack testStack = player.inventory.getStackInSlot(i);
-						if (testStack.equals(itemTemp) && testStack.getCount() >= itemTemp.getCount() && testStack.getMetadata() == itemTemp.getMetadata()) {
+						if (testStack.equals(itemTemp) && testStack.stackSize >= itemTemp.stackSize && testStack.getMetadata() == itemTemp.getMetadata()) {
 							ItemStack newStack = player.inventory.getStackInSlot(i);
-							if (testStack.getCount() > itemTemp.getCount()) {
-								newStack.setCount(itemTemp.getCount());
+							if (testStack.stackSize > itemTemp.stackSize) {
+								newStack.stackSize = itemTemp.stackSize;
 								player.inventory.setInventorySlotContents(i, newStack);
-							} else if (testStack.getCount() == itemTemp.getCount()) {
-								player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
+							} else if (testStack.stackSize == itemTemp.stackSize) {
+								player.inventory.setInventorySlotContents(i, null);
 							}
 						}
 					}

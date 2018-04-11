@@ -29,7 +29,7 @@ public class ContainerModuleManager extends Container {
 
 	@Override
 	public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
-		return this.inventory.isUsableByPlayer(par1EntityPlayer);
+		return this.inventory.isUseableByPlayer(par1EntityPlayer);
 	}
 
 	/**
@@ -37,7 +37,7 @@ public class ContainerModuleManager extends Container {
 	 */
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
-		ItemStack var3 = ItemStack.EMPTY;
+		ItemStack var3 = null;
 		final Slot var4 = this.inventorySlots.get(par2);
 		final int b = this.inventorySlots.size() - 36;
 
@@ -47,14 +47,14 @@ public class ContainerModuleManager extends Container {
 
 			if (par2 < b) {
 				if (!this.mergeItemStack(var5, b, b + 36, true)) {
-					return ItemStack.EMPTY;
+					return null;
 				}
 			} else if (!this.mergeItemStack(var5, 0, b, false)) {
-				return ItemStack.EMPTY;
+				return null;
 			}
 
-			if (var5.getCount() == 0) {
-				var4.putStack(ItemStack.EMPTY);
+			if (var5.stackSize == 0) {
+				var4.putStack(null);
 			} else {
 				var4.onSlotChanged();
 			}

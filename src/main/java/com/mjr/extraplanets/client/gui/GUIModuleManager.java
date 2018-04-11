@@ -32,7 +32,7 @@ public class GUIModuleManager extends GuiContainerGC {
 	private GuiButton buttonUninstall;
 
 	public GUIModuleManager(IInventory par1IInventory) {
-		super(new ContainerModuleManager(par1IInventory, MCUtilities.getClient().player));
+		super(new ContainerModuleManager(par1IInventory, MCUtilities.getClient().thePlayer));
 	}
 
 	@Override
@@ -40,16 +40,16 @@ public class GUIModuleManager extends GuiContainerGC {
 		switch (par1GuiButton.id) {
 		case 0:
 			this.selectedModule.setActive(this.selectedModule.isActive() ? false : true);
-			ItemStack temp = MCUtilities.getClient().player.inventory.armorItemInSlot(selectedModule.getSlotType());
+			ItemStack temp = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(selectedModule.getSlotType());
 			ModuleHelper.updateModuleActiveState(temp, this.selectedModule, this.selectedModule.isActive());
 			break;
 		case 1:
-			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_INSTALL_MODULE, this.mc.world.provider.getDimensionType().getId(), new Object[] { this.selectedInstallModule.getName() }));
-			Minecraft.getMinecraft().player.closeScreen();
+			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_INSTALL_MODULE, this.mc.theWorld.provider.getDimensionType().getId(), new Object[] { this.selectedInstallModule.getName() }));
+			Minecraft.getMinecraft().thePlayer.closeScreen();
 			break;
 		case 2:
-			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UNINSTALL_MODULE, this.mc.world.provider.getDimensionType().getId(), new Object[] { this.selectedModule.getName() }));
-			Minecraft.getMinecraft().player.closeScreen();
+			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UNINSTALL_MODULE, this.mc.theWorld.provider.getDimensionType().getId(), new Object[] { this.selectedModule.getName() }));
+			Minecraft.getMinecraft().thePlayer.closeScreen();
 			break;
 		}
 	}
@@ -69,7 +69,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.modules_helmet.name"), 8, 20, 4210752);
 		int x = 0;
 		int y = 0;
-		ItemStack helmet = MCUtilities.getClient().player.inventory.armorItemInSlot(3);
+		ItemStack helmet = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(3);
 		for (Module modules : ModuleHelper.getModules(helmet)) {
 			if (selectedModule == null)
 				selectedModule = modules;
@@ -85,7 +85,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.modules_chest.name"), 8, 50, 4210752);
 		x = 0;
 		y = 0;
-		ItemStack chest = MCUtilities.getClient().player.inventory.armorItemInSlot(2);
+		ItemStack chest = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(2);
 		for (Module modules : ModuleHelper.getModules(chest)) {
 			if (selectedModule.equals(modules)) {
 				this.mc.getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png"));
@@ -98,7 +98,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.modules_leggings.name"), 8, 80, 4210752);
 		x = 0;
 		y = 0;
-		ItemStack legs = MCUtilities.getClient().player.inventory.armorItemInSlot(1);
+		ItemStack legs = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(1);
 		for (Module modules : ModuleHelper.getModules(legs)) {
 			if (selectedModule.equals(modules)) {
 				this.mc.getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png"));
@@ -111,7 +111,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.modules_boots.name"), 8, 110, 4210752);
 		x = 0;
 		y = 0;
-		ItemStack boots = MCUtilities.getClient().player.inventory.armorItemInSlot(0);
+		ItemStack boots = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(0);
 		for (Module modules : ModuleHelper.getModules(boots)) {
 			if (selectedModule.equals(modules)) {
 				this.mc.getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png"));
@@ -161,38 +161,38 @@ public class GUIModuleManager extends GuiContainerGC {
 
 		int startX = this.width / 2 - 80;
 		int startY = this.height / 2 - 53;
-		for (int i = 0; i < ModuleHelper.getModules(MCUtilities.getClient().player.inventory.armorItemInSlot(3)).size(); i++) {
+		for (int i = 0; i < ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(3)).size(); i++) {
 			if (i != 0)
 				startX = startX + 8;
 			if ((mouseX >= startX + (i * 16) && mouseX <= startX + 16 + (i * 16)) && (mouseY >= startY && mouseY <= startY + 16)) {
-				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().player.inventory.armorItemInSlot(3)).get(i);
+				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(3)).get(i);
 			}
 		}
 		startX = this.width / 2 - 80;
 		startY = startY + 30;
-		for (int i = 0; i < ModuleHelper.getModules(MCUtilities.getClient().player.inventory.armorItemInSlot(2)).size(); i++) {
+		for (int i = 0; i < ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(2)).size(); i++) {
 			if (i != 0)
 				startX = startX + 8;
 			if ((mouseX >= startX + (i * 16) && mouseX <= startX + 16 + (i * 16)) && (mouseY >= startY && mouseY <= startY + 16)) {
-				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().player.inventory.armorItemInSlot(2)).get(i);
+				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(2)).get(i);
 			}
 		}
 		startX = this.width / 2 - 80;
 		startY = startY + 30;
-		for (int i = 0; i < ModuleHelper.getModules(MCUtilities.getClient().player.inventory.armorItemInSlot(1)).size(); i++) {
+		for (int i = 0; i < ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(1)).size(); i++) {
 			if (i != 0)
 				startX = startX + 8;
 			if ((mouseX >= startX + (i * 16) && mouseX <= startX + 16 + (i * 16)) && (mouseY >= startY && mouseY <= startY + 16)) {
-				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().player.inventory.armorItemInSlot(1)).get(i);
+				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(1)).get(i);
 			}
 		}
 		startX = this.width / 2 - 80;
 		startY = startY + 30;
-		for (int i = 0; i < ModuleHelper.getModules(MCUtilities.getClient().player.inventory.armorItemInSlot(0)).size(); i++) {
+		for (int i = 0; i < ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(0)).size(); i++) {
 			if (i != 0)
 				startX = startX + 8;
 			if ((mouseX >= startX + (i * 16) && mouseX <= startX + 16 + (i * 16)) && (mouseY >= startY && mouseY <= startY + 16)) {
-				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().player.inventory.armorItemInSlot(0)).get(i);
+				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(0)).get(i);
 			}
 		}
 		
