@@ -27,7 +27,6 @@ import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
 import com.mjr.extraplanets.client.model.ArmorCustomModel;
 import com.mjr.extraplanets.client.model.ArmorSpaceSuitModel;
-import com.mjr.extraplanets.items.armor.modules.ExtraPlanets_Modules;
 import com.mjr.extraplanets.items.armor.modules.Module;
 import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
@@ -148,17 +147,5 @@ public class Tier1SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 				if (bootsModules.isActive())
 					bootsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
-	}
-
-	/*
-	 * Testing Purposes
-	 */
-	@Override
-	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
-		if (stack.getItem() == ExtraPlanets_Armor.TIER_1_SPACE_SUIT_HELMET && !stack.hasTagCompound()) {
-			ModuleHelper.setupModulesNBT(stack);
-			ModuleHelper.addModule(stack, ExtraPlanets_Modules.getModules().get(0), true);
-			ModuleHelper.addModule(stack, ExtraPlanets_Modules.getModules().get(1), true);
-		}
 	}
 }
