@@ -1,5 +1,8 @@
 package com.mjr.extraplanets.items.armor.modules;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.client.gui.overlay.OverlaySensorGlasses;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -14,6 +17,9 @@ public class ModuleSensorGlasses extends Module {
 
 	public ModuleSensorGlasses(String name) {
 		super(name, 3, new ItemStack(GCItems.sensorGlasses), true);
+		List<ItemStack> items = new ArrayList<ItemStack>();
+		items.add(new ItemStack(GCItems.sensorGlasses));
+		this.setRequirements(items);
 	}
 
 	@Override
