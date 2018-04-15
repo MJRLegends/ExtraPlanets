@@ -156,7 +156,7 @@ public class GUIModuleManager extends GuiContainerGC {
 			x += 1;
 		}
 		
-		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module_cost.name"), -105, 5, 4210752);
+		this.fontRenderer.drawString(TranslateUtilities.translate("gui.module_cost.name"), -105, 5, 4210752);
 		y = 0;
 		for (ItemStack stack : this.selectedInstallModule.getRequirements()) {
 			this.itemRender.renderItemAndEffectIntoGUI(stack, -102, 18 + y);
