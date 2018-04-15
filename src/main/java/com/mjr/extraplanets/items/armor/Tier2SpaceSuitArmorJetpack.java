@@ -4,6 +4,7 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
+import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -14,14 +15,17 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.IModularArmor;
 import com.mjr.extraplanets.api.IPressureSuit;
 import com.mjr.extraplanets.api.IRadiationSuit;
 import com.mjr.extraplanets.client.model.ArmorCustomModel;
 import com.mjr.extraplanets.client.model.ArmorSpaceSuitModel;
 import com.mjr.extraplanets.items.armor.bases.JetpackArmorBase;
+import com.mjr.extraplanets.items.armor.modules.Module;
+import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class Tier2SpaceSuitArmorJetpack extends JetpackArmorBase implements IPressureSuit, IRadiationSuit, IBreathableArmor {
+public class Tier2SpaceSuitArmorJetpack extends JetpackArmorBase implements IPressureSuit, IRadiationSuit, IBreathableArmor, IModularArmor {
 	public String name;
 
 	public Tier2SpaceSuitArmorJetpack(String name, ArmorMaterial material, int placement) {
@@ -100,5 +104,35 @@ public class Tier2SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 	@Override
 	public float powerPerTick() {
 		return 1.7F;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void renderHelmetOverlay(ItemStack stack, EntityPlayer player, ScaledResolution resolution, float partialTicks) {
+		ItemStack helmet = player.inventory.armorInventory.get(3);
+		ItemStack chest = player.inventory.armorInventory.get(2);
+		ItemStack leggins = player.inventory.armorInventory.get(1);
+		ItemStack boots = player.inventory.armorInventory.get(0);
+
+		if (helmet.getItem() instanceof IModularArmor)
+			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
+				if (hemletModules.isActive())
+					hemletModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+			}
+		if (chest.getItem() instanceof IModularArmor)
+			for (Module chestModules : ModuleHelper.getModules(chest)) {
+				if (chestModules.isActive())
+					chestModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+			}
+		if (leggins.getItem() instanceof IModularArmor)
+			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
+				if (legginsModules.isActive())
+					legginsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+			}
+		if (boots.getItem() instanceof IModularArmor)
+			for (Module bootsModules : ModuleHelper.getModules(boots)) {
+				if (bootsModules.isActive())
+					bootsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+			}
 	}
 }
