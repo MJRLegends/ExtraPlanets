@@ -159,7 +159,7 @@ public class GUIModuleManager extends GuiContainerGC {
 	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
 		this.buttonActiveState.enabled = true;
 		if (this.selectedModule != null)
-			this.buttonActiveState.displayString = this.selectedModule.isActive() ? TranslateUtilities.translate("gui.button.disable_module.name") : TranslateUtilities.translate("gui.button.enable_module.name");
+			this.buttonActiveState.displayString = this.selectedModule.isActive() ? TranslateUtilities.translate("gui.button.enable_module.name") : TranslateUtilities.translate("gui.button.disable_module.name");
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		final int var5 = (this.width - this.xSize) / 2;
 		final int var6 = (this.height - this.ySize) / 2;

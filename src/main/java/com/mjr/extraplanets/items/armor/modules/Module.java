@@ -42,7 +42,7 @@ public abstract class Module {
 	}
 
 	public List<ItemStack> getRequirements() {
-		return requirements;
+		return this.requirements;
 	}
 
 	public void setRequirements(List<ItemStack> requirements) {
