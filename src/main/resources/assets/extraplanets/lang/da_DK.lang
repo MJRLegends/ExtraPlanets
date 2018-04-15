@@ -572,6 +572,10 @@ gui.button.install.name=Install Module ##NEEDS TRANSLATE##
 gui.button.uninstall.name=Uninstall Module ##NEEDS TRANSLATE##
 gui.button.disable_module.name=Enable Module ##NEEDS TRANSLATE##
 gui.button.enable_module.name=Disable Module ##NEEDS TRANSLATE##
+gui.module_cost.name=Cost ##NEEDS TRANSLATE##
+gui.moudle.installed.name=Module Installed! ##NEEDS TRANSLATE##
+gui.moudle.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
+gui.moudle.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Nuclear Bomb ##NEEDS TRANSLATE##
