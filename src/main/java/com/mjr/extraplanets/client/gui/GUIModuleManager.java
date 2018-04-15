@@ -26,7 +26,7 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class GUIModuleManager extends GuiContainerGC {
 	public Module selectedModule;
 	public Module selectedInstallModule;
-	
+
 	private GuiButton buttonActiveState;
 	private GuiButton buttonInstall;
 	private GuiButton buttonUninstall;
@@ -39,15 +39,21 @@ public class GUIModuleManager extends GuiContainerGC {
 	protected void actionPerformed(GuiButton par1GuiButton) {
 		switch (par1GuiButton.id) {
 		case 0:
+			if (this.selectedModule == null)
+				return;
 			this.selectedModule.setActive(this.selectedModule.isActive() ? false : true);
 			ItemStack temp = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(selectedModule.getSlotType());
 			ModuleHelper.updateModuleActiveState(temp, this.selectedModule, this.selectedModule.isActive());
 			break;
 		case 1:
+			if (this.selectedInstallModule == null)
+				return;
 			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_INSTALL_MODULE, this.mc.theWorld.provider.getDimensionType().getId(), new Object[] { this.selectedInstallModule.getName() }));
 			Minecraft.getMinecraft().thePlayer.closeScreen();
 			break;
 		case 2:
+			if (this.selectedModule == null)
+				return;
 			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UNINSTALL_MODULE, this.mc.theWorld.provider.getDimensionType().getId(), new Object[] { this.selectedModule.getName() }));
 			Minecraft.getMinecraft().thePlayer.closeScreen();
 			break;
@@ -87,6 +93,8 @@ public class GUIModuleManager extends GuiContainerGC {
 		y = 0;
 		ItemStack chest = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(2);
 		for (Module modules : ModuleHelper.getModules(chest)) {
+			if (selectedModule == null)
+				selectedModule = modules;
 			if (selectedModule.equals(modules)) {
 				this.mc.getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png"));
 				this.drawTexturedModalRect(8 + (10 * x) + (x * 12), 60 + (10 * y) + (y * 5), 0, 0, 16, 16);
@@ -100,6 +108,8 @@ public class GUIModuleManager extends GuiContainerGC {
 		y = 0;
 		ItemStack legs = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(1);
 		for (Module modules : ModuleHelper.getModules(legs)) {
+			if (selectedModule == null)
+				selectedModule = modules;
 			if (selectedModule.equals(modules)) {
 				this.mc.getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png"));
 				this.drawTexturedModalRect(8 + (10 * x) + (x * 12), 90 + (10 * y) + (y * 5), 0, 0, 16, 16);
@@ -113,6 +123,8 @@ public class GUIModuleManager extends GuiContainerGC {
 		y = 0;
 		ItemStack boots = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(0);
 		for (Module modules : ModuleHelper.getModules(boots)) {
+			if (selectedModule == null)
+				selectedModule = modules;
 			if (selectedModule.equals(modules)) {
 				this.mc.getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png"));
 				this.drawTexturedModalRect(8 + (10 * x) + (x * 12), 120 + (10 * y) + (y * 5), 0, 0, 16, 16);
@@ -126,7 +138,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		x = 0;
 		y = 0;
 		for (Module modules : ExtraPlanets_Modules.getModules()) {
-			if(selectedInstallModule == null)
+			if (selectedInstallModule == null)
 				selectedInstallModule = modules;
 			if (moduleNumber == 3) {
 				y += 18;
@@ -195,7 +207,7 @@ public class GUIModuleManager extends GuiContainerGC {
 				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(0)).get(i);
 			}
 		}
-		
+
 		startX = this.width / 2 - 160;
 		startY = this.height / 2 - 64;
 
@@ -214,7 +226,7 @@ public class GUIModuleManager extends GuiContainerGC {
 				this.selectedInstallModule = ExtraPlanets_Modules.getModules().get(i);
 			}
 			moduleNumber += 1;
-			x +=1;
+			x += 1;
 		}
 	}
 }
