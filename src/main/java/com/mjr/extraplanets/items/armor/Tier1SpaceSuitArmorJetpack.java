@@ -109,10 +109,10 @@ public class Tier1SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void renderHelmetOverlay(ItemStack stack, EntityPlayer player, ScaledResolution resolution, float partialTicks) {
-		ItemStack helmet = player.inventory.armorInventory[3];
-		ItemStack chest = player.inventory.armorInventory[2];
-		ItemStack leggins = player.inventory.armorInventory[1];
-		ItemStack boots = player.inventory.armorInventory[0];
+		ItemStack helmet = player.inventory.armorInventory[0];
+		ItemStack chest = player.inventory.armorInventory[1];
+		ItemStack leggins = player.inventory.armorInventory[2];
+		ItemStack boots = player.inventory.armorInventory[3];
 
 		if (helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
