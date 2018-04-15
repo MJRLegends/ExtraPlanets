@@ -155,6 +155,13 @@ public class GUIModuleManager extends GuiContainerGC {
 			moduleNumber += 1;
 			x += 1;
 		}
+		
+		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module_cost.name"), -105, 5, 4210752);
+		y = 0;
+		for (ItemStack stack : this.selectedInstallModule.getRequirements()) {
+			this.itemRender.renderItemAndEffectIntoGUI(stack, -102, 18 + y);
+			y += 18;
+		}
 	}
 
 	@Override
@@ -169,6 +176,8 @@ public class GUIModuleManager extends GuiContainerGC {
 		this.drawTexturedModalRect(var5, var6, 0, 0, 196, 167);
 		this.mc.getTextureManager().bindTexture(guiTexture);
 		this.drawTexturedModalRect(var5 - 80, var6, 0, 0, 80, 167);
+		this.mc.getTextureManager().bindTexture(guiTexture);
+		this.drawTexturedModalRect(var5 - 110, var6, 0, 0, 30, 167);
 	}
 
 	@Override

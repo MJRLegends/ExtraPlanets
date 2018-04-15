@@ -293,11 +293,11 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 					else
 						alreadyHas = true;
 				if (!meetRequirements && !alreadyHas)
-					PlayerUtilties.sendMessage(playerBase, "Sorry you do not meet the requirements to install this module!");
+					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.moudle.missing_requirements.name"));
 				else if (alreadyHas)
-					PlayerUtilties.sendMessage(playerBase, "You already have this module installed!");
+					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.moudle.already_installed.name"));
 				else
-					PlayerUtilties.sendMessage(playerBase, "Module Installed!");
+					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.moudle.installed.name"));
 			}
 			break;
 		default:
