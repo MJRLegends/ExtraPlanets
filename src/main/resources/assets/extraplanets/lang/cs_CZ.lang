@@ -561,6 +561,22 @@ gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Open Powered Vehicle Inventory ##NEEDS TRANSLATE##
 
+#GUI Module Manager
+gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
+gui.modules_helmet.name=Helmet Modules ##NEEDS TRANSLATE##
+gui.modules_chest.name=Chest Modules ##NEEDS TRANSLATE##
+gui.modules_leggings.name=Leggings Modules ##NEEDS TRANSLATE##
+gui.modules_boots.name=Boots Modules ##NEEDS TRANSLATE##
+gui.module_list.name=Modules List ##NEEDS TRANSLATE##
+gui.button.install.name=Install Module ##NEEDS TRANSLATE##
+gui.button.uninstall.name=Uninstall Module ##NEEDS TRANSLATE##
+gui.button.disable_module.name=Enable Module ##NEEDS TRANSLATE##
+gui.button.enable_module.name=Disable Module ##NEEDS TRANSLATE##
+gui.module_cost.name=Cost ##NEEDS TRANSLATE##
+gui.moudle.installed.name=Module Installed! ##NEEDS TRANSLATE##
+gui.moudle.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
+gui.moudle.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
+
 #Other Blocks
 tile.nuclear_bomb.name=Jaderná bomba
 tile.fire_bomb.name=Fire Bomb ##NEEDS TRANSLATE##

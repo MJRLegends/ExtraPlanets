@@ -561,6 +561,22 @@ gui.celestial_body_has_dungeon.name=有无地牢
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=打开电力漫游车物品栏
 
+#GUI Module Manager
+gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
+gui.modules_helmet.name=Helmet Modules ##NEEDS TRANSLATE##
+gui.modules_chest.name=Chest Modules ##NEEDS TRANSLATE##
+gui.modules_leggings.name=Leggings Modules ##NEEDS TRANSLATE##
+gui.modules_boots.name=Boots Modules ##NEEDS TRANSLATE##
+gui.module_list.name=Modules List ##NEEDS TRANSLATE##
+gui.button.install.name=Install Module ##NEEDS TRANSLATE##
+gui.button.uninstall.name=Uninstall Module ##NEEDS TRANSLATE##
+gui.button.disable_module.name=Enable Module ##NEEDS TRANSLATE##
+gui.button.enable_module.name=Disable Module ##NEEDS TRANSLATE##
+gui.module_cost.name=Cost ##NEEDS TRANSLATE##
+gui.moudle.installed.name=Module Installed! ##NEEDS TRANSLATE##
+gui.moudle.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
+gui.moudle.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
+
 #Other Blocks
 tile.nuclear_bomb.name=核弹
 tile.fire_bomb.name=火焰炸弹
@@ -1027,12 +1043,12 @@ item.tier4_space_suit_legings.name=4 阶太空服护腿
 item.tier4_space_suit_boots.name=4 阶太空服靴子
 item.tier4_space_suit_gravity_boots.name=4 阶太空服重力靴子
 
-space.suit.information=用于完全抵御压强带来的伤
-space.suit.information.2=害并减慢获得辐射的速率
-space.suit.information.extra=太空服的每一部分的等级对于减
-space.suit.information.extra.2=慢获得辐射的速率来说非常重要
-space.suit.information.extra.3=太空服的等级越高，获
-space.suit.information.extra.4=得辐射的速率将越慢
+space.suit.information=Used to full stop pressure damage ##NEEDS TRANSLATE##
+space.suit.information.2=& slow down the rate of radiation gained ##NEEDS TRANSLATE##
+space.suit.information.extra=The Tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
+space.suit.information.extra.2=towards reducing the amount of radiation gained ##NEEDS TRANSLATE##
+space.suit.information.extra.3=The Higher the Space Suit Tier the ##NEEDS TRANSLATE##
+space.suit.information.extra.4=slower radiation will be gained ##NEEDS TRANSLATE##
 
 item.tier3_thermal_helm.name=3 阶热防护头盔
 item.tier3_thermal_chestplate.name=3 阶热防护胸甲
@@ -1379,7 +1395,7 @@ checklist.tier_3_thermal_padding.key=需要 3 阶热防护服
 checklist.tier_4_thermal_padding.key=需要 4 阶热防护服
 checklist.tier_5_thermal_padding.key=需要 5 阶热防护服
 
-checklist.space_suit.key=任意等级的太空服
+checklist.space_suit.key=Any Tier of Space Suit ##NEEDS TRANSLATE##
 
 satellite.space_station.mercury=水星空间站
 satellite.space_station.venus=金星空间站

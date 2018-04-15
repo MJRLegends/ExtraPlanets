@@ -561,6 +561,22 @@ gui.celestial_body_has_dungeon.name=Has Dungeon
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Open Powered Vehicle Inventory
 
+#GUI Module Manager
+gui.module_manager.name=Module Manager
+gui.modules_helmet.name=Helmet Modules
+gui.modules_chest.name=Chest Modules
+gui.modules_leggings.name=Leggings Modules
+gui.modules_boots.name=Boots Modules
+gui.module_list.name=Modules List
+gui.button.install.name=Install Module
+gui.button.uninstall.name=Uninstall Module
+gui.button.disable_module.name=Enable Module
+gui.button.enable_module.name=Disable Module
+gui.module_cost.name=Cost
+gui.moudle.installed.name=Module Installed!
+gui.moudle.missing_requirements.name=Sorry you do not meet the requirements to install this module!
+gui.moudle.already_installed.name=You already have this module installed!
+
 #Other Blocks
 tile.nuclear_bomb.name=Nuclear Bomb
 tile.fire_bomb.name=Fire Bomb
