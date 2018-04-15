@@ -148,7 +148,6 @@ public class ModuleHelper {
 			else
 				return false;
 		} catch (Exception ex) {
-			System.out.println(ex.getStackTrace());
 			return false;
 		}
 
