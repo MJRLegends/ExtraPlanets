@@ -54,8 +54,8 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		S_OPEN_POWER_GUI(Side.SERVER, String.class), 
 		S_IGNITE_ROCKET(Side.SERVER), 
 		S_UPDATE_JETPACK(Side.SERVER, Integer.class), 
-		S_OPEN_MODULE_MANANGER_GUI(Side.SERVER, String.class),
-		S_UNINSTALL_MODULE(Side.SERVER, String.class),
+		S_OPEN_MODULE_MANANGER_GUI(Side.SERVER, String.class), 
+		S_UNINSTALL_MODULE(Side.SERVER, String.class), 
 		S_INSTALL_MODULE(Side.SERVER, String.class),
 
 		// CLIENT
@@ -244,44 +244,64 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			break;
 		case S_UNINSTALL_MODULE:
 			Module uninstallModule = null;
-			for(Module temp : ExtraPlanets_Modules.getModules()){
-				if(temp.getName().equalsIgnoreCase((String) this.data.get(0)))
+			for (Module temp : ExtraPlanets_Modules.getModules()) {
+				if (temp.getName().equalsIgnoreCase((String) this.data.get(0)))
 					uninstallModule = temp;
 			}
-			if(uninstallModule != null){
+			if (uninstallModule != null) {
 				ItemStack stack = player.inventory.armorItemInSlot(3);
-				if(ModuleHelper.checkModuleCompact(stack, uninstallModule))
+				if (ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
 				stack = player.inventory.armorItemInSlot(2);
-				if(ModuleHelper.checkModuleCompact(stack, uninstallModule))
+				if (ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
 				stack = player.inventory.armorItemInSlot(1);
-				if(ModuleHelper.checkModuleCompact(stack, uninstallModule))
+				if (ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
 				stack = player.inventory.armorItemInSlot(0);
-				if(ModuleHelper.checkModuleCompact(stack, uninstallModule))
+				if (ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
 			}
 			break;
 		case S_INSTALL_MODULE:
 			Module installModule = null;
-			for(Module temp : ExtraPlanets_Modules.getModules()){
-				if(temp.getName().equalsIgnoreCase((String) this.data.get(0)))
+			for (Module temp : ExtraPlanets_Modules.getModules()) {
+				if (temp.getName().equalsIgnoreCase((String) this.data.get(0)))
 					installModule = temp;
 			}
-			if(installModule != null){
+			if (installModule != null) {
+				boolean meetRequirements = false;
+				boolean alreadyHas = false;
 				ItemStack stack = player.inventory.armorItemInSlot(3);
-				if(ModuleHelper.checkModuleCompact(stack, installModule))
-					ModuleHelper.installModule(stack, installModule, playerBase);
+				if (ModuleHelper.checkModuleCompact(stack, installModule))
+					if (!ModuleHelper.hasModule(stack, installModule))
+						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
+					else
+						alreadyHas = true;
 				stack = player.inventory.armorItemInSlot(2);
-				if(ModuleHelper.checkModuleCompact(stack, installModule))
-					ModuleHelper.installModule(stack, installModule, playerBase);
+				if (ModuleHelper.checkModuleCompact(stack, installModule))
+					if (!ModuleHelper.hasModule(stack, installModule))
+						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
+					else
+						alreadyHas = true;
 				stack = player.inventory.armorItemInSlot(1);
-				if(ModuleHelper.checkModuleCompact(stack, installModule))
-					ModuleHelper.installModule(stack, installModule, playerBase);
+				if (ModuleHelper.checkModuleCompact(stack, installModule))
+					if (!ModuleHelper.hasModule(stack, installModule))
+						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
+					else
+						alreadyHas = true;
 				stack = player.inventory.armorItemInSlot(0);
-				if(ModuleHelper.checkModuleCompact(stack, installModule))
-					ModuleHelper.installModule(stack, installModule, playerBase);
+				if (ModuleHelper.checkModuleCompact(stack, installModule))
+					if (!ModuleHelper.hasModule(stack, installModule))
+						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
+					else
+						alreadyHas = true;
+				if (!meetRequirements && !alreadyHas)
+					PlayerUtilties.sendMessage(playerBase, "Sorry you do not meet the requirements to install this module!");
+				else if (alreadyHas)
+					PlayerUtilties.sendMessage(playerBase, "You already have this module installed!");
+				else
+					PlayerUtilties.sendMessage(playerBase, "Module Installed!");
 			}
 			break;
 		default:

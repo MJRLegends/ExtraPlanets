@@ -50,6 +50,7 @@ public class ModuleHelper {
 		for (Module module : temp) {
 			addModule(item, module);
 		}
+
 	}
 
 	public static void addModule(ItemStack item, Module module) {
@@ -90,9 +91,8 @@ public class ModuleHelper {
 	}
 
 	public static void removeModule(ItemStack item, Module module) {
-		List<Module> oldModules = getModules(item);
 		List<Module> newModules = new ArrayList<Module>();
-		for (Module tempModule : oldModules) {
+		for (Module tempModule : getModules(item)) {
 			if (!tempModule.getName().equalsIgnoreCase(module.getName()))
 				newModules.add(tempModule);
 		}
@@ -108,16 +108,21 @@ public class ModuleHelper {
 				hadRequirements = false;
 		if (hadRequirements) {
 			for (ItemStack itemTemp : module.getRequirements()) {
+				boolean takenStack = false;
 				if (player.inventory.hasItemStack(itemTemp)) {
 					for (int i = 0; i < player.inventory.getSizeInventory(); i++) {
-						ItemStack testStack = player.inventory.getStackInSlot(i);
-						if (testStack.equals(itemTemp) && testStack.stackSize >= itemTemp.stackSize && testStack.getMetadata() == itemTemp.getMetadata()) {
-							ItemStack newStack = player.inventory.getStackInSlot(i);
-							if (testStack.stackSize > itemTemp.stackSize) {
-								newStack.stackSize = itemTemp.stackSize;
-								player.inventory.setInventorySlotContents(i, newStack);
-							} else if (testStack.stackSize == itemTemp.stackSize) {
-								player.inventory.setInventorySlotContents(i, null);
+						if(!takenStack){
+							ItemStack testStack = player.inventory.getStackInSlot(i);
+							if (ItemStack.areItemsEqual(testStack, itemTemp)) {
+								ItemStack newStack = player.inventory.getStackInSlot(i);
+								if (testStack.stackSize > itemTemp.stackSize) {
+									newStack.stackSize = newStack.stackSize - itemTemp.stackSize;
+									takenStack = true;
+									player.inventory.setInventorySlotContents(i, newStack);
+								} else if (testStack.stackSize == itemTemp.stackSize) {
+									player.inventory.setInventorySlotContents(i, null);
+									takenStack = true;
+								}
 							}
 						}
 					}
@@ -131,8 +136,8 @@ public class ModuleHelper {
 
 	public static void uninstallModule(ItemStack item, Module module, EntityPlayer player) {
 		removeModule(item, module);
-		for (ItemStack itemTemp : module.getRequirements()) {
-			player.inventory.addItemStackToInventory(itemTemp);
+		for (int i = 0; i < module.getRequirements().size(); i++) {
+			player.inventory.setInventorySlotContents(player.inventory.getFirstEmptyStack(), module.getRequirements().get(i));
 		}
 	}
 
@@ -149,5 +154,14 @@ public class ModuleHelper {
 			return false;
 		}
 
+	}
+	
+	public static boolean hasModule(ItemStack item, Module module){
+		List<Module> temp = getModules(item);
+		for (Module tempModule : temp) {
+			if(module.getName().equalsIgnoreCase(tempModule.getName()))
+				return true;
+		}
+		return false;
 	}
 }
