@@ -217,6 +217,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.registerKeyBinding(KeyHandlerClient.openPowerGUI);
 		ClientUtilities.registerKeyBinding(KeyHandlerClient.openModuleManagerGUI);
 		ClientUtilities.registerKeyBinding(KeyHandlerClient.openPreLaunchChecklistGUI);
+		ClientUtilities.registerKeyBinding(KeyHandlerClient.openNASAWorkBenchGUI);
 
 		super.init(event);
 	}

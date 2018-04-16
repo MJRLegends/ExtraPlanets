@@ -255,8 +255,7 @@ public class ExtraPlanets {
 		ExtraPlanets_Tools.init();
 		ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
-		ExtraPlanets_Modules.init();
-		
+
 		// Initialization/Registering Methods For SolarSystems/Planets/Moons/SpaceStations
 		ExtraPlanets_SolarSystems.init();
 		ExtraPlanets_Planets.init();
@@ -293,6 +292,9 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		// Register Modules
+		ExtraPlanets_Modules.init();
+
 		// Register Capability Handlers
 		CapabilityStatsHandler.register();
 		CapabilityStatsClientHandler.register();

@@ -590,12 +590,14 @@ gui.module.no_fall_damage.name=No Fall Damage ##NEEDS TRANSLATE##
 gui.module.geiger_counter.name=Geiger Counter ##NEEDS TRANSLATE##
 gui.module.test.name=Test Module ##NEEDS TRANSLATE##
 gui.module.pre_launch_checklist.name=Pre Launch Checklist ##NEEDS TRANSLATE##
+gui.module.nasa_workbench.name=Portable NASA Workbench ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Functions the same as the Galacticraft Sensor Glasses ##NEEDS TRANSLATE##
 gui.module.no_fall_damage.desc=Removes fall damage from the player ##NEEDS TRANSLATE##
 gui.module.geiger_counter.desc=Displays your current amount of Radiation on your HUD/Screen ##NEEDS TRANSLATE##
 gui.module.test.desc=Test Module ##NEEDS TRANSLATE##
 gui.module.pre_launch_checklist.desc=Allows easy access to the Pre Launch Checklist from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
+gui.module.nasa_workbench.desc=Allows portable access to a NASA Workbench from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Jaderná bomba
