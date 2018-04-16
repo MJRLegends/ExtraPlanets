@@ -15,11 +15,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Ganymede.worldgen.ChunkProviderGanymede;
 import com.mjr.extraplanets.moons.Ganymede.worldgen.WorldChunkManagerGanymede;
-import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class WorldProviderGanymede extends WorldProviderRealisticSpace {

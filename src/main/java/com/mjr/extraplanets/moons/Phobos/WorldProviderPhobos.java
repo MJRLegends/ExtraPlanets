@@ -15,11 +15,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Phobos.worldgen.ChunkProviderPhobos;
 import com.mjr.extraplanets.moons.Phobos.worldgen.WorldChunkManagerPhobos;
-import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
 public class WorldProviderPhobos extends WorldProviderRealisticSpace {
 	@Override

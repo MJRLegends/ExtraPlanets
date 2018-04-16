@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.network.IGuiHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedFuelLoader;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedOxygenCompressor;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedOxygenDecompressor;
@@ -30,7 +31,6 @@ import com.mjr.extraplanets.client.gui.machines.GuiUltimateOxygenDecompressor;
 import com.mjr.extraplanets.client.gui.machines.GuiUltimateRefinery;
 import com.mjr.extraplanets.client.gui.machines.GuiVehicleChanger;
 import com.mjr.extraplanets.client.gui.rockets.GuiElectricRocketInventory;
-import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedFuelLoader;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenCompressor;
 import com.mjr.extraplanets.inventory.machines.ContainerAdvancedOxygenDecompressor;

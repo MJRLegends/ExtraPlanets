@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.entities.rockets;
+package com.mjr.extraplanets.api.prefabs.entity;
 
 import io.netty.buffer.ByteBuf;
 
@@ -22,7 +22,7 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.api.IPoweredDockable;
+import com.mjr.extraplanets.api.enitity.IPoweredDockable;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 
 /**

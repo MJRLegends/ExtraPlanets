@@ -21,9 +21,9 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.mjr.extraplanets.api.IPowerDock;
-import com.mjr.extraplanets.api.IPowerable;
-import com.mjr.extraplanets.api.IPoweredDockable;
+import com.mjr.extraplanets.api.block.IPowerDock;
+import com.mjr.extraplanets.api.block.IPowerable;
+import com.mjr.extraplanets.api.enitity.IPoweredDockable;
 import com.mjr.extraplanets.blocks.BlockCustomMulti;
 import com.mjr.extraplanets.blocks.BlockCustomMulti.EnumBlockMultiType;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;

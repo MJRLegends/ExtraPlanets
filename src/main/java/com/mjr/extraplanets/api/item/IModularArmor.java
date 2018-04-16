@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.api;
+package com.mjr.extraplanets.api.item;
 
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.player.EntityPlayer;

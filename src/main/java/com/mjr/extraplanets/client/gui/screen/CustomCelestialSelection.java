@@ -47,7 +47,7 @@ import org.lwjgl.util.vector.Vector3f;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
+import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 

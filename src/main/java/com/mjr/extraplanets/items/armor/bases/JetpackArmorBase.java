@@ -4,7 +4,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-import com.mjr.extraplanets.api.IJetpackArmour;
+import com.mjr.extraplanets.api.item.IJetpackArmour;
 
 public abstract class JetpackArmorBase extends ElectricArmorBase implements IJetpackArmour {
 	public boolean activeJetPack = false;

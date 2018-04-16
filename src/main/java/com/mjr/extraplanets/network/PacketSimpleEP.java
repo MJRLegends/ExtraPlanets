@@ -29,12 +29,12 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
 import com.mjr.extraplanets.client.gui.GUIModuleManager;
 import com.mjr.extraplanets.client.gui.vehicles.GuiPoweredVehicleBase;
 import com.mjr.extraplanets.client.gui.vehicles.GuiVehicleBase;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
-import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.items.armor.bases.JetpackArmorBase;
@@ -50,19 +50,12 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class PacketSimpleEP extends PacketBase implements Packet {
 	public enum EnumSimplePacket {
 		// SERVER
-		S_OPEN_FUEL_GUI(Side.SERVER, String.class), 
-		S_OPEN_POWER_GUI(Side.SERVER, String.class), 
-		S_IGNITE_ROCKET(Side.SERVER), 
-		S_UPDATE_JETPACK(Side.SERVER, Integer.class), 
-		S_OPEN_MODULE_MANANGER_GUI(Side.SERVER, String.class), 
-		S_UNINSTALL_MODULE(Side.SERVER, String.class), 
-		S_INSTALL_MODULE(Side.SERVER, String.class),
+		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class), S_IGNITE_ROCKET(Side.SERVER), S_UPDATE_JETPACK(Side.SERVER, Integer.class), S_OPEN_MODULE_MANANGER_GUI(Side.SERVER, String.class), S_UNINSTALL_MODULE(
+				Side.SERVER, String.class), S_INSTALL_MODULE(Side.SERVER, String.class),
 
 		// CLIENT
-		C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT), 
-		C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), 
-		C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class), 
-		C_OPEN_MODULE_MANANGER_GUI(Side.CLIENT, Integer.class,Integer.class, Integer.class);
+		C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT), C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class), C_OPEN_MODULE_MANANGER_GUI(Side.CLIENT, Integer.class,
+				Integer.class, Integer.class);
 
 		private Side targetSide;
 		private Class<?>[] decodeAs;
