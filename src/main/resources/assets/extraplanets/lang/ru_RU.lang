@@ -560,6 +560,7 @@ gui.celestial_body_has_dungeon.name=Сокровищницы
 
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Открыть инвентарь заряженного транспорта
+keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
 
 #GUI Module Manager
 gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
@@ -1036,21 +1037,25 @@ item.green_diamond_boots.name=Ботинки из зелёного алмаза
 
 item.tier1_space_suit_helmet.name=Шлем космического скафандра 1-го уровня
 item.tier1_space_suit_chest.name=Нагрудник космического скафандра 1-го уровня
+item.tier1_space_suit_jetpack_chest.name=Tier 1 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier1_space_suit_legings.name=Поножи космического скафандра 1-го уровня
 item.tier1_space_suit_boots.name=Ботинки космического скафандра 1-го уровня
 item.tier1_space_suit_gravity_boots.name=Гравитационные ботинки космического скафандра 1-го уровня
 item.tier2_space_suit_helmet.name=Шлем космического скафандра 2-го уровня
 item.tier2_space_suit_chest.name=Нагрудник космического скафандра 2-го уровня
+item.tier2_space_suit_jetpack_chest.name=Tier 2 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier2_space_suit_legings.name=Поножи космического скафандра 2-го уровня
 item.tier2_space_suit_boots.name=Ботинки космического скафандра 2-го уровня
 item.tier2_space_suit_gravity_boots.name=Гравитационные ботинки космического скафандра 2-го уровня
 item.tier3_space_suit_helmet.name=Шлем космического скафандра 3-го уровня
 item.tier3_space_suit_chest.name=Нагрудник космического скафандра 3-го уровня
+item.tier3_space_suit_jetpack_chest.name=Tier 3 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier3_space_suit_legings.name=Поножи космического скафандра 3-го уровня
 item.tier3_space_suit_boots.name=Ботинки космического скафандра 3-го уровня
 item.tier3_space_suit_gravity_boots.name=Гравитационные ботинки космического скафандра 3-го уровня
 item.tier4_space_suit_helmet.name=Шлем космического скафандра 4-го уровня
 item.tier4_space_suit_chest.name=Нагрудник космического скафандра 4-го уровня
+item.tier4_space_suit_jetpack_chest.name=Tier 4 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier4_space_suit_legings.name=Поножи космического скафандра 4-го уровня
 item.tier4_space_suit_boots.name=Ботинки космического скафандра 4-го уровня
 item.tier4_space_suit_gravity_boots.name=Гравитационные ботинки космического скафандра 4-го уровня
@@ -1120,6 +1125,9 @@ item.tier4_un_prepared_space_suit_helmet.name=Шлем неподготовле�
 item.tier4_un_prepared_space_suit_chest.name=Нагрудник неподготовленного космического скафандра 4-го уровня
 item.tier4_un_prepared_space_suit_legings.name=Поножи неподготовленного космического скафандра 4-го уровня
 item.tier4_un_prepared_space_suit_boots.name=Ботинки неподготовленного космического скафандра 4-го уровня
+
+#Module Items
+item.module_items.no_fall_boots.name=No Fall Damage Module ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Очень большой кислородный баллон
