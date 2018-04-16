@@ -560,6 +560,7 @@ gui.celestial_body_has_dungeon.name=Has Dungeon
 
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Open Powered Vehicle Inventory
+keybind.module.manager.name=Open Module Manager
 
 #GUI Module Manager
 gui.module_manager.name=Module Manager
@@ -1036,21 +1037,25 @@ item.green_diamond_boots.name=Green Diamond Boots
 
 item.tier1_space_suit_helmet.name=Tier 1 Space Suit Helmet
 item.tier1_space_suit_chest.name=Tier 1 Space Suit Chestplate
+item.tier1_space_suit_jetpack_chest.name=Tier 1 Space Suit Jetpack Chestplate
 item.tier1_space_suit_legings.name=Tier 1 Space Suit Leggings
 item.tier1_space_suit_boots.name=Tier 1 Space Suit Boots
 item.tier1_space_suit_gravity_boots.name=Tier 1 Space Suit Gravity Boots
 item.tier2_space_suit_helmet.name=Tier 2 Space Suit Helmet
 item.tier2_space_suit_chest.name=Tier 2 Space Suit Chestplate
+item.tier2_space_suit_jetpack_chest.name=Tier 2 Space SuitJetpack  Chestplate
 item.tier2_space_suit_legings.name=Tier 2 Space Suit Leggings
 item.tier2_space_suit_boots.name=Tier 2 Space Suit Boots
 item.tier2_space_suit_gravity_boots.name=Tier 2 Space Suit Gravity Boots
 item.tier3_space_suit_helmet.name=Tier 3 Space Suit Helmet
 item.tier3_space_suit_chest.name=Tier 3 Space Suit Chestplate
+item.tier3_space_suit_jetpack_chest.name=Tier 3 Space Suit Jetpack Chestplate
 item.tier3_space_suit_legings.name=Tier 3 Space Suit Leggings
 item.tier3_space_suit_boots.name=Tier 3 Space Suit Boots
 item.tier3_space_suit_gravity_boots.name=Tier 3 Space Suit Gravity Boots
 item.tier4_space_suit_helmet.name=Tier 4 Space Suit Helmet
 item.tier4_space_suit_chest.name=Tier 4 Space Suit Chestplate
+item.tier4_space_suit_jetpack_chest.name=Tier 4 Space Suit Jetpack Chestplate
 item.tier4_space_suit_legings.name=Tier 4 Space Suit Leggings
 item.tier4_space_suit_boots.name=Tier 4 Space Suit Boots
 item.tier4_space_suit_gravity_boots.name=Tier 4 Space Suit Gravity Boots
@@ -1117,6 +1122,9 @@ item.tier4_un_prepared_space_suit_helmet.name=Tier 4 Un-Prepared Space Suit Helm
 item.tier4_un_prepared_space_suit_chest.name=Tier 4 Un-Prepared Space Suit Chestplate
 item.tier4_un_prepared_space_suit_legings.name=Tier 4 Un-Prepared Space Suit Leggings
 item.tier4_un_prepared_space_suit_boots.name=Tier 4 Un-Prepared Space Suit Boots
+
+#Module Items
+item.module_items.no_fall_boots.name=No Fall Damage Module
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Very Heavy Oxygen Tank

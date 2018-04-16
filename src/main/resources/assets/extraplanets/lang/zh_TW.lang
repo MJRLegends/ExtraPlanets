@@ -560,6 +560,7 @@ gui.celestial_body_has_dungeon.name=有地牢
 
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=打開電力漫遊車的物品欄
+keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
 
 #GUI Module Manager
 gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
@@ -1036,21 +1037,25 @@ item.green_diamond_boots.name=綠色鑽石靴子
 
 item.tier1_space_suit_helmet.name=一階太空服頭盔
 item.tier1_space_suit_chest.name=一階太空服胸甲
+item.tier1_space_suit_jetpack_chest.name=Tier 1 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier1_space_suit_legings.name=一階太空服護腿
 item.tier1_space_suit_boots.name=一階太空服靴子
 item.tier1_space_suit_gravity_boots.name=一階太空服重力靴子
 item.tier2_space_suit_helmet.name=二階太空服頭盔
 item.tier2_space_suit_chest.name=二階太空服胸甲
+item.tier2_space_suit_jetpack_chest.name=Tier 2 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier2_space_suit_legings.name=二階太空服護腿
 item.tier2_space_suit_boots.name=二階太空服靴子
 item.tier2_space_suit_gravity_boots.name=二階太空服重力靴子
 item.tier3_space_suit_helmet.name=三階太空服頭盔
 item.tier3_space_suit_chest.name=三階太空服胸甲
+item.tier3_space_suit_jetpack_chest.name=Tier 3 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier3_space_suit_legings.name=三階太空服護腿
 item.tier3_space_suit_boots.name=三階太空服靴子
 item.tier3_space_suit_gravity_boots.name=三階太空服重力靴子
 item.tier4_space_suit_helmet.name=四階太空服頭盔
 item.tier4_space_suit_chest.name=四階太空服胸甲
+item.tier4_space_suit_jetpack_chest.name=Tier 4 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier4_space_suit_legings.name=四階太空服護腿
 item.tier4_space_suit_boots.name=四階太空服靴子
 item.tier4_space_suit_gravity_boots.name=四階太空服重力靴子
@@ -1120,6 +1125,9 @@ item.tier4_un_prepared_space_suit_helmet.name=四階未完成太空服頭盔
 item.tier4_un_prepared_space_suit_chest.name=四階未完成太空服胸甲
 item.tier4_un_prepared_space_suit_legings.name=四階未完成太空服護腿
 item.tier4_un_prepared_space_suit_boots.name=四階未完成太空服靴子
+
+#Module Items
+item.module_items.no_fall_boots.name=No Fall Damage Module ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=超重型氧氣罐
