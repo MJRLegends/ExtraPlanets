@@ -243,6 +243,8 @@ public class ExtraPlanets_Items {
 	public static Item HEAVY_OXYGEN_TANK_MAGENTA;
 	public static Item HEAVY_OXYGEN_TANK_ORANGE;
 	public static Item HEAVY_OXYGEN_TANK_WHITE;
+	
+	public static Item MODULE_ITEMS;
 
 	public static void init() {
 		initializeItems();
@@ -375,6 +377,7 @@ public class ExtraPlanets_Items {
 			TIER_4_UNPREPARED_SPACE_SUIT_CHEST = new ItemBasicItem("tier4_un_prepared_space_suit_chest");
 			TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS = new ItemBasicItem("tier4_un_prepared_space_suit_legings");
 			TIER_4_UNPREPARED_SPACE_SUIT_BOOTS = new ItemBasicItem("tier4_un_prepared_space_suit_boots");
+			MODULE_ITEMS = new ItemModuleItems("module_items");
 		}
 		if (Config.RADIATION) {
 			IODIDE_SALT = new ItemBasicItem("iodide_salt");
@@ -587,6 +590,7 @@ public class ExtraPlanets_Items {
 			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_CHEST, TIER_4_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_BOOTS, TIER_4_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(MODULE_ITEMS, MODULE_ITEMS.getUnlocalizedName().substring(5));			
 		}
 		if (Config.RADIATION) {
 			RegisterUtilities.registerItem(IODIDE_SALT, IODIDE_SALT.getUnlocalizedName().substring(5));
