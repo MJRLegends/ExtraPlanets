@@ -163,4 +163,31 @@ public class ModuleHelper {
 		}
 		return false;
 	}
+	
+	public static boolean hasModule(ItemStack item, String moduleName){
+		List<Module> temp = getModules(item);
+		for (Module tempModule : temp) {
+			if(moduleName.equalsIgnoreCase(tempModule.getName()))
+				return true;
+		}
+		return false;
+	}
+	
+	public static boolean isModuleActive(ItemStack item, Module module){
+		List<Module> temp = getModules(item);
+		for (Module tempModule : temp) {
+			if(module.getName().equalsIgnoreCase(tempModule.getName()))
+				return tempModule.isActive();
+		}
+		return false;
+	}
+	
+	public static boolean isModuleActive(ItemStack item, String moduleName){
+		List<Module> temp = getModules(item);
+		for (Module tempModule : temp) {
+			if(moduleName.equalsIgnoreCase(tempModule.getName()))
+				return tempModule.isActive();
+		}
+		return false;
+	}
 }

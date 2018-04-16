@@ -1,6 +1,8 @@
 package com.mjr.extraplanets.client.handlers;
 
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.KeyHandler;
+import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.client.Minecraft;
@@ -17,6 +19,7 @@ import com.mjr.extraplanets.api.item.IModularArmor;
 import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
 import com.mjr.extraplanets.api.prefabs.entity.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.api.prefabs.entity.EntityVehicleBase;
+import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.mjrlegendslib.util.MCUtilities;
@@ -25,10 +28,12 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding openPowerGUI;
 	public static KeyBinding openModuleManagerGUI;
+	public static KeyBinding openPreLaunchChecklistGUI;
 
 	static {
 		openPowerGUI = new KeyBinding(TranslateUtilities.translate("keybind.vehicle_inv.name"), ConfigManagerCore.keyOverrideFuelLevelI == 0 ? Keyboard.KEY_F : ConfigManagerCore.keyOverrideFuelLevelI, Constants.modName);
 		openModuleManagerGUI = new KeyBinding(TranslateUtilities.translate("keybind.module.manager.name"), Keyboard.KEY_H, Constants.modName);
+		openPreLaunchChecklistGUI = new KeyBinding(TranslateUtilities.translate("keybind.module.pre.launch.name"), Keyboard.KEY_P, Constants.modName);
 	}
 
 	public static KeyBinding accelerateKey;
@@ -42,7 +47,8 @@ public class KeyHandlerClient extends KeyHandler {
 	private static Minecraft mc = MCUtilities.getMinecraft();
 
 	public KeyHandlerClient() {
-		super(new KeyBinding[] { KeyHandlerClient.openPowerGUI, KeyHandlerClient.openModuleManagerGUI }, new boolean[] { false, false, false }, KeyHandlerClient.getVanillaKeyBindings(), new boolean[] { false, true, true, true, true, true, true });
+		super(new KeyBinding[] { KeyHandlerClient.openPowerGUI, KeyHandlerClient.openModuleManagerGUI, KeyHandlerClient.openPreLaunchChecklistGUI }, new boolean[] { false, false, false }, KeyHandlerClient.getVanillaKeyBindings(), new boolean[] {
+				false, true, true, true, true, true, true });
 	}
 
 	private static KeyBinding[] getVanillaKeyBindings() {
@@ -80,11 +86,16 @@ public class KeyHandlerClient extends KeyHandler {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.world.provider.getDimension(), new Object[] { 1 }));
 				}
 			}
-
 			if (kb.getKeyCode() == KeyHandlerClient.openModuleManagerGUI.getKeyCode()) {
 				if (playerBase.inventory.armorItemInSlot(0).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor
 						|| playerBase.inventory.armorItemInSlot(2).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(3).getItem() instanceof IModularArmor)
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_MODULE_MANANGER_GUI, mc.world.provider.getDimension(), new Object[] { playerBase.getGameProfile().getName() }));
+			}
+			if (kb.getKeyCode() == KeyHandlerClient.openPreLaunchChecklistGUI.getKeyCode()) {
+				if (playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor) {
+					if (ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(1), "pre_launch_checklist") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "pre_launch_checklist"))
+						playerBase.openGui(GalacticraftCore.instance, GuiIdsCore.PRE_LAUNCH_CHECKLIST, playerBase.world, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
+				}
 			}
 		}
 	}
