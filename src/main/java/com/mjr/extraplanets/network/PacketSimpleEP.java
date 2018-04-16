@@ -29,6 +29,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.item.IModularArmor;
 import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
 import com.mjr.extraplanets.api.prefabs.entity.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.api.prefabs.entity.EntityVehicleBase;
@@ -243,16 +244,16 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			}
 			if (uninstallModule != null) {
 				ItemStack stack = player.inventory.armorItemInSlot(3);
-				if (ModuleHelper.checkModuleCompact(stack, uninstallModule))
+				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
 				stack = player.inventory.armorItemInSlot(2);
-				if (ModuleHelper.checkModuleCompact(stack, uninstallModule))
+				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
 				stack = player.inventory.armorItemInSlot(1);
-				if (ModuleHelper.checkModuleCompact(stack, uninstallModule))
+				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
 				stack = player.inventory.armorItemInSlot(0);
-				if (ModuleHelper.checkModuleCompact(stack, uninstallModule))
+				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
 			}
 			break;
@@ -266,25 +267,25 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 				boolean meetRequirements = false;
 				boolean alreadyHas = false;
 				ItemStack stack = player.inventory.armorItemInSlot(3);
-				if (ModuleHelper.checkModuleCompact(stack, installModule))
+				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
 						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
 				stack = player.inventory.armorItemInSlot(2);
-				if (ModuleHelper.checkModuleCompact(stack, installModule))
+				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
 						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
 				stack = player.inventory.armorItemInSlot(1);
-				if (ModuleHelper.checkModuleCompact(stack, installModule))
+				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
 						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
 				stack = player.inventory.armorItemInSlot(0);
-				if (ModuleHelper.checkModuleCompact(stack, installModule))
+				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
 						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
