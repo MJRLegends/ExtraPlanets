@@ -104,8 +104,8 @@ public class GUIModuleManager extends GuiContainerGC {
 		if (this.selectedInstallModule != null)
 			this.renderCostList(this.xOffset + -115, 22);
 
-		this.renderInfo(167, 15, 55, 135, this.selectedInstallModule);
-		this.renderInfo(167, 15, 55, 135, this.selectedModule);
+		this.renderInfo(167, 15, 50, 135, this.selectedInstallModule);
+		this.renderInfo(167, 15, 50, 135, this.selectedModule);
 
 		this.fontRenderer.drawString(TranslateUtilities.translate("gui.module.type.name"), 167, 125, this.mainColour);
 	}
