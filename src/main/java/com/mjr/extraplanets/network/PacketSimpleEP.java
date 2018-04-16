@@ -29,11 +29,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
+import com.mjr.extraplanets.api.prefabs.entity.EntityElectricSpaceshipBase.EnumLaunchPhase;
 import com.mjr.extraplanets.api.prefabs.entity.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.api.prefabs.entity.EntityVehicleBase;
-import com.mjr.extraplanets.api.prefabs.entity.EntityElectricSpaceshipBase.EnumLaunchPhase;
 import com.mjr.extraplanets.client.gui.GUIModuleManager;
 import com.mjr.extraplanets.client.gui.vehicles.GuiPoweredVehicleBase;
+import com.mjr.extraplanets.client.gui.vehicles.GuiVehicleBase;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
 import com.mjr.extraplanets.items.armor.bases.JetpackArmorBase;
@@ -49,19 +50,12 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class PacketSimpleEP extends PacketBase implements Packet {
 	public enum EnumSimplePacket {
 		// SERVER
-		S_OPEN_FUEL_GUI(Side.SERVER, String.class), 
-		S_OPEN_POWER_GUI(Side.SERVER, String.class), 
-		S_IGNITE_ROCKET(Side.SERVER), 
-		S_UPDATE_JETPACK(Side.SERVER, Integer.class), 
-		S_OPEN_MODULE_MANANGER_GUI(Side.SERVER, String.class), 
-		S_UNINSTALL_MODULE(Side.SERVER, String.class), 
-		S_INSTALL_MODULE(Side.SERVER, String.class),
+		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class), S_IGNITE_ROCKET(Side.SERVER), S_UPDATE_JETPACK(Side.SERVER, Integer.class), S_OPEN_MODULE_MANANGER_GUI(Side.SERVER, String.class), S_UNINSTALL_MODULE(
+				Side.SERVER, String.class), S_INSTALL_MODULE(Side.SERVER, String.class),
 
 		// CLIENT
-		C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT), 
-		C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), 
-		C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class), 
-		C_OPEN_MODULE_MANANGER_GUI(Side.CLIENT, Integer.class,Integer.class, Integer.class);
+		C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT), C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class), C_OPEN_MODULE_MANANGER_GUI(Side.CLIENT, Integer.class,
+				Integer.class, Integer.class);
 
 		private Side targetSide;
 		private Class<?>[] decodeAs;
@@ -149,7 +143,10 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		case C_OPEN_PARACHEST_GUI:
 			switch ((Integer) this.data.get(1)) {
 			case 0:
-				if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
+				if (player.getRidingEntity() instanceof EntityVehicleBase) {
+					MCUtilities.getClient().displayGuiScreen(new GuiVehicleBase(player.inventory, (EntityVehicleBase) player.getRidingEntity(), ((EntityVehicleBase) player.getRidingEntity()).getType()));
+					player.openContainer.windowId = (Integer) this.data.get(0);
+				} else if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
 					MCUtilities.getClient().displayGuiScreen(new GuiPoweredVehicleBase(player.inventory, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType()));
 					player.openContainer.windowId = (Integer) this.data.get(0);
 				}
