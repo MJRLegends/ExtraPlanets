@@ -568,14 +568,24 @@ gui.modules_chest.name=Chest Modules ##NEEDS TRANSLATE##
 gui.modules_leggings.name=Leggings Modules ##NEEDS TRANSLATE##
 gui.modules_boots.name=Boots Modules ##NEEDS TRANSLATE##
 gui.module_list.name=Modules List ##NEEDS TRANSLATE##
-gui.button.install.name=Install Module ##NEEDS TRANSLATE##
-gui.button.uninstall.name=Uninstall Module ##NEEDS TRANSLATE##
-gui.button.disable_module.name=Enable Module ##NEEDS TRANSLATE##
-gui.button.enable_module.name=Disable Module ##NEEDS TRANSLATE##
+gui.button.install.name=Install ##NEEDS TRANSLATE##
+gui.button.uninstall.name=Uninstall ##NEEDS TRANSLATE##
+gui.button.disable_module.name=Enable ##NEEDS TRANSLATE##
+gui.button.enable_module.name=Disable ##NEEDS TRANSLATE##
 gui.module_cost.name=Cost ##NEEDS TRANSLATE##
 gui.moudle.installed.name=Module Installed! ##NEEDS TRANSLATE##
 gui.moudle.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
 gui.moudle.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
+
+gui.module.sensor_glasses.name=Sensor Glasses ##NEEDS TRANSLATE##
+gui.module.no_fall_damage.name=No Fall Damage ##NEEDS TRANSLATE##
+gui.module.geiger_counter.name=Geiger Counter ##NEEDS TRANSLATE##
+gui.module.test.name=Test Module ##NEEDS TRANSLATE##
+
+gui.module.sensor_glasses.desc=Functions the same as the Galacticraft Sensor Glasses ##NEEDS TRANSLATE##
+gui.module.no_fall_damage.desc=Removes fall damage from the player ##NEEDS TRANSLATE##
+gui.module.geiger_counter.desc=Displays your current amount of Radiation on your HUD/Screen ##NEEDS TRANSLATE##
+gui.module.test.desc=Test Module ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Nükleer Bomba
