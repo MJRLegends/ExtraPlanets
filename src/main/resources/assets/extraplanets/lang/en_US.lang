@@ -576,6 +576,8 @@ gui.module_cost.name=Cost
 gui.moudle.installed.name=Module Installed!
 gui.moudle.missing_requirements.name=Sorry you do not meet the requirements to install this module!
 gui.moudle.already_installed.name=You already have this module installed!
+gui.module.description.name=Module Description
+gui.module.name.name=Module Name
 
 gui.module.sensor_glasses.name=Sensor Glasses
 gui.module.no_fall_damage.name=No Fall Damage
