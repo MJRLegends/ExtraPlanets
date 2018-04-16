@@ -25,6 +25,7 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 @SuppressWarnings("unused")
 public class GUIModuleManager extends GuiContainerGC {
 	private static final ResourceLocation guiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/module_manager.png");
+	private static final ResourceLocation guiTextureSide = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/module_manager_side.png");
 
 	private int xOffset = 30; // Used to center the gui
 
@@ -175,12 +176,10 @@ public class GUIModuleManager extends GuiContainerGC {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		final int var5 = (this.width - this.xSize) / 2 + 30;
 		final int var6 = (this.height - this.ySize) / 2;
+		this.mc.getTextureManager().bindTexture(guiTextureSide);
+		this.drawTexturedModalRect(var5 - 120, var6, 0, 0, 122, 167);
 		this.mc.getTextureManager().bindTexture(guiTexture);
-		this.drawTexturedModalRect(var5, var6, 0, 0, 196, 167);
-		this.mc.getTextureManager().bindTexture(guiTexture);
-		this.drawTexturedModalRect(var5 - 80, var6, 0, 0, 80, 167);
-		this.mc.getTextureManager().bindTexture(guiTexture);
-		this.drawTexturedModalRect(var5 - 120, var6, 0, 0, 40, 167);
+		this.drawTexturedModalRect(var5 + 2, var6, 0, 0, 190, 167);
 	}
 
 	@Override
@@ -190,8 +189,6 @@ public class GUIModuleManager extends GuiContainerGC {
 		int startX = this.width / 2 - 80;
 		int startY = this.height / 2 - 53;
 
-		System.out.println(mouseX);
-		System.out.println(startX);
 		for (int i = 0; i < ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(3)).size(); i++) {
 			if (i != 0)
 				startX = startX + 8;
