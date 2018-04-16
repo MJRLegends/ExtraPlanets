@@ -298,11 +298,11 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 					else
 						alreadyHas = true;
 				if (!meetRequirements && !alreadyHas)
-					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.moudle.missing_requirements.name"));
+					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.missing_requirements.name"));
 				else if (alreadyHas)
-					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.moudle.already_installed.name"));
+					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.already_installed.name"));
 				else
-					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.moudle.installed.name"));
+					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.installed.name"));
 			}
 			break;
 		default:
