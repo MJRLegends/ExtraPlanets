@@ -212,8 +212,8 @@ public class GUIModuleManager extends GuiContainerGC {
 			else if(this.selectedModule.getSlotType() == 3)
 				temp = TranslateUtilities.translate("gui.module.type.helmet.name");
 		}
-		this.fontRenderer.drawString(TranslateUtilities.translate("gui.module.type.name"), 165, 125, ColorUtil.to32BitColor(255, 0, 0, 0));
-		this.fontRenderer.drawString(temp, 165, 135, 4210752);
+		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module.type.name"), 165, 125, ColorUtil.to32BitColor(255, 0, 0, 0));
+		this.fontRendererObj.drawString(temp, 165, 135, 4210752);
 
 	}
 
