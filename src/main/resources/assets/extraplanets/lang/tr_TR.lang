@@ -561,6 +561,7 @@ gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Güçlü Araç Envanterini Aç.
 keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
+keybind.module.pre.launch.name=Open Pre Launch Checklist GUI ##NEEDS TRANSLATE##
 
 #GUI Module Manager
 gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
@@ -574,9 +575,9 @@ gui.button.uninstall.name=Uninstall ##NEEDS TRANSLATE##
 gui.button.disable_module.name=Enable ##NEEDS TRANSLATE##
 gui.button.enable_module.name=Disable ##NEEDS TRANSLATE##
 gui.module_cost.name=Cost ##NEEDS TRANSLATE##
-gui.moudle.installed.name=Module Installed! ##NEEDS TRANSLATE##
-gui.moudle.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
-gui.moudle.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
+gui.module.installed.name=Module Installed! ##NEEDS TRANSLATE##
+gui.module.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
+gui.module.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
 gui.module.description.name=Module Description ##NEEDS TRANSLATE##
 gui.module.name.name=Module Name ##NEEDS TRANSLATE##
 gui.module.type.helmet.name=Helmet ##NEEDS TRANSLATE##
@@ -588,11 +589,13 @@ gui.module.sensor_glasses.name=Sensor Glasses ##NEEDS TRANSLATE##
 gui.module.no_fall_damage.name=No Fall Damage ##NEEDS TRANSLATE##
 gui.module.geiger_counter.name=Geiger Counter ##NEEDS TRANSLATE##
 gui.module.test.name=Test Module ##NEEDS TRANSLATE##
+gui.module.pre_launch_checklist.name=Pre Launch Checklist ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Functions the same as the Galacticraft Sensor Glasses ##NEEDS TRANSLATE##
 gui.module.no_fall_damage.desc=Removes fall damage from the player ##NEEDS TRANSLATE##
 gui.module.geiger_counter.desc=Displays your current amount of Radiation on your HUD/Screen ##NEEDS TRANSLATE##
 gui.module.test.desc=Test Module ##NEEDS TRANSLATE##
+gui.module.pre_launch_checklist.desc=Allows easy access to the Pre Launch Checklist from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Nükleer Bomba
