@@ -560,6 +560,7 @@ gui.celestial_body_has_dungeon.name=Besitzt Verließ
 
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Fahrzeuginventar öffnen
+keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
 
 #GUI Module Manager
 gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
@@ -1036,21 +1037,25 @@ item.green_diamond_boots.name=Stiefel aus grünem Diamant
 
 item.tier1_space_suit_helmet.name=Stufe 1 Raumanzug-Helm
 item.tier1_space_suit_chest.name=Stufe 1 Raumanzug-Brustschutz
+item.tier1_space_suit_jetpack_chest.name=Tier 1 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier1_space_suit_legings.name=Stufe 1 Raumanzug-Hose
 item.tier1_space_suit_boots.name=Stufe 1 Raumanzug-Stiefel
 item.tier1_space_suit_gravity_boots.name=Stufe 1 Raumanzug-Stiefel mit Gravitationshilfe
 item.tier2_space_suit_helmet.name=Stufe 2 Raumanzug-Helm
 item.tier2_space_suit_chest.name=Stufe 2 Raumanzug-Brustschutz
+item.tier2_space_suit_jetpack_chest.name=Tier 2 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier2_space_suit_legings.name=Stufe 2 Raumanzug-Hose
 item.tier2_space_suit_boots.name=Stufe 2 Raumanzug-Stiefel
 item.tier2_space_suit_gravity_boots.name=Stufe 2 Raumanzug-Stiefel mit Gravitationshilfe
 item.tier3_space_suit_helmet.name=Stufe 3 Raumanzug-Helm
 item.tier3_space_suit_chest.name=Stufe 3 Raumanzug-Brustschutz
+item.tier3_space_suit_jetpack_chest.name=Tier 3 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier3_space_suit_legings.name=Stufe 3 Raumanzug-Hose
 item.tier3_space_suit_boots.name=Stufe 3 Raumanzug-Stiefel
 item.tier3_space_suit_gravity_boots.name=Stufe 3 Raumanzug-Stiefel mit Gravitationshilfe
 item.tier4_space_suit_helmet.name=Stufe 4 Raumanzug-Helm
 item.tier4_space_suit_chest.name=Stufe 4 Raumanzug-Brustschutz
+item.tier4_space_suit_jetpack_chest.name=Tier 4 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier4_space_suit_legings.name=Stufe 4 Raumanzug-Hose
 item.tier4_space_suit_boots.name=Stufe 4 Raumanzug-Stiefel
 item.tier4_space_suit_gravity_boots.name=Stufe 4 Raumanzug-Stiefel mit Gravitationshilfe
@@ -1120,6 +1125,9 @@ item.tier4_un_prepared_space_suit_helmet.name=Stufe 4 Unvollständiger Raumanzug
 item.tier4_un_prepared_space_suit_chest.name=Stufe 4 Unvollständiger Raumanzug-Brustschutz
 item.tier4_un_prepared_space_suit_legings.name=Stufe 4 Unvollständiger Raumanzug-Hose
 item.tier4_un_prepared_space_suit_boots.name=Stufe 4 Unvollständiger Raumanzug-Stiefel
+
+#Module Items
+item.module_items.no_fall_boots.name=No Fall Damage Module ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Sehr großer Sauerstofftank
