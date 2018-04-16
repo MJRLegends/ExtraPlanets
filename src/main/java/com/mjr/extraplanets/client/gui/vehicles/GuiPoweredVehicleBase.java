@@ -10,7 +10,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
+import com.mjr.extraplanets.api.prefabs.entity.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.inventory.vehicles.ContainerPoweredVehicleBase;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
