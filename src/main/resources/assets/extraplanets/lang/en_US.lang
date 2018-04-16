@@ -579,6 +579,11 @@ gui.moudle.missing_requirements.name=Sorry you do not meet the requirements to i
 gui.moudle.already_installed.name=You already have this module installed!
 gui.module.description.name=Module Description
 gui.module.name.name=Module Name
+gui.module.type.name=Module Type
+gui.module.type.helmet.name=Helmet
+gui.module.type.chest.name=Chestplate
+gui.module.type.leggings.name=Leggings
+gui.module.type.boots.name=Boots
 
 gui.module.sensor_glasses.name=Sensor Glasses
 gui.module.no_fall_damage.name=No Fall Damage
