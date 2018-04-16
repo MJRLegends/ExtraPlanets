@@ -15,11 +15,11 @@ import net.minecraft.world.chunk.IChunkGenerator;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
+import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Uranus.worldgen.BiomeProviderUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.ChunkProviderUranus;
-import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class WorldProviderUranus extends WorldProviderRealisticSpace {

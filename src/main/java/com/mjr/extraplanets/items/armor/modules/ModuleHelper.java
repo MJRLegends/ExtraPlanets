@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 
-import com.mjr.extraplanets.api.IModularArmor;
+import com.mjr.extraplanets.api.item.IModularArmor;
 
 public class ModuleHelper {
 

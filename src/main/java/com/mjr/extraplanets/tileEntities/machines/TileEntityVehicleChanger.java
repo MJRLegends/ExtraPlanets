@@ -18,7 +18,7 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 
-import com.mjr.extraplanets.api.IPowerable;
+import com.mjr.extraplanets.api.block.IPowerable;
 import com.mjr.extraplanets.blocks.machines.AdvancedFuelLoader;
 import com.mjr.extraplanets.blocks.machines.VehicleCharger;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;

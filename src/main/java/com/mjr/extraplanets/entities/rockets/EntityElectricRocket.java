@@ -26,7 +26,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.api.IPowerDock;
+import com.mjr.extraplanets.api.block.IPowerDock;
+import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
 import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;

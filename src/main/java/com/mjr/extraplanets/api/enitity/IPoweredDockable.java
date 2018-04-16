@@ -1,4 +1,7 @@
-package com.mjr.extraplanets.api;
+package com.mjr.extraplanets.api.enitity;
+
+import com.mjr.extraplanets.api.block.IPowerDock;
+import com.mjr.extraplanets.api.block.IPowerable;
 
 import micdoodle8.mods.galacticraft.api.entity.ICargoEntity;
 
