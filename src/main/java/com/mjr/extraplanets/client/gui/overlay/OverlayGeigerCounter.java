@@ -35,7 +35,7 @@ public class OverlayGeigerCounter extends Overlay {
 		String text = TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%";
 
 		GL11.glScalef(1.0F, 1.0F, 1.0F);
-		OverlayGeigerCounter.minecraft.fontRendererObj.drawString(text, (width / 8 - OverlayGeigerCounter.minecraft.fontRendererObj.getStringWidth(text) / 2) - 20, 5, ColorUtil.to32BitColor(255, 60, 60, 128));
+		OverlayGeigerCounter.minecraft.fontRendererObj.drawString(text, OverlayGeigerCounter.minecraft.fontRendererObj.getStringWidth(text) / 2 - 80, 5, ColorUtil.to32BitColor(255, 60, 60, 128));
 
 		GL11.glPopMatrix();
 	}
