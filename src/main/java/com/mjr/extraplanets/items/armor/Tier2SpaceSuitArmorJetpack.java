@@ -2,13 +2,16 @@ package com.mjr.extraplanets.items.armor;
 
 import java.util.List;
 
+import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.model.ModelBiped;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -90,6 +93,12 @@ public class Tier2SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 				((ArmorCustomModel) armorModel).color = getColor(itemStack);
 		}
 		return armorModel;
+	}
+
+	@Override
+	public void getSubItems(Item par1, CreativeTabs tab, List<ItemStack> list) {
+		list.add(ElectricItemHelper.getUncharged(new ItemStack(this)));
+		list.add(ElectricItemHelper.getWithCharge(new ItemStack(this), this.getMaxElectricityStored(new ItemStack(this))));
 	}
 
 	public double getJetpackAccelSpeed() {
