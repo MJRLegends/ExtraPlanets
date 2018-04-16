@@ -193,23 +193,23 @@ public class GUIModuleManager extends GuiContainerGC {
 		
 		String temp = "";
 		if(this.selectedInstallModule != null){
-			if(this.selectedInstallModule.getSlotType() == 0)
+			if(this.selectedInstallModule.getSlotType() == 3)
 				temp = TranslateUtilities.translate("gui.module.type.boots.name");
-			else if(this.selectedInstallModule.getSlotType() == 1)
-				temp = TranslateUtilities.translate("gui.module.type.leggings.name");
 			else if(this.selectedInstallModule.getSlotType() == 2)
+				temp = TranslateUtilities.translate("gui.module.type.leggings.name");
+			else if(this.selectedInstallModule.getSlotType() == 1)
 				temp = TranslateUtilities.translate("gui.module.type.chest.name");
-			else if(this.selectedInstallModule.getSlotType() == 3)
+			else if(this.selectedInstallModule.getSlotType() == 0)
 				temp = TranslateUtilities.translate("gui.module.type.helmet.name");
 		}
 		else if(this.selectedModule != null){
-			if(this.selectedModule.getSlotType() == 0)
+			if(this.selectedModule.getSlotType() == 3)
 				temp = TranslateUtilities.translate("gui.module.type.boots.name");
-			else if(this.selectedModule.getSlotType() == 1)
-				temp = TranslateUtilities.translate("gui.module.type.leggings.name");
 			else if(this.selectedModule.getSlotType() == 2)
+				temp = TranslateUtilities.translate("gui.module.type.leggings.name");
+			else if(this.selectedModule.getSlotType() == 1)
 				temp = TranslateUtilities.translate("gui.module.type.chest.name");
-			else if(this.selectedModule.getSlotType() == 3)
+			else if(this.selectedModule.getSlotType() == 0)
 				temp = TranslateUtilities.translate("gui.module.type.helmet.name");
 		}
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module.type.name"), 165, 125, ColorUtil.to32BitColor(255, 0, 0, 0));
