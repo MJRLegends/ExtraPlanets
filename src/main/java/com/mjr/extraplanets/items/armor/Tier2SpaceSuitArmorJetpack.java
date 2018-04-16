@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.gui.ScaledResolution;
@@ -102,7 +103,8 @@ public class Tier2SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
 		if (tab == this.getCreativeTab()) {
-			list.add(new ItemStack(this, 1, 0));
+			list.add(ElectricItemHelper.getUncharged(new ItemStack(this)));
+			list.add(ElectricItemHelper.getWithCharge(new ItemStack(this), this.getMaxElectricityStored(new ItemStack(this))));
 		}
 	}
 
