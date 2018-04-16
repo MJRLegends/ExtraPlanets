@@ -62,7 +62,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	private float accel = 0.5F;
 	private float turnFactor = 3.0F;
 	public String texture;
-	ItemStack[] cargoItems = new ItemStack[60];
+	protected ItemStack[] cargoItems = new ItemStack[60];
 	private double boatX;
 	private double boatY;
 	private double boatZ;
