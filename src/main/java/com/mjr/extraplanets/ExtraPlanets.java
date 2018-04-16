@@ -268,7 +268,6 @@ public class ExtraPlanets {
 		ExtraPlanets_Tools.init();
 		ExtraPlanets_Armor.init();
 		ExtraPlanets_Items.init();
-		ExtraPlanets_Modules.init();
 
 		// Bone Meal Handler
 		RegisterUtilities.registerEventHandler(new BoneMealHandler());
@@ -300,6 +299,9 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		// Register Modules
+		ExtraPlanets_Modules.init();
+
 		// Register Capability Handlers
 		CapabilityStatsHandler.register();
 		CapabilityStatsClientHandler.register();
