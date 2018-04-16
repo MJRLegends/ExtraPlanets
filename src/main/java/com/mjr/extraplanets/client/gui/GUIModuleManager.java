@@ -85,9 +85,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		int y = 0;
 		ItemStack helmet = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(3);
 		for (Module modules : ModuleHelper.getModules(helmet)) {
-			if (selectedModule == null)
-				selectedModule = modules;
-			if (selectedModule.equals(modules)) {
+			if (this.selectedModule != null && this.selectedModule.equals(modules)) {
 				this.mc.getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png"));
 				this.drawTexturedModalRect(xOffset + 8 + (10 * x) + (x * 12), 30 + (10 * y) + (y * 5), 0, 0, 16, 16);
 			}
@@ -101,9 +99,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		y = 0;
 		ItemStack chest = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(2);
 		for (Module modules : ModuleHelper.getModules(chest)) {
-			if (selectedModule == null)
-				selectedModule = modules;
-			if (selectedModule.equals(modules)) {
+			if (this.selectedModule != null && this.selectedModule.equals(modules)) {
 				this.mc.getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png"));
 				this.drawTexturedModalRect(xOffset + 8 + (10 * x) + (x * 12), 60 + (10 * y) + (y * 5), 0, 0, 16, 16);
 			}
@@ -116,9 +112,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		y = 0;
 		ItemStack legs = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(1);
 		for (Module modules : ModuleHelper.getModules(legs)) {
-			if (selectedModule == null)
-				selectedModule = modules;
-			if (selectedModule.equals(modules)) {
+			if (this.selectedModule != null && this.selectedModule.equals(modules)) {
 				this.mc.getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png"));
 				this.drawTexturedModalRect(xOffset + 8 + (10 * x) + (x * 12), 90 + (10 * y) + (y * 5), 0, 0, 16, 16);
 			}
@@ -131,9 +125,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		y = 0;
 		ItemStack boots = MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(0);
 		for (Module modules : ModuleHelper.getModules(boots)) {
-			if (selectedModule == null)
-				selectedModule = modules;
-			if (selectedModule.equals(modules)) {
+			if (this.selectedModule != null && this.selectedModule.equals(modules)) {
 				this.mc.getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png"));
 				this.drawTexturedModalRect(xOffset + 8 + (10 * x) + (x * 12), 120 + (10 * y) + (y * 5), 0, 0, 16, 16);
 			}
@@ -146,14 +138,12 @@ public class GUIModuleManager extends GuiContainerGC {
 		x = 0;
 		y = 0;
 		for (Module modules : ExtraPlanets_Modules.getModules()) {
-			if (selectedInstallModule == null)
-				selectedInstallModule = modules;
 			if (moduleNumber == 3) {
 				y += 18;
 				moduleNumber = 0;
 				x = 0;
 			}
-			if (selectedInstallModule.equals(modules)) {
+			if (this.selectedInstallModule != null && this.selectedInstallModule.equals(modules)) {
 				this.mc.getTextureManager().bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/blank_rocket.png"));
 				this.drawTexturedModalRect(xOffset + -70 + (10 * x) + (x * 12), 18 + y, 0, 0, 16, 16);
 			}
@@ -163,16 +153,18 @@ public class GUIModuleManager extends GuiContainerGC {
 		}
 
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module_cost.name"), xOffset + -110, 5, ColorUtil.to32BitColor(255, 0, 0, 0));
+		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module.description.name"), 165, 30, ColorUtil.to32BitColor(255, 0, 0, 0));
+		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module.name.name"), 165, 5, ColorUtil.to32BitColor(255, 0, 0, 0));
 		y = 0;
-		for (ItemStack stack : this.selectedInstallModule.getRequirements()) {
-			this.itemRender.renderItemAndEffectIntoGUI(stack, xOffset + -98, 18 + y);
-			this.fontRendererObj.drawString("" + stack.stackSize + " x ", xOffset + -115, 22 + y, ColorUtil.to32BitColor(255, 0, 0, 0));
-			y += 18;
-		}
 
 		if (this.selectedInstallModule != null) {
-			this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module." + this.selectedInstallModule.getName() + ".name"), 165, 5, ColorUtil.to32BitColor(255, 0, 0, 0));
-			this.fontRendererObj.drawString("Description:", 190, 20, ColorUtil.to32BitColor(255, 0, 0, 0));
+			for (ItemStack stack : this.selectedInstallModule.getRequirements()) {
+				this.itemRender.renderItemAndEffectIntoGUI(stack, xOffset + -98, 18 + y);
+				this.fontRendererObj.drawString("" + stack.stackSize + " x ", xOffset + -115, 22 + y, ColorUtil.to32BitColor(255, 0, 0, 0));
+				y += 18;
+			}
+
+			this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module." + this.selectedInstallModule.getName() + ".name"), 165, 15, 4210752);
 			String text = TranslateUtilities.translate("gui.module." + this.selectedInstallModule.getDescription());
 			int charsPerLine = 20;
 
@@ -180,7 +172,21 @@ public class GUIModuleManager extends GuiContainerGC {
 			String textTemp = "";
 			int lineNum = 1;
 			for (String line : renderText) {
-				this.fontRendererObj.drawString(line, 165, 35 + ((lineNum - 1) * 10), 4210752);
+				this.fontRendererObj.drawString(line, 165, 40 + ((lineNum - 1) * 10), 4210752);
+				lineNum += 1;
+			}
+		}
+
+		if (this.selectedModule != null) {
+			this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module." + this.selectedModule.getName() + ".name"), 165, 15, 4210752);
+			String text = TranslateUtilities.translate("gui.module." + this.selectedModule.getDescription());
+			int charsPerLine = 20;
+
+			List<String> renderText = this.fontRendererObj.listFormattedStringToWidth(text, 115);
+			String textTemp = "";
+			int lineNum = 1;
+			for (String line : renderText) {
+				this.fontRendererObj.drawString(line, 165, 40 + ((lineNum - 1) * 10), 4210752);
 				lineNum += 1;
 			}
 		}
@@ -214,6 +220,7 @@ public class GUIModuleManager extends GuiContainerGC {
 				startX = startX + 8;
 			if ((mouseX >= xOffset + startX + (i * 16) && mouseX <= xOffset + startX + 16 + (i * 16)) && (mouseY >= startY && mouseY <= startY + 16)) {
 				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(3)).get(i);
+				this.selectedInstallModule = null;
 			}
 		}
 		startX = this.width / 2 - 80;
@@ -223,6 +230,7 @@ public class GUIModuleManager extends GuiContainerGC {
 				startX = startX + 8;
 			if ((mouseX >= xOffset + startX + (i * 16) && mouseX <= xOffset + startX + 16 + (i * 16)) && (mouseY >= startY && mouseY <= startY + 16)) {
 				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(2)).get(i);
+				this.selectedInstallModule = null;
 			}
 		}
 		startX = this.width / 2 - 80;
@@ -232,6 +240,7 @@ public class GUIModuleManager extends GuiContainerGC {
 				startX = startX + 8;
 			if ((mouseX >= xOffset + startX + (i * 16) && mouseX <= xOffset + startX + 16 + (i * 16)) && (mouseY >= startY && mouseY <= startY + 16)) {
 				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(1)).get(i);
+				this.selectedInstallModule = null;
 			}
 		}
 		startX = this.width / 2 - 80;
@@ -241,6 +250,7 @@ public class GUIModuleManager extends GuiContainerGC {
 				startX = startX + 8;
 			if ((mouseX >= xOffset + startX + (i * 16) && mouseX <= xOffset + startX + 16 + (i * 16)) && (mouseY >= startY && mouseY <= startY + 16)) {
 				this.selectedModule = ModuleHelper.getModules(MCUtilities.getClient().thePlayer.inventory.armorItemInSlot(0)).get(i);
+				this.selectedInstallModule = null;
 			}
 		}
 
@@ -260,6 +270,7 @@ public class GUIModuleManager extends GuiContainerGC {
 				startX = startX + 8;
 			if ((mouseX >= xOffset + startX + (x * 16) && mouseX <= xOffset + startX + 16 + (x * 16)) && (mouseY >= startY && mouseY <= startY + 16)) {
 				this.selectedInstallModule = ExtraPlanets_Modules.getModules().get(i);
+				this.selectedModule = null;
 			}
 			moduleNumber += 1;
 			x += 1;
