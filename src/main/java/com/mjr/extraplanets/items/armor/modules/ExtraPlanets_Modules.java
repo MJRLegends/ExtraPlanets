@@ -10,7 +10,8 @@ public class ExtraPlanets_Modules {
 		modules.add(new ModuleSensorGlasses("sensor_glasses"));
 		modules.add(new ModuleNoFallDamage("no_fall_damage"));
 		modules.add(new ModuleGeigerCounter("geiger_counter"));
-		//modules.add(new TestModule("test"));
+		modules.add(new ModulePreLaunchChecklist("pre_launch_checklist"));
+		// modules.add(new TestModule("test"));
 	}
 
 	public static List<Module> getModules() {
