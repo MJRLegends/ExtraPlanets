@@ -23,7 +23,6 @@ public class OverlayGeigerCounter extends Overlay {
 
 		final ScaledResolution scaledresolution = ClientUtil.getScaledRes(OverlayGeigerCounter.minecraft, OverlayGeigerCounter.minecraft.displayWidth, OverlayGeigerCounter.minecraft.displayHeight);
 		final int width = scaledresolution.getScaledWidth();
-		final int height = scaledresolution.getScaledHeight();
 		OverlayGeigerCounter.minecraft.entityRenderer.setupOverlayRendering();
 
 		GL11.glPushMatrix();
@@ -39,7 +38,6 @@ public class OverlayGeigerCounter extends Overlay {
 		OverlayGeigerCounter.minecraft.fontRenderer.drawString(text, (width / 8 - OverlayGeigerCounter.minecraft.fontRenderer.getStringWidth(text) / 2) - 20, 5, ColorUtil.to32BitColor(255, 60, 60, 128));
 
 		GL11.glPopMatrix();
-		GlStateManager.enableLighting();
 	}
 
 }
