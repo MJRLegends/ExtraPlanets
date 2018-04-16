@@ -13,10 +13,10 @@ import net.minecraft.world.gen.IChunkGenerator;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
+import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Pluto.worldgen.ChunkProviderPluto;
-import com.mjr.extraplanets.world.WorldProviderRealisticSpace;
 
 public class WorldProviderPluto extends WorldProviderRealisticSpace {
 

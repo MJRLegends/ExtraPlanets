@@ -22,9 +22,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.api.IModularArmor;
-import com.mjr.extraplanets.api.IPressureSuit;
-import com.mjr.extraplanets.api.IRadiationSuit;
+import com.mjr.extraplanets.api.item.IModularArmor;
+import com.mjr.extraplanets.api.item.IPressureSuit;
+import com.mjr.extraplanets.api.item.IRadiationSuit;
 import com.mjr.extraplanets.client.model.ArmorCustomModel;
 import com.mjr.extraplanets.client.model.ArmorSpaceSuitModel;
 import com.mjr.extraplanets.items.armor.modules.Module;

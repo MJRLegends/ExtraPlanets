@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.entities.rockets;
+package com.mjr.extraplanets.api.prefabs.entity;
 
 import io.netty.buffer.ByteBuf;
 
@@ -43,8 +43,8 @@ import net.minecraftforge.fml.common.network.ByteBufUtils;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.mjr.extraplanets.api.IPowerDock;
-import com.mjr.extraplanets.api.IPoweredLandable;
+import com.mjr.extraplanets.api.block.IPowerDock;
+import com.mjr.extraplanets.api.enitity.IPoweredLandable;
 import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
 import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;

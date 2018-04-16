@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.api;
+package com.mjr.extraplanets.api.enitity;
 
 import net.minecraft.util.math.BlockPos;
 

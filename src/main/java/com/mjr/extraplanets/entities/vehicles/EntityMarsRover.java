@@ -8,7 +8,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
 
-import com.mjr.extraplanets.api.IPowerDock;
+import com.mjr.extraplanets.api.block.IPowerDock;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tileEntities.blocks.TileEntityPoweredChargingPad;
 import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
