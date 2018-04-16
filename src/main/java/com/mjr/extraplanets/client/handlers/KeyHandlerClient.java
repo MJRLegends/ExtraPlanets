@@ -29,11 +29,13 @@ public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding openPowerGUI;
 	public static KeyBinding openModuleManagerGUI;
 	public static KeyBinding openPreLaunchChecklistGUI;
+	public static KeyBinding openNASAWorkBenchGUI;
 
 	static {
 		openPowerGUI = new KeyBinding(TranslateUtilities.translate("keybind.vehicle_inv.name"), ConfigManagerCore.keyOverrideFuelLevelI == 0 ? Keyboard.KEY_F : ConfigManagerCore.keyOverrideFuelLevelI, Constants.modName);
 		openModuleManagerGUI = new KeyBinding(TranslateUtilities.translate("keybind.module.manager.name"), Keyboard.KEY_H, Constants.modName);
 		openPreLaunchChecklistGUI = new KeyBinding(TranslateUtilities.translate("keybind.module.pre.launch.name"), Keyboard.KEY_P, Constants.modName);
+		openNASAWorkBenchGUI = new KeyBinding(TranslateUtilities.translate("keybind.module.nasa.workbench.name"), Keyboard.KEY_O, Constants.modName);
 	}
 
 	public static KeyBinding accelerateKey;
@@ -47,8 +49,8 @@ public class KeyHandlerClient extends KeyHandler {
 	private static Minecraft mc = MCUtilities.getMinecraft();
 
 	public KeyHandlerClient() {
-		super(new KeyBinding[] { KeyHandlerClient.openPowerGUI, KeyHandlerClient.openModuleManagerGUI, KeyHandlerClient.openPreLaunchChecklistGUI }, new boolean[] { false, false, false }, KeyHandlerClient.getVanillaKeyBindings(), new boolean[] {
-				false, true, true, true, true, true, true });
+		super(new KeyBinding[] { KeyHandlerClient.openPowerGUI, KeyHandlerClient.openModuleManagerGUI, KeyHandlerClient.openPreLaunchChecklistGUI, KeyHandlerClient.openNASAWorkBenchGUI }, new boolean[] { false, false, false, false }, KeyHandlerClient
+				.getVanillaKeyBindings(), new boolean[] { false, true, true, true, true, true, true });
 	}
 
 	private static KeyBinding[] getVanillaKeyBindings() {
@@ -95,6 +97,12 @@ public class KeyHandlerClient extends KeyHandler {
 				if (playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor) {
 					if (ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(1), "pre_launch_checklist") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "pre_launch_checklist"))
 						playerBase.openGui(GalacticraftCore.instance, GuiIdsCore.PRE_LAUNCH_CHECKLIST, playerBase.world, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
+				}
+			}
+			if (kb.getKeyCode() == KeyHandlerClient.openNASAWorkBenchGUI.getKeyCode()) {
+				if (playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor) {
+					if (ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(1), "nasa_workbench") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "nasa_workbench"))
+						playerBase.openGui(GalacticraftCore.instance, GuiIdsCore.NASA_WORKBENCH_NEW_SCHEMATIC, playerBase.world, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
 				}
 			}
 		}
