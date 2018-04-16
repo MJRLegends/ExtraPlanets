@@ -151,6 +151,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.items.ItemBasicKit;
 import com.mjr.extraplanets.items.ItemCannedFood;
 import com.mjr.extraplanets.items.ItemElectricParts;
+import com.mjr.extraplanets.items.ItemModuleItems;
 import com.mjr.extraplanets.items.ItemTools;
 import com.mjr.extraplanets.items.ItemWafers;
 import com.mjr.extraplanets.items.armor.ExtraPlanets_Armor;
@@ -355,6 +356,8 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.addVariants(Constants.modID, "candy_blocks_horizontal", "candy_cane_red_horizontal", "candy_cane_green_horizontal", "candy_cane_blue_horizontal", "candy_cane_orange_horizontal", "candy_cane_magenta_horizontal",
 				"candy_cane_pink_horizontal", "candy_cane_lime_horizontal", "candy_cane_purple_horizontal", "candy_cane_brown_horizontal", "candy_cane_black_horizontal");
 		ClientUtilities.addVariants(Constants.modID, "cake_blocks", "cake_block", "cake_block_red_velvet", "cake_block_chocolate", "white_icing_red_dots", "white_icing_green_dots", "white_icing_pink_dots", "white_icing_orange_dots", "cookie_rocks");
+		if (Config.PRESSURE || Config.RADIATION)
+			ClientUtilities.addVariants(Constants.modID, "module_items", "no_fall_boots");
 	}
 
 	private void registerEntityRenders() {
@@ -1129,12 +1132,14 @@ public class ClientProxy extends CommonProxy {
 
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_1_SPACE_SUIT_HELMET);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_1_SPACE_SUIT_CHEST);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_1_SPACE_SUIT_JETPACK_CHEST);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_1_SPACE_SUIT_LEGINGS);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_1_SPACE_SUIT_GRAVITY_BOOTS);
 
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_2_SPACE_SUIT_HELMET);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_2_SPACE_SUIT_CHEST);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_2_SPACE_SUIT_JETPACK_CHEST);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_2_SPACE_SUIT_LEGINGS);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS);
@@ -1142,15 +1147,18 @@ public class ClientProxy extends CommonProxy {
 
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_3_SPACE_SUIT_HELMET);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_3_SPACE_SUIT_CHEST);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_3_SPACE_SUIT_JETPACK_CHEST);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_3_SPACE_SUIT_LEGINGS);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_3_SPACE_SUIT_BOOTS);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_3_SPACE_SUIT_GRAVITY_BOOTS);
 
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_4_SPACE_SUIT_HELMET);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_4_SPACE_SUIT_CHEST);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_4_SPACE_SUIT_JETPACK_CHEST);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_4_SPACE_SUIT_LEGINGS);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_4_SPACE_SUIT_BOOTS);
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Armor.TIER_4_SPACE_SUIT_GRAVITY_BOOTS);
+			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.MODULE_ITEMS, ItemModuleItems.getItemList());
 		}
 		if (Config.RADIATION) {
 			ClientUtilities.registerItemJson(Constants.TEXTURE_PREFIX, ExtraPlanets_Items.IODIDE_SALT);
