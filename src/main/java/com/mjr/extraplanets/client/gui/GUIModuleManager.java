@@ -186,13 +186,21 @@ public class GUIModuleManager extends GuiContainerGC {
 		}
 
 		if (this.selectedModule != null) {
-			this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module." + this.selectedModule.getName() + ".name"), 165, 15, 4210752);
-			String text = TranslateUtilities.translate("gui.module." + this.selectedModule.getDescription());
+			String text = TranslateUtilities.translate("gui.module." + this.selectedInstallModule.getName() + ".name");
 			List<String> renderText = this.fontRendererObj.listFormattedStringToWidth(text, 115);
 			String textTemp = "";
 			int lineNum = 1;
 			for (String line : renderText) {
-				this.fontRendererObj.drawString(line, 165, 40 + ((lineNum - 1) * 10), 4210752);
+				this.fontRendererObj.drawString(line, 165, 15 + ((lineNum - 1) * 10), 4210752);
+				lineNum += 1;
+			}
+			
+			text = TranslateUtilities.translate("gui.module." + this.selectedModule.getDescription());
+			renderText = this.fontRendererObj.listFormattedStringToWidth(text, 115);
+			textTemp = "";
+			lineNum = 1;
+			for (String line : renderText) {
+				this.fontRendererObj.drawString(line, 165, 50 + ((lineNum - 1) * 10), 4210752);
 				lineNum += 1;
 			}
 		}
