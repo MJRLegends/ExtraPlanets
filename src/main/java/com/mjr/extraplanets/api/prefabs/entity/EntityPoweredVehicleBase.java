@@ -1,25 +1,20 @@
-package com.mjr.extraplanets.entities.vehicles;
+package com.mjr.extraplanets.api.prefabs.entity;
 
 import io.netty.buffer.ByteBuf;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import micdoodle8.mods.galacticraft.api.entity.IDockable;
-import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.TransformerHooks;
 import micdoodle8.mods.galacticraft.core.entities.IControllableEntity;
 import micdoodle8.mods.galacticraft.core.network.IPacketReceiver;
-import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.network.PacketDynamic;
 import micdoodle8.mods.galacticraft.core.network.PacketEntityUpdate;
 import micdoodle8.mods.galacticraft.core.network.PacketEntityUpdate.IEntityFullSync;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient;
-import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.settings.GameSettings;
@@ -34,19 +29,17 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.api.block.IPowerDock;
+import com.mjr.extraplanets.api.enitity.IPoweredDockable;
 import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public abstract class EntityVehicleBase extends Entity implements IInventoryDefaults, IPacketReceiver, IDockable, IControllableEntity, IEntityFullSync {
-	public final int tankCapacity = 1000;
-	public FluidTank roverFuelTank = new FluidTank(this.tankCapacity);
+public abstract class EntityPoweredVehicleBase extends Entity implements IInventoryDefaults, IPacketReceiver, IPoweredDockable, IControllableEntity, IEntityFullSync {
 	protected long ticks = 0;
 	public int roverType;
 	public int currentDamage;
@@ -55,24 +48,32 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	private double speed;
 	public float wheelRotationZ;
 	public float wheelRotationX;
-	private float maxSpeed = 0.5F;
-	private float accel = 0.2F;
+	private float maxSpeed = 0.6F;
+	private float accel = 0.5F;
 	private float turnFactor = 3.0F;
 	public String texture;
-	ItemStack[] cargoItems = new ItemStack[60];
+	protected ItemStack[] cargoItems = new ItemStack[60];
 	private double boatX;
 	private double boatY;
 	private double boatZ;
 	private double boatYaw;
 	private double boatPitch;
 	private int boatPosRotationIncrements;
-	protected IFuelDock landingPad;
+	protected IPowerDock landingPad;
 	private int timeClimbing;
 	private boolean shouldClimb;
+	protected boolean invertControls = false;
 
-	public EntityVehicleBase(World var1) {
+	// Power System
+	private float currentPowerCapacity;
+	private float powerMaxCapacity;
+
+	public EntityPoweredVehicleBase(World var1) {
 		super(var1);
-		this.setSize(0.98F, 1F);
+		this.setSize(2.8F, 1F);
+		this.currentDamage = 18;
+		this.timeSinceHit = 19;
+		this.rockDirection = 20;
 		this.speed = 0.0D;
 		this.preventEntitySpawning = true;
 		this.dataWatcher.addObject(this.currentDamage, new Integer(0));
@@ -81,22 +82,20 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 		this.ignoreFrustumCheck = true;
 		this.isImmuneToFire = true;
 
+		// Power System
+		this.currentPowerCapacity = 0;
+		this.powerMaxCapacity = 10000;
+
 		if (var1 != null && var1.isRemote) {
 			GalacticraftCore.packetPipeline.sendToServer(new PacketDynamic(this));
 		}
 	}
 
-	public EntityVehicleBase(World var1, double var2, double var4, double var6, int type) {
+	public EntityPoweredVehicleBase(World var1, double var2, double var4, double var6, int type) {
 		this(var1);
 		this.setPosition(var2, var4, var6);
 		this.setBuggyType(type);
 		this.cargoItems = new ItemStack[this.roverType * 18];
-	}
-
-	public int getScaledFuelLevel(int i) {
-		final double fuelLevel = this.roverFuelTank.getFluid() == null ? 0 : this.roverFuelTank.getFluid().amount;
-
-		return (int) (fuelLevel * i / this.tankCapacity);
 	}
 
 	public ModelBase getModel() {
@@ -256,7 +255,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 		}
 
 		this.ticks++;
-
+		this.featureUpdate();
 		super.onUpdate();
 
 		if (this.worldObj.isRemote) {
@@ -336,7 +335,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 			this.timeClimbing = 0;
 		}
 
-		if (this.worldObj.isRemote && this.roverFuelTank.getFluid() != null && this.roverFuelTank.getFluid().amount > 0) {
+		if (this.worldObj.isRemote && this.currentPowerCapacity > 0) {
 			this.motionX = -(this.speed * Math.cos((this.rotationYaw - 90F) * Math.PI / 180.0D));
 			this.motionZ = -(this.speed * Math.sin((this.rotationYaw - 90F) * Math.PI / 180.0D));
 		}
@@ -345,11 +344,11 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 			this.moveEntity(this.motionX, this.motionY, this.motionZ);
 		}
 
-		if (!this.worldObj.isRemote && Math.abs(this.motionX * this.motionZ) > 0.000001) {
+		if (!this.worldObj.isRemote && Math.abs(this.motionX * this.motionZ) > 0.0) {
 			double d = this.motionX * this.motionX + this.motionZ * this.motionZ;
 
 			if (d != 0 && this.ticks % (MathHelper.floor_double(2 / d) + 1) == 0) {
-				this.removeFuel(1);
+				this.removePower(10);
 			}
 		}
 
@@ -371,18 +370,13 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 			return;
 		}
 		sendData.add(this.roverType);
-		sendData.add(this.roverFuelTank);
+		sendData.add(this.currentPowerCapacity);
 	}
 
 	@Override
 	public void decodePacketdata(ByteBuf buffer) {
 		this.roverType = buffer.readInt();
-
-		try {
-			this.roverFuelTank = NetworkUtil.readFluidTank(buffer);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		this.currentPowerCapacity = buffer.readFloat();
 	}
 
 	@Override
@@ -390,10 +384,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 		this.roverType = var1.getInteger("roverType");
 		final NBTTagList var2 = var1.getTagList("Items", 10);
 		this.cargoItems = new ItemStack[this.getSizeInventory()];
-
-		if (var1.hasKey("fuelTank")) {
-			this.roverFuelTank.readFromNBT(var1.getCompoundTag("fuelTank"));
-		}
+		this.currentPowerCapacity = var1.getFloat("currentPowerCapacity");
 
 		for (int var3 = 0; var3 < var2.tagCount(); ++var3) {
 			final NBTTagCompound var4 = var2.getCompoundTagAt(var3);
@@ -409,11 +400,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	protected void writeEntityToNBT(NBTTagCompound var1) {
 		var1.setInteger("roverType", this.roverType);
 		final NBTTagList var2 = new NBTTagList();
-
-		if (this.roverFuelTank.getFluid() != null) {
-			var1.setTag("fuelTank", this.roverFuelTank.writeToNBT(new NBTTagCompound()));
-		}
-
+		var1.setFloat("currentPowerCapacity", this.currentPowerCapacity);
 		for (int var3 = 0; var3 < this.cargoItems.length; ++var3) {
 			if (this.cargoItems[var3] != null) {
 				final NBTTagCompound var4 = new NBTTagCompound();
@@ -501,7 +488,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 						GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - " + TranslateUtilities.translate("gui.buggy.turn.name"));
 				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.accel.name"));
 				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.decel.name"));
-				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.openFuelGui.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.buggy.inv.name"));
+				PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + TranslateUtilities.translate("gui.powered.inv.name"));
 			}
 
 			return true;
@@ -523,14 +510,17 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(PacketSimple.EnumSimplePacket.S_CONTROL_ENTITY, GCCoreUtil.getDimensionID(this.worldObj), new Object[] { key }));
 			return true;
 		}
-
 		switch (key) {
-		case 0: // Accelerate
-			this.speed += this.accel / 20D;
+		case 0: // Deccelerate
+			if (this.currentPowerCapacity < 10)
+				return false;
+			this.speed -= this.accel / 20D;
 			this.shouldClimb = true;
 			return true;
-		case 1: // Deccelerate
-			this.speed -= this.accel / 20D;
+		case 1: // Accelerate
+			if (this.currentPowerCapacity < 10)
+				return false;
+			this.speed += this.accel / 20D;
 			this.shouldClimb = true;
 			return true;
 		case 2: // Left
@@ -542,26 +532,12 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 			this.wheelRotationZ = Math.max(-30.0F, Math.min(30.0F, this.wheelRotationZ - 0.5F));
 			return true;
 		}
-
 		return false;
 	}
 
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemStack) {
 		return false;
-	}
-
-	@Override
-	public int addFuel(FluidStack liquid, boolean doDrain) {
-		if (this.landingPad != null)
-			return FluidUtil.fillWithGCFuel(this.roverFuelTank, liquid, doDrain);
-
-		return 0;
-	}
-
-	@Override
-	public FluidStack removeFuel(int amount) {
-		return this.roverFuelTank.drain(amount, true);
 	}
 
 	@Override
@@ -645,7 +621,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 
 	@Override
 	public boolean hasCustomName() {
-		return true;
+		return false;
 	}
 
 	@Override
@@ -686,6 +662,52 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 		this.accel = accel;
 	}
 
+	/*
+	 * Power System Methods ------------------------------------------------------------------------------------------------------
+	 */
+	public float getCurrentPowerCapacity() {
+		return currentPowerCapacity;
+	}
+
+	public void setCurrentPowerCapacity(float currentPowerCapacity) {
+		this.currentPowerCapacity = currentPowerCapacity;
+	}
+
+	public float getPowerMaxCapacity() {
+		return powerMaxCapacity;
+	}
+
+	public void setPowerMaxCapacity(float powerMaxCapacity) {
+		this.powerMaxCapacity = powerMaxCapacity;
+	}
+
+	@Override
+	public float addPower(float amount, boolean doDrain) {
+		float beforePower = this.getCurrentPowerCapacity();
+		if (this.getCurrentPowerCapacity() >= this.getPowerMaxCapacity())
+			this.setCurrentPowerCapacity(this.getPowerMaxCapacity());
+		else
+			this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() + amount);
+		return this.getCurrentPowerCapacity() - beforePower;
+	}
+
+	@Override
+	public float removePower(float amount) {
+		float beforePower = this.getCurrentPowerCapacity();
+		if ((this.getCurrentPowerCapacity() - amount) <= 0)
+			this.setCurrentPowerCapacity(0);
+		else
+			this.setCurrentPowerCapacity(this.getCurrentPowerCapacity() - amount);
+		return beforePower - this.getCurrentPowerCapacity();
+	}
+
+	@Override
+	public boolean inFlight() {
+		return false;
+	}
+
+	// ------------------------------------------------------------------------------------------------------
+
 	public abstract String getInventoryName();
 
 	public abstract List<ItemStack> getItemsDropped();
@@ -694,11 +716,13 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	public abstract ItemStack getPickedResult(MovingObjectPosition target);
 
 	@Override
-	public abstract void setPad(IFuelDock pad);
+	public abstract void setPad(IPowerDock pad);
 
 	@Override
-	public abstract IFuelDock getLandingPad();
+	public abstract IPowerDock getLandingPad();
 
 	@Override
-	public abstract boolean isDockValid(IFuelDock dock);
+	public abstract boolean isDockValid(IPowerDock dock);
+
+	public abstract void featureUpdate();
 }

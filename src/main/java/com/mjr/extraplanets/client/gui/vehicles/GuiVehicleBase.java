@@ -3,7 +3,7 @@ package com.mjr.extraplanets.client.gui.vehicles;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.InventoryPlayer;
 
-import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
+import com.mjr.extraplanets.api.prefabs.entity.EntityVehicleBase;
 
 public class GuiVehicleBase extends GuiScreen {
 
