@@ -9,6 +9,7 @@ public class ExtraPlanets_Modules {
 	public static void init() {
 		modules.add(new ModuleSensorGlasses("sensor_glasses"));
 		modules.add(new ModuleNoFallDamage("no_fall_damage"));
+		modules.add(new ModuleGeigerCounter("geiger_counter"));
 		modules.add(new TestModule("test"));
 	}
 
