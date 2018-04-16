@@ -16,7 +16,7 @@ import com.mjr.mjrlegendslib.util.MCUtilities;
 public class ModuleSensorGlasses extends Module {
 
 	public ModuleSensorGlasses(String name) {
-		super(name, 3, new ItemStack(GCItems.sensorGlasses), true);
+		super(name, 0, new ItemStack(GCItems.sensorGlasses), true);
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(GCItems.sensorGlasses));
 		this.setRequirements(items);

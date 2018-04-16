@@ -14,7 +14,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class ModuleNoFallDamage extends Module {
 
 	public ModuleNoFallDamage(String name) {
-		super(name, 0, new ItemStack(ExtraPlanets_Items.MODULE_ITEMS), true);
+		super(name, 3, new ItemStack(ExtraPlanets_Items.MODULE_ITEMS), true);
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(ExtraPlanets_Items.MODULE_ITEMS, 1, 0));
 		this.setRequirements(items);

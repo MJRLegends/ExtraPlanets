@@ -15,7 +15,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class ModuleGeigerCounter extends Module {
 
 	public ModuleGeigerCounter(String name) {
-		super(name, 2, new ItemStack(ExtraPlanets_Items.GEIGER_COUNTER), true);
+		super(name, 1, new ItemStack(ExtraPlanets_Items.GEIGER_COUNTER), true);
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(ExtraPlanets_Items.GEIGER_COUNTER));
 		this.setRequirements(items);
