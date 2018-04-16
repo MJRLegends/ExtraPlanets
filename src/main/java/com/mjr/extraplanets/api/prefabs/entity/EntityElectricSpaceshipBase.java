@@ -1,4 +1,4 @@
-package com.mjr.extraplanets.entities.rockets;
+package com.mjr.extraplanets.api.prefabs.entity;
 
 import io.netty.buffer.ByteBuf;
 

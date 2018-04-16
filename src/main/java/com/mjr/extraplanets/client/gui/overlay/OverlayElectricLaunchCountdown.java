@@ -11,7 +11,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import org.lwjgl.opengl.GL11;
 
-import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
+import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @SideOnly(Side.CLIENT)

@@ -12,9 +12,9 @@ import org.lwjgl.input.Keyboard;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.api.IJetpackArmour;
-import com.mjr.extraplanets.api.IModularArmor;
-import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
+import com.mjr.extraplanets.api.item.IJetpackArmour;
+import com.mjr.extraplanets.api.item.IModularArmor;
+import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.network.PacketSimpleEP;

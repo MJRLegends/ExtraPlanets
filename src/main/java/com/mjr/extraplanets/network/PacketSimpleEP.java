@@ -28,13 +28,13 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
+import com.mjr.extraplanets.api.prefabs.entity.EntityElectricSpaceshipBase.EnumLaunchPhase;
 import com.mjr.extraplanets.client.gui.GUIModuleManager;
 import com.mjr.extraplanets.client.gui.vehicles.GuiPoweredVehicleBase;
 import com.mjr.extraplanets.client.gui.vehicles.GuiVehicleBase;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
-import com.mjr.extraplanets.entities.rockets.EntityElectricRocketBase;
-import com.mjr.extraplanets.entities.rockets.EntityElectricSpaceshipBase.EnumLaunchPhase;
 import com.mjr.extraplanets.entities.vehicles.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.entities.vehicles.EntityVehicleBase;
 import com.mjr.extraplanets.items.armor.bases.JetpackArmorBase;

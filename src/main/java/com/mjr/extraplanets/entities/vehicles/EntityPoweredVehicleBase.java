@@ -41,8 +41,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.api.IPowerDock;
-import com.mjr.extraplanets.api.IPoweredDockable;
+import com.mjr.extraplanets.api.block.IPowerDock;
+import com.mjr.extraplanets.api.enitity.IPoweredDockable;
 import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.PlayerUtilties;
