@@ -98,13 +98,13 @@ public class KeyHandlerClient extends KeyHandler {
 			if (kb.getKeyCode() == KeyHandlerClient.openPreLaunchChecklistGUI.getKeyCode()) {
 				if (playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor) {
 					if (ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(1), "pre_launch_checklist") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "pre_launch_checklist"))
-						playerBase.openGui(GalacticraftCore.instance, GuiIdsCore.PRE_LAUNCH_CHECKLIST, playerBase.world, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
+						playerBase.openGui(GalacticraftCore.instance, GuiIdsCore.PRE_LAUNCH_CHECKLIST, playerBase.worldObj, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
 				}
 			}
 			if (kb.getKeyCode() == KeyHandlerClient.openNASAWorkBenchGUI.getKeyCode()) {
 				if (playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor) {
 					if (ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(1), "nasa_workbench") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "nasa_workbench"))
-						playerBase.openGui(GalacticraftCore.instance, GuiIdsCore.NASA_WORKBENCH_NEW_SCHEMATIC, playerBase.world, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
+						playerBase.openGui(GalacticraftCore.instance, GuiIdsCore.NASA_WORKBENCH_NEW_SCHEMATIC, playerBase.worldObj, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
 				}
 			}
 		}
