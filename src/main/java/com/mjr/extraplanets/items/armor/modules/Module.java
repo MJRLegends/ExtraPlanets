@@ -15,6 +15,7 @@ public abstract class Module {
 	private int slotType;
 	private ItemStack icon;
 	private boolean active;
+	private String description = "";
 
 	public Module(String name, List<ItemStack> requirements, int slotType, ItemStack icon, boolean active) {
 		super();
@@ -71,6 +72,10 @@ public abstract class Module {
 
 	public void setActive(boolean active) {
 		this.active = active;
+	}
+
+	public String getDescription() {
+		return this.getName() + ".desc";
 	}
 
 	public abstract void tickServer(EntityPlayerMP player);
