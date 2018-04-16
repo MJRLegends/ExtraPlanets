@@ -560,6 +560,7 @@ gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
 
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Güçlü Araç Envanterini Aç.
+keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
 
 #GUI Module Manager
 gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
@@ -1036,21 +1037,25 @@ item.green_diamond_boots.name=Green Diamond Boots ##NEEDS TRANSLATE##
 
 item.tier1_space_suit_helmet.name=Tier 1 Space Suit Helmet ##NEEDS TRANSLATE##
 item.tier1_space_suit_chest.name=Tier 1 Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier1_space_suit_jetpack_chest.name=Tier 1 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier1_space_suit_legings.name=Tier 1 Space Suit Leggings ##NEEDS TRANSLATE##
 item.tier1_space_suit_boots.name=Tier 1 Space Suit Boots ##NEEDS TRANSLATE##
 item.tier1_space_suit_gravity_boots.name=Tier 1 Space Suit Gravity Boots ##NEEDS TRANSLATE##
 item.tier2_space_suit_helmet.name=Tier 2 Space Suit Helmet ##NEEDS TRANSLATE##
 item.tier2_space_suit_chest.name=Tier 2 Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier2_space_suit_jetpack_chest.name=Tier 2 Space SuitJetpack  Chestplate ##NEEDS TRANSLATE##
 item.tier2_space_suit_legings.name=Tier 2 Space Suit Leggings ##NEEDS TRANSLATE##
 item.tier2_space_suit_boots.name=Tier 2 Space Suit Boots ##NEEDS TRANSLATE##
 item.tier2_space_suit_gravity_boots.name=Tier 2 Space Suit Gravity Boots ##NEEDS TRANSLATE##
 item.tier3_space_suit_helmet.name=Tier 3 Space Suit Helmet ##NEEDS TRANSLATE##
 item.tier3_space_suit_chest.name=Tier 3 Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier3_space_suit_jetpack_chest.name=Tier 3 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier3_space_suit_legings.name=Tier 3 Space Suit Leggings ##NEEDS TRANSLATE##
 item.tier3_space_suit_boots.name=Tier 3 Space Suit Boots ##NEEDS TRANSLATE##
 item.tier3_space_suit_gravity_boots.name=Tier 3 Space Suit Gravity Boots ##NEEDS TRANSLATE##
 item.tier4_space_suit_helmet.name=Tier 4 Space Suit Helmet ##NEEDS TRANSLATE##
 item.tier4_space_suit_chest.name=Tier 4 Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier4_space_suit_jetpack_chest.name=Tier 4 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier4_space_suit_legings.name=Tier 4 Space Suit Leggings ##NEEDS TRANSLATE##
 item.tier4_space_suit_boots.name=Tier 4 Space Suit Boots ##NEEDS TRANSLATE##
 item.tier4_space_suit_gravity_boots.name=Tier 4 Space Suit Gravity Boots ##NEEDS TRANSLATE##
@@ -1120,6 +1125,9 @@ item.tier4_un_prepared_space_suit_helmet.name=Tier 4 Un-Prepared Space Suit Helm
 item.tier4_un_prepared_space_suit_chest.name=Tier 4 Un-Prepared Space Suit Chestplate ##NEEDS TRANSLATE##
 item.tier4_un_prepared_space_suit_legings.name=Tier 4 Un-Prepared Space Suit Leggings ##NEEDS TRANSLATE##
 item.tier4_un_prepared_space_suit_boots.name=Tier 4 Un-Prepared Space Suit Boots ##NEEDS TRANSLATE##
+
+#Module Items
+item.module_items.no_fall_boots.name=No Fall Damage Module ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Very Heavy Oxygen Tank ##NEEDS TRANSLATE##
