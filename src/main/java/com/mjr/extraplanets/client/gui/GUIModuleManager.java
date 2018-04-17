@@ -86,13 +86,13 @@ public class GUIModuleManager extends GuiContainerGC {
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module_manager.name"), this.xOffset + 8, 5, this.mainColour);
 
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.modules_helmet.name"), this.xOffset + 8, 20, this.mainColour);
-		this.renderModules(3, this.xOffset + 11, 31);
+		this.renderModules(0, this.xOffset + 11, 31);
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.modules_chest.name"), this.xOffset + 8, 50, this.mainColour);
-		this.renderModules(2, this.xOffset + 11, 61);
+		this.renderModules(1, this.xOffset + 11, 61);
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.modules_leggings.name"), this.xOffset + 8, 80, this.mainColour);
-		this.renderModules(1, this.xOffset + 11, 91);
+		this.renderModules(2, this.xOffset + 11, 91);
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.modules_boots.name"), this.xOffset + 8, 110, this.mainColour);
-		this.renderModules(0, this.xOffset + 11, 121);
+		this.renderModules(3, this.xOffset + 11, 121);
 
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module_list.name"), this.xOffset + -75, 5, this.mainColour);
 		this.renderModuleList(this.xOffset + -70, 18);
@@ -199,13 +199,13 @@ public class GUIModuleManager extends GuiContainerGC {
 			}
 
 			String temp = "";
-			if (module.getSlotType() == 0)
+			if (module.getSlotType() == 3)
 				temp = TranslateUtilities.translate("gui.module.type.boots.name");
-			else if (module.getSlotType() == 1)
-				temp = TranslateUtilities.translate("gui.module.type.leggings.name");
 			else if (module.getSlotType() == 2)
+				temp = TranslateUtilities.translate("gui.module.type.leggings.name");
+			else if (module.getSlotType() == 1)
 				temp = TranslateUtilities.translate("gui.module.type.chest.name");
-			else if (module.getSlotType() == 3)
+			else if (module.getSlotType() == 0)
 				temp = TranslateUtilities.translate("gui.module.type.helmet.name");
 			this.fontRendererObj.drawString(temp, x, Ytype, this.sideColour);
 		}
@@ -218,11 +218,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		// Check Inputs for Installed Modules
 		int startX = this.width / 2 - 80;
 		int startY = this.height / 2 - 53;
-		this.checkInputForIcon(3, this.xOffset + startX, startY, mouseX, mouseY);
-
-		startX = this.width / 2 - 80;
-		startY = startY + 30;
-		this.checkInputForIcon(2, this.xOffset + startX, startY, mouseX, mouseY);
+		this.checkInputForIcon(0, this.xOffset + startX, startY, mouseX, mouseY);
 
 		startX = this.width / 2 - 80;
 		startY = startY + 30;
@@ -230,7 +226,11 @@ public class GUIModuleManager extends GuiContainerGC {
 
 		startX = this.width / 2 - 80;
 		startY = startY + 30;
-		this.checkInputForIcon(0, this.xOffset + startX, startY, mouseX, mouseY);
+		this.checkInputForIcon(2, this.xOffset + startX, startY, mouseX, mouseY);
+
+		startX = this.width / 2 - 80;
+		startY = startY + 30;
+		this.checkInputForIcon(3, this.xOffset + startX, startY, mouseX, mouseY);
 
 		startX = this.width / 2 - 160;
 		startY = this.height / 2 - 64;

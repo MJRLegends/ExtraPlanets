@@ -97,13 +97,13 @@ public class KeyHandlerClient extends KeyHandler {
 			}
 			if (kb.getKeyCode() == KeyHandlerClient.openPreLaunchChecklistGUI.getKeyCode()) {
 				if (playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor) {
-					if (ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(1), "pre_launch_checklist") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "pre_launch_checklist"))
+					if (ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(2), "pre_launch_checklist") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "pre_launch_checklist"))
 						playerBase.openGui(GalacticraftCore.instance, GuiIdsCore.PRE_LAUNCH_CHECKLIST, playerBase.worldObj, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
 				}
 			}
 			if (kb.getKeyCode() == KeyHandlerClient.openNASAWorkBenchGUI.getKeyCode()) {
 				if (playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor) {
-					if (ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(1), "nasa_workbench") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "nasa_workbench"))
+					if (ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(2), "nasa_workbench") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "nasa_workbench"))
 						playerBase.openGui(GalacticraftCore.instance, GuiIdsCore.NASA_WORKBENCH_NEW_SCHEMATIC, playerBase.worldObj, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
 				}
 			}
@@ -118,7 +118,7 @@ public class KeyHandlerClient extends KeyHandler {
 				return;
 			}
 			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
-				if (playerBase.inventory.armorItemInSlot(2) != null && playerBase.inventory.armorItemInSlot(2).getItem() instanceof IJetpackArmour) {
+				if (playerBase.inventory.armorItemInSlot(1) != null && playerBase.inventory.armorItemInSlot(1).getItem() instanceof IJetpackArmour) {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.theWorld.provider.getDimensionId(), new Object[] { 0 }));
 				}
 			}

@@ -225,12 +225,12 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			break;
 		case S_UPDATE_JETPACK:
 			if ((int) this.data.get(0) == 1) {
-				ItemStack jetpack = player.inventory.armorInventory[2];
+				ItemStack jetpack = player.inventory.armorInventory[1];
 				NBTTagCompound tag = new NBTTagCompound();
 				tag.setBoolean("active", true);
 				jetpack.setTagCompound(tag);
 			} else if ((int) this.data.get(0) == 0) {
-				ItemStack jetpack = player.inventory.armorInventory[2];
+				ItemStack jetpack = player.inventory.armorInventory[1];
 				NBTTagCompound tag = new NBTTagCompound();
 				tag.setBoolean("active", false);
 				jetpack.setTagCompound(tag);

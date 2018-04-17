@@ -13,7 +13,7 @@ import net.minecraft.item.ItemStack;
 public class ModulePreLaunchChecklist extends Module {
 
 	public ModulePreLaunchChecklist(String name) {
-		super(name, 1, new ItemStack(GCItems.prelaunchChecklist), false);
+		super(name, 2, new ItemStack(GCItems.prelaunchChecklist), false);
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(GCItems.prelaunchChecklist, 1, 0));
 		this.setRequirements(items);
