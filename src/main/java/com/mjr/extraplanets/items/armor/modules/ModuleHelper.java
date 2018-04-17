@@ -54,17 +54,7 @@ public class ModuleHelper {
 	}
 
 	public static void addModule(ItemStack item, Module module) {
-		if (item != null && !item.hasTagCompound())
-			setupModulesNBT(item);
-
-		final NBTTagCompound nbt = item.getTagCompound();
-		NBTTagList tagList = nbt.getTagList("modules", 10);
-		NBTTagCompound moduleNBT = new NBTTagCompound();
-		moduleNBT.setString("module", module.getName());
-		moduleNBT.setBoolean("active", module.isActive());
-		tagList.appendTag(moduleNBT);
-		nbt.setTag("modules", tagList);
-		item.setTagCompound(nbt);
+		addModule(item, module, module.isActive());
 	}
 
 	public static void addModule(ItemStack item, Module module, boolean active) {
@@ -111,7 +101,7 @@ public class ModuleHelper {
 				boolean takenStack = false;
 				if (player.inventory.hasItemStack(itemTemp)) {
 					for (int i = 0; i < player.inventory.getSizeInventory(); i++) {
-						if(!takenStack){
+						if (!takenStack) {
 							ItemStack testStack = player.inventory.getStackInSlot(i);
 							if (ItemStack.areItemsEqual(testStack, itemTemp)) {
 								ItemStack newStack = player.inventory.getStackInSlot(i);
@@ -153,89 +143,69 @@ public class ModuleHelper {
 		}
 
 	}
-	
-	public static boolean hasModule(ItemStack item, Module module){
+
+	public static boolean hasModule(ItemStack item, Module module) {
+		return hasModule(item, module.getName());
+	}
+
+	public static boolean hasModule(ItemStack item, String moduleName) {
 		List<Module> temp = getModules(item);
 		for (Module tempModule : temp) {
-			if(module.getName().equalsIgnoreCase(tempModule.getName()))
+			if (moduleName.equalsIgnoreCase(tempModule.getName()))
 				return true;
 		}
 		return false;
 	}
-	
-	public static boolean hasModule(ItemStack item, String moduleName){
-		List<Module> temp = getModules(item);
-		for (Module tempModule : temp) {
-			if(moduleName.equalsIgnoreCase(tempModule.getName()))
-				return true;
-		}
-		return false;
+
+	public static boolean isModuleActive(ItemStack item, Module module) {
+		return isModuleActive(item, module.getName());
 	}
-	
-	public static boolean isModuleActive(ItemStack item, Module module){
+
+	public static boolean isModuleActive(ItemStack item, String moduleName) {
 		List<Module> temp = getModules(item);
 		for (Module tempModule : temp) {
-			if(module.getName().equalsIgnoreCase(tempModule.getName()))
+			if (moduleName.equalsIgnoreCase(tempModule.getName()))
 				return tempModule.isActive();
 		}
 		return false;
 	}
-	
-	public static boolean isModuleActive(ItemStack item, String moduleName){
-		List<Module> temp = getModules(item);
-		for (Module tempModule : temp) {
-			if(moduleName.equalsIgnoreCase(tempModule.getName()))
-				return tempModule.isActive();
-		}
-		return false;
+
+	public static int getModulePassiveCost(Module module) {
+		return getModulePassiveCost(module.getName());
 	}
-	
-	public static int getModulePassiveCost(Module module){
+
+	public static int getModulePassiveCost(String moduleName) {
 		List<Module> temp = ExtraPlanets_Modules.modules;
 		for (Module tempModule : temp) {
-			if(module.getName().equalsIgnoreCase(tempModule.getName()))
+			if (moduleName.equalsIgnoreCase(tempModule.getName()))
 				return tempModule.getPassivePowerCost();
 		}
 		return 0;
 	}
-	
-	public static int getModuleUseCost(Module module){
+
+	public static int getModuleUseCost(Module module) {
+		return getModuleUseCost(module.getName());
+	}
+
+	public static int getModuleUseCost(String moduleName) {
 		List<Module> temp = ExtraPlanets_Modules.modules;
 		for (Module tempModule : temp) {
-			if(module.getName().equalsIgnoreCase(tempModule.getName()))
+			if (moduleName.equalsIgnoreCase(tempModule.getName()))
 				return tempModule.getUsePowerCost();
 		}
 		return 0;
 	}
-	
-	public static int getModulePassiveCost(String moduleName){
-		List<Module> temp = ExtraPlanets_Modules.modules;
-		for (Module tempModule : temp) {
-			if(moduleName.equalsIgnoreCase(tempModule.getName()))
-				return tempModule.getPassivePowerCost();
-		}
-		return 0;
+
+	public static int getArmourStoredPower(ItemStack item) {
+		return (int) ((ElectricArmorBase) item.getItem()).getElectricityStored(item);
 	}
-	
-	public static int getModuleUseCost(String moduleName){
-		List<Module> temp = ExtraPlanets_Modules.modules;
-		for (Module tempModule : temp) {
-			if(moduleName.equalsIgnoreCase(tempModule.getName()))
-				return tempModule.getUsePowerCost();
-		}
-		return 0;
+
+	public static void takeArmourPower(ItemStack item, int power) {
+		((ElectricArmorBase) item.getItem()).discharge(item, power, true);
 	}
-	
-	public static int getArmourStoredPower(ItemStack item){
-		return (int) ((ElectricArmorBase)item.getItem()).getElectricityStored(item);
-	}
-	
-	public static void takeArmourPower(ItemStack item, int power){
-		((ElectricArmorBase)item.getItem()).discharge(item, power, true);
-	}
-	
-	public static boolean hasPower(ItemStack item, int power){
-		if(getArmourStoredPower(item) >= power)
+
+	public static boolean hasPower(ItemStack item, int power) {
+		if (getArmourStoredPower(item) >= power)
 			return true;
 		return false;
 	}
