@@ -155,7 +155,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	}
 
 	/*
-	 * Overriding for the purpose of to draw Planet & Moon & Star Names & to override GC bodiesToRender since theirs is not accessible
+	 * Overriding for the purpose of to draw Planet & Moon Names & to override GC bodiesToRender since theirs is not accessible
 	 */
 	public HashMap<CelestialBody, Matrix4f> drawCelestialBodies(Matrix4f worldMatrix) {
 		GL11.glColor3f(1.0F, 1.0F, 1.0F);
