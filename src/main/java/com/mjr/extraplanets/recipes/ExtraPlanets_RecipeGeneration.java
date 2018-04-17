@@ -1069,6 +1069,20 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R',
 				ExtraPlanets_Armor.TIER_4_SPACE_SUIT_BOOTS, 'G', new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
 
+		// Tier 1 - 4 Jetpack Chestplates
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_JETPACK_CHEST, 1, 0), new Object[] { "BBB", "GRG", "BBB", 'R',
+				ExtraPlanets_Armor.TIER_1_SPACE_SUIT_CHEST, 'G', new ItemStack(AsteroidsItems.basicItem, 1, 1), 'B', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_JETPACK_CHEST, 1, 0), new Object[] { "BBB", "GRG", "BBB", 'R',
+				ExtraPlanets_Armor.TIER_2_SPACE_SUIT_CHEST, 'G', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 0), 'B', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_JETPACK_CHEST, 1, 0), new Object[] { "BBB", "GRG", "BBB", 'R',
+				ExtraPlanets_Armor.TIER_3_SPACE_SUIT_CHEST, 'G', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 0), 'B', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_JETPACK_CHEST, 1, 0), new Object[] { "BBB", "GRG", "BBB", 'R',
+				ExtraPlanets_Armor.TIER_4_SPACE_SUIT_CHEST, 'G', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 0), 'B', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
+
+		// Module Items
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.MODULE_ITEMS, 1, 0), new Object[] { "   ", "STS", "STS", 'T',
+				new ItemStack(AsteroidsItems.titaniumBoots, 1), 'S', "itemSilicon" });
+
 		// Anti Radiation Drinks TODO AUTOMATE CREATION
 		// RecipeDumper.addNBTRecipe(
 		// new ItemStack(ExtraPlanets_Items.ANTI_RADIATION, 1, 0),

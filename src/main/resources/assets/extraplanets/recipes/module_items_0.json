@@ -1,0 +1,26 @@
+{
+  "result": {
+    "item": "extraplanets:module_items",
+    "data": 0
+  },
+  "pattern": [
+    "   ",
+    "STS",
+    "STS"
+  ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "pressureandradiation"
+    }
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "item": "#ITEMSILICON"
+    },
+    "T": {
+      "item": "galacticraftplanets:titanium_boots"
+    }
+  }
+}

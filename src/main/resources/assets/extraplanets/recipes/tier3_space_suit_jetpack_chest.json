@@ -1,0 +1,30 @@
+{
+  "result": {
+    "item": "extraplanets:tier3_space_suit_jetpack_chest"
+  },
+  "pattern": [
+    "BBB",
+    "GRG",
+    "BBB"
+  ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "pressureandradiation"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "extraplanets:tier3_space_suit_chest"
+    },
+    "B": {
+      "item": "galacticraftcore:battery",
+      "data": 100
+    },
+    "G": {
+      "item": "extraplanets:tier6_items",
+      "data": 0
+    }
+  }
+}
