@@ -132,22 +132,26 @@ public class Tier4SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 		if (helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
 				if (hemletModules.isActive())
-					hemletModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(hemletModules)))
+						hemletModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
 		if (chest.getItem() instanceof IModularArmor)
 			for (Module chestModules : ModuleHelper.getModules(chest)) {
 				if (chestModules.isActive())
-					chestModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(chestModules)))
+						chestModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
 		if (leggins.getItem() instanceof IModularArmor)
 			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
 				if (legginsModules.isActive())
-					legginsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(legginsModules)))
+						legginsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
 		if (boots.getItem() instanceof IModularArmor)
 			for (Module bootsModules : ModuleHelper.getModules(boots)) {
 				if (bootsModules.isActive())
-					bootsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(bootsModules)))
+						bootsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
 	}
 }
