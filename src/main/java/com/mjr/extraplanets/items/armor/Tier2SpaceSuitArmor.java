@@ -14,7 +14,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -27,11 +26,12 @@ import com.mjr.extraplanets.api.item.IPressureSuit;
 import com.mjr.extraplanets.api.item.IRadiationSuit;
 import com.mjr.extraplanets.client.model.ArmorCustomModel;
 import com.mjr.extraplanets.client.model.ArmorSpaceSuitModel;
+import com.mjr.extraplanets.items.armor.bases.ElectricArmorBase;
 import com.mjr.extraplanets.items.armor.modules.Module;
 import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor, IModularArmor  {
+public class Tier2SpaceSuitArmor extends ElectricArmorBase implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor, IModularArmor  {
 	public String name;
 
 	public Tier2SpaceSuitArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
@@ -95,6 +95,7 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 		list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra.2"));
 		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.3"));
 		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.4"));
+		super.addInformation(itemStack, worldIn, list, flagIn);
 	}
 
 	public static ModelBiped fillingArmorModel(ModelBiped model, EntityLivingBase entityLiving) {
@@ -130,22 +131,31 @@ public class Tier2SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 		if (helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
 				if (hemletModules.isActive())
-					hemletModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(hemletModules)))
+						hemletModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
 		if (chest.getItem() instanceof IModularArmor)
 			for (Module chestModules : ModuleHelper.getModules(chest)) {
 				if (chestModules.isActive())
-					chestModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(chestModules)))
+						chestModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
 		if (leggins.getItem() instanceof IModularArmor)
 			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
 				if (legginsModules.isActive())
-					legginsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(legginsModules)))
+						legginsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
 		if (boots.getItem() instanceof IModularArmor)
 			for (Module bootsModules : ModuleHelper.getModules(boots)) {
 				if (bootsModules.isActive())
-					bootsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(bootsModules)))
+						bootsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
+	}
+
+	@Override
+	public float getMaxElectricityStored(ItemStack theItem) {
+		return 10000 * 10;
 	}
 }
