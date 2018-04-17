@@ -43,6 +43,7 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Matrix4f;
+import org.lwjgl.util.vector.Vector2f;
 import org.lwjgl.util.vector.Vector3f;
 
 import com.google.common.collect.Lists;
@@ -1072,8 +1073,14 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						if (clicked) {
 							this.drawScreen(this.mousePosX, this.mousePosY, this.partialTicks);
 							this.selectedParent = this.currentGalaxyMainSystem;
-							this.selectedBody = null;
 							this.showGalaxies = false;
+							
+							// Used to make sure nothing is selected/zoomed & resets it all like the screen was just opened
+							this.unselectCelestialBody();
+			                this.planetZoom = 0.0F;
+			                this.zoom = 0.0F;
+			                this.translation = new Vector2f(0.0F, 0.0F);
+			                this.position = new Vector2f(0, 0);
 							initGui(); // Used to reload the bodies to render
 						}
 					}
