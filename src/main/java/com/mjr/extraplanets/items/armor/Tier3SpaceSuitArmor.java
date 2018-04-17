@@ -7,13 +7,17 @@ import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.model.ModelBiped;
+import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import org.lwjgl.input.Keyboard;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
@@ -86,12 +90,21 @@ public class Tier3SpaceSuitArmor extends ElectricArmorBase implements IPressureS
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
 		if (player.worldObj.isRemote) {
-			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information"));
-			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.2"));
-			list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra"));
-			list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra.2"));
-			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.3"));
-			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.4"));
+			if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
+				list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information"));
+				list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.2"));
+				list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra"));
+				list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra.2"));
+				list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.3"));
+				list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.4"));
+			} else
+				list.add(EnumColor.YELLOW + TranslateUtilities.translateWithFormat("item_desc.spacesuit.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSneak.getKeyCode())));
+			if (Keyboard.isKeyDown(Keyboard.KEY_LCONTROL)) {
+				list.add(EnumColor.ORANGE + TranslateUtilities.translate("gui.module_list.name") + ":");
+				for (Module module : ModuleHelper.getModules(itemStack))
+					list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));
+			} else
+				list.add(EnumColor.AQUA + TranslateUtilities.translateWithFormat("item_desc.spacesuit.module.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSprint.getKeyCode())));
 			super.addInformation(itemStack, player, list, par4);
 		}
 	}

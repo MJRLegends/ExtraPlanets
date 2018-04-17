@@ -6,7 +6,6 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
 import micdoodle8.mods.galacticraft.api.item.IItemElectricBase;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.energy.EnergyConfigHandler;
 import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
 import micdoodle8.mods.galacticraft.core.energy.item.ElectricItemManagerIC2;
@@ -166,7 +165,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 
 	@Override
 	public void getSubItems(Item par1, CreativeTabs tab, List<ItemStack> list) {
-		if (tab == GalacticraftCore.galacticraftItemsTab || tab == CreativeTabs.SEARCH) {
+		if (tab == this.getCreativeTab()) {
 			list.add(ElectricItemHelper.getUncharged(new ItemStack(this)));
 			list.add(ElectricItemHelper.getWithCharge(new ItemStack(this), this.getMaxElectricityStored(new ItemStack(this))));
 		}
