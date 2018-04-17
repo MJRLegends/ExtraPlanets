@@ -1082,6 +1082,9 @@ space.suit.information.extra.2=к уменьшению количества по
 space.suit.information.extra.3=Чем выше уровень скафандра, тем
 space.suit.information.extra.4=более медленная радиация будет получена
 
+item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
+item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
+
 item.tier3_thermal_helm.name=Теплоустойчивый шлем 3-го уровня
 item.tier3_thermal_chestplate.name=Теплоустойчивый нагрудник 3-го уровня
 item.tier3_thermal_leggings.name=Теплоустойчивые поножи 3-го уровня
