@@ -52,29 +52,40 @@ import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class CustomCelestialSelection extends GuiCelestialSelection {
+
+	// Galaxy System
 	private List<String> galaxies = new ArrayList<String>();
 	private String currentGalaxyName = "";
 	private SolarSystem currentGalaxyMainSystem;
+	private boolean showGalaxies = false;
+
+	// GC Overrides/General Extras
 	private int mousePosX = 0;
 	private int mousePosY = 0;
 	private float partialTicks = 0;
-	private boolean showGalaxies = false;
-	List<CelestialBody> bodiesToRender = Lists.newArrayList();
+	List<CelestialBody> bodiesToRender = Lists.newArrayList(); // Used to override GC ones since theirs is not accessible
 
-	// string colours
+	// Colours
 	protected static final int BLUE = ColorUtil.to32BitColor(255, 0, 150, 255);
 
 	public CustomCelestialSelection(boolean mapMode, List<CelestialBody> possibleBodies, boolean canCreateStations) {
 		super(mapMode, possibleBodies, canCreateStations);
+
+		// Generate list of Galaxies from ParentGalaxyName from Registered Solar Systems
 		for (SolarSystem system : GalaxyRegistry.getRegisteredSolarSystems().values()) {
 			String name = system.getUnlocalizedParentGalaxyName();
 			if (!this.galaxies.contains(name))
 				this.galaxies.add(name);
 		}
+
+		// Sets current/default galaxy to use on Screen load
 		this.currentGalaxyName = "galaxy.milky_way";
 		this.currentGalaxyMainSystem = GalacticraftCore.solarSystemSol;
 	}
 
+	/*
+	 * Overriding for the purpose of to change the body list depending on the galaxy selected
+	 */
 	@Override
 	public void initGui() {
 		for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
@@ -111,6 +122,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		}
 	}
 
+	/*
+	 * Overriding for the purpose of to change the body list depending on the galaxy selected
+	 */
 	@Override
 	protected List<CelestialBody> getChildren(Object object) {
 		List<CelestialBody> bodyList = Lists.newArrayList();
@@ -138,6 +152,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		return bodyList;
 	}
 
+	/*
+	 * Overriding for the purpose of to override GC bodiesToRender since theirs is not accessible, TODO Remove when GC adds protected to bodiesToRender
+	 */
 	public HashMap<CelestialBody, Matrix4f> drawCelestialBodies(Matrix4f worldMatrix) {
 		GL11.glColor3f(1.0F, 1.0F, 1.0F);
 		FloatBuffer fb = BufferUtils.createFloatBuffer(16 * Float.SIZE);
@@ -174,6 +191,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		return matrixMap;
 	}
 
+	/*
+	 * Overriding for the purpose of to override GC bodiesToRender since theirs is not accessible, TODO Remove when GC adds protected to bodiesToRender
+	 */
 	public void drawCircles() {
 		GL11.glColor4f(1, 1, 1, 1);
 		GL11.glLineWidth(3);
@@ -237,62 +257,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		GL11.glLineWidth(1);
 	}
 
-	@Override
-	public boolean drawCircle(CelestialBody body, int count, float sin, float cos) {
-		if (!this.isZoomed() && body.getUnlocalizedName().contains("planet")) {
-			if (((Planet) body).getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
-				return false;
-		}
-		float x = this.getScale(body);
-		float y = 0;
-
-		float alpha = 1.0F;
-
-		boolean selected = body == this.selectedBody || (((IChildBody) body).getParentPlanet() == this.selectedBody && this.selectionState != EnumSelection.SELECTED);
-		boolean ready = this.lastSelectedBody != null || this.ticksSinceSelection > 35;
-		boolean isSibling = getSiblings(this.selectedBody).contains(body);
-		boolean isPossible = !(body instanceof Satellite) || (this.possibleBodies != null && this.possibleBodies.contains(body));
-		if (this.isZoomed() && (((!selected || !ready) && !isSibling) || !isPossible)) {
-			// Fade in when first selected
-			alpha = Math.min(Math.max((this.ticksSinceSelection - 30) / 15.0F, 0.0F), 1.0F);
-		}
-
-		if (alpha > 0.0F) {
-			switch (count % 2) {
-			case 0:
-				GL11.glColor4f(0.0F, 0.6F, 1.0F, alpha);
-				break;
-			case 1:
-				GL11.glColor4f(0.4F, 0.9F, 1.0F, alpha);
-				break;
-			}
-
-			CelestialBodyRenderEvent.CelestialRingRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.CelestialRingRenderEvent.Pre(body, new Vector3f(0.0F, 0.0F, 0.0F));
-			MinecraftForge.EVENT_BUS.post(preEvent);
-
-			if (!preEvent.isCanceled()) {
-				GL11.glBegin(GL11.GL_LINE_LOOP);
-
-				float temp;
-				for (int i = 0; i < 90; i++) {
-					GL11.glVertex2f(x, y);
-
-					temp = x;
-					x = cos * x - sin * y;
-					y = sin * temp + cos * y;
-				}
-
-				GL11.glEnd();
-				return true;
-			}
-
-			CelestialBodyRenderEvent.CelestialRingRenderEvent.Post postEvent = new CelestialBodyRenderEvent.CelestialRingRenderEvent.Post(body);
-			MinecraftForge.EVENT_BUS.post(postEvent);
-		}
-
-		return false;
-	}
-
+	/*
+	 * Used to Draw Custom Buttons/GUI
+	 */
 	public void drawCustomButtons(int mousePosX, int mousePosY) {
 		if (this.viewState != EnumView.PROFILE) {
 			final int LHS = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE;
@@ -502,6 +469,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		}
 	}
 
+	/*
+	 * Overriding for the purpose of to run Drawing of Custom Buttons/GUI & Hide Planet/Moon buttons on galaxy selection
+	 */
 	@Override
 	public void drawButtons(int mousePosX, int mousePosY) {
 		this.drawCustomButtons(mousePosX, mousePosY);
@@ -1042,6 +1012,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		}
 	}
 
+	/*
+	 * Overriding for the purpose of to parse custom mousePosX & mousePosY variables to super drawScreen
+	 */
 	@Override
 	public void drawScreen(int mousePosX, int mousePosY, float partialTicks) {
 		this.mousePosX = mousePosX;
@@ -1050,6 +1023,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		super.drawScreen(mousePosX, mousePosY, partialTicks);
 	}
 
+	/*
+	 * Overriding for the purpose of to detect pressing of custom buttons
+	 */
 	@Override
 	protected void mouseClicked(int x, int y, int button) throws IOException {
 		if (Config.CUSTOM_GALAXIES) {
@@ -1083,7 +1059,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						boolean clicked = false;
 						if (i == 0) {
 							this.currentGalaxyName = this.galaxies.get(i);
-							currentGalaxyMainSystem = GalacticraftCore.solarSystemSol;
+							this.currentGalaxyMainSystem = GalacticraftCore.solarSystemSol;
 							clicked = true;
 						} else {
 							this.currentGalaxyName = this.galaxies.get(i);
@@ -1097,7 +1073,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 							this.selectedParent = this.currentGalaxyMainSystem;
 							this.selectedBody = null;
 							this.showGalaxies = false;
-							initGui();
+							initGui(); // Used to reload the bodies to render
 						}
 					}
 				}
