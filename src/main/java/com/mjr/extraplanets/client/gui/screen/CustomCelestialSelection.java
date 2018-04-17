@@ -170,10 +170,10 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				GlStateManager.pushMatrix();
 				Matrix4f worldMatrixLocal = setupMatrix(body, worldMatrix, fb, hasParent ? 0.25F : 1.0F);
 				if (!this.isZoomed() && !(body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
-					this.drawCenteredString(this.fontRenderer, body.getLocalizedName(), 0, 5, 14737632);
+					this.drawCenteredString(this.fontRendererObj, body.getLocalizedName(), 0, 5, 14737632);
 				}
 				else if (this.isZoomed() && (body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
-					this.drawCenteredString(this.fontRenderer, body.getLocalizedName(), 0, 5, 14737632);
+					this.drawCenteredString(this.fontRendererObj, body.getLocalizedName(), 0, 5, 14737632);
 				}
 				CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(body, body.getBodyIcon(), 16);
 				MinecraftForge.EVENT_BUS.post(preEvent);
