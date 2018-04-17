@@ -1082,6 +1082,9 @@ tier2.space.suit.information=Required for Jupiter including their moons ##NEEDS 
 tier3.space.suit.information=Required for Saturn, Uranus including their moons ##NEEDS TRANSLATE##
 tier4.space.suit.information=Required for Neptune, Pluto, Eris including their moons ##NEEDS TRANSLATE##
 
+item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
+item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
+
 item.tier3_thermal_helm.name=Tier 3 Thermal Padding Helm ##NEEDS TRANSLATE##
 item.tier3_thermal_chestplate.name=Tier 3 Thermal Padding Chestpiece ##NEEDS TRANSLATE##
 item.tier3_thermal_leggings.name=Tier 3 Thermal Padding Leggings ##NEEDS TRANSLATE##

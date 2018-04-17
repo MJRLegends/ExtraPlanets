@@ -164,8 +164,10 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 
 	@Override
 	public void getSubItems(Item par1, CreativeTabs tab, List<ItemStack> list) {
-		list.add(ElectricItemHelper.getUncharged(new ItemStack(this)));
-		list.add(ElectricItemHelper.getWithCharge(new ItemStack(this), this.getMaxElectricityStored(new ItemStack(this))));
+		if (tab == this.getCreativeTab()) {
+			list.add(ElectricItemHelper.getUncharged(new ItemStack(this)));
+			list.add(ElectricItemHelper.getWithCharge(new ItemStack(this), this.getMaxElectricityStored(new ItemStack(this))));
+		}
 	}
 
 	public static boolean isElectricItem(Item item) {

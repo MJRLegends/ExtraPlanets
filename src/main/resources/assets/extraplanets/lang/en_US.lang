@@ -1082,6 +1082,9 @@ space.suit.information.extra.2=towards reducing the amount of radiation gained
 space.suit.information.extra.3=The Higher the Space Suit Tier the 
 space.suit.information.extra.4=slower radiation will be gained
 
+item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info
+item_desc.spacesuit.module.shift.name=Press %s for Installed Modules
+
 item.tier3_thermal_helm.name=Tier 3 Thermal Padding Helm
 item.tier3_thermal_chestplate.name=Tier 3 Thermal Padding Chestpiece
 item.tier3_thermal_leggings.name=Tier 3 Thermal Padding Leggings
