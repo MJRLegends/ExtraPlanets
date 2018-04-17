@@ -4,22 +4,23 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.model.ModelBiped;
+import net.minecraft.client.settings.GameSettings;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import org.lwjgl.input.Keyboard;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
@@ -69,12 +70,21 @@ public class Tier3SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
-		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information"));
-		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.2"));
-		list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra"));
-		list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra.2"));
-		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.3"));
-		list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.4"));
+		if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information"));
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.2"));
+			list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra"));
+			list.add(EnumColor.YELLOW + TranslateUtilities.translate("space.suit.information.extra.2"));
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.3"));
+			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.extra.4"));
+		} else
+			list.add(EnumColor.YELLOW + TranslateUtilities.translateWithFormat("item_desc.spacesuit.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSneak.getKeyCode())));
+		if (Keyboard.isKeyDown(Keyboard.KEY_LCONTROL)) {
+			list.add(EnumColor.ORANGE + TranslateUtilities.translate("gui.module_list.name") + ":");
+			for(Module module : ModuleHelper.getModules(itemStack))
+				list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));			
+		} else
+			list.add(EnumColor.AQUA + TranslateUtilities.translateWithFormat("item_desc.spacesuit.module.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSprint.getKeyCode())));
 		super.addInformation(itemStack, worldIn, list, flagIn);
 	}
 
@@ -98,14 +108,6 @@ public class Tier3SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 				((ArmorCustomModel) armorModel).color = getColor(itemStack);
 		}
 		return armorModel;
-	}
-
-	@Override
-	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
-		if (tab == this.getCreativeTab()) {
-			list.add(ElectricItemHelper.getUncharged(new ItemStack(this)));
-			list.add(ElectricItemHelper.getWithCharge(new ItemStack(this), this.getMaxElectricityStored(new ItemStack(this))));
-		}
 	}
 
 	public double getJetpackAccelSpeed() {
