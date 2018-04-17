@@ -109,17 +109,22 @@ public class Tier4SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 	}
 
 	public double getJetpackAccelSpeed() {
-		return 1.0;
+		return 0.6D;
+	}
+
+	@Override
+	public double getJetpackMaxAccelSpeed() {
+		return 1.5D;
 	}
 
 	@Override
 	public float getMaxElectricityStored(ItemStack theItem) {
-		return 10000 * 6;
+		return 10000 * 100;
 	}
 
 	@Override
 	public float powerPerTick() {
-		return 5.0F;
+		return 0.07F;
 	}
 
 	@Override
