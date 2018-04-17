@@ -154,7 +154,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	}
 
 	/*
-	 * Overriding for the purpose of to override GC bodiesToRender since theirs is not accessible, TODO Remove when GC adds protected to bodiesToRender
+	 * Overriding for the purpose of to draw Planet & Moon & Star Names & to override GC bodiesToRender since theirs is not accessible
 	 */
 	public HashMap<CelestialBody, Matrix4f> drawCelestialBodies(Matrix4f worldMatrix) {
 		GL11.glColor3f(1.0F, 1.0F, 1.0F);
@@ -169,6 +169,12 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			if (alpha > 0.0F) {
 				GlStateManager.pushMatrix();
 				Matrix4f worldMatrixLocal = setupMatrix(body, worldMatrix, fb, hasParent ? 0.25F : 1.0F);
+				if (!this.isZoomed() && !(body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
+					this.drawCenteredString(this.fontRenderer, body.getLocalizedName(), 0, 5, 14737632);
+				}
+				else if (this.isZoomed() && (body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
+					this.drawCenteredString(this.fontRenderer, body.getLocalizedName(), 0, 5, 14737632);
+				}
 				CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(body, body.getBodyIcon(), 16);
 				MinecraftForge.EVENT_BUS.post(preEvent);
 
@@ -1073,13 +1079,13 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 							this.drawScreen(this.mousePosX, this.mousePosY, this.partialTicks);
 							this.selectedParent = this.currentGalaxyMainSystem;
 							this.showGalaxies = false;
-							
+
 							// Used to make sure nothing is selected/zoomed & resets it all like the screen was just opened
 							this.unselectCelestialBody();
-			                this.planetZoom = 0.0F;
-			                this.zoom = 0.0F;
-			                this.translation = new Vector2f(0.0F, 0.0F);
-			                this.position = new Vector2f(0, 0);
+							this.planetZoom = 0.0F;
+							this.zoom = 0.0F;
+							this.translation = new Vector2f(0.0F, 0.0F);
+							this.position = new Vector2f(0, 0);
 							initGui(); // Used to reload the bodies to render
 						}
 					}
