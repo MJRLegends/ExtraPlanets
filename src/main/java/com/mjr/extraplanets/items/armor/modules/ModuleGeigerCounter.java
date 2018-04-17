@@ -33,7 +33,7 @@ public class ModuleGeigerCounter extends Module {
 
 	@Override
 	public void renderHelmetOverlay(ItemStack stack, EntityPlayer player, ScaledResolution resolution, float partialTicks) {
-		ModuleHelper.takeArmourPower(player.inventory.armorItemInSlot(this.getSlotType()), this.getUsePowerCost());
+		if ((player.ticksExisted - 1) % 20 == 0)ModuleHelper.takeArmourPower(player.inventory.armorItemInSlot(this.getSlotType()), this.getUsePowerCost());
 		OverlayGeigerCounter.render();
 	}
 }
