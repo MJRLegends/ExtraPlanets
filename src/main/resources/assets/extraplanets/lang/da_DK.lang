@@ -580,6 +580,7 @@ gui.module.missing_requirements.name=Sorry you do not meet the requirements to i
 gui.module.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
 gui.module.description.name=Module Description ##NEEDS TRANSLATE##
 gui.module.name.name=Module Name ##NEEDS TRANSLATE##
+gui.module.type.name=Module Type ##NEEDS TRANSLATE##
 gui.module.type.helmet.name=Helmet ##NEEDS TRANSLATE##
 gui.module.type.chest.name=Chestplate ##NEEDS TRANSLATE##
 gui.module.type.leggings.name=Leggings ##NEEDS TRANSLATE##
@@ -592,6 +593,7 @@ gui.module.test.name=Test Module ##NEEDS TRANSLATE##
 gui.module.pre_launch_checklist.name=Pre Launch Checklist ##NEEDS TRANSLATE##
 gui.module.nasa_workbench.name=Portable NASA Workbench ##NEEDS TRANSLATE##
 gui.module.oxygen_tank_switch.name=Oxygen Tank Auto Swapper ##NEEDS TRANSLATE##
+gui.module.auto_space_gear_equip.name=Space Gear Auto Equip ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Functions the same as the Galacticraft Sensor Glasses ##NEEDS TRANSLATE##
 gui.module.no_fall_damage.desc=Removes fall damage from the player ##NEEDS TRANSLATE##
@@ -600,6 +602,7 @@ gui.module.test.desc=Test Module ##NEEDS TRANSLATE##
 gui.module.pre_launch_checklist.desc=Allows easy access to the Pre Launch Checklist from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
 gui.module.nasa_workbench.desc=Allows portable access to a NASA Workbench from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
 gui.module.oxygen_tank_switch.desc=Swappers out equipped empty tanks with any available non empty oxygen tank in your inventory ##NEEDS TRANSLATE##
+gui.module.auto_space_gear_equip.desc=Automatically equip any space related gear in your inventory ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Nuclear Bomb ##NEEDS TRANSLATE##
