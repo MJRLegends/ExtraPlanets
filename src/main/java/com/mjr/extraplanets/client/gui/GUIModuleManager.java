@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
+import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
@@ -108,8 +109,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		this.renderInfo(167, 15, 50, 125, 150, this.selectedModule);
 
 		this.fontRenderer.drawString(TranslateUtilities.translate("gui.module.type.name"), 167, 115, this.mainColour);
-		String text = TranslateUtilities.translate("gui.module.power.name");
-		this.fontRenderer.drawString(text.substring(0, text.indexOf('(')), 167, 140, this.mainColour);
+		this.fontRenderer.drawString(TranslateUtilities.translate("gui.module.power.name"), 167, 140, this.mainColour);
 	}
 
 	@Override
@@ -211,7 +211,7 @@ public class GUIModuleManager extends GuiContainerGC {
 				temp = TranslateUtilities.translate("gui.module.type.helmet.name");
 			this.fontRenderer.drawString(temp, x, Ytype, this.sideColour);
 			text = TranslateUtilities.translate("gui.module.power.name");
-			this.fontRenderer.drawString(ModuleHelper.getModulePassiveCost(module) + "/s : " + ModuleHelper.getModuleUseCost(module)+ " " + text.substring(text.indexOf('(')), x, Ypower, this.sideColour);
+			this.fontRenderer.drawString(EnergyDisplayHelper.getEnergyDisplayS(ModuleHelper.getModulePassiveCost(module)) + "/s : " + EnergyDisplayHelper.getEnergyDisplayS(ModuleHelper.getModuleUseCost(module))+ " (P:U) ", x, Ypower, this.sideColour);
 		}
 	}
 
