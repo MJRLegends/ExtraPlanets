@@ -104,10 +104,12 @@ public class GUIModuleManager extends GuiContainerGC {
 		if (this.selectedInstallModule != null)
 			this.renderCostList(this.xOffset + -115, 22);
 
-		this.renderInfo(167, 15, 50, 135, this.selectedInstallModule);
-		this.renderInfo(167, 15, 50, 135, this.selectedModule);
+		this.renderInfo(167, 15, 50, 125, 150, this.selectedInstallModule);
+		this.renderInfo(167, 15, 50, 125, 150, this.selectedModule);
 
-		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module.type.name"), 167, 125, this.mainColour);
+		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.module.type.name"), 167, 115, this.mainColour);
+		String text = TranslateUtilities.translate("gui.module.power.name");
+		this.fontRendererObj.drawString(text.substring(0, text.indexOf('(')), 167, 140, this.mainColour);
 	}
 
 	@Override
@@ -176,7 +178,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		}
 	}
 
-	public void renderInfo(int x, int yName, int Ydescription, int Ytype, Module module) {
+	public void renderInfo(int x, int yName, int Ydescription, int Ytype, int Ypower, Module module) {
 		if (module != null) {
 			String text = TranslateUtilities.translate("gui.module." + module.getName() + ".name");
 			List<String> renderText = this.fontRendererObj.listFormattedStringToWidth(text, 115);
@@ -208,6 +210,8 @@ public class GUIModuleManager extends GuiContainerGC {
 			else if (module.getSlotType() == 0)
 				temp = TranslateUtilities.translate("gui.module.type.helmet.name");
 			this.fontRendererObj.drawString(temp, x, Ytype, this.sideColour);
+			text = TranslateUtilities.translate("gui.module.power.name");
+			this.fontRendererObj.drawString(ModuleHelper.getModulePassiveCost(module) + "/s : " + ModuleHelper.getModuleUseCost(module)+ " " + text.substring(text.indexOf('(')), x, Ypower, this.sideColour);
 		}
 	}
 

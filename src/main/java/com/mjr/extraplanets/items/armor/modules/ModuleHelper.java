@@ -10,6 +10,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 
 import com.mjr.extraplanets.api.item.IModularArmor;
+import com.mjr.extraplanets.items.armor.bases.ElectricArmorBase;
 
 public class ModuleHelper {
 
@@ -186,6 +187,56 @@ public class ModuleHelper {
 			if(moduleName.equalsIgnoreCase(tempModule.getName()))
 				return tempModule.isActive();
 		}
+		return false;
+	}
+	
+	public static int getModulePassiveCost(Module module){
+		List<Module> temp = ExtraPlanets_Modules.modules;
+		for (Module tempModule : temp) {
+			if(module.getName().equalsIgnoreCase(tempModule.getName()))
+				return tempModule.getPassivePowerCost();
+		}
+		return 0;
+	}
+	
+	public static int getModuleUseCost(Module module){
+		List<Module> temp = ExtraPlanets_Modules.modules;
+		for (Module tempModule : temp) {
+			if(module.getName().equalsIgnoreCase(tempModule.getName()))
+				return tempModule.getUsePowerCost();
+		}
+		return 0;
+	}
+	
+	public static int getModulePassiveCost(String moduleName){
+		List<Module> temp = ExtraPlanets_Modules.modules;
+		for (Module tempModule : temp) {
+			if(moduleName.equalsIgnoreCase(tempModule.getName()))
+				return tempModule.getPassivePowerCost();
+		}
+		return 0;
+	}
+	
+	public static int getModuleUseCost(String moduleName){
+		List<Module> temp = ExtraPlanets_Modules.modules;
+		for (Module tempModule : temp) {
+			if(moduleName.equalsIgnoreCase(tempModule.getName()))
+				return tempModule.getUsePowerCost();
+		}
+		return 0;
+	}
+	
+	public static int getArmourStoredPower(ItemStack item){
+		return (int) ((ElectricArmorBase)item.getItem()).getElectricityStored(item);
+	}
+	
+	public static void takeArmourPower(ItemStack item, int power){
+		((ElectricArmorBase)item.getItem()).discharge(item, power, true);
+	}
+	
+	public static boolean hasPower(ItemStack item, int power){
+		if(getArmourStoredPower(item) >= power)
+			return true;
 		return false;
 	}
 }

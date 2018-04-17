@@ -585,6 +585,7 @@ gui.module.type.helmet.name=Helmet
 gui.module.type.chest.name=Chestplate
 gui.module.type.leggings.name=Leggings
 gui.module.type.boots.name=Boots
+gui.module.power.name=Module Power (Active:Use)
 
 gui.module.sensor_glasses.name=Sensor Glasses
 gui.module.no_fall_damage.name=No Fall Damage

@@ -203,23 +203,43 @@ public class MainHandlerServer {
 
 		if (helmet != null && helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
-				if (hemletModules.isActive())
-					hemletModules.tickServer(player);
+				if (hemletModules.isActive()){
+					int passivePower = ModuleHelper.getModulePassiveCost(hemletModules);
+					if ((player.ticksExisted - 1) % 20 == 0 && ModuleHelper.hasPower(helmet, passivePower))
+						ModuleHelper.takeArmourPower(helmet, passivePower);
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(hemletModules)))
+						hemletModules.tickServer(player);
+				}
 			}
 		if (chest != null && chest.getItem() instanceof IModularArmor)
 			for (Module chestModules : ModuleHelper.getModules(chest)) {
-				if (chestModules.isActive())
-					chestModules.tickServer(player);
+				if (chestModules.isActive()){
+					int passivePower = ModuleHelper.getModulePassiveCost(chestModules);
+					if ((player.ticksExisted - 1) % 20 == 0 && ModuleHelper.hasPower(chest, passivePower))
+						ModuleHelper.takeArmourPower(chest, passivePower);
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(chestModules)))
+						chestModules.tickServer(player);
+				}
 			}
 		if (leggins != null && leggins.getItem() instanceof IModularArmor)
 			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
-				if (legginsModules.isActive())
-					legginsModules.tickServer(player);
+				if (legginsModules.isActive()){
+					int passivePower = ModuleHelper.getModulePassiveCost(legginsModules);
+					if ((player.ticksExisted - 1) % 20 == 0 && ModuleHelper.hasPower(leggins, passivePower))
+						ModuleHelper.takeArmourPower(leggins, passivePower);
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(legginsModules)))
+						legginsModules.tickServer(player);
+				}
 			}
 		if (boots != null && boots.getItem() instanceof IModularArmor)
 			for (Module bootsModules : ModuleHelper.getModules(boots)) {
-				if (bootsModules.isActive())
-					bootsModules.tickServer(player);
+				if (bootsModules.isActive()){
+					int passivePower = ModuleHelper.getModulePassiveCost(bootsModules);
+					if ((player.ticksExisted - 1) % 20 == 0 && ModuleHelper.hasPower(boots, passivePower))
+						ModuleHelper.takeArmourPower(boots, passivePower);
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(bootsModules)))
+						bootsModules.tickServer(player);
+				}
 			}
 	}
 

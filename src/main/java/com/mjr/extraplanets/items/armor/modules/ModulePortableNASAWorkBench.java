@@ -13,7 +13,7 @@ import net.minecraft.item.ItemStack;
 public class ModulePortableNASAWorkBench extends Module {
 
 	public ModulePortableNASAWorkBench(String name) {
-		super(name, 2, new ItemStack(GCBlocks.nasaWorkbench), false);
+		super(name, 2, new ItemStack(GCBlocks.nasaWorkbench), false, 0, 5000);
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(GCBlocks.nasaWorkbench));
 		this.setRequirements(items);

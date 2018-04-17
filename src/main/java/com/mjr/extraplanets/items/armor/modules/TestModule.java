@@ -13,7 +13,7 @@ import net.minecraft.item.ItemStack;
 public class TestModule extends Module {
 
 	public TestModule(String name) {
-		super(name, 2, new ItemStack(Items.arrow), true);
+		super(name, 2, new ItemStack(Items.arrow), true, 0, 0);
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(Items.diamond));
 		this.setRequirements(items);

@@ -17,7 +17,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class ModuleOxygenTankSwitch extends Module {
 
 	public ModuleOxygenTankSwitch(String name) {
-		super(name, 2, new ItemStack(GCItems.oxTankHeavy), true);
+		super(name, 2, new ItemStack(GCItems.oxTankHeavy), true, 5, 25);
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(ExtraPlanets_Items.MODULE_ITEMS, 6, 2));
 		items.add(new ItemStack(GCItems.oxygenConcentrator, 12));
@@ -41,11 +41,11 @@ public class ModuleOxygenTankSwitch extends Module {
 	public void switchTanks(EntityPlayerMP player, int tankSlot, GCPlayerStats stats){
 		final ItemStack tankInSlot = stats.getExtendedInventory().getStackInSlot(tankSlot);
 		boolean removed = true;
-		if (!tankInSlot.isEmpty())
+		if (tankInSlot != null)
         {
 			removed = player.inventory.addItemStackToInventory(tankInSlot);
             if(removed)
-            	stats.getExtendedInventory().setInventorySlotContents(tankSlot, ItemStack.EMPTY);
+            	stats.getExtendedInventory().setInventorySlotContents(tankSlot, null);
         }
 		if(removed){
 			boolean replaced = false;
@@ -53,9 +53,9 @@ public class ModuleOxygenTankSwitch extends Module {
 				if(replaced)
 					return;
 				ItemStack testStack = player.inventory.getStackInSlot(i);
-				if(!testStack.isEmpty() && testStack.getItem() instanceof ItemOxygenTank && testStack.getItemDamage() != testStack.getMaxDamage()){
+				if(testStack != null && testStack.getItem() instanceof ItemOxygenTank && testStack.getItemDamage() != testStack.getMaxDamage()){
 					stats.getExtendedInventory().setInventorySlotContents(tankSlot, testStack);
-					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
+					player.inventory.setInventorySlotContents(i, null);
 					replaced = true;
 				}
 			}
