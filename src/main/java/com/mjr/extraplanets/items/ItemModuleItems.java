@@ -23,6 +23,6 @@ public class ItemModuleItems extends ItemBasicMeta {
 	}
 
 	public static String[] getItemList() {
-		return new String[] { "no_fall_boots", "oxygen_controller" };
+		return new String[] { "no_fall_boots", "oxygen_controller", "space_gear_controller" };
 	}
 }
