@@ -560,6 +560,8 @@ gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
 
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Güçlü Araç Envanterini Aç.
+keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
+keybind.module.pre.launch.name=Open Pre Launch Checklist GUI ##NEEDS TRANSLATE##
 
 #GUI Module Manager
 gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
@@ -573,21 +575,29 @@ gui.button.uninstall.name=Uninstall ##NEEDS TRANSLATE##
 gui.button.disable_module.name=Enable ##NEEDS TRANSLATE##
 gui.button.enable_module.name=Disable ##NEEDS TRANSLATE##
 gui.module_cost.name=Cost ##NEEDS TRANSLATE##
-gui.moudle.installed.name=Module Installed! ##NEEDS TRANSLATE##
-gui.moudle.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
-gui.moudle.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
+gui.module.installed.name=Module Installed! ##NEEDS TRANSLATE##
+gui.module.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
+gui.module.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
 gui.module.description.name=Module Description ##NEEDS TRANSLATE##
 gui.module.name.name=Module Name ##NEEDS TRANSLATE##
+gui.module.type.helmet.name=Helmet ##NEEDS TRANSLATE##
+gui.module.type.chest.name=Chestplate ##NEEDS TRANSLATE##
+gui.module.type.leggings.name=Leggings ##NEEDS TRANSLATE##
+gui.module.type.boots.name=Boots ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.name=Sensor Glasses ##NEEDS TRANSLATE##
 gui.module.no_fall_damage.name=No Fall Damage ##NEEDS TRANSLATE##
 gui.module.geiger_counter.name=Geiger Counter ##NEEDS TRANSLATE##
 gui.module.test.name=Test Module ##NEEDS TRANSLATE##
+gui.module.pre_launch_checklist.name=Pre Launch Checklist ##NEEDS TRANSLATE##
+gui.module.nasa_workbench.name=Portable NASA Workbench ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Functions the same as the Galacticraft Sensor Glasses ##NEEDS TRANSLATE##
 gui.module.no_fall_damage.desc=Removes fall damage from the player ##NEEDS TRANSLATE##
 gui.module.geiger_counter.desc=Displays your current amount of Radiation on your HUD/Screen ##NEEDS TRANSLATE##
 gui.module.test.desc=Test Module ##NEEDS TRANSLATE##
+gui.module.pre_launch_checklist.desc=Allows easy access to the Pre Launch Checklist from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
+gui.module.nasa_workbench.desc=Allows portable access to a NASA Workbench from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Nükleer Bomba
@@ -1036,21 +1046,25 @@ item.green_diamond_boots.name=Green Diamond Boots ##NEEDS TRANSLATE##
 
 item.tier1_space_suit_helmet.name=Tier 1 Space Suit Helmet ##NEEDS TRANSLATE##
 item.tier1_space_suit_chest.name=Tier 1 Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier1_space_suit_jetpack_chest.name=Tier 1 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier1_space_suit_legings.name=Tier 1 Space Suit Leggings ##NEEDS TRANSLATE##
 item.tier1_space_suit_boots.name=Tier 1 Space Suit Boots ##NEEDS TRANSLATE##
 item.tier1_space_suit_gravity_boots.name=Tier 1 Space Suit Gravity Boots ##NEEDS TRANSLATE##
 item.tier2_space_suit_helmet.name=Tier 2 Space Suit Helmet ##NEEDS TRANSLATE##
 item.tier2_space_suit_chest.name=Tier 2 Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier2_space_suit_jetpack_chest.name=Tier 2 Space SuitJetpack  Chestplate ##NEEDS TRANSLATE##
 item.tier2_space_suit_legings.name=Tier 2 Space Suit Leggings ##NEEDS TRANSLATE##
 item.tier2_space_suit_boots.name=Tier 2 Space Suit Boots ##NEEDS TRANSLATE##
 item.tier2_space_suit_gravity_boots.name=Tier 2 Space Suit Gravity Boots ##NEEDS TRANSLATE##
 item.tier3_space_suit_helmet.name=Tier 3 Space Suit Helmet ##NEEDS TRANSLATE##
 item.tier3_space_suit_chest.name=Tier 3 Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier3_space_suit_jetpack_chest.name=Tier 3 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier3_space_suit_legings.name=Tier 3 Space Suit Leggings ##NEEDS TRANSLATE##
 item.tier3_space_suit_boots.name=Tier 3 Space Suit Boots ##NEEDS TRANSLATE##
 item.tier3_space_suit_gravity_boots.name=Tier 3 Space Suit Gravity Boots ##NEEDS TRANSLATE##
 item.tier4_space_suit_helmet.name=Tier 4 Space Suit Helmet ##NEEDS TRANSLATE##
 item.tier4_space_suit_chest.name=Tier 4 Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier4_space_suit_jetpack_chest.name=Tier 4 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
 item.tier4_space_suit_legings.name=Tier 4 Space Suit Leggings ##NEEDS TRANSLATE##
 item.tier4_space_suit_boots.name=Tier 4 Space Suit Boots ##NEEDS TRANSLATE##
 item.tier4_space_suit_gravity_boots.name=Tier 4 Space Suit Gravity Boots ##NEEDS TRANSLATE##
@@ -1120,6 +1134,9 @@ item.tier4_un_prepared_space_suit_helmet.name=Tier 4 Un-Prepared Space Suit Helm
 item.tier4_un_prepared_space_suit_chest.name=Tier 4 Un-Prepared Space Suit Chestplate ##NEEDS TRANSLATE##
 item.tier4_un_prepared_space_suit_legings.name=Tier 4 Un-Prepared Space Suit Leggings ##NEEDS TRANSLATE##
 item.tier4_un_prepared_space_suit_boots.name=Tier 4 Un-Prepared Space Suit Boots ##NEEDS TRANSLATE##
+
+#Module Items
+item.module_items.no_fall_boots.name=No Fall Damage Module ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Very Heavy Oxygen Tank ##NEEDS TRANSLATE##
