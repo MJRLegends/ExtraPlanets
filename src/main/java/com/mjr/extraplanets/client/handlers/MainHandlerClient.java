@@ -330,23 +330,31 @@ public class MainHandlerClient {
 
 		if (helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
-				if (hemletModules.isActive())
-					hemletModules.tickClient(player);
+				if (hemletModules.isActive()){
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(hemletModules)))
+						hemletModules.tickClient(player);
+				}
 			}
 		if (chest.getItem() instanceof IModularArmor)
 			for (Module chestModules : ModuleHelper.getModules(chest)) {
-				if (chestModules.isActive())
-					chestModules.tickClient(player);
+				if (chestModules.isActive()){
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(chestModules)))
+						chestModules.tickClient(player);
+				}
 			}
 		if (leggins.getItem() instanceof IModularArmor)
 			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
-				if (legginsModules.isActive())
-					legginsModules.tickClient(player);
+				if (legginsModules.isActive()){
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(legginsModules)))
+						legginsModules.tickClient(player);
+				}
 			}
 		if (boots.getItem() instanceof IModularArmor)
 			for (Module bootsModules : ModuleHelper.getModules(boots)) {
-				if (bootsModules.isActive())
-					bootsModules.tickClient(player);
+				if (bootsModules.isActive()){
+					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(bootsModules)))
+						bootsModules.tickClient(player);
+				}
 			}
 	}
 

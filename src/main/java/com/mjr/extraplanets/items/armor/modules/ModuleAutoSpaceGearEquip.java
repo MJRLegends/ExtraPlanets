@@ -3,8 +3,6 @@ package com.mjr.extraplanets.items.armor.modules;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-
 import micdoodle8.mods.galacticraft.api.item.IItemThermal;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
@@ -17,10 +15,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 public class ModuleAutoSpaceGearEquip extends Module {
 
 	public ModuleAutoSpaceGearEquip(String name) {
-		super(name, 3, new ItemStack(GCItems.oxygenGear), true);
+		super(name, 3, new ItemStack(GCItems.oxygenGear), true, 1, 250);
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(ExtraPlanets_Items.MODULE_ITEMS, 12, 2));
 		this.setRequirements(items);
@@ -29,6 +29,7 @@ public class ModuleAutoSpaceGearEquip extends Module {
 	@Override
 	public void tickServer(EntityPlayerMP player) {
 		GCPlayerStats stats = GCPlayerStats.get(player);
+		boolean itemsReplaced = false;
 
 		// Oxygen Mask
 		if (stats.getExtendedInventory().getStackInSlot(0).isEmpty()) {
@@ -41,6 +42,7 @@ public class ModuleAutoSpaceGearEquip extends Module {
 					stats.getExtendedInventory().setInventorySlotContents(0, testStack);
 					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
 					replaced = true;
+					itemsReplaced = true;
 				}
 			}
 		}
@@ -55,6 +57,7 @@ public class ModuleAutoSpaceGearEquip extends Module {
 					stats.getExtendedInventory().setInventorySlotContents(1, testStack);
 					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
 					replaced = true;
+					itemsReplaced = true;
 				}
 			}
 		}
@@ -69,6 +72,7 @@ public class ModuleAutoSpaceGearEquip extends Module {
 					stats.getExtendedInventory().setInventorySlotContents(2, testStack);
 					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
 					replaced = true;
+					itemsReplaced = true;
 				}
 			}
 		}
@@ -82,6 +86,7 @@ public class ModuleAutoSpaceGearEquip extends Module {
 					stats.getExtendedInventory().setInventorySlotContents(3, testStack);
 					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
 					replaced = true;
+					itemsReplaced = true;
 				}
 			}
 		}
@@ -96,6 +101,7 @@ public class ModuleAutoSpaceGearEquip extends Module {
 					stats.getExtendedInventory().setInventorySlotContents(4, testStack);
 					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
 					replaced = true;
+					itemsReplaced = true;
 				}
 			}
 		}
@@ -110,6 +116,7 @@ public class ModuleAutoSpaceGearEquip extends Module {
 					stats.getExtendedInventory().setInventorySlotContents(5, testStack);
 					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
 					replaced = true;
+					itemsReplaced = true;
 				}
 			}
 		}
@@ -124,6 +131,7 @@ public class ModuleAutoSpaceGearEquip extends Module {
 					stats.getExtendedInventory().setInventorySlotContents(6, testStack);
 					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
 					replaced = true;
+					itemsReplaced = true;
 				}
 			}
 		}
@@ -137,6 +145,7 @@ public class ModuleAutoSpaceGearEquip extends Module {
 					stats.getExtendedInventory().setInventorySlotContents(7, testStack);
 					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
 					replaced = true;
+					itemsReplaced = true;
 				}
 			}
 		}
@@ -150,6 +159,7 @@ public class ModuleAutoSpaceGearEquip extends Module {
 					stats.getExtendedInventory().setInventorySlotContents(8, testStack);
 					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
 					replaced = true;
+					itemsReplaced = true;
 				}
 			}
 		}
@@ -163,6 +173,7 @@ public class ModuleAutoSpaceGearEquip extends Module {
 					stats.getExtendedInventory().setInventorySlotContents(9, testStack);
 					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
 					replaced = true;
+					itemsReplaced = true;
 				}
 			}
 		}
@@ -177,9 +188,12 @@ public class ModuleAutoSpaceGearEquip extends Module {
 					stats.getExtendedInventory().setInventorySlotContents(10, testStack);
 					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
 					replaced = true;
+					itemsReplaced = true;
 				}
 			}
 		}
+		if (itemsReplaced)
+			ModuleHelper.takeArmourPower(player.inventory.armorItemInSlot(this.getSlotType()), this.getUsePowerCost());
 	}
 
 	@Override

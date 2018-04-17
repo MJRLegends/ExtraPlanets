@@ -17,7 +17,7 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 public class ModuleOxygenTankSwitch extends Module {
 
 	public ModuleOxygenTankSwitch(String name) {
-		super(name, 2, new ItemStack(GCItems.oxTankHeavy), true);
+		super(name, 2, new ItemStack(GCItems.oxTankHeavy), true, 5, 25);
 		List<ItemStack> items = new ArrayList<ItemStack>();
 		items.add(new ItemStack(ExtraPlanets_Items.MODULE_ITEMS, 6, 2));
 		items.add(new ItemStack(GCItems.oxygenConcentrator, 12));

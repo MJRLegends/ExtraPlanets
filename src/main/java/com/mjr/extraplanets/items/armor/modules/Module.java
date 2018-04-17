@@ -16,22 +16,28 @@ public abstract class Module {
 	private ItemStack icon;
 	private boolean active;
 	private String description = "";
+	private int passivePowerCost = 0;
+	private int usePowerCost = 0;
 
-	public Module(String name, List<ItemStack> requirements, int slotType, ItemStack icon, boolean active) {
+	public Module(String name, List<ItemStack> requirements, int slotType, ItemStack icon, boolean active, int passivePowerCost, int usePowerCost) {
 		super();
 		this.name = name;
 		this.requirements = requirements;
 		this.slotType = slotType;
 		this.icon = icon;
 		this.active = active;
+		this.passivePowerCost = passivePowerCost;
+		this.usePowerCost = usePowerCost;
 	}
 
-	public Module(String name, int slotType, ItemStack icon, boolean active) {
+	public Module(String name, int slotType, ItemStack icon, boolean active, int passivePowerCost, int usePowerCost) {
 		super();
 		this.name = name;
 		this.slotType = slotType;
 		this.setIcon(icon);
 		this.active = active;
+		this.passivePowerCost = passivePowerCost;
+		this.usePowerCost = usePowerCost;
 	}
 
 	public String getName() {
@@ -78,9 +84,26 @@ public abstract class Module {
 		return this.getName() + ".desc";
 	}
 
+	public int getPassivePowerCost() {
+		return passivePowerCost;
+	}
+
+	public void setPassivePowerCost(int passivePowerCost) {
+		this.passivePowerCost = passivePowerCost;
+	}
+
+	public int getUsePowerCost() {
+		return usePowerCost;
+	}
+
+	public void setUsePowerCost(int usePowerCost) {
+		this.usePowerCost = usePowerCost;
+	}
+
 	public abstract void tickServer(EntityPlayerMP player);
 
 	public abstract void tickClient(EntityPlayerSP player);
 
 	public abstract void renderHelmetOverlay(ItemStack stack, EntityPlayer player, ScaledResolution resolution, float partialTicks);
+
 }
