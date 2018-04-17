@@ -19,8 +19,8 @@ import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
@@ -38,7 +38,6 @@ import com.mjr.extraplanets.client.gui.vehicles.GuiPoweredVehicleBase;
 import com.mjr.extraplanets.client.gui.vehicles.GuiVehicleBase;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.IStatsClientCapability;
-import com.mjr.extraplanets.items.armor.bases.JetpackArmorBase;
 import com.mjr.extraplanets.items.armor.modules.ExtraPlanets_Modules;
 import com.mjr.extraplanets.items.armor.modules.Module;
 import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
@@ -226,11 +225,15 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			break;
 		case S_UPDATE_JETPACK:
 			if ((int) this.data.get(0) == 1) {
-				Item jetpack = player.inventory.armorItemInSlot(2).getItem();
-				((JetpackArmorBase) jetpack).activeJetPack = true;
+				ItemStack jetpack = player.inventory.armorInventory[2];
+				NBTTagCompound tag = new NBTTagCompound();
+				tag.setBoolean("active", true);
+				jetpack.setTagCompound(tag);
 			} else if ((int) this.data.get(0) == 0) {
-				Item jetpack = player.inventory.armorItemInSlot(2).getItem();
-				((JetpackArmorBase) jetpack).activeJetPack = false;
+				ItemStack jetpack = player.inventory.armorInventory[2];
+				NBTTagCompound tag = new NBTTagCompound();
+				tag.setBoolean("active", false);
+				jetpack.setTagCompound(tag);
 			}
 			break;
 		case S_OPEN_MODULE_MANANGER_GUI:
@@ -243,16 +246,16 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 					uninstallModule = temp;
 			}
 			if (uninstallModule != null) {
-				ItemStack stack = player.inventory.armorItemInSlot(3);
+				ItemStack stack = player.inventory.armorInventory[3];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
-				stack = player.inventory.armorItemInSlot(2);
+				stack = player.inventory.armorInventory[2];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
-				stack = player.inventory.armorItemInSlot(1);
+				stack = player.inventory.armorInventory[1];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
-				stack = player.inventory.armorItemInSlot(0);
+				stack = player.inventory.armorInventory[0];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
 			}
@@ -266,25 +269,25 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			if (installModule != null) {
 				boolean meetRequirements = false;
 				boolean alreadyHas = false;
-				ItemStack stack = player.inventory.armorItemInSlot(3);
+				ItemStack stack = player.inventory.armorInventory[3];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
 						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
-				stack = player.inventory.armorItemInSlot(2);
+				stack = player.inventory.armorInventory[2];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
 						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
-				stack = player.inventory.armorItemInSlot(1);
+				stack = player.inventory.armorInventory[1];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
 						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
-				stack = player.inventory.armorItemInSlot(0);
+				stack = player.inventory.armorInventory[0];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
 						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
