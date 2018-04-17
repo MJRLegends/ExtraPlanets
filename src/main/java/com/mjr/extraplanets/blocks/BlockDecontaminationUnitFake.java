@@ -130,7 +130,7 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 			}
 		}
 
-		return null;
+		return ItemStack.EMPTY;
 	}
 
 	@SuppressWarnings("deprecation")
