@@ -12,6 +12,7 @@ public class ExtraPlanets_Modules {
 		modules.add(new ModuleGeigerCounter("geiger_counter"));
 		modules.add(new ModulePreLaunchChecklist("pre_launch_checklist"));
 		modules.add(new ModulePortableNASAWorkBench("nasa_workbench"));
+		modules.add(new ModuleOxygenTankSwitch("oxygen_tank_switch"));
 		// modules.add(new TestModule("test"));
 	}
 
