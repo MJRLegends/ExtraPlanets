@@ -19,7 +19,7 @@ public class ModuleOxygenTankSwitch extends Module {
 	public ModuleOxygenTankSwitch(String name) {
 		super(name, 2, new ItemStack(GCItems.oxTankHeavy), true);
 		List<ItemStack> items = new ArrayList<ItemStack>();
-		items.add(new ItemStack(ExtraPlanets_Items.MODULE_ITEMS, 1, 6));
+		items.add(new ItemStack(ExtraPlanets_Items.MODULE_ITEMS, 6, 2));
 		items.add(new ItemStack(GCItems.oxygenConcentrator, 12));
 		this.setRequirements(items);
 	}
