@@ -108,7 +108,7 @@ public class MainHandlerServer {
 	public void onPlayerRespawn(PlayerRespawnEvent event) {
 		if (event.player instanceof EntityPlayerMP) {
 			EntityPlayerMP player = (EntityPlayerMP) event.player;
-			World world = event.player.world;
+			World world = event.player.worldObj;
 
 			IBlockState blockTest = world.getBlockState(player.getPosition());
 			if (blockTest.getBlock() instanceof FluidBlockEP){
