@@ -346,7 +346,7 @@ public class ClientProxy extends CommonProxy {
 				"candy_cane_pink_horizontal", "candy_cane_lime_horizontal", "candy_cane_purple_horizontal", "candy_cane_brown_horizontal", "candy_cane_black_horizontal");
 		ClientUtilities.addVariants(Constants.modID, "cake_blocks", "cake_block", "cake_block_red_velvet", "cake_block_chocolate", "white_icing_red_dots", "white_icing_green_dots", "white_icing_pink_dots", "white_icing_orange_dots", "cookie_rocks");
 		if (Config.PRESSURE || Config.RADIATION)
-			ClientUtilities.addVariants(Constants.modID, "module_items", "no_fall_boots");
+			ClientUtilities.addVariants(Constants.modID, "module_items", "no_fall_boots", "oxygen_controller", "space_gear_controller");
 	}
 
 	private void registerEntityRenders() {
