@@ -12,7 +12,6 @@ import micdoodle8.mods.galacticraft.core.items.ItemParaChute;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
 import micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.core.util.GCLog;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.settings.GameSettings;
@@ -27,6 +26,7 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.api.item.IModularArmor;
 import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
@@ -44,6 +44,7 @@ import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.extraplanets.util.ExtraPlanetsUtli;
 import com.mjr.mjrlegendslib.network.PacketBase;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
@@ -90,7 +91,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 	public PacketSimpleEP(EnumSimplePacket packetType, int dimID, List<Object> data) {
 		super(dimID);
 		if (packetType.getDecodeClasses().length != data.size()) {
-			GCLog.info("Simple Packet Core found data length different than packet type");
+			MessageUtilities.fatalErrorMessageToLog(Constants.modID, "Simple Packet Core found data length different than packet type");
 			new RuntimeException().printStackTrace();
 		}
 
@@ -120,10 +121,10 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 				this.data = NetworkUtil.decodeData(this.type.getDecodeClasses(), buffer);
 			}
 			if (buffer.readableBytes() > 0) {
-				GCLog.severe("ExtraPlanets packet length problem for packet type " + this.type.toString());
+				MessageUtilities.fatalErrorMessageToLog(Constants.modID, "Packet length problem for packet type " + this.type.toString());
 			}
 		} catch (Exception e) {
-			System.err.println("[ExtraPlanets] Error handling simple packet type: " + this.type.toString() + " " + buffer.toString());
+			MessageUtilities.fatalErrorMessageToLog(Constants.modID, "Error handling simple packet type: " + this.type.toString() + " " + buffer.toString());
 			e.printStackTrace();
 		}
 	}
@@ -309,9 +310,8 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 					installModule2 = temp;
 			}
 			if (installModule2 != null) {
-				installModule2.setActive(installModule2.isActive() ? false : true);
-				ItemStack temp = playerBase.inventory.armorItemInSlot(installModule2.getSlotType());
-				ModuleHelper.updateModuleActiveState(temp, installModule2, installModule2.isActive());
+				ItemStack temp = playerBase.inventory.armorInventory[installModule2.getSlotType()];
+				ModuleHelper.updateModuleActiveState(temp, installModule2, !installModule2.isActive());
 			}
 			break;
 		default:
