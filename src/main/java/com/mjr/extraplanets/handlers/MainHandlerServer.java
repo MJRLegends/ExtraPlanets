@@ -107,13 +107,13 @@ public class MainHandlerServer {
 	public void onPlayerRespawn(PlayerRespawnEvent event) {
 		if (event.player instanceof EntityPlayerMP) {
 			EntityPlayerMP player = (EntityPlayerMP) event.player;
-			World world = event.player.world;
+			World world = event.player.worldObj;
 
 			IBlockState blockTest = world.getBlockState(player.getPosition());
 			if (blockTest.getBlock() instanceof FluidBlockEP) {
 				BlockPos block = world.getTopSolidOrLiquidBlock(player.getPosition().add(1, 1, 0));
-				world.setBlockState(block, world.getBiome(block).topBlock);
-				ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_MOVE_PLAYER, world.provider.getDimensionType().getId(), new Object[] { block }), player);
+				world.setBlockState(block, world.getBiomeGenForCoords(block).topBlock);
+				ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_MOVE_PLAYER, world.provider.getDimensionId(), new Object[] { block }), player);
 			}
 		}
 	}
