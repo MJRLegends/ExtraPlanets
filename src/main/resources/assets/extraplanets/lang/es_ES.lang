@@ -1146,6 +1146,8 @@ item.tier4_un_prepared_space_suit_boots.name=Tier 4 Un-Prepared Space Suit Boots
 
 #Module Items
 item.module_items.no_fall_boots.name=No Fall Damage Module ##NEEDS TRANSLATE##
+item.module_items.oxygen_controller.name=Oxygen Controller ##NEEDS TRANSLATE##
+item.module_items.space_gear_controller.name=Space Gear Controller ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Very Heavy Oxygen Tank ##NEEDS TRANSLATE##
