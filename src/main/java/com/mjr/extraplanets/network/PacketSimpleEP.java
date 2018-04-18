@@ -22,6 +22,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.INetHandler;
 import net.minecraft.network.Packet;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -56,7 +57,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 
 		// CLIENT
 		C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT), C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class), C_OPEN_MODULE_MANANGER_GUI(Side.CLIENT, Integer.class,
-				Integer.class, Integer.class);
+				Integer.class, Integer.class), C_MOVE_PLAYER(Side.CLIENT, BlockPos.class);
 
 		private Side targetSide;
 		private Class<?>[] decodeAs;
@@ -173,6 +174,10 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 				playerBaseClient.openContainer.windowId = (Integer) this.data.get(0);
 				break;
 			}
+			break;
+		case C_MOVE_PLAYER:
+			BlockPos pos = (BlockPos) this.data.get(0);
+			playerBaseClient.setPosition(pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5);
 			break;
 		default:
 			break;
