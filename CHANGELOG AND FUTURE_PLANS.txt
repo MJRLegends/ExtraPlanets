@@ -5,6 +5,46 @@
 
 
 ===========================================Released Updates===========================================
+v0.7.0
+*Added Radiation & Pressure to Space Stations
+*Added Config for Amount of Radiation on Space Stations
+*Tweaks to comments for Radiation Config options
+*Allowed 0 to be used as a Radiation amount for disabling
+*Added Config option to unhide Pressure & Radiation HUD when when not needed
+*Added Debug outputs for Radiation & Pressure system for when Debug Mode is active
+*Added Tier 1 - 4 Space Suit chest with Jet Pack (WIP)
+*Added Space Suit Module System, See controls for the key to use
+*Fixed wrong armour slots on pressure and radiation checks
+*Added Sensor Glasses Module
+*Added enabling/disabling modules in Module Manager GUI
+*Updated lang files
+*Added function to install/uninstall modules in Module Manager GUI
+*Enabled ability to add modules to all Space Suit Tiers
+*Added Module Manager GUI texture
+*Added requirements for installing a module in Module Manager GUI
+*Added No Fall Damage Module & Item
+*Added Geiger Counter Module
+*Added ability to show item stack count in requirements
+*Added name/description info to Module Manager GUI
+*Improved the API section of the mod/Moved classes around
+*Added/Finished a few currently unused base classes
+*Added Module Type info to the Module Manager GUI
+*Added Pre Launch Checklist Module
+*Added Portable NASA Workbench Module
+*Changes to Celestial Selection screen to match GC changes
+*Added comments & removed not needed code from Celestial Selection screen
+*Fixed issue of Celestial Selection screen breaking if changing galaxy when selected/zoom on a body
+*Added Names on Moons in the Celestial Selection screen
+*Fixed issue #284
+*Added Oxygen Tank Auto Swapper Module
+*Added Auto Space Gear Equip Module
+*Added Power System for Modules/Tier 1 - 4 Space Suits
+*Tweaks to Module Manager GUI for Power System info
+*Changed texture of Un-Prepared Tier 1 - 4 Space Suits
+*Fixed a few Server/Client packet handling issues
+*Set required GC version requirement to Build 174
+*Fixed player spawning in liquid when re-spawning after death
+
 v0.6.9
 *Fixed issue #274
 *Fixed missing checklist entries from Kepler22b Space Station
