@@ -15,7 +15,9 @@ import com.mjr.extraplanets.items.armor.bases.ElectricArmorBase;
 public class ModuleHelper {
 
 	public static void setupModulesNBT(ItemStack item) {
-		if (item != null && item.getItem() instanceof IModularArmor) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return;
+		if (item.getItem() instanceof IModularArmor) {
 			final NBTTagCompound nbt = new NBTTagCompound();
 			if (item != null && !item.hasTagCompound()) {
 				NBTTagList tagList = new NBTTagList();
@@ -26,6 +28,8 @@ public class ModuleHelper {
 	}
 
 	public static List<Module> getModules(ItemStack item) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return new ArrayList<Module>();
 		List<Module> temp = new ArrayList<Module>();
 		if (item != null && item.hasTagCompound()) {
 			NBTTagCompound nbt = item.getTagCompound();
@@ -46,6 +50,8 @@ public class ModuleHelper {
 	}
 
 	public static void setModules(ItemStack item, List<Module> temp) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return;
 		item.setTagCompound(new NBTTagCompound());
 		for (Module module : temp) {
 			addModule(item, module);
@@ -58,7 +64,9 @@ public class ModuleHelper {
 	}
 
 	public static void addModule(ItemStack item, Module module, boolean active) {
-		if (item != null && !item.hasTagCompound())
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return;
+		if (!item.hasTagCompound())
 			setupModulesNBT(item);
 
 		final NBTTagCompound nbt = item.getTagCompound();
@@ -72,6 +80,8 @@ public class ModuleHelper {
 	}
 
 	public static void updateModuleActiveState(ItemStack item, Module module, boolean active) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return;
 		List<Module> temp = getModules(item);
 		for (Module tempModule : temp) {
 			if (tempModule.getName().equalsIgnoreCase(module.getName()))
@@ -81,6 +91,8 @@ public class ModuleHelper {
 	}
 
 	public static void removeModule(ItemStack item, Module module) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return;
 		List<Module> newModules = new ArrayList<Module>();
 		for (Module tempModule : getModules(item)) {
 			if (!tempModule.getName().equalsIgnoreCase(module.getName()))
@@ -90,6 +102,8 @@ public class ModuleHelper {
 	}
 
 	public static boolean installModule(ItemStack item, Module module, EntityPlayer player) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return false;
 		if (!checkModuleCompact(item, module))
 			return false;
 		boolean hadRequirements = true;
@@ -125,6 +139,8 @@ public class ModuleHelper {
 	}
 
 	public static void uninstallModule(ItemStack item, Module module, EntityPlayer player) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return;
 		removeModule(item, module);
 		for (int i = 0; i < module.getRequirements().size(); i++) {
 			player.inventory.setInventorySlotContents(player.inventory.getFirstEmptyStack(), module.getRequirements().get(i));
@@ -132,6 +148,8 @@ public class ModuleHelper {
 	}
 
 	public static boolean checkModuleCompact(ItemStack item, Module module) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return false;
 		try {
 			int slot = EntityLiving.getArmorPosition(item)-1;
 			if (slot == module.getSlotType())
@@ -149,6 +167,8 @@ public class ModuleHelper {
 	}
 
 	public static boolean hasModule(ItemStack item, String moduleName) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return false;
 		List<Module> temp = getModules(item);
 		for (Module tempModule : temp) {
 			if (moduleName.equalsIgnoreCase(tempModule.getName()))
@@ -162,6 +182,8 @@ public class ModuleHelper {
 	}
 
 	public static boolean isModuleActive(ItemStack item, String moduleName) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return false;
 		List<Module> temp = getModules(item);
 		for (Module tempModule : temp) {
 			if (moduleName.equalsIgnoreCase(tempModule.getName()))
@@ -197,14 +219,20 @@ public class ModuleHelper {
 	}
 
 	public static int getArmourStoredPower(ItemStack item) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return 0;
 		return (int) ((ElectricArmorBase) item.getItem()).getElectricityStored(item);
 	}
 
 	public static void takeArmourPower(ItemStack item, int power) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return;
 		((ElectricArmorBase) item.getItem()).discharge(item, power, true);
 	}
 
 	public static boolean hasPower(ItemStack item, int power) {
+		if (item == null || !(item.getItem() instanceof IModularArmor))
+			return false;
 		if (getArmourStoredPower(item) >= power)
 			return true;
 		return false;
