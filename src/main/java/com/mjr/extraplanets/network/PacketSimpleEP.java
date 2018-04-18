@@ -143,12 +143,13 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		case C_OPEN_PARACHEST_GUI:
 			switch ((Integer) this.data.get(1)) {
 			case 0:
-				if (player.getRidingEntity() instanceof EntityVehicleBase) {
-					MCUtilities.getClient().displayGuiScreen(new GuiVehicleBase(player.inventory, (EntityVehicleBase) player.getRidingEntity(), ((EntityVehicleBase) player.getRidingEntity()).getType()));
-					player.openContainer.windowId = (Integer) this.data.get(0);
-				} else if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
-					MCUtilities.getClient().displayGuiScreen(new GuiPoweredVehicleBase(player.inventory, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType()));
-					player.openContainer.windowId = (Integer) this.data.get(0);
+				if (playerBaseClient.getRidingEntity() instanceof EntityVehicleBase) {
+					MCUtilities.getClient().displayGuiScreen(new GuiVehicleBase(playerBaseClient.inventory, (EntityVehicleBase) playerBaseClient.getRidingEntity(), ((EntityVehicleBase) playerBaseClient.getRidingEntity()).getType()));
+					playerBaseClient.openContainer.windowId = (Integer) this.data.get(0);
+				} else if (playerBaseClient.getRidingEntity() instanceof EntityPoweredVehicleBase) {
+					MCUtilities.getClient().displayGuiScreen(
+							new GuiPoweredVehicleBase(playerBaseClient.inventory, (EntityPoweredVehicleBase) playerBaseClient.getRidingEntity(), ((EntityPoweredVehicleBase) playerBaseClient.getRidingEntity()).getType()));
+					playerBaseClient.openContainer.windowId = (Integer) this.data.get(0);
 				}
 				break;
 			}
@@ -157,18 +158,18 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			stats.setRadiationLevel((double) this.data.get(0));
 			break;
 		case C_DISPLAY_ROCKET_CONTROLS:
-			PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.launch.name"));
-			PlayerUtilties.sendMessage(player,
+			PlayerUtilties.sendMessage(playerBaseClient, GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.launch.name"));
+			PlayerUtilties.sendMessage(playerBaseClient,
 					GameSettings.getKeyDisplayString(KeyHandlerClient.leftKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.rightKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.turn.name"));
-			PlayerUtilties.sendMessage(player,
+			PlayerUtilties.sendMessage(playerBaseClient,
 					GameSettings.getKeyDisplayString(KeyHandlerClient.accelerateKey.getKeyCode()) + " / " + GameSettings.getKeyDisplayString(KeyHandlerClient.decelerateKey.getKeyCode()) + "  - " + GCCoreUtil.translate("gui.rocket.updown.name"));
-			PlayerUtilties.sendMessage(player, GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.powered.inv.name"));
+			PlayerUtilties.sendMessage(playerBaseClient, GameSettings.getKeyDisplayString(com.mjr.extraplanets.client.handlers.KeyHandlerClient.openPowerGUI.getKeyCode()) + "       - " + GCCoreUtil.translate("gui.powered.inv.name"));
 			break;
 		case C_OPEN_MODULE_MANANGER_GUI:
 			switch ((Integer) this.data.get(1)) {
 			case 0:
-				MCUtilities.getClient().displayGuiScreen(new GUIModuleManager(player.inventory));
-				player.openContainer.windowId = (Integer) this.data.get(0);
+				MCUtilities.getClient().displayGuiScreen(new GUIModuleManager(playerBaseClient.inventory));
+				playerBaseClient.openContainer.windowId = (Integer) this.data.get(0);
 				break;
 			}
 			break;
@@ -189,20 +190,20 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 
 		switch (this.type) {
 		case S_OPEN_FUEL_GUI:
-			if (player.getRidingEntity() instanceof EntityVehicleBase) {
-				ExtraPlanetsUtli.openFuelVehicleInv(playerBase, (EntityVehicleBase) player.getRidingEntity(), ((EntityVehicleBase) player.getRidingEntity()).getType());
+			if (playerBase.getRidingEntity() instanceof EntityVehicleBase) {
+				ExtraPlanetsUtli.openFuelVehicleInv(playerBase, (EntityVehicleBase) playerBase.getRidingEntity(), ((EntityVehicleBase) playerBase.getRidingEntity()).getType());
 			}
 			break;
 		case S_OPEN_POWER_GUI:
-			if (player.getRidingEntity() instanceof EntityPoweredVehicleBase) {
-				ExtraPlanetsUtli.openPowerVehicleInv(playerBase, (EntityPoweredVehicleBase) player.getRidingEntity(), ((EntityPoweredVehicleBase) player.getRidingEntity()).getType());
-			} else if (player.getRidingEntity() instanceof EntityElectricRocketBase) {
-				player.openGui(ExtraPlanets.instance, GuiIdsCore.ROCKET_INVENTORY, player.worldObj, (int) player.posX, (int) player.posY, (int) player.posZ);
+			if (playerBase.getRidingEntity() instanceof EntityPoweredVehicleBase) {
+				ExtraPlanetsUtli.openPowerVehicleInv(playerBase, (EntityPoweredVehicleBase) playerBase.getRidingEntity(), ((EntityPoweredVehicleBase) playerBase.getRidingEntity()).getType());
+			} else if (playerBase.getRidingEntity() instanceof EntityElectricRocketBase) {
+				playerBase.openGui(ExtraPlanets.instance, GuiIdsCore.ROCKET_INVENTORY, playerBase.worldObj, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
 			}
 			break;
 		case S_IGNITE_ROCKET:
-			if (!player.worldObj.isRemote && !player.isDead && player.getRidingEntity() != null && !player.getRidingEntity().isDead && player.getRidingEntity() instanceof EntityElectricRocketBase) {
-				final EntityElectricRocketBase ship = (EntityElectricRocketBase) player.getRidingEntity();
+			if (!playerBase.worldObj.isRemote && !playerBase.isDead && playerBase.getRidingEntity() != null && !playerBase.getRidingEntity().isDead && playerBase.getRidingEntity() instanceof EntityElectricRocketBase) {
+				final EntityElectricRocketBase ship = (EntityElectricRocketBase) playerBase.getRidingEntity();
 
 				if (ship.launchPhase != EnumLaunchPhase.LANDING.ordinal()) {
 					if (ship.hasValidPower()) {
@@ -212,12 +213,12 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 							ship.igniteCheckingCooldown();
 							GCPlayerStats.get(playerBase).setLaunchAttempts(0);
 						} else if (stats.getChatCooldown() == 0 && GCPlayerStats.get(playerBase).getLaunchAttempts() == 0) {
-							PlayerUtilties.sendMessage(player, TranslateUtilities.translate("gui.rocket.warning.noparachute"));
+							PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.rocket.warning.noparachute"));
 							stats.setChatCooldown(250);
 							GCPlayerStats.get(playerBase).setLaunchAttempts(1);
 						}
 					} else if (stats.getChatCooldown() == 0) {
-						PlayerUtilties.sendMessage(player, TranslateUtilities.translate("gui.rocket.warning.nofuel"));
+						PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.rocket.warning.nofuel"));
 						stats.setChatCooldown(250);
 					}
 				}
@@ -225,12 +226,12 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			break;
 		case S_UPDATE_JETPACK:
 			if ((int) this.data.get(0) == 1) {
-				ItemStack jetpack = player.inventory.armorInventory[2];
+				ItemStack jetpack = playerBase.inventory.armorInventory[2];
 				NBTTagCompound tag = new NBTTagCompound();
 				tag.setBoolean("active", true);
 				jetpack.setTagCompound(tag);
 			} else if ((int) this.data.get(0) == 0) {
-				ItemStack jetpack = player.inventory.armorInventory[2];
+				ItemStack jetpack = playerBase.inventory.armorInventory[2];
 				NBTTagCompound tag = new NBTTagCompound();
 				tag.setBoolean("active", false);
 				jetpack.setTagCompound(tag);
@@ -246,16 +247,16 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 					uninstallModule = temp;
 			}
 			if (uninstallModule != null) {
-				ItemStack stack = player.inventory.armorInventory[3];
+				ItemStack stack = playerBase.inventory.armorInventory[3];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
-				stack = player.inventory.armorInventory[2];
+				stack = playerBase.inventory.armorInventory[2];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
-				stack = player.inventory.armorInventory[1];
+				stack = playerBase.inventory.armorInventory[1];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
-				stack = player.inventory.armorInventory[0];
+				stack = playerBase.inventory.armorInventory[0];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, uninstallModule))
 					ModuleHelper.uninstallModule(stack, uninstallModule, playerBase);
 			}
@@ -269,25 +270,25 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			if (installModule != null) {
 				boolean meetRequirements = false;
 				boolean alreadyHas = false;
-				ItemStack stack = player.inventory.armorInventory[3];
+				ItemStack stack = playerBase.inventory.armorInventory[3];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
 						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
-				stack = player.inventory.armorInventory[2];
+				stack = playerBase.inventory.armorInventory[2];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
 						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
-				stack = player.inventory.armorInventory[1];
+				stack = playerBase.inventory.armorInventory[1];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
 						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
-				stack = player.inventory.armorInventory[0];
+				stack = playerBase.inventory.armorInventory[0];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
 						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
@@ -309,7 +310,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 			}
 			if (installModule2 != null) {
 				installModule2.setActive(installModule2.isActive() ? false : true);
-				ItemStack temp = MCUtilities.getClient().player.inventory.armorItemInSlot(installModule2.getSlotType());
+				ItemStack temp = playerBase.inventory.armorItemInSlot(installModule2.getSlotType());
 				ModuleHelper.updateModuleActiveState(temp, installModule2, installModule2.isActive());
 			}
 			break;
