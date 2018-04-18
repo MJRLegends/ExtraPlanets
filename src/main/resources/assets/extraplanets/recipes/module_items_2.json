@@ -17,8 +17,8 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "R": {
-      "item": "galacticraftplanets:item_basic_asteroids",
-      "data": 0
+      "item": "galacticraftcore:battery",
+      "data": 100
     },
     "C": {
       "item": "galacticraftcore:oxygen_gear"
@@ -26,6 +26,10 @@
     "T": {
       "item": "galacticraftcore:basic_item",
       "data": 14
+    },
+    "G": {
+      "item": "galacticraftplanets:item_basic_asteroids",
+      "data": 0
     }
   }
 }
