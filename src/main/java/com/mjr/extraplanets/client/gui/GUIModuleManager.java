@@ -55,7 +55,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		case 0:
 			if (this.selectedModule == null)
 				return;
-			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_MODULE_STATE, this.mc.theWorld.provider.getDimensionType().getId(), new Object[] { this.selectedModule.getName() }));
+			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_MODULE_STATE, this.mc.theWorld.provider.getDimensionId(), new Object[] { this.selectedModule.getName() }));
 			Minecraft.getMinecraft().thePlayer.closeScreen();
 			break;
 		case 1:
