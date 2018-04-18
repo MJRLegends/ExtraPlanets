@@ -55,9 +55,7 @@ public class GUIModuleManager extends GuiContainerGC {
 		case 0:
 			if (this.selectedModule == null)
 				return;
-			this.selectedModule.setActive(this.selectedModule.isActive() ? false : true);
-			ItemStack temp = MCUtilities.getClient().player.inventory.armorItemInSlot(selectedModule.getSlotType());
-			ModuleHelper.updateModuleActiveState(temp, this.selectedModule, this.selectedModule.isActive());
+			ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_MODULE_STATE, this.mc.world.provider.getDimensionType().getId(), new Object[] { this.selectedModule.getName() }));
 			break;
 		case 1:
 			if (this.selectedInstallModule == null)
