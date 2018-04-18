@@ -1,0 +1,32 @@
+{
+  "result": {
+    "item": "extraplanets:module_items",
+    "data": 1
+  },
+  "pattern": [
+    "RTG",
+    "TCT",
+    "GTR"
+  ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "pressureandradiation"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "galacticraftplanets:item_basic_mars",
+      "data": 2
+    },
+    "C": {
+      "item": "galacticraftcore:oxygen_tank_heavy_full",
+      "data": 2700
+    },
+    "T": {
+      "item": "galacticraftcore:basic_item",
+      "data": 14
+    }
+  }
+}

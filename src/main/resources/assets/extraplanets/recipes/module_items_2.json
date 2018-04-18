@@ -1,0 +1,31 @@
+{
+  "result": {
+    "item": "extraplanets:module_items",
+    "data": 2
+  },
+  "pattern": [
+    "RTG",
+    "TCT",
+    "GTR"
+  ],
+  "conditions": [
+    {
+      "type": "extraplanets:recipe_enabled",
+      "value": "pressureandradiation"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "galacticraftplanets:item_basic_asteroids",
+      "data": 0
+    },
+    "C": {
+      "item": "galacticraftcore:oxygen_gear"
+    },
+    "T": {
+      "item": "galacticraftcore:basic_item",
+      "data": 14
+    }
+  }
+}

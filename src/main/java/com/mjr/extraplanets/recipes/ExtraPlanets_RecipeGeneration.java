@@ -1082,6 +1082,10 @@ public class ExtraPlanets_RecipeGeneration {
 		// Module Items
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.MODULE_ITEMS, 1, 0), new Object[] { "   ", "STS", "STS", 'T',
 				new ItemStack(AsteroidsItems.titaniumBoots, 1), 'S', "itemSilicon" });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.MODULE_ITEMS, 1, 1), new Object[] { "RTG", "TCT", "GTR", 'T', new ItemStack(GCItems.basicItem, 1, 14), 'R',
+				new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()), 'R', new ItemStack(MarsItems.marsItemBasic, 1, 2), 'C', new ItemStack(GCItems.oxTankHeavy, 1, GCItems.oxTankHeavy.getMaxDamage()) });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "pressureandradiation", new ItemStack(ExtraPlanets_Items.MODULE_ITEMS, 1, 2), new Object[] { "RTG", "TCT", "GTR", 'T', new ItemStack(GCItems.basicItem, 1, 14), 'R',
+				new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()), 'R', new ItemStack(AsteroidsItems.basicItem, 1, 0), 'C', new ItemStack(GCItems.oxygenGear) });
 
 		// Anti Radiation Drinks TODO AUTOMATE CREATION
 		// RecipeDumper.addNBTRecipe(
