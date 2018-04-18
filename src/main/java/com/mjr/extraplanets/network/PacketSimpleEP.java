@@ -51,7 +51,7 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 	public enum EnumSimplePacket {
 		// SERVER
 		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class), S_IGNITE_ROCKET(Side.SERVER), S_UPDATE_JETPACK(Side.SERVER, Integer.class), S_OPEN_MODULE_MANANGER_GUI(Side.SERVER, String.class), S_UNINSTALL_MODULE(
-				Side.SERVER, String.class), S_INSTALL_MODULE(Side.SERVER, String.class),
+				Side.SERVER, String.class), S_INSTALL_MODULE(Side.SERVER, String.class), S_UPDATE_MODULE_STATE(Side.SERVER, String.class),
 
 		// CLIENT
 		C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT), C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class), C_OPEN_MODULE_MANANGER_GUI(Side.CLIENT, Integer.class,
@@ -299,6 +299,18 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.already_installed.name"));
 				else
 					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.installed.name"));
+			}
+			break;
+		case S_UPDATE_MODULE_STATE:
+			Module installModule2 = null;
+			for (Module temp : ExtraPlanets_Modules.getModules()) {
+				if (temp.getName().equalsIgnoreCase((String) this.data.get(0)))
+					installModule2 = temp;
+			}
+			if (installModule2 != null) {
+				installModule2.setActive(installModule2.isActive() ? false : true);
+				ItemStack temp = MCUtilities.getClient().player.inventory.armorItemInSlot(installModule2.getSlotType());
+				ModuleHelper.updateModuleActiveState(temp, installModule2, installModule2.isActive());
 			}
 			break;
 		default:
