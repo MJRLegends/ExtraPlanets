@@ -14,6 +14,7 @@ import micdoodle8.mods.galacticraft.planets.asteroids.dimension.WorldProviderAst
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import micdoodle8.mods.galacticraft.planets.mars.dimension.WorldProviderMars;
 import micdoodle8.mods.galacticraft.planets.venus.dimension.WorldProviderVenus;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
@@ -25,6 +26,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
@@ -35,6 +37,7 @@ import net.minecraftforge.event.entity.player.PlayerWakeUpEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.Phase;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.WorldTickEvent;
@@ -51,6 +54,7 @@ import com.mjr.extraplanets.api.item.IRadiationSuit;
 import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
 import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.blocks.fluid.FluidBlockEP;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityProviderStatsClient;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityProviderStats;
@@ -98,6 +102,21 @@ public class MainHandlerServer {
 		IStatsCapability oldStats = event.getOriginal().getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 		IStatsCapability newStats = event.getEntityPlayer().getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 		newStats.copyFrom(oldStats, !event.isWasDeath() || event.getOriginal().world.getGameRules().getBoolean("keepInventory"));
+	}
+
+	@SubscribeEvent
+	public void onPlayerRespawn(PlayerRespawnEvent event) {
+		if (event.player instanceof EntityPlayerMP) {
+			EntityPlayerMP player = (EntityPlayerMP) event.player;
+			World world = event.player.world;
+
+			IBlockState blockTest = world.getBlockState(player.getPosition());
+			if (blockTest.getBlock() instanceof FluidBlockEP){
+				BlockPos block = world.getTopSolidOrLiquidBlock(player.getPosition().add(1, 1, 0));
+				world.setBlockState(block, world.getBiome(block).topBlock);				
+				ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_MOVE_PLAYER, world.provider.getDimensionType().getId(), new Object[] { block }), player);
+			}
+		}
 	}
 
 	@SubscribeEvent
@@ -203,7 +222,7 @@ public class MainHandlerServer {
 
 		if (helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
-				if (hemletModules.isActive()){
+				if (hemletModules.isActive()) {
 					int passivePower = ModuleHelper.getModulePassiveCost(hemletModules);
 					if ((player.ticksExisted - 1) % 20 == 0 && ModuleHelper.hasPower(helmet, passivePower))
 						ModuleHelper.takeArmourPower(helmet, passivePower);
@@ -213,7 +232,7 @@ public class MainHandlerServer {
 			}
 		if (chest.getItem() instanceof IModularArmor)
 			for (Module chestModules : ModuleHelper.getModules(chest)) {
-				if (chestModules.isActive()){
+				if (chestModules.isActive()) {
 					int passivePower = ModuleHelper.getModulePassiveCost(chestModules);
 					if ((player.ticksExisted - 1) % 20 == 0 && ModuleHelper.hasPower(chest, passivePower))
 						ModuleHelper.takeArmourPower(chest, passivePower);
@@ -223,7 +242,7 @@ public class MainHandlerServer {
 			}
 		if (leggins.getItem() instanceof IModularArmor)
 			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
-				if (legginsModules.isActive()){
+				if (legginsModules.isActive()) {
 					int passivePower = ModuleHelper.getModulePassiveCost(legginsModules);
 					if ((player.ticksExisted - 1) % 20 == 0 && ModuleHelper.hasPower(leggins, passivePower))
 						ModuleHelper.takeArmourPower(leggins, passivePower);
@@ -233,7 +252,7 @@ public class MainHandlerServer {
 			}
 		if (boots.getItem() instanceof IModularArmor)
 			for (Module bootsModules : ModuleHelper.getModules(boots)) {
-				if (bootsModules.isActive()){
+				if (bootsModules.isActive()) {
 					int passivePower = ModuleHelper.getModulePassiveCost(bootsModules);
 					if ((player.ticksExisted - 1) % 20 == 0 && ModuleHelper.hasPower(boots, passivePower))
 						ModuleHelper.takeArmourPower(boots, passivePower);
