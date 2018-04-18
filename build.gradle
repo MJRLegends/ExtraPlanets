@@ -51,7 +51,8 @@ dependencies {
 		"GalacticraftCore-Dev-1.12.2-4.0.1.174.jar",
 		"Galacticraft-Planets-Dev-1.12.2-4.0.1.174.jar",
 		"MicdoodleCore-Dev-1.12.2-4.0.1.174.jar",
-		"MJRLegendsLib-1.12.2-1.1.1-dev.jar"
+		"MJRLegendsLib-1.12.2-1.1.1-dev.jar",
+		"industrialcraft-2-2.8.75-ex112-api.jar"
 	)
 	runtime "mezz.jei:jei_${minecraft_version}:${jei_version}"
 }
