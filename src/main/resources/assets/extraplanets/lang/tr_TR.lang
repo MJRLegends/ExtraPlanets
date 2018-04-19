@@ -580,10 +580,12 @@ gui.module.missing_requirements.name=Sorry you do not meet the requirements to i
 gui.module.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
 gui.module.description.name=Module Description ##NEEDS TRANSLATE##
 gui.module.name.name=Module Name ##NEEDS TRANSLATE##
+gui.module.type.name=Module Type ##NEEDS TRANSLATE##
 gui.module.type.helmet.name=Helmet ##NEEDS TRANSLATE##
 gui.module.type.chest.name=Chestplate ##NEEDS TRANSLATE##
 gui.module.type.leggings.name=Leggings ##NEEDS TRANSLATE##
 gui.module.type.boots.name=Boots ##NEEDS TRANSLATE##
+gui.module.power.name=Module Power ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.name=Sensor Glasses ##NEEDS TRANSLATE##
 gui.module.no_fall_damage.name=No Fall Damage ##NEEDS TRANSLATE##
@@ -591,6 +593,8 @@ gui.module.geiger_counter.name=Geiger Counter ##NEEDS TRANSLATE##
 gui.module.test.name=Test Module ##NEEDS TRANSLATE##
 gui.module.pre_launch_checklist.name=Pre Launch Checklist ##NEEDS TRANSLATE##
 gui.module.nasa_workbench.name=Portable NASA Workbench ##NEEDS TRANSLATE##
+gui.module.oxygen_tank_switch.name=Oxygen Tank Auto Swapper ##NEEDS TRANSLATE##
+gui.module.auto_space_gear_equip.name=Space Gear Auto Equip ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Functions the same as the Galacticraft Sensor Glasses ##NEEDS TRANSLATE##
 gui.module.no_fall_damage.desc=Removes fall damage from the player ##NEEDS TRANSLATE##
@@ -598,6 +602,8 @@ gui.module.geiger_counter.desc=Displays your current amount of Radiation on your
 gui.module.test.desc=Test Module ##NEEDS TRANSLATE##
 gui.module.pre_launch_checklist.desc=Allows easy access to the Pre Launch Checklist from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
 gui.module.nasa_workbench.desc=Allows portable access to a NASA Workbench from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
+gui.module.oxygen_tank_switch.desc=Swappers out equipped empty tanks with any available non empty oxygen tank in your inventory ##NEEDS TRANSLATE##
+gui.module.auto_space_gear_equip.desc=Automatically equip any space related gear in your inventory ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Nükleer Bomba
@@ -1076,6 +1082,9 @@ space.suit.information.extra.2=towards reducing the amount of radiation gained #
 space.suit.information.extra.3=The Higher the Space Suit Tier the ##NEEDS TRANSLATE##
 space.suit.information.extra.4=slower radiation will be gained ##NEEDS TRANSLATE##
 
+item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
+item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
+
 item.tier3_thermal_helm.name=Tier 3 Termal Dolgulu Kask
 item.tier3_thermal_chestplate.name=Tier 3 Termal Dolgulu Zırh
 item.tier3_thermal_leggings.name=Tier 3 Termal Dolgulu Pantolon
@@ -1137,6 +1146,8 @@ item.tier4_un_prepared_space_suit_boots.name=Tier 4 Un-Prepared Space Suit Boots
 
 #Module Items
 item.module_items.no_fall_boots.name=No Fall Damage Module ##NEEDS TRANSLATE##
+item.module_items.oxygen_controller.name=Oxygen Controller ##NEEDS TRANSLATE##
+item.module_items.space_gear_controller.name=Space Gear Controller ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Very Heavy Oxygen Tank ##NEEDS TRANSLATE##
