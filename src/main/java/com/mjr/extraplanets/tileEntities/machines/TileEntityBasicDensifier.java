@@ -412,6 +412,24 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 						|| resource.equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0)) || resource.equals(new FluidStack(ExtraPlanets_Fluids.GLOWSTONE_FLUID, 0))
 						|| resource.equals(new FluidStack(ExtraPlanets_Fluids.NITROGEN_FLUID, 0)) || resource.equals(new FluidStack(ExtraPlanets_Fluids.FROZEN_WATER_FLUID, 0))
 						|| resource.equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID, 0))) {
+
+					if (this.inputTank.getFluid() == null) {
+						if (resource.getFluid().equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID)) {
+							this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0));
+						} else if (resource.getFluid().equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID)) {
+							this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID, 0));
+						} else if (resource.getFluid().equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)) {
+							this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0));
+						} else if (resource.getFluid().equals(ExtraPlanets_Fluids.GLOWSTONE_FLUID)) {
+							this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.GLOWSTONE_FLUID, 0));
+						} else if (resource.getFluid().equals(ExtraPlanets_Fluids.NITROGEN_FLUID)) {
+							this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.NITROGEN_FLUID, 0));
+						} else if (resource.getFluid().equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID)) {
+							this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.FROZEN_WATER_FLUID, 0));
+						} else if (resource.getFluid().equals(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID)) {
+							this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID, 0));
+						}
+					}
 					if (this.inputTank.getFluid().equals(resource))
 						if (this.inputTank.getFluidAmount() == 0)
 							this.inputTank.setFluid(resource);
