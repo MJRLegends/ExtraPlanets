@@ -40,4 +40,16 @@ public class ExtraPlanetsDimensions {
 	public static DimensionType KEPLER22B_ORBIT;
 	public static DimensionType MARS_ORBIT;
 	public static DimensionType VENUS_ORBIT;
+	
+	public static DimensionType CERES_ORBIT_KEEPLOADED;
+	public static DimensionType ERIS_ORBIT_KEEPLOADED;
+	public static DimensionType JUPITER_ORBIT_KEEPLOADED;
+	public static DimensionType MERCURY_ORBIT_KEEPLOADED;
+	public static DimensionType NEPTUNE_ORBIT_KEEPLOADED;
+	public static DimensionType PLUTO_ORBIT_KEEPLOADED;
+	public static DimensionType SATURN_ORBIT_KEEPLOADED;
+	public static DimensionType URANUS_ORBIT_KEEPLOADED;
+	public static DimensionType KEPLER22B_ORBIT_KEEPLOADED;
+	public static DimensionType MARS_ORBIT_KEEPLOADED;
+	public static DimensionType VENUS_ORBIT_KEEPLOADED;
 }
