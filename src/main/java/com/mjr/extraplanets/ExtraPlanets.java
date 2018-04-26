@@ -9,6 +9,7 @@ import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDeconstructor;
+import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.AsteroidsModule;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
 import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
@@ -18,6 +19,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.DimensionType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -103,15 +105,26 @@ import com.mjr.extraplanets.network.ExtraPlanetsChannelHandler;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 import com.mjr.extraplanets.planets.Ceres.event.CeresEvents;
+import com.mjr.extraplanets.planets.Ceres.spacestation.WorldProviderCeresOrbit;
 import com.mjr.extraplanets.planets.Eris.event.ErisEvents;
+import com.mjr.extraplanets.planets.Eris.spacestation.WorldProviderErisOrbit;
 import com.mjr.extraplanets.planets.Jupiter.event.JupiterEvents;
+import com.mjr.extraplanets.planets.Jupiter.spacestation.WorldProviderJupiterOrbit;
 import com.mjr.extraplanets.planets.Kepler22b.event.Kepler22bEvents;
+import com.mjr.extraplanets.planets.Kepler22b.spacestation.WorldProviderKepler22bOrbit;
 import com.mjr.extraplanets.planets.KuiperBelt.KuiperBeltEvents;
 import com.mjr.extraplanets.planets.Mercury.event.MercuryEvents;
+import com.mjr.extraplanets.planets.Mercury.spacestation.WorldProviderMercuryOrbit;
 import com.mjr.extraplanets.planets.Neptune.event.NeptuneEvents;
+import com.mjr.extraplanets.planets.Neptune.spacestation.WorldProviderNeptuneOrbit;
 import com.mjr.extraplanets.planets.Pluto.event.PlutoEvents;
+import com.mjr.extraplanets.planets.Pluto.spacestation.WorldProviderPlutoOrbit;
 import com.mjr.extraplanets.planets.Saturn.event.SaturnEvents;
+import com.mjr.extraplanets.planets.Saturn.spacestation.WorldProviderSaturnOrbit;
 import com.mjr.extraplanets.planets.Uranus.event.UranusEvents;
+import com.mjr.extraplanets.planets.Uranus.spacestation.WorldProviderUranusOrbit;
+import com.mjr.extraplanets.planets.mars.spacestation.WorldProviderMarsOrbit;
+import com.mjr.extraplanets.planets.venus.spacestation.WorldProviderVenusOrbit;
 import com.mjr.extraplanets.proxy.CommonProxy;
 import com.mjr.extraplanets.recipes.ExtraPlanets_RecipeGeneration;
 import com.mjr.extraplanets.recipes.ExtraPlanets_Recipes;
@@ -339,6 +352,55 @@ public class ExtraPlanets {
 			VenusModule.planetVenus.addChecklistKeys("space_suit");
 			AsteroidsModule.planetAsteroids.addChecklistKeys("space_suit");
 		}
+
+		//Get DimensionTypes from GC Auto Registering
+		ExtraPlanetsDimensions.CERES = WorldUtil.getDimensionTypeById(Config.CERES_ID);
+		ExtraPlanetsDimensions.ERIS = WorldUtil.getDimensionTypeById(Config.ERIS_ID);
+		ExtraPlanetsDimensions.JUPITER = WorldUtil.getDimensionTypeById(Config.JUPITER_ID);
+		ExtraPlanetsDimensions.MERCURY = WorldUtil.getDimensionTypeById(Config.MERCURY_ID);
+		ExtraPlanetsDimensions.NEPTUNE = WorldUtil.getDimensionTypeById(Config.NEPTUNE_ID);
+		ExtraPlanetsDimensions.PLUTO = WorldUtil.getDimensionTypeById(Config.PLUTO_ID);
+		ExtraPlanetsDimensions.SATURN = WorldUtil.getDimensionTypeById(Config.SATURN_ID);
+		ExtraPlanetsDimensions.URANUS = WorldUtil.getDimensionTypeById(Config.URANUS_ID);
+		ExtraPlanetsDimensions.KEPLER22B = WorldUtil.getDimensionTypeById(Config.KEPLER22B_ID);
+
+		ExtraPlanetsDimensions.CALLISTO = WorldUtil.getDimensionTypeById(Config.CALLISTO_ID);
+		ExtraPlanetsDimensions.DEIMOS = WorldUtil.getDimensionTypeById(Config.DEIMOS_ID);
+		ExtraPlanetsDimensions.EUROPA = WorldUtil.getDimensionTypeById(Config.EUROPA_ID);
+		ExtraPlanetsDimensions.GANYMEDE = WorldUtil.getDimensionTypeById(Config.GANYMEDE_ID);
+		ExtraPlanetsDimensions.IAPETUS = WorldUtil.getDimensionTypeById(Config.IAPETUS_ID);
+		ExtraPlanetsDimensions.IO = WorldUtil.getDimensionTypeById(Config.IO_ID);
+		ExtraPlanetsDimensions.OBERON = WorldUtil.getDimensionTypeById(Config.OBERON_ID);
+		ExtraPlanetsDimensions.PHOBOS = WorldUtil.getDimensionTypeById(Config.PHOBOS_ID);
+		ExtraPlanetsDimensions.RHEA = WorldUtil.getDimensionTypeById(Config.RHEA_ID);
+		ExtraPlanetsDimensions.TITAN = WorldUtil.getDimensionTypeById(Config.TITAN_ID);
+		ExtraPlanetsDimensions.TITANIA = WorldUtil.getDimensionTypeById(Config.TITANIA_ID);
+		ExtraPlanetsDimensions.TRITION = WorldUtil.getDimensionTypeById(Config.TRITON_ID);
+
+		//Register DimensionTypes for Space Stations
+		ExtraPlanetsDimensions.CERES_ORBIT = DimensionType.register("Ceres Space Station", "_ceres_orbit", Config.CERES_SPACE_STATION_ID, WorldProviderCeresOrbit.class, false);
+		ExtraPlanetsDimensions.ERIS_ORBIT = DimensionType.register("Eris Space Station", "_eris_orbit", Config.ERIS_SPACE_STATION_ID, WorldProviderErisOrbit.class, false);
+		ExtraPlanetsDimensions.JUPITER_ORBIT = DimensionType.register("Jupiter Space Station", "_jupiter_orbit", Config.JUPITER_SPACE_STATION_ID, WorldProviderJupiterOrbit.class, false);
+		ExtraPlanetsDimensions.MERCURY_ORBIT = DimensionType.register("Mercury Space Station", "_mercury_orbit", Config.MERCURY_SPACE_STATION_ID, WorldProviderMercuryOrbit.class, false);
+		ExtraPlanetsDimensions.NEPTUNE_ORBIT = DimensionType.register("Neptune Space Station", "_neptune_orbit", Config.NEPTUNE_SPACE_STATION_ID, WorldProviderNeptuneOrbit.class, false);
+		ExtraPlanetsDimensions.PLUTO_ORBIT = DimensionType.register("Pluto Space Station", "_pluto_orbit", Config.PLUTO_SPACE_STATION_ID, WorldProviderPlutoOrbit.class, false);
+		ExtraPlanetsDimensions.SATURN_ORBIT = DimensionType.register("Saturn Space Station", "_saturn_orbit", Config.SATURN_SPACE_STATION_ID, WorldProviderSaturnOrbit.class, false);
+		ExtraPlanetsDimensions.URANUS_ORBIT = DimensionType.register("Uranus Space Station", "_uranus_orbit", Config.URANUS_SPACE_STATION_ID, WorldProviderUranusOrbit.class, false);
+		ExtraPlanetsDimensions.KEPLER22B_ORBIT = DimensionType.register("Kepler22b Space Station", "orbit", Config.KEPLER22B_SPACE_STATION_ID, WorldProviderKepler22bOrbit.class, false);
+		ExtraPlanetsDimensions.MARS_ORBIT = DimensionType.register("Mars Space Station", "_mars_orbit", Config.MARS_SPACE_STATION_ID, WorldProviderMarsOrbit.class, false);
+		ExtraPlanetsDimensions.VENUS_ORBIT = DimensionType.register("Venus Space Station", "_venus_orbit", Config.VENUS_SPACE_STATION_ID, WorldProviderVenusOrbit.class, false);
+		
+		ExtraPlanetsDimensions.CERES_ORBIT = DimensionType.register("Ceres Space Station", "_ceres_orbit", Config.CERES_SPACE_STATION_STATIC_ID, WorldProviderCeresOrbit.class, true);
+		ExtraPlanetsDimensions.ERIS_ORBIT = DimensionType.register("Eris Space Station", "_eris_orbit", Config.ERIS_SPACE_STATION_STATIC_ID, WorldProviderErisOrbit.class, true);
+		ExtraPlanetsDimensions.JUPITER_ORBIT = DimensionType.register("Jupiter Space Station", "_jupiter_orbit", Config.JUPITER_SPACE_STATION_STATIC_ID, WorldProviderJupiterOrbit.class, true);
+		ExtraPlanetsDimensions.MERCURY_ORBIT = DimensionType.register("Mercury Space Station", "_mercury_orbit", Config.MERCURY_SPACE_STATION_STATIC_ID, WorldProviderMercuryOrbit.class, true);
+		ExtraPlanetsDimensions.NEPTUNE_ORBIT = DimensionType.register("Neptune Space Station", "_neptune_orbit", Config.NEPTUNE_SPACE_STATION_STATIC_ID, WorldProviderNeptuneOrbit.class, true);
+		ExtraPlanetsDimensions.PLUTO_ORBIT = DimensionType.register("Pluto Space Station", "_pluto_orbit", Config.PLUTO_SPACE_STATION_STATIC_ID, WorldProviderPlutoOrbit.class, true);
+		ExtraPlanetsDimensions.SATURN_ORBIT = DimensionType.register("Saturn Space Station", "_saturn_orbit", Config.SATURN_SPACE_STATION_STATIC_ID, WorldProviderSaturnOrbit.class, true);
+		ExtraPlanetsDimensions.URANUS_ORBIT = DimensionType.register("Uranus Space Station", "_uranus_orbit", Config.URANUS_SPACE_STATION_STATIC_ID, WorldProviderUranusOrbit.class, true);
+		ExtraPlanetsDimensions.KEPLER22B_ORBIT = DimensionType.register("Kepler22b Space Station", "orbit", Config.KEPLER22B_SPACE_STATION_STATIC_ID, WorldProviderKepler22bOrbit.class, true);
+		ExtraPlanetsDimensions.MARS_ORBIT = DimensionType.register("Mars Space Station", "_mars_orbit", Config.MARS_SPACE_STATION_STATIC_ID, WorldProviderMarsOrbit.class, true);
+		ExtraPlanetsDimensions.VENUS_ORBIT = DimensionType.register("Venus Space Station", "_venus_orbit", Config.VENUS_SPACE_STATION_STATIC_ID, WorldProviderVenusOrbit.class, true);
 
 		// Proxy PostInit Method
 		ExtraPlanets.proxy.postInit(event);
