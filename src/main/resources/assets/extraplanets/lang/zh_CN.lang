@@ -1421,10 +1421,10 @@ fluid.liquid_chocolate_fluid=液态巧克力
 fluid.liquid_caramel_fluid=液态焦糖
 
 #Gui/Damage Sources
-gui.warning.high.pressure=高压警告
-gui.warning.high.radiation=高辐射警告
-gui.warning.med.radiation=Medium Radiation ##NEEDS TRANSLATE##
-gui.warning.low.radiation=Very Low Radiation ##NEEDS TRANSLATE##
+gui.warning.high.pressure=High Environment Pressure ##NEEDS TRANSLATE##
+gui.warning.high.radiation=Warning High Radiation Consumed ##NEEDS TRANSLATE##
+gui.warning.med.radiation=Medium Radiation Consumed ##NEEDS TRANSLATE##
+gui.warning.low.radiation=Very Low Radiation Consumed ##NEEDS TRANSLATE##
 death.attack.radiation=%1$s 忘记了防辐射措施
 death.attack.pressure=%1$s 忘记了压强防护措施
 death.attack.hypothermia=%1$s 死于体温过低
