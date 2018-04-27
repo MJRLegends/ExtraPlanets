@@ -100,7 +100,7 @@ public class OverlayPressure extends Overlay {
 					addX = 20;
 					addY = 60;
 				} else {
-					addX = 84;
+					addX = 100;
 					addY = 60;
 				}
 			} else {
@@ -108,7 +108,7 @@ public class OverlayPressure extends Overlay {
 					addX = 20;
 					addY = 60;
 				} else {
-					addX = 84;
+					addX = 104;
 					addY = 60;
 				}
 			}

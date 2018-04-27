@@ -1421,10 +1421,10 @@ fluid.liquid_chocolate_fluid=Liquid Chocolate ##NEEDS TRANSLATE##
 fluid.liquid_caramel_fluid=Liquid Caramel ##NEEDS TRANSLATE##
 
 #Gui/Damage Sources
-gui.warning.high.pressure=Warning High Pressure ##NEEDS TRANSLATE##
-gui.warning.high.radiation=Warning High Radiation ##NEEDS TRANSLATE##
-gui.warning.med.radiation=Medium Radiation ##NEEDS TRANSLATE##
-gui.warning.low.radiation=Very Low Radiation ##NEEDS TRANSLATE##
+gui.warning.high.pressure=High Environment Pressure ##NEEDS TRANSLATE##
+gui.warning.high.radiation=Warning High Radiation Consumed ##NEEDS TRANSLATE##
+gui.warning.med.radiation=Medium Radiation Consumed ##NEEDS TRANSLATE##
+gui.warning.low.radiation=Very Low Radiation Consumed ##NEEDS TRANSLATE##
 death.attack.radiation=%1$s forgot radiation protection ##NEEDS TRANSLATE##
 death.attack.pressure=%1$s forgot pressure protection ##NEEDS TRANSLATE##
 death.attack.hypothermia=%1$s died from hypothermia ##NEEDS TRANSLATE##
