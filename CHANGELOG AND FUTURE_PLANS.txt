@@ -5,6 +5,15 @@
 
 
 ===========================================Released Updates===========================================
+v1.0.6
+*Fixed issue #288
+*Fixed some dimension type issues, including issue #291
+*Fixed some dimension type issues part 2
+*Added Medium/Low Radiation Messages
+*Few tweaks location of Radiation/Pressure bars
+*More tweaks to Radiation/Pressure HUD messages
+*Fixed Radiation showing planet/moon not player amount
+
 v1.0.5
 *Added Radiation & Pressure to Space Stations
 *Added Config for Amount of Radiation on Space Stations
