@@ -89,13 +89,13 @@ public class KeyHandlerClient extends KeyHandler {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.theWorld.provider.getDimensionId(), new Object[] { 1 }));
 				}
 			}
-			if (kb.getKeyCode() == KeyHandlerClient.openModuleManagerGUI.getKeyCode()) {
+			if (kb.getKeyCode() == KeyHandlerClient.openModuleManagerGUI.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
 				if (playerBase.inventory.armorItemInSlot(0) != null && playerBase.inventory.armorItemInSlot(0).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(1) != null
 						&& playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(2) != null && playerBase.inventory.armorItemInSlot(2).getItem() instanceof IModularArmor
 						|| playerBase.inventory.armorItemInSlot(3) != null && playerBase.inventory.armorItemInSlot(3).getItem() instanceof IModularArmor)
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_MODULE_MANANGER_GUI, mc.theWorld.provider.getDimensionId(), new Object[] { playerBase.getGameProfile().getName() }));
 			}
-			if (kb.getKeyCode() == KeyHandlerClient.openPreLaunchChecklistGUI.getKeyCode()) {
+			if (kb.getKeyCode() == KeyHandlerClient.openPreLaunchChecklistGUI.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
 				if (playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor) {
 					if (ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(1), "pre_launch_checklist") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "pre_launch_checklist"))
 						if (ModuleHelper.hasPower(playerBase.inventory.armorItemInSlot(1), ModuleHelper.getModuleUseCost("pre_launch_checklist"))) {
@@ -104,7 +104,7 @@ public class KeyHandlerClient extends KeyHandler {
 						}
 				}
 			}
-			if (kb.getKeyCode() == KeyHandlerClient.openNASAWorkBenchGUI.getKeyCode()) {
+			if (kb.getKeyCode() == KeyHandlerClient.openNASAWorkBenchGUI.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
 				if (playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor) {
 					if (ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(1), "nasa_workbench") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "nasa_workbench"))
 						if (ModuleHelper.hasPower(playerBase.inventory.armorItemInSlot(1), ModuleHelper.getModuleUseCost("nasa_workbench"))) {
