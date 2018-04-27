@@ -222,7 +222,7 @@ public class MainHandlerClient {
 					pressureLevel = 100;
 			}
 			if (pressureLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false)
-				showPressureHUD(Config.PRESSURE, 100);
+				showPressureHUD(Config.PRESSURE, pressureLevel);
 			int radiationLevel = (int) Math.floor(stats.getRadiationLevel());
 			if (radiationLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false)
 				showRadiationHUD(Config.RADIATION, (int) radiationLevel);
