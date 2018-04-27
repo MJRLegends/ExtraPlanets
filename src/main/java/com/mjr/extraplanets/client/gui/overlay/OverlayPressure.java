@@ -29,6 +29,8 @@ public class OverlayPressure extends Overlay {
 	 * Render the GUI that displays oxygen level in tanks
 	 */
 	public static void renderPressureIndicator(int pressure, boolean right, boolean top) {
+		right = false;
+		top = true;
 		boolean invalid = Math.abs(pressure) >= 60;
 		final ScaledResolution scaledresolution = ClientUtil.getScaledRes(OverlayPressure.minecraft, OverlayPressure.minecraft.displayWidth, OverlayPressure.minecraft.displayHeight);
 		final int i = scaledresolution.getScaledWidth();
@@ -88,18 +90,18 @@ public class OverlayPressure extends Overlay {
 			if (top) {
 				if (right) {
 					addX = 20;
-					addY = 70;
+					addY = 60;
 				} else {
-					addX = 135;
-					addY = 30;
+					addX = 84;
+					addY = 60;
 				}
 			} else {
 				if (right) {
-					addX = -40;
-					addY = 80;
+					addX = 20;
+					addY = 60;
 				} else {
-					addX = 140;
-					addY = 30;
+					addX = 84;
+					addY = 60;
 				}
 			}
 			OverlayPressure.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlayPressure.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - pressureLevelScaled - OverlayPressure.minecraft.fontRendererObj.FONT_HEIGHT

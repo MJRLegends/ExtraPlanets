@@ -1423,6 +1423,8 @@ fluid.liquid_caramel_fluid=Flüssiges Karamel
 #Gui/Damage Sources
 gui.warning.high.pressure=Warnung hoher Druck
 gui.warning.high.radiation=Warnung starke Strahlung
+gui.warning.med.radiation=Medium Radiation ##NEEDS TRANSLATE##
+gui.warning.low.radiation=Very Low Radiation ##NEEDS TRANSLATE##
 death.attack.radiation=%1$s hatte Strahlungsabschirmung vergessen.
 death.attack.pressure=%1$s hatte Druckschutz vergessen.
 death.attack.hypothermia=%1$s starb an Unterkühlung.
