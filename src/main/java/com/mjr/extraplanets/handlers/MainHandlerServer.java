@@ -415,7 +415,7 @@ public class MainHandlerServer {
 		final boolean isInGCDimension = player.worldObj.provider instanceof IGalacticraftWorldProvider;
 		IStatsCapability stats = player.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 
-		if (isInGCDimension && Config.RADIATION) {
+		if ((isInGCDimension || player.worldObj.provider instanceof WorldProviderSpaceStation) && Config.RADIATION) {
 			if (tick % 30 == 0) {
 				this.sendSolarRadiationPacket(player, stats);
 			}

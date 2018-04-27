@@ -202,42 +202,30 @@ public class MainHandlerClient {
 				stats = playerBaseClient.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
 			}
 			int pressureLevel = 0;
-			int radiationLevel = 0;
 			if ((player.worldObj.provider instanceof WorldProviderRealisticSpace)) {
 				pressureLevel = ((WorldProviderRealisticSpace) player.worldObj.provider).getPressureLevel();
-				radiationLevel = ((WorldProviderRealisticSpace) player.worldObj.provider).getSolarRadiationLevel();
 			}
 			if (player.worldObj.provider instanceof WorldProviderMoon) {
 				if (Config.GC_PRESSURE)
 					pressureLevel = 80;
-				if (Config.GC_RADIATION)
-					radiationLevel = Config.MOON_RADIATION_AMOUNT;
 			} else if (player.worldObj.provider instanceof WorldProviderMars) {
 				if (Config.GC_PRESSURE)
 					pressureLevel = 90;
-				if (Config.GC_RADIATION)
-					radiationLevel = Config.MARS_RADIATION_AMOUNT;
 			} else if (player.worldObj.provider instanceof WorldProviderVenus) {
 				if (Config.GC_PRESSURE)
 					pressureLevel = 100;
-				if (Config.GC_RADIATION)
-					radiationLevel = Config.VENUS_RADIATION_AMOUNT;
 			} else if (player.worldObj.provider instanceof WorldProviderAsteroids) {
 				if (Config.GC_PRESSURE)
 					pressureLevel = 100;
-				if (Config.GC_RADIATION)
-					radiationLevel = Config.ASTEROIDS_RADIATION_AMOUNT;
 			} else if (player.worldObj.provider instanceof WorldProviderSpaceStation) {
 				if (Config.GC_PRESSURE || Config.PRESSURE)
 					pressureLevel = 100;
-				if (Config.GC_RADIATION || Config.RADIATION)
-					radiationLevel = Config.SPACE_STATION_RADIATION_AMOUNT;
 			}
 			if (pressureLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false)
-				showPressureHUD(Config.PRESSURE, pressureLevel);
-			radiationLevel = (int) Math.floor(radiationLevel);
+				showPressureHUD(Config.PRESSURE, 100);
+			int radiationLevel = (int) Math.floor(stats.getRadiationLevel());
 			if (radiationLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false)
-				showRadiationHUD(Config.RADIATION, radiationLevel);
+				showRadiationHUD(Config.RADIATION, (int) radiationLevel);
 		}
 
 		if (minecraft.currentScreen == null && player.ridingEntity instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
