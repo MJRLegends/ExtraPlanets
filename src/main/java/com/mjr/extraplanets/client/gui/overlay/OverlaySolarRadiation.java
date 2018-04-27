@@ -29,7 +29,8 @@ public class OverlaySolarRadiation extends Overlay {
 	 * Render the GUI that displays oxygen level in tanks
 	 */
 	public static void renderSolarRadiationIndicator(int radiationLevel, boolean right, boolean top) {
-		boolean invalid = Math.abs(radiationLevel) >= 80;
+		right = false;
+		top = true;
 		final ScaledResolution scaledresolution = ClientUtil.getScaledRes(OverlaySolarRadiation.minecraft, OverlaySolarRadiation.minecraft.displayWidth, OverlaySolarRadiation.minecraft.displayHeight);
 		final int i = scaledresolution.getScaledWidth();
 		final int j = scaledresolution.getScaledHeight();
@@ -81,30 +82,36 @@ public class OverlaySolarRadiation extends Overlay {
 		worldRenderer.pos(minLeftX + 1, bottomY - radiationLevelScaledMax, zLevel).tex(76 * texMod, (48 + 45 - radiationLevelScaled) * texMod).endVertex();
 		tessellator.draw();
 
-		if (invalid) {
-			String value = TranslateUtilities.translate("gui.warning.high.radiation");
-			int addX = 0;
-			int addY = 0;
-			if (top) {
-				if (right) {
-					addX = 35;
-					addY = 55;
-				} else {
-					addX = 151;
-					addY = 10;
-				}
+		String value = "";
+
+		if (Math.abs(radiationLevel) >= 80)
+			value = TranslateUtilities.translate("gui.warning.high.radiation");
+		else if (Math.abs(radiationLevel) >= 50)
+			value = TranslateUtilities.translate("gui.info.med.radiation");
+		else
+			value = TranslateUtilities.translate("gui.info.low.radiation");
+		int addX = 0;
+		int addY = 0;
+		if (top) {
+			if (right) {
+				addX = 35;
+				addY = 30;
 			} else {
-				if (right) {
-					addX = -25;
-					addY = 60;
-				} else {
-					addX = 155;
-					addY = 15;
-				}
+				addX = 100;
+				addY = 30;
 			}
-			OverlaySolarRadiation.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlaySolarRadiation.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - radiationLevelScaled
-					- OverlaySolarRadiation.minecraft.fontRendererObj.FONT_HEIGHT / 2 + addY, ColorUtil.to32BitColor(255, 255, 10, 10));
+		} else {
+			if (right) {
+				addX = 35;
+				addY = 30;
+			} else {
+				addX = 100;
+				addY = 30;
+			}
 		}
+		OverlaySolarRadiation.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlaySolarRadiation.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - radiationLevelScaled
+				- OverlaySolarRadiation.minecraft.fontRendererObj.FONT_HEIGHT / 2 + addY, ColorUtil.to32BitColor(255, 255, 10, 10));
+
 		GlStateManager.disableBlend();
 	}
 }

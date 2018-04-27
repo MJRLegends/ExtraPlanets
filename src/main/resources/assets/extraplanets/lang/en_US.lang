@@ -1423,6 +1423,8 @@ fluid.liquid_caramel_fluid=Liquid Caramel
 #Gui/Damage Sources
 gui.warning.high.pressure=Warning High Pressure
 gui.warning.high.radiation=Warning High Radiation
+gui.warning.med.radiation=Medium Radiation
+gui.warning.low.radiation=Very Low Radiation
 death.attack.radiation=%1$s forgot radiation protection
 death.attack.pressure=%1$s forgot pressure protection
 death.attack.hypothermia=%1$s died from hypothermia
