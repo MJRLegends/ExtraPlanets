@@ -29,8 +29,6 @@ public class OverlaySolarRadiation extends Overlay {
 	 * Render the GUI that displays oxygen level in tanks
 	 */
 	public static void renderSolarRadiationIndicator(int radiationLevel, boolean right, boolean top) {
-		right = false;
-		top = true;
 		final ScaledResolution scaledresolution = ClientUtil.getScaledRes(OverlaySolarRadiation.minecraft, OverlaySolarRadiation.minecraft.displayWidth, OverlaySolarRadiation.minecraft.displayHeight);
 		final int i = scaledresolution.getScaledWidth();
 		final int j = scaledresolution.getScaledHeight();
