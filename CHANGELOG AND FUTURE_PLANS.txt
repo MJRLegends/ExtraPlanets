@@ -5,6 +5,10 @@
 
 
 ===========================================Released Updates===========================================
+v1.0.7
+*Fixed crash from Custom key binds
+*Added missing lang entries
+
 v1.0.6
 *Fixed issue #288
 *Fixed some dimension type issues, including issue #291
