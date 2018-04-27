@@ -1423,6 +1423,8 @@ fluid.liquid_caramel_fluid=Жидкая карамель
 #Gui/Damage Sources
 gui.warning.high.pressure=Предупреждение о высоком давлении
 gui.warning.high.radiation=Предупреждение о высокой радиации
+gui.warning.med.radiation=Medium Radiation ##NEEDS TRANSLATE##
+gui.warning.low.radiation=Very Low Radiation ##NEEDS TRANSLATE##
 death.attack.radiation=%1$s забыл радиационную защиту
 death.attack.pressure=%1$s забыл защиту от давления
 death.attack.hypothermia=%1$s умер от гипотермии
