@@ -106,9 +106,9 @@ public class OverlayPressure extends Overlay {
 			} else {
 				if (right) {
 					addX = 20;
-					addY = 60;
+					addY = -40;
 				} else {
-					addX = 104;
+					addX = 160;
 					addY = 60;
 				}
 			}
