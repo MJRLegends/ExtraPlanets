@@ -104,8 +104,8 @@ public class KeyHandlerClient extends KeyHandler {
 				}
 			}
 			if (kb.getKeyCode() == KeyHandlerClient.openNASAWorkBenchGUI.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
-				if (playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor) {
-					if (!playerBase.inventory.armorItemInSlot(1).isEmpty() && ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(1), "nasa_workbench") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "nasa_workbench"))
+				if (!playerBase.inventory.armorItemInSlot(1).isEmpty() && playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor) {
+					if (ModuleHelper.hasModule(playerBase.inventory.armorItemInSlot(1), "nasa_workbench") && ModuleHelper.isModuleActive(playerBase.inventory.armorItemInSlot(1), "nasa_workbench"))
 						if (ModuleHelper.hasPower(playerBase.inventory.armorItemInSlot(1), ModuleHelper.getModuleUseCost("nasa_workbench"))) {
 							ModuleHelper.takeArmourPower(playerBase.inventory.armorItemInSlot(1), ModuleHelper.getModuleUseCost("nasa_workbench"));
 							playerBase.openGui(GalacticraftCore.instance, GuiIdsCore.NASA_WORKBENCH_NEW_SCHEMATIC, playerBase.world, (int) playerBase.posX, (int) playerBase.posY, (int) playerBase.posZ);
