@@ -5,6 +5,12 @@
 
 
 ===========================================Released Updates===========================================
+v0.7.3
+*Fixed issue #292
+*Fixed issue #295
+*Fixed Yellow Diamond Pickaxe texture being the wrong texture
+*Tweaks to Radiation/Pressure HUD messages
+
 v0.7.2
 *Fixed crash from Custom key binds
 *Added missing lang entries
