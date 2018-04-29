@@ -168,7 +168,8 @@ public class MainHandlerClient {
 				player.motionY = 0;
 			}
 
-			boolean isPressed = KeyHandlerClient.spaceKey.isPressed();
+			boolean isPressed = micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.spaceKey.isKeyDown();
+
 			if (!isPressed) {
 				ClientProxyCore.lastSpacebarDown = false;
 			}
@@ -318,28 +319,28 @@ public class MainHandlerClient {
 
 		if (helmet != null && helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
-				if (hemletModules.isActive()){
+				if (hemletModules.isActive()) {
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(hemletModules)))
 						hemletModules.tickClient(player);
 				}
 			}
 		if (chest != null && chest.getItem() instanceof IModularArmor)
 			for (Module chestModules : ModuleHelper.getModules(chest)) {
-				if (chestModules.isActive()){
+				if (chestModules.isActive()) {
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(chestModules)))
 						chestModules.tickClient(player);
 				}
 			}
 		if (leggins != null && leggins.getItem() instanceof IModularArmor)
 			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
-				if (legginsModules.isActive()){
+				if (legginsModules.isActive()) {
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(legginsModules)))
 						legginsModules.tickClient(player);
 				}
 			}
 		if (boots != null && boots.getItem() instanceof IModularArmor)
 			for (Module bootsModules : ModuleHelper.getModules(boots)) {
-				if (bootsModules.isActive()){
+				if (bootsModules.isActive()) {
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(bootsModules)))
 						bootsModules.tickClient(player);
 				}
