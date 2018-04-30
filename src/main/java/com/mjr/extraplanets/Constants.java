@@ -107,6 +107,7 @@ public class Constants {
 	public static final String CONFIG_CATEGORY_MAIN_DIMENSIONS = "main dimensions";
 	public static final String CONFIG_CATEGORY_OTHER_DIMENSIONS = "other dimensions";
 	public static final String CONFIG_CATEGORY_DIMENSION_IDS = "dimensionID";
+	public static final String CONFIG_CATEGORY_DIMENSION_IDS_OLD = "legacy dimensionID";
 	public static final String CONFIG_CATEGORY_DIMENSION_SETTINGS = "dimension settings";
 	public static final String CONFIG_CATEGORY_BIOME_IDS = "biomeID";
 	public static final String CONFIG_CATEGORY_ITEMS = "items";
