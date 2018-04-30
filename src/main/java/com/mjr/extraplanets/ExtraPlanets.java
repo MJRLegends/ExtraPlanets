@@ -1,5 +1,6 @@
 package com.mjr.extraplanets;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +22,7 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -29,6 +31,7 @@ import net.minecraftforge.fml.common.event.FMLFingerprintViolationEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerAboutToStartEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -353,7 +356,7 @@ public class ExtraPlanets {
 			AsteroidsModule.planetAsteroids.addChecklistKeys("space_suit");
 		}
 
-		//Get DimensionTypes from GC Auto Registering
+		// Get DimensionTypes from GC Auto Registering
 		ExtraPlanetsDimensions.CERES = WorldUtil.getDimensionTypeById(Config.CERES_ID);
 		ExtraPlanetsDimensions.ERIS = WorldUtil.getDimensionTypeById(Config.ERIS_ID);
 		ExtraPlanetsDimensions.JUPITER = WorldUtil.getDimensionTypeById(Config.JUPITER_ID);
@@ -377,7 +380,7 @@ public class ExtraPlanets {
 		ExtraPlanetsDimensions.TITANIA = WorldUtil.getDimensionTypeById(Config.TITANIA_ID);
 		ExtraPlanetsDimensions.TRITION = WorldUtil.getDimensionTypeById(Config.TRITON_ID);
 
-		//Register DimensionTypes for Space Stations
+		// Register DimensionTypes for Space Stations
 		ExtraPlanetsDimensions.CERES_ORBIT = DimensionType.register("Ceres Space Station", "_ceres_orbit", Config.CERES_SPACE_STATION_ID, WorldProviderCeresOrbit.class, false);
 		ExtraPlanetsDimensions.ERIS_ORBIT = DimensionType.register("Eris Space Station", "_eris_orbit", Config.ERIS_SPACE_STATION_ID, WorldProviderErisOrbit.class, false);
 		ExtraPlanetsDimensions.JUPITER_ORBIT = DimensionType.register("Jupiter Space Station", "_jupiter_orbit", Config.JUPITER_SPACE_STATION_ID, WorldProviderJupiterOrbit.class, false);
@@ -389,7 +392,7 @@ public class ExtraPlanets {
 		ExtraPlanetsDimensions.KEPLER22B_ORBIT = DimensionType.register("Kepler22b Space Station", "orbit", Config.KEPLER22B_SPACE_STATION_ID, WorldProviderKepler22bOrbit.class, false);
 		ExtraPlanetsDimensions.MARS_ORBIT = DimensionType.register("Mars Space Station", "_mars_orbit", Config.MARS_SPACE_STATION_ID, WorldProviderMarsOrbit.class, false);
 		ExtraPlanetsDimensions.VENUS_ORBIT = DimensionType.register("Venus Space Station", "_venus_orbit", Config.VENUS_SPACE_STATION_ID, WorldProviderVenusOrbit.class, false);
-		
+
 		ExtraPlanetsDimensions.CERES_ORBIT_KEEPLOADED = DimensionType.register("Ceres Space Station", "_ceres_orbit", Config.CERES_SPACE_STATION_STATIC_ID, WorldProviderCeresOrbit.class, true);
 		ExtraPlanetsDimensions.ERIS_ORBIT_KEEPLOADED = DimensionType.register("Eris Space Station", "_eris_orbit", Config.ERIS_SPACE_STATION_STATIC_ID, WorldProviderErisOrbit.class, true);
 		ExtraPlanetsDimensions.JUPITER_ORBIT_KEEPLOADED = DimensionType.register("Jupiter Space Station", "_jupiter_orbit", Config.JUPITER_SPACE_STATION_STATIC_ID, WorldProviderJupiterOrbit.class, true);
@@ -635,5 +638,49 @@ public class ExtraPlanets {
 	@EventHandler
 	public void onFingerprintViolation(FMLFingerprintViolationEvent event) {
 		MessageUtilities.fatalErrorMessageToLog(Constants.modID, "Invalid fingerprint detected! The file " + event.getSource().getName() + " may have been tampered with. This version will NOT be supported!");
+	}
+
+	@EventHandler
+	public void onStartAboutToStartEvent(FMLServerAboutToStartEvent event) {
+		File folder = new File(FMLCommonHandler.instance().getSavesDirectory() + "/" + event.getServer().getFolderName());
+		String[] idsOld = new String[12];
+		idsOld[0] = "" + Config.IO_ID_LEGACY;
+		idsOld[1] = "" + Config.EUROPA_ID_LEGACY;
+		idsOld[2] = "" + Config.PHOBOS_ID_LEGACY;
+		idsOld[3] = "" + Config.DEIMOS_ID_LEGACY;
+		idsOld[4] = "" + Config.TRITON_ID_LEGACY;
+		idsOld[5] = "" + Config.CALLISTO_ID_LEGACY;
+		idsOld[6] = "" + Config.GANYMEDE_ID_LEGACY;
+		idsOld[7] = "" + Config.RHEA_ID_LEGACY;
+		idsOld[8] = "" + Config.TITAN_ID_LEGACY;
+		idsOld[9] = "" + Config.OBERON_ID_LEGACY;
+		idsOld[10] = "" + Config.TITANIA_ID_LEGACY;
+		idsOld[11] = "" + Config.IAPETUS_ID_LEGACY;
+		String[] idsNew = new String[12];
+		idsNew[0] = "" + Config.IO_ID;
+		idsNew[1] = "" + Config.EUROPA_ID;
+		idsNew[2] = "" + Config.PHOBOS_ID;
+		idsNew[3] = "" + Config.DEIMOS_ID;
+		idsNew[4] = "" + Config.TRITON_ID;
+		idsNew[5] = "" + Config.CALLISTO_ID;
+		idsNew[6] = "" + Config.GANYMEDE_ID;
+		idsNew[7] = "" + Config.RHEA_ID;
+		idsOld[8] = "" + Config.TITAN_ID;
+		idsOld[9] = "" + Config.OBERON_ID;
+		idsOld[10] = "" + Config.TITANIA;
+		idsOld[11] = "" + Config.IAPETUS;
+		if (folder.exists()) {
+			for (int i = 0; i < idsOld.length; i++) {
+				File tempFolder = new File(folder.getPath() + "/" + "DIM" + idsOld[i]);
+				File newFolder = new File(folder.getPath() + "/" + "DIM" + idsNew[i]);
+				if (tempFolder.exists()) {
+					if (newFolder.exists() == false) {
+						MessageUtilities.infoMessageToLog(Constants.modID, "Mirgrated Dimension Folder " + idsOld[i] + " to new name of " + idsNew[i]);
+						tempFolder.renameTo(newFolder);
+					} else
+						MessageUtilities.infoMessageToLog(Constants.modID, "Unable to Mrigrate Folder " + idsOld[i] + " to new name of " + idsNew[i] + " Due to this folder already exists");
+				}
+			}
+		}
 	}
 }
