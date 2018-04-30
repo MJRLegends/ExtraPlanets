@@ -151,6 +151,19 @@ public class Config {
 	public static int PLUTO_ID;
 	public static int ERIS_ID;
 
+	public static int IO_ID_LEGACY;
+	public static int EUROPA_ID_LEGACY;
+	public static int PHOBOS_ID_LEGACY;
+	public static int DEIMOS_ID_LEGACY;
+	public static int TRITON_ID_LEGACY;
+	public static int CALLISTO_ID_LEGACY;
+	public static int GANYMEDE_ID_LEGACY;
+	public static int RHEA_ID_LEGACY;
+	public static int TITAN_ID_LEGACY;
+	public static int OBERON_ID_LEGACY;
+	public static int TITANIA_ID_LEGACY;
+	public static int IAPETUS_ID_LEGACY;
+
 	public static int TRITON_ID;
 	public static int EUROPA_ID;
 	public static int IO_ID;
@@ -380,6 +393,7 @@ public class Config {
 		config.load();
 
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Change if a dimension ID is causing conflicts!");
+		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Used for legacy save transftering (DONT TOUCH!)");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_BIOME_IDS, "Change if a biome ID is causing conflicts!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Setting this option to false will remove the planet with all the related items/block!");
 		config.addCustomCategoryComment(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable/Disable options for dimension settings");
@@ -578,21 +592,65 @@ public class Config {
 		NEPTUNE_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Neptune Dimension ID", -18, "[range: -2147483647 ~ 2147483647, default: -18]").getInt();
 		PLUTO_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Pluto Dimension ID", -19, "[range: -2147483647 ~ 2147483647, default: -19]").getInt();
 		ERIS_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Eris Dimension ID", -21, "[range: -2147483647 ~ 2147483647, default: -21]").getInt();
-
-		IO_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Io Dimension ID", -32, "[range: -2147483647 ~ 2147483647, default: -32]").getInt();
-		EUROPA_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Europa Dimension ID", -34, "[range: -2147483647 ~ 2147483647, default: -34]").getInt();
-		PHOBOS_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Phobos Dimension ID", -33, "[range: -2147483647 ~ 2147483647, default: -33]").getInt();
-		DEIMOS_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Deimos Dimension ID", -35, "[range: -2147483647 ~ 2147483647, default: -35]").getInt();
-		TRITON_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Triton Dimension ID", -36, "[range: -2147483647 ~ 2147483647, default: -36]").getInt();
-		CALLISTO_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Callisto Dimension ID", -37, "[range: -2147483647 ~ 2147483647, default: -37]").getInt();
-		GANYMEDE_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ganymede Dimension ID", -38, "[range: -2147483647 ~ 2147483647, default: -38]").getInt();
-		RHEA_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Rhea Dimension ID", -39, "[range: -2147483647 ~ 2147483647, default: -39]").getInt();
-		TITAN_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titan Dimension ID", -40, "[range: -2147483647 ~ 2147483647, default: -40]").getInt();
-		OBERON_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Oberon Dimension ID", -41, "[range: -2147483647 ~ 2147483647, default: -41]").getInt();
-		TITANIA_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titania Dimension ID", -42, "[range: -2147483647 ~ 2147483647, default: -42]").getInt();
-		IAPETUS_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Iapetus Dimension ID", -43, "[range: -2147483647 ~ 2147483647, default: -43]").getInt();
-
 		KEPLER22B_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Kepler 22b Dimension ID", -22, "[range: -2147483647 ~ 2147483647, default: -22]").getInt();
+
+		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		// Rename/Move old Dimension Ids to Legacy section for using in moving dimension folders to new ids
+		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Io Dimension ID", "Io Dimension ID Legacy (DONT TOUCH)");
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Europa Dimension ID", "Europa Dimension ID Legacy (DONT TOUCH)");
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Phobos Dimension ID", "Phobos Dimension ID Legacy (DONT TOUCH)");
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Deimos Dimension ID", "Deimos Dimension ID Legacy (DONT TOUCH)");
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Triton Dimension ID", "Triton Dimension ID Legacy (DONT TOUCH)");
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Callisto Dimension ID", "Callisto Dimension ID Legacy (DONT TOUCH)");
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ganymede Dimension ID", "Ganymede Dimension ID Legacy (DONT TOUCH)");
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Rhea Dimension ID", "Rhea Dimension ID Legacy (DONT TOUCH)");
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titan Dimension ID", "Titan Dimension ID Legacy (DONT TOUCH)");
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Oberon Dimension ID", "Oberon Dimension ID Legacy (DONT TOUCH)");
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titania Dimension ID", "Titania Dimension ID Legacy (DONT TOUCH)");
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Iapetus Dimension ID", "Iapetus Dimension ID Legacy (DONT TOUCH)");
+
+		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Io Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
+		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Europa Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
+		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Phobos Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
+		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Deimos Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
+		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Triton Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
+		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Callisto Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
+		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ganymede Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
+		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Rhea Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
+		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titan Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
+		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Oberon Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
+		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titania Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
+		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Iapetus Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
+
+		IO_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Io Dimension ID Legacy (DONT TOUCH)", -32, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		EUROPA_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Europa Dimension ID Legacy (DONT TOUCH)", -34, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		PHOBOS_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Phobos Dimension ID Legacy (DONT TOUCH)", -33, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		DEIMOS_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Deimos Dimension ID Legacy (DONT TOUCH)", -35, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		TRITON_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Triton Dimension ID Legacy (DONT TOUCH)", -36, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		CALLISTO_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Callisto Dimension ID Legacy (DONT TOUCH)", -37, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		GANYMEDE_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Ganymede Dimension ID Legacy (DONT TOUCH)", -38, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		RHEA_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Rhea Dimension ID Legacy (DONT TOUCH)", -39, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		TITAN_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Titan Dimension ID Legacy (DONT TOUCH)", -40, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		OBERON_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Oberon Dimension ID Legacy (DONT TOUCH)", -41, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		TITANIA_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Titania Dimension ID Legacy (DONT TOUCH)", -42, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		IAPETUS_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Iapetus Dimension ID Legacy (DONT TOUCH)", -43, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		// End
+		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		IO_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Io Dimension ID (Moon)", -1500, "[range: -2147483647 ~ 2147483647, default: -1500]").getInt();
+		EUROPA_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Europa Dimension ID (Moon)", -1501, "[range: -2147483647 ~ 2147483647, default: -1501]").getInt();
+		PHOBOS_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Phobos Dimension ID (Moon)", -1502, "[range: -2147483647 ~ 2147483647, default: -1502]").getInt();
+		DEIMOS_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Deimos Dimension ID (Moon)", -1503, "[range: -2147483647 ~ 2147483647, default: -1504]").getInt();
+		TRITON_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Triton Dimension ID (Moon)", -1504, "[range: -2147483647 ~ 2147483647, default: -1505]").getInt();
+		CALLISTO_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Callisto Dimension ID (Moon)", -1505, "[range: -2147483647 ~ 2147483647, default: -1505]").getInt();
+		GANYMEDE_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ganymede Dimension ID (Moon)", -1506, "[range: -2147483647 ~ 2147483647, default: -1506]").getInt();
+		RHEA_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Rhea Dimension ID (Moon)", -1507, "[range: -2147483647 ~ 2147483647, default: -1507]").getInt();
+		TITAN_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titan Dimension ID (Moon)", -1508, "[range: -2147483647 ~ 2147483647, default: -1508]").getInt();
+		OBERON_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Oberon Dimension ID (Moon)", -1509, "[range: -2147483647 ~ 2147483647, default: -1509]").getInt();
+		TITANIA_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titania Dimension ID (Moon)", -1510, "[range: -2147483647 ~ 2147483647, default: -1510]").getInt();
+		IAPETUS_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Iapetus Dimension ID (Moon)", -1511, "[range: -2147483647 ~ 2147483647, default: -1511]").getInt();
 
 		MERCURY_SPACE_STATION_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mercury SpaceStation Dimension ID", -61, "[range: -2147483647 ~ 2147483647, default: -61]").getInt();
 		MERCURY_SPACE_STATION_STATIC_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Mercury SpaceStation Static Dimension ID", -60, "[range: -2147483647 ~ 2147483647, default: -60]").getInt();
@@ -749,13 +807,13 @@ public class Config {
 
 		HIDE_RADIATION_PRESSURE_HUD = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Hide Pressure & Radiation HUD Bars when not needed", true,
 				"Will hide the Pressure & Radiation HUD Bars for Planets & Moons & Space Stations that have disabled Pressure and Radiation or a value of 0").getBoolean(true);
-		
+
 		RADIATION_SLEEPING_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Sleeping", 5, "[range: -2147483647 ~ 2147483647, default: 5]").getInt();
 		RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Decontamination Unit", 10, "[range: -2147483647 ~ 2147483647, default: 10]").getInt();
 		RADIATION_ANTI_RAD_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Anti Rad Drinks", 50, "[range: -2147483647 ~ 2147483647, default: 50]").getInt();
 
 		SPACE_STATION_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Space Stations (in %)", 4, "[0 = Disabled. range: 0 ~ 100, default: 4]").getInt();
-		
+
 		MERCURY_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Mercury (in %)", 25, "[0 = Disabled. range: 0 ~ 100, default: 25]").getInt();
 		VENUS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Venus (in %)", 5, "[0 = Disabled. range: 0 ~ 100, default: 5]").getInt();
 		MARS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Mars (in %)", 5, "[0 = Disabled. range: 0 ~ 100, default: 5]").getInt();
