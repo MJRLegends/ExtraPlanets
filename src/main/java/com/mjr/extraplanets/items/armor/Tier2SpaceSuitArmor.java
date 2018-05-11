@@ -31,7 +31,7 @@ import com.mjr.extraplanets.items.armor.modules.Module;
 import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class Tier2SpaceSuitArmor extends ElectricArmorBase implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor, IModularArmor {
+public class Tier2SpaceSuitArmor extends ElectricArmorBase implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor, IModularArmor, ISensorGlassesArmor {
 	public String name;
 
 	public Tier2SpaceSuitArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
