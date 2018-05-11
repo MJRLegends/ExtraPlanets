@@ -273,30 +273,42 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 					installModule = temp;
 			}
 			if (installModule != null) {
-				boolean meetRequirements = false;
+				boolean meetRequirements = true;
 				boolean alreadyHas = false;
 				ItemStack stack = playerBase.inventory.armorInventory[3];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
-						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
+						if (playerBase.capabilities.isCreativeMode)
+							ModuleHelper.addModule(stack, installModule);
+						else
+							meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
 				stack = playerBase.inventory.armorInventory[2];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
-						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
+						if (playerBase.capabilities.isCreativeMode)
+							ModuleHelper.addModule(stack, installModule);
+						else
+							meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
 				stack = playerBase.inventory.armorInventory[1];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
-						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
+						if (playerBase.capabilities.isCreativeMode)
+							ModuleHelper.addModule(stack, installModule);
+						else
+							meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
 				stack = playerBase.inventory.armorInventory[0];
 				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
 					if (!ModuleHelper.hasModule(stack, installModule))
-						meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
+						if (playerBase.capabilities.isCreativeMode)
+							ModuleHelper.addModule(stack, installModule);
+						else
+							meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 					else
 						alreadyHas = true;
 				if (!meetRequirements && !alreadyHas)
