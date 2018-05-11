@@ -25,7 +25,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemTier3ThermalPadding extends Item implements IItemThermal {
-	public static String[] names = { "tier3_thermal_helm", "tier3_thermal_chestplate", "tier3_thermal_leggings", "tier3_thermal_boots", "tier3_thermal_helm0", "tier3_thermal_chestplate0", "tier3_thermal_leggings0", "tier3_thermal_boots0" };
+	public static String[] names = { "tier3_thermal_helm", "tier3_thermal_chestplate", "tier3_thermal_leggings", "tier3_thermal_boots"};
 
 	public ItemTier3ThermalPadding(String assetName) {
 		super();
@@ -49,7 +49,7 @@ public class ItemTier3ThermalPadding extends Item implements IItemThermal {
 
 	@Override
 	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, NonNullList<ItemStack> par3List) {
-		for (int i = 0; i < ItemTier3ThermalPadding.names.length / 2; i++) {
+		for (int i = 0; i < ItemTier3ThermalPadding.names.length; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
 	}
