@@ -24,7 +24,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemTier5ThermalPadding extends Item implements IItemThermal {
-	public static String[] names = { "tier5_thermal_helm", "tier5_thermal_chestplate", "tier5_thermal_leggings", "tier5_thermal_boots", "tier5_thermal_helm0", "tier5_thermal_chestplate0", "tier5_thermal_leggings0", "tier5_thermal_boots0" };
+	public static String[] names = { "tier5_thermal_helm", "tier5_thermal_chestplate", "tier5_thermal_leggings", "tier5_thermal_boots" };
 
 	public ItemTier5ThermalPadding(String assetName) {
 		super();
@@ -48,7 +48,7 @@ public class ItemTier5ThermalPadding extends Item implements IItemThermal {
 
 	@Override
 	public void getSubItems(Item par1, CreativeTabs par2CreativeTabs, List<ItemStack> par3List) {
-		for (int i = 0; i < ItemTier5ThermalPadding.names.length / 2; i++) {
+		for (int i = 0; i < ItemTier5ThermalPadding.names.length; i++) {
 			par3List.add(new ItemStack(par1, 1, i));
 		}
 	}
