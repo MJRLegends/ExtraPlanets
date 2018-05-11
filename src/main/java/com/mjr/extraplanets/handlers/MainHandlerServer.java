@@ -270,6 +270,8 @@ public class MainHandlerServer {
 		EntityPlayerMP player = (EntityPlayerMP) entityLiving;
 		if (player.capabilities.isCreativeMode)
 			return;
+		if (player.isSpectator())
+			return;
 		if ((entityLiving.getRidingEntity() instanceof EntityLanderBase))
 			return;
 		if ((entityLiving.getRidingEntity() instanceof EntityElectricRocketBase))
