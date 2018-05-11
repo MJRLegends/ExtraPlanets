@@ -1463,10 +1463,10 @@ public class ExtraPlanets_Recipes {
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 2), new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 0),
 				'B', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 3), 'S',
 				new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 3), new Object[] { "MGF", "T T", " S ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
-				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'S', new ItemStack(VenusItems.basicItem, 1, 0) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 4), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T',
-				new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'P', new ItemStack(GCItems.parachute) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 3), new Object[] { "MGF", "TPT", " S ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
+				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 4), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T',
+				new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 5), new Object[] { "ABC", " D ", " S ", 'A', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 0), 'B',
 				new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 3), 'S',
 				new ItemStack(VenusItems.basicItem, 1, 0) });
