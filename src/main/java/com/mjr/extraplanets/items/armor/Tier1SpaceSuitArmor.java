@@ -6,6 +6,7 @@ import javax.annotation.Nullable;
 
 import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
+import micdoodle8.mods.galacticraft.api.item.ISensorGlassesArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.model.ModelBiped;
@@ -35,7 +36,7 @@ import com.mjr.extraplanets.items.armor.modules.Module;
 import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class Tier1SpaceSuitArmor extends ElectricArmorBase implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor, IModularArmor {
+public class Tier1SpaceSuitArmor extends ElectricArmorBase implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor, IModularArmor, ISensorGlassesArmor {
 	public String name;
 
 	public Tier1SpaceSuitArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
@@ -104,8 +105,8 @@ public class Tier1SpaceSuitArmor extends ElectricArmorBase implements IPressureS
 			list.add(EnumColor.YELLOW + TranslateUtilities.translateWithFormat("item_desc.spacesuit.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSneak.getKeyCode())));
 		if (Keyboard.isKeyDown(Keyboard.KEY_LCONTROL)) {
 			list.add(EnumColor.ORANGE + TranslateUtilities.translate("gui.module_list.name") + ":");
-			for(Module module : ModuleHelper.getModules(itemStack))
-				list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));			
+			for (Module module : ModuleHelper.getModules(itemStack))
+				list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));
 		} else
 			list.add(EnumColor.AQUA + TranslateUtilities.translateWithFormat("item_desc.spacesuit.module.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSprint.getKeyCode())));
 		super.addInformation(itemStack, worldIn, list, flagIn);
