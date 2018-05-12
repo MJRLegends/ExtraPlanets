@@ -1,7 +1,11 @@
 package com.mjr.extraplanets.planets.Mercury.worldgen;
 
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
+import micdoodle8.mods.galacticraft.core.GCBlocks;
+import micdoodle8.mods.galacticraft.core.blocks.BlockBasic;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
+import micdoodle8.mods.galacticraft.planets.mars.blocks.BlockBasicMars;
+import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -9,9 +13,11 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 
 import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
+import com.mjr.mjrlegendslib.world.features.WorldGenSphere;
 
 public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 
@@ -78,6 +84,20 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 		for (int i = 0; i < 1; i++) {
 			if (this.rand.nextInt(100) == 0) {
 				WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.INFECTED_WATER, ExtraPlanets_Blocks.MERCURY_BLOCKS);
+			}
+		}
+		if (Config.GENERATE_MERCURY_METEORS) {
+			for (int i = 0; i < 1; i++) {
+				if (rand.nextInt(25) == 1) {
+					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(true, Constants.modID, GCBlocks.basicBlock.getDefaultState().withProperty(BlockBasic.BASIC_TYPE, BlockBasic.EnumBlockBasic.DECO_BLOCK_METEOR_IRON), 8, 2),
+							this.currentWorld, rand, new BlockPos(this.posX, 0, this.posZ), 6);
+				}
+			}
+			for (int i = 0; i < 1; i++) {
+				if (rand.nextInt(25) == 1) {
+					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(true, Constants.modID, MarsBlocks.marsBlock.getDefaultState().withProperty(BlockBasicMars.BASIC_TYPE, BlockBasicMars.EnumBlockBasic.DESH_BLOCK), 8, 2),
+							this.currentWorld, rand, new BlockPos(this.posX, 0, this.posZ), 6);
+				}
 			}
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
