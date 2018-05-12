@@ -35,6 +35,7 @@ public class Config {
 	public static boolean GENERATE_URANUS_IGLOOS;
 	public static boolean GENERATE_URANUS_ICE_SPIKES;
 	public static boolean GENERATE_JUITPER_SKY_FEATURE;
+	public static boolean GENERATE_MERCURY_METEORS;
 	public static boolean JUITPER_LIGHTING;
 	public static boolean CUSTOM_FOG;
 
@@ -503,6 +504,7 @@ public class Config {
 		GENERATE_URANUS_IGLOOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Setting this option to false will disable & remove Igloos from generating on Uranus").getBoolean(true);
 		GENERATE_URANUS_ICE_SPIKES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Setting this option to false will disable & remove Ice Spikes from generating on Uranus").getBoolean(true);
 		GENERATE_JUITPER_SKY_FEATURE = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Jupiter", true, "Setting this option to false will disable & remove the Sky Feature on Jupiter").getBoolean(true);
+		GENERATE_MERCURY_METEORS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Meteors on Mercury", true, "Setting this option to false will disable & remove the Meteors on Mercury").getBoolean(true);
 		JUITPER_LIGHTING = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable & remove Lighting & Lighting Effects on Jupiter").getBoolean(true);
 		CUSTOM_FOG = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
 				.getBoolean(true);
