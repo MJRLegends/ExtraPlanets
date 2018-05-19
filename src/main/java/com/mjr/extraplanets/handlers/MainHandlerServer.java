@@ -285,29 +285,29 @@ public class MainHandlerServer {
 				if (Config.RADIATION)
 					checkRadiation(event, player, ((WorldProviderRealisticSpace) player.worldObj.provider).getSolarRadiationLevel());
 			} else if (player.worldObj.provider instanceof WorldProviderMoon) {
-				if (Config.GC_PRESSURE)
+				if (Config.GC_PRESSURE && Config.PRESSURE)
 					checkPressure(event, player, 80);
-				if (Config.GC_RADIATION)
+				if (Config.GC_RADIATION && Config.RADIATION)
 					checkRadiation(event, player, Config.MOON_RADIATION_AMOUNT);
 			} else if (player.worldObj.provider instanceof WorldProviderMars) {
-				if (Config.GC_PRESSURE)
+				if (Config.GC_PRESSURE && Config.PRESSURE)
 					checkPressure(event, player, 90);
-				if (Config.GC_RADIATION)
+				if (Config.GC_RADIATION && Config.RADIATION)
 					checkRadiation(event, player, Config.MARS_RADIATION_AMOUNT);
 			} else if (player.worldObj.provider instanceof WorldProviderVenus) {
-				if (Config.GC_PRESSURE)
+				if (Config.GC_PRESSURE && Config.PRESSURE)
 					checkPressure(event, player, 100);
-				if (Config.GC_RADIATION)
+				if (Config.GC_RADIATION && Config.RADIATION)
 					checkRadiation(event, player, Config.VENUS_RADIATION_AMOUNT);
 			} else if (player.worldObj.provider instanceof WorldProviderAsteroids) {
-				if (Config.GC_PRESSURE)
+				if (Config.GC_PRESSURE && Config.PRESSURE)
 					checkPressure(event, player, 100);
-				if (Config.GC_RADIATION)
+				if (Config.GC_RADIATION && Config.RADIATION)
 					checkRadiation(event, player, Config.ASTEROIDS_RADIATION_AMOUNT);
 			} else if (player.worldObj.provider instanceof WorldProviderSpaceStation) {
-				if (Config.GC_PRESSURE || Config.PRESSURE)
+				if (Config.GC_PRESSURE && Config.PRESSURE)
 					checkPressure(event, player, 100);
-				if (Config.GC_RADIATION || Config.RADIATION)
+				if (Config.GC_RADIATION && Config.RADIATION)
 					checkRadiation(event, player, Config.SPACE_STATION_RADIATION_AMOUNT);
 			}
 		}

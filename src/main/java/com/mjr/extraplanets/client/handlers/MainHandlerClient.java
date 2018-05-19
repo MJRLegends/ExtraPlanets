@@ -181,16 +181,12 @@ public class MainHandlerClient {
 		}
 	}
 
-	public void showPressureHUD(boolean show, int amount) {
-		if (show) {
-			OverlayPressure.renderPressureIndicator(amount, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
-		}
+	public void showPressureHUD(int amount) {
+		OverlayPressure.renderPressureIndicator(amount, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
 	}
 
-	public void showRadiationHUD(boolean show, int amount) {
-		if (show) {
-			OverlaySolarRadiation.renderSolarRadiationIndicator(amount, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
-		}
+	public void showRadiationHUD(int amount) {
+		OverlaySolarRadiation.renderSolarRadiationIndicator(amount, !ConfigManagerCore.oxygenIndicatorLeft, !ConfigManagerCore.oxygenIndicatorBottom);
 	}
 
 	@SubscribeEvent
@@ -202,34 +198,62 @@ public class MainHandlerClient {
 				&& !playerBaseClient.isSpectator() && !minecraft.gameSettings.showDebugInfo) {
 			IStatsClientCapability stats = null;
 
+			boolean showPressure = false;
+			boolean showRadiation = false;
+
 			if (player != null) {
 				stats = playerBaseClient.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
 			}
 			int pressureLevel = 0;
 			if ((player.worldObj.provider instanceof WorldProviderRealisticSpace)) {
-				pressureLevel = ((WorldProviderRealisticSpace) player.worldObj.provider).getPressureLevel();
+				if (Config.PRESSURE) {
+					pressureLevel = ((WorldProviderRealisticSpace) player.worldObj.provider).getPressureLevel();
+					showPressure = true;
+				}
+				if (Config.RADIATION)
+					showRadiation = true;
 			}
 			if (player.worldObj.provider instanceof WorldProviderMoon) {
-				if (Config.GC_PRESSURE)
+				if (Config.GC_PRESSURE && Config.PRESSURE) {
 					pressureLevel = 80;
+					showPressure = true;
+				}
+				if (Config.GC_RADIATION && Config.RADIATION)
+					showRadiation = true;
 			} else if (player.worldObj.provider instanceof WorldProviderMars) {
-				if (Config.GC_PRESSURE)
+				if (Config.GC_PRESSURE && Config.PRESSURE) {
 					pressureLevel = 90;
+					showPressure = true;
+				}
+				if (Config.GC_RADIATION && Config.RADIATION)
+					showRadiation = true;
 			} else if (player.worldObj.provider instanceof WorldProviderVenus) {
-				if (Config.GC_PRESSURE)
+				if (Config.GC_PRESSURE && Config.PRESSURE) {
 					pressureLevel = 100;
+					showPressure = true;
+				}
+				if (Config.GC_RADIATION && Config.RADIATION)
+					showRadiation = true;
 			} else if (player.worldObj.provider instanceof WorldProviderAsteroids) {
-				if (Config.GC_PRESSURE)
+				if (Config.GC_PRESSURE && Config.PRESSURE) {
 					pressureLevel = 100;
+					showPressure = true;
+				}
+				if (Config.GC_RADIATION && Config.RADIATION)
+					showRadiation = true;
 			} else if (player.worldObj.provider instanceof WorldProviderSpaceStation) {
-				if (Config.GC_PRESSURE || Config.PRESSURE)
+				if (Config.GC_PRESSURE && Config.PRESSURE) {
 					pressureLevel = 100;
+					showPressure = true;
+				}
+				if (Config.GC_RADIATION && Config.RADIATION)
+					showRadiation = true;
 			}
-			if (pressureLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false)
-				showPressureHUD(Config.PRESSURE, pressureLevel);
+			if ((pressureLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false) && showPressure)
+				showPressureHUD(pressureLevel);
 			int radiationLevel = (int) Math.floor(stats.getRadiationLevel());
-			if (radiationLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false)
-				showRadiationHUD(Config.RADIATION, (int) radiationLevel);
+			if ((radiationLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false) && showRadiation)
+				showRadiationHUD((int) radiationLevel);
 		}
 
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
