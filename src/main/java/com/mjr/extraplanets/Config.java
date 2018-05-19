@@ -799,7 +799,7 @@ public class Config {
 		GC_RADIATION = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Radiation for Galacticraft Planets & Moons", true,
 				"Setting this option to false will disable & remove the Radiation System for Galacticraft Planets & Moons").getBoolean(true);
 		GC_PRESSURE = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Pressure for Galacticraft Planets & Moons", true,
-				"Setting this option to false will disable & remove the Radiation System for Galacticraft Planets & Moons").getBoolean(true);
+				"Setting this option to false will disable & remove the Pressure System for Galacticraft Planets & Moons").getBoolean(true);
 
 		HIDE_RADIATION_PRESSURE_HUD = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Hide Pressure & Radiation HUD Bars when not needed", true,
 				"Will hide the Pressure & Radiation HUD Bars for Planets & Moons & Space Stations that have disabled Pressure and Radiation or a value of 0").getBoolean(true);
