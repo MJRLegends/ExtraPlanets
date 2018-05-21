@@ -44,7 +44,6 @@ import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector2f;
-import org.lwjgl.util.vector.Vector3f;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -65,7 +64,6 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	private int mousePosX = 0;
 	private int mousePosY = 0;
 	private float partialTicks = 0;
-	List<CelestialBody> bodiesToRender = Lists.newArrayList(); // Used to override GC ones since theirs is not accessible
 
 	// Colours
 	protected static final int BLUE = ColorUtil.to32BitColor(255, 0, 150, 255);
@@ -105,22 +103,22 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		GuiCelestialSelection.BORDER_SIZE = this.width / 65;
 		GuiCelestialSelection.BORDER_EDGE_SIZE = GuiCelestialSelection.BORDER_SIZE / 4;
 
-		bodiesToRender.clear();
+		this.bodiesToRender.clear();
 		for (SolarSystem solarSystem : GalaxyRegistry.getRegisteredSolarSystems().values()) {
 			if (solarSystem.getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
-				bodiesToRender.add(solarSystem.getMainStar());
+				this.bodiesToRender.add(solarSystem.getMainStar());
 		}
 		for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
 			if (planet.getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
-				bodiesToRender.add(planet);
+				this.bodiesToRender.add(planet);
 		}
 		for (Moon moon : GalaxyRegistry.getRegisteredMoons().values()) {
 			if (moon.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
-				bodiesToRender.add(moon);
+				this.bodiesToRender.add(moon);
 		}
 		for (Satellite satellite : GalaxyRegistry.getRegisteredSatellites().values()) {
 			if (satellite.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
-				bodiesToRender.add(satellite);
+				this.bodiesToRender.add(satellite);
 		}
 	}
 
@@ -155,14 +153,14 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	}
 
 	/*
-	 * Overriding for the purpose of to draw Planet & Moon Names & to override GC bodiesToRender since theirs is not accessible
+	 * Overriding for the purpose of to draw Planet & Moon Names
 	 */
 	public HashMap<CelestialBody, Matrix4f> drawCelestialBodies(Matrix4f worldMatrix) {
 		GL11.glColor3f(1.0F, 1.0F, 1.0F);
 		FloatBuffer fb = BufferUtils.createFloatBuffer(16 * Float.SIZE);
 		HashMap<CelestialBody, Matrix4f> matrixMap = Maps.newHashMap();
 
-		for (CelestialBody body : bodiesToRender) {
+		for (CelestialBody body : this.bodiesToRender) {
 			boolean hasParent = body instanceof IChildBody;
 
 			float alpha = getAlpha(body);
@@ -172,8 +170,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				Matrix4f worldMatrixLocal = setupMatrix(body, worldMatrix, fb, hasParent ? 0.25F : 1.0F);
 				if (!this.isZoomed() && !(body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
 					this.drawCenteredString(this.fontRendererObj, body.getLocalizedName(), 0, 5, 14737632);
-				}
-				else if (this.isZoomed() && (body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
+				} else if (this.isZoomed() && (body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
 					this.drawCenteredString(this.fontRendererObj, body.getLocalizedName(), 0, 5, 14737632);
 				}
 				CelestialBodyRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.Pre(body, body.getBodyIcon(), 16);
@@ -197,72 +194,6 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		}
 
 		return matrixMap;
-	}
-
-	/*
-	 * Overriding for the purpose of to override GC bodiesToRender since theirs is not accessible, TODO Remove when GC adds protected to bodiesToRender
-	 */
-	public void drawCircles() {
-		GL11.glColor4f(1, 1, 1, 1);
-		GL11.glLineWidth(3);
-		int count = 0;
-
-		final float theta = (float) (2 * Math.PI / 90);
-		final float cos = (float) Math.cos(theta);
-		final float sin = (float) Math.sin(theta);
-
-		for (CelestialBody body : bodiesToRender) {
-			Vector3f systemOffset = new Vector3f(0.0F, 0.0F, 0.0F);
-			if (body instanceof IChildBody) {
-				systemOffset = this.getCelestialBodyPosition(((IChildBody) body).getParentPlanet());
-			} else if (body instanceof Planet) {
-				systemOffset = this.getCelestialBodyPosition(((Planet) body).getParentSolarSystem().getMainStar());
-			}
-
-			float x = this.getScale(body);
-			float y = 0;
-
-			float alpha = getAlpha(body);
-
-			if (alpha > 0.0F) {
-				switch (count % 2) {
-				case 0:
-					GL11.glColor4f(0.0F / 1.4F, 0.6F / 1.4F, 1.0F / 1.4F, alpha / 1.4F);
-					break;
-				case 1:
-					GL11.glColor4f(0.3F / 1.4F, 0.8F / 1.4F, 1.0F / 1.4F, alpha / 1.4F);
-					break;
-				}
-
-				CelestialBodyRenderEvent.CelestialRingRenderEvent.Pre preEvent = new CelestialBodyRenderEvent.CelestialRingRenderEvent.Pre(body, systemOffset);
-				MinecraftForge.EVENT_BUS.post(preEvent);
-
-				if (!preEvent.isCanceled()) {
-					GL11.glTranslatef(systemOffset.x, systemOffset.y, systemOffset.z);
-
-					GL11.glBegin(GL11.GL_LINE_LOOP);
-
-					float temp;
-					for (int i = 0; i < 90; i++) {
-						GL11.glVertex2f(x, y);
-
-						temp = x;
-						x = cos * x - sin * y;
-						y = sin * temp + cos * y;
-					}
-
-					GL11.glEnd();
-
-					GL11.glTranslatef(-systemOffset.x, -systemOffset.y, -systemOffset.z);
-
-					count++;
-				}
-
-				CelestialBodyRenderEvent.CelestialRingRenderEvent.Post postEvent = new CelestialBodyRenderEvent.CelestialRingRenderEvent.Post(body);
-				MinecraftForge.EVENT_BUS.post(postEvent);
-			}
-		}
-		GL11.glLineWidth(1);
 	}
 
 	/*
