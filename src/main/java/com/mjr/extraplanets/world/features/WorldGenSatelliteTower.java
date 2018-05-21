@@ -25,7 +25,7 @@ public class WorldGenSatelliteTower extends WorldGenerator {
 
 	@Override
 	public boolean generate(World world, Random rand, BlockPos position) {
-		if (WorldGenUtilities.checkValidSpawn(world, position, 8, 12) == false)
+		if (WorldGenUtilities.checkValidSpawn(world, position, 10, 10) == false)
 			return false;
 		else {
 			if (Config.DEBUG_MODE)
@@ -55,13 +55,13 @@ public class WorldGenSatelliteTower extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 1, y + 0, z + 3), AsteroidBlocks.blockBasic.getStateFromMeta(6), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 0, z + 3), GCBlocks.grating.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 0, z + 3), GCBlocks.platform.getStateFromMeta(1), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 0, z + 3), GCBlocks.platform.getStateFromMeta(3), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 0, z + 3), GCBlocks.platform.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 0, z + 3), GCBlocks.grating.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 0, z + 3), AsteroidBlocks.blockBasic.getStateFromMeta(6), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 0, z + 4), AsteroidBlocks.blockBasic.getStateFromMeta(6), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 0, z + 4), GCBlocks.grating.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 0, z + 3), GCBlocks.platform.getStateFromMeta(2), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 0, z + 3), GCBlocks.platform.getStateFromMeta(4), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 0, z + 4), GCBlocks.platform.getStateFromMeta(2), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 0, z + 4), GCBlocks.platform.getStateFromMeta(4), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 0, z + 4), GCBlocks.grating.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 0, z + 4), AsteroidBlocks.blockBasic.getStateFromMeta(6), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 0, z + 5), AsteroidBlocks.blockBasic.getStateFromMeta(6), 3);
