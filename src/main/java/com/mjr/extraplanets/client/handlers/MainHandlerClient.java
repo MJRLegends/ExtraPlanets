@@ -408,9 +408,9 @@ public class MainHandlerClient {
 		if (Config.USE_CUSTOM_CELESTAIAL_SELECTION) {
 			if (((event.getGui() instanceof GuiCelestialSelection))) {
 				if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap)) {
-					event.setGui(new CustomCelestialSelection(true, ((GuiCelestialSelection) event.getGui()).possibleBodies, PermissionAPI.hasPermission(MCUtilities.getMinecraft().player, Constants.PERMISSION_CREATE_STATION)));
+					event.setGui(new CustomCelestialSelection(true, ((GuiCelestialSelection) event.getGui()).possibleBodies, ((GuiCelestialSelection) event.getGui()).canCreateStations));
 				} else {
-					event.setGui(new CustomCelestialSelection(false, ((GuiCelestialSelection) event.getGui()).possibleBodies, PermissionAPI.hasPermission(MCUtilities.getMinecraft().player, Constants.PERMISSION_CREATE_STATION)));
+					event.setGui(new CustomCelestialSelection(false, ((GuiCelestialSelection) event.getGui()).possibleBodies, ((GuiCelestialSelection) event.getGui()).canCreateStations));
 				}
 			}
 		}
