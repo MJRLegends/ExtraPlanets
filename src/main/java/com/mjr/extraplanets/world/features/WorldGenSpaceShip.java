@@ -154,6 +154,7 @@ public class WorldGenSpaceShip extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 6, y + 7, z + 6), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 7, z + 6), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 7, z + 6), GCBlocks.basicBlock.getStateFromMeta(11), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 8, z + 2), GCBlocks.basicBlock.getStateFromMeta(11), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 8, z + 2), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 8, z + 2), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 8, z + 2), GCBlocks.basicBlock.getStateFromMeta(10), 3);
@@ -169,6 +170,7 @@ public class WorldGenSpaceShip extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 6, y + 8, z + 6), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 8, z + 6), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 8, z + 6), GCBlocks.basicBlock.getStateFromMeta(11), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 9, z + 2), GCBlocks.basicBlock.getStateFromMeta(11), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 9, z + 2), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 9, z + 2), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 9, z + 2), GCBlocks.basicBlock.getStateFromMeta(10), 3);
@@ -186,6 +188,7 @@ public class WorldGenSpaceShip extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 6, y + 9, z + 6), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 9, z + 6), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 9, z + 6), GCBlocks.basicBlock.getStateFromMeta(11), 3);
+		world.setBlockState(new BlockPos(x + 4, y + 10, z + 2), GCBlocks.basicBlock.getStateFromMeta(11), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 10, z + 2), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 10, z + 2), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 10, z + 2), GCBlocks.basicBlock.getStateFromMeta(10), 3);
