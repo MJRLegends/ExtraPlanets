@@ -11,6 +11,7 @@ import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.world.features.WorldGenSatelliteTower;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
@@ -74,6 +75,9 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 			if (this.rand.nextInt(100) == 0) {
 				WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.RADIO_ACTIVE_WATER, ExtraPlanets_Blocks.CERES_BLOCKS);
 			}
+		}
+		if (Config.GENERATE_CERES_SATELLITE_TOWER && this.rand.nextInt(175) == 1) {
+			WorldGenUtilities.generateStructure(new WorldGenSatelliteTower(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 
