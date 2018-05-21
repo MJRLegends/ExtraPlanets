@@ -133,25 +133,25 @@ public class Tier4SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 		ItemStack leggins = player.inventory.armorInventory.get(1);
 		ItemStack boots = player.inventory.armorInventory.get(0);
 
-		if (helmet.getItem() instanceof IModularArmor)
+		if (helmet.isEmpty() == false && helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
 				if (hemletModules.isActive())
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(hemletModules)))
 						hemletModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
-		if (chest.getItem() instanceof IModularArmor)
+		if (chest.isEmpty() == false && leggins.getItem() instanceof IModularArmor)
 			for (Module chestModules : ModuleHelper.getModules(chest)) {
 				if (chestModules.isActive())
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(chestModules)))
 						chestModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
-		if (leggins.getItem() instanceof IModularArmor)
+		if (leggins.isEmpty() == false && leggins.getItem() instanceof IModularArmor)
 			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
 				if (legginsModules.isActive())
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(legginsModules)))
 						legginsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
-		if (boots.getItem() instanceof IModularArmor)
+		if (boots.isEmpty() == false && boots.getItem() instanceof IModularArmor)
 			for (Module bootsModules : ModuleHelper.getModules(boots)) {
 				if (bootsModules.isActive())
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(bootsModules)))
