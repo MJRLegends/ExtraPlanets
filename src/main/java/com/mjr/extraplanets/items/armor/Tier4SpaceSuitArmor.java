@@ -4,8 +4,6 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import org.lwjgl.input.Keyboard;
-
 import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.api.item.ISensorGlassesArmor;
@@ -23,6 +21,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import org.lwjgl.input.Keyboard;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
@@ -105,8 +105,8 @@ public class Tier4SpaceSuitArmor extends ElectricArmorBase implements IPressureS
 			list.add(EnumColor.YELLOW + TranslateUtilities.translateWithFormat("item_desc.spacesuit.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSneak.getKeyCode())));
 		if (Keyboard.isKeyDown(Keyboard.KEY_LCONTROL)) {
 			list.add(EnumColor.ORANGE + TranslateUtilities.translate("gui.module_list.name") + ":");
-			for(Module module : ModuleHelper.getModules(itemStack))
-				list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));			
+			for (Module module : ModuleHelper.getModules(itemStack))
+				list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));
 		} else
 			list.add(EnumColor.AQUA + TranslateUtilities.translateWithFormat("item_desc.spacesuit.module.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSprint.getKeyCode())));
 		super.addInformation(itemStack, worldIn, list, flagIn);
@@ -142,25 +142,25 @@ public class Tier4SpaceSuitArmor extends ElectricArmorBase implements IPressureS
 		ItemStack leggins = player.inventory.armorInventory.get(1);
 		ItemStack boots = player.inventory.armorInventory.get(0);
 
-		if (helmet.getItem() instanceof IModularArmor)
+		if (helmet.isEmpty() == false && helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
 				if (hemletModules.isActive())
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(hemletModules)))
 						hemletModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
-		if (chest.getItem() instanceof IModularArmor)
+		if (chest.isEmpty() == false && leggins.getItem() instanceof IModularArmor)
 			for (Module chestModules : ModuleHelper.getModules(chest)) {
 				if (chestModules.isActive())
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(chestModules)))
 						chestModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
-		if (leggins.getItem() instanceof IModularArmor)
+		if (leggins.isEmpty() == false && leggins.getItem() instanceof IModularArmor)
 			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
 				if (legginsModules.isActive())
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(legginsModules)))
 						legginsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
-		if (boots.getItem() instanceof IModularArmor)
+		if (boots.isEmpty() == false && boots.getItem() instanceof IModularArmor)
 			for (Module bootsModules : ModuleHelper.getModules(boots)) {
 				if (bootsModules.isActive())
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(bootsModules)))
