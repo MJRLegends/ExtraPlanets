@@ -13,6 +13,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.world.features.WorldGenBasicHideout;
+import com.mjr.extraplanets.world.features.WorldGenSpaceShip;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
@@ -91,6 +92,9 @@ public class BiomeDecoratorJupiter extends BiomeDecoratorSpace {
 
 		if (Config.GENERATE_JUPITER_BASIC_HIDEOUTS && this.rand.nextInt(250) == 1) {
 			WorldGenUtilities.generateStructure(new WorldGenBasicHideout(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
+		}
+		if (this.rand.nextInt(75) == 1) {
+			WorldGenUtilities.generateStructure(new WorldGenSpaceShip(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
 
