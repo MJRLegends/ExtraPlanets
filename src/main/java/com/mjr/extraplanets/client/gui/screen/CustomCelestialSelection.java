@@ -35,6 +35,7 @@ import micdoodle8.mods.galacticraft.planets.mars.dimension.WorldProviderMars;
 import micdoodle8.mods.galacticraft.planets.venus.dimension.WorldProviderVenus;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
+import net.minecraft.client.renderer.texture.TextureManager;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.MinecraftForge;
@@ -167,6 +168,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			if (alpha > 0.0F) {
 				GlStateManager.pushMatrix();
 				Matrix4f worldMatrixLocal = setupMatrix(body, worldMatrix, fb, hasParent ? 0.25F : 1.0F);
+				this.mc.renderEngine.bindTexture(TextureManager.RESOURCE_LOCATION_EMPTY);
 				if (!this.isZoomed() && !(body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
 					this.drawCenteredString(this.fontRendererObj, body.getLocalizedName(), 0, 5, 14737632);
 				} else if (this.isZoomed() && (body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
