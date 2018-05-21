@@ -1,13 +1,15 @@
-TODO = Not yet done
-? = Maybe
-
-===========================================Future Updates=============================================
+========================================Not Released Updates==========================================
 
 ======================================================================================================
 
 
 
 ===========================================Released Updates===========================================
+v2.0.2
+*Updated lang files to match 1.8+ changes
+*Fixed issue #304
+*Fixed issue #299
+
 v2.0.1
 *Added more uses for Kepler22b Planks, towards suggestion #163
 *Updated ru_RU.lang (Thanks to rykllan)
