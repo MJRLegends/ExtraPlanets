@@ -5,6 +5,25 @@
 
 
 ===========================================Released Updates===========================================
+v1.4.2
+*Migrate All Moons Dimension to new IDs of 1500+
+*Fixed issue #299
+*Allowed the Sensor Glasses Module to fully work now we have a GC hook for it
+*Removed Thermal Armour not needed/unused sub items
+*Fixed getting radiation when in spectator mode
+*Added the ability to install modules in creative mode without the requirements
+*Added Meteoric Iron & Desh Meteors to Mercury
+*Fixed typo in a config option
+*Fixed issue #309
+*Temp fixed for Corrosive damage causing space suit to get deleted at max damage
+*Changes to Celestial Selection screen to match GC changes
+*Fixed issue #306
+*Tier 4 - 10 Rocket Launch particle performance improvements
+*Fixed crash issue with having certain parts of the space suit on at a time
+*Fixed issue with rendering Celestial Bodies names on Celestial Selection Screen
+*Set required GC version requirement to Build 177
+*Set required MJRLegendsLib version requirement to v1.0.9
+
 v1.4.1
 *Fixed issue #292
 *Fixed issue #295
