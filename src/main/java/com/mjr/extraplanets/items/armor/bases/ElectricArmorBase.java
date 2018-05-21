@@ -41,6 +41,12 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	}
 
 	@Override
+	public void setDamage(ItemStack stack, int damage) {
+		if (damage != stack.getMaxDamage() - 1)
+			super.setDamage(stack, damage);
+	}
+
+	@Override
 	public boolean isItemTool(ItemStack stack) {
 		return false;
 	}
