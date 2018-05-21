@@ -28,6 +28,7 @@ public class Config {
 	public static boolean GENERATE_KEPLER22B_TOWERS;
 	public static boolean GENERATE_KEPLER22B_BIG_TREES;
 	public static boolean GENERATE_JUPITER_BASIC_HIDEOUTS;
+	public static boolean GENERATE_JUPITER_SPACE_SHIP;
 	public static boolean GENERATE_IO_VOLCANOS;
 	public static boolean GENERATE_SATURN_SLIME_TREES;
 	public static boolean GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES;
@@ -496,6 +497,7 @@ public class Config {
 		GENERATE_KEPLER22B_BIG_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Big Trees on Kepler22b", true, "Setting this option to false will disable & remove Big Trees from generating on Kepler22b").getBoolean(true);
 		GENERATE_JUPITER_BASIC_HIDEOUTS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Basic Hideouts on Jupiter", true, "Setting this option to false will disable & remove Basic Hideouts from generating on Jupiter")
 				.getBoolean(true);
+		GENERATE_JUPITER_SPACE_SHIP = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Space Ship on Jupiter", true, "Setting this option to false will disable & remove Space Ship from generating on Jupiter").getBoolean(true);
 		GENERATE_IO_VOLCANOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanos on Io", true, "Setting this option to false will disable & remove Volcanos from generating on Io").getBoolean(true);
 		GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Frozen Nitrongen Piles on Neptune", true,
 				"Setting this option to false will disable & remove Frozen Nitrongen Piles from generating on Neptune").getBoolean(true);
