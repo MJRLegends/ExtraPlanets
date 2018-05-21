@@ -76,7 +76,7 @@ public class BiomeDecoratorCeres extends BiomeDecoratorSpace {
 				WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.RADIO_ACTIVE_WATER, ExtraPlanets_Blocks.CERES_BLOCKS);
 			}
 		}
-		if (Config.GENERATE_CERES_SATELLITE_TOWER && this.rand.nextInt(175) == 1) {
+		if (Config.GENERATE_CERES_SATELLITE_TOWER && this.rand.nextInt(300) == 1) {
 			WorldGenUtilities.generateStructure(new WorldGenSatelliteTower(), this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ));
 		}
 		MinecraftForge.EVENT_BUS.post(new DecorateBiomeEvent.Post(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ)));
