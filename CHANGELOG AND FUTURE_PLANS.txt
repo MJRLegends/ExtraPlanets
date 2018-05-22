@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v1.4.3
+*Added a Space Ship(Rocket) structure to Jupiter
+*Added a Satellite Tower Structure to Ceres
+*Added config option for Jupiter Space Ship Structure
+*Added config option for Ceres Satellite Tower Structure
+*Fixed issue #310
+
 v1.4.2
 *Migrate All Moons Dimension to new IDs of 1500+
 *Fixed issue #299
