@@ -5,7 +5,6 @@ import java.util.Random;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.planets.mars.world.gen.RoomTreasureMars;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -510,7 +509,7 @@ public class WorldGenSpaceShip extends WorldGenerator {
 
 			if (chest != null) {
 				for (int i = 0; i < chest.getSizeInventory(); i++) {
-					chest.setInventorySlotContents(i, ItemStack.EMPTY);
+					chest.setInventorySlotContents(i, null);
 				}
 
 				chest.setLootTable(RoomTreasureMars.TABLE_TIER_2_DUNGEON, rand.nextLong());
