@@ -4,13 +4,13 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.planets.asteroids.blocks.AsteroidBlocks;
-import micdoodle8.mods.galacticraft.planets.mars.world.gen.RoomTreasureMars;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityChest;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.ChestGenHooks;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
@@ -202,30 +202,30 @@ public class WorldGenSatelliteTower extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 7, y + 15, z + 0), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 15, z + 1), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 15, z + 1), GCBlocks.wallGC.getStateFromMeta(3), 3);
-		world.setBlockState(new BlockPos(x + 2, y + 15, z + 1), Blocks.CHEST.getStateFromMeta(3), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 15, z + 1), Blocks.CHEST.getStateFromMeta(3), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 15, z + 1), Blocks.chest.getStateFromMeta(3), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 15, z + 1), Blocks.chest.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 15, z + 1), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 15, z + 1), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 15, z + 2), GCBlocks.wallGC.getStateFromMeta(3), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 15, z + 2), Blocks.CHEST.getStateFromMeta(5), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 15, z + 2), Blocks.chest.getStateFromMeta(5), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 15, z + 2), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 15, z + 2), GCBlocks.wallGC.getStateFromMeta(3), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 15, z + 2), Blocks.CHEST.getStateFromMeta(4), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 15, z + 2), Blocks.chest.getStateFromMeta(4), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 15, z + 2), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 15, z + 3), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 15, z + 3), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 15, z + 4), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 15, z + 4), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 15, z + 5), GCBlocks.wallGC.getStateFromMeta(3), 3);
-		world.setBlockState(new BlockPos(x + 1, y + 15, z + 5), Blocks.CHEST.getStateFromMeta(5), 3);
+		world.setBlockState(new BlockPos(x + 1, y + 15, z + 5), Blocks.chest.getStateFromMeta(5), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 15, z + 5), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 15, z + 5), GCBlocks.wallGC.getStateFromMeta(3), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 15, z + 5), Blocks.CHEST.getStateFromMeta(4), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 15, z + 5), Blocks.chest.getStateFromMeta(4), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 15, z + 5), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 15, z + 6), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 1, y + 15, z + 6), GCBlocks.wallGC.getStateFromMeta(3), 3);
-		world.setBlockState(new BlockPos(x + 2, y + 15, z + 6), Blocks.CHEST.getStateFromMeta(2), 3);
-		world.setBlockState(new BlockPos(x + 5, y + 15, z + 6), Blocks.CHEST.getStateFromMeta(2), 3);
+		world.setBlockState(new BlockPos(x + 2, y + 15, z + 6), Blocks.chest.getStateFromMeta(2), 3);
+		world.setBlockState(new BlockPos(x + 5, y + 15, z + 6), Blocks.chest.getStateFromMeta(2), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 15, z + 6), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 15, z + 6), GCBlocks.wallGC.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 0, y + 15, z + 7), GCBlocks.wallGC.getStateFromMeta(3), 3);
@@ -287,10 +287,11 @@ public class WorldGenSatelliteTower extends WorldGenerator {
 
 			if (chest != null) {
 				for (int i = 0; i < chest.getSizeInventory(); i++) {
-					chest.setInventorySlotContents(i, ItemStack.EMPTY);
+					chest.setInventorySlotContents(i, null);
 				}
+				ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST); // TODO: Change to Mars Loot
 
-				chest.setLootTable(RoomTreasureMars.TABLE_TIER_2_DUNGEON, rand.nextLong());
+				WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 			}
 		}
 		if (rand.nextInt(10) + 1 < 5) {
@@ -298,10 +299,12 @@ public class WorldGenSatelliteTower extends WorldGenerator {
 
 			if (chest != null) {
 				for (int i = 0; i < chest.getSizeInventory(); i++) {
-					chest.setInventorySlotContents(i, ItemStack.EMPTY);
+					chest.setInventorySlotContents(i, null);
 				}
 
-				chest.setLootTable(RoomTreasureMars.TABLE_TIER_2_DUNGEON, rand.nextLong());
+				ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
+				WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 			}
 		}
 		if (rand.nextInt(10) + 1 < 5) {
@@ -309,10 +312,12 @@ public class WorldGenSatelliteTower extends WorldGenerator {
 
 			if (chest != null) {
 				for (int i = 0; i < chest.getSizeInventory(); i++) {
-					chest.setInventorySlotContents(i, ItemStack.EMPTY);
+					chest.setInventorySlotContents(i, null);
 				}
 
-				chest.setLootTable(RoomTreasureMars.TABLE_TIER_2_DUNGEON, rand.nextLong());
+				ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
+				WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 			}
 		}
 		if (rand.nextInt(10) + 1 < 5) {
@@ -320,10 +325,12 @@ public class WorldGenSatelliteTower extends WorldGenerator {
 
 			if (chest != null) {
 				for (int i = 0; i < chest.getSizeInventory(); i++) {
-					chest.setInventorySlotContents(i, ItemStack.EMPTY);
+					chest.setInventorySlotContents(i, null);
 				}
 
-				chest.setLootTable(RoomTreasureMars.TABLE_TIER_2_DUNGEON, rand.nextLong());
+				ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
+				WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 			}
 		}
 		if (rand.nextInt(10) + 1 < 5) {
@@ -331,10 +338,12 @@ public class WorldGenSatelliteTower extends WorldGenerator {
 
 			if (chest != null) {
 				for (int i = 0; i < chest.getSizeInventory(); i++) {
-					chest.setInventorySlotContents(i, ItemStack.EMPTY);
+					chest.setInventorySlotContents(i, null);
 				}
 
-				chest.setLootTable(RoomTreasureMars.TABLE_TIER_2_DUNGEON, rand.nextLong());
+				ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
+				WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 			}
 		}
 		if (rand.nextInt(10) + 1 < 5) {
@@ -342,10 +351,12 @@ public class WorldGenSatelliteTower extends WorldGenerator {
 
 			if (chest != null) {
 				for (int i = 0; i < chest.getSizeInventory(); i++) {
-					chest.setInventorySlotContents(i, ItemStack.EMPTY);
+					chest.setInventorySlotContents(i, null);
 				}
 
-				chest.setLootTable(RoomTreasureMars.TABLE_TIER_2_DUNGEON, rand.nextLong());
+				ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
+				WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 			}
 		}
 		if (rand.nextInt(10) + 1 < 5) {
@@ -353,30 +364,36 @@ public class WorldGenSatelliteTower extends WorldGenerator {
 
 			if (chest != null) {
 				for (int i = 0; i < chest.getSizeInventory(); i++) {
-					chest.setInventorySlotContents(i, ItemStack.EMPTY);
+					chest.setInventorySlotContents(i, null);
 				}
 
-				chest.setLootTable(RoomTreasureMars.TABLE_TIER_2_DUNGEON, rand.nextLong());
+				ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
+				WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 			}
 			if (rand.nextInt(10) + 1 < 5) {
 				chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 2, y + 15, z + 6));
 
 				if (chest != null) {
 					for (int i = 0; i < chest.getSizeInventory(); i++) {
-						chest.setInventorySlotContents(i, ItemStack.EMPTY);
+						chest.setInventorySlotContents(i, null);
 					}
 
-					chest.setLootTable(RoomTreasureMars.TABLE_TIER_2_DUNGEON, rand.nextLong());
+					ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
+					WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 				}
 
 				chest = (TileEntityChest) world.getTileEntity(new BlockPos(x + 5, y + 15, z + 6));
 
 				if (chest != null) {
 					for (int i = 0; i < chest.getSizeInventory(); i++) {
-						chest.setInventorySlotContents(i, ItemStack.EMPTY);
+						chest.setInventorySlotContents(i, null);
 					}
 
-					chest.setLootTable(RoomTreasureMars.TABLE_TIER_2_DUNGEON, rand.nextLong());
+					ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST);
+
+					WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 				}
 			}
 		}

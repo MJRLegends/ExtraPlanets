@@ -3,13 +3,13 @@ package com.mjr.extraplanets.world.features;
 import java.util.Random;
 
 import micdoodle8.mods.galacticraft.core.GCBlocks;
-import micdoodle8.mods.galacticraft.planets.mars.world.gen.RoomTreasureMars;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityChest;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
+import net.minecraftforge.common.ChestGenHooks;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
@@ -464,7 +464,7 @@ public class WorldGenSpaceShip extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 7, y + 21, z + 3), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 21, z + 4), GCBlocks.tinStairs2.getStateFromMeta(0), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 21, z + 4), GCBlocks.basicBlock.getStateFromMeta(10), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 21, z + 4), Blocks.TNT.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 21, z + 4), Blocks.tnt.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 21, z + 4), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 21, z + 4), GCBlocks.tinStairs2.getStateFromMeta(1), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 21, z + 5), GCBlocks.basicBlock.getStateFromMeta(10), 3);
@@ -475,7 +475,7 @@ public class WorldGenSpaceShip extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 6, y + 22, z + 3), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 22, z + 3), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 22, z + 4), GCBlocks.basicBlock.getStateFromMeta(10), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 22, z + 4), Blocks.TRAPPED_CHEST.getStateFromMeta(3), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 22, z + 4), Blocks.trapped_chest.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 22, z + 4), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 22, z + 5), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 22, z + 5), GCBlocks.basicBlock.getStateFromMeta(10), 3);
@@ -484,7 +484,7 @@ public class WorldGenSpaceShip extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 6, y + 23, z + 3), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 23, z + 3), GCBlocks.tinStairs2.getStateFromMeta(2), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 23, z + 4), GCBlocks.basicBlock.getStateFromMeta(10), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 23, z + 4), Blocks.TNT.getDefaultState(), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 23, z + 4), Blocks.tnt.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 23, z + 4), GCBlocks.basicBlock.getStateFromMeta(10), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 23, z + 5), GCBlocks.tinStairs2.getStateFromMeta(3), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 23, z + 5), GCBlocks.basicBlock.getStateFromMeta(10), 3);
@@ -510,10 +510,12 @@ public class WorldGenSpaceShip extends WorldGenerator {
 
 			if (chest != null) {
 				for (int i = 0; i < chest.getSizeInventory(); i++) {
-					chest.setInventorySlotContents(i, ItemStack.EMPTY);
+					chest.setInventorySlotContents(i, null);
 				}
 
-				chest.setLootTable(RoomTreasureMars.TABLE_TIER_2_DUNGEON, rand.nextLong());
+				ChestGenHooks info = ChestGenHooks.getInfo(ChestGenHooks.DUNGEON_CHEST); // TODO: Change to Mars Loot
+
+				WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
 			}
 		}
 		return false;
