@@ -5,6 +5,9 @@
 
 
 ===========================================Released Updates===========================================
+v2.0.3
+*Fixed issue #312
+
 v2.0.2
 *Updated lang files to match 1.8+ changes
 *Fixed issue #304
