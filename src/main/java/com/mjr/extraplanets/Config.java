@@ -644,7 +644,7 @@ public class Config {
 	}
 
 	private static void checkCompatibility() {
-		if (morePlanetsCompatibility || morePlanetsCompatibilityAdv143) {
+		if (morePlanetsCompatibility) {
 			pluto = false;
 			mercury = false;
 			venus = false;
@@ -658,6 +658,8 @@ public class Config {
 			plutoSpaceStation = false;
 			thermalPaddings = false;
 		}
+		else if (morePlanetsCompatibilityAdv143)
+			morePlanetsCompatibilityAdv143 = false;
 
 		if (galaxySpaceCompatibility || galaxySpaceCompatibilityAdv) {
 			pluto = false;
