@@ -247,7 +247,8 @@ public class Config {
 	public static boolean galaxySpaceCompatibility;
 	public static boolean galaxySpaceCompatibility120;
 	public static boolean galaxySpaceCompatibilityAdv;
-	public static boolean extendedPlanetsCompatibility;
+	public static boolean extendedPlanetsCompatibility13Alpha;
+	public static boolean extendedPlanetsCompatibility14Alpha;
 
 	public static float kepler22SystemYawOffset;
 	public static float kepler22SystemPitchOffset;
@@ -582,7 +583,8 @@ public class Config {
 		galaxySpaceCompatibility120 = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility (v1.2.0 and above)", false,
 				"This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings & Custom Celestial Selection screen, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Iapetus & Titania TO -44 & -45").getBoolean(false);
 		// galaxySpaceCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
-		extendedPlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations").getBoolean(false);
+		extendedPlanetsCompatibility13Alpha = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility (v1.3.1 Alpha)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations").getBoolean(false);
+		extendedPlanetsCompatibility14Alpha = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility (v1.4 Alpha)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations").getBoolean(false);
 
 		kepler22SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		kepler22SystemPitchOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
@@ -655,6 +657,7 @@ public class Config {
 			plutoSpaceStation = false;
 			thermalPaddings = false;
 		}
+
 		if (galaxySpaceCompatibility || galaxySpaceCompatibilityAdv) {
 			pluto = false;
 			titan = false;
@@ -695,7 +698,7 @@ public class Config {
 			useCustomCelestialSelection = false;
 		}
 
-		if (extendedPlanetsCompatibility) {
+		if (extendedPlanetsCompatibility13Alpha) {
 			neptune = false;
 			uranus = false;
 			ceres = false;
@@ -707,6 +710,13 @@ public class Config {
 			titania = false;
 			titan = false;
 		}
+
+		if (extendedPlanetsCompatibility14Alpha) {
+			ceres = false;
+			pluto = false;
+			plutoSpaceStation = false;
+		}
+
 		if (amunRaCompatibility) {
 			ceresID = -66;
 			erisID = -67;
@@ -714,7 +724,6 @@ public class Config {
 			rheaID = -69;
 			useCustomCelestialSelection = false;
 		}
-
 	}
 
 }
