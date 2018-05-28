@@ -5,6 +5,12 @@
 
 
 ===========================================Released Updates===========================================
+v2.0.4
+*Added support for the future release of ExtendedPlanets v1.4 Alpha
+*Fixes/Changes for More Planets Compatibility/Changed More Planets Compatibility config options
+*Force disable More Planets v1.4.3 & below Progression fixes when More Planets Compact is disabled
+*Fixed Galaxy Space Compatibility/Changed Galaxy Space Compatibility config options
+
 v2.0.3
 *Fixed issue #312
 
