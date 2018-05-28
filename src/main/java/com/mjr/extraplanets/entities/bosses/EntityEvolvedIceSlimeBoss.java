@@ -380,7 +380,7 @@ public class EntityEvolvedIceSlimeBoss extends EntityMob implements IEntityBreat
 
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList;
-		if (Config.morePlanetsCompatibilityAdv)
+		if (Config.morePlanetsCompatibilityAdv143)
 			stackList = GalacticraftRegistry.getDungeonLoot(3);
 		else
 			stackList = GalacticraftRegistry.getDungeonLoot(7);

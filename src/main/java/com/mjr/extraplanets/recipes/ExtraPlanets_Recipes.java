@@ -35,7 +35,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ExtraPlanets_Recipes {
 	public static void init() {
-		if (Config.morePlanetsCompatibilityAdv == false)
+		if (Config.morePlanetsCompatibilityAdv143 == false)
 			registerRocketCraftingRecipes();
 		registerFurnaceRecipes();
 		registerCraftingRecipes();
@@ -98,13 +98,13 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 0, 6), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 1), 0.0F);
 			else
 				GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 0, 6), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), 0.0F);
 		}
 		if (Config.uranus) {
-			if (Config.morePlanetsCompatibilityAdv) {
+			if (Config.morePlanetsCompatibilityAdv143) {
 				GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 0, 3), new ItemStack(ExtraPlanets_Items.tier7Items, 1, 1), 0.0F);
 				GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.uranusBlocks, 0, 6), new ItemStack(ExtraPlanets_Items.tier7Items, 1, 3), 0.0F);
 			} else {
@@ -116,7 +116,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
-			if (Config.morePlanetsCompatibilityAdv) {
+			if (Config.morePlanetsCompatibilityAdv143) {
 				GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 0, 6), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 1), 0.0F);
 				GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.neptuneBlocks, 0, 9), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 2), 0.0F);
 			} else {
@@ -134,7 +134,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 0, 5), OreDictionary.getOres("ingotCopper").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 0, 4), OreDictionary.getOres("ingotTin").get(0), 0.0F);
 			GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 0, 3), OreDictionary.getOres("ingotIron").get(0), 0.0F);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 0, 7), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 1), 0.0F);
 			else
 				GameRegistry.addSmelting(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 0, 7), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5), 0.0F);
@@ -448,7 +448,7 @@ public class ExtraPlanets_Recipes {
 			}
 		}
 		if (Config.saturn) {
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				// Rocket
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.noseConeTier6, 1), new Object[] { " Y ", " X ", "X X", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, 3), 'Y', Blocks.redstone_torch });
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier6Items, 1, 2), new Object[] { " Y ", "XYX", "X X", 'X', new ItemStack(ExtraPlanets_Items.tier6Items, 1, 3), 'Y', new ItemStack(ExtraPlanets_Items.tier5Items, 1, 3) });
@@ -461,7 +461,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 4, 8), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.saturnBlocks, 1, 2) });
 
 			int ingot;
-			if (Config.morePlanetsCompatibilityAdv) {
+			if (Config.morePlanetsCompatibilityAdv143) {
 				ingot = 1;
 			} else {
 				ingot = 5;
@@ -505,7 +505,7 @@ public class ExtraPlanets_Recipes {
 			}
 		}
 		if (Config.uranus) {
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				// Rocket
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.noseConeTier7, 1), new Object[] { " Y ", " X ", "X X", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, 3), 'Y', Blocks.redstone_torch });
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 2), new Object[] { " Y ", "XYX", "X X", 'X', new ItemStack(ExtraPlanets_Items.tier7Items, 1, 3), 'Y', new ItemStack(ExtraPlanets_Items.tier6Items, 1, 3) });
@@ -519,7 +519,7 @@ public class ExtraPlanets_Recipes {
 
 			int crystal;
 			int whiteGem;
-			if (Config.morePlanetsCompatibilityAdv) {
+			if (Config.morePlanetsCompatibilityAdv143) {
 				crystal = 1;
 				whiteGem = 3;
 			} else {
@@ -582,7 +582,7 @@ public class ExtraPlanets_Recipes {
 			}
 		}
 		if (Config.neptune) {
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				// Rocket
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.noseConeTier8, 1), new Object[] { " Y ", " X ", "X X", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 3), 'Y', Blocks.redstone_torch });
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 2), new Object[] { " Y ", "XYX", "X X", 'X', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 3), 'Y', new ItemStack(ExtraPlanets_Items.tier7Items, 1, 3) });
@@ -596,7 +596,7 @@ public class ExtraPlanets_Recipes {
 
 			int ingot;
 			int blueGem;
-			if (Config.morePlanetsCompatibilityAdv) {
+			if (Config.morePlanetsCompatibilityAdv143) {
 				ingot = 1;
 				blueGem = 2;
 			} else {
@@ -698,7 +698,7 @@ public class ExtraPlanets_Recipes {
 			}
 		}
 		if (Config.eris) {
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				// Rocket
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.noseConeTier10, 1), new Object[] { " Y ", " X ", "X X", 'X', new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 'Y', Blocks.redstone_torch });
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 2), new Object[] { " Y ", "XYX", "X X", 'X', new ItemStack(ExtraPlanets_Items.tier10Items, 1, 3), 'Y', new ItemStack(ExtraPlanets_Items.tier9Items, 1, 3) });
@@ -711,7 +711,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.erisBlocks, 4, 6), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.erisBlocks, 1, 2) });
 
 			int ingot;
-			if (Config.morePlanetsCompatibilityAdv) {
+			if (Config.morePlanetsCompatibilityAdv143) {
 				ingot = 1;
 			} else {
 				ingot = 5;
@@ -915,7 +915,7 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.ironApple, 1, 1), new Object[] { "DDD", "DAD", "DDD", 'D', new ItemStack(Blocks.iron_block, 1, 0), 'A', Items.apple });
 		}
 		// Machines
-		if (Config.morePlanetsCompatibilityAdv) {
+		if (Config.morePlanetsCompatibilityAdv143) {
 			if (Config.advancedRefinery)
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Machines.advancedRefinery), new Object[] { "ZYZ", 'Y', GCBlocks.refinery, 'Z', new ItemStack(ExtraPlanets_Items.tier8Items, 1, 1) });
 			if (Config.solarPanels)
@@ -1104,7 +1104,7 @@ public class ExtraPlanets_Recipes {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier5Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier5Items, 1, 4));
 		}
 		if (Config.saturn) {
-			if (Config.morePlanetsCompatibilityAdv) {
+			if (Config.morePlanetsCompatibilityAdv143) {
 				CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier6Items, 1, 0), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 1), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 1));
 			} else {
 				CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier6Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5));
@@ -1112,7 +1112,7 @@ public class ExtraPlanets_Recipes {
 			}
 		}
 		if (Config.uranus) {
-			if (Config.morePlanetsCompatibilityAdv) {
+			if (Config.morePlanetsCompatibilityAdv143) {
 				CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 0), new ItemStack(ExtraPlanets_Items.tier7Items, 1, 1), new ItemStack(ExtraPlanets_Items.tier7Items, 1, 1));
 				CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 2), new ItemStack(ExtraPlanets_Items.tier7Items, 1, 0), new ItemStack(ExtraPlanets_Items.tier7Items, 1, 0));
 			} else {
@@ -1122,7 +1122,7 @@ public class ExtraPlanets_Recipes {
 			}
 		}
 		if (Config.neptune) {
-			if (Config.morePlanetsCompatibilityAdv) {
+			if (Config.morePlanetsCompatibilityAdv143) {
 				CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 0), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 1), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 1));
 			} else {
 				CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5));
@@ -1134,7 +1134,7 @@ public class ExtraPlanets_Recipes {
 			CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier9Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier8Items, 1, 3), new ItemStack(ExtraPlanets_Items.tier9Items, 1, 4));
 		}
 		if (Config.eris) {
-			if (Config.morePlanetsCompatibilityAdv) {
+			if (Config.morePlanetsCompatibilityAdv143) {
 				CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 0), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 1), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 1));
 			} else {
 				CompressorRecipes.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 4), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5), new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5));
@@ -1161,7 +1161,7 @@ public class ExtraPlanets_Recipes {
 				CircuitFabricatorRecipes
 						.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 3), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier5Items, 1, 8), silicon, silicon, new ItemStack(Items.redstone), new ItemStack(Items.repeater) });
 			if (Config.neptune) {
-				if (Config.morePlanetsCompatibilityAdv)
+				if (Config.morePlanetsCompatibilityAdv143)
 					CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 4), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier8Items, 1, 2), silicon, silicon, new ItemStack(Items.redstone),
 							new ItemStack(Items.repeater) });
 				else
@@ -1169,7 +1169,7 @@ public class ExtraPlanets_Recipes {
 							new ItemStack(Items.repeater) });
 			}
 			if (Config.uranus) {
-				if (Config.morePlanetsCompatibilityAdv)
+				if (Config.morePlanetsCompatibilityAdv143)
 					CircuitFabricatorRecipes.addRecipe(new ItemStack(ExtraPlanets_Items.wafers, 3, 5), new ItemStack[] { new ItemStack(ExtraPlanets_Items.tier7Items, 1, 3), silicon, silicon, new ItemStack(Items.redstone),
 							new ItemStack(Items.repeater) });
 				else
@@ -1224,7 +1224,7 @@ public class ExtraPlanets_Recipes {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				inputMap.put(new ItemStack(ExtraPlanets_Items.tier6Items, 1, 1), 24);
 			else
 				inputMap.put(new ItemStack(ExtraPlanets_Items.tier6Items, 1, 5), 24);
@@ -1234,7 +1234,7 @@ public class ExtraPlanets_Recipes {
 		if (Config.uranusSpaceStation && Config.uranus) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				inputMap.put(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 1), 24);
 			else
 				inputMap.put(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 5), 24);
@@ -1245,7 +1245,7 @@ public class ExtraPlanets_Recipes {
 		if (Config.neptuneSpaceStation && Config.neptune) {
 			inputMap = new HashMap<Object, Integer>();
 			inputMap.put("ingotTin", 32);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				inputMap.put(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 1), 24);
 			else
 				inputMap.put(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 5), 24);
@@ -1266,7 +1266,7 @@ public class ExtraPlanets_Recipes {
 			inputMap.put("ingotTin", 32);
 			inputMap.put("waferAdvanced", 1);
 			inputMap.put(Items.iron_ingot, 24);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 1), 24);
 			else
 				inputMap.put(new ItemStack(ExtraPlanets_Items.tier10Items, 1, 5), 24);

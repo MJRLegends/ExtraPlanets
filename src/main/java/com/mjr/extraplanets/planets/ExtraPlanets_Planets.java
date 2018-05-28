@@ -113,7 +113,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.saturn) {
 			saturn = new Planet("Saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				saturn.setTierRequired(4);
 			else
 				saturn.setTierRequired(5);
@@ -127,7 +127,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.uranus) {
 			uranus = new Planet("Uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				uranus.setTierRequired(4);
 			else
 				uranus.setTierRequired(6);
@@ -141,7 +141,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.neptune) {
 			neptune = new Planet("Neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				neptune.setTierRequired(5);
 			else
 				neptune.setTierRequired(7);
@@ -166,7 +166,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.eris) {
 			eris = new Planet("Eris").setParentSolarSystem(GalacticraftCore.solarSystemSol);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				eris.setTierRequired(6);
 			else
 				eris.setTierRequired(9);
@@ -180,7 +180,7 @@ public class ExtraPlanets_Planets {
 		}
 		if (Config.kepler22b && Config.keplerSolarSystems) {
 			kepler22b = new Planet("kepler22b").setParentSolarSystem(ExtraPlanets_SolarSystems.kepler22);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				kepler22b.setTierRequired(7);
 			else
 				kepler22b.setTierRequired(10);

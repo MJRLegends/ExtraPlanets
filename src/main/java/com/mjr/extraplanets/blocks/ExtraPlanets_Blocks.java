@@ -420,19 +420,19 @@ public class ExtraPlanets_Blocks {
 			treasureChestTier5 = new T5TreasureChest("treasure_chest_t5");
 		}
 		if (Config.saturn) {
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				treasureChestTier6 = new T6TreasureChest("treasure_chest_t4_saturn");
 			else
 				treasureChestTier6 = new T6TreasureChest("treasure_chest_t6");
 		}
 		if (Config.uranus) {
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				treasureChestTier7 = new T7TreasureChest("treasure_chest_t4_uranus");
 			else
 				treasureChestTier7 = new T7TreasureChest("treasure_chest_t7");
 		}
 		if (Config.neptune) {
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				treasureChestTier8 = new T8TreasureChest("treasure_chest_t5_neptune");
 			else
 				treasureChestTier8 = new T8TreasureChest("treasure_chest_t8");
@@ -441,7 +441,7 @@ public class ExtraPlanets_Blocks {
 			treasureChestTier9 = new T9TreasureChest("treasure_chest_t9");
 		}
 		if (Config.eris) {
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				treasureChestTier10 = new T10TreasureChest("treasure_chest_t6_eris");
 			else
 				treasureChestTier10 = new T10TreasureChest("treasure_chest_t10");
@@ -643,7 +643,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.saturn) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerSaturn.class, Constants.modName + "Saturn Dungeon Spawner");
 
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 4 Saturn Treasure Chest");
 			else
 				GameRegistry.registerTileEntity(TileEntityT6TreasureChest.class, Constants.modName + "Tier 6 Treasure Chest");
@@ -651,7 +651,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.uranus) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerUranus.class, Constants.modName + "Uranus Dungeon Spawner");
 
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 4 Uranus Treasure Chest");
 			else
 				GameRegistry.registerTileEntity(TileEntityT7TreasureChest.class, Constants.modName + "Tier 7 Treasure Chest");
@@ -659,7 +659,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.neptune) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerNeptune.class, Constants.modName + "Neptune Dungeon Spawner");
 
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 5 Neptune Treasure Chest");
 			else
 				GameRegistry.registerTileEntity(TileEntityT8TreasureChest.class, Constants.modName + "Tier 8 Treasure Chest");
@@ -670,7 +670,7 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.eris) {
 			GameRegistry.registerTileEntity(TileEntityDungeonSpawnerEris.class, Constants.modName + "Eris Dungeon Spawner");
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 6 Eris Treasure Chest");
 			else
 				GameRegistry.registerTileEntity(TileEntityT10TreasureChest.class, Constants.modName + "Tier 10 Treasure Chest");

@@ -352,7 +352,7 @@ public class EntityCreeperBossEris extends EntityMob implements IEntityBreathabl
 
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList;
-		if (Config.morePlanetsCompatibilityAdv)
+		if (Config.morePlanetsCompatibilityAdv143)
 			stackList = GalacticraftRegistry.getDungeonLoot(5);
 		else
 			stackList = GalacticraftRegistry.getDungeonLoot(10);

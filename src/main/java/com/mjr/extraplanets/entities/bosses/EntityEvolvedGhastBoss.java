@@ -461,7 +461,7 @@ public class EntityEvolvedGhastBoss extends EntityFlying implements IMob, IEntit
 
 	public ItemStack getGuaranteedLoot(Random rand) {
 		List<ItemStack> stackList;
-		if (Config.morePlanetsCompatibilityAdv)
+		if (Config.morePlanetsCompatibilityAdv143)
 			stackList = GalacticraftRegistry.getDungeonLoot(3);
 		else
 			stackList = GalacticraftRegistry.getDungeonLoot(6);

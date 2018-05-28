@@ -38,7 +38,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 	@Override
 	public void loadConfig() {
 		if (Config.neiSupport) {
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				if (Config.venus)
 					this.registerTier4Recipe();
 				if (Config.jupiter)
@@ -61,49 +61,49 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 				this.addVenusRoverRecipes();
 
 			if (Config.venus) {
-				if (Config.morePlanetsCompatibilityAdv == false) {
+				if (Config.morePlanetsCompatibilityAdv143 == false) {
 					API.registerRecipeHandler(new RocketT4RecipeHandler());
 					API.registerUsageHandler(new RocketT4RecipeHandler());
 				}
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.venusSpawner));
 			}
 			if (Config.jupiter) {
-				if (Config.morePlanetsCompatibilityAdv == false) {
+				if (Config.morePlanetsCompatibilityAdv143 == false) {
 					API.registerRecipeHandler(new RocketT5RecipeHandler());
 					API.registerUsageHandler(new RocketT5RecipeHandler());
 				}
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.jupiterSpawner));
 			}
 			if (Config.saturn) {
-				if (Config.morePlanetsCompatibilityAdv == false) {
+				if (Config.morePlanetsCompatibilityAdv143 == false) {
 					API.registerRecipeHandler(new RocketT6RecipeHandler());
 					API.registerUsageHandler(new RocketT6RecipeHandler());
 				}
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.saturnSpawner));
 			}
 			if (Config.uranus) {
-				if (Config.morePlanetsCompatibilityAdv == false) {
+				if (Config.morePlanetsCompatibilityAdv143 == false) {
 					API.registerRecipeHandler(new RocketT7RecipeHandler());
 					API.registerUsageHandler(new RocketT7RecipeHandler());
 				}
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.uranusSpawner));
 			}
 			if (Config.neptune) {
-				if (Config.morePlanetsCompatibilityAdv == false) {
+				if (Config.morePlanetsCompatibilityAdv143 == false) {
 					API.registerRecipeHandler(new RocketT8RecipeHandler());
 					API.registerUsageHandler(new RocketT8RecipeHandler());
 				}
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.neptuneSpawner));
 			}
 			if (Config.pluto) {
-				if (Config.morePlanetsCompatibilityAdv == false) {
+				if (Config.morePlanetsCompatibilityAdv143 == false) {
 					API.registerRecipeHandler(new RocketT9RecipeHandler());
 					API.registerUsageHandler(new RocketT9RecipeHandler());
 				}
 				API.hideItem(new ItemStack(ExtraPlanets_Blocks.plutoSpawner));
 			}
 			if (Config.eris) {
-				if (Config.morePlanetsCompatibilityAdv == false) {
+				if (Config.morePlanetsCompatibilityAdv143 == false) {
 					API.registerRecipeHandler(new RocketT10RecipeHandler());
 					API.registerUsageHandler(new RocketT10RecipeHandler());
 				}
@@ -112,7 +112,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 			API.registerRecipeHandler(new CircuitFabricatorRecipeHandler());
 			API.registerUsageHandler(new CircuitFabricatorRecipeHandler());
 
-			if (Config.morePlanetsCompatibilityAdv) {
+			if (Config.morePlanetsCompatibilityAdv143) {
 				API.hideItem(new ItemStack(ExtraPlanets_Items.wafers, 0, 1));
 				API.hideItem(new ItemStack(ExtraPlanets_Items.wafers, 0, 3));
 			}
@@ -674,7 +674,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		if (Config.neptune) {
 			// Blue Gem
 			input2 = new HashMap<Integer, PositionedStack>(input1);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 2), 10, 22));
 			else
 				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier8Items, 1, 6), 10, 22));
@@ -684,7 +684,7 @@ public class NEIExtraPlanetsConfig implements IConfigureNEI {
 		if (Config.uranus) {
 			// White Gem
 			input2 = new HashMap<Integer, PositionedStack>(input1);
-			if (Config.morePlanetsCompatibilityAdv)
+			if (Config.morePlanetsCompatibilityAdv143)
 				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 3), 10, 22));
 			else
 				input2.put(0, new PositionedStack(new ItemStack(ExtraPlanets_Items.tier7Items, 1, 7), 10, 22));

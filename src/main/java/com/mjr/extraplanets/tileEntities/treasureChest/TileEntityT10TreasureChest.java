@@ -453,7 +453,7 @@ public class TileEntityT10TreasureChest extends TileEntityAdvanced implements II
 
 	@Override
 	public int getTierOfKeyRequired() {
-		if (Config.morePlanetsCompatibilityAdv)
+		if (Config.morePlanetsCompatibilityAdv143)
 			return 6;
 		else
 			return this.tier;

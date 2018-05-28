@@ -186,7 +186,7 @@ public class ExtraPlanets_Items {
 			T5key = new ItemKeyT5().setUnlocalizedName("T5key");
 		}
 		if (Config.saturn) {
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				tier6Rocket = new Tier6Rocket("item_tier6_rocket");
 				schematicTier6 = new SchematicTier6("schematic_tier6");
 				noseConeTier6 = new Tier6NoseCone("nose_cone_tier6");
@@ -198,7 +198,7 @@ public class ExtraPlanets_Items {
 			}
 		}
 		if (Config.uranus) {
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				tier7Rocket = new Tier7Rocket("item_tier7_rocket");
 				schematicTier7 = new SchematicTier7("schematic_tier7");
 				noseConeTier7 = new Tier7NoseCone("nose_cone_tier7");
@@ -212,7 +212,7 @@ public class ExtraPlanets_Items {
 		if (Config.neptune) {
 			if (Config.batteries)
 				zincBattery = new ItemBasicBattery("zinc_battery", 125000f, 2);
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				tier8Rocket = new Tier8Rocket("item_tier8_rocket");
 				schematicTier8 = new SchematicTier8("schematic_tier8");
 				noseConeTier8 = new Tier8NoseCone("nose_cone_tier8");
@@ -223,7 +223,7 @@ public class ExtraPlanets_Items {
 				T8key = new ItemKeyT5Neptune().setUnlocalizedName("T8key");
 			}
 		}
-		if (Config.pluto && Config.morePlanetsCompatibilityAdv == false) {
+		if (Config.pluto && Config.morePlanetsCompatibilityAdv143 == false) {
 			tier9Rocket = new Tier9Rocket("item_tier9_rocket");
 			schematicTier9 = new SchematicTier9("schematic_tier9");
 			noseConeTier9 = new Tier9NoseCone("nose_cone_tier9");
@@ -231,7 +231,7 @@ public class ExtraPlanets_Items {
 			T9key = new ItemKeyT9().setUnlocalizedName("T9key");
 		}
 		if (Config.eris) {
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				tier10Rocket = new Tier10Rocket("item_tier10_rocket");
 				schematicTier10 = new SchematicTier10("schematic_tier10");
 				noseConeTier10 = new Tier10NoseCone("nose_cone_tier10");
@@ -251,7 +251,7 @@ public class ExtraPlanets_Items {
 			diamondApple = new ItemAppleDiamond(8, 2.2F, false);
 			ironApple = new ItemAppleIron(4, 2.2F, false);
 		}
-		if (Config.morePlanetsCompatibilityAdv == false && Config.thermalPaddings) {
+		if (Config.morePlanetsCompatibilityAdv143 == false && Config.thermalPaddings) {
 			thermalCloth = new ItemThermalCloth("thermal_cloth");
 			tier2ThermalPadding = new ItemTier2ThermalPadding("tier2_thermal_padding");
 			tier3ThermalPadding = new ItemTier3ThermalPadding("tier3_thermal_padding");
@@ -259,7 +259,7 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.batteries) {
 			advancedBattery = new ItemBasicBattery("advanced_battery", 50000f, 2);
-			if (Config.morePlanetsCompatibilityAdv == false)
+			if (Config.morePlanetsCompatibilityAdv143 == false)
 				ultimateBattery = new ItemBasicBattery("ultimate_battery", 200000f, 2);
 		}
 		if (Config.marsRover)
@@ -322,7 +322,7 @@ public class ExtraPlanets_Items {
 				GameRegistry.registerItem(nickelBattery, "nickelBattery");
 		}
 		if (Config.saturn) {
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				GameRegistry.registerItem(tier6Rocket, "itemTier6Rocket");
 				GameRegistry.registerItem(schematicTier6, "schematicTier6");
 				GameRegistry.registerItem(noseConeTier6, "noseConeTier6");
@@ -331,7 +331,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(T6key, "T6key");
 		}
 		if (Config.uranus) {
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				GameRegistry.registerItem(tier7Rocket, "itemTier7Rocket");
 				GameRegistry.registerItem(schematicTier7, "schematicTier7");
 				GameRegistry.registerItem(noseConeTier7, "noseConeTier7");
@@ -340,7 +340,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(T7key, "T7key");
 		}
 		if (Config.neptune) {
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				GameRegistry.registerItem(tier8Rocket, "itemTier8Rocket");
 				GameRegistry.registerItem(schematicTier8, "schematicTier8");
 				GameRegistry.registerItem(noseConeTier8, "noseConeTier8");
@@ -358,7 +358,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(T9key, "T9key");
 		}
 		if (Config.eris) {
-			if (Config.morePlanetsCompatibilityAdv == false) {
+			if (Config.morePlanetsCompatibilityAdv143 == false) {
 				GameRegistry.registerItem(tier10Rocket, "itemTier10Rocket");
 				GameRegistry.registerItem(schematicTier10, "schematicTier10");
 				GameRegistry.registerItem(noseConeTier10, "noseConeTier10");
@@ -376,7 +376,7 @@ public class ExtraPlanets_Items {
 			GameRegistry.registerItem(ironApple, "ironApple");
 		}
 
-		if (Config.morePlanetsCompatibilityAdv == false && Config.thermalPaddings) {
+		if (Config.morePlanetsCompatibilityAdv143 == false && Config.thermalPaddings) {
 			GameRegistry.registerItem(thermalCloth, "item.thermalCloth");
 			GameRegistry.registerItem(tier2ThermalPadding, "item.tier2ThermalPadding");
 			GameRegistry.registerItem(tier3ThermalPadding, "item.tier3ThermalPadding");
@@ -384,7 +384,7 @@ public class ExtraPlanets_Items {
 		}
 		if (Config.batteries) {
 			GameRegistry.registerItem(advancedBattery, "item.advancedBattery");
-			if (Config.morePlanetsCompatibilityAdv == false)
+			if (Config.morePlanetsCompatibilityAdv143 == false)
 				GameRegistry.registerItem(ultimateBattery, "item.ultimateBattery");
 		}
 		if (Config.marsRover)

@@ -136,15 +136,15 @@ public class ExtraPlanets {
 				return ExtraPlanets_Items.tier4Rocket;
 			else if (Config.jupiter)
 				return ExtraPlanets_Items.tier5Rocket;
-			else if (Config.saturn && Config.morePlanetsCompatibilityAdv == false)
+			else if (Config.saturn && Config.morePlanetsCompatibilityAdv143 == false)
 				return ExtraPlanets_Items.tier6Rocket;
-			else if (Config.uranus && Config.morePlanetsCompatibilityAdv == false)
+			else if (Config.uranus && Config.morePlanetsCompatibilityAdv143 == false)
 				return ExtraPlanets_Items.tier7Rocket;
-			else if (Config.neptune && Config.morePlanetsCompatibilityAdv == false)
+			else if (Config.neptune && Config.morePlanetsCompatibilityAdv143 == false)
 				return ExtraPlanets_Items.tier8Rocket;
 			else if (Config.pluto)
 				return ExtraPlanets_Items.tier9Rocket;
-			else if (Config.eris && Config.morePlanetsCompatibilityAdv == false)
+			else if (Config.eris && Config.morePlanetsCompatibilityAdv143 == false)
 				return ExtraPlanets_Items.tier10Rocket;
 			return GCItems.rocketTier1;
 		}
@@ -300,11 +300,11 @@ public class ExtraPlanets {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		// Register Schematics Recipes
-		if (Config.morePlanetsCompatibilityAdv == false)
+		if (Config.morePlanetsCompatibilityAdv143 == false)
 			registerSchematicsRecipes();
 
 		// Register/Add Dungeon Loot
-		if (Config.morePlanetsCompatibilityAdv == false)
+		if (Config.morePlanetsCompatibilityAdv143 == false)
 			addDungeonLoot();
 
 		// Register Recipes
@@ -323,7 +323,7 @@ public class ExtraPlanets {
 			RegisterHelper.registerExtraPlanetsNonMobEntity(EntityNuclearBombPrimed.class, Constants.modName + "NuclearBombPrimed", 150, 1, true);
 		RegisterHelper.registerExtraPlanetsNonMobEntity(EntityFireBombPrimed.class, Constants.modName + "FireBombPrimed", 150, 1, true);
 
-		if (Config.morePlanetsCompatibilityAdv == false) {
+		if (Config.morePlanetsCompatibilityAdv143 == false) {
 			if (Config.venus)
 				RegisterHelper.registerExtraPlanetsNonMobEntity(EntityTier4Rocket.class, Constants.ASSET_PREFIX + "." + "EntityTier4Rocket", 150, 1, false);
 			if (Config.jupiter)
