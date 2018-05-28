@@ -584,7 +584,7 @@ public class Config {
 		// galaxySpaceCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
 		extendedPlanetsCompatibility13Alpha = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility (v1.3.1 Alpha)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations")
 				.getBoolean(false);
-		extendedPlanetsCompatibility14Alpha = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility (v1.4 Alpha)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations")
+		extendedPlanetsCompatibility14Alpha = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility (v1.4 Alpha)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations FOR THIS TO WORK PLEASE ENABLE THE 'enableExtraPlanetsCompatibility' in the ExtendedPlanets/base.cfg config file")
 				.getBoolean(false);
 
 		kepler22SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
