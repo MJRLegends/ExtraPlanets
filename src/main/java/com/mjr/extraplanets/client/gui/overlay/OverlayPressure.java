@@ -25,9 +25,6 @@ public class OverlayPressure extends Overlay {
 
 	private static Minecraft minecraft = MCUtilities.getClient();
 
-	/**
-	 * Render the GUI that displays oxygen level in tanks
-	 */
 	@SuppressWarnings("unused")
 	public static void renderPressureIndicator(int pressure, boolean right, boolean top) {
 		boolean invalid = Math.abs(pressure) >= 60;

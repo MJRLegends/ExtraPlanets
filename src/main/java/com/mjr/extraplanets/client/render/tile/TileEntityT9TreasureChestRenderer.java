@@ -17,7 +17,7 @@ public class TileEntityT9TreasureChestRenderer extends TileEntitySpecialRenderer
 	private final ModelTreasureChest chestModel = new ModelTreasureChest();
 
 	@Override
-	public void render(TileEntityT9TreasureChest chest, double par2, double par4, double par6, float partialTickTime, int par9, float alpha) {
+	public void render(TileEntityT9TreasureChest chest, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
 		int var9;
 
 		if (!chest.hasWorld()) {
@@ -34,7 +34,7 @@ public class TileEntityT9TreasureChestRenderer extends TileEntitySpecialRenderer
 		GlStateManager.pushMatrix();
 		GlStateManager.enableRescaleNormal();
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-		GlStateManager.translate((float) par2, (float) par4 + 1.0F, (float) par6 + 1.0F);
+		GlStateManager.translate((float) x, (float) y + 1.0F, (float) z + 1.0F);
 		GlStateManager.scale(1.0F, -1.0F, -1.0F);
 		GlStateManager.translate(0.5F, 0.5F, 0.5F);
 		short var11 = 0;
@@ -57,7 +57,7 @@ public class TileEntityT9TreasureChestRenderer extends TileEntitySpecialRenderer
 
 		GlStateManager.rotate(var11, 0.0F, 1.0F, 0.0F);
 		GlStateManager.translate(-0.5F, -0.5F, -0.5F);
-		float var12 = chest.prevLidAngle + (chest.lidAngle - chest.prevLidAngle) * partialTickTime;
+		float var12 = chest.prevLidAngle + (chest.lidAngle - chest.prevLidAngle) * partialTicks;
 
 		var12 = 1.0F - var12;
 		var12 = 1.0F - var12 * var12 * var12;

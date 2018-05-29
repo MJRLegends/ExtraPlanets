@@ -45,7 +45,7 @@ public class BasicSmasher extends BlockAdvancedTile implements IShiftDescription
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(IBlockState stateIn, World world, BlockPos pos, Random rand) {
+	public void randomDisplayTick(IBlockState state, World world, BlockPos pos, Random rand) {
 		final TileEntity te = world.getTileEntity(pos);
 
 		if (te instanceof TileEntityBasicSmasher) {
@@ -95,7 +95,7 @@ public class BasicSmasher extends BlockAdvancedTile implements IShiftDescription
 	}
 
 	@Override
-	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack itemStack) {
 		final int angle = MathHelper.floor(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 		world.setBlockState(pos, getStateFromMeta(EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex()), 3);
 	}

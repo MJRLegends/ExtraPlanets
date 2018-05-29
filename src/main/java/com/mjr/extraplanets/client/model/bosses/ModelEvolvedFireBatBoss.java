@@ -54,9 +54,6 @@ public class ModelEvolvedFireBatBoss extends ModelBase {
 		this.batLeftWing.addChild(this.batOuterLeftWing);
 	}
 
-	/**
-	 * Sets the models various rotation angles then renders the model.
-	 */
 	@Override
 	public void render(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
 		this.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale, entity);
@@ -64,10 +61,6 @@ public class ModelEvolvedFireBatBoss extends ModelBase {
 		this.batBody.render(scale);
 	}
 
-	/**
-	 * Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how "far" arms and legs
-	 * can swing at most.
-	 */
 	@Override
 	public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entity) {
 		this.batHead.rotateAngleX = headPitch * 0.017453292F;

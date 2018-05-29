@@ -36,24 +36,24 @@ public class ModelEvolvedGhastBoss extends ModelBase {
 	}
 
 	@Override
-	public void setRotationAngles(float p_78087_1_, float p_78087_2_, float p_78087_3_, float p_78087_4_, float p_78087_5_, float p_78087_6_, Entity p_78087_7_) {
+	public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entityIn) {
 		for (int i = 0; i < this.tentacles.length; ++i) {
-			this.tentacles[i].rotateAngleX = 0.2F * MathHelper.sin(p_78087_3_ * 0.3F + i) + 0.4F;
+			this.tentacles[i].rotateAngleX = 0.2F * MathHelper.sin(ageInTicks * 0.3F + i) + 0.4F;
 		}
 	}
 
 	@Override
-	public void render(Entity p_78088_1_, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float p_78088_7_) {
-		this.setRotationAngles(p_78088_2_, p_78088_3_, p_78088_4_, p_78088_5_, p_78088_6_, p_78088_7_, p_78088_1_);
+	public void render(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
+		this.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale, entityIn);
 		GL11.glPushMatrix();
 		GL11.glTranslatef(0.0F, 0.6F, 0.0F);
-		this.body.render(p_78088_7_);
+		this.body.render(scale);
 		ModelRenderer[] amodelrenderer = this.tentacles;
 		int i = amodelrenderer.length;
 
 		for (int j = 0; j < i; ++j) {
 			ModelRenderer modelrenderer = amodelrenderer[j];
-			modelrenderer.render(p_78088_7_);
+			modelrenderer.render(scale);
 		}
 
 		GL11.glPopMatrix();

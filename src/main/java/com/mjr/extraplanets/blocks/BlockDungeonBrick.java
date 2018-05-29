@@ -23,7 +23,7 @@ public class BlockDungeonBrick extends Block {
 	}
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
+	public float getBlockHardness(IBlockState state, World world, BlockPos pos) {
 		return 4.0F;
 	}
 }

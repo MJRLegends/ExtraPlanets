@@ -32,8 +32,8 @@ public class RenderEvolvedFireBatBoss extends RenderLiving<EntityEvolvedFireBatB
 	}
 
 	@Override
-	protected void applyRotations(EntityEvolvedFireBatBoss entityLiving, float p_77043_2_, float p_77043_3_, float partialTicks) {
-		GlStateManager.translate(0.0F, MathHelper.cos(p_77043_2_ * 0.3F) * 0.1F, 0.0F);
-		super.applyRotations(entityLiving, p_77043_2_, p_77043_3_, partialTicks);
+	protected void applyRotations(EntityEvolvedFireBatBoss entityLiving, float rotationPitch, float rotationYaw, float partialTicks) {
+		GlStateManager.translate(0.0F, MathHelper.cos(rotationPitch * 0.3F) * 0.1F, 0.0F);
+		super.applyRotations(entityLiving, rotationPitch, rotationYaw, partialTicks);
 	}
 }

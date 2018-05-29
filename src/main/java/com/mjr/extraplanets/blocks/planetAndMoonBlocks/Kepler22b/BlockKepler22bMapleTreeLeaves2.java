@@ -18,6 +18,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
@@ -86,10 +87,11 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeaves {
 		return super.getSaplingDropChance(state);
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
-		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLeaves2.EnumType.MAPLE_GREEN.getMetadata()));
-		list.add(new ItemStack(itemIn, 1, BlockKepler22bMapleTreeLeaves2.EnumType.MAPLE_BROWN.getMetadata()));
+	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
+		list.add(new ItemStack(this, 1, BlockKepler22bMapleTreeLeaves2.EnumType.MAPLE_GREEN.getMetadata()));
+		list.add(new ItemStack(this, 1, BlockKepler22bMapleTreeLeaves2.EnumType.MAPLE_BROWN.getMetadata()));
 	}
 
 	protected ItemStack createStackedBlock(IBlockState state) {
@@ -139,8 +141,8 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeaves {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
-		return !this.leavesFancy && blockAccess.getBlockState(pos.offset(side)).getBlock() == this ? false : super.shouldSideBeRendered(blockState, blockAccess, pos, side);
+	public boolean shouldSideBeRendered(IBlockState state, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
+		return !this.leavesFancy && blockAccess.getBlockState(pos.offset(side)).getBlock() == this ? false : super.shouldSideBeRendered(state, blockAccess, pos, side);
 	}
 
 	@Override

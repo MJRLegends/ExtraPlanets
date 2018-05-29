@@ -95,7 +95,7 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 	}
 
 	@Override
-	public AxisAlignedBB getBoundingBox(IBlockState blockState, IBlockAccess world, BlockPos pos) {
+	public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess world, BlockPos pos) {
 		return this.AABB;
 	}
 
@@ -151,7 +151,7 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public boolean shouldSideBeRendered(IBlockState blockState, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
+	public boolean shouldSideBeRendered(IBlockState state, IBlockAccess blockAccess, BlockPos pos, EnumFacing side) {
 		return true;
 	}
 

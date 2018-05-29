@@ -40,7 +40,7 @@ public class RenderSaturnLander extends Render<EntitySaturnLander> {
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntitySaturnLander par1Entity) {
+	protected ResourceLocation getEntityTexture(EntitySaturnLander entity) {
 		return TextureMap.LOCATION_BLOCKS_TEXTURE;
 	}
 

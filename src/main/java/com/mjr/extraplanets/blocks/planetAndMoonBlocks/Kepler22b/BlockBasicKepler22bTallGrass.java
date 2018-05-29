@@ -59,12 +59,12 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	}
 
 	@Override
-	public int quantityDroppedWithBonus(int fortune, Random random) {
-		return 1 + random.nextInt(fortune * 2 + 1);
+	public int quantityDroppedWithBonus(int fortune, Random rand) {
+		return 1 + rand.nextInt(fortune * 2 + 1);
 	}
 
-	public void harvestBlock(World world, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te) {
-		super.harvestBlock(world, player, pos, state, te, null);
+	public void harvestBlock(World world, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity tileEnity) {
+		super.harvestBlock(world, player, pos, state, tileEnity, null);
 
 	}
 
@@ -83,9 +83,9 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	 */
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> par3List) {
+	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
 		for (EnumBlockBasic blockBasic : EnumBlockBasic.values()) {
-			par3List.add(new ItemStack(this, 1, blockBasic.getMeta()));
+			list.add(new ItemStack(this, 1, blockBasic.getMeta()));
 		}
 	}
 

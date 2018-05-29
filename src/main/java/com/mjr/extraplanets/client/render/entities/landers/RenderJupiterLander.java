@@ -41,7 +41,7 @@ public class RenderJupiterLander extends Render<EntityJupiterLander> {
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityJupiterLander par1Entity) {
+	protected ResourceLocation getEntityTexture(EntityJupiterLander entity) {
 		return TextureMap.LOCATION_BLOCKS_TEXTURE;
 	}
 

@@ -111,13 +111,13 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 	}
 
 	@Override
-	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack itemStack) {
 		final int angle = MathHelper.floor(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 		int change = EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex();
 
-		if (stack.getItemDamage() >= ULTIMATE_METADATA) {
+		if (itemStack.getItemDamage() >= ULTIMATE_METADATA) {
 			change += ULTIMATE_METADATA;
-		} else if (stack.getItemDamage() >= HYBRID_METADATA) {
+		} else if (itemStack.getItemDamage() >= HYBRID_METADATA) {
 			change += HYBRID_METADATA;
 		}
 

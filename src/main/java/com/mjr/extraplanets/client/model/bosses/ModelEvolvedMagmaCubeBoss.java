@@ -10,7 +10,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 
 @SideOnly(Side.CLIENT)
-public class ModelEvolvedMagmaCubeBoss extends ModelBase {
+public class ModelEvolvedMagmaCubeBoss extends ModelBase { // TODO Clean up
 	ModelRenderer[] field_78109_a = new ModelRenderer[8];
 	ModelRenderer field_78108_b;
 

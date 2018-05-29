@@ -40,7 +40,7 @@ public class RenderMercuryLander extends Render<EntityMercuryLander> {
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityMercuryLander par1Entity) {
+	protected ResourceLocation getEntityTexture(EntityMercuryLander entity) {
 		return TextureMap.LOCATION_BLOCKS_TEXTURE;
 	}
 

@@ -45,13 +45,13 @@ public class GUIModuleManager extends GuiContainerGC {
 	private GuiButton buttonInstall;
 	private GuiButton buttonUninstall;
 
-	public GUIModuleManager(IInventory par1IInventory) {
-		super(new ContainerModuleManager(par1IInventory, MCUtilities.getClient().player));
+	public GUIModuleManager(IInventory IInventory) {
+		super(new ContainerModuleManager(IInventory, MCUtilities.getClient().player));
 	}
 
 	@Override
-	protected void actionPerformed(GuiButton par1GuiButton) {
-		switch (par1GuiButton.id) {
+	protected void actionPerformed(GuiButton button) {
+		switch (button.id) {
 		case 0:
 			if (this.selectedModule == null)
 				return;
@@ -82,7 +82,7 @@ public class GUIModuleManager extends GuiContainerGC {
 	}
 
 	@Override
-	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
+	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		this.fontRenderer.drawString(TranslateUtilities.translate("gui.module_manager.name"), this.xOffset + 8, 5, this.mainColour);
 
 		this.fontRenderer.drawString(TranslateUtilities.translate("gui.modules_helmet.name"), this.xOffset + 8, 20, this.mainColour);
@@ -112,7 +112,7 @@ public class GUIModuleManager extends GuiContainerGC {
 	}
 
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
+	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
 		this.buttonActiveState.enabled = true;
 		if (this.selectedModule != null)
 			this.buttonActiveState.displayString = this.selectedModule.isActive() ? TranslateUtilities.translate("gui.button.enable_module.name") : TranslateUtilities.translate("gui.button.disable_module.name");

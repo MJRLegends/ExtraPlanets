@@ -96,10 +96,7 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 		}
 	}
 
-	/**
-	 * Called when a neighboring block was changed and marks that this state should perform any checks during a neighbor change. Cases may include when redstone power is updated, cactus blocks popping off due to a neighboring solid block, etc.
-	 */
-	public void neighborChanged(IBlockState state, World world, BlockPos pos, Block blockIn) {
+	public void neighborChanged(IBlockState state, World world, BlockPos pos, Block block) {
 		this.checkForDrop(world, pos, state);
 	}
 
@@ -118,22 +115,16 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 	}
 
 	@Nullable
-	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, World world, BlockPos pos) {
+	public AxisAlignedBB getCollisionBoundingBox(IBlockState state, World world, BlockPos pos) {
 		return NULL_AABB;
 	}
 
-	/**
-	 * Get the Item that this Block should drop when harvested.
-	 */
 	@Override
 	@Nullable
 	public Item getItemDropped(IBlockState state, Random rand, int fortune) {
 		return Item.getItemFromBlock(this);
 	}
 
-	/**
-	 * Used to determine ambient occlusion and culling when rebuilding chunks for render
-	 */
 	@Override
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;
@@ -149,9 +140,6 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 		return new ItemStack(ExtraPlanets_Items.WHITE_SUGAR_CANE);
 	}
 
-	/**
-	 * Convert the given metadata into a BlockState for this Block
-	 */
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(AGE, Integer.valueOf(meta));
@@ -163,9 +151,6 @@ public class BlockWhiteSugerCane extends Block implements net.minecraftforge.com
 		return BlockRenderLayer.CUTOUT;
 	}
 
-	/**
-	 * Convert the BlockState into the correct metadata value
-	 */
 	@Override
 	public int getMetaFromState(IBlockState state) {
 		return state.getValue(AGE).intValue();

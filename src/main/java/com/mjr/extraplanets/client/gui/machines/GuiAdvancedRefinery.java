@@ -91,8 +91,8 @@ public class GuiAdvancedRefinery extends GuiContainerGC {
 	}
 
 	@Override
-	protected void actionPerformed(GuiButton par1GuiButton) {
-		switch (par1GuiButton.id) {
+	protected void actionPerformed(GuiButton button) {
+		switch (button.id) {
 		case 0:
 			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_UPDATE_DISABLEABLE_BUTTON, this.mc.world.provider.getDimensionType().getId(), new Object[] { this.tileEntity.getPos(), 0 }));
 			break;
@@ -100,7 +100,7 @@ public class GuiAdvancedRefinery extends GuiContainerGC {
 	}
 
 	@Override
-	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
+	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2, 5, 4210752, this.fontRenderer);
 		String displayText = "";
 		int yOffset = -18;
@@ -122,7 +122,7 @@ public class GuiAdvancedRefinery extends GuiContainerGC {
 	}
 
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
+	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
 		this.mc.renderEngine.bindTexture(GuiAdvancedRefinery.refineryTexture);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 

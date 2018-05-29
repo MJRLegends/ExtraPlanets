@@ -56,14 +56,14 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 		return false;
 	}
 
-	public void makeFakeBlock(World worldObj, BlockPos pos, BlockPos mainBlock, IBlockState state) {
-		worldObj.setBlockState(pos, state, 3);
-		((TileEntityBasicDecontaminationUnitFake) worldObj.getTileEntity(pos)).setMainBlock(mainBlock);
+	public void makeFakeBlock(World world, BlockPos pos, BlockPos mainBlock, IBlockState state) {
+		world.setBlockState(pos, state, 3);
+		((TileEntityBasicDecontaminationUnitFake) world.getTileEntity(pos)).setMainBlock(mainBlock);
 	}
 
 	@SuppressWarnings("deprecation")
 	@Override
-	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
+	public float getBlockHardness(IBlockState state, World world, BlockPos pos) {
 		TileEntity tileEntity = world.getTileEntity(pos);
 
 		if (tileEntity instanceof TileEntityBasicDecontaminationUnitFake) {
@@ -95,7 +95,7 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 	}
 
 	@Override
-	public int quantityDropped(Random par1Random) {
+	public int quantityDropped(Random rand) {
 		return 0;
 	}
 
@@ -110,12 +110,12 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World var1, int meta) {
+	public TileEntity createNewTileEntity(World world, int meta) {
 		return new TileEntityBasicDecontaminationUnitFake();
 	}
 
 	@Override
-	public void randomDisplayTick(IBlockState stateIn, World world, BlockPos pos, Random rand) {
+	public void randomDisplayTick(IBlockState state, World world, BlockPos pos, Random rand) {
 	}
 
 	@Override

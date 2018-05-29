@@ -14,7 +14,7 @@ public class TileEntitySolarPanelRenderer extends TileEntitySpecialRenderer<Tile
 	public ModelSolarPanel model = new ModelSolarPanel();
 
 	@Override
-	public void render(TileEntitySolar panel, double par2, double par4, double par6, float partialTickTime, int par9, float alpha) {
+	public void render(TileEntitySolar panel, double x, double y, double z, float partialTickTime, int par9, float alpha) {
 		if (panel.getBlockMetadata() >= BlockSolar.HYBRID_METADATA) {
 			this.bindTexture(TileEntitySolarPanelRenderer.solarPanelAdvTexture);
 		} else {
@@ -24,7 +24,7 @@ public class TileEntitySolarPanelRenderer extends TileEntitySpecialRenderer<Tile
 		GlStateManager.pushMatrix();
 		GlStateManager.enableRescaleNormal();
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-		GlStateManager.translate((float) par2, (float) par4, (float) par6);
+		GlStateManager.translate((float) x, (float) y, (float) z);
 
 		GlStateManager.translate(0.5F, 1.0F, 0.5F);
 		this.model.renderPole();
