@@ -15,8 +15,8 @@ import com.mjr.extraplanets.entities.bosses.EntityEvolvedGiantZombieBoss;
 public class RenderEvolvedGiantZombieBoss extends RenderBiped<EntityEvolvedGiantZombieBoss> {
 	private static final ResourceLocation ZOMBIE_TEXTURES = new ResourceLocation("textures/entity/zombie/zombie.png");
 
-	public RenderEvolvedGiantZombieBoss(RenderManager renderManagerIn) {
-		super(renderManagerIn, new ModelZombie(), 0.5F);
+	public RenderEvolvedGiantZombieBoss(RenderManager renderManager) {
+		super(renderManager, new ModelZombie(), 0.5F);
 		LayerBipedArmor layerbipedarmor = new LayerBipedArmor(this) {
 			@Override
 			protected void initArmor() {
@@ -31,10 +31,10 @@ public class RenderEvolvedGiantZombieBoss extends RenderBiped<EntityEvolvedGiant
 	 * Allows the render to do state modifications necessary before the model is rendered.
 	 */
 	@Override
-	protected void preRenderCallback(EntityEvolvedGiantZombieBoss entitylivingbaseIn, float partialTickTime) {
-		super.preRenderCallback(entitylivingbaseIn, partialTickTime);
+	protected void preRenderCallback(EntityEvolvedGiantZombieBoss entityLiving, float partialTickTime) {
+		super.preRenderCallback(entityLiving, partialTickTime);
 		GlStateManager.scale(4.35F, 4.35F, 4.35F);
-		GlStateManager.rotate((float) (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F + (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F - Math.pow(entitylivingbaseIn.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
+		GlStateManager.rotate((float) (Math.pow(entityLiving.deathTicks, 2) / 5.0F + (Math.pow(entityLiving.deathTicks, 2) / 5.0F - Math.pow(entityLiving.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
 	}
 
 	/**

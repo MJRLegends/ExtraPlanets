@@ -29,7 +29,7 @@ public class OverlayGeigerCounter extends Overlay {
 
 		IStatsClientCapability stats = null;
 		if (minecraft.player != null) {
-			EntityPlayerSP playerBaseClient = (EntityPlayerSP) minecraft.player;
+			EntityPlayerSP playerBaseClient = minecraft.player;
 			stats = playerBaseClient.getCapability(CapabilityStatsClientHandler.EP_STATS_CLIENT_CAPABILITY, null);
 		}
 		String text = TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%";

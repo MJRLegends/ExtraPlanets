@@ -26,14 +26,14 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class ItemBasicKit extends ItemBasicMeta {
 	public int tier;
 
-	public ItemBasicKit(String assetName, int tier) {
-		super(assetName, ExtraPlanets.ItemsTab, getItemList());
+	public ItemBasicKit(String name, int tier) {
+		super(name, ExtraPlanets.ItemsTab, getItemList());
 		this.tier = tier;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
@@ -44,7 +44,7 @@ public class ItemBasicKit extends ItemBasicMeta {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer player, EnumHand hand) {
+	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 		ItemStack itemStackIn = player.getHeldItem(hand);
 		if (player instanceof EntityPlayerMP) {
 			GCPlayerStats stats = GCPlayerStats.get(player);

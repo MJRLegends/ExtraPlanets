@@ -63,7 +63,7 @@ public class StructureVillagePiecesNeptune {
 		return (StructureComponentVillage) var10;
 	}
 
-	private static StructureComponentVillage getNextVillageComponent(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, EnumFacing par6, int par7) {
+	private static StructureComponentVillage getNextVillageComponent(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random rand, int par3, int par4, int par5, EnumFacing par6, int par7) {
 		final int var8 = StructureVillagePiecesNeptune.func_75079_a(par0ComponentVillageStartPiece.structureVillageWeightedPieceList);
 
 		if (var8 <= 0) {
@@ -73,7 +73,7 @@ public class StructureVillagePiecesNeptune {
 
 			while (var9 < 5) {
 				++var9;
-				int var10 = par2Random.nextInt(var8);
+				int var10 = rand.nextInt(var8);
 				final Iterator<StructureVillagePieceWeightNeptune> var11 = par0ComponentVillageStartPiece.structureVillageWeightedPieceList.iterator();
 
 				while (var11.hasNext()) {
@@ -85,7 +85,7 @@ public class StructureVillagePiecesNeptune {
 							break;
 						}
 
-						final StructureComponentVillage var13 = StructureVillagePiecesNeptune.func_75083_a(par0ComponentVillageStartPiece, var12, par1List, par2Random, par3, par4, par5, par6, par7);
+						final StructureComponentVillage var13 = StructureVillagePiecesNeptune.func_75083_a(par0ComponentVillageStartPiece, var12, par1List, rand, par3, par4, par5, par6, par7);
 
 						if (var13 != null) {
 							++var12.villagePiecesSpawned;
@@ -101,10 +101,10 @@ public class StructureVillagePiecesNeptune {
 				}
 			}
 
-			final StructureBoundingBox var14 = StructureComponentVillageTorch.func_74904_a(par0ComponentVillageStartPiece, par1List, par2Random, par3, par4, par5, par6);
+			final StructureBoundingBox var14 = StructureComponentVillageTorch.func_74904_a(par0ComponentVillageStartPiece, par1List, rand, par3, par4, par5, par6);
 
 			if (var14 != null) {
-				return new StructureComponentVillageTorch(par0ComponentVillageStartPiece, par7, par2Random, var14, par6);
+				return new StructureComponentVillageTorch(par0ComponentVillageStartPiece, par7, rand, var14, par6);
 			} else {
 				return null;
 			}
@@ -114,11 +114,11 @@ public class StructureVillagePiecesNeptune {
 	/**
 	 * attempts to find a next Structure Component to be spawned, private Village function
 	 */
-	private static StructureComponent getNextVillageStructureComponent(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, EnumFacing par6, int par7) {
+	private static StructureComponent getNextVillageStructureComponent(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random rand, int par3, int par4, int par5, EnumFacing par6, int par7) {
 		if (par7 > 50) {
 			return null;
 		} else if (Math.abs(par3 - par0ComponentVillageStartPiece.getBoundingBox().minX) <= 112 && Math.abs(par5 - par0ComponentVillageStartPiece.getBoundingBox().minZ) <= 112) {
-			final StructureComponentVillage var8 = StructureVillagePiecesNeptune.getNextVillageComponent(par0ComponentVillageStartPiece, par1List, par2Random, par3, par4, par5, par6, par7 + 1);
+			final StructureComponentVillage var8 = StructureVillagePiecesNeptune.getNextVillageComponent(par0ComponentVillageStartPiece, par1List, rand, par3, par4, par5, par6, par7 + 1);
 
 			if (var8 != null) {
 				par1List.add(var8);
@@ -132,14 +132,14 @@ public class StructureVillagePiecesNeptune {
 		}
 	}
 
-	private static StructureComponent getNextComponentVillagePath(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, EnumFacing par6, int par7) {
+	private static StructureComponent getNextComponentVillagePath(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random rand, int par3, int par4, int par5, EnumFacing par6, int par7) {
 		if (par7 > 3 + par0ComponentVillageStartPiece.terrainType) {
 			return null;
 		} else if (Math.abs(par3 - par0ComponentVillageStartPiece.getBoundingBox().minX) <= 112 && Math.abs(par5 - par0ComponentVillageStartPiece.getBoundingBox().minZ) <= 112) {
-			final StructureBoundingBox var8 = StructureComponentVillagePathGen.func_74933_a(par0ComponentVillageStartPiece, par1List, par2Random, par3, par4, par5, par6);
+			final StructureBoundingBox var8 = StructureComponentVillagePathGen.func_74933_a(par0ComponentVillageStartPiece, par1List, rand, par3, par4, par5, par6);
 
 			if (var8 != null && var8.minY > 10) {
-				final StructureComponentVillagePathGen var9 = new StructureComponentVillagePathGen(par0ComponentVillageStartPiece, par7, par2Random, var8, par6);
+				final StructureComponentVillagePathGen var9 = new StructureComponentVillagePathGen(par0ComponentVillageStartPiece, par7, rand, var8, par6);
 
 				par1List.add(var9);
 				par0ComponentVillageStartPiece.field_74930_j.add(var9);
@@ -155,11 +155,11 @@ public class StructureVillagePiecesNeptune {
 	/**
 	 * attempts to find a next Structure Component to be spawned
 	 */
-	static StructureComponent getNextStructureComponent(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, EnumFacing par6, int par7) {
-		return StructureVillagePiecesNeptune.getNextVillageStructureComponent(par0ComponentVillageStartPiece, par1List, par2Random, par3, par4, par5, par6, par7);
+	static StructureComponent getNextStructureComponent(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random rand, int par3, int par4, int par5, EnumFacing par6, int par7) {
+		return StructureVillagePiecesNeptune.getNextVillageStructureComponent(par0ComponentVillageStartPiece, par1List, rand, par3, par4, par5, par6, par7);
 	}
 
-	static StructureComponent getNextStructureComponentVillagePath(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, EnumFacing par6, int par7) {
-		return StructureVillagePiecesNeptune.getNextComponentVillagePath(par0ComponentVillageStartPiece, par1List, par2Random, par3, par4, par5, par6, par7);
+	static StructureComponent getNextStructureComponentVillagePath(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random rand, int par3, int par4, int par5, EnumFacing par6, int par7) {
+		return StructureVillagePiecesNeptune.getNextComponentVillagePath(par0ComponentVillageStartPiece, par1List, rand, par3, par4, par5, par6, par7);
 	}
 }

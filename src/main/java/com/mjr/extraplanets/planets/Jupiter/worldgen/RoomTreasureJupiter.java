@@ -29,7 +29,7 @@ public class RoomTreasureJupiter extends RoomTreasure {
 	}
 
 	@Override
-	public boolean addComponentParts(World worldIn, Random random, StructureBoundingBox boundingBox) {
+	public boolean addComponentParts(World world, Random random, StructureBoundingBox boundingBox) {
 		for (int i = 0; i <= this.sizeX; i++) {
 			for (int j = 0; j <= this.sizeY; j++) {
 				for (int k = 0; k <= this.sizeZ; k++) {
@@ -57,27 +57,27 @@ public class RoomTreasureJupiter extends RoomTreasure {
 							}
 						}
 						if (placeBlock) {
-							this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, boundingBox);
+							this.setBlockState(world, this.configuration.getBrickBlock(), i, j, k, boundingBox);
 						} else {
-							this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
+							this.setBlockState(world, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
 						}
 					} else if ((i == 1 && k == 1) || (i == 1 && k == this.sizeZ - 1) || (i == this.sizeX - 1 && k == 1) || (i == this.sizeX - 1 && k == this.sizeZ - 1)) {
-						this.setBlockState(worldIn, Blocks.GLOWSTONE.getDefaultState(), i, j, k, boundingBox);
+						this.setBlockState(world, Blocks.GLOWSTONE.getDefaultState(), i, j, k, boundingBox);
 					} else if (i == this.sizeX / 2 && j == 1 && k == this.sizeZ / 2) {
 						BlockPos blockpos = new BlockPos(this.getXWithOffset(i, k), this.getYWithOffset(j), this.getZWithOffset(i, k));
 						if (boundingBox.isVecInside(blockpos)) {
-							worldIn.setBlockState(blockpos, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_5.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), 2);
-							TileEntityTreasureChest treasureChest = (TileEntityTreasureChest) worldIn.getTileEntity(blockpos);
+							world.setBlockState(blockpos, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_5.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), 2);
+							TileEntityTreasureChest treasureChest = (TileEntityTreasureChest) world.getTileEntity(blockpos);
 							if (treasureChest != null) {
 								ResourceLocation chesttype = RoomTreasure.TABLE_TIER_1_DUNGEON;
-								if (worldIn.provider instanceof IGalacticraftWorldProvider) {
-									chesttype = ((IGalacticraftWorldProvider) worldIn.provider).getDungeonChestType();
+								if (world.provider instanceof IGalacticraftWorldProvider) {
+									chesttype = ((IGalacticraftWorldProvider) world.provider).getDungeonChestType();
 								}
 								treasureChest.setLootTable(chesttype, random.nextLong());
 							}
 						}
 					} else {
-						this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
+						this.setBlockState(world, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
 					}
 				}
 			}

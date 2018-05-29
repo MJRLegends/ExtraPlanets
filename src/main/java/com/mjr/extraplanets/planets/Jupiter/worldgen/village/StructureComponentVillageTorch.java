@@ -41,7 +41,7 @@ public class StructureComponentVillageTorch extends StructureComponentVillage {
 		this.averageGroundLevel = nbt.getInteger("AvgGroundLevel");
 	}
 
-	public static StructureBoundingBox func_74904_a(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, EnumFacing par6) {
+	public static StructureBoundingBox func_74904_a(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random rand, int par3, int par4, int par5, EnumFacing par6) {
 		final StructureBoundingBox var7 = StructureBoundingBox.getComponentToAddBoundingBox(par3, par4, par5, 0, 0, 0, 3, 4, 2, par6);
 		return StructureComponent.findIntersecting(par1List, var7) != null ? null : var7;
 	}
@@ -50,7 +50,7 @@ public class StructureComponentVillageTorch extends StructureComponentVillage {
 	 * second Part of Structure generating, this for example places Spiderwebs, Mob Spawners, it closes Mineshafts at the end, it adds Fences...
 	 */
 	@Override
-	public boolean addComponentParts(World par1World, Random par2Random, StructureBoundingBox par3StructureBoundingBox) {
+	public boolean addComponentParts(World par1World, Random rand, StructureBoundingBox par3StructureBoundingBox) {
 		if (this.averageGroundLevel < 0) {
 			this.averageGroundLevel = this.getAverageGroundLevel(par1World, par3StructureBoundingBox);
 

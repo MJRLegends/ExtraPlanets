@@ -44,7 +44,7 @@ public class ContainerUltimateOxygenCompressor extends Container {
 	}
 
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par1) {
 		ItemStack var2 = ItemStack.EMPTY;
 		final Slot slot = this.inventorySlots.get(par1);
 		final int b = this.inventorySlots.size();
@@ -102,7 +102,7 @@ public class ContainerUltimateOxygenCompressor extends Container {
 				return ItemStack.EMPTY;
 			}
 
-			slot.onTake(par1EntityPlayer, stack);
+			slot.onTake(entityPlayer, stack);
 		}
 
 		return var2;

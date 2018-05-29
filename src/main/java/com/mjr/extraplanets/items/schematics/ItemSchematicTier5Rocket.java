@@ -30,18 +30,18 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class ItemSchematicTier5Rocket extends ItemHangingEntity implements ISchematicItem, ISortableItem {
 	private static int indexOffset = 0;
 
-	public ItemSchematicTier5Rocket(String assetName) {
+	public ItemSchematicTier5Rocket(String name) {
 		super(EntityHangingSchematic.class);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		this.setMaxStackSize(1);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
@@ -64,18 +64,18 @@ public class ItemSchematicTier5Rocket extends ItemHangingEntity implements ISche
 	}
 
 	@Override
-	public EnumActionResult onItemUse(EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+	public EnumActionResult onItemUse(EntityPlayer playerIn, World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		ItemStack stack = playerIn.getHeldItem(hand);
 		BlockPos blockpos = pos.offset(facing);
 
 		if (facing != EnumFacing.DOWN && facing != EnumFacing.UP && playerIn.canPlayerEdit(blockpos, facing, stack)) {
-			EntityHangingSchematic entityhanging = this.createEntity(worldIn, blockpos, facing, this.getIndex(stack.getItemDamage()));
+			EntityHangingSchematic entityhanging = this.createEntity(world, blockpos, facing, this.getIndex(stack.getItemDamage()));
 
 			if (entityhanging != null && entityhanging.onValidSurface()) {
-				if (!worldIn.isRemote) {
+				if (!world.isRemote) {
 					entityhanging.playPlaceSound();
-					worldIn.spawnEntity(entityhanging);
-					entityhanging.sendToClient(worldIn, blockpos);
+					world.spawnEntity(entityhanging);
+					entityhanging.sendToClient(world, blockpos);
 				}
 
 				stack.shrink(1);
@@ -87,8 +87,8 @@ public class ItemSchematicTier5Rocket extends ItemHangingEntity implements ISche
 		}
 	}
 
-	private EntityHangingSchematic createEntity(World worldIn, BlockPos pos, EnumFacing clickedSide, int index) {
-		return new EntityHangingSchematic(worldIn, pos, clickedSide, index);
+	private EntityHangingSchematic createEntity(World world, BlockPos pos, EnumFacing clickedSide, int index) {
+		return new EntityHangingSchematic(world, pos, clickedSide, index);
 	}
 
 	/**

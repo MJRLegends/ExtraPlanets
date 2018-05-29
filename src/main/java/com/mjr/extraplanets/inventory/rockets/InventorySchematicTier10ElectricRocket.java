@@ -85,7 +85,7 @@ public class InventorySchematicTier10ElectricRocket implements IInventoryDefault
 	}
 
 	@Override
-	public boolean isUsableByPlayer(EntityPlayer par1EntityPlayer) {
+	public boolean isUsableByPlayer(EntityPlayer entityPlayer) {
 		return true;
 	}
 

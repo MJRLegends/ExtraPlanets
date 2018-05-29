@@ -151,7 +151,7 @@ import com.mjr.mjrlegendslib.util.RegisterUtilities;
 public class ExtraPlanets {
 
 	@SidedProxy(clientSide = "com.mjr.extraplanets.proxy.ClientProxy", serverSide = "com.mjr.extraplanets.proxy.CommonProxy")
-	public static CommonProxy proxy;	
+	public static CommonProxy proxy;
 
 	@Instance(Constants.modID)
 	public static ExtraPlanets instance;

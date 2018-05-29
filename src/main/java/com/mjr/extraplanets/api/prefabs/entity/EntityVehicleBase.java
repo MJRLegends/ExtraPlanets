@@ -233,10 +233,10 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 		}
 
 		for (final ItemStack item : dropped) {
-			EntityItem entityItem = this.entityDropItem(item, 0);
+			EntityItem EntityItem = this.entityDropItem(item, 0);
 
 			if (item.hasTagCompound()) {
-				entityItem.getEntityItem().setTagCompound(item.getTagCompound().copy());
+				EntityItem.getEntityItem().setTagCompound(item.getTagCompound().copy());
 			}
 		}
 	}

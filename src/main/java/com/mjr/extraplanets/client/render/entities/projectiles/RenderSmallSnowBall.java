@@ -17,8 +17,8 @@ import com.mjr.mjrlegendslib.util.MCUtilities;
 public class RenderSmallSnowBall extends Render<Entity> {
 	protected final ItemStack itemStack;
 
-	public RenderSmallSnowBall(RenderManager renderManagerIn, ItemStack itemStack) {
-		super(renderManagerIn);
+	public RenderSmallSnowBall(RenderManager renderManager, ItemStack itemStack) {
+		super(renderManager);
 		this.itemStack = itemStack;
 	}
 

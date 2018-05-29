@@ -85,7 +85,7 @@ public class InventorySchematicTier4Rocket implements IInventoryDefaults {
 	}
 
 	@Override
-	public boolean isUsableByPlayer(EntityPlayer par1EntityPlayer) {
+	public boolean isUsableByPlayer(EntityPlayer entityPlayer) {
 		return true;
 	}
 

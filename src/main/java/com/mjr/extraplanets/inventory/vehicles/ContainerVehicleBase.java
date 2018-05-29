@@ -38,15 +38,15 @@ public class ContainerVehicleBase extends Container {
 	}
 
 	@Override
-	public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
-		return this.spaceshipInv.isUsableByPlayer(par1EntityPlayer);
+	public boolean canInteractWith(EntityPlayer entityPlayer) {
+		return this.spaceshipInv.isUsableByPlayer(entityPlayer);
 	}
 
 	/**
 	 * Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
 	 */
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par2) {
 		ItemStack var3 = null;
 		final Slot var4 = this.inventorySlots.get(par2);
 		final int b = this.inventorySlots.size() - 36;
@@ -77,9 +77,9 @@ public class ContainerVehicleBase extends Container {
 	 * Callback for when the crafting gui is closed.
 	 */
 	@Override
-	public void onContainerClosed(EntityPlayer par1EntityPlayer) {
-		super.onContainerClosed(par1EntityPlayer);
-		this.lowerChestInventory.closeInventory(par1EntityPlayer);
+	public void onContainerClosed(EntityPlayer entityPlayer) {
+		super.onContainerClosed(entityPlayer);
+		this.lowerChestInventory.closeInventory(entityPlayer);
 	}
 
 	/**

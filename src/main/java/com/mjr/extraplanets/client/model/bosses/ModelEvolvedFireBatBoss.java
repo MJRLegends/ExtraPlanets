@@ -58,8 +58,8 @@ public class ModelEvolvedFireBatBoss extends ModelBase {
 	 * Sets the models various rotation angles then renders the model.
 	 */
 	@Override
-	public void render(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
-		this.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale, entityIn);
+	public void render(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
+		this.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale, entity);
 		this.batHead.render(scale);
 		this.batBody.render(scale);
 	}
@@ -69,7 +69,7 @@ public class ModelEvolvedFireBatBoss extends ModelBase {
 	 * can swing at most.
 	 */
 	@Override
-	public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entityIn) {
+	public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entity) {
 		this.batHead.rotateAngleX = headPitch * 0.017453292F;
 		this.batHead.rotateAngleY = netHeadYaw * 0.017453292F;
 		this.batHead.rotateAngleZ = 0.0F;

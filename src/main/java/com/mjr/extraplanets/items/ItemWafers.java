@@ -16,8 +16,8 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemWafers extends ItemBasicMeta {
 
-	public ItemWafers(String assetName) {
-		super(assetName, ExtraPlanets.ItemsTab, getItemList());
+	public ItemWafers(String name) {
+		super(name, ExtraPlanets.ItemsTab, getItemList());
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class ItemWafers extends ItemBasicMeta {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 

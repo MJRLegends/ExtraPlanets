@@ -61,15 +61,15 @@ public class ContainerSchematicMarsRover extends Container {
 	}
 
 	@Override
-	public void onContainerClosed(EntityPlayer par1EntityPlayer) {
-		super.onContainerClosed(par1EntityPlayer);
+	public void onContainerClosed(EntityPlayer entityPlayer) {
+		super.onContainerClosed(entityPlayer);
 
 		if (!this.worldObj.isRemote) {
 			for (int var2 = 1; var2 < this.craftMatrix.getSizeInventory(); ++var2) {
 				final ItemStack slot = this.craftMatrix.removeStackFromSlot(var2);
 
 				if (!slot.isEmpty()) {
-					par1EntityPlayer.entityDropItem(slot, 0.0F);
+					entityPlayer.entityDropItem(slot, 0.0F);
 				}
 			}
 		}
@@ -81,12 +81,12 @@ public class ContainerSchematicMarsRover extends Container {
 	}
 
 	@Override
-	public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
+	public boolean canInteractWith(EntityPlayer entityPlayer) {
 		return true;
 	}
 
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par1) {
 		ItemStack var2 = ItemStack.EMPTY;
 		final Slot var3 = this.inventorySlots.get(par1);
 
@@ -142,15 +142,15 @@ public class ContainerSchematicMarsRover extends Container {
 				return ItemStack.EMPTY;
 			}
 
-			var3.onTake(par1EntityPlayer, var4);
+			var3.onTake(entityPlayer, var4);
 		}
 
 		return var2;
 	}
 
-	protected boolean mergeOneItemTestValid(ItemStack par1ItemStack, int par2, int par3, boolean par4) {
+	protected boolean mergeOneItemTestValid(ItemStack itemStack, int par2, int par3, boolean par4) {
 		boolean flag1 = false;
-		if (!par1ItemStack.isEmpty()) {
+		if (!itemStack.isEmpty()) {
 			Slot slot;
 			ItemStack slotStack;
 
@@ -158,10 +158,10 @@ public class ContainerSchematicMarsRover extends Container {
 				slot = this.inventorySlots.get(k);
 				slotStack = slot.getStack();
 
-				if (slotStack.isEmpty() && slot.isItemValid(par1ItemStack)) {
-					ItemStack stackOneItem = par1ItemStack.copy();
+				if (slotStack.isEmpty() && slot.isItemValid(itemStack)) {
+					ItemStack stackOneItem = itemStack.copy();
 					stackOneItem.setCount(1);
-					par1ItemStack.shrink(1);
+					itemStack.shrink(1);
 					slot.putStack(stackOneItem);
 					slot.onSlotChanged();
 					flag1 = true;

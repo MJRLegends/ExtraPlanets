@@ -243,7 +243,7 @@ public class ExtraPlanets_Items {
 	public static Item HEAVY_OXYGEN_TANK_MAGENTA;
 	public static Item HEAVY_OXYGEN_TANK_ORANGE;
 	public static Item HEAVY_OXYGEN_TANK_WHITE;
-	
+
 	public static Item MODULE_ITEMS;
 
 	public static void init() {
@@ -590,7 +590,7 @@ public class ExtraPlanets_Items {
 			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_CHEST, TIER_4_UNPREPARED_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS, TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_4_UNPREPARED_SPACE_SUIT_BOOTS, TIER_4_UNPREPARED_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerItem(MODULE_ITEMS, MODULE_ITEMS.getUnlocalizedName().substring(5));			
+			RegisterUtilities.registerItem(MODULE_ITEMS, MODULE_ITEMS.getUnlocalizedName().substring(5));
 		}
 		if (Config.RADIATION) {
 			RegisterUtilities.registerItem(IODIDE_SALT, IODIDE_SALT.getUnlocalizedName().substring(5));

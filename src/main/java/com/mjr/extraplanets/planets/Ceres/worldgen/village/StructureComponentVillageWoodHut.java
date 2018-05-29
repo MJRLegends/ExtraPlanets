@@ -42,16 +42,16 @@ public class StructureComponentVillageWoodHut extends StructureComponentVillage 
 		this.averageGroundLevel = nbt.getInteger("AvgGroundLevel");
 	}
 
-	public static StructureComponentVillageWoodHut func_74908_a(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, EnumFacing par6, int par7) {
+	public static StructureComponentVillageWoodHut func_74908_a(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random rand, int par3, int par4, int par5, EnumFacing par6, int par7) {
 		final StructureBoundingBox var8 = StructureBoundingBox.getComponentToAddBoundingBox(par3, par4, par5, 0, 0, 0, 17, 9, 17, par6);
-		return StructureComponent.findIntersecting(par1List, var8) == null ? new StructureComponentVillageWoodHut(par0ComponentVillageStartPiece, par7, par2Random, var8, par6) : null;
+		return StructureComponent.findIntersecting(par1List, var8) == null ? new StructureComponentVillageWoodHut(par0ComponentVillageStartPiece, par7, rand, var8, par6) : null;
 	}
 
 	/**
 	 * second Part of Structure generating, this for example places Spiderwebs, Mob Spawners, it closes Mineshafts at the end, it adds Fences...
 	 */
 	@Override
-	public boolean addComponentParts(World par1World, Random par2Random, StructureBoundingBox par3StructureBoundingBox) {
+	public boolean addComponentParts(World par1World, Random rand, StructureBoundingBox par3StructureBoundingBox) {
 		if (this.averageGroundLevel < 0) {
 			this.averageGroundLevel = this.getAverageGroundLevel(par1World, par3StructureBoundingBox);
 

@@ -23,7 +23,8 @@ public class ModuleNoFallDamage extends Module {
 	@Override
 	public void tickServer(EntityPlayerMP player) {
 		if (player.fallDistance != 0F) {
-			if ((player.ticksExisted - 1) % 20 == 0)ModuleHelper.takeArmourPower(player.inventory.armorInventory.get(this.getSlotType()), this.getUsePowerCost());
+			if ((player.ticksExisted - 1) % 20 == 0)
+				ModuleHelper.takeArmourPower(player.inventory.armorInventory.get(this.getSlotType()), this.getUsePowerCost());
 			player.fallDistance = 0F;
 		}
 	}

@@ -34,8 +34,8 @@ public abstract class ArmorCustomModel extends ModelBiped {
 	public abstract void partLeftLeg();
 
 	@Override
-	public void render(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
-		super.render(entityIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
+	public void render(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
+		super.render(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
 		GL11.glPushMatrix();
 		if (color != -1) {
 			float red = (color >> 16 & 255) / 255F;
@@ -58,7 +58,7 @@ public abstract class ArmorCustomModel extends ModelBiped {
 			GL11.glRotatef(bipedHead.rotateAngleY * (180F / (float) Math.PI), 0F, 1F, 0F);
 			GL11.glRotatef(bipedHead.rotateAngleX * (180F / (float) Math.PI), 1F, 0F, 0F);
 			GL11.glRotatef(180F, 1F, 0F, 0F);
-			if (!(entityIn instanceof EntityArmorStand))
+			if (!(entity instanceof EntityArmorStand))
 				GL11.glRotatef(180F, 0F, 1F, 0F);
 			if (isSneak) {
 				GL11.glTranslatef(0F, -0.125F, 0F);

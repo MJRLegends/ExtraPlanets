@@ -111,9 +111,9 @@ public class MainHandlerServer {
 			World world = event.player.world;
 
 			IBlockState blockTest = world.getBlockState(player.getPosition());
-			if (blockTest.getBlock() instanceof FluidBlockEP){
+			if (blockTest.getBlock() instanceof FluidBlockEP) {
 				BlockPos block = world.getTopSolidOrLiquidBlock(player.getPosition().add(1, 1, 0));
-				world.setBlockState(block, world.getBiome(block).topBlock);				
+				world.setBlockState(block, world.getBiome(block).topBlock);
 				ExtraPlanets.packetPipeline.sendTo(new PacketSimpleEP(EnumSimplePacket.C_MOVE_PLAYER, world.provider.getDimensionType().getId(), new Object[] { block }), player);
 			}
 		}

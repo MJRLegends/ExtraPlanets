@@ -25,19 +25,19 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemTier4ThermalPadding extends Item implements IItemThermal {
-	public static String[] names = { "tier4_thermal_helm", "tier4_thermal_chestplate", "tier4_thermal_leggings", "tier4_thermal_boots"};
+	public static String[] names = { "tier4_thermal_helm", "tier4_thermal_chestplate", "tier4_thermal_leggings", "tier4_thermal_boots" };
 
-	public ItemTier4ThermalPadding(String assetName) {
+	public ItemTier4ThermalPadding(String name) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		this.setMaxStackSize(1);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
@@ -55,9 +55,9 @@ public class ItemTier4ThermalPadding extends Item implements IItemThermal {
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack par1ItemStack) {
-		if (names.length > par1ItemStack.getItemDamage()) {
-			return "item." + ItemTier4ThermalPadding.names[par1ItemStack.getItemDamage()];
+	public String getUnlocalizedName(ItemStack itemStack) {
+		if (names.length > itemStack.getItemDamage()) {
+			return "item." + ItemTier4ThermalPadding.names[itemStack.getItemDamage()];
 		}
 
 		return "unnamed";
@@ -79,7 +79,7 @@ public class ItemTier4ThermalPadding extends Item implements IItemThermal {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand) {
+	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer playerIn, EnumHand hand) {
 		ItemStack itemStackIn = playerIn.getHeldItem(hand);
 		if (playerIn instanceof EntityPlayerMP) {
 			GCPlayerStats stats = playerIn.getCapability(GCCapabilities.GC_STATS_CAPABILITY, null);

@@ -55,9 +55,9 @@ public class BlockCandyBlocks extends Block implements IDetectableResource, ISor
 		}
 	}
 
-	public BlockCandyBlocks(String assetName) {
+	public BlockCandyBlocks(String name) {
 		super(Material.ROCK);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 		this.setLightLevel(0.5F);
 	}
@@ -68,7 +68,7 @@ public class BlockCandyBlocks extends Block implements IDetectableResource, ISor
 	}
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
 		return 1.5F;
 	}
 

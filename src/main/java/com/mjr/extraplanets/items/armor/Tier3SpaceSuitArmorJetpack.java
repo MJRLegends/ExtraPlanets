@@ -77,8 +77,8 @@ public class Tier3SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 			list.add(EnumColor.YELLOW + TranslateUtilities.translateWithFormat("item_desc.spacesuit.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSneak.getKeyCode())));
 		if (Keyboard.isKeyDown(Keyboard.KEY_LCONTROL)) {
 			list.add(EnumColor.ORANGE + TranslateUtilities.translate("gui.module_list.name") + ":");
-			for(Module module : ModuleHelper.getModules(itemStack))
-				list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));			
+			for (Module module : ModuleHelper.getModules(itemStack))
+				list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));
 		} else
 			list.add(EnumColor.AQUA + TranslateUtilities.translateWithFormat("item_desc.spacesuit.module.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSprint.getKeyCode())));
 		super.addInformation(itemStack, player, list, par4);
@@ -105,6 +105,8 @@ public class Tier3SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 		}
 		return armorModel;
 	}
+
+	@Override
 	public double getJetpackAccelSpeed() {
 		return 0.6D;
 	}
