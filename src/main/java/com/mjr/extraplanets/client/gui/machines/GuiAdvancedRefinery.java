@@ -37,8 +37,8 @@ public class GuiAdvancedRefinery extends GuiContainerGC {
 	private GuiElementInfoRegion oilTankRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 7, (this.height - this.ySize) / 2 + 28, 16, 38, new ArrayList<String>(), this.width, this.height, this);
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiAdvancedRefinery(InventoryPlayer par1InventoryPlayer, TileEntityAdvancedRefinery tileEntity) {
-		super(new ContainerAdvancedRefinery(par1InventoryPlayer, tileEntity, MCUtilities.getClient().player));
+	public GuiAdvancedRefinery(InventoryPlayer inventoryPlayer, TileEntityAdvancedRefinery tileEntity) {
+		super(new ContainerAdvancedRefinery(inventoryPlayer, tileEntity, MCUtilities.getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}

@@ -30,8 +30,8 @@ public class GuiAdvancedFuelLoader extends GuiContainerGC {
 	private GuiButton buttonLoadFuel;
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 112, (this.height - this.ySize) / 2 + 65, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiAdvancedFuelLoader(InventoryPlayer par1InventoryPlayer, TileEntityAdvancedFuelLoader par2TileEntityAirDistributor) {
-		super(new ContainerAdvancedFuelLoader(par1InventoryPlayer, par2TileEntityAirDistributor));
+	public GuiAdvancedFuelLoader(InventoryPlayer inventoryPlayer, TileEntityAdvancedFuelLoader par2TileEntityAirDistributor) {
+		super(new ContainerAdvancedFuelLoader(inventoryPlayer, par2TileEntityAirDistributor));
 		this.fuelLoader = par2TileEntityAirDistributor;
 		this.ySize = 180;
 	}

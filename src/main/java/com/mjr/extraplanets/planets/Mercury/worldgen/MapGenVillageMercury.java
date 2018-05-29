@@ -85,9 +85,9 @@ public class MapGenVillageMercury extends MapGenStructure {
 	}
 
 	@Override
-	public BlockPos getNearestStructurePos(World worldIn, BlockPos pos, boolean findUnexplored) {
-		this.world = worldIn;
-		return findNearestStructurePosBySpacing(worldIn, this, pos, 32, 8, 10387312, false, 100, findUnexplored);
+	public BlockPos getNearestStructurePos(World world, BlockPos pos, boolean findUnexplored) {
+		this.world = world;
+		return findNearestStructurePosBySpacing(world, this, pos, 32, 8, 10387312, false, 100, findUnexplored);
 	}
 
 	@Override

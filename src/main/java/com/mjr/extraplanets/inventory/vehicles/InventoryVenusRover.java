@@ -55,14 +55,14 @@ public class InventoryVenusRover implements IInventoryDefaults {
 
 	@Override
 	public ItemStack decrStackSize(int index, int count) {
-		ItemStack itemstack = ItemStackHelper.getAndSplit(this.stackList, index, count);
+		ItemStack itemStack = ItemStackHelper.getAndSplit(this.stackList, index, count);
 
-		if (!itemstack.isEmpty()) {
+		if (!itemStack.isEmpty()) {
 			this.markDirty();
 			this.eventHandler.onCraftMatrixChanged(this);
 		}
 
-		return itemstack;
+		return itemStack;
 	}
 
 	@Override
@@ -86,7 +86,7 @@ public class InventoryVenusRover implements IInventoryDefaults {
 	}
 
 	@Override
-	public boolean isUsableByPlayer(EntityPlayer par1EntityPlayer) {
+	public boolean isUsableByPlayer(EntityPlayer entityPlayer) {
 		return true;
 	}
 
@@ -104,14 +104,14 @@ public class InventoryVenusRover implements IInventoryDefaults {
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int i, ItemStack itemStack) {
 		return false;
 	}
 
 	@Override
 	public boolean isEmpty() {
-		for (ItemStack itemstack : this.stackList) {
-			if (!itemstack.isEmpty()) {
+		for (ItemStack itemStack : this.stackList) {
+			if (!itemStack.isEmpty()) {
 				return false;
 			}
 		}

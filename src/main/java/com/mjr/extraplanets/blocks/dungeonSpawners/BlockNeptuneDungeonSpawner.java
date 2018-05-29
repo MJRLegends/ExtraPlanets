@@ -9,12 +9,12 @@ import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawne
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerNeptuneDefault;
 
 public class BlockNeptuneDungeonSpawner extends BlockBossSpawner {
-	public BlockNeptuneDungeonSpawner(String assetName) {
-		super(assetName);
+	public BlockNeptuneDungeonSpawner(String name) {
+		super(name);
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
+	public TileEntity createNewTileEntity(World world, int meta) {
 		if (Config.USE_DEFAULT_BOSSES)
 			return new TileEntityDungeonSpawnerNeptuneDefault();
 		else

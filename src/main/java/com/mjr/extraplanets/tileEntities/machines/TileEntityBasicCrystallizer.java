@@ -206,11 +206,11 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canInsertItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (itemStack != null && this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
+				return ItemElectricBase.isElectricItemCharged(itemStack);
 			case 2:
 				return true;
 			default:
@@ -221,15 +221,15 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canExtractItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (itemStack != null && this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
+				return ItemElectricBase.isElectricItemEmpty(itemStack) || !this.shouldPullEnergy();
 			case 1:
-				return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
+				return itemStack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
 			case 2:
-				return itemstack == new ItemStack(Items.BUCKET);
+				return itemStack == new ItemStack(Items.BUCKET);
 			default:
 				return false;
 			}
@@ -238,14 +238,14 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
 		switch (slotID) {
 		case 0:
-			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
+			return itemStack != null && ItemElectricBase.isElectricItem(itemStack.getItem());
 		case 1:
-			return itemstack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
+			return itemStack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
 		case 2:
-			return FluidUtil.isValidContainer(itemstack);
+			return FluidUtil.isValidContainer(itemStack);
 		}
 
 		return false;

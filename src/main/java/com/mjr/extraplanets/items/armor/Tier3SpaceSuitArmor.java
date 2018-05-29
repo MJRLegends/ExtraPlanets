@@ -4,8 +4,6 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import org.lwjgl.input.Keyboard;
-
 import micdoodle8.mods.galacticraft.api.item.IArmorGravity;
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.api.item.ISensorGlassesArmor;
@@ -23,6 +21,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import org.lwjgl.input.Keyboard;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
@@ -93,7 +93,7 @@ public class Tier3SpaceSuitArmor extends ElectricArmorBase implements IPressureS
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> list, ITooltipFlag flagIn) {
 		if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
 			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information"));
 			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.2"));
@@ -105,11 +105,11 @@ public class Tier3SpaceSuitArmor extends ElectricArmorBase implements IPressureS
 			list.add(EnumColor.YELLOW + TranslateUtilities.translateWithFormat("item_desc.spacesuit.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSneak.getKeyCode())));
 		if (Keyboard.isKeyDown(Keyboard.KEY_LCONTROL)) {
 			list.add(EnumColor.ORANGE + TranslateUtilities.translate("gui.module_list.name") + ":");
-			for(Module module : ModuleHelper.getModules(itemStack))
-				list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));			
+			for (Module module : ModuleHelper.getModules(itemStack))
+				list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));
 		} else
 			list.add(EnumColor.AQUA + TranslateUtilities.translateWithFormat("item_desc.spacesuit.module.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSprint.getKeyCode())));
-		super.addInformation(itemStack, worldIn, list, flagIn);
+		super.addInformation(itemStack, world, list, flagIn);
 	}
 
 	public static ModelBiped fillingArmorModel(ModelBiped model, EntityLivingBase entityLiving) {

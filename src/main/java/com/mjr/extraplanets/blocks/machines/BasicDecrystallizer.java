@@ -32,10 +32,10 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class BasicDecrystallizer extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-	public BasicDecrystallizer(String assetName) {
+	public BasicDecrystallizer(String name) {
 		super(Material.ROCK);
 		this.setHardness(1.0F);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override
@@ -45,8 +45,8 @@ public class BasicDecrystallizer extends BlockAdvancedTile implements IShiftDesc
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand) {
-		final TileEntity te = worldIn.getTileEntity(pos);
+	public void randomDisplayTick(IBlockState stateIn, World world, BlockPos pos, Random rand) {
+		final TileEntity te = world.getTileEntity(pos);
 
 		if (te instanceof TileEntityBasicDecrystallizer) {
 			final TileEntityBasicDecrystallizer crystallizer = (TileEntityBasicDecrystallizer) te;
@@ -60,8 +60,8 @@ public class BasicDecrystallizer extends BlockAdvancedTile implements IShiftDesc
 
 				for (int i = -1; i <= 1; i++) {
 					for (int j = -1; j <= 1; j++) {
-						worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, var7 + var11 + i * 0.2, var8, var9 + var10 + j * 0.2, 0.0D, 0.01D, 0.0D);
-						worldIn.spawnParticle(EnumParticleTypes.FLAME, var7 + var11 + i * 0.1, var8 - 0.2, var9 + var10 + j * 0.1, 0.0D, 0.0001D, 0.0D);
+						world.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, var7 + var11 + i * 0.2, var8, var9 + var10 + j * 0.2, 0.0D, 0.01D, 0.0D);
+						world.spawnParticle(EnumParticleTypes.FLAME, var7 + var11 + i * 0.1, var8 - 0.2, var9 + var10 + j * 0.1, 0.0D, 0.0001D, 0.0D);
 					}
 				}
 			}
@@ -95,9 +95,9 @@ public class BasicDecrystallizer extends BlockAdvancedTile implements IShiftDesc
 	}
 
 	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
 		final int angle = MathHelper.floor(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
-		worldIn.setBlockState(pos, getStateFromMeta(EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex()), 3);
+		world.setBlockState(pos, getStateFromMeta(EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex()), 3);
 	}
 
 	@Override

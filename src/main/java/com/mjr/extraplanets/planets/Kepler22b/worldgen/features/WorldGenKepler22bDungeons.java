@@ -26,7 +26,7 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 	private static final Logger LOGGER = LogManager.getLogger();
 
 	@Override
-	public boolean generate(World worldIn, Random rand, BlockPos position) {
+	public boolean generate(World world, Random rand, BlockPos position) {
 		int j = rand.nextInt(2) + 2;
 		int k = -j - 1;
 		int l = j + 1;
@@ -39,7 +39,7 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 			for (int l2 = -1; l2 <= 4; ++l2) {
 				for (int i3 = l1; i3 <= i2; ++i3) {
 					BlockPos blockpos = position.add(k2, l2, i3);
-					Material material = worldIn.getBlockState(blockpos).getMaterial();
+					Material material = world.getBlockState(blockpos).getMaterial();
 					boolean flag = material.isSolid();
 
 					if (l2 == -1 && !flag) {
@@ -50,7 +50,7 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 						return false;
 					}
 
-					if ((k2 == k || k2 == l || i3 == l1 || i3 == i2) && l2 == 0 && worldIn.isAirBlock(blockpos) && worldIn.isAirBlock(blockpos.up())) {
+					if ((k2 == k || k2 == l || i3 == l1 || i3 == i2) && l2 == 0 && world.isAirBlock(blockpos) && world.isAirBlock(blockpos.up())) {
 						++j2;
 					}
 				}
@@ -66,16 +66,16 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 						BlockPos blockpos1 = position.add(k3, i4, k4);
 
 						if (k3 != k && i4 != -1 && k4 != l1 && k3 != l && i4 != 4 && k4 != i2) {
-							if (worldIn.getBlockState(blockpos1).getBlock() != Blocks.CHEST) {
-								worldIn.setBlockToAir(blockpos1);
+							if (world.getBlockState(blockpos1).getBlock() != Blocks.CHEST) {
+								world.setBlockToAir(blockpos1);
 							}
-						} else if (blockpos1.getY() >= 0 && !worldIn.getBlockState(blockpos1.down()).getMaterial().isSolid()) {
-							worldIn.setBlockToAir(blockpos1);
-						} else if (worldIn.getBlockState(blockpos1).getMaterial().isSolid() && worldIn.getBlockState(blockpos1).getBlock() != Blocks.CHEST) {
+						} else if (blockpos1.getY() >= 0 && !world.getBlockState(blockpos1.down()).getMaterial().isSolid()) {
+							world.setBlockToAir(blockpos1);
+						} else if (world.getBlockState(blockpos1).getMaterial().isSolid() && world.getBlockState(blockpos1).getBlock() != Blocks.CHEST) {
 							if (i4 == -1 && rand.nextInt(4) != 0) {
-								worldIn.setBlockState(blockpos1, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(11), 2);
+								world.setBlockState(blockpos1, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(11), 2);
 							} else {
-								worldIn.setBlockState(blockpos1, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(12), 2);
+								world.setBlockState(blockpos1, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getStateFromMeta(12), 2);
 							}
 						}
 					}
@@ -89,18 +89,18 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 					int j5 = position.getZ() + rand.nextInt(k1 * 2 + 1) - k1;
 					BlockPos blockpos2 = new BlockPos(l4, i5, j5);
 
-					if (worldIn.isAirBlock(blockpos2)) {
+					if (world.isAirBlock(blockpos2)) {
 						int j3 = 0;
 
 						for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL) {
-							if (worldIn.getBlockState(blockpos2.offset(enumfacing)).getMaterial().isSolid()) {
+							if (world.getBlockState(blockpos2.offset(enumfacing)).getMaterial().isSolid()) {
 								++j3;
 							}
 						}
 
 						if (j3 == 1) {
-							worldIn.setBlockState(blockpos2, Blocks.CHEST.correctFacing(worldIn, blockpos2, Blocks.CHEST.getDefaultState()), 2);
-							TileEntity tileentity1 = worldIn.getTileEntity(blockpos2);
+							world.setBlockState(blockpos2, Blocks.CHEST.correctFacing(world, blockpos2, Blocks.CHEST.getDefaultState()), 2);
+							TileEntity tileentity1 = world.getTileEntity(blockpos2);
 
 							if (tileentity1 instanceof TileEntityChest) {
 								((TileEntityChest) tileentity1).setLootTable(LootTableList.CHESTS_SIMPLE_DUNGEON, rand.nextLong());
@@ -112,8 +112,8 @@ public class WorldGenKepler22bDungeons extends WorldGenerator {
 				}
 			}
 
-			worldIn.setBlockState(position, Blocks.MOB_SPAWNER.getDefaultState(), 2);
-			TileEntity tileentity = worldIn.getTileEntity(position);
+			world.setBlockState(position, Blocks.MOB_SPAWNER.getDefaultState(), 2);
+			TileEntity tileentity = world.getTileEntity(position);
 
 			if (tileentity instanceof TileEntityMobSpawner) {
 				((TileEntityMobSpawner) tileentity).getSpawnerBaseLogic().setEntityId(this.pickMobSpawner(rand));

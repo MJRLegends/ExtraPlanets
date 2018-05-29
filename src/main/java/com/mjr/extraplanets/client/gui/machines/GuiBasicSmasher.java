@@ -29,8 +29,8 @@ public class GuiBasicSmasher extends GuiContainerGC {
 
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiBasicSmasher(InventoryPlayer par1InventoryPlayer, TileEntityBasicSmasher tileEntity) {
-		super(new ContainerBasicSmasher(par1InventoryPlayer, tileEntity, MCUtilities.getClient().player));
+	public GuiBasicSmasher(InventoryPlayer inventoryPlayer, TileEntityBasicSmasher tileEntity) {
+		super(new ContainerBasicSmasher(inventoryPlayer, tileEntity, MCUtilities.getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}

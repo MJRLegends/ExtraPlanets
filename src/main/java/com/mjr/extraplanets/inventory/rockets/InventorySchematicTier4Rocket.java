@@ -43,14 +43,14 @@ public class InventorySchematicTier4Rocket implements IInventoryDefaults {
 
 	@Override
 	public ItemStack decrStackSize(int index, int count) {
-		ItemStack itemstack = ItemStackHelper.getAndSplit(this.stacks, index, count);
+		ItemStack itemStack = ItemStackHelper.getAndSplit(this.stacks, index, count);
 
-		if (!itemstack.isEmpty()) {
+		if (!itemStack.isEmpty()) {
 			this.markDirty();
 			this.eventHandler.onCraftMatrixChanged(this);
 		}
 
-		return itemstack;
+		return itemStack;
 	}
 
 	@Override
@@ -66,8 +66,8 @@ public class InventorySchematicTier4Rocket implements IInventoryDefaults {
 
 	@Override
 	public boolean isEmpty() {
-		for (ItemStack itemstack : this.stacks) {
-			if (!itemstack.isEmpty()) {
+		for (ItemStack itemStack : this.stacks) {
+			if (!itemStack.isEmpty()) {
 				return false;
 			}
 		}
@@ -85,12 +85,12 @@ public class InventorySchematicTier4Rocket implements IInventoryDefaults {
 	}
 
 	@Override
-	public boolean isUsableByPlayer(EntityPlayer par1EntityPlayer) {
+	public boolean isUsableByPlayer(EntityPlayer entityPlayer) {
 		return true;
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int i, ItemStack itemStack) {
 		return false;
 	}
 }

@@ -30,8 +30,8 @@ public class GuiBasicDensifier extends GuiContainerGC {
 	private GuiElementInfoRegion inputTankRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 7, (this.height - this.ySize) / 2 + 28, 16, 38, new ArrayList<String>(), this.width, this.height, this);
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiBasicDensifier(InventoryPlayer par1InventoryPlayer, TileEntityBasicDensifier tileEntity) {
-		super(new ContainerBasicDensifier(par1InventoryPlayer, tileEntity, MCUtilities.getClient().player));
+	public GuiBasicDensifier(InventoryPlayer inventoryPlayer, TileEntityBasicDensifier tileEntity) {
+		super(new ContainerBasicDensifier(inventoryPlayer, tileEntity, MCUtilities.getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}

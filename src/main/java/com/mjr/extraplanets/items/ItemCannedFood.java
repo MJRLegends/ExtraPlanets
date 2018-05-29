@@ -26,8 +26,8 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemCannedFood extends ItemBasicMeta {
 
-	public ItemCannedFood(String assetName) {
-		super(assetName, ExtraPlanets.ItemsTab, getItemList());
+	public ItemCannedFood(String name) {
+		super(name, ExtraPlanets.ItemsTab, getItemList());
 	}
 
 	@Override
@@ -41,14 +41,14 @@ public class ItemCannedFood extends ItemBasicMeta {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> par3List, ITooltipFlag flagIn) {
-		if (par1ItemStack.getItemDamage() < 19) {
-			par3List.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate(this.getUnlocalizedName() + "." + getItemList()[par1ItemStack.getItemDamage()] + ".name"));
+	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> par3List, ITooltipFlag flagIn) {
+		if (itemStack.getItemDamage() < 19) {
+			par3List.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate(this.getUnlocalizedName() + "." + getItemList()[itemStack.getItemDamage()] + ".name"));
 		}
 	}
 
-	public int getHealAmount(ItemStack par1ItemStack) {
-		switch (par1ItemStack.getItemDamage()) {
+	public int getHealAmount(ItemStack itemStack) {
+		switch (itemStack.getItemDamage()) {
 		case 0:
 			return 16;
 		case 1:
@@ -62,8 +62,8 @@ public class ItemCannedFood extends ItemBasicMeta {
 		}
 	}
 
-	public float getSaturationModifier(ItemStack par1ItemStack) {
-		switch (par1ItemStack.getItemDamage()) {
+	public float getSaturationModifier(ItemStack itemStack) {
+		switch (itemStack.getItemDamage()) {
 		case 0:
 			return 0.8F;
 		case 1:
@@ -78,42 +78,42 @@ public class ItemCannedFood extends ItemBasicMeta {
 	}
 
 	@Override
-	public ItemStack onItemUseFinish(ItemStack par1ItemStack, World par2World, EntityLivingBase par3EntityPlayer) {
+	public ItemStack onItemUseFinish(ItemStack itemStack, World par2World, EntityLivingBase par3EntityPlayer) {
 		if (par3EntityPlayer instanceof EntityPlayer) {
-			if (par1ItemStack.getItemDamage() < 5) {
-				par1ItemStack.shrink(1);
+			if (itemStack.getItemDamage() < 5) {
+				itemStack.shrink(1);
 				EntityPlayer entityplayer = (EntityPlayer) par3EntityPlayer;
-				entityplayer.getFoodStats().addStats(this.getHealAmount(par1ItemStack), this.getSaturationModifier(par1ItemStack));
+				entityplayer.getFoodStats().addStats(this.getHealAmount(itemStack), this.getSaturationModifier(itemStack));
 				par2World.playSound((EntityPlayer) null, entityplayer.posX, entityplayer.posY, entityplayer.posZ, SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 0.5F, par2World.rand.nextFloat() * 0.1F + 0.9F);
 				if (!par2World.isRemote) {
 					par3EntityPlayer.entityDropItem(new ItemStack(GCItems.canister, 1, 0), 0.0F);
 				}
-				return par1ItemStack;
+				return itemStack;
 			}
 		}
-		return super.onItemUseFinish(par1ItemStack, par2World, par3EntityPlayer);
+		return super.onItemUseFinish(itemStack, par2World, par3EntityPlayer);
 	}
 
 	@Override
-	public int getMaxItemUseDuration(ItemStack par1ItemStack) {
-		if (par1ItemStack.getItemDamage() < 5) {
+	public int getMaxItemUseDuration(ItemStack itemStack) {
+		if (itemStack.getItemDamage() < 5) {
 			return 32;
 		}
 
-		return super.getMaxItemUseDuration(par1ItemStack);
+		return super.getMaxItemUseDuration(itemStack);
 	}
 
 	@Override
-	public EnumAction getItemUseAction(ItemStack par1ItemStack) {
-		if (par1ItemStack.getItemDamage() < 5) {
+	public EnumAction getItemUseAction(ItemStack itemStack) {
+		if (itemStack.getItemDamage() < 5) {
 			return EnumAction.EAT;
 		}
 
-		return super.getItemUseAction(par1ItemStack);
+		return super.getItemUseAction(itemStack);
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand) {
+	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer playerIn, EnumHand hand) {
 		ItemStack itemStackIn = playerIn.getHeldItem(hand);
 		if (playerIn.canEat(false)) {
 			playerIn.setActiveHand(hand);

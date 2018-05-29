@@ -103,26 +103,27 @@ public class OverlaySolarRadiation extends Overlay {
 		if (top) {
 			if (right) {
 				addX = Math.abs(radiationLevel) >= 80 ? 40 : 40;
-				addY = Math.abs(radiationLevel) >= 80 ? 60: 30;
+				addY = Math.abs(radiationLevel) >= 80 ? 60 : 30;
 				addY = Math.abs(radiationLevel) < 50 ? addY : Math.abs(radiationLevel) >= 80 ? addY + 10 : addY + 20;
 			} else {
 				addX = Math.abs(radiationLevel) >= 80 ? 150 : 130;
 				addX = Math.abs(radiationLevel) >= 50 && Math.abs(radiationLevel) < 80 ? addX - 13 : addX;
 				addY = 30;
 				addY = Math.abs(radiationLevel) >= 20 && Math.abs(radiationLevel) < 40 ? addY + 10 : Math.abs(radiationLevel) >= 40 && Math.abs(radiationLevel) < 80 ? addY + 20 : addY;
-				addY = Math.abs(radiationLevel) >= 60 && Math.abs(radiationLevel) < 80 ? addY + 10 : Math.abs(radiationLevel) >= 80 ? addY + 40 : addY;;
+				addY = Math.abs(radiationLevel) >= 60 && Math.abs(radiationLevel) < 80 ? addY + 10 : Math.abs(radiationLevel) >= 80 ? addY + 40 : addY;
+				;
 			}
 		} else {
 			if (right) {
 				addX = Math.abs(radiationLevel) >= 80 ? 40 : 35;
 				addX = Math.abs(radiationLevel) >= 50 && Math.abs(radiationLevel) < 80 ? addX + 3 : addX;
-				addY = Math.abs(radiationLevel) >= 80 ? -40: -40;
-				addY = Math.abs(radiationLevel) < 50 ? addY - 10 : Math.abs(radiationLevel) >= 80 ? addY +10 : addY;
+				addY = Math.abs(radiationLevel) >= 80 ? -40 : -40;
+				addY = Math.abs(radiationLevel) < 50 ? addY - 10 : Math.abs(radiationLevel) >= 80 ? addY + 10 : addY;
 			} else {
 				addX = Math.abs(radiationLevel) >= 80 ? 205 : 190;
 				addX = Math.abs(radiationLevel) >= 50 && Math.abs(radiationLevel) < 80 ? addX - 15 : addX;
-				addY = Math.abs(radiationLevel) >= 80 ? 60: 50;
-				addY = Math.abs(radiationLevel) < 50 ? addY - 10 : Math.abs(radiationLevel) >= 80 ? addY +10 : Math.abs(radiationLevel) >= 50 && Math.abs(radiationLevel) < 80 ? addY + 10 : addY;
+				addY = Math.abs(radiationLevel) >= 80 ? 60 : 50;
+				addY = Math.abs(radiationLevel) < 50 ? addY - 10 : Math.abs(radiationLevel) >= 80 ? addY + 10 : Math.abs(radiationLevel) >= 50 && Math.abs(radiationLevel) < 80 ? addY + 10 : addY;
 			}
 		}
 		OverlaySolarRadiation.minecraft.fontRenderer.drawString(value, minLeftX + addX - OverlaySolarRadiation.minecraft.fontRenderer.getStringWidth(value), (int) bottomY - radiationLevelScaled

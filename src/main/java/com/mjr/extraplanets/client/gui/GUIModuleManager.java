@@ -210,7 +210,8 @@ public class GUIModuleManager extends GuiContainerGC {
 				temp = TranslateUtilities.translate("gui.module.type.helmet.name");
 			this.fontRenderer.drawString(temp, x, Ytype, this.sideColour);
 			text = TranslateUtilities.translate("gui.module.power.name");
-			this.fontRenderer.drawString(EnergyDisplayHelper.getEnergyDisplayS(ModuleHelper.getModulePassiveCost(module)) + "/s : " + EnergyDisplayHelper.getEnergyDisplayS(ModuleHelper.getModuleUseCost(module))+ " (P:U) ", x, Ypower, this.sideColour);
+			this.fontRenderer.drawString(EnergyDisplayHelper.getEnergyDisplayS(ModuleHelper.getModulePassiveCost(module)) + "/s : " + EnergyDisplayHelper.getEnergyDisplayS(ModuleHelper.getModuleUseCost(module)) + " (P:U) ", x, Ypower,
+					this.sideColour);
 		}
 	}
 

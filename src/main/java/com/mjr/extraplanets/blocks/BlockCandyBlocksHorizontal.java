@@ -56,9 +56,9 @@ public class BlockCandyBlocksHorizontal extends Block implements IDetectableReso
 		}
 	}
 
-	public BlockCandyBlocksHorizontal(String assetName) {
+	public BlockCandyBlocksHorizontal(String name) {
 		super(Material.ROCK);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 		this.setLightLevel(0.5F);
 	}
@@ -69,7 +69,7 @@ public class BlockCandyBlocksHorizontal extends Block implements IDetectableReso
 	}
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
 		return 1.5F;
 	}
 

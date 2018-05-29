@@ -28,8 +28,8 @@ public class GuiUltimateOxygenCompressor extends GuiContainerGC {
 	private GuiElementInfoRegion oxygenInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 112, (this.height - this.ySize) / 2 + 24, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 112, (this.height - this.ySize) / 2 + 37, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiUltimateOxygenCompressor(InventoryPlayer par1InventoryPlayer, TileEntityUltimateOxygenCompressor par2TileEntityAirDistributor) {
-		super(new ContainerUltimateOxygenCompressor(par1InventoryPlayer, par2TileEntityAirDistributor, MCUtilities.getClient().player));
+	public GuiUltimateOxygenCompressor(InventoryPlayer inventoryPlayer, TileEntityUltimateOxygenCompressor par2TileEntityAirDistributor) {
+		super(new ContainerUltimateOxygenCompressor(inventoryPlayer, par2TileEntityAirDistributor, MCUtilities.getClient().player));
 		this.compressor = par2TileEntityAirDistributor;
 		this.ySize = 180;
 	}

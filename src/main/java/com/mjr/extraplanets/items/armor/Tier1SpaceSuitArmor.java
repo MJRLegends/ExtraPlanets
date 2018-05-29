@@ -93,7 +93,7 @@ public class Tier1SpaceSuitArmor extends ElectricArmorBase implements IPressureS
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> list, ITooltipFlag flagIn) {
 		if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
 			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information"));
 			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.2"));
@@ -109,7 +109,7 @@ public class Tier1SpaceSuitArmor extends ElectricArmorBase implements IPressureS
 				list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));
 		} else
 			list.add(EnumColor.AQUA + TranslateUtilities.translateWithFormat("item_desc.spacesuit.module.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSprint.getKeyCode())));
-		super.addInformation(itemStack, worldIn, list, flagIn);
+		super.addInformation(itemStack, world, list, flagIn);
 	}
 
 	public static ModelBiped fillingArmorModel(ModelBiped model, EntityLivingBase entityLiving) {

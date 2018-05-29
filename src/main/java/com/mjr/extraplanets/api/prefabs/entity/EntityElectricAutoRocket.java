@@ -687,13 +687,13 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 	@Override
 	public ItemStack decrStackSize(int index, int count) {
-		ItemStack itemstack = ItemStackHelper.getAndSplit(this.stacks, index, count);
+		ItemStack itemStack = ItemStackHelper.getAndSplit(this.stacks, index, count);
 
-		if (!itemstack.isEmpty()) {
+		if (!itemStack.isEmpty()) {
 			this.markDirty();
 		}
 
-		return itemstack;
+		return itemStack;
 	}
 
 	@Override
@@ -728,7 +728,7 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int i, ItemStack itemStack) {
 		return false;
 	}
 
@@ -738,8 +738,8 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 
 	@Override
 	public boolean isEmpty() {
-		for (ItemStack itemstack : this.stacks) {
-			if (!itemstack.isEmpty()) {
+		for (ItemStack itemStack : this.stacks) {
+			if (!itemStack.isEmpty()) {
 				return false;
 			}
 		}

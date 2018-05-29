@@ -19,19 +19,19 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemTier8Items extends ItemBasicMeta {
 
-	public ItemTier8Items(String assetName) {
-		super(assetName, ExtraPlanets.ItemsTab, getItemList());
+	public ItemTier8Items(String name) {
+		super(name, ExtraPlanets.ItemsTab, getItemList());
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> list, ITooltipFlag flagIn) {
 		if (itemStack != null && itemStack.getItemDamage() == 3) {
 			list.add(EnumColor.GREY + TranslateUtilities.translate("tier8.heavy_duty_plate.name"));
 		}

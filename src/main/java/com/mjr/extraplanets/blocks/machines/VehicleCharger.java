@@ -36,11 +36,11 @@ public class VehicleCharger extends BlockAdvancedTile implements IShiftDescripti
 	public static IMachineSidesProperties MACHINESIDES_RENDERTYPE = IMachineSidesProperties.ONEFACE_HORIZ;
 	public static final PropertyEnum<MachineSidesModel> SIDES = MACHINESIDES_RENDERTYPE.asProperty;
 
-	public VehicleCharger(String assetName) {
+	public VehicleCharger(String name) {
 		super(Material.ROCK);
 		this.setHardness(1.0F);
 		this.setSoundType(SoundType.METAL);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override
@@ -75,16 +75,16 @@ public class VehicleCharger extends BlockAdvancedTile implements IShiftDescripti
 	}
 
 	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
 		final int angle = MathHelper.floor(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
-		worldIn.setBlockState(pos, getStateFromMeta(EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex()), 3);
-		WorldUtil.markAdjacentPadForUpdate(worldIn, pos);
+		world.setBlockState(pos, getStateFromMeta(EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex()), 3);
+		WorldUtil.markAdjacentPadForUpdate(world, pos);
 	}
 
 	@Override
-	public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state) {
-		super.onBlockDestroyedByPlayer(worldIn, pos, state);
-		WorldUtil.markAdjacentPadForUpdate(worldIn, pos);
+	public void onBlockDestroyedByPlayer(World world, BlockPos pos, IBlockState state) {
+		super.onBlockDestroyedByPlayer(world, pos, state);
+		WorldUtil.markAdjacentPadForUpdate(world, pos);
 	}
 
 	@Override
@@ -114,8 +114,8 @@ public class VehicleCharger extends BlockAdvancedTile implements IShiftDescripti
 	}
 
 	@Override
-	public IBlockState getActualState(IBlockState state, IBlockAccess worldIn, BlockPos pos) {
-		TileEntity tile = worldIn.getTileEntity(pos);
+	public IBlockState getActualState(IBlockState state, IBlockAccess world, BlockPos pos) {
+		TileEntity tile = world.getTileEntity(pos);
 
 		return IMachineSides.addPropertyForTile(state, tile, MACHINESIDES_RENDERTYPE, SIDES);
 	}

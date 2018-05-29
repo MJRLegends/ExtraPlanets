@@ -67,9 +67,9 @@ public class StructureComponentVillageField2 extends StructureComponentVillage {
 		}
 	}
 
-	public static StructureComponentVillageField2 func_74900_a(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, EnumFacing par6, int par7) {
+	public static StructureComponentVillageField2 func_74900_a(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random rand, int par3, int par4, int par5, EnumFacing par6, int par7) {
 		final StructureBoundingBox structureboundingbox = StructureBoundingBox.getComponentToAddBoundingBox(par3, par4, par5, 0, 0, 0, 13, 4, 9, par6);
-		return StructureComponentVillage.canVillageGoDeeper(structureboundingbox) && StructureComponent.findIntersecting(par1List, structureboundingbox) == null ? new StructureComponentVillageField2(par0ComponentVillageStartPiece, par7, par2Random,
+		return StructureComponentVillage.canVillageGoDeeper(structureboundingbox) && StructureComponent.findIntersecting(par1List, structureboundingbox) == null ? new StructureComponentVillageField2(par0ComponentVillageStartPiece, par7, rand,
 				structureboundingbox, par6) : null;
 	}
 
@@ -77,7 +77,7 @@ public class StructureComponentVillageField2 extends StructureComponentVillage {
 	 * second Part of Structure generating, this for example places Spiderwebs, Mob Spawners, it closes Mineshafts at the end, it adds Fences...
 	 */
 	@Override
-	public boolean addComponentParts(World par1World, Random par2Random, StructureBoundingBox par3StructureBoundingBox) {
+	public boolean addComponentParts(World par1World, Random rand, StructureBoundingBox par3StructureBoundingBox) {
 		if (this.averageGroundLevel < 0) {
 			this.averageGroundLevel = this.getAverageGroundLevel(par1World, par3StructureBoundingBox);
 
@@ -103,14 +103,14 @@ public class StructureComponentVillageField2 extends StructureComponentVillage {
 		int i;
 
 		for (i = 1; i <= 7; ++i) {
-			this.setBlockState(par1World, this.cropTypeA.getStateFromMeta(MathHelper.getInt(par2Random, 2, 7)), 1, 1, i, par3StructureBoundingBox);
-			this.setBlockState(par1World, this.cropTypeA.getStateFromMeta(MathHelper.getInt(par2Random, 2, 7)), 2, 1, i, par3StructureBoundingBox);
-			this.setBlockState(par1World, this.cropTypeB.getStateFromMeta(MathHelper.getInt(par2Random, 2, 7)), 4, 1, i, par3StructureBoundingBox);
-			this.setBlockState(par1World, this.cropTypeB.getStateFromMeta(MathHelper.getInt(par2Random, 2, 7)), 5, 1, i, par3StructureBoundingBox);
-			this.setBlockState(par1World, this.cropTypeC.getStateFromMeta(MathHelper.getInt(par2Random, 2, 7)), 7, 1, i, par3StructureBoundingBox);
-			this.setBlockState(par1World, this.cropTypeC.getStateFromMeta(MathHelper.getInt(par2Random, 2, 7)), 8, 1, i, par3StructureBoundingBox);
-			this.setBlockState(par1World, this.cropTypeD.getStateFromMeta(MathHelper.getInt(par2Random, 2, 7)), 10, 1, i, par3StructureBoundingBox);
-			this.setBlockState(par1World, this.cropTypeD.getStateFromMeta(MathHelper.getInt(par2Random, 2, 7)), 11, 1, i, par3StructureBoundingBox);
+			this.setBlockState(par1World, this.cropTypeA.getStateFromMeta(MathHelper.getInt(rand, 2, 7)), 1, 1, i, par3StructureBoundingBox);
+			this.setBlockState(par1World, this.cropTypeA.getStateFromMeta(MathHelper.getInt(rand, 2, 7)), 2, 1, i, par3StructureBoundingBox);
+			this.setBlockState(par1World, this.cropTypeB.getStateFromMeta(MathHelper.getInt(rand, 2, 7)), 4, 1, i, par3StructureBoundingBox);
+			this.setBlockState(par1World, this.cropTypeB.getStateFromMeta(MathHelper.getInt(rand, 2, 7)), 5, 1, i, par3StructureBoundingBox);
+			this.setBlockState(par1World, this.cropTypeC.getStateFromMeta(MathHelper.getInt(rand, 2, 7)), 7, 1, i, par3StructureBoundingBox);
+			this.setBlockState(par1World, this.cropTypeC.getStateFromMeta(MathHelper.getInt(rand, 2, 7)), 8, 1, i, par3StructureBoundingBox);
+			this.setBlockState(par1World, this.cropTypeD.getStateFromMeta(MathHelper.getInt(rand, 2, 7)), 10, 1, i, par3StructureBoundingBox);
+			this.setBlockState(par1World, this.cropTypeD.getStateFromMeta(MathHelper.getInt(rand, 2, 7)), 11, 1, i, par3StructureBoundingBox);
 		}
 
 		for (i = 0; i < 9; ++i) {

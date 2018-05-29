@@ -16,7 +16,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateFuelLoader;
 public class ContainerUltimateFuelLoader extends Container {
 	private TileBaseElectricBlock tileEntity;
 
-	public ContainerUltimateFuelLoader(InventoryPlayer par1InventoryPlayer, TileEntityUltimateFuelLoader fuelLoader) {
+	public ContainerUltimateFuelLoader(InventoryPlayer inventoryPlayer, TileEntityUltimateFuelLoader fuelLoader) {
 		this.tileEntity = fuelLoader;
 		this.addSlotToContainer(new SlotSpecific(fuelLoader, 0, 51, 55, IItemElectric.class));
 		this.addSlotToContainer(new Slot(fuelLoader, 1, 7, 12));
@@ -28,12 +28,12 @@ public class ContainerUltimateFuelLoader extends Container {
 
 		for (var6 = 0; var6 < 3; ++var6) {
 			for (var7 = 0; var7 < 9; ++var7) {
-				this.addSlotToContainer(new Slot(par1InventoryPlayer, var7 + var6 * 9 + 9, 8 + var7 * 18, 31 + 58 + var6 * 18));
+				this.addSlotToContainer(new Slot(inventoryPlayer, var7 + var6 * 9 + 9, 8 + var7 * 18, 31 + 58 + var6 * 18));
 			}
 		}
 
 		for (var6 = 0; var6 < 9; ++var6) {
-			this.addSlotToContainer(new Slot(par1InventoryPlayer, var6, 8 + var6 * 18, 31 + 116));
+			this.addSlotToContainer(new Slot(inventoryPlayer, var6, 8 + var6 * 18, 31 + 116));
 		}
 	}
 
@@ -43,7 +43,7 @@ public class ContainerUltimateFuelLoader extends Container {
 	}
 
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par2) {
 		ItemStack var3 = ItemStack.EMPTY;
 		final Slot slot = this.inventorySlots.get(par2);
 
@@ -95,7 +95,7 @@ public class ContainerUltimateFuelLoader extends Container {
 				return ItemStack.EMPTY;
 			}
 
-			slot.onTake(par1EntityPlayer, var5);
+			slot.onTake(entityPlayer, var5);
 		}
 
 		return var3;

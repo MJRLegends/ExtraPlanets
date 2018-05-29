@@ -49,10 +49,10 @@ public class BlockSmasherRecipeCategory implements IRecipeCategory<IRecipeWrappe
 
 	@Override
 	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
-		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
-		itemstacks.init(0, true, 46, 30);
-		itemstacks.init(1, false, 108, 30);
-		itemstacks.set(ingredients);
+		IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
+		itemStacks.init(0, true, 46, 30);
+		itemStacks.init(1, false, 108, 30);
+		itemStacks.set(ingredients);
 	}
 
 	@Override

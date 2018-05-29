@@ -132,15 +132,15 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 	}
 
 	@Override
-	public boolean attackEntityAsMob(Entity entityIn) {
-		boolean flag = super.attackEntityAsMob(entityIn);
+	public boolean attackEntityAsMob(Entity entity) {
+		boolean flag = super.attackEntityAsMob(entity);
 
 		if (flag) {
 			float f = this.world.getDifficultyForLocation(new BlockPos(this)).getAdditionalDifficulty();
 
 			if (this.getHeldItemMainhand() == null) {
 				if (this.isBurning() && this.rand.nextFloat() < f * 0.3F) {
-					entityIn.setFire(2 * (int) f);
+					entity.setFire(2 * (int) f);
 				}
 			}
 		}
@@ -203,16 +203,16 @@ public class EntityEvolvedGiantZombieBoss extends EntityBossBase implements IMob
 	}
 
 	@Override
-	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, par1ItemStack);
-		entityitem.motionY = -2.0D;
-		entityitem.setDefaultPickupDelay();
+	public EntityItem entityDropItem(ItemStack itemStack, float par2) {
+		final EntityItem EntityItem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, itemStack);
+		EntityItem.motionY = -2.0D;
+		EntityItem.setDefaultPickupDelay();
 		if (this.captureDrops) {
-			this.capturedDrops.add(entityitem);
+			this.capturedDrops.add(EntityItem);
 		} else {
-			this.world.spawnEntity(entityitem);
+			this.world.spawnEntity(EntityItem);
 		}
-		return entityitem;
+		return EntityItem;
 	}
 
 	@Override

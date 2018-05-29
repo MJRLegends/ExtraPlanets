@@ -46,8 +46,8 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	private boolean wasOnGround;
 	private static final DataParameter<Integer> SLIME_SIZE = EntityDataManager.<Integer> createKey(EntityEvolvedIceSlimeBoss.class, DataSerializers.VARINT);
 
-	public EntityEvolvedIceSlimeBoss(World worldIn) {
-		super(worldIn);
+	public EntityEvolvedIceSlimeBoss(World world) {
+		super(world);
 		this.moveHelper = new EntityEvolvedIceSlimeBoss.SlimeMoveHelper(this);
 		this.tasks.addTask(1, new EntityEvolvedIceSlimeBoss.AISlimeFloat(this));
 		this.tasks.addTask(2, new EntityEvolvedIceSlimeBoss.AISlimeAttack(this));
@@ -197,26 +197,26 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	 * Applies a velocity to each of the entities pushing them away from each other. Args: entity
 	 */
 	@Override
-	public void applyEntityCollision(Entity entityIn) {
-		super.applyEntityCollision(entityIn);
+	public void applyEntityCollision(Entity entity) {
+		super.applyEntityCollision(entity);
 	}
 
 	/**
 	 * Called by a player entity when they collide with an entity
 	 */
 	@Override
-	public void onCollideWithPlayer(EntityPlayer entityIn) {
+	public void onCollideWithPlayer(EntityPlayer entity) {
 		if (this.canDamagePlayer()) {
-			this.dealDamage(entityIn);
+			this.dealDamage(entity);
 		}
 	}
 
-	protected void dealDamage(EntityLivingBase entityIn) {
+	protected void dealDamage(EntityLivingBase entity) {
 		int i = this.getSlimeSize();
 
-		if (this.canEntityBeSeen(entityIn) && this.getDistanceSq(entityIn) < 0.6D * i * 0.6D * i && entityIn.attackEntityFrom(DamageSource.causeMobDamage(this), this.getAttackStrength())) {
+		if (this.canEntityBeSeen(entity) && this.getDistanceSq(entity) < 0.6D * i * 0.6D * i && entity.attackEntityFrom(DamageSource.causeMobDamage(this), this.getAttackStrength())) {
 			this.playSound(SoundEvents.ENTITY_SLIME_ATTACK, 1.0F, (this.rand.nextFloat() - this.rand.nextFloat()) * 0.2F + 1.0F);
-			this.applyEnchantments(this, entityIn);
+			this.applyEnchantments(this, entity);
 		}
 	}
 
@@ -513,16 +513,16 @@ public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntity
 	}
 
 	@Override
-	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, par1ItemStack);
-		entityitem.motionY = -2.0D;
-		entityitem.setDefaultPickupDelay();
+	public EntityItem entityDropItem(ItemStack itemStack, float par2) {
+		final EntityItem EntityItem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, itemStack);
+		EntityItem.motionY = -2.0D;
+		EntityItem.setDefaultPickupDelay();
 		if (this.captureDrops) {
-			this.capturedDrops.add(entityitem);
+			this.capturedDrops.add(EntityItem);
 		} else {
-			this.world.spawnEntity(entityitem);
+			this.world.spawnEntity(EntityItem);
 		}
-		return entityitem;
+		return EntityItem;
 	}
 
 	@Override

@@ -74,13 +74,13 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
 
 	@Override
 	public ItemStack decrStackSize(int index, int count) {
-		ItemStack itemstack = ItemStackHelper.getAndSplit(this.stacks, index, count);
+		ItemStack itemStack = ItemStackHelper.getAndSplit(this.stacks, index, count);
 
-		if (!itemstack.isEmpty()) {
+		if (!itemStack.isEmpty()) {
 			this.markDirty();
 		}
 
-		return itemstack;
+		return itemStack;
 	}
 
 	@Override
@@ -105,8 +105,8 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
 
 	@Override
 	public boolean isEmpty() {
-		for (ItemStack itemstack : this.stacks) {
-			if (!itemstack.isEmpty()) {
+		for (ItemStack itemStack : this.stacks) {
+			if (!itemStack.isEmpty()) {
 				return false;
 			}
 		}
@@ -125,8 +125,8 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
 	}
 
 	@Override
-	public boolean isUsableByPlayer(EntityPlayer par1EntityPlayer) {
-		return this.world.getTileEntity(this.getPos()) == this && par1EntityPlayer.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D, this.getPos().getZ() + 0.5D) <= 64.0D;
+	public boolean isUsableByPlayer(EntityPlayer entityPlayer) {
+		return this.world.getTileEntity(this.getPos()) == this && entityPlayer.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D, this.getPos().getZ() + 0.5D) <= 64.0D;
 	}
 
 	// ISidedInventory Implementation:
@@ -137,13 +137,13 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
 	}
 
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canInsertItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItemDamage() < itemstack.getMaxDamage();
+				return itemStack.getItemDamage() < itemStack.getMaxDamage();
 			case 1:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
+				return ItemElectricBase.isElectricItemCharged(itemStack);
 			default:
 				return false;
 			}
@@ -152,13 +152,13 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
 	}
 
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canExtractItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return itemstack.getItemDamage() == itemstack.getMaxDamage();
+				return itemStack.getItemDamage() == itemStack.getMaxDamage();
 			case 1:
-				return ItemElectricBase.isElectricItemEmpty(itemstack);
+				return ItemElectricBase.isElectricItemEmpty(itemStack);
 			default:
 				return false;
 			}
@@ -167,12 +167,12 @@ public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen imple
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
 		switch (slotID) {
 		case 0:
-			return itemstack.getItem() instanceof ItemOxygenTank;
+			return itemStack.getItem() instanceof ItemOxygenTank;
 		case 1:
-			return ItemElectricBase.isElectricItem(itemstack.getItem());
+			return ItemElectricBase.isElectricItem(itemStack.getItem());
 		}
 
 		return false;

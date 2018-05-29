@@ -69,7 +69,7 @@ public class Tier1SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> list, ITooltipFlag flagIn) {
 		if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
 			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information"));
 			list.add(EnumColor.AQUA + TranslateUtilities.translate("space.suit.information.2"));
@@ -81,11 +81,11 @@ public class Tier1SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 			list.add(EnumColor.YELLOW + TranslateUtilities.translateWithFormat("item_desc.spacesuit.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSneak.getKeyCode())));
 		if (Keyboard.isKeyDown(Keyboard.KEY_LCONTROL)) {
 			list.add(EnumColor.ORANGE + TranslateUtilities.translate("gui.module_list.name") + ":");
-			for(Module module : ModuleHelper.getModules(itemStack))
-				list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));			
+			for (Module module : ModuleHelper.getModules(itemStack))
+				list.add(EnumColor.GREY + TranslateUtilities.translate("gui.module." + module.getName() + ".name"));
 		} else
 			list.add(EnumColor.AQUA + TranslateUtilities.translateWithFormat("item_desc.spacesuit.module.shift.name", GameSettings.getKeyDisplayString(FMLClientHandler.instance().getClient().gameSettings.keyBindSprint.getKeyCode())));
-		super.addInformation(itemStack, worldIn, list, flagIn);
+		super.addInformation(itemStack, world, list, flagIn);
 	}
 
 	public static ModelBiped fillingArmorModel(ModelBiped model, EntityLivingBase entityLiving) {
@@ -110,6 +110,7 @@ public class Tier1SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 		return armorModel;
 	}
 
+	@Override
 	public double getJetpackAccelSpeed() {
 		return 0.15D;
 	}

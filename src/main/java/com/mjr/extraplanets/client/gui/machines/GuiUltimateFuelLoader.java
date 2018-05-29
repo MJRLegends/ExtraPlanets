@@ -30,8 +30,8 @@ public class GuiUltimateFuelLoader extends GuiContainerGC {
 	private GuiButton buttonLoadFuel;
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 112, (this.height - this.ySize) / 2 + 65, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiUltimateFuelLoader(InventoryPlayer par1InventoryPlayer, TileEntityUltimateFuelLoader par2TileEntityAirDistributor) {
-		super(new ContainerUltimateFuelLoader(par1InventoryPlayer, par2TileEntityAirDistributor));
+	public GuiUltimateFuelLoader(InventoryPlayer inventoryPlayer, TileEntityUltimateFuelLoader par2TileEntityAirDistributor) {
+		super(new ContainerUltimateFuelLoader(inventoryPlayer, par2TileEntityAirDistributor));
 		this.fuelLoader = par2TileEntityAirDistributor;
 		this.ySize = 180;
 	}

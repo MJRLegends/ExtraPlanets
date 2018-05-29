@@ -41,7 +41,7 @@ public class ItemSchematicMarsRover extends ItemHangingEntity implements ISchema
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
@@ -52,7 +52,7 @@ public class ItemSchematicMarsRover extends ItemHangingEntity implements ISchema
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> list, ITooltipFlag flagIn) {
 		list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.mars.rover.name"));
 	}
 
@@ -62,17 +62,17 @@ public class ItemSchematicMarsRover extends ItemHangingEntity implements ISchema
 	}
 
 	@Override
-	public EnumActionResult onItemUse(EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+	public EnumActionResult onItemUse(EntityPlayer playerIn, World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		ItemStack stack = playerIn.getHeldItem(hand);
 		BlockPos blockpos = pos.offset(facing);
 
 		if (facing != EnumFacing.DOWN && facing != EnumFacing.UP && playerIn.canPlayerEdit(blockpos, facing, stack)) {
-			EntityHangingSchematic entityhanging = this.createEntity(worldIn, blockpos, facing, this.getIndex(stack.getItemDamage()));
+			EntityHangingSchematic entityhanging = this.createEntity(world, blockpos, facing, this.getIndex(stack.getItemDamage()));
 
 			if (entityhanging != null && entityhanging.onValidSurface()) {
-				if (!worldIn.isRemote) {
-					worldIn.spawnEntity(entityhanging);
-					entityhanging.sendToClient(worldIn, blockpos);
+				if (!world.isRemote) {
+					world.spawnEntity(entityhanging);
+					entityhanging.sendToClient(world, blockpos);
 				}
 
 				stack.shrink(1);
@@ -84,8 +84,8 @@ public class ItemSchematicMarsRover extends ItemHangingEntity implements ISchema
 		}
 	}
 
-	private EntityHangingSchematic createEntity(World worldIn, BlockPos pos, EnumFacing clickedSide, int index) {
-		return new EntityHangingSchematic(worldIn, pos, clickedSide, index);
+	private EntityHangingSchematic createEntity(World world, BlockPos pos, EnumFacing clickedSide, int index) {
+		return new EntityHangingSchematic(world, pos, clickedSide, index);
 	}
 
 	/**

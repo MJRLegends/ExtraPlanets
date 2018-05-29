@@ -45,11 +45,11 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	}
 
 	@Override
-	public boolean canBlockStay(World worldIn, BlockPos pos, IBlockState state) {
-		return super.canBlockStay(worldIn, pos, state);
+	public boolean canBlockStay(World world, BlockPos pos, IBlockState state) {
+		return super.canBlockStay(world, pos, state);
 	}
 
-	public boolean isReplaceable(World worldIn, BlockPos pos) {
+	public boolean isReplaceable(World world, BlockPos pos) {
 		return true;
 	}
 
@@ -63,13 +63,13 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 		return 1 + random.nextInt(fortune * 2 + 1);
 	}
 
-	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te) {
-		super.harvestBlock(worldIn, player, pos, state, te, null);
+	public void harvestBlock(World world, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te) {
+		super.harvestBlock(world, player, pos, state, te, null);
 
 	}
 
-	public int getDamageValue(World worldIn, BlockPos pos) {
-		IBlockState iblockstate = worldIn.getBlockState(pos);
+	public int getDamageValue(World world, BlockPos pos) {
+		IBlockState iblockstate = world.getBlockState(pos);
 		return iblockstate.getBlock().getMetaFromState(iblockstate);
 	}
 
@@ -90,7 +90,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	}
 
 	@Override
-	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
+	public boolean canGrow(World world, BlockPos pos, IBlockState state, boolean isClient) {
 		if (this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_BLUE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_GREEN_TALL.getMeta()
 				&& this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_PURPLE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_RED_TALL.getMeta()
 				&& this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_YELLOW_TALL.getMeta())
@@ -100,16 +100,16 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	}
 
 	@Override
-	public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, IBlockState state) {
+	public boolean canUseBonemeal(World world, Random rand, BlockPos pos, IBlockState state) {
 		return true;
 	}
 
 	@Override
-	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-		if (this.canPlaceBlockAt(worldIn, pos) && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_BLUE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_GREEN_TALL.getMeta()
+	public void grow(World world, Random rand, BlockPos pos, IBlockState state) {
+		if (this.canPlaceBlockAt(world, pos) && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_BLUE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_GREEN_TALL.getMeta()
 				&& this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_PURPLE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_RED_TALL.getMeta()
 				&& this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_YELLOW_TALL.getMeta()) {
-			worldIn.setBlockState(pos, this.getStateFromMeta(this.getMetaFromState(state) + 1));
+			world.setBlockState(pos, this.getStateFromMeta(this.getMetaFromState(state) + 1));
 		}
 	}
 

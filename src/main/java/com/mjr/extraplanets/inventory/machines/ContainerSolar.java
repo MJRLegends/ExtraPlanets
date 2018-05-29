@@ -14,7 +14,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
 public class ContainerSolar extends Container {
 	private TileEntitySolar tileEntity;
 
-	public ContainerSolar(InventoryPlayer par1InventoryPlayer, TileEntitySolar solarGen) {
+	public ContainerSolar(InventoryPlayer inventoryPlayer, TileEntitySolar solarGen) {
 		this.tileEntity = solarGen;
 		this.addSlotToContainer(new SlotSpecific(solarGen, 0, 152, 83, IItemElectric.class));
 
@@ -25,12 +25,12 @@ public class ContainerSolar extends Container {
 
 		for (var6 = 0; var6 < 3; ++var6) {
 			for (var7 = 0; var7 < 9; ++var7) {
-				this.addSlotToContainer(new Slot(par1InventoryPlayer, var7 + var6 * 9 + 9, 8 + var7 * 18, 51 + 68 + var6 * 18));
+				this.addSlotToContainer(new Slot(inventoryPlayer, var7 + var6 * 9 + 9, 8 + var7 * 18, 51 + 68 + var6 * 18));
 			}
 		}
 
 		for (var6 = 0; var6 < 9; ++var6) {
-			this.addSlotToContainer(new Slot(par1InventoryPlayer, var6, 8 + var6 * 18, 61 + 116));
+			this.addSlotToContainer(new Slot(inventoryPlayer, var6, 8 + var6 * 18, 61 + 116));
 		}
 	}
 
@@ -40,7 +40,7 @@ public class ContainerSolar extends Container {
 	}
 
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par1) {
 		ItemStack var2 = ItemStack.EMPTY;
 		final Slot slot = this.inventorySlots.get(par1);
 		final int b = this.inventorySlots.size();
@@ -88,7 +88,7 @@ public class ContainerSolar extends Container {
 				return ItemStack.EMPTY;
 			}
 
-			slot.onTake(par1EntityPlayer, stack);
+			slot.onTake(entityPlayer, stack);
 		}
 
 		return var2;

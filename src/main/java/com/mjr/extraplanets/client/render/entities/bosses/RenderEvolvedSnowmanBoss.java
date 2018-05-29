@@ -14,8 +14,8 @@ import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 public class RenderEvolvedSnowmanBoss extends RenderLiving<EntityEvolvedSnowmanBoss> {
 	private static final ResourceLocation snowManTextures = new ResourceLocation("textures/entity/snowman.png");
 
-	public RenderEvolvedSnowmanBoss(RenderManager renderManagerIn) {
-		super(renderManagerIn, new ModelEvolvedSnowmanBoss(), 0.5F);
+	public RenderEvolvedSnowmanBoss(RenderManager renderManager) {
+		super(renderManager, new ModelEvolvedSnowmanBoss(), 0.5F);
 	}
 
 	@Override
@@ -29,12 +29,12 @@ public class RenderEvolvedSnowmanBoss extends RenderLiving<EntityEvolvedSnowmanB
 	}
 
 	@Override
-	protected void preRenderCallback(EntityEvolvedSnowmanBoss entitylivingbaseIn, float partialTickTime) {
+	protected void preRenderCallback(EntityEvolvedSnowmanBoss entityLiving, float partialTickTime) {
 		float f = 4.0F;
 		float f1 = (10.0F + f) / 2.0F;
 		float f2 = (10.0F + 1.0F / f) / 2.0F;
 		GlStateManager.scale(f2, f1, f2);
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-		GlStateManager.rotate((float) (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F + (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F - Math.pow(entitylivingbaseIn.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
+		GlStateManager.rotate((float) (Math.pow(entityLiving.deathTicks, 2) / 5.0F + (Math.pow(entityLiving.deathTicks, 2) / 5.0F - Math.pow(entityLiving.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
 	}
 }

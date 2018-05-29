@@ -38,13 +38,13 @@ public class StructureComponentVillageField extends StructureComponentVillage {
 		this.averageGroundLevel = nbt.getInteger("AvgGroundLevel");
 	}
 
-	public static StructureComponentVillageField func_74900_a(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, EnumFacing par6, int par7) {
+	public static StructureComponentVillageField func_74900_a(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random rand, int par3, int par4, int par5, EnumFacing par6, int par7) {
 		final StructureBoundingBox var8 = StructureBoundingBox.getComponentToAddBoundingBox(par3, par4, par5, 0, 0, 0, 13, 4, 9, par6);
-		return StructureComponent.findIntersecting(par1List, var8) == null ? new StructureComponentVillageField(par0ComponentVillageStartPiece, par7, par2Random, var8, par6) : null;
+		return StructureComponent.findIntersecting(par1List, var8) == null ? new StructureComponentVillageField(par0ComponentVillageStartPiece, par7, rand, var8, par6) : null;
 	}
 
 	@Override
-	public boolean addComponentParts(World par1World, Random par2Random, StructureBoundingBox par3StructureBoundingBox) {
+	public boolean addComponentParts(World par1World, Random rand, StructureBoundingBox par3StructureBoundingBox) {
 		if (this.averageGroundLevel < 0) {
 			this.averageGroundLevel = this.getAverageGroundLevel(par1World, par3StructureBoundingBox);
 
@@ -72,8 +72,8 @@ public class StructureComponentVillageField extends StructureComponentVillage {
 		for (var4 = 1; var4 <= 7; ++var4) {
 			for (int i = 1; i < 12; i++) {
 				if (i % 3 != 0) {
-					if (par2Random.nextInt(3) == 0) {
-						this.setBlockState(par1World, Blocks.SAPLING.getStateFromMeta(MathHelper.getInt(par2Random, 0, 2)), i, 1, var4, par3StructureBoundingBox);
+					if (rand.nextInt(3) == 0) {
+						this.setBlockState(par1World, Blocks.SAPLING.getStateFromMeta(MathHelper.getInt(rand, 0, 2)), i, 1, var4, par3StructureBoundingBox);
 					}
 				}
 			}

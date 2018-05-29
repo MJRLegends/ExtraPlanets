@@ -122,8 +122,8 @@ public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedA
 	}
 
 	@Override
-	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, par1ItemStack);
+	public EntityItem entityDropItem(ItemStack itemStack, float par2) {
+		final EntityItem entityitem = new EntityItem(this.world, this.posX, this.posY + par2, this.posZ, itemStack);
 		entityitem.motionY = -2.0D;
 		entityitem.setDefaultPickupDelay();
 		if (this.captureDrops) {

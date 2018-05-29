@@ -11,14 +11,14 @@ import com.mjr.mjrlegendslib.item.ItemBasicMeta;
 
 public class ItemModuleItems extends ItemBasicMeta {
 
-	public ItemModuleItems(String assetName) {
-		super(assetName, ExtraPlanets.ItemsTab, getItemList());
+	public ItemModuleItems(String name) {
+		super(name, ExtraPlanets.ItemsTab, getItemList());
 		this.setMaxStackSize(1);
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 

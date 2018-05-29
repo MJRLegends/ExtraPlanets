@@ -26,34 +26,33 @@ public class ModuleOxygenTankSwitch extends Module {
 
 	@Override
 	public void tickServer(EntityPlayerMP player) {
-        GCPlayerStats stats = GCPlayerStats.get(player);
+		GCPlayerStats stats = GCPlayerStats.get(player);
 		final ItemStack tankInSlot = stats.getExtendedInventory().getStackInSlot(2);
-        final ItemStack tankInSlot2 = stats.getExtendedInventory().getStackInSlot(3);
-        
-        if(tankInSlot.getItemDamage() == tankInSlot.getMaxDamage()){
-        	switchTanks(player, 2, stats);
-        }
-        if(tankInSlot2.getItemDamage() == tankInSlot.getMaxDamage()){
-        	switchTanks(player, 3, stats);
-        }
+		final ItemStack tankInSlot2 = stats.getExtendedInventory().getStackInSlot(3);
+
+		if (tankInSlot.getItemDamage() == tankInSlot.getMaxDamage()) {
+			switchTanks(player, 2, stats);
+		}
+		if (tankInSlot2.getItemDamage() == tankInSlot.getMaxDamage()) {
+			switchTanks(player, 3, stats);
+		}
 	}
-	
-	public void switchTanks(EntityPlayerMP player, int tankSlot, GCPlayerStats stats){
+
+	public void switchTanks(EntityPlayerMP player, int tankSlot, GCPlayerStats stats) {
 		final ItemStack tankInSlot = stats.getExtendedInventory().getStackInSlot(tankSlot);
 		boolean removed = true;
-		if (!tankInSlot.isEmpty())
-        {
+		if (!tankInSlot.isEmpty()) {
 			removed = player.inventory.addItemStackToInventory(tankInSlot);
-            if(removed)
-            	stats.getExtendedInventory().setInventorySlotContents(tankSlot, ItemStack.EMPTY);
-        }
-		if(removed){
+			if (removed)
+				stats.getExtendedInventory().setInventorySlotContents(tankSlot, ItemStack.EMPTY);
+		}
+		if (removed) {
 			boolean replaced = false;
 			for (int i = 0; i < player.inventory.getSizeInventory(); i++) {
-				if(replaced)
+				if (replaced)
 					return;
 				ItemStack testStack = player.inventory.getStackInSlot(i);
-				if(!testStack.isEmpty() && testStack.getItem() instanceof ItemOxygenTank && testStack.getItemDamage() != testStack.getMaxDamage()){
+				if (!testStack.isEmpty() && testStack.getItem() instanceof ItemOxygenTank && testStack.getItemDamage() != testStack.getMaxDamage()) {
 					stats.getExtendedInventory().setInventorySlotContents(tankSlot, testStack);
 					player.inventory.setInventorySlotContents(i, ItemStack.EMPTY);
 					replaced = true;

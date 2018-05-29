@@ -33,18 +33,18 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class ItemSchematicTier8Rocket extends ItemHangingEntity implements ISchematicItem, ISortableItem {
 	private static int indexOffset = 0;
 
-	public ItemSchematicTier8Rocket(String assetName) {
+	public ItemSchematicTier8Rocket(String name) {
 		super(EntityHangingSchematic.class);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		this.setMaxStackSize(1);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
@@ -55,7 +55,7 @@ public class ItemSchematicTier8Rocket extends ItemHangingEntity implements ISche
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> list, ITooltipFlag flagIn) {
 		list.add(EnumColor.GREY + TranslateUtilities.translate("schematic.tier8.rocket.name"));
 	}
 
@@ -65,18 +65,18 @@ public class ItemSchematicTier8Rocket extends ItemHangingEntity implements ISche
 	}
 
 	@Override
-	public EnumActionResult onItemUse(EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+	public EnumActionResult onItemUse(EntityPlayer playerIn, World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		ItemStack stack = playerIn.getHeldItem(hand);
 		BlockPos blockpos = pos.offset(facing);
 
 		if (facing != EnumFacing.DOWN && facing != EnumFacing.UP && playerIn.canPlayerEdit(blockpos, facing, stack)) {
-			EntityHangingSchematic entityhanging = this.createEntity(worldIn, blockpos, facing, this.getIndex(stack.getItemDamage()));
+			EntityHangingSchematic entityhanging = this.createEntity(world, blockpos, facing, this.getIndex(stack.getItemDamage()));
 
 			if (entityhanging != null && entityhanging.onValidSurface()) {
-				if (!worldIn.isRemote) {
+				if (!world.isRemote) {
 					entityhanging.playPlaceSound();
-					worldIn.spawnEntity(entityhanging);
-					entityhanging.sendToClient(worldIn, blockpos);
+					world.spawnEntity(entityhanging);
+					entityhanging.sendToClient(world, blockpos);
 				}
 
 				stack.shrink(1);
@@ -88,8 +88,8 @@ public class ItemSchematicTier8Rocket extends ItemHangingEntity implements ISche
 		}
 	}
 
-	private EntityHangingSchematic createEntity(World worldIn, BlockPos pos, EnumFacing clickedSide, int index) {
-		return new EntityHangingSchematic(worldIn, pos, clickedSide, index);
+	private EntityHangingSchematic createEntity(World world, BlockPos pos, EnumFacing clickedSide, int index) {
+		return new EntityHangingSchematic(world, pos, clickedSide, index);
 	}
 
 	/**

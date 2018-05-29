@@ -62,7 +62,7 @@ public class StructureComponentVillageWell extends StructureComponentVillage {
 	}
 
 	@Override
-	public boolean addComponentParts(World par1World, Random par2Random, StructureBoundingBox par3StructureBoundingBox) {
+	public boolean addComponentParts(World par1World, Random rand, StructureBoundingBox par3StructureBoundingBox) {
 		if (this.averageGroundLevel < 0) {
 			this.averageGroundLevel = this.getAverageGroundLevel(par1World, par3StructureBoundingBox);
 

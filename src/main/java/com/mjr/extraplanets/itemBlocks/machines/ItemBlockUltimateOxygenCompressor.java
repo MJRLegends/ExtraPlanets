@@ -19,12 +19,12 @@ public class ItemBlockUltimateOxygenCompressor extends ItemBlockDesc {
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack itemstack) {
+	public String getUnlocalizedName(ItemStack itemStack) {
 		int metadata = 0;
 
-		if (itemstack.getItemDamage() >= UltimateOxygenCompressor.OXYGEN_DECOMPRESSOR_METADATA) {
+		if (itemStack.getItemDamage() >= UltimateOxygenCompressor.OXYGEN_DECOMPRESSOR_METADATA) {
 			metadata = 1;
-		} else if (itemstack.getItemDamage() >= UltimateOxygenCompressor.OXYGEN_COMPRESSOR_METADATA) {
+		} else if (itemStack.getItemDamage() >= UltimateOxygenCompressor.OXYGEN_COMPRESSOR_METADATA) {
 			metadata = 0;
 		}
 

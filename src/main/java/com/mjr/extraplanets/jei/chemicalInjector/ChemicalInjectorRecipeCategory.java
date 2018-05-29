@@ -49,12 +49,12 @@ public class ChemicalInjectorRecipeCategory implements IRecipeCategory<IRecipeWr
 
 	@Override
 	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
-		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
+		IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 
-		itemstacks.init(0, true, 26, 30);
-		itemstacks.init(1, true, 66, 30);
-		itemstacks.init(2, false, 116, 30);
-		itemstacks.set(ingredients);
+		itemStacks.init(0, true, 26, 30);
+		itemStacks.init(1, true, 66, 30);
+		itemStacks.init(2, false, 116, 30);
+		itemStacks.set(ingredients);
 	}
 
 	@Override

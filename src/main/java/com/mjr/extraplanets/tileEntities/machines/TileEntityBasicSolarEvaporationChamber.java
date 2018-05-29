@@ -59,8 +59,8 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	}
 
 	public boolean canProcess() {
-		ItemStack itemstack = this.producingStack;
-		if (itemstack == null) {
+		ItemStack itemStack = this.producingStack;
+		if (itemStack == null) {
 			return false;
 		}
 		if (this.stacks.get(1).isEmpty())
@@ -72,14 +72,14 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	}
 
 	public boolean canOutput() {
-		ItemStack itemstack = this.producingStack;
-		if (itemstack.isEmpty()) {
+		ItemStack itemStack = this.producingStack;
+		if (itemStack.isEmpty()) {
 			return false;
 		}
 		if (this.stacks.get(2).isEmpty()) {
 			return true;
 		}
-		if (!this.stacks.get(2).isItemEqual(itemstack)) {
+		if (!this.stacks.get(2).isItemEqual(itemStack)) {
 			return false;
 		}
 		int result = this.stacks.get(2).isEmpty() ? 0 : this.stacks.get(2).getCount() + this.producingStack.getCount();
@@ -160,14 +160,14 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	}
 
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canInsertItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (itemStack != null && this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
+				return ItemElectricBase.isElectricItemCharged(itemStack);
 			case 1:
 				for (ItemStack test : ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidItems) {
-					if (test.isItemEqual(itemstack)) {
+					if (test.isItemEqual(itemStack)) {
 						return true;
 					}
 				}
@@ -179,13 +179,13 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	}
 
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canExtractItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (itemStack != null && this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
+				return ItemElectricBase.isElectricItemEmpty(itemStack) || !this.shouldPullEnergy();
 			case 2:
-				return itemstack.getItem() == this.producingStack.getItem();
+				return itemStack.getItem() == this.producingStack.getItem();
 			default:
 				return false;
 			}
@@ -194,18 +194,18 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
 		switch (slotID) {
 		case 0:
-			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
+			return itemStack != null && ItemElectricBase.isElectricItem(itemStack.getItem());
 		case 1:
 			for (ItemStack test : ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidItems) {
-				if (test.isItemEqual(itemstack)) {
+				if (test.isItemEqual(itemStack)) {
 					return true;
 				}
 			}
 		case 2:
-			return itemstack.getItem() == this.producingStack.getItem();
+			return itemStack.getItem() == this.producingStack.getItem();
 		}
 		return false;
 	}

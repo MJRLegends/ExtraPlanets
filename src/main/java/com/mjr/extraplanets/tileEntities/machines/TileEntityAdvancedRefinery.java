@@ -177,15 +177,15 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	}
 
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canInsertItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (itemStack != null && this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return ItemElectricBase.isElectricItemCharged(itemstack);
+				return ItemElectricBase.isElectricItemCharged(itemStack);
 			case 1:
-				return FluidUtil.isOilContainerAny(itemstack);
+				return FluidUtil.isOilContainerAny(itemStack);
 			case 2:
-				return FluidUtil.isPartialContainer(itemstack, GCItems.fuelCanister);
+				return FluidUtil.isPartialContainer(itemStack, GCItems.fuelCanister);
 			default:
 				return false;
 			}
@@ -194,15 +194,15 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	}
 
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		if (itemstack != null && this.isItemValidForSlot(slotID, itemstack)) {
+	public boolean canExtractItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		if (itemStack != null && this.isItemValidForSlot(slotID, itemStack)) {
 			switch (slotID) {
 			case 0:
-				return ItemElectricBase.isElectricItemEmpty(itemstack) || !this.shouldPullEnergy();
+				return ItemElectricBase.isElectricItemEmpty(itemStack) || !this.shouldPullEnergy();
 			case 1:
-				return FluidUtil.isEmptyContainer(itemstack);
+				return FluidUtil.isEmptyContainer(itemStack);
 			case 2:
-				return FluidUtil.isFullContainer(itemstack);
+				return FluidUtil.isFullContainer(itemStack);
 			default:
 				return false;
 			}
@@ -211,13 +211,13 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
 		switch (slotID) {
 		case 0:
-			return itemstack != null && ItemElectricBase.isElectricItem(itemstack.getItem());
+			return itemStack != null && ItemElectricBase.isElectricItem(itemStack.getItem());
 		case 1:
 		case 2:
-			return FluidUtil.isValidContainer(itemstack);
+			return FluidUtil.isValidContainer(itemStack);
 		}
 
 		return false;

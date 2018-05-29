@@ -64,9 +64,9 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 		}
 	}
 
-	public BlockBasicKepler22b(String assetName) {
+	public BlockBasicKepler22b(String name) {
 		super(Material.ROCK);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
@@ -83,8 +83,8 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	}
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		IBlockState state = worldIn.getBlockState(pos);
+	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
+		IBlockState state = world.getBlockState(pos);
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DIRT)
 			return 0.5F;
 		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL

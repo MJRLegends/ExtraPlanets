@@ -16,8 +16,8 @@ import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
 public class RenderEvolvedFireBatBoss extends RenderLiving<EntityEvolvedFireBatBoss> {
 	private static final ResourceLocation BAT_TEXTURES = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/fire_bat.png");
 
-	public RenderEvolvedFireBatBoss(RenderManager renderManagerIn) {
-		super(renderManagerIn, new ModelEvolvedFireBatBoss(), 0.25F);
+	public RenderEvolvedFireBatBoss(RenderManager renderManager) {
+		super(renderManager, new ModelEvolvedFireBatBoss(), 0.25F);
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class RenderEvolvedFireBatBoss extends RenderLiving<EntityEvolvedFireBatB
 	}
 
 	@Override
-	protected void preRenderCallback(EntityEvolvedFireBatBoss entitylivingbaseIn, float partialTickTime) {
+	protected void preRenderCallback(EntityEvolvedFireBatBoss entityLiving, float partialTickTime) {
 		GlStateManager.scale(8.35F, 8.35F, 8.35F);
 		GlStateManager.translate(0.0F, 0.9F, 0.0F);
 	}

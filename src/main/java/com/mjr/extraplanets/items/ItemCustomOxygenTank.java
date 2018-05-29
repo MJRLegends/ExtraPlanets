@@ -26,11 +26,11 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemCustomOxygenTank extends ItemOxygenTank {
-	public ItemCustomOxygenTank(int tier, String assetName) {
-		super(tier, assetName);
+	public ItemCustomOxygenTank(int tier, String name) {
+		super(tier, name);
 		this.setMaxStackSize(1);
 		this.setMaxDamage(tier * 900);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setNoRepair();
 	}
 
@@ -51,13 +51,13 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
 	@Override
-	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-		tooltip.add(TranslateUtilities.translate("gui.tank.oxygen_remaining") + ": " + (par1ItemStack.getMaxDamage() - par1ItemStack.getItemDamage()));
+	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> tooltip, ITooltipFlag flagIn) {
+		tooltip.add(TranslateUtilities.translate("gui.tank.oxygen_remaining") + ": " + (itemStack.getMaxDamage() - itemStack.getItemDamage()));
 	}
 
 	@Override
@@ -66,7 +66,7 @@ public class ItemCustomOxygenTank extends ItemOxygenTank {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand hand) {
+	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer playerIn, EnumHand hand) {
 		ItemStack itemStackIn = playerIn.getHeldItem(hand);
 		if (playerIn instanceof EntityPlayerMP) {
 			GCPlayerStats stats = GCPlayerStats.get(playerIn);

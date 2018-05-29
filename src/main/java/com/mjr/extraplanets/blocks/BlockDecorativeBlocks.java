@@ -56,9 +56,9 @@ public class BlockDecorativeBlocks extends Block implements IDetectableResource,
 		}
 	}
 
-	public BlockDecorativeBlocks(String assetName) {
+	public BlockDecorativeBlocks(String name) {
 		super(Material.ROCK);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
@@ -68,7 +68,7 @@ public class BlockDecorativeBlocks extends Block implements IDetectableResource,
 	}
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
 		return 1.5F;
 	}
 

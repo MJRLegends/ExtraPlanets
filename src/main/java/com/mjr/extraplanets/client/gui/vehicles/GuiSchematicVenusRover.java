@@ -19,8 +19,8 @@ public class GuiSchematicVenusRover extends GuiPositionedContainer implements IS
 
 	private int pageIndex;
 
-	public GuiSchematicVenusRover(InventoryPlayer par1InventoryPlayer, BlockPos pos) {
-		super(new ContainerSchematicVenusRover(par1InventoryPlayer, pos), pos);
+	public GuiSchematicVenusRover(InventoryPlayer inventoryPlayer, BlockPos pos) {
+		super(new ContainerSchematicVenusRover(inventoryPlayer, pos), pos);
 		this.ySize = 221;
 	}
 

@@ -26,18 +26,18 @@ import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemGeigerCounter extends Item {
-	public ItemGeigerCounter(String assetName) {
+	public ItemGeigerCounter(String name) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 		this.setMaxStackSize(1);
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> list, ITooltipFlag flagIn) {
+	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> list, ITooltipFlag flagIn) {
 		list.add(EnumColor.YELLOW + TranslateUtilities.translate("geiger.counter.desc"));
 		list.add(EnumColor.AQUA + TranslateUtilities.translate("geiger.counter.location.desc"));
 	}
@@ -48,7 +48,7 @@ public class ItemGeigerCounter extends Item {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer player, EnumHand hand) {
+	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 		ItemStack itemStackIn = player.getHeldItem(hand);
 		player.setActiveHand(hand);
 		if (player.world.isRemote == false) {

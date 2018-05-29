@@ -19,8 +19,8 @@ public class GuiSchematicTier10ElectricRocket extends GuiPositionedContainer imp
 
 	private int pageIndex;
 
-	public GuiSchematicTier10ElectricRocket(InventoryPlayer par1InventoryPlayer, BlockPos pos) {
-		super(new ContainerSchematicTier10ElectricRocket(par1InventoryPlayer, pos), pos);
+	public GuiSchematicTier10ElectricRocket(InventoryPlayer inventoryPlayer, BlockPos pos) {
+		super(new ContainerSchematicTier10ElectricRocket(inventoryPlayer, pos), pos);
 		this.ySize = 238;
 	}
 

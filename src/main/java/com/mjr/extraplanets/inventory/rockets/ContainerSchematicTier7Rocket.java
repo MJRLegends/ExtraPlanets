@@ -20,69 +20,69 @@ public class ContainerSchematicTier7Rocket extends Container {
 	public IInventory craftResult = new InventoryCraftResult();
 	private final World world;
 
-	public ContainerSchematicTier7Rocket(InventoryPlayer par1InventoryPlayer, BlockPos pos) {
+	public ContainerSchematicTier7Rocket(InventoryPlayer inventoryPlayer, BlockPos pos) {
 		final int change = 27;
-		this.world = par1InventoryPlayer.player.world;
-		this.addSlotToContainer(new SlotRocketBenchResult(par1InventoryPlayer.player, this.craftMatrix, this.craftResult, 0, 142, 18 + 69 + change));
+		this.world = inventoryPlayer.player.world;
+		this.addSlotToContainer(new SlotRocketBenchResult(inventoryPlayer.player, this.craftMatrix, this.craftResult, 0, 142, 18 + 69 + change));
 		int var6;
 		int var7;
 
 		// Cone
-		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 1, 48, -8 + change, pos, par1InventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 1, 48, -8 + change, pos, inventoryPlayer.player));
 
 		// Body
 		for (var6 = 0; var6 < 5; ++var6) {
-			this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 2 + var6, 39, -6 + var6 * 18 + 16 + change, pos, par1InventoryPlayer.player));
+			this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 2 + var6, 39, -6 + var6 * 18 + 16 + change, pos, inventoryPlayer.player));
 		}
 
 		// Body Right
 		for (var6 = 0; var6 < 5; ++var6) {
-			this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 7 + var6, 57, -6 + var6 * 18 + 16 + change, pos, par1InventoryPlayer.player));
+			this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 7 + var6, 57, -6 + var6 * 18 + 16 + change, pos, inventoryPlayer.player));
 		}
 
 		// Left fins
-		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 12, 21, 64 + change, pos, par1InventoryPlayer.player));
-		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 13, 21, 82 + change, pos, par1InventoryPlayer.player));
-		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 14, 21, 100 + change, pos, par1InventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 12, 21, 64 + change, pos, inventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 13, 21, 82 + change, pos, inventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 14, 21, 100 + change, pos, inventoryPlayer.player));
 
 		// Engine
-		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 15, 48, 100 + change, pos, par1InventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 15, 48, 100 + change, pos, inventoryPlayer.player));
 
 		// Right fins
-		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 16, 75, 64 + change, pos, par1InventoryPlayer.player));
-		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 17, 75, 82 + change, pos, par1InventoryPlayer.player));
-		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 18, 75, 100 + change, pos, par1InventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 16, 75, 64 + change, pos, inventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 17, 75, 82 + change, pos, inventoryPlayer.player));
+		this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 18, 75, 100 + change, pos, inventoryPlayer.player));
 
 		// Addons
 		for (int var8 = 0; var8 < 3; var8++) {
-			this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 19 + var8, 93 + var8 * 26, -15 + change, pos, par1InventoryPlayer.player));
+			this.addSlotToContainer(new SlotSchematicTier7Rocket(this.craftMatrix, 19 + var8, 93 + var8 * 26, -15 + change, pos, inventoryPlayer.player));
 		}
 
 		// Player inv:
 
 		for (var6 = 0; var6 < 3; ++var6) {
 			for (var7 = 0; var7 < 9; ++var7) {
-				this.addSlotToContainer(new Slot(par1InventoryPlayer, var7 + var6 * 9 + 9, 8 + var7 * 18, 129 + var6 * 18 + change));
+				this.addSlotToContainer(new Slot(inventoryPlayer, var7 + var6 * 9 + 9, 8 + var7 * 18, 129 + var6 * 18 + change));
 			}
 		}
 
 		for (var6 = 0; var6 < 9; ++var6) {
-			this.addSlotToContainer(new Slot(par1InventoryPlayer, var6, 8 + var6 * 18, 18 + 169 + change));
+			this.addSlotToContainer(new Slot(inventoryPlayer, var6, 8 + var6 * 18, 18 + 169 + change));
 		}
 
 		this.onCraftMatrixChanged(this.craftMatrix);
 	}
 
 	@Override
-	public void onContainerClosed(EntityPlayer par1EntityPlayer) {
-		super.onContainerClosed(par1EntityPlayer);
+	public void onContainerClosed(EntityPlayer entityPlayer) {
+		super.onContainerClosed(entityPlayer);
 
 		if (!this.world.isRemote) {
 			for (int var2 = 1; var2 < this.craftMatrix.getSizeInventory(); ++var2) {
 				final ItemStack var3 = this.craftMatrix.removeStackFromSlot(var2);
 
 				if (!var3.isEmpty()) {
-					par1EntityPlayer.entityDropItem(var3, 0.0F);
+					entityPlayer.entityDropItem(var3, 0.0F);
 				}
 			}
 		}
@@ -94,12 +94,12 @@ public class ContainerSchematicTier7Rocket extends Container {
 	}
 
 	@Override
-	public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
+	public boolean canInteractWith(EntityPlayer entityPlayer) {
 		return true;
 	}
 
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par1) {
 		ItemStack var2 = ItemStack.EMPTY;
 		final Slot var3 = this.inventorySlots.get(par1);
 
@@ -155,15 +155,15 @@ public class ContainerSchematicTier7Rocket extends Container {
 				return ItemStack.EMPTY;
 			}
 
-			var3.onTake(par1EntityPlayer, var4);
+			var3.onTake(entityPlayer, var4);
 		}
 
 		return var2;
 	}
 
-	protected boolean mergeOneItemTestValid(ItemStack par1ItemStack, int par2, int par3, boolean par4) {
+	protected boolean mergeOneItemTestValid(ItemStack itemStack, int par2, int par3, boolean par4) {
 		boolean flag1 = false;
-		if (!par1ItemStack.isEmpty()) {
+		if (!itemStack.isEmpty()) {
 			Slot slot;
 			ItemStack slotStack;
 
@@ -171,10 +171,10 @@ public class ContainerSchematicTier7Rocket extends Container {
 				slot = this.inventorySlots.get(k);
 				slotStack = slot.getStack();
 
-				if (slotStack.isEmpty() && slot.isItemValid(par1ItemStack)) {
-					ItemStack stackOneItem = par1ItemStack.copy();
+				if (slotStack.isEmpty() && slot.isItemValid(itemStack)) {
+					ItemStack stackOneItem = itemStack.copy();
 					stackOneItem.setCount(1);
-					par1ItemStack.shrink(1);
+					itemStack.shrink(1);
 					slot.putStack(stackOneItem);
 					slot.onSlotChanged();
 					flag1 = true;

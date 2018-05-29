@@ -48,7 +48,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 
 	@Override
 	public void setDamage(ItemStack stack, int damage) {
-		if(damage != stack.getMaxDamage() - 1)
+		if (damage != stack.getMaxDamage() - 1)
 			super.setDamage(stack, damage);
 	}
 
@@ -67,7 +67,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	}
 
 	@Override
-	public void addInformation(ItemStack itemStack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> tooltip, ITooltipFlag flagIn) {
 		String color = "";
 		float joules = this.getElectricityStored(itemStack);
 
@@ -196,37 +196,37 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		return false;
 	}
 
-	public static boolean isElectricItemEmpty(ItemStack itemstack) {
-		if (itemstack.isEmpty()) {
+	public static boolean isElectricItemEmpty(ItemStack itemStack) {
+		if (itemStack.isEmpty()) {
 			return false;
 		}
-		Item item = itemstack.getItem();
+		Item item = itemStack.getItem();
 
 		if (item instanceof IItemElectricBase) {
-			return ((IItemElectricBase) item).getElectricityStored(itemstack) <= 0;
+			return ((IItemElectricBase) item).getElectricityStored(itemStack) <= 0;
 		}
 
 		if (EnergyConfigHandler.isIndustrialCraft2Loaded()) {
 			if (item instanceof ic2.api.item.IElectricItem) {
-				return !((ic2.api.item.IElectricItem) item).canProvideEnergy(itemstack);
+				return !((ic2.api.item.IElectricItem) item).canProvideEnergy(itemStack);
 			}
 		}
 
 		return false;
 	}
 
-	public static boolean isElectricItemCharged(ItemStack itemstack) {
-		if (itemstack == null)
+	public static boolean isElectricItemCharged(ItemStack itemStack) {
+		if (itemStack == null)
 			return false;
-		Item item = itemstack.getItem();
+		Item item = itemStack.getItem();
 
 		if (item instanceof IItemElectricBase) {
-			return ((IItemElectricBase) item).getElectricityStored(itemstack) > 0;
+			return ((IItemElectricBase) item).getElectricityStored(itemStack) > 0;
 		}
 
 		if (EnergyConfigHandler.isIndustrialCraft2Loaded()) {
 			if (item instanceof ic2.api.item.IElectricItem) {
-				return ((ic2.api.item.IElectricItem) item).canProvideEnergy(itemstack);
+				return ((ic2.api.item.IElectricItem) item).canProvideEnergy(itemStack);
 			}
 		}
 
@@ -289,7 +289,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	// All the following methods are for IC2 compatibility
 
 	@RuntimeInterface(clazz = "ic2.api.item.ISpecialElectricItem", modID = CompatibilityManager.modidIC2)
-	public IElectricItemManager getManager(ItemStack itemstack) {
+	public IElectricItemManager getManager(ItemStack itemStack) {
 		return (IElectricItemManager) ElectricArmorBase.itemManagerIC2;
 	}
 

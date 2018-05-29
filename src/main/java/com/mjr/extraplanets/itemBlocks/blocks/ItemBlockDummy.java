@@ -22,13 +22,13 @@ public class ItemBlockDummy extends ItemBlock {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack itemstack) {
-		int metadata = itemstack.getItemDamage();
+	public String getUnlocalizedName(ItemStack itemStack) {
+		int metadata = itemStack.getItemDamage();
 		String blockName = "";
 
 		switch (metadata) {

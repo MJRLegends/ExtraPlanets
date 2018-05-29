@@ -15,7 +15,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
 public class ContainerVehicleChanger extends Container {
 	private TileBaseElectricBlock tileEntity;
 
-	public ContainerVehicleChanger(InventoryPlayer par1InventoryPlayer, TileEntityVehicleChanger vehicleChanger) {
+	public ContainerVehicleChanger(InventoryPlayer inventoryPlayer, TileEntityVehicleChanger vehicleChanger) {
 		this.tileEntity = vehicleChanger;
 		this.addSlotToContainer(new SlotSpecific(vehicleChanger, 0, 51, 55, IItemElectric.class));
 
@@ -26,12 +26,12 @@ public class ContainerVehicleChanger extends Container {
 
 		for (var6 = 0; var6 < 3; ++var6) {
 			for (var7 = 0; var7 < 9; ++var7) {
-				this.addSlotToContainer(new Slot(par1InventoryPlayer, var7 + var6 * 9 + 9, 8 + var7 * 18, 31 + 58 + var6 * 18));
+				this.addSlotToContainer(new Slot(inventoryPlayer, var7 + var6 * 9 + 9, 8 + var7 * 18, 31 + 58 + var6 * 18));
 			}
 		}
 
 		for (var6 = 0; var6 < 9; ++var6) {
-			this.addSlotToContainer(new Slot(par1InventoryPlayer, var6, 8 + var6 * 18, 31 + 116));
+			this.addSlotToContainer(new Slot(inventoryPlayer, var6, 8 + var6 * 18, 31 + 116));
 		}
 	}
 
@@ -41,7 +41,7 @@ public class ContainerVehicleChanger extends Container {
 	}
 
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par2) {
 		ItemStack var3 = ItemStack.EMPTY;
 		final Slot slot = this.inventorySlots.get(par2);
 
@@ -83,7 +83,7 @@ public class ContainerVehicleChanger extends Container {
 				return ItemStack.EMPTY;
 			}
 
-			slot.onTake(par1EntityPlayer, var5);
+			slot.onTake(entityPlayer, var5);
 		}
 
 		return var3;

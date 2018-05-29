@@ -14,7 +14,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontamination
 public class ContainerBasicDecontaminationUnit extends Container {
 	private final TileEntityBasicDecontaminationUnit tileEntity;
 
-	public ContainerBasicDecontaminationUnit(InventoryPlayer par1InventoryPlayer, TileEntityBasicDecontaminationUnit tileEntity, EntityPlayer player) {
+	public ContainerBasicDecontaminationUnit(InventoryPlayer inventoryPlayer, TileEntityBasicDecontaminationUnit tileEntity, EntityPlayer player) {
 		this.tileEntity = tileEntity;
 
 		// Electric Input Slot
@@ -24,12 +24,12 @@ public class ContainerBasicDecontaminationUnit extends Container {
 
 		for (var3 = 0; var3 < 3; ++var3) {
 			for (int var4 = 0; var4 < 9; ++var4) {
-				this.addSlotToContainer(new Slot(par1InventoryPlayer, var4 + var3 * 9 + 9, 8 + var4 * 18, 104 + var3 * 18 - 18));
+				this.addSlotToContainer(new Slot(inventoryPlayer, var4 + var3 * 9 + 9, 8 + var4 * 18, 104 + var3 * 18 - 18));
 			}
 		}
 
 		for (var3 = 0; var3 < 9; ++var3) {
-			this.addSlotToContainer(new Slot(par1InventoryPlayer, var3, 8 + var3 * 18, 144));
+			this.addSlotToContainer(new Slot(inventoryPlayer, var3, 8 + var3 * 18, 144));
 		}
 
 		tileEntity.openInventory(player);
@@ -42,15 +42,15 @@ public class ContainerBasicDecontaminationUnit extends Container {
 	}
 
 	@Override
-	public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
-		return this.tileEntity.isUsableByPlayer(par1EntityPlayer);
+	public boolean canInteractWith(EntityPlayer entityPlayer) {
+		return this.tileEntity.isUsableByPlayer(entityPlayer);
 	}
 
 	/**
 	 * Called to transfer a stack from one inventory to the other eg. when shift clicking.
 	 */
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par1) {
 		ItemStack var2 = ItemStack.EMPTY;
 		final Slot slot = this.inventorySlots.get(par1);
 		final int b = this.inventorySlots.size();
@@ -88,7 +88,7 @@ public class ContainerBasicDecontaminationUnit extends Container {
 				return ItemStack.EMPTY;
 			}
 
-			slot.onTake(par1EntityPlayer, stack);
+			slot.onTake(entityPlayer, stack);
 		}
 
 		return var2;

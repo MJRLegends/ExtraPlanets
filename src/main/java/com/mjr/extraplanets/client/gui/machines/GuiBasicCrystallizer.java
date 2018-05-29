@@ -30,8 +30,8 @@ public class GuiBasicCrystallizer extends GuiContainerGC {
 	private GuiElementInfoRegion inputTankRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 7, (this.height - this.ySize) / 2 + 28, 16, 38, new ArrayList<String>(), this.width, this.height, this);
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiBasicCrystallizer(InventoryPlayer par1InventoryPlayer, TileEntityBasicCrystallizer tileEntity) {
-		super(new ContainerBasicCrystallizer(par1InventoryPlayer, tileEntity, MCUtilities.getClient().player));
+	public GuiBasicCrystallizer(InventoryPlayer inventoryPlayer, TileEntityBasicCrystallizer tileEntity) {
+		super(new ContainerBasicCrystallizer(inventoryPlayer, tileEntity, MCUtilities.getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}

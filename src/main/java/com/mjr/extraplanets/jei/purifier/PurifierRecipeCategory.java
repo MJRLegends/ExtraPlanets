@@ -71,14 +71,14 @@ public class PurifierRecipeCategory implements IRecipeCategory<IRecipeWrapper> {
 
 	@Override
 	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
-		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
+		IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 
-		itemstacks.init(0, true, 3, 2);
-		itemstacks.init(1, true, 28, 2);
-		itemstacks.init(2, true, 69, 31);
-		itemstacks.init(3, false, 28, 2);
-		itemstacks.init(4, false, 118, 2);
-		itemstacks.set(ingredients);
+		itemStacks.init(0, true, 3, 2);
+		itemStacks.init(1, true, 28, 2);
+		itemStacks.init(2, true, 69, 31);
+		itemStacks.init(3, false, 28, 2);
+		itemStacks.init(4, false, 118, 2);
+		itemStacks.set(ingredients);
 	}
 
 	@Override

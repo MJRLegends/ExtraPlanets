@@ -49,11 +49,11 @@ public class DensifierRecipeCategory implements IRecipeCategory<IRecipeWrapper> 
 
 	@Override
 	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
-		IGuiItemStackGroup itemstacks = recipeLayout.getItemStacks();
+		IGuiItemStackGroup itemStacks = recipeLayout.getItemStacks();
 
-		itemstacks.init(0, true, 3, 2);
-		itemstacks.init(1, false, 108, 30);
-		itemstacks.set(ingredients);
+		itemStacks.init(0, true, 3, 2);
+		itemStacks.init(1, false, 108, 30);
+		itemStacks.set(ingredients);
 	}
 
 	@Override

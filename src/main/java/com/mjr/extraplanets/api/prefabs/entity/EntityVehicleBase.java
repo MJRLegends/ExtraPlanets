@@ -233,10 +233,10 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 		}
 
 		for (final ItemStack item : dropped) {
-			EntityItem entityItem = this.entityDropItem(item, 0);
+			EntityItem EntityItem = this.entityDropItem(item, 0);
 
 			if (item.hasTagCompound()) {
-				entityItem.getItem().setTagCompound(item.getTagCompound().copy());
+				EntityItem.getItem().setTagCompound(item.getTagCompound().copy());
 			}
 		}
 	}
@@ -423,13 +423,13 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 
 	@Override
 	public ItemStack decrStackSize(int index, int count) {
-		ItemStack itemstack = ItemStackHelper.getAndSplit(this.stacks, index, count);
+		ItemStack itemStack = ItemStackHelper.getAndSplit(this.stacks, index, count);
 
-		if (!itemstack.isEmpty()) {
+		if (!itemStack.isEmpty()) {
 			this.markDirty();
 		}
 
-		return itemstack;
+		return itemStack;
 	}
 
 	@Override
@@ -516,7 +516,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
+	public boolean isItemValidForSlot(int i, ItemStack itemStack) {
 		return false;
 	}
 

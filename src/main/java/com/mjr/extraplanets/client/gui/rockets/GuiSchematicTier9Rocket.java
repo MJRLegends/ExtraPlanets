@@ -19,8 +19,8 @@ public class GuiSchematicTier9Rocket extends GuiPositionedContainer implements I
 
 	private int pageIndex;
 
-	public GuiSchematicTier9Rocket(InventoryPlayer par1InventoryPlayer, BlockPos pos) {
-		super(new ContainerSchematicTier9Rocket(par1InventoryPlayer, pos), pos);
+	public GuiSchematicTier9Rocket(InventoryPlayer inventoryPlayer, BlockPos pos) {
+		super(new ContainerSchematicTier9Rocket(inventoryPlayer, pos), pos);
 		this.ySize = 238;
 	}
 

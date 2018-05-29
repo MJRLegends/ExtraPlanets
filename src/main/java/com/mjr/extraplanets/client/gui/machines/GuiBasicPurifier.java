@@ -32,8 +32,8 @@ public class GuiBasicPurifier extends GuiContainerGC {
 	private GuiElementInfoRegion outputTankRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 122, (this.height - this.ySize) / 2 + 28, 16, 38, new ArrayList<String>(), this.width, this.height, this);
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiBasicPurifier(InventoryPlayer par1InventoryPlayer, TileEntityBasicPurifier tileEntity) {
-		super(new ContainerBasicPurifier(par1InventoryPlayer, tileEntity, MCUtilities.getClient().player));
+	public GuiBasicPurifier(InventoryPlayer inventoryPlayer, TileEntityBasicPurifier tileEntity) {
+		super(new ContainerBasicPurifier(inventoryPlayer, tileEntity, MCUtilities.getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168 + 20;
 	}

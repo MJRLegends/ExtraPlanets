@@ -67,9 +67,9 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 		}
 	}
 
-	public BlockBasicJupiter(String assetName) {
+	public BlockBasicJupiter(String name) {
 		super(Material.ROCK);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
@@ -87,8 +87,8 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 	}
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
-		IBlockState state = worldIn.getBlockState(pos);
+	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
+		IBlockState state = world.getBlockState(pos);
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE || state.getValue(BASIC_TYPE) == EnumBlockBasic.SUB_SURFACE)
 			return 0.5F;
 		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_PALLADIUM
@@ -154,13 +154,13 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(IBlockState state, World worldIn, BlockPos pos, Random rand) {
+	public void randomDisplayTick(IBlockState state, World world, BlockPos pos, Random rand) {
 		if (rand.nextInt(10) == 0) {
 			if (state.getBlock() == this && state.getValue(BASIC_TYPE) == EnumBlockBasic.DUNGEON_BRICK) {
 				GalacticraftPlanets.spawnParticle("sludgeDrip", new Vector3(pos.getX() + rand.nextDouble(), pos.getY(), pos.getZ() + rand.nextDouble()), new Vector3(0, 0, 0));
 
 				if (rand.nextInt(100) == 0) {
-					worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), GCSounds.singleDrip, SoundCategory.AMBIENT, 1, 0.8F + rand.nextFloat() / 5.0F);
+					world.playSound(null, pos.getX(), pos.getY(), pos.getZ(), GCSounds.singleDrip, SoundCategory.AMBIENT, 1, 0.8F + rand.nextFloat() / 5.0F);
 				}
 			}
 		}

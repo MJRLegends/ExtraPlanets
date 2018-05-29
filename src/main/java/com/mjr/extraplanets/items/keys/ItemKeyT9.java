@@ -15,12 +15,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemKeyT9 extends Item implements IKeyItem, ISortableItem {
-	public ItemKeyT9(String assetName) {
+	public ItemKeyT9(String name) {
 		super();
 		this.setMaxStackSize(1);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		// this.setTextureName("arrow");
 	}
 
@@ -36,7 +36,7 @@ public class ItemKeyT9 extends Item implements IKeyItem, ISortableItem {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 

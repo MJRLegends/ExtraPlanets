@@ -17,7 +17,7 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedOxygenCompre
 public class ContainerAdvancedOxygenCompressor extends Container {
 	private TileBaseElectricBlock tileEntity;
 
-	public ContainerAdvancedOxygenCompressor(InventoryPlayer par1InventoryPlayer, TileEntityAdvancedOxygenCompressor compressor, EntityPlayer player) {
+	public ContainerAdvancedOxygenCompressor(InventoryPlayer inventoryPlayer, TileEntityAdvancedOxygenCompressor compressor, EntityPlayer player) {
 		this.tileEntity = compressor;
 		this.addSlotToContainer(new Slot(compressor, 0, 133, 71));
 		this.addSlotToContainer(new SlotSpecific(compressor, 1, 47, 27, IItemElectric.class));
@@ -27,12 +27,12 @@ public class ContainerAdvancedOxygenCompressor extends Container {
 
 		for (var3 = 0; var3 < 3; ++var3) {
 			for (int var4 = 0; var4 < 9; ++var4) {
-				this.addSlotToContainer(new Slot(par1InventoryPlayer, var4 + var3 * 9 + 9, 8 + var4 * 18, 20 + 84 + var3 * 18));
+				this.addSlotToContainer(new Slot(inventoryPlayer, var4 + var3 * 9 + 9, 8 + var4 * 18, 20 + 84 + var3 * 18));
 			}
 		}
 
 		for (var3 = 0; var3 < 9; ++var3) {
-			this.addSlotToContainer(new Slot(par1InventoryPlayer, var3, 8 + var3 * 18, 20 + 142));
+			this.addSlotToContainer(new Slot(inventoryPlayer, var3, 8 + var3 * 18, 20 + 142));
 		}
 
 		compressor.openInventory(player);
@@ -44,7 +44,7 @@ public class ContainerAdvancedOxygenCompressor extends Container {
 	}
 
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par1) {
 		ItemStack var2 = ItemStack.EMPTY;
 		final Slot slot = this.inventorySlots.get(par1);
 		final int b = this.inventorySlots.size();
@@ -102,7 +102,7 @@ public class ContainerAdvancedOxygenCompressor extends Container {
 				return ItemStack.EMPTY;
 			}
 
-			slot.onTake(par1EntityPlayer, stack);
+			slot.onTake(entityPlayer, stack);
 		}
 
 		return var2;

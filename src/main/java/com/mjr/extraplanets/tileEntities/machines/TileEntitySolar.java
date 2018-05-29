@@ -430,13 +430,13 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 	@Override
 	public ItemStack decrStackSize(int index, int count) {
-		ItemStack itemstack = ItemStackHelper.getAndSplit(this.stacks, index, count);
+		ItemStack itemStack = ItemStackHelper.getAndSplit(this.stacks, index, count);
 
-		if (!itemstack.isEmpty()) {
+		if (!itemStack.isEmpty()) {
 			this.markDirty();
 		}
 
-		return itemstack;
+		return itemStack;
 	}
 
 	@Override
@@ -461,8 +461,8 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 	@Override
 	public boolean isEmpty() {
-		for (ItemStack itemstack : this.stacks) {
-			if (!itemstack.isEmpty()) {
+		for (ItemStack itemStack : this.stacks) {
+			if (!itemStack.isEmpty()) {
 				return false;
 			}
 		}
@@ -476,8 +476,8 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	}
 
 	@Override
-	public boolean isUsableByPlayer(EntityPlayer par1EntityPlayer) {
-		return this.world.getTileEntity(this.getPos()) == this && par1EntityPlayer.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D, this.getPos().getZ() + 0.5D) <= 64.0D;
+	public boolean isUsableByPlayer(EntityPlayer entityPlayer) {
+		return this.world.getTileEntity(this.getPos()) == this && entityPlayer.getDistanceSq(this.getPos().getX() + 0.5D, this.getPos().getY() + 0.5D, this.getPos().getZ() + 0.5D) <= 64.0D;
 	}
 
 	@Override
@@ -486,18 +486,18 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	}
 
 	@Override
-	public boolean canInsertItem(int slotID, ItemStack itemstack, EnumFacing side) {
-		return this.isItemValidForSlot(slotID, itemstack);
+	public boolean canInsertItem(int slotID, ItemStack itemStack, EnumFacing side) {
+		return this.isItemValidForSlot(slotID, itemStack);
 	}
 
 	@Override
-	public boolean canExtractItem(int slotID, ItemStack itemstack, EnumFacing side) {
+	public boolean canExtractItem(int slotID, ItemStack itemStack, EnumFacing side) {
 		return slotID == 0;
 	}
 
 	@Override
-	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
-		return slotID == 0 && ItemElectricBase.isElectricItem(itemstack.getItem());
+	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
+		return slotID == 0 && ItemElectricBase.isElectricItem(itemStack.getItem());
 	}
 
 	@Override

@@ -29,8 +29,8 @@ public class GuiBasicDecontaminationUnit extends GuiContainerGC {
 
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiBasicDecontaminationUnit(InventoryPlayer par1InventoryPlayer, TileEntityBasicDecontaminationUnit tileEntity) {
-		super(new ContainerBasicDecontaminationUnit(par1InventoryPlayer, tileEntity, MCUtilities.getClient().player));
+	public GuiBasicDecontaminationUnit(InventoryPlayer inventoryPlayer, TileEntityBasicDecontaminationUnit tileEntity) {
+		super(new ContainerBasicDecontaminationUnit(inventoryPlayer, tileEntity, MCUtilities.getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}

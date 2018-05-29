@@ -29,25 +29,25 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class ItemBasicKit extends ItemBasicMeta {
 	public int tier;
 
-	public ItemBasicKit(String assetName, int tier) {
-		super(assetName, ExtraPlanets.ItemsTab, getItemList());
+	public ItemBasicKit(String name, int tier) {
+		super(name, ExtraPlanets.ItemsTab, getItemList());
 		this.tier = tier;
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
 	@Override
-	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> tooltip, ITooltipFlag flagIn) {
 		tooltip.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate("item.kit.information.desc"));
 		tooltip.add(EnumColor.YELLOW + TranslateUtilities.translate("item.kit.information.use"));
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer player, EnumHand hand) {
+	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
 		ItemStack itemStackIn = player.getHeldItem(hand);
 		if (player instanceof EntityPlayerMP) {
 			GCPlayerStats stats = GCPlayerStats.get(player);

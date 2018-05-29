@@ -36,22 +36,22 @@ import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier2LandingPad;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class Tier4Rocket extends Item implements IHoldableItem {
-	public Tier4Rocket(String assetName) {
+	public Tier4Rocket(String name) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		this.setMaxStackSize(1);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
 	@Override
-	public EnumActionResult onItemUse(EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
+	public EnumActionResult onItemUse(EntityPlayer playerIn, World world, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
 		boolean padFound = false;
 		TileEntity tile = null;
 		ItemStack stack = playerIn.getHeldItem(hand);
 
-		if (worldIn.isRemote && playerIn instanceof EntityPlayerSP) {
+		if (world.isRemote && playerIn instanceof EntityPlayerSP) {
 			ClientProxyCore.playerClientHandler.onBuild(8, (EntityPlayerSP) playerIn);
 			return EnumActionResult.FAIL;
 		} else {
@@ -62,13 +62,13 @@ public class Tier4Rocket extends Item implements IHoldableItem {
 			for (int i = -1; i < 2; i++) {
 				for (int j = -1; j < 2; j++) {
 					BlockPos pos1 = pos.add(i, 0, j);
-					IBlockState state = worldIn.getBlockState(pos1);
+					IBlockState state = world.getBlockState(pos1);
 					final Block id = state.getBlock();
 					int meta = id.getMetaFromState(state);
 
 					if (id == ExtraPlanets_Blocks.ADVANCED_LAUCHPAD_FULL && meta == 0) {
 						padFound = true;
-						tile = worldIn.getTileEntity(pos.add(i, 0, j));
+						tile = world.getTileEntity(pos.add(i, 0, j));
 
 						centerX = pos.getX() + i + 0.5F;
 						centerY = pos.getY() + 0.4F;
@@ -93,10 +93,10 @@ public class Tier4Rocket extends Item implements IHoldableItem {
 					return EnumActionResult.FAIL;
 				}
 
-				final EntityTier4Rocket spaceship = new EntityTier4Rocket(worldIn, centerX, centerY, centerZ, EnumRocketType.values()[stack.getItemDamage()]);
+				final EntityTier4Rocket spaceship = new EntityTier4Rocket(world, centerX, centerY, centerZ, EnumRocketType.values()[stack.getItemDamage()]);
 
 				spaceship.setPosition(spaceship.posX, spaceship.posY + spaceship.getOnPadYOffset(), spaceship.posZ);
-				worldIn.spawnEntity(spaceship);
+				world.spawnEntity(spaceship);
 
 				if (stack.hasTagCompound() && stack.getTagCompound().hasKey("RocketFuel")) {
 					spaceship.fuelTank.fill(new FluidStack(GCFluids.fluidFuel, stack.getTagCompound().getInteger("RocketFuel")), true);
@@ -127,13 +127,13 @@ public class Tier4Rocket extends Item implements IHoldableItem {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack par1ItemStack, @Nullable World worldIn, List<String> par2List, ITooltipFlag flagIn) {
+	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> par2List, ITooltipFlag flagIn) {
 		EnumRocketType type;
 
-		if (par1ItemStack.getItemDamage() < 10) {
-			type = EnumRocketType.values()[par1ItemStack.getItemDamage()];
+		if (itemStack.getItemDamage() < 10) {
+			type = EnumRocketType.values()[itemStack.getItemDamage()];
 		} else {
-			type = EnumRocketType.values()[par1ItemStack.getItemDamage() - 10];
+			type = EnumRocketType.values()[itemStack.getItemDamage() - 10];
 		}
 
 		if (!type.getTooltip().isEmpty()) {
@@ -144,17 +144,17 @@ public class Tier4Rocket extends Item implements IHoldableItem {
 			par2List.add(EnumColor.RED + "\u00a7o" + TranslateUtilities.translate("gui.creative_only.desc"));
 		}
 
-		if (par1ItemStack.hasTagCompound() && par1ItemStack.getTagCompound().hasKey("RocketFuel")) {
-			EntityTier4Rocket rocket = new EntityTier4Rocket(FMLClientHandler.instance().getWorldClient(), 0, 0, 0, EnumRocketType.values()[par1ItemStack.getItemDamage()]);
-			par2List.add(TranslateUtilities.translate("gui.message.fuel.name") + ": " + par1ItemStack.getTagCompound().getInteger("RocketFuel") + " / " + rocket.fuelTank.getCapacity());
+		if (itemStack.hasTagCompound() && itemStack.getTagCompound().hasKey("RocketFuel")) {
+			EntityTier4Rocket rocket = new EntityTier4Rocket(FMLClientHandler.instance().getWorldClient(), 0, 0, 0, EnumRocketType.values()[itemStack.getItemDamage()]);
+			par2List.add(TranslateUtilities.translate("gui.message.fuel.name") + ": " + itemStack.getTagCompound().getInteger("RocketFuel") + " / " + rocket.fuelTank.getCapacity());
 		}
 
 		par2List.add(EnumColor.AQUA + TranslateUtilities.translate("rocket_pad.tier2.desc"));
 	}
 
 	@Override
-	public String getUnlocalizedName(ItemStack par1ItemStack) {
-		return super.getUnlocalizedName(par1ItemStack) + ".t4Rocket";
+	public String getUnlocalizedName(ItemStack itemStack) {
+		return super.getUnlocalizedName(itemStack) + ".t4Rocket";
 	}
 
 	@Override

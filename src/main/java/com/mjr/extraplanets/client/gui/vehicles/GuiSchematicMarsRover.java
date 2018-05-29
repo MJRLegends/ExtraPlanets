@@ -19,8 +19,8 @@ public class GuiSchematicMarsRover extends GuiPositionedContainer implements ISc
 
 	private int pageIndex;
 
-	public GuiSchematicMarsRover(InventoryPlayer par1InventoryPlayer, BlockPos pos) {
-		super(new ContainerSchematicMarsRover(par1InventoryPlayer, pos), pos);
+	public GuiSchematicMarsRover(InventoryPlayer inventoryPlayer, BlockPos pos) {
+		super(new ContainerSchematicMarsRover(inventoryPlayer, pos), pos);
 		this.ySize = 221;
 	}
 
