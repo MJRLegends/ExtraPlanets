@@ -25,11 +25,11 @@ import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemBasicItem extends Item {
-	public ItemBasicItem(String assetName) {
+	public ItemBasicItem(String name) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 
@@ -65,13 +65,13 @@ public class ItemBasicItem extends Item {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
+	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World world, EntityPlayer playerIn, EnumHand hand) {
 		playerIn.setActiveHand(hand);
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
 	}
 
 	@Override
-	public ItemStack onItemUseFinish(ItemStack stack, World worldIn, EntityLivingBase entityLiving) {
+	public ItemStack onItemUseFinish(ItemStack stack, World world, EntityLivingBase entityLiving) {
 		if (stack.getItem() == ExtraPlanets_Items.ANTI_RADIATION) {
 			EntityPlayer entityplayer = entityLiving instanceof EntityPlayer ? (EntityPlayer) entityLiving : null;
 
@@ -79,7 +79,7 @@ public class ItemBasicItem extends Item {
 				--stack.stackSize;
 			}
 
-			if (!worldIn.isRemote) {
+			if (!world.isRemote) {
 				IStatsCapability stats = null;
 
 				if (entityLiving != null) {

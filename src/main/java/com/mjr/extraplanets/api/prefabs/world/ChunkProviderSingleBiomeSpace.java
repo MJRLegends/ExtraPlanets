@@ -282,8 +282,8 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 		return 1.0 - (n * (n * n * 15731 + 789221) + 1376312589 & 0x7fffffff) / 1073741824.0;
 	}
 
-	public void decoratePlanet(World par1World, Random par2Random, int par3, int par4) {
-		this.getBiomeGenerator().decorate(par1World, par2Random, par3, par4);
+	public void decoratePlanet(World par1World, Random rand, int par3, int par4) {
+		this.getBiomeGenerator().decorate(par1World, rand, par3, par4);
 	}
 
 	@Override

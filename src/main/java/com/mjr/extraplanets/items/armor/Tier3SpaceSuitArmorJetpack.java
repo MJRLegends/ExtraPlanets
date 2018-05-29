@@ -106,6 +106,7 @@ public class Tier3SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 		return armorModel;
 	}
 
+	@Override
 	public double getJetpackAccelSpeed() {
 		return 0.6D;
 	}

@@ -95,8 +95,8 @@ public class BiomeDecoratorMercury extends BiomeDecoratorSpace {
 			}
 			for (int i = 0; i < 1; i++) {
 				if (rand.nextInt(25) == 1) {
-					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(true, Constants.modID, MarsBlocks.marsBlock.getDefaultState().withProperty(BlockBasicMars.BASIC_TYPE, BlockBasicMars.EnumBlockBasic.DESH_BLOCK), 8, 2), this.currentWorld,
-							rand, new BlockPos(this.posX, 0, this.posZ), 6);
+					WorldGenUtilities.generateStructureWithRandom(new WorldGenSphere(true, Constants.modID, MarsBlocks.marsBlock.getDefaultState().withProperty(BlockBasicMars.BASIC_TYPE, BlockBasicMars.EnumBlockBasic.DESH_BLOCK), 8, 2),
+							this.currentWorld, rand, new BlockPos(this.posX, 0, this.posZ), 6);
 				}
 			}
 		}

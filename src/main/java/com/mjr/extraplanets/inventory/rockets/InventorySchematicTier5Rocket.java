@@ -96,7 +96,7 @@ public class InventorySchematicTier5Rocket implements IInventory {
 	}
 
 	@Override
-	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
+	public boolean isUseableByPlayer(EntityPlayer entityPlayer) {
 		return true;
 	}
 

@@ -62,10 +62,10 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 		}
 	}
 
-	public AdvancedOxygenCompressor(boolean isActive, String assetName) {
+	public AdvancedOxygenCompressor(boolean isActive, String name) {
 		super(Material.ROCK);
 		this.setHardness(1.0F);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override
@@ -107,7 +107,7 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 	}
 
 	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
+	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
 		final int angle = MathHelper.floor_double(placer.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 		int change = EnumFacing.getHorizontal(angle).getOpposite().getHorizontalIndex();
 
@@ -117,7 +117,7 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 			change += AdvancedOxygenCompressor.OXYGEN_COMPRESSOR_METADATA;
 		}
 
-		worldIn.setBlockState(pos, getStateFromMeta(change), 3);
+		world.setBlockState(pos, getStateFromMeta(change), 3);
 	}
 
 	@Override

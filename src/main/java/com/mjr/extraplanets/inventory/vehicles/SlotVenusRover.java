@@ -36,13 +36,13 @@ public class SlotVenusRover extends Slot {
 	}
 
 	@Override
-	public boolean isItemValid(ItemStack par1ItemStack) {
-		if (par1ItemStack == null)
+	public boolean isItemValid(ItemStack itemStack) {
+		if (itemStack == null)
 			return false;
 
 		List<INasaWorkbenchRecipe> recipes = VenusRoverRecipes.getVenusRoverRecipes();
 		for (INasaWorkbenchRecipe recipe : recipes) {
-			if (ItemStack.areItemsEqual(par1ItemStack, recipe.getRecipeInput().get(this.index)))
+			if (ItemStack.areItemsEqual(itemStack, recipe.getRecipeInput().get(this.index)))
 				return true;
 		}
 		return false;

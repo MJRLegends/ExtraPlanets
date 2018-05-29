@@ -74,15 +74,15 @@ public class ContainerSchematicTier5Rocket extends Container {
 	}
 
 	@Override
-	public void onContainerClosed(EntityPlayer par1EntityPlayer) {
-		super.onContainerClosed(par1EntityPlayer);
+	public void onContainerClosed(EntityPlayer entityPlayer) {
+		super.onContainerClosed(entityPlayer);
 
 		if (!this.worldObj.isRemote) {
 			for (int var2 = 1; var2 < this.craftMatrix.getSizeInventory(); ++var2) {
 				final ItemStack var3 = this.craftMatrix.removeStackFromSlot(var2);
 
 				if (var3 != null) {
-					par1EntityPlayer.entityDropItem(var3, 0.0F);
+					entityPlayer.entityDropItem(var3, 0.0F);
 				}
 			}
 		}
@@ -94,12 +94,12 @@ public class ContainerSchematicTier5Rocket extends Container {
 	}
 
 	@Override
-	public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
+	public boolean canInteractWith(EntityPlayer entityPlayer) {
 		return true;
 	}
 
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par1) {
 		ItemStack var2 = null;
 		final Slot var3 = this.inventorySlots.get(par1);
 
@@ -163,7 +163,7 @@ public class ContainerSchematicTier5Rocket extends Container {
 				return null;
 			}
 
-			var3.onPickupFromSlot(par1EntityPlayer, var4);
+			var3.onPickupFromSlot(entityPlayer, var4);
 		}
 
 		return var2;

@@ -16,13 +16,13 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemTier11Items extends ItemBasicMeta {
 
-	public ItemTier11Items(String assetName) {
-		super(assetName, ExtraPlanets.ItemsTab, getItemList());
+	public ItemTier11Items(String name) {
+		super(name, ExtraPlanets.ItemsTab, getItemList());
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 

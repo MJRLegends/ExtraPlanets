@@ -11,32 +11,32 @@ public class ContainerModuleManager extends Container {
 
 	public ContainerModuleManager(IInventory par1IInventory, EntityPlayer player) {
 		this.inventory = par1IInventory;
-//		int var6;
-//		int var7;
+		// int var6;
+		// int var7;
 
 		// Player inv:
 
-//		for (var6 = 0; var6 < 3; ++var6) {
-//			for (var7 = 0; var7 < 9; ++var7) {
-//				this.addSlotToContainer(new Slot(par1IInventory, var7 + var6 * 9 + 9, 8 + var7 * 18, 91 + 58 + var6 * 18));
-//			}
-//		}
-//
-//		for (var6 = 0; var6 < 9; ++var6) {
-//			this.addSlotToContainer(new Slot(par1IInventory, var6, 8 + var6 * 18, 91 + 116));
-//		}
+		// for (var6 = 0; var6 < 3; ++var6) {
+		// for (var7 = 0; var7 < 9; ++var7) {
+		// this.addSlotToContainer(new Slot(par1IInventory, var7 + var6 * 9 + 9, 8 + var7 * 18, 91 + 58 + var6 * 18));
+		// }
+		// }
+		//
+		// for (var6 = 0; var6 < 9; ++var6) {
+		// this.addSlotToContainer(new Slot(par1IInventory, var6, 8 + var6 * 18, 91 + 116));
+		// }
 	}
 
 	@Override
-	public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
-		return this.inventory.isUseableByPlayer(par1EntityPlayer);
+	public boolean canInteractWith(EntityPlayer entityPlayer) {
+		return this.inventory.isUseableByPlayer(entityPlayer);
 	}
 
 	/**
 	 * Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
 	 */
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par2) {
 		ItemStack var3 = null;
 		final Slot var4 = this.inventorySlots.get(par2);
 		final int b = this.inventorySlots.size() - 36;
@@ -67,9 +67,9 @@ public class ContainerModuleManager extends Container {
 	 * Callback for when the crafting gui is closed.
 	 */
 	@Override
-	public void onContainerClosed(EntityPlayer par1EntityPlayer) {
-		super.onContainerClosed(par1EntityPlayer);
-		this.inventory.closeInventory(par1EntityPlayer);
+	public void onContainerClosed(EntityPlayer entityPlayer) {
+		super.onContainerClosed(entityPlayer);
+		this.inventory.closeInventory(entityPlayer);
 	}
 
 	/**

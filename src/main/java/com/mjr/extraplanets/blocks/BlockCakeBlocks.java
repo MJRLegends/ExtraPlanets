@@ -56,9 +56,9 @@ public class BlockCakeBlocks extends Block implements IDetectableResource, ISort
 		}
 	}
 
-	public BlockCakeBlocks(String assetName) {
+	public BlockCakeBlocks(String name) {
 		super(Material.ROCK);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
@@ -68,7 +68,7 @@ public class BlockCakeBlocks extends Block implements IDetectableResource, ISort
 	}
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World worldIn, BlockPos pos) {
+	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
 		return 1.5F;
 	}
 

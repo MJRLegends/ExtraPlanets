@@ -63,15 +63,15 @@ public class ContainerSchematicMarsRover extends Container {
 	}
 
 	@Override
-	public void onContainerClosed(EntityPlayer par1EntityPlayer) {
-		super.onContainerClosed(par1EntityPlayer);
+	public void onContainerClosed(EntityPlayer entityPlayer) {
+		super.onContainerClosed(entityPlayer);
 
 		if (!this.worldObj.isRemote) {
 			for (int var2 = 1; var2 < this.craftMatrix.getSizeInventory(); ++var2) {
 				final ItemStack slot = this.craftMatrix.removeStackFromSlot(var2);
 
 				if (slot != null) {
-					par1EntityPlayer.entityDropItem(slot, 0.0F);
+					entityPlayer.entityDropItem(slot, 0.0F);
 				}
 			}
 		}
@@ -83,7 +83,7 @@ public class ContainerSchematicMarsRover extends Container {
 	}
 
 	@Override
-	public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
+	public boolean canInteractWith(EntityPlayer entityPlayer) {
 		return true;
 	}
 
@@ -91,7 +91,7 @@ public class ContainerSchematicMarsRover extends Container {
 	 * Called to transfer a stack from one inventory to the other eg. when shift clicking.
 	 */
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par1) {
 		ItemStack var2 = null;
 		final Slot slot = this.inventorySlots.get(par1);
 		final int b = this.inventorySlots.size();
@@ -138,15 +138,15 @@ public class ContainerSchematicMarsRover extends Container {
 			}
 
 			slot.onSlotChanged();
-			slot.onPickupFromSlot(par1EntityPlayer, var4);
+			slot.onPickupFromSlot(entityPlayer, var4);
 		}
 
 		return var2;
 	}
 
-	protected boolean mergeOneItem(ItemStack par1ItemStack, int par2, int par3, boolean par4) {
+	protected boolean mergeOneItem(ItemStack itemStack, int par2, int par3, boolean par4) {
 		boolean flag1 = false;
-		if (par1ItemStack.stackSize > 0) {
+		if (itemStack.stackSize > 0) {
 			Slot slot;
 			ItemStack slotStack;
 
@@ -155,9 +155,9 @@ public class ContainerSchematicMarsRover extends Container {
 				slotStack = slot.getStack();
 
 				if (slotStack == null) {
-					ItemStack stackOneItem = par1ItemStack.copy();
+					ItemStack stackOneItem = itemStack.copy();
 					stackOneItem.stackSize = 1;
-					par1ItemStack.stackSize--;
+					itemStack.stackSize--;
 					slot.putStack(stackOneItem);
 					slot.onSlotChanged();
 					flag1 = true;

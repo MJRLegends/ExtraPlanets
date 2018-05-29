@@ -9,12 +9,12 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT4TreasureChest;
 
 public class T4TreasureChest extends BlockTier1TreasureChest {
-	public T4TreasureChest(String assetName) {
-		super(assetName);
+	public T4TreasureChest(String name) {
+		super(name);
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
+	public TileEntity createNewTileEntity(World world, int meta) {
 		return new TileEntityT4TreasureChest();
 	}
 

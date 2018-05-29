@@ -12,15 +12,15 @@ public class EntityFireBombPrimed extends EntityTNTPrimed {
 	public int fuse;
 	private EntityLivingBase tntPlacedBy;
 
-	public EntityFireBombPrimed(World worldIn) {
-		super(worldIn);
+	public EntityFireBombPrimed(World world) {
+		super(world);
 		this.fuse = 80;
 		this.preventEntitySpawning = true;
 		this.setSize(0.98F, 0.98F);
 	}
 
-	public EntityFireBombPrimed(World worldIn, double p_i1730_2_, double p_i1730_4_, double p_i1730_6_, EntityLivingBase p_i1730_8_) {
-		this(worldIn);
+	public EntityFireBombPrimed(World world, double p_i1730_2_, double p_i1730_4_, double p_i1730_6_, EntityLivingBase p_i1730_8_) {
+		this(world);
 		this.setPosition(p_i1730_2_, p_i1730_4_, p_i1730_6_);
 		float f = (float) (Math.random() * Math.PI * 2.0D);
 		this.motionX = -((float) Math.sin(f)) * 0.02F;

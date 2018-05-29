@@ -94,7 +94,7 @@ public class InventoryVenusRover implements IInventory {
 	}
 
 	@Override
-	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
+	public boolean isUseableByPlayer(EntityPlayer entityPlayer) {
 		return true;
 	}
 

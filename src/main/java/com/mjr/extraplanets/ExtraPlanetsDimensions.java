@@ -40,7 +40,7 @@ public class ExtraPlanetsDimensions {
 	public static DimensionType KEPLER22B_ORBIT;
 	public static DimensionType MARS_ORBIT;
 	public static DimensionType VENUS_ORBIT;
-	
+
 	public static DimensionType CERES_ORBIT_KEEPLOADED;
 	public static DimensionType ERIS_ORBIT_KEEPLOADED;
 	public static DimensionType JUPITER_ORBIT_KEEPLOADED;

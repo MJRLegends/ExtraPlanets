@@ -13,12 +13,12 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenCustomIceSpike extends WorldGenerator {
 	@Override
-	public boolean generate(World worldIn, Random rand, BlockPos position) {
-		while (worldIn.isAirBlock(position) && position.getY() > 2) {
+	public boolean generate(World world, Random rand, BlockPos position) {
+		while (world.isAirBlock(position) && position.getY() > 2) {
 			position = position.down();
 		}
 
-		if (worldIn.getBlockState(position).getBlock() != Blocks.SNOW) {
+		if (world.getBlockState(position).getBlock() != Blocks.SNOW) {
 			return false;
 		} else {
 			position = position.up(rand.nextInt(4));
@@ -40,17 +40,17 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 						float f2 = MathHelper.abs_int(j1) - 0.25F;
 
 						if ((i1 == 0 && j1 == 0 || f1 * f1 + f2 * f2 <= f * f) && (i1 != -l && i1 != l && j1 != -l && j1 != l || rand.nextFloat() <= 0.75F)) {
-							IBlockState block = worldIn.getBlockState(position.add(i1, k, j1));
+							IBlockState block = world.getBlockState(position.add(i1, k, j1));
 
 							if (block.getMaterial() == Material.AIR || block == Blocks.DIRT || block == Blocks.SNOW || block == Blocks.ICE) {
-								this.setBlockAndNotifyAdequately(worldIn, position.add(i1, k, j1), Blocks.PACKED_ICE.getDefaultState());
+								this.setBlockAndNotifyAdequately(world, position.add(i1, k, j1), Blocks.PACKED_ICE.getDefaultState());
 							}
 
 							if (k != 0 && l > 1) {
-								block = worldIn.getBlockState(position.add(i1, -k, j1));
+								block = world.getBlockState(position.add(i1, -k, j1));
 
 								if (block.getMaterial() == Material.AIR || block == Blocks.DIRT || block == Blocks.SNOW || block == Blocks.ICE) {
-									this.setBlockAndNotifyAdequately(worldIn, position.add(i1, -k, j1), Blocks.PACKED_ICE.getDefaultState());
+									this.setBlockAndNotifyAdequately(world, position.add(i1, -k, j1), Blocks.PACKED_ICE.getDefaultState());
 								}
 							}
 						}
@@ -76,13 +76,13 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 					}
 
 					while (blockpos.getY() > 50) {
-						IBlockState block1 = worldIn.getBlockState(blockpos);
+						IBlockState block1 = world.getBlockState(blockpos);
 
 						if (block1.getMaterial() != Material.AIR && block1 != Blocks.DIRT && block1 != Blocks.SNOW && block1 != Blocks.ICE && block1 != Blocks.PACKED_ICE) {
 							break;
 						}
 
-						this.setBlockAndNotifyAdequately(worldIn, blockpos, Blocks.PACKED_ICE.getDefaultState());
+						this.setBlockAndNotifyAdequately(world, blockpos, Blocks.PACKED_ICE.getDefaultState());
 						blockpos = blockpos.down();
 						--j2;
 
@@ -98,12 +98,12 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 		}
 	}
 
-	public boolean generate(World worldIn, Random rand, BlockPos position, Block surfaceblock) {
-		while (worldIn.isAirBlock(position) && position.getY() > 2) {
+	public boolean generate(World world, Random rand, BlockPos position, Block surfaceblock) {
+		while (world.isAirBlock(position) && position.getY() > 2) {
 			position = position.down();
 		}
 
-		if (worldIn.getBlockState(position).getBlock() != surfaceblock) {
+		if (world.getBlockState(position).getBlock() != surfaceblock) {
 			return false;
 		} else {
 			position = position.up(rand.nextInt(4));
@@ -125,15 +125,15 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 						float f2 = MathHelper.abs_int(j1) - 0.25F;
 
 						if ((i1 == 0 && j1 == 0 || f1 * f1 + f2 * f2 <= f * f) && (i1 != -l && i1 != l && j1 != -l && j1 != l || rand.nextFloat() <= 0.75F)) {
-							IBlockState block = worldIn.getBlockState(position.add(i1, k, j1));
+							IBlockState block = world.getBlockState(position.add(i1, k, j1));
 
 							if (block.getMaterial() == Material.AIR || block == Blocks.DIRT || block == surfaceblock || block == Blocks.ICE) {
-								this.setBlockAndNotifyAdequately(worldIn, position.add(i1, k, j1), Blocks.PACKED_ICE.getDefaultState());
+								this.setBlockAndNotifyAdequately(world, position.add(i1, k, j1), Blocks.PACKED_ICE.getDefaultState());
 							}
 
 							if (k != 0 && l > 1) {
 								if (block.getMaterial() == Material.AIR || block == Blocks.DIRT || block == surfaceblock || block == Blocks.ICE) {
-									this.setBlockAndNotifyAdequately(worldIn, position.add(i1, -k, j1), Blocks.PACKED_ICE.getDefaultState());
+									this.setBlockAndNotifyAdequately(world, position.add(i1, -k, j1), Blocks.PACKED_ICE.getDefaultState());
 								}
 							}
 						}
@@ -159,13 +159,13 @@ public class WorldGenCustomIceSpike extends WorldGenerator {
 					}
 
 					while (blockpos.getY() > 50) {
-						IBlockState block1 = worldIn.getBlockState(blockpos);
+						IBlockState block1 = world.getBlockState(blockpos);
 
 						if (block1.getMaterial() != Material.AIR && block1 != Blocks.DIRT && block1 != surfaceblock && block1 != Blocks.ICE && block1 != Blocks.PACKED_ICE) {
 							break;
 						}
 
-						this.setBlockAndNotifyAdequately(worldIn, blockpos, Blocks.PACKED_ICE.getDefaultState());
+						this.setBlockAndNotifyAdequately(world, blockpos, Blocks.PACKED_ICE.getDefaultState());
 						blockpos = blockpos.down();
 						--j2;
 

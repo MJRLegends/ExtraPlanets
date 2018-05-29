@@ -30,9 +30,9 @@ import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemVenusRover extends Item implements IHoldableItem {
-	public ItemVenusRover(String assetName) {
+	public ItemVenusRover(String name) {
 		super();
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setMaxStackSize(1);
 	}
 
@@ -43,7 +43,7 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public EnumRarity getRarity(ItemStack par1ItemStack) {
+	public EnumRarity getRarity(ItemStack itemStack) {
 		return ClientProxyCore.galacticraftItem;
 	}
 
@@ -55,7 +55,7 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand) {
+	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World world, EntityPlayer playerIn, EnumHand hand) {
 		final float var4 = 1.0F;
 		final float var5 = playerIn.prevRotationPitch + (playerIn.rotationPitch - playerIn.prevRotationPitch) * var4;
 		final float var6 = playerIn.prevRotationYaw + (playerIn.rotationYaw - playerIn.prevRotationYaw) * var4;
@@ -71,7 +71,7 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 		final float var20 = var14 * var16;
 		final double var21 = 5.0D;
 		final Vec3d var23 = var13.addVector(var18 * var21, var17 * var21, var20 * var21);
-		final RayTraceResult var24 = worldIn.rayTraceBlocks(var13, var23, true);
+		final RayTraceResult var24 = world.rayTraceBlocks(var13, var23, true);
 
 		if (var24 == null) {
 			return new ActionResult<>(EnumActionResult.PASS, itemStackIn);
@@ -79,7 +79,7 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 			final Vec3d var25 = playerIn.getLook(var4);
 			boolean var26 = false;
 			final float var27 = 1.0F;
-			final List<?> var28 = worldIn.getEntitiesWithinAABBExcludingEntity(playerIn, playerIn.getEntityBoundingBox().addCoord(var25.xCoord * var21, var25.yCoord * var21, var25.zCoord * var21).expand(var27, var27, var27));
+			final List<?> var28 = world.getEntitiesWithinAABBExcludingEntity(playerIn, playerIn.getEntityBoundingBox().addCoord(var25.xCoord * var21, var25.yCoord * var21, var25.zCoord * var21).expand(var27, var27, var27));
 			int var29;
 
 			for (var29 = 0; var29 < var28.size(); ++var29) {
@@ -103,18 +103,18 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 					int var33 = var24.getBlockPos().getY();
 					final int var34 = var24.getBlockPos().getZ();
 
-					if (worldIn.getBlockState(new BlockPos(var29, var33, var34)) == Blocks.SNOW) {
+					if (world.getBlockState(new BlockPos(var29, var33, var34)) == Blocks.SNOW) {
 						--var33;
 					}
 
-					final EntityVenusRover var35 = new EntityVenusRover(worldIn, var29 + 0.5F, var33 + 1.0F, var34 + 0.5F, itemStackIn.getItemDamage());
+					final EntityVenusRover var35 = new EntityVenusRover(world, var29 + 0.5F, var33 + 1.0F, var34 + 0.5F, itemStackIn.getItemDamage());
 
-					if (!worldIn.getCollisionBoxes(var35, var35.getEntityBoundingBox().expand(-0.1D, -0.1D, -0.1D)).isEmpty()) {
+					if (!world.getCollisionBoxes(var35, var35.getEntityBoundingBox().expand(-0.1D, -0.1D, -0.1D)).isEmpty()) {
 						return new ActionResult<>(EnumActionResult.PASS, itemStackIn);
 					}
 
-					if (!worldIn.isRemote) {
-						worldIn.spawnEntityInWorld(var35);
+					if (!world.isRemote) {
+						world.spawnEntityInWorld(var35);
 					}
 
 					if (!playerIn.capabilities.isCreativeMode) {
@@ -129,9 +129,9 @@ public class ItemVenusRover extends Item implements IHoldableItem {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer player, List<String> par2List, boolean b) {
-		if (par1ItemStack.getItemDamage() != 0) {
-			par2List.add(TranslateUtilities.translate("gui.buggy.storage_space") + ": " + par1ItemStack.getItemDamage() * 18);
+	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> par2List, boolean b) {
+		if (itemStack.getItemDamage() != 0) {
+			par2List.add(TranslateUtilities.translate("gui.buggy.storage_space") + ": " + itemStack.getItemDamage() * 18);
 		}
 		par2List.add(EnumColor.AQUA + TranslateUtilities.translate("gui.rover.information"));
 		par2List.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate("gui.rover.information.2"));

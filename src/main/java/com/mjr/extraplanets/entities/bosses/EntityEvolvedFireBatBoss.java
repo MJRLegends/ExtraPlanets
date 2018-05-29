@@ -50,8 +50,8 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	/** Coordinates of where the bat spawned. */
 	private BlockPos spawnPosition;
 
-	public EntityEvolvedFireBatBoss(World worldIn) {
-		super(worldIn);
+	public EntityEvolvedFireBatBoss(World world) {
+		super(world);
 		this.setSize(6.5F, 6.9F);
 		this.isImmuneToFire = true;
 		this.tasks.addTask(7, new EntityEvolvedFireBatBoss.AIFireballAttack(this));
@@ -106,7 +106,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	}
 
 	@Override
-	protected void collideWithEntity(Entity entityIn) {
+	protected void collideWithEntity(Entity entity) {
 	}
 
 	@Override
@@ -306,16 +306,16 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	}
 
 	@Override
-	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
-		entityitem.motionY = -2.0D;
-		entityitem.setDefaultPickupDelay();
+	public EntityItem entityDropItem(ItemStack itemStack, float par2) {
+		final EntityItem EntityItem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, itemStack);
+		EntityItem.motionY = -2.0D;
+		EntityItem.setDefaultPickupDelay();
 		if (this.captureDrops) {
-			this.capturedDrops.add(entityitem);
+			this.capturedDrops.add(EntityItem);
 		} else {
-			this.worldObj.spawnEntityInWorld(entityitem);
+			this.worldObj.spawnEntityInWorld(EntityItem);
 		}
-		return entityitem;
+		return EntityItem;
 	}
 
 	@Override

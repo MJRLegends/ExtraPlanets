@@ -48,15 +48,15 @@ public class ContainerBasicDensifier extends Container {
 	}
 
 	@Override
-	public boolean canInteractWith(EntityPlayer par1EntityPlayer) {
-		return this.tileEntity.isUseableByPlayer(par1EntityPlayer);
+	public boolean canInteractWith(EntityPlayer entityPlayer) {
+		return this.tileEntity.isUseableByPlayer(entityPlayer);
 	}
 
 	/**
 	 * Called to transfer a stack from one inventory to the other eg. when shift clicking.
 	 */
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par1) {
 		ItemStack var2 = null;
 		final Slot slot = this.inventorySlots.get(par1);
 
@@ -102,7 +102,7 @@ public class ContainerBasicDensifier extends Container {
 				return null;
 			}
 
-			slot.onPickupFromSlot(par1EntityPlayer, var4);
+			slot.onPickupFromSlot(entityPlayer, var4);
 		}
 
 		return var2;

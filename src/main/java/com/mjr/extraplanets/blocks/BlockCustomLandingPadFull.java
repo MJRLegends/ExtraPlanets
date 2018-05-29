@@ -59,12 +59,12 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 		}
 	}
 
-	public BlockCustomLandingPadFull(String assetName) {
+	public BlockCustomLandingPadFull(String name) {
 		super(Material.ROCK);
 		this.setHardness(1.0F);
 		this.setResistance(10.0F);
 		this.setSoundType(SoundType.METAL);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override
@@ -78,14 +78,14 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 	}
 
 	@Override
-	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-		final TileEntity var9 = worldIn.getTileEntity(pos);
+	public void breakBlock(World world, BlockPos pos, IBlockState state) {
+		final TileEntity var9 = world.getTileEntity(pos);
 
 		if (var9 instanceof IMultiBlock) {
 			((IMultiBlock) var9).onDestroy(var9);
 		}
 
-		super.breakBlock(worldIn, pos, state);
+		super.breakBlock(world, pos, state);
 	}
 
 	@Override
@@ -94,15 +94,15 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 	}
 
 	@Override
-	public AxisAlignedBB getBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
+	public AxisAlignedBB getBoundingBox(IBlockState blockState, IBlockAccess world, BlockPos pos) {
 		return this.AABB;
 	}
 
 	@Override
-	public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
+	public boolean canPlaceBlockAt(World world, BlockPos pos) {
 		for (int x2 = -2; x2 < 3; ++x2) {
 			for (int z2 = -2; z2 < 3; ++z2) {
-				if (!super.canPlaceBlockAt(worldIn, new BlockPos(pos.getX() + x2, pos.getY(), pos.getZ() + z2))) {
+				if (!super.canPlaceBlockAt(world, new BlockPos(pos.getX() + x2, pos.getY(), pos.getZ() + z2))) {
 					return false;
 				}
 			}
@@ -134,8 +134,8 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 	}
 
 	@Override
-	public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn) {
-		worldIn.notifyBlockUpdate(pos, state, state, 3);
+	public void neighborChanged(IBlockState state, World world, BlockPos pos, Block blockIn) {
+		world.notifyBlockUpdate(pos, state, state, 3);
 	}
 
 	@Override
@@ -155,7 +155,7 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 	}
 
 	@Override
-	public boolean isSealed(World worldIn, BlockPos pos, EnumFacing direction) {
+	public boolean isSealed(World world, BlockPos pos, EnumFacing direction) {
 		return direction == EnumFacing.UP;
 	}
 

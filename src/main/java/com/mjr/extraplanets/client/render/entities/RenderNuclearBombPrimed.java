@@ -16,8 +16,8 @@ import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderNuclearBombPrimed extends Render<EntityNuclearBombPrimed> {
-	public RenderNuclearBombPrimed(RenderManager renderManagerIn) {
-		super(renderManagerIn);
+	public RenderNuclearBombPrimed(RenderManager renderManager) {
+		super(renderManager);
 		this.shadowSize = 0.5F;
 	}
 

@@ -50,8 +50,8 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	private int explosionStrength = 1;
 	private static final DataParameter<Boolean> ATTACKING = EntityDataManager.<Boolean> createKey(EntityEvolvedGhastBoss.class, DataSerializers.BOOLEAN);
 
-	public EntityEvolvedGhastBoss(World worldIn) {
-		super(worldIn);
+	public EntityEvolvedGhastBoss(World world) {
+		super(world);
 		this.setSize(4.0F, 4.0F);
 		this.isImmuneToFire = true;
 		this.experienceValue = 5;
@@ -428,16 +428,16 @@ public class EntityEvolvedGhastBoss extends EntityBossBase implements IMob, IEnt
 	}
 
 	@Override
-	public EntityItem entityDropItem(ItemStack par1ItemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, par1ItemStack);
-		entityitem.motionY = -2.0D;
-		entityitem.setDefaultPickupDelay();
+	public EntityItem entityDropItem(ItemStack itemStack, float par2) {
+		final EntityItem EntityItem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, itemStack);
+		EntityItem.motionY = -2.0D;
+		EntityItem.setDefaultPickupDelay();
 		if (this.captureDrops) {
-			this.capturedDrops.add(entityitem);
+			this.capturedDrops.add(EntityItem);
 		} else {
-			this.worldObj.spawnEntityInWorld(entityitem);
+			this.worldObj.spawnEntityInWorld(EntityItem);
 		}
-		return entityitem;
+		return EntityItem;
 	}
 
 	@Override

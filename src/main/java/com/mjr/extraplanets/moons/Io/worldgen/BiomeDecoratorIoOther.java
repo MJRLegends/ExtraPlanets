@@ -25,11 +25,11 @@ public class BiomeDecoratorIoOther extends BiomeDecorator {
 	}
 
 	@Override
-	public void decorate(World worldIn, Random random, Biome p_180292_3_, BlockPos pos) {
+	public void decorate(World world, Random random, Biome p_180292_3_, BlockPos pos) {
 		if (this.worldObj != null) {
 			throw new RuntimeException("Already decorating!!");
 		} else {
-			this.worldObj = worldIn;
+			this.worldObj = world;
 			this.randomGenerator = random;
 			this.chunkPos = pos;
 			this.generate();

@@ -155,10 +155,10 @@ public abstract class EntityElectricSpaceshipBase extends Entity implements IPac
 		}
 
 		for (final ItemStack item : this.getItemsDropped(new ArrayList<ItemStack>())) {
-			EntityItem entityItem = this.entityDropItem(item, 0);
+			EntityItem EntityItem = this.entityDropItem(item, 0);
 
 			if (item.hasTagCompound()) {
-				entityItem.getEntityItem().setTagCompound(item.getTagCompound().copy());
+				EntityItem.getEntityItem().setTagCompound(item.getTagCompound().copy());
 			}
 		}
 	}

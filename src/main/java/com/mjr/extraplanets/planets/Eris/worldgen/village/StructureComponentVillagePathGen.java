@@ -107,8 +107,8 @@ public class StructureComponentVillagePathGen extends StructureComponentVillageR
 		}
 	}
 
-	public static StructureBoundingBox func_74933_a(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, EnumFacing par6) {
-		for (int var7 = 7 * MathHelper.getRandomIntegerInRange(par2Random, 3, 5); var7 >= 7; var7 -= 7) {
+	public static StructureBoundingBox func_74933_a(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random rand, int par3, int par4, int par5, EnumFacing par6) {
+		for (int var7 = 7 * MathHelper.getRandomIntegerInRange(rand, 3, 5); var7 >= 7; var7 -= 7) {
 			final StructureBoundingBox var8 = StructureBoundingBox.getComponentToAddBoundingBox(par3, par4, par5, 0, 0, 0, 3, 3, var7, par6);
 
 			if (StructureComponent.findIntersecting(par1List, var8) == null) {
@@ -123,7 +123,7 @@ public class StructureComponentVillagePathGen extends StructureComponentVillageR
 	 * second Part of Structure generating, this for example places Spiderwebs, Mob Spawners, it closes Mineshafts at the end, it adds Fences...
 	 */
 	@Override
-	public boolean addComponentParts(World par1World, Random par2Random, StructureBoundingBox par3StructureBoundingBox) {
+	public boolean addComponentParts(World par1World, Random rand, StructureBoundingBox par3StructureBoundingBox) {
 		final Block var4 = Blocks.PLANKS;
 
 		for (int var5 = this.boundingBox.minX; var5 <= this.boundingBox.maxX; ++var5) {

@@ -25,12 +25,12 @@ public class RenderEvolvedGhastBoss extends RenderLiving<EntityEvolvedGhastBoss>
 	}
 
 	@Override
-	protected void preRenderCallback(EntityEvolvedGhastBoss entitylivingbaseIn, float partialTickTime) {
+	protected void preRenderCallback(EntityEvolvedGhastBoss entityLiving, float partialTickTime) {
 		float f = 2.0F;
 		float f1 = (8.0F + f) / 2.0F;
 		float f2 = (8.0F + 1.0F / f) / 2.0F;
 		GlStateManager.scale(f2, f1, f2);
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-		GlStateManager.rotate((float) (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F + (Math.pow(entitylivingbaseIn.deathTicks, 2) / 5.0F - Math.pow(entitylivingbaseIn.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
+		GlStateManager.rotate((float) (Math.pow(entityLiving.deathTicks, 2) / 5.0F + (Math.pow(entityLiving.deathTicks, 2) / 5.0F - Math.pow(entityLiving.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
 	}
 }

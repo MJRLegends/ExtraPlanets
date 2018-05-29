@@ -40,7 +40,7 @@ public class ContainerSolar extends Container {
 	}
 
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par1) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par1) {
 		ItemStack var2 = null;
 		final Slot slot = this.inventorySlots.get(par1);
 		final int b = this.inventorySlots.size();
@@ -88,7 +88,7 @@ public class ContainerSolar extends Container {
 				return null;
 			}
 
-			slot.onPickupFromSlot(par1EntityPlayer, stack);
+			slot.onPickupFromSlot(entityPlayer, stack);
 		}
 
 		return var2;

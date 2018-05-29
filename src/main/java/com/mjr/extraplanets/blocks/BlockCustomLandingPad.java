@@ -63,12 +63,12 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 		}
 	}
 
-	public BlockCustomLandingPad(String assetName) {
+	public BlockCustomLandingPad(String name) {
 		super(Material.IRON);
 		this.setHardness(1.0F);
 		this.setResistance(10.0F);
 		this.setSoundType(SoundType.METAL);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override
@@ -89,10 +89,10 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 		}
 	}
 
-	private boolean checkAxis(World worldIn, BlockPos pos, Block block, EnumFacing facing) {
+	private boolean checkAxis(World world, BlockPos pos, Block block, EnumFacing facing) {
 		int sameCount = 0;
 		for (int i = 1; i <= 5; i++) {
-			if (worldIn.getBlockState(pos.offset(facing, i)).getBlock() == block) {
+			if (world.getBlockState(pos.offset(facing, i)).getBlock() == block) {
 				sameCount++;
 			}
 		}
@@ -101,17 +101,17 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 	}
 
 	@Override
-	public boolean canPlaceBlockOnSide(World worldIn, BlockPos pos, EnumFacing side) {
+	public boolean canPlaceBlockOnSide(World world, BlockPos pos, EnumFacing side) {
 		final Block id = ExtraPlanets_Blocks.ADVANCED_LAUCHPAD;
 
-		if (!checkAxis(worldIn, pos, id, EnumFacing.EAST) || !checkAxis(worldIn, pos, id, EnumFacing.WEST) || !checkAxis(worldIn, pos, id, EnumFacing.NORTH) || !checkAxis(worldIn, pos, id, EnumFacing.SOUTH)) {
+		if (!checkAxis(world, pos, id, EnumFacing.EAST) || !checkAxis(world, pos, id, EnumFacing.WEST) || !checkAxis(world, pos, id, EnumFacing.NORTH) || !checkAxis(world, pos, id, EnumFacing.SOUTH)) {
 			return false;
 		}
 
-		if (worldIn.getBlockState(pos.offset(EnumFacing.DOWN)).getBlock() == GCBlocks.landingPad && side == EnumFacing.UP) {
+		if (world.getBlockState(pos.offset(EnumFacing.DOWN)).getBlock() == GCBlocks.landingPad && side == EnumFacing.UP) {
 			return false;
 		} else {
-			return this.canPlaceBlockAt(worldIn, pos);
+			return this.canPlaceBlockAt(world, pos);
 		}
 	}
 
@@ -142,7 +142,7 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 	}
 
 	@Override
-	public boolean isSealed(World worldIn, BlockPos pos, EnumFacing direction) {
+	public boolean isSealed(World world, BlockPos pos, EnumFacing direction) {
 		return direction == EnumFacing.UP;
 	}
 
