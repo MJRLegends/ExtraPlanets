@@ -106,9 +106,9 @@ public class BlockBasicTitania extends Block implements IDetectableResource, IPl
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> par3List) {
+	public void getSubBlocks(CreativeTabs tab, NonNullList<ItemStack> list) {
 		for (EnumBlockBasic blockBasic : EnumBlockBasic.values()) {
-			par3List.add(new ItemStack(this, 1, blockBasic.getMeta()));
+			list.add(new ItemStack(this, 1, blockBasic.getMeta()));
 		}
 	}
 

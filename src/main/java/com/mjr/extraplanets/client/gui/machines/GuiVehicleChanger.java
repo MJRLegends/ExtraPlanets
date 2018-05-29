@@ -30,9 +30,9 @@ public class GuiVehicleChanger extends GuiContainerGC {
 	private GuiButton buttonloadpower;
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 112, (this.height - this.ySize) / 2 + 65, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiVehicleChanger(InventoryPlayer inventoryPlayer, TileEntityVehicleChanger par2TileEntityAirDistributor) {
-		super(new ContainerVehicleChanger(inventoryPlayer, par2TileEntityAirDistributor));
-		this.tileEntity = par2TileEntityAirDistributor;
+	public GuiVehicleChanger(InventoryPlayer inventoryPlayer, TileEntityVehicleChanger tileEntity) {
+		super(new ContainerVehicleChanger(inventoryPlayer, tileEntity));
+		this.tileEntity = tileEntity;
 		this.ySize = 180;
 	}
 
