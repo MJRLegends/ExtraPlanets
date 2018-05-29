@@ -36,7 +36,7 @@ public class RenderTier6Rocket extends Render<EntityTier6Rocket> {
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityTier6Rocket par1Entity) {
+	protected ResourceLocation getEntityTexture(EntityTier6Rocket entity) {
 		return TextureMap.LOCATION_BLOCKS_TEXTURE;
 	}
 

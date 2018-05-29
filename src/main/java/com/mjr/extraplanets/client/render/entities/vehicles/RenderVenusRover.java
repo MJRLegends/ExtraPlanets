@@ -60,7 +60,7 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityVenusRover par1Entity) {
+	protected ResourceLocation getEntityTexture(EntityVenusRover entity) {
 		return new ResourceLocation("missing");
 	}
 

@@ -40,7 +40,7 @@ public class RenderNeptuneLander extends Render<EntityNeptuneLander> {
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityNeptuneLander par1Entity) {
+	protected ResourceLocation getEntityTexture(EntityNeptuneLander entity) {
 		return TextureMap.LOCATION_BLOCKS_TEXTURE;
 	}
 

@@ -72,8 +72,8 @@ public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBl
 	}
 
 	@Override
-	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-		super.onBlockPlacedBy(world, pos, state, placer, stack);
+	public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack itemStack) {
+		super.onBlockPlacedBy(world, pos, state, placer, itemStack);
 
 		TileEntity tile = world.getTileEntity(pos);
 

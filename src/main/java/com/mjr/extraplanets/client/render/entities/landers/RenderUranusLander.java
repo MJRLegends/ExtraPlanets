@@ -40,7 +40,7 @@ public class RenderUranusLander extends Render<EntityUranusLander> {
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityUranusLander par1Entity) {
+	protected ResourceLocation getEntityTexture(EntityUranusLander entity) {
 		return TextureMap.LOCATION_BLOCKS_TEXTURE;
 	}
 

@@ -6,7 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossPluto;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
 
 public class ModelCreeperBossPluto extends ModelBase {
 	ModelRenderer headMain;
@@ -100,34 +100,34 @@ public class ModelCreeperBossPluto extends ModelBase {
 	}
 
 	@Override
-	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
-		super.render(entity, f, f1, f2, f3, f4, f5);
-		this.setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+	public void render(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
+		super.render(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
+		this.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale, entity);
 
-		final EntityCreeperBossPluto creeper = (EntityCreeperBossPluto) entity;
+		final EntityCreeperBossEris creeper = (EntityCreeperBossEris) entity;
 
 		if (creeper.headsRemaining > 2) {
-			this.headLeft.render(f5);
-			this.neckLeft.render(f5);
-			this.headRight.render(f5);
-			this.neckRight.render(f5);
-			this.headMain.render(f5);
-			this.oxygenTank.render(f5);
+			this.headLeft.render(scale);
+			this.neckLeft.render(scale);
+			this.headRight.render(scale);
+			this.neckRight.render(scale);
+			this.headMain.render(scale);
+			this.oxygenTank.render(scale);
 		} else if (creeper.headsRemaining > 1) {
-			this.headRight.render(f5);
-			this.neckRight.render(f5);
-			this.headMain.render(f5);
-			this.oxygenTank.render(f5);
+			this.headRight.render(scale);
+			this.neckRight.render(scale);
+			this.headMain.render(scale);
+			this.oxygenTank.render(scale);
 		} else if (creeper.headsRemaining > 0) {
-			this.headMain.render(f5);
-			this.oxygenTank.render(f5);
+			this.headMain.render(scale);
+			this.oxygenTank.render(scale);
 		}
 
-		this.bodyMain.render(f5);
-		this.rightLegFront.render(f5);
-		this.leftLegFront.render(f5);
-		this.rightLeg.render(f5);
-		this.leftLeg.render(f5);
+		this.bodyMain.render(scale);
+		this.rightLegFront.render(scale);
+		this.leftLegFront.render(scale);
+		this.rightLeg.render(scale);
+		this.leftLeg.render(scale);
 	}
 
 	private void setRotation(ModelRenderer model, float x, float y, float z) {

@@ -22,9 +22,6 @@ public class OverlayJupiterLander extends Overlay {
 
 	private static long screenTicks;
 
-	/**
-	 * Render the GUI when player is in inventory
-	 */
 	public static void renderLanderOverlay() {
 		OverlayJupiterLander.screenTicks++;
 		final ScaledResolution scaledresolution = ClientUtil.getScaledRes(minecraft, OverlayJupiterLander.minecraft.displayWidth, OverlayJupiterLander.minecraft.displayHeight);

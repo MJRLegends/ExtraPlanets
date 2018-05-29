@@ -26,17 +26,11 @@ public class BlockBasicKepler22bPlanks extends Block {
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
-	/**
-	 * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It returns the metadata of the dropped item based on the old metadata of the block.
-	 */
 	@Override
 	public int damageDropped(IBlockState state) {
 		return state.getValue(VARIANT).getMetadata();
 	}
 
-	/**
-	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
-	 */
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
@@ -45,25 +39,16 @@ public class BlockBasicKepler22bPlanks extends Block {
 		}
 	}
 
-	/**
-	 * Convert the given metadata into a BlockState for this Block
-	 */
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(VARIANT, BlockBasicKepler22bPlanks.EnumType.byMetadata(meta));
 	}
 
-	/**
-	 * Get the MapColor for this Block and the given BlockState
-	 */
 	@Override
 	public MapColor getMapColor(IBlockState state) {
 		return state.getValue(VARIANT).func_181070_c();
 	}
 
-	/**
-	 * Convert the BlockState into the correct metadata value
-	 */
 	@Override
 	public int getMetaFromState(IBlockState state) {
 		return state.getValue(VARIANT).getMetadata();

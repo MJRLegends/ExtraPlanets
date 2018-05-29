@@ -73,16 +73,16 @@ import com.mjr.mjrlegendslib.util.PlayerUtilties;
 
 public class GuiHandler implements IGuiHandler {
 	@Override
-	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-		EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(player, false);
+	public Object getServerGuiElement(int ID, EntityPlayer entityPlayer, World world, int x, int y, int z) {
+		EntityPlayerMP playerBase = PlayerUtil.getPlayerBaseServerFromPlayer(entityPlayer, false);
 
 		if (playerBase == null) {
-			PlayerUtilties.sendMessage(player, "ExtraPlanets player instance null server-side. This is a bug.");
+			PlayerUtilties.sendMessage(entityPlayer, "ExtraPlanets entityPlayer instance null server-side. This is a bug.");
 			return null;
 		}
 
-		if (ID == GuiIdsCore.ROCKET_INVENTORY && player.getRidingEntity() instanceof EntityElectricRocketBase) {
-			return new ContainerElectricRocketInventory(player.inventory, (EntityElectricRocketBase) player.getRidingEntity(), ((EntityElectricRocketBase) player.getRidingEntity()).getType(), player);
+		if (ID == GuiIdsCore.ROCKET_INVENTORY && entityPlayer.getRidingEntity() instanceof EntityElectricRocketBase) {
+			return new ContainerElectricRocketInventory(entityPlayer.inventory, (EntityElectricRocketBase) entityPlayer.getRidingEntity(), ((EntityElectricRocketBase) entityPlayer.getRidingEntity()).getType(), entityPlayer);
 		}
 
 		BlockPos pos = new BlockPos(x, y, z);
@@ -90,99 +90,99 @@ public class GuiHandler implements IGuiHandler {
 
 		if (tile != null) {
 			if (tile instanceof TileEntityAdvancedRefinery) {
-				return new ContainerAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) tile, player);
+				return new ContainerAdvancedRefinery(entityPlayer.inventory, (TileEntityAdvancedRefinery) tile, entityPlayer);
 			} else if (tile instanceof TileEntityUltimateRefinery) {
-				return new ContainerUltimateRefinery(player.inventory, (TileEntityUltimateRefinery) tile, player);
+				return new ContainerUltimateRefinery(entityPlayer.inventory, (TileEntityUltimateRefinery) tile, entityPlayer);
 			} else if (tile instanceof TileEntitySolar) {
-				return new ContainerSolar(player.inventory, (TileEntitySolar) tile);
+				return new ContainerSolar(entityPlayer.inventory, (TileEntitySolar) tile);
 			} else if (tile instanceof TileEntityAdvancedOxygenCompressor) {
-				return new ContainerAdvancedOxygenCompressor(player.inventory, (TileEntityAdvancedOxygenCompressor) tile, player);
+				return new ContainerAdvancedOxygenCompressor(entityPlayer.inventory, (TileEntityAdvancedOxygenCompressor) tile, entityPlayer);
 			} else if (tile instanceof TileEntityAdvancedOxygenDecompressor) {
-				return new ContainerAdvancedOxygenDecompressor(player.inventory, (TileEntityAdvancedOxygenDecompressor) tile, player);
+				return new ContainerAdvancedOxygenDecompressor(entityPlayer.inventory, (TileEntityAdvancedOxygenDecompressor) tile, entityPlayer);
 			} else if (tile instanceof TileEntityUltimateOxygenCompressor) {
-				return new ContainerUltimateOxygenCompressor(player.inventory, (TileEntityUltimateOxygenCompressor) tile, player);
+				return new ContainerUltimateOxygenCompressor(entityPlayer.inventory, (TileEntityUltimateOxygenCompressor) tile, entityPlayer);
 			} else if (tile instanceof TileEntityUltimateOxygenDecompressor) {
-				return new ContainerUltimateOxygenDecompressor(player.inventory, (TileEntityUltimateOxygenDecompressor) tile, player);
+				return new ContainerUltimateOxygenDecompressor(entityPlayer.inventory, (TileEntityUltimateOxygenDecompressor) tile, entityPlayer);
 			} else if (tile instanceof TileEntityBasicDecrystallizer) {
-				return new ContainerBasicDecrystallizer(player.inventory, (TileEntityBasicDecrystallizer) tile, player);
+				return new ContainerBasicDecrystallizer(entityPlayer.inventory, (TileEntityBasicDecrystallizer) tile, entityPlayer);
 			} else if (tile instanceof TileEntityBasicCrystallizer) {
-				return new ContainerBasicCrystallizer(player.inventory, (TileEntityBasicCrystallizer) tile, player);
+				return new ContainerBasicCrystallizer(entityPlayer.inventory, (TileEntityBasicCrystallizer) tile, entityPlayer);
 			} else if (tile instanceof TileEntityBasicSmasher) {
-				return new ContainerBasicSmasher(player.inventory, (TileEntityBasicSmasher) tile, player);
+				return new ContainerBasicSmasher(entityPlayer.inventory, (TileEntityBasicSmasher) tile, entityPlayer);
 			} else if (tile instanceof TileEntityBasicChemicalInjector) {
-				return new ContainerBasicChemicalInjector(player.inventory, (TileEntityBasicChemicalInjector) tile, player);
+				return new ContainerBasicChemicalInjector(entityPlayer.inventory, (TileEntityBasicChemicalInjector) tile, entityPlayer);
 			} else if (tile instanceof TileEntityBasicSolarEvaporationChamber) {
-				return new ContainerBasicSolarEvaporationChamber(player.inventory, (TileEntityBasicSolarEvaporationChamber) tile, player);
+				return new ContainerBasicSolarEvaporationChamber(entityPlayer.inventory, (TileEntityBasicSolarEvaporationChamber) tile, entityPlayer);
 			} else if (tile instanceof TileEntityAdvancedFuelLoader) {
-				return new ContainerAdvancedFuelLoader(player.inventory, (TileEntityAdvancedFuelLoader) tile);
+				return new ContainerAdvancedFuelLoader(entityPlayer.inventory, (TileEntityAdvancedFuelLoader) tile);
 			} else if (tile instanceof TileEntityUltimateFuelLoader) {
-				return new ContainerUltimateFuelLoader(player.inventory, (TileEntityUltimateFuelLoader) tile);
+				return new ContainerUltimateFuelLoader(entityPlayer.inventory, (TileEntityUltimateFuelLoader) tile);
 			} else if (tile instanceof TileEntityVehicleChanger) {
-				return new ContainerVehicleChanger(player.inventory, (TileEntityVehicleChanger) tile);
+				return new ContainerVehicleChanger(entityPlayer.inventory, (TileEntityVehicleChanger) tile);
 			} else if (tile instanceof TileEntityBasicPurifier) {
-				return new ContainerBasicPurifier(player.inventory, (TileEntityBasicPurifier) tile, player);
+				return new ContainerBasicPurifier(entityPlayer.inventory, (TileEntityBasicPurifier) tile, entityPlayer);
 			} else if (tile instanceof TileEntityBasicDensifier) {
-				return new ContainerBasicDensifier(player.inventory, (TileEntityBasicDensifier) tile, player);
+				return new ContainerBasicDensifier(entityPlayer.inventory, (TileEntityBasicDensifier) tile, entityPlayer);
 			} else if (tile instanceof TileEntityBasicDecontaminationUnit) {
-				return new ContainerBasicDecontaminationUnit(player.inventory, (TileEntityBasicDecontaminationUnit) tile, player);
+				return new ContainerBasicDecontaminationUnit(entityPlayer.inventory, (TileEntityBasicDecontaminationUnit) tile, entityPlayer);
 			}
 		}
 		return null;
 	}
 
 	@Override
-	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+	public Object getClientGuiElement(int ID, EntityPlayer entityPlayer, World world, int x, int y, int z) {
 		if (MCUtilities.isClient()) {
-			return this.getClientGuiElement(ID, player, world, new BlockPos(x, y, z));
+			return this.getClientGuiElement(ID, entityPlayer, world, new BlockPos(x, y, z));
 		}
 
 		return null;
 	}
 
 	@SideOnly(Side.CLIENT)
-	private Object getClientGuiElement(int ID, EntityPlayer player, World world, BlockPos position) {
-		if (ID == GuiIdsCore.ROCKET_INVENTORY && player.getRidingEntity() instanceof EntityElectricRocketBase) {
-			return new GuiElectricRocketInventory(player.inventory, (EntityElectricRocketBase) player.getRidingEntity(), ((EntityElectricRocketBase) player.getRidingEntity()).getType());
+	private Object getClientGuiElement(int ID, EntityPlayer entityPlayer, World world, BlockPos position) {
+		if (ID == GuiIdsCore.ROCKET_INVENTORY && entityPlayer.getRidingEntity() instanceof EntityElectricRocketBase) {
+			return new GuiElectricRocketInventory(entityPlayer.inventory, (EntityElectricRocketBase) entityPlayer.getRidingEntity(), ((EntityElectricRocketBase) entityPlayer.getRidingEntity()).getType());
 		}
 		TileEntity tile = world.getTileEntity(position);
 
 		if (tile != null) {
 			if (tile instanceof TileEntityAdvancedRefinery) {
-				return new GuiAdvancedRefinery(player.inventory, (TileEntityAdvancedRefinery) world.getTileEntity(position));
+				return new GuiAdvancedRefinery(entityPlayer.inventory, (TileEntityAdvancedRefinery) world.getTileEntity(position));
 			} else if (tile instanceof TileEntityUltimateRefinery) {
-				return new GuiUltimateRefinery(player.inventory, (TileEntityUltimateRefinery) world.getTileEntity(position));
+				return new GuiUltimateRefinery(entityPlayer.inventory, (TileEntityUltimateRefinery) world.getTileEntity(position));
 			} else if (tile instanceof TileEntitySolar) {
-				return new GuiSolar(player.inventory, (TileEntitySolar) tile);
+				return new GuiSolar(entityPlayer.inventory, (TileEntitySolar) tile);
 			} else if (tile instanceof TileEntityAdvancedOxygenCompressor) {
-				return new GuiAdvancedOxygenCompressor(player.inventory, (TileEntityAdvancedOxygenCompressor) tile);
+				return new GuiAdvancedOxygenCompressor(entityPlayer.inventory, (TileEntityAdvancedOxygenCompressor) tile);
 			} else if (tile instanceof TileEntityAdvancedOxygenDecompressor) {
-				return new GuiAdvancedOxygenDecompressor(player.inventory, (TileEntityAdvancedOxygenDecompressor) tile);
+				return new GuiAdvancedOxygenDecompressor(entityPlayer.inventory, (TileEntityAdvancedOxygenDecompressor) tile);
 			} else if (tile instanceof TileEntityUltimateOxygenCompressor) {
-				return new GuiUltimateOxygenCompressor(player.inventory, (TileEntityUltimateOxygenCompressor) tile);
+				return new GuiUltimateOxygenCompressor(entityPlayer.inventory, (TileEntityUltimateOxygenCompressor) tile);
 			} else if (tile instanceof TileEntityUltimateOxygenDecompressor) {
-				return new GuiUltimateOxygenDecompressor(player.inventory, (TileEntityUltimateOxygenDecompressor) tile);
+				return new GuiUltimateOxygenDecompressor(entityPlayer.inventory, (TileEntityUltimateOxygenDecompressor) tile);
 			} else if (tile instanceof TileEntityBasicDecrystallizer) {
-				return new GuiBasicDecrystallizer(player.inventory, (TileEntityBasicDecrystallizer) tile);
+				return new GuiBasicDecrystallizer(entityPlayer.inventory, (TileEntityBasicDecrystallizer) tile);
 			} else if (tile instanceof TileEntityBasicCrystallizer) {
-				return new GuiBasicCrystallizer(player.inventory, (TileEntityBasicCrystallizer) tile);
+				return new GuiBasicCrystallizer(entityPlayer.inventory, (TileEntityBasicCrystallizer) tile);
 			} else if (tile instanceof TileEntityBasicSmasher) {
-				return new GuiBasicSmasher(player.inventory, (TileEntityBasicSmasher) tile);
+				return new GuiBasicSmasher(entityPlayer.inventory, (TileEntityBasicSmasher) tile);
 			} else if (tile instanceof TileEntityBasicChemicalInjector) {
-				return new GuiBasicChemicalInjector(player.inventory, (TileEntityBasicChemicalInjector) tile);
+				return new GuiBasicChemicalInjector(entityPlayer.inventory, (TileEntityBasicChemicalInjector) tile);
 			} else if (tile instanceof TileEntityBasicSolarEvaporationChamber) {
-				return new GuiBasicSolarEvaporationChamber(player.inventory, (TileEntityBasicSolarEvaporationChamber) tile);
+				return new GuiBasicSolarEvaporationChamber(entityPlayer.inventory, (TileEntityBasicSolarEvaporationChamber) tile);
 			} else if (tile instanceof TileEntityAdvancedFuelLoader) {
-				return new GuiAdvancedFuelLoader(player.inventory, (TileEntityAdvancedFuelLoader) tile);
+				return new GuiAdvancedFuelLoader(entityPlayer.inventory, (TileEntityAdvancedFuelLoader) tile);
 			} else if (tile instanceof TileEntityUltimateFuelLoader) {
-				return new GuiUltimateFuelLoader(player.inventory, (TileEntityUltimateFuelLoader) tile);
+				return new GuiUltimateFuelLoader(entityPlayer.inventory, (TileEntityUltimateFuelLoader) tile);
 			} else if (tile instanceof TileEntityVehicleChanger) {
-				return new GuiVehicleChanger(player.inventory, (TileEntityVehicleChanger) tile);
+				return new GuiVehicleChanger(entityPlayer.inventory, (TileEntityVehicleChanger) tile);
 			} else if (tile instanceof TileEntityBasicPurifier) {
-				return new GuiBasicPurifier(player.inventory, (TileEntityBasicPurifier) tile);
+				return new GuiBasicPurifier(entityPlayer.inventory, (TileEntityBasicPurifier) tile);
 			} else if (tile instanceof TileEntityBasicDensifier) {
-				return new GuiBasicDensifier(player.inventory, (TileEntityBasicDensifier) tile);
+				return new GuiBasicDensifier(entityPlayer.inventory, (TileEntityBasicDensifier) tile);
 			} else if (tile instanceof TileEntityBasicDecontaminationUnit) {
-				return new GuiBasicDecontaminationUnit(player.inventory, (TileEntityBasicDecontaminationUnit) tile);
+				return new GuiBasicDecontaminationUnit(entityPlayer.inventory, (TileEntityBasicDecontaminationUnit) tile);
 			}
 		}
 		return null;

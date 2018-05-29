@@ -22,9 +22,6 @@ public class OverlayUranusLander extends Overlay {
 
 	private static long screenTicks;
 
-	/**
-	 * Render the GUI when player is in inventory
-	 */
 	public static void renderLanderOverlay() {
 		OverlayUranusLander.screenTicks++;
 		final ScaledResolution scaledresolution = ClientUtil.getScaledRes(minecraft, OverlayUranusLander.minecraft.displayWidth, OverlayUranusLander.minecraft.displayHeight);

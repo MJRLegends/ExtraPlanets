@@ -74,7 +74,7 @@ public class GuiBasicDensifier extends GuiContainerGC {
 	}
 
 	@Override
-	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
+	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2, 5, 4210752, this.fontRendererObj);
 		String displayText = "";
 		int yOffset = -10;
@@ -100,7 +100,7 @@ public class GuiBasicDensifier extends GuiContainerGC {
 	}
 
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
+	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
 		this.mc.renderEngine.bindTexture(GuiBasicDensifier.densifierTexture);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 

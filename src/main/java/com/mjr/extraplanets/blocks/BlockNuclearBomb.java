@@ -19,9 +19,9 @@ public class BlockNuclearBomb extends BlockBasicExplosion {
 	}
 
 	@Override
-	public void onBlockDestroyedByExplosion(World world, BlockPos pos, Explosion explosionIn) {
+	public void onBlockDestroyedByExplosion(World world, BlockPos pos, Explosion explosion) {
 		if (!world.isRemote) {
-			EntityNuclearBombPrimed EntityNuclearBombPrimed = new EntityNuclearBombPrimed(world, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, explosionIn.getExplosivePlacedBy());
+			EntityNuclearBombPrimed EntityNuclearBombPrimed = new EntityNuclearBombPrimed(world, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, explosion.getExplosivePlacedBy());
 			EntityNuclearBombPrimed.fuse = world.rand.nextInt(EntityNuclearBombPrimed.fuse / 4) + EntityNuclearBombPrimed.fuse / 8;
 			world.spawnEntity(EntityNuclearBombPrimed);
 		}

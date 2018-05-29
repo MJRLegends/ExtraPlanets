@@ -8,13 +8,9 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class ModelEvolvedIceSlimeBoss extends ModelBase {
-	/** The slime's bodies, both the inside box and the outside box */
 	ModelRenderer slimeBodies;
-	/** The slime's right eye */
 	ModelRenderer slimeRightEye;
-	/** The slime's left eye */
 	ModelRenderer slimeLeftEye;
-	/** The slime's mouth */
 	ModelRenderer slimeMouth;
 
 	public ModelEvolvedIceSlimeBoss(int p_i1157_1_) {
@@ -33,18 +29,15 @@ public class ModelEvolvedIceSlimeBoss extends ModelBase {
 		}
 	}
 
-	/**
-	 * Sets the models various rotation angles then renders the model.
-	 */
 	@Override
-	public void render(Entity p_78088_1_, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float p_78088_7_) {
-		this.setRotationAngles(p_78088_2_, p_78088_3_, p_78088_4_, p_78088_5_, p_78088_6_, p_78088_7_, p_78088_1_);
-		this.slimeBodies.render(p_78088_7_);
+	public void render(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
+		this.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale, entityIn);
+		this.slimeBodies.render(scale);
 
 		if (this.slimeRightEye != null) {
-			this.slimeRightEye.render(p_78088_7_);
-			this.slimeLeftEye.render(p_78088_7_);
-			this.slimeMouth.render(p_78088_7_);
+			this.slimeRightEye.render(scale);
+			this.slimeLeftEye.render(scale);
+			this.slimeMouth.render(scale);
 		}
 	}
 }

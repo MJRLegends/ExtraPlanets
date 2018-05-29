@@ -22,9 +22,6 @@ public class OverlaySaturnLander extends Overlay {
 
 	private static long screenTicks;
 
-	/**
-	 * Render the GUI when player is in inventory
-	 */
 	public static void renderLanderOverlay() {
 		OverlaySaturnLander.screenTicks++;
 		final ScaledResolution scaledresolution = ClientUtil.getScaledRes(minecraft, OverlaySaturnLander.minecraft.displayWidth, OverlaySaturnLander.minecraft.displayHeight);

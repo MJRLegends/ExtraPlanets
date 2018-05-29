@@ -25,22 +25,22 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class GuiAdvancedFuelLoader extends GuiContainerGC {
 	private static final ResourceLocation fuelLoaderTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/fuel_loader.png");
 
-	private final TileEntityAdvancedFuelLoader fuelLoader;
+	private final TileEntityAdvancedFuelLoader tileEntity;
 
 	private GuiButton buttonLoadFuel;
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 112, (this.height - this.ySize) / 2 + 65, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiAdvancedFuelLoader(InventoryPlayer par1InventoryPlayer, TileEntityAdvancedFuelLoader par2TileEntityAirDistributor) {
-		super(new ContainerAdvancedFuelLoader(par1InventoryPlayer, par2TileEntityAirDistributor));
-		this.fuelLoader = par2TileEntityAirDistributor;
+	public GuiAdvancedFuelLoader(InventoryPlayer inventoryPlayer, TileEntityAdvancedFuelLoader tileEntity) {
+		super(new ContainerAdvancedFuelLoader(inventoryPlayer, tileEntity));
+		this.tileEntity = tileEntity;
 		this.ySize = 180;
 	}
 
 	@Override
-	protected void actionPerformed(GuiButton par1GuiButton) {
-		switch (par1GuiButton.id) {
+	protected void actionPerformed(GuiButton button) {
+		switch (button.id) {
 		case 0:
-			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_UPDATE_DISABLEABLE_BUTTON, GCCoreUtil.getDimensionID(this.fuelLoader.getWorld()), new Object[] { this.fuelLoader.getPos(), 0 }));
+			GalacticraftCore.packetPipeline.sendToServer(new PacketSimple(EnumSimplePacket.S_UPDATE_DISABLEABLE_BUTTON, GCCoreUtil.getDimensionID(this.tileEntity.getWorld()), new Object[] { this.tileEntity.getPos(), 0 }));
 			break;
 		}
 	}
@@ -58,7 +58,7 @@ public class GuiAdvancedFuelLoader extends GuiContainerGC {
 		this.infoRegions.add(new GuiElementInfoRegion((this.width - this.xSize) / 2 + 50, (this.height - this.ySize) / 2 + 54, 18, 18, batterySlotDesc, this.width, this.height, this));
 		List<String> electricityDesc = new ArrayList<String>();
 		electricityDesc.add(TranslateUtilities.translate("gui.energy_storage.desc.0"));
-		electricityDesc.add(EnumColor.YELLOW + TranslateUtilities.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.fuelLoader.getEnergyStoredGC()) + " / " + (int) Math.floor(this.fuelLoader.getMaxEnergyStoredGC())));
+		electricityDesc.add(EnumColor.YELLOW + TranslateUtilities.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
 		this.electricInfoRegion.xPosition = (this.width - this.xSize) / 2 + 112;
 		this.electricInfoRegion.yPosition = (this.height - this.ySize) / 2 + 65;
@@ -69,45 +69,45 @@ public class GuiAdvancedFuelLoader extends GuiContainerGC {
 	}
 
 	@Override
-	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-		this.fontRendererObj.drawString(this.fuelLoader.getName(), 40, 10, 4210752);
-		this.buttonLoadFuel.enabled = this.fuelLoader.disableCooldown == 0 && !(this.fuelLoader.fuelTank.getFluid() == null || this.fuelLoader.fuelTank.getFluid().amount == 0);
-		this.buttonLoadFuel.displayString = !this.fuelLoader.getDisabled(0) ? TranslateUtilities.translate("gui.button.stoploading.name") : TranslateUtilities.translate("gui.button.loadfuel.name");
+	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
+		this.fontRendererObj.drawString(this.tileEntity.getName(), 40, 10, 4210752);
+		this.buttonLoadFuel.enabled = this.tileEntity.disableCooldown == 0 && !(this.tileEntity.fuelTank.getFluid() == null || this.tileEntity.fuelTank.getFluid().amount == 0);
+		this.buttonLoadFuel.displayString = !this.tileEntity.getDisabled(0) ? TranslateUtilities.translate("gui.button.stoploading.name") : TranslateUtilities.translate("gui.button.loadfuel.name");
 		this.fontRendererObj.drawString(TranslateUtilities.translate("gui.message.status.name") + ": " + this.getStatus(), 28, 45 + 23 - 46, 4210752);
-		// this.fontRendererObj.drawString("" + this.fuelLoader.storage.getMaxExtract(), 28, 56 + 23 - 46, 4210752);
-		// this.fontRendererObj.drawString(ElectricityDisplay.getDisplay(this.fuelLoader.getVoltage(), ElectricUnit.VOLTAGE), 28, 68 + 23 - 46, 4210752);
+		// this.fontRendererObj.drawString("" + this.tileEntity.storage.getMaxExtract(), 28, 56 + 23 - 46, 4210752);
+		// this.fontRendererObj.drawString(ElectricityDisplay.getDisplay(this.tileEntity.getVoltage(), ElectricUnit.VOLTAGE), 28, 68 + 23 - 46, 4210752);
 		this.fontRendererObj.drawString(TranslateUtilities.translate("container.inventory"), 8, this.ySize - 118 + 2 + 11, 4210752);
 	}
 
 	private String getStatus() {
-		if (this.fuelLoader.fuelTank.getFluid() == null || this.fuelLoader.fuelTank.getFluid().amount == 0) {
+		if (this.tileEntity.fuelTank.getFluid() == null || this.tileEntity.fuelTank.getFluid().amount == 0) {
 			return EnumColor.DARK_RED + TranslateUtilities.translate("gui.status.nofuel.name");
 		}
 
-		return this.fuelLoader.getGUIstatus();
+		return this.tileEntity.getGUIstatus();
 	}
 
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float var1, int var2, int var3) {
+	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		this.mc.getTextureManager().bindTexture(GuiAdvancedFuelLoader.fuelLoaderTexture);
 		final int var5 = (this.width - this.xSize) / 2;
 		final int var6 = (this.height - this.ySize) / 2;
 		this.drawTexturedModalRect(var5, var6 + 5, 0, 0, this.xSize, 181);
 
-		final int fuelLevel = this.fuelLoader.getScaledFuelLevel(38);
+		final int fuelLevel = this.tileEntity.getScaledFuelLevel(38);
 		this.drawTexturedModalRect((this.width - this.xSize) / 2 + 7, (this.height - this.ySize) / 2 + 17 + 54 - fuelLevel, 176, 38 - fuelLevel, 16, fuelLevel);
 
 		List<String> electricityDesc = new ArrayList<String>();
 		electricityDesc.add(TranslateUtilities.translate("gui.energy_storage.desc.0"));
-		EnergyDisplayHelper.getEnergyDisplayTooltip(this.fuelLoader.getEnergyStoredGC(), this.fuelLoader.getMaxEnergyStoredGC(), electricityDesc);
-		// electricityDesc.add(EnumColor.YELLOW + TranslateUtilities.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.fuelLoader.getEnergyStoredGC()) + " / " + (int) Math.floor(this.fuelLoader.getMaxEnergyStoredGC())));
+		EnergyDisplayHelper.getEnergyDisplayTooltip(this.tileEntity.getEnergyStoredGC(), this.tileEntity.getMaxEnergyStoredGC(), electricityDesc);
+		// electricityDesc.add(EnumColor.YELLOW + TranslateUtilities.translate("gui.energy_storage.desc.1") + ((int) Math.floor(this.tileEntity.getEnergyStoredGC()) + " / " + (int) Math.floor(this.tileEntity.getMaxEnergyStoredGC())));
 		this.electricInfoRegion.tooltipStrings = electricityDesc;
 
-		if (this.fuelLoader.getEnergyStoredGC() > 0) {
+		if (this.tileEntity.getEnergyStoredGC() > 0) {
 			this.drawTexturedModalRect(var5 + 99, var6 + 65, 192, 7, 11, 10);
 		}
 
-		this.drawTexturedModalRect(var5 + 113, var6 + 66, 192, 0, Math.min(this.fuelLoader.getScaledElecticalLevel(54), 54), 7);
+		this.drawTexturedModalRect(var5 + 113, var6 + 66, 192, 0, Math.min(this.tileEntity.getScaledElecticalLevel(54), 54), 7);
 	}
 }

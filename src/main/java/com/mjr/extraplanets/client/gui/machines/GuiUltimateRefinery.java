@@ -37,8 +37,8 @@ public class GuiUltimateRefinery extends GuiContainerGC {
 	private GuiElementInfoRegion oilTankRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 7, (this.height - this.ySize) / 2 + 28, 16, 38, new ArrayList<String>(), this.width, this.height, this);
 	private GuiElementInfoRegion electricInfoRegion = new GuiElementInfoRegion((this.width - this.xSize) / 2 + 62, (this.height - this.ySize) / 2 + 16, 56, 9, new ArrayList<String>(), this.width, this.height, this);
 
-	public GuiUltimateRefinery(InventoryPlayer par1InventoryPlayer, TileEntityUltimateRefinery tileEntity) {
-		super(new ContainerUltimateRefinery(par1InventoryPlayer, tileEntity, MCUtilities.getClient().player));
+	public GuiUltimateRefinery(InventoryPlayer inventoryPlayer, TileEntityUltimateRefinery tileEntity) {
+		super(new ContainerUltimateRefinery(inventoryPlayer, tileEntity, MCUtilities.getClient().player));
 		this.tileEntity = tileEntity;
 		this.ySize = 168;
 	}
@@ -100,7 +100,7 @@ public class GuiUltimateRefinery extends GuiContainerGC {
 	}
 
 	@Override
-	protected void drawGuiContainerForegroundLayer(int par1, int par2) {
+	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 		GCCoreUtil.drawStringCentered(this.tileEntity.getName(), this.xSize / 2, 5, 4210752, this.fontRendererObj);
 		String displayText = "";
 		int yOffset = -18;
@@ -122,7 +122,7 @@ public class GuiUltimateRefinery extends GuiContainerGC {
 	}
 
 	@Override
-	protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
+	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
 		this.mc.renderEngine.bindTexture(GuiUltimateRefinery.refineryTexture);
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 

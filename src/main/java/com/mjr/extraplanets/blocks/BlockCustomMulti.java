@@ -86,12 +86,12 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 	}
 
 	@Override
-	public boolean canDropFromExplosion(Explosion par1Explosion) {
+	public boolean canDropFromExplosion(Explosion explosion) {
 		return false;
 	}
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
+	public float getBlockHardness(IBlockState state, World world, BlockPos pos) {
 		TileEntity tileEntity = world.getTileEntity(pos);
 
 		if (tileEntity instanceof TileEntityMulti) {
@@ -117,9 +117,9 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 	}
 
 	@SuppressWarnings("deprecation")
-	public void makeFakeBlock(World worldObj, BlockPos pos, BlockPos mainBlock, int meta) {
-		worldObj.setBlockState(pos, GCBlocks.fakeBlock.getStateFromMeta(meta), meta == 5 ? 3 : 0);
-		worldObj.setTileEntity(pos, new TileEntityMulti(mainBlock));
+	public void makeFakeBlock(World world, BlockPos pos, BlockPos mainBlock, int meta) {
+		world.setBlockState(pos, GCBlocks.fakeBlock.getStateFromMeta(meta), meta == 5 ? 3 : 0);
+		world.setTileEntity(pos, new TileEntityMulti(mainBlock));
 	}
 
 	public void makeFakeBlock(World worldObj, Collection<BlockPos> posList, BlockPos mainBlock, EnumBlockMultiType type) {
@@ -174,7 +174,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World var1, int meta) {
+	public TileEntity createNewTileEntity(World world, int meta) {
 		return null;
 	}
 
@@ -197,8 +197,8 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 	}
 
 	@Override
-	public boolean addHitEffects(IBlockState state, World worldObj, RayTraceResult target, ParticleManager manager) {
-		TileEntity tileEntity = worldObj.getTileEntity(target.getBlockPos());
+	public boolean addHitEffects(IBlockState state, World world, RayTraceResult target, ParticleManager manager) {
+		TileEntity tileEntity = world.getTileEntity(target.getBlockPos());
 
 		if (tileEntity instanceof TileEntityMulti) {
 			BlockPos mainBlockPosition = ((TileEntityMulti) tileEntity).mainBlockPosition;
@@ -208,7 +208,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 			}
 		}
 
-		return super.addHitEffects(state, worldObj, target, manager);
+		return super.addHitEffects(state, world, target, manager);
 	}
 
 	@Override

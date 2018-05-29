@@ -116,9 +116,9 @@ public class BlockBasicDeimos extends Block implements IDetectableResource, IPla
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public void getSubBlocks(Item par1, CreativeTabs tab, NonNullList<ItemStack> par3List) {
+	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
 		for (EnumBlockBasic blockBasic : EnumBlockBasic.values()) {
-			par3List.add(new ItemStack(par1, 1, blockBasic.getMeta()));
+			list.add(new ItemStack(item, 1, blockBasic.getMeta()));
 		}
 	}
 

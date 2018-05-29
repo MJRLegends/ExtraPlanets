@@ -35,7 +35,7 @@ public class RenderElectricRocket extends Render<EntityElectricRocket> {
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityElectricRocket par1Entity) {
+	protected ResourceLocation getEntityTexture(EntityElectricRocket entity) {
 		return TextureMap.LOCATION_BLOCKS_TEXTURE;
 	}
 

@@ -62,7 +62,7 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityMarsRover par1Entity) {
+	protected ResourceLocation getEntityTexture(EntityMarsRover entity) {
 		return new ResourceLocation("missing");
 	}
 

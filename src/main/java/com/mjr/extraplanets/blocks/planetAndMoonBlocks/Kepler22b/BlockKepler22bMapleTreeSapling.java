@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 
-import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.BlockBush;
@@ -15,6 +14,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.translation.I18n;
@@ -105,9 +105,6 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 		return SAPLING_AABB;
 	}
 
-	/**
-	 * Gets the localized name of this block. Used for the statistics page.
-	 */
 	@Override
 	public String getLocalizedName() {
 		return I18n.translateToLocal(this.getUnlocalizedName() + "." + BlockKepler22bMapleTreeSapling.EnumType.MAPLE_BLUE.getUnlocalizedName() + ".name");
@@ -164,35 +161,24 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 		}
 	}
 
-	/**
-	 * Check whether the given BlockPos has a Sapling of the given type
-	 */
 	public boolean isTypeAt(World world, BlockPos pos, BlockKepler22bMapleTreeSapling.EnumType type) {
 		IBlockState iblockstate = world.getBlockState(pos);
 		return iblockstate.getBlock() == this && iblockstate.getValue(VARIANT) == type;
 	}
 
-	/**
-	 * Gets the metadata of the item this Block can drop. This method is called when the block gets destroyed. It returns the metadata of the dropped item based on the old metadata of the block.
-	 */
 	@Override
 	public int damageDropped(IBlockState state) {
 		return state.getValue(VARIANT).getMetadata();
 	}
 
-	/**
-	 * returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
-	 */
 	@SideOnly(Side.CLIENT)
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, List<ItemStack> list) {
+	@Override
+	public void getSubBlocks(Item item, CreativeTabs tab, NonNullList<ItemStack> list) {
 		for (BlockKepler22bMapleTreeSapling.EnumType blockplanks$enumtype : BlockKepler22bMapleTreeSapling.EnumType.values()) {
-			list.add(new ItemStack(itemIn, 1, blockplanks$enumtype.getMetadata()));
+			list.add(new ItemStack(item, 1, blockplanks$enumtype.getMetadata()));
 		}
 	}
 
-	/**
-	 * Whether this IGrowable can grow
-	 */
 	@Override
 	public boolean canGrow(World world, BlockPos pos, IBlockState state, boolean isClient) {
 		return true;
@@ -208,17 +194,11 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 		this.grow(world, pos, state, rand);
 	}
 
-	/**
-	 * Convert the given metadata into a BlockState for this Block
-	 */
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
 		return this.getDefaultState().withProperty(VARIANT, BlockKepler22bMapleTreeSapling.EnumType.byMetadata(meta & 7)).withProperty(STAGE, Integer.valueOf((meta & 8) >> 3));
 	}
 
-	/**
-	 * Convert the BlockState into the correct metadata value
-	 */
 	@Override
 	public int getMetaFromState(IBlockState state) {
 		int i = 0;

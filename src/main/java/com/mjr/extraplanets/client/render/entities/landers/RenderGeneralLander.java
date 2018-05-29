@@ -40,7 +40,7 @@ public class RenderGeneralLander extends Render<EntityGeneralLander> {
 	}
 
 	@Override
-	protected ResourceLocation getEntityTexture(EntityGeneralLander par1Entity) {
+	protected ResourceLocation getEntityTexture(EntityGeneralLander entity) {
 		return TextureMap.LOCATION_BLOCKS_TEXTURE;
 	}
 
