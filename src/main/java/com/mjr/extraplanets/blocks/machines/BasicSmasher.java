@@ -35,10 +35,10 @@ public class BasicSmasher extends BlockAdvancedTile implements IShiftDescription
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-	public BasicSmasher(String assetName) {
+	public BasicSmasher(String name) {
 		super(Material.rock);
 		this.setHardness(1.0F);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override

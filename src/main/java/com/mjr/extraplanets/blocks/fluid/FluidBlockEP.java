@@ -19,34 +19,34 @@ import com.mjr.mjrlegendslib.block.FluidBasicBlock;
 
 public class FluidBlockEP extends FluidBasicBlock {
 
-	public FluidBlockEP(Fluid fluid, String assetName, Material material) {
-		super(fluid, assetName, material);
+	public FluidBlockEP(Fluid fluid, String name, Material material) {
+		super(fluid, name, material);
 	}
 
 	@Override
-	public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entityIn) {
+	public void onEntityCollidedWithBlock(World world, BlockPos pos, IBlockState state, Entity entity) {
 		if (state.getBlock() == ExtraPlanets_Fluids.MAGMA) {
-			if ((entityIn instanceof EntityLivingBase)) {
-				if (world.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
-					((EntityLivingBase) entityIn).attackEntityFrom(DamageSourceEP.magma, 4.0F);
+			if ((entity instanceof EntityLivingBase)) {
+				if (world.getTotalWorldTime() % 8 == 0 && entity instanceof EntityLivingBase && !((EntityLivingBase) entity).isEntityUndead()) {
+					((EntityLivingBase) entity).attackEntityFrom(DamageSourceEP.magma, 4.0F);
 				}
 			}
 		} else if (state.getBlock() == ExtraPlanets_Fluids.FROZEN_WATER || state == ExtraPlanets_Fluids.NITROGEN || state == ExtraPlanets_Fluids.NITROGEN_ICE) {
-			if ((entityIn instanceof EntityLivingBase)) {
-				if (world.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
-					((EntityLivingBase) entityIn).attackEntityFrom(DamageSourceEP.hypothermia, 2.5F);
+			if ((entity instanceof EntityLivingBase)) {
+				if (world.getTotalWorldTime() % 8 == 0 && entity instanceof EntityLivingBase && !((EntityLivingBase) entity).isEntityUndead()) {
+					((EntityLivingBase) entity).attackEntityFrom(DamageSourceEP.hypothermia, 2.5F);
 				}
 			}
 		} else if (state.getBlock() == ExtraPlanets_Fluids.RADIO_ACTIVE_WATER) {
-			if ((entityIn instanceof EntityLivingBase)) {
-				if (world.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
-					((EntityLivingBase) entityIn).attackEntityFrom(DamageSourceEP.radiationLiquid, 3.5F);
+			if ((entity instanceof EntityLivingBase)) {
+				if (world.getTotalWorldTime() % 8 == 0 && entity instanceof EntityLivingBase && !((EntityLivingBase) entity).isEntityUndead()) {
+					((EntityLivingBase) entity).attackEntityFrom(DamageSourceEP.radiationLiquid, 3.5F);
 				}
 			}
 		} else if (state.getBlock() == ExtraPlanets_Fluids.INFECTED_WATER || state.getBlock() == ExtraPlanets_Fluids.METHANE) {
-			if ((entityIn instanceof EntityLivingBase)) {
-				if (world.getTotalWorldTime() % 8 == 0 && entityIn instanceof EntityLivingBase && !((EntityLivingBase) entityIn).isEntityUndead()) {
-					((EntityLivingBase) entityIn).attackEntityFrom(DamageSourceEP.infection, 1.0F);
+			if ((entity instanceof EntityLivingBase)) {
+				if (world.getTotalWorldTime() % 8 == 0 && entity instanceof EntityLivingBase && !((EntityLivingBase) entity).isEntityUndead()) {
+					((EntityLivingBase) entity).attackEntityFrom(DamageSourceEP.infection, 1.0F);
 				}
 			}
 		}

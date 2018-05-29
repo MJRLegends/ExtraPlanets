@@ -5,11 +5,11 @@ import net.minecraft.item.Item;
 import com.mjr.extraplanets.ExtraPlanets;
 
 public class Tier7NoseCone extends Item {
-	public Tier7NoseCone(String assetName) {
+	public Tier7NoseCone(String name) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 

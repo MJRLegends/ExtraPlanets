@@ -66,9 +66,9 @@ public class BlockBasicEris extends Block implements IDetectableResource, IPlant
 		}
 	}
 
-	public BlockBasicEris(String assetName) {
+	public BlockBasicEris(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

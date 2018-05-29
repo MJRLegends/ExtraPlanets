@@ -56,9 +56,9 @@ public class BlockCakeBlocks extends Block implements IDetectableResource, ISort
 		}
 	}
 
-	public BlockCakeBlocks(String assetName) {
+	public BlockCakeBlocks(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

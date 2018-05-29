@@ -16,8 +16,8 @@ import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderFireBombPrimed extends Render<EntityFireBombPrimed> {
-	public RenderFireBombPrimed(RenderManager renderManagerIn) {
-		super(renderManagerIn);
+	public RenderFireBombPrimed(RenderManager renderManager) {
+		super(renderManager);
 		this.shadowSize = 0.5F;
 	}
 

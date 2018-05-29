@@ -250,7 +250,7 @@ public class MainHandlerClient {
 				showPressureHUD(pressureLevel);
 			int radiationLevel = (int) Math.floor(stats.getRadiationLevel());
 			if ((radiationLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false) && showRadiation)
-				showRadiationHUD((int) radiationLevel);
+				showRadiationHUD(radiationLevel);
 		}
 
 		if (minecraft.currentScreen == null && player.ridingEntity instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {

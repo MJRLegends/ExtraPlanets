@@ -16,8 +16,8 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemWafers extends ItemBasicMeta {
 
-	public ItemWafers(String assetName) {
-		super(assetName, ExtraPlanets.ItemsTab, getItemList());
+	public ItemWafers(String name) {
+		super(name, ExtraPlanets.ItemsTab, getItemList());
 	}
 
 	@Override

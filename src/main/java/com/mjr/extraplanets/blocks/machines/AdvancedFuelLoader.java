@@ -35,11 +35,11 @@ public class AdvancedFuelLoader extends BlockAdvancedTile implements IShiftDescr
 	public static IMachineSidesProperties MACHINESIDES_RENDERTYPE = IMachineSidesProperties.TWOFACES_HORIZ;
 	public static final PropertyEnum<MachineSidesModel> SIDES = MACHINESIDES_RENDERTYPE.asProperty;
 
-	public AdvancedFuelLoader(String assetName) {
+	public AdvancedFuelLoader(String name) {
 		super(Material.rock);
 		this.setHardness(1.0F);
 		this.setStepSound(Block.soundTypeStone);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override

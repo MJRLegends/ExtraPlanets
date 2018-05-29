@@ -16,8 +16,8 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemTier11Items extends ItemBasicMeta {
 
-	public ItemTier11Items(String assetName) {
-		super(assetName, ExtraPlanets.ItemsTab, getItemList());
+	public ItemTier11Items(String name) {
+		super(name, ExtraPlanets.ItemsTab, getItemList());
 	}
 
 	@Override

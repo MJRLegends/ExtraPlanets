@@ -35,10 +35,10 @@ public class BasicPurifier extends BlockAdvancedTile implements IShiftDescriptio
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-	public BasicPurifier(String assetName) {
+	public BasicPurifier(String name) {
 		super(Material.rock);
 		this.setHardness(1.0F);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override

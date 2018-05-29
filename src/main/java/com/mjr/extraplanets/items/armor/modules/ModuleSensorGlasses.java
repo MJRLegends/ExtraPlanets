@@ -34,7 +34,8 @@ public class ModuleSensorGlasses extends Module {
 
 	@Override
 	public void renderHelmetOverlay(ItemStack stack, EntityPlayer player, ScaledResolution resolution, float partialTicks) {
-		if ((player.ticksExisted - 1) % 20 == 0)ModuleHelper.takeArmourPower(player.inventory.armorItemInSlot(this.getSlotType()), this.getUsePowerCost());
+		if ((player.ticksExisted - 1) % 20 == 0)
+			ModuleHelper.takeArmourPower(player.inventory.armorItemInSlot(this.getSlotType()), this.getUsePowerCost());
 		OverlaySensorGlasses.renderSensorGlassesMain(null, player, new ScaledResolution(MCUtilities.getMinecraft()), 0);
 		OverlaySensorGlasses.renderSensorGlassesValueableBlocks(null, player, new ScaledResolution(MCUtilities.getMinecraft()), 0);
 	}

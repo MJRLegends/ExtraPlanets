@@ -9,8 +9,8 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT5TreasureChest;
 
 public class T5TreasureChest extends BlockTier1TreasureChest {
-	public T5TreasureChest(String assetName) {
-		super(assetName);
+	public T5TreasureChest(String name) {
+		super(name);
 	}
 
 	@Override

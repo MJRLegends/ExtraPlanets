@@ -22,18 +22,18 @@ public class RenderCreeperBossSaturn extends RenderLiving<EntityCreeperBossSatur
 	}
 
 	@Override
-	public void doRender(EntityCreeperBossSaturn par1EntityLiving, double x, double y, double z, float entityYaw, float partialTicks) {
-		super.doRender(par1EntityLiving, x, y, z, entityYaw, partialTicks);
+	public void doRender(EntityCreeperBossSaturn entityLiving, double x, double y, double z, float entityYaw, float partialTicks) {
+		super.doRender(entityLiving, x, y, z, entityYaw, partialTicks);
 	}
 
 	@Override
-	protected void preRenderCallback(EntityCreeperBossSaturn par1EntityLiving, float partialTickTime) {
+	protected void preRenderCallback(EntityCreeperBossSaturn entityLiving, float partialTickTime) {
 		GlStateManager.scale(4.0F, 4.0F, 4.0F);
-		GlStateManager.rotate((float) (Math.pow(par1EntityLiving.deathTicks, 2) / 5.0F + (Math.pow(par1EntityLiving.deathTicks, 2) / 5.0F - Math.pow(par1EntityLiving.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
+		GlStateManager.rotate((float) (Math.pow(entityLiving.deathTicks, 2) / 5.0F + (Math.pow(entityLiving.deathTicks, 2) / 5.0F - Math.pow(entityLiving.deathTicks - 1, 2) / 5.0F) * partialTickTime), 0.0F, 1.0F, 0.0F);
 	}
 
 	@Override
-	protected int getColorMultiplier(EntityCreeperBossSaturn par1EntityLivingBase, float lightBrightness, float partialTickTime) {
-		return super.getColorMultiplier(par1EntityLivingBase, lightBrightness, partialTickTime);
+	protected int getColorMultiplier(EntityCreeperBossSaturn entityLivingBase, float lightBrightness, float partialTickTime) {
+		return super.getColorMultiplier(entityLivingBase, lightBrightness, partialTickTime);
 	}
 }

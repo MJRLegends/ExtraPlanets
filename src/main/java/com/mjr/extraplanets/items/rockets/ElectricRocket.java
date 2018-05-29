@@ -28,12 +28,12 @@ import com.mjr.extraplanets.tileEntities.blocks.TileEntityRocketChargingPad;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ElectricRocket extends Item implements IHoldableItem {
-	public ElectricRocket(String assetName) {
+	public ElectricRocket(String name) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		this.setMaxStackSize(1);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 

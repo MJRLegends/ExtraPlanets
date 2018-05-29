@@ -35,10 +35,10 @@ public class BasicDensifier extends BlockAdvancedTile implements IShiftDescripti
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-	public BasicDensifier(String assetName) {
+	public BasicDensifier(String name) {
 		super(Material.rock);
 		this.setHardness(1.0F);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override

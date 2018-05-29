@@ -9,8 +9,8 @@ import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawne
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerPlutoDefault;
 
 public class BlockPlutoDungeonSpawner extends BlockBossSpawner {
-	public BlockPlutoDungeonSpawner(String assetName) {
-		super(assetName);
+	public BlockPlutoDungeonSpawner(String name) {
+		super(name);
 	}
 
 	@Override

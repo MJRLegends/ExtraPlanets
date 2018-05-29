@@ -9,8 +9,8 @@ import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawne
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerMercuryDefault;
 
 public class BlockMercuryDungeonSpawner extends BlockBossSpawner {
-	public BlockMercuryDungeonSpawner(String assetName) {
-		super(assetName);
+	public BlockMercuryDungeonSpawner(String name) {
+		super(name);
 	}
 
 	@Override

@@ -62,9 +62,9 @@ public class BlockBasicTitania extends Block implements IDetectableResource, IPl
 		}
 	}
 
-	public BlockBasicTitania(String assetName) {
+	public BlockBasicTitania(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

@@ -55,9 +55,9 @@ public class BlockCandyBlocks extends Block implements IDetectableResource, ISor
 		}
 	}
 
-	public BlockCandyBlocks(String assetName) {
+	public BlockCandyBlocks(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 		this.setLightLevel(0.5F);
 	}

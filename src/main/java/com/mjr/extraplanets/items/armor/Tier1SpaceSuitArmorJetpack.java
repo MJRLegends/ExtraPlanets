@@ -61,7 +61,7 @@ public class Tier1SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 	public boolean canBreathe(ItemStack helmetInSlot, EntityPlayer playerWearing, EnumGearType type) {
 		return true;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
@@ -105,6 +105,7 @@ public class Tier1SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 		return armorModel;
 	}
 
+	@Override
 	public double getJetpackAccelSpeed() {
 		return 0.15D;
 	}

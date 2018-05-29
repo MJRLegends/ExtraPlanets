@@ -35,10 +35,10 @@ public class BasicSolarEvaporationChamber extends BlockAdvancedTile implements I
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-	public BasicSolarEvaporationChamber(String assetName) {
+	public BasicSolarEvaporationChamber(String name) {
 		super(Material.rock);
 		this.setHardness(1.0F);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override

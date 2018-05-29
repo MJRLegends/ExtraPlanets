@@ -17,8 +17,8 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemCannedFood extends ItemBasicMeta {
 
-	public ItemCannedFood(String assetName) {
-		super(assetName, ExtraPlanets.ItemsTab, getItemList());
+	public ItemCannedFood(String name) {
+		super(name, ExtraPlanets.ItemsTab, getItemList());
 	}
 
 	@Override

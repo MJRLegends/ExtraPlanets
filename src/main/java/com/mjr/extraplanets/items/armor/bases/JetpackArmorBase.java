@@ -30,7 +30,9 @@ public abstract class JetpackArmorBase extends ElectricArmorBase implements IJet
 	@Override
 	public abstract double getJetpackAccelSpeed();
 
+	@Override
 	public abstract double getJetpackMaxAccelSpeed();
 
+	@Override
 	public abstract float powerPerTick();
 }

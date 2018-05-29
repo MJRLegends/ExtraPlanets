@@ -59,11 +59,11 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 		}
 	}
 
-	public BlockCustomMulti(String assetName) {
+	public BlockCustomMulti(String name) {
 		super(GCBlocks.machine);
 		this.setHardness(1.0F);
 		this.setStepSound(Block.soundTypeMetal);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setResistance(1000000000000000.0F);
 	}
 

@@ -9,8 +9,8 @@ import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawne
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerSaturnDefault;
 
 public class BlockSaturnDungeonSpawner extends BlockBossSpawner {
-	public BlockSaturnDungeonSpawner(String assetName) {
-		super(assetName);
+	public BlockSaturnDungeonSpawner(String name) {
+		super(name);
 	}
 
 	@Override

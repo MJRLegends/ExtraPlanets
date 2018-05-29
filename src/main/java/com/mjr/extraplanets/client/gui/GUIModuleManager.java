@@ -130,9 +130,9 @@ public class GUIModuleManager extends GuiContainerGC {
 	public void renderHighlightedBox(int x, int y) {
 		this.mc.getTextureManager().bindTexture(BUTTON_TEXTURES);
 		GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
-        GlStateManager.enableBlend();
-        GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
-        GlStateManager.blendFunc(770, 771);
+		GlStateManager.enableBlend();
+		GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
+		GlStateManager.blendFunc(770, 771);
 		this.drawTexturedModalRect(x, y, 1, 23, 22, 22);
 	}
 
@@ -210,7 +210,8 @@ public class GUIModuleManager extends GuiContainerGC {
 				temp = TranslateUtilities.translate("gui.module.type.helmet.name");
 			this.fontRendererObj.drawString(temp, x, Ytype, this.sideColour);
 			text = TranslateUtilities.translate("gui.module.power.name");
-			this.fontRendererObj.drawString(EnergyDisplayHelper.getEnergyDisplayS(ModuleHelper.getModulePassiveCost(module)) + "/s : " + EnergyDisplayHelper.getEnergyDisplayS(ModuleHelper.getModuleUseCost(module))+ " (P:U) ", x, Ypower, this.sideColour);
+			this.fontRendererObj.drawString(EnergyDisplayHelper.getEnergyDisplayS(ModuleHelper.getModulePassiveCost(module)) + "/s : " + EnergyDisplayHelper.getEnergyDisplayS(ModuleHelper.getModuleUseCost(module)) + " (P:U) ", x, Ypower,
+					this.sideColour);
 		}
 	}
 

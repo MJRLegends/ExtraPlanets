@@ -65,9 +65,9 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 		}
 	}
 
-	public BlockBasicKepler22b(String assetName) {
+	public BlockBasicKepler22b(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

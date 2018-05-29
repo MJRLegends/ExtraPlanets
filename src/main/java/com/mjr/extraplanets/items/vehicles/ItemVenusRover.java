@@ -28,9 +28,9 @@ import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemVenusRover extends Item implements IHoldableItem {
-	public ItemVenusRover(String assetName) {
+	public ItemVenusRover(String name) {
 		super();
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setMaxStackSize(1);
 	}
 

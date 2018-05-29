@@ -61,10 +61,10 @@ public class AdvancedOxygenCompressor extends BlockAdvancedTile implements IShif
 		}
 	}
 
-	public AdvancedOxygenCompressor(boolean isActive, String assetName) {
+	public AdvancedOxygenCompressor(boolean isActive, String name) {
 		super(Material.rock);
 		this.setHardness(1.0F);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override

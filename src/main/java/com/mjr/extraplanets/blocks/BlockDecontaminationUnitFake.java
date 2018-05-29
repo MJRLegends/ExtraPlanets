@@ -34,10 +34,10 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 	public static final PropertyBool TOP = PropertyBool.create("top");
 	public static final PropertyBool CONNECTABLE = PropertyBool.create("connectable");
 
-	public BlockDecontaminationUnitFake(String assetName) {
+	public BlockDecontaminationUnitFake(String name) {
 		super(GCBlocks.machine);
 		this.setStepSound(Block.soundTypeMetal);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setResistance(1000000000000000.0F);
 	}
 

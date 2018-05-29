@@ -56,9 +56,9 @@ public class BlockCandyBlocksHorizontal extends Block implements IDetectableReso
 		}
 	}
 
-	public BlockCandyBlocksHorizontal(String assetName) {
+	public BlockCandyBlocksHorizontal(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 		this.setLightLevel(0.5F);
 	}

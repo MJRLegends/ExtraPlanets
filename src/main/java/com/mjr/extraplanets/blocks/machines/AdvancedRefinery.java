@@ -35,10 +35,10 @@ public class AdvancedRefinery extends BlockAdvancedTile implements IShiftDescrip
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-	public AdvancedRefinery(String assetName) {
+	public AdvancedRefinery(String name) {
 		super(Material.rock);
 		this.setHardness(1.0F);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override

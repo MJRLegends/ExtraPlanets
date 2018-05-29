@@ -61,13 +61,13 @@ public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartial
 		}
 	}
 
-	public BlockCustomLandingPad(String assetName) {
+	public BlockCustomLandingPad(String name) {
 		super(Material.iron);
 		this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 3 / 16.0F, 1.0F);
 		this.setHardness(1.0F);
 		this.setResistance(10.0F);
 		this.setStepSound(Block.soundTypeMetal);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override

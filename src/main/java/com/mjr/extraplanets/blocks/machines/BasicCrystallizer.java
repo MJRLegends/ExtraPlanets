@@ -35,10 +35,10 @@ public class BasicCrystallizer extends BlockAdvancedTile implements IShiftDescri
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-	public BasicCrystallizer(String assetName) {
+	public BasicCrystallizer(String name) {
 		super(Material.rock);
 		this.setHardness(1.0F);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override

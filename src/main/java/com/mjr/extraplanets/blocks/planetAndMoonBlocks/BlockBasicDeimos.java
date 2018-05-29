@@ -62,9 +62,9 @@ public class BlockBasicDeimos extends Block implements IDetectableResource, IPla
 		}
 	}
 
-	public BlockBasicDeimos(String assetName) {
+	public BlockBasicDeimos(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

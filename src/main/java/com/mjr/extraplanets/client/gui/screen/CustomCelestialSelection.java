@@ -156,6 +156,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	/*
 	 * Overriding for the purpose of to draw Planet & Moon Names
 	 */
+	@Override
 	public HashMap<CelestialBody, Matrix4f> drawCelestialBodies(Matrix4f worldMatrix) {
 		GL11.glColor3f(1.0F, 1.0F, 1.0F);
 		FloatBuffer fb = BufferUtils.createFloatBuffer(16 * Float.SIZE);

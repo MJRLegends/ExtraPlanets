@@ -101,7 +101,7 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 	}
 
 	@Override
-	protected void collideWithEntity(Entity entityIn) {
+	protected void collideWithEntity(Entity entity) {
 	}
 
 	@Override
@@ -298,15 +298,15 @@ public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IE
 
 	@Override
 	public EntityItem entityDropItem(ItemStack itemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, itemStack);
-		entityitem.motionY = -2.0D;
-		entityitem.setDefaultPickupDelay();
+		final EntityItem EntityItem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, itemStack);
+		EntityItem.motionY = -2.0D;
+		EntityItem.setDefaultPickupDelay();
 		if (this.captureDrops) {
-			this.capturedDrops.add(entityitem);
+			this.capturedDrops.add(EntityItem);
 		} else {
-			this.worldObj.spawnEntityInWorld(entityitem);
+			this.worldObj.spawnEntityInWorld(EntityItem);
 		}
-		return entityitem;
+		return EntityItem;
 	}
 
 	@Override

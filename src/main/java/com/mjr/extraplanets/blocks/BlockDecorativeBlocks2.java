@@ -54,9 +54,9 @@ public class BlockDecorativeBlocks2 extends Block implements IDetectableResource
 		}
 	}
 
-	public BlockDecorativeBlocks2(String assetName) {
+	public BlockDecorativeBlocks2(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

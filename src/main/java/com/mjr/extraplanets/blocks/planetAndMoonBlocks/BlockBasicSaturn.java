@@ -67,9 +67,9 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 		}
 	}
 
-	public BlockBasicSaturn(String assetName) {
+	public BlockBasicSaturn(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

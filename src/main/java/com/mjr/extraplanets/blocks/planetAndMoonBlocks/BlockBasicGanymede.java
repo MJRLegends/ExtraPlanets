@@ -62,9 +62,9 @@ public class BlockBasicGanymede extends Block implements IDetectableResource, IP
 		}
 	}
 
-	public BlockBasicGanymede(String assetName) {
+	public BlockBasicGanymede(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

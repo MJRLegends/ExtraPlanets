@@ -12,13 +12,13 @@ public class StructureVillageStartNeptune extends StructureStart {
 	public StructureVillageStartNeptune() {
 	}
 
-	public StructureVillageStartNeptune(World par1World, Random par2Random, int par3, int par4, int par5) {
+	public StructureVillageStartNeptune(World par1World, Random rand, int par3, int par4, int par5) {
 		super(par3, par4);
 
-		final ArrayList<StructureVillagePieceWeightNeptune> var6 = StructureVillagePiecesNeptune.getStructureVillageWeightedPieceList(par2Random, par5);
-		final StructureComponentVillageStartPiece var7 = new StructureComponentVillageStartPiece(par1World.getWorldChunkManager(), 0, par2Random, (par3 << 4) + 2, (par4 << 4) + 2, var6, par5);
+		final ArrayList<StructureVillagePieceWeightNeptune> var6 = StructureVillagePiecesNeptune.getStructureVillageWeightedPieceList(rand, par5);
+		final StructureComponentVillageStartPiece var7 = new StructureComponentVillageStartPiece(par1World.getWorldChunkManager(), 0, rand, (par3 << 4) + 2, (par4 << 4) + 2, var6, par5);
 		this.components.add(var7);
-		var7.buildComponent(var7, this.components, par2Random);
+		var7.buildComponent(var7, this.components, rand);
 		final ArrayList<Object> var8 = var7.field_74930_j;
 		final ArrayList<Object> var9 = var7.field_74932_i;
 		int var10;
@@ -27,13 +27,13 @@ public class StructureVillageStartNeptune extends StructureStart {
 			StructureComponent var11;
 
 			if (var8.isEmpty()) {
-				var10 = par2Random.nextInt(var9.size());
+				var10 = rand.nextInt(var9.size());
 				var11 = (StructureComponent) var9.remove(var10);
-				var11.buildComponent(var7, this.components, par2Random);
+				var11.buildComponent(var7, this.components, rand);
 			} else {
-				var10 = par2Random.nextInt(var8.size());
+				var10 = rand.nextInt(var8.size());
 				var11 = (StructureComponent) var8.remove(var10);
-				var11.buildComponent(var7, this.components, par2Random);
+				var11.buildComponent(var7, this.components, rand);
 			}
 		}
 

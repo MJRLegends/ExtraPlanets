@@ -67,9 +67,9 @@ public class BlockBasicJupiter extends Block implements IDetectableResource, IPl
 		}
 	}
 
-	public BlockBasicJupiter(String assetName) {
+	public BlockBasicJupiter(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

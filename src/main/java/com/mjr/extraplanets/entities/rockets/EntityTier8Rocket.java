@@ -168,7 +168,7 @@ public class EntityTier8Rocket extends EntityTieredRocket {
 			Vector3 mv4 = motionVec.clone().translate(d4);
 			// T3 - Four flameballs which spread
 			Object[] rider = new Object[] { riddenByEntity };
-            makeFlame(x2 + d1.x, y2 + d1.y, z2 + d1.z, mv1, this.getLaunched(), rider);
+			makeFlame(x2 + d1.x, y2 + d1.y, z2 + d1.z, mv1, this.getLaunched(), rider);
 			makeFlame(x2 + d2.x, y2 + d2.y, z2 + d2.z, mv2, this.getLaunched(), rider);
 			makeFlame(x2 + d3.x, y2 + d3.y, z2 + d3.z, mv3, this.getLaunched(), rider);
 			makeFlame(x2 + d4.x, y2 + d4.y, z2 + d4.z, mv4, this.getLaunched(), rider);
@@ -207,8 +207,8 @@ public class EntityTier8Rocket extends EntityTieredRocket {
 	}
 
 	@Override
-	public boolean isUseableByPlayer(EntityPlayer par1EntityPlayer) {
-		return !this.isDead && par1EntityPlayer.getDistanceSqToEntity(this) <= 64.0D;
+	public boolean isUseableByPlayer(EntityPlayer entityPlayer) {
+		return !this.isDead && entityPlayer.getDistanceSqToEntity(this) <= 64.0D;
 	}
 
 	@Override

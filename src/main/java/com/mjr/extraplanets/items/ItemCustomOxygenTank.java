@@ -20,11 +20,11 @@ import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemCustomOxygenTank extends ItemOxygenTank {
-	public ItemCustomOxygenTank(int tier, String assetName) {
-		super(tier, assetName);
+	public ItemCustomOxygenTank(int tier, String name) {
+		super(tier, name);
 		this.setMaxStackSize(1);
 		this.setMaxDamage(tier * 900);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setNoRepair();
 	}
 

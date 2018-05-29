@@ -66,9 +66,9 @@ public class BlockBasicNeptune extends Block implements IDetectableResource, IPl
 		}
 	}
 
-	public BlockBasicNeptune(String assetName) {
+	public BlockBasicNeptune(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

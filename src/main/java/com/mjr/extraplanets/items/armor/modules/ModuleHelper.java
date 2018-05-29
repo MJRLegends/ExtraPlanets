@@ -151,7 +151,7 @@ public class ModuleHelper {
 		if (item == null || !(item.getItem() instanceof IModularArmor))
 			return false;
 		try {
-			int slot = EntityLiving.getArmorPosition(item)-1;
+			int slot = EntityLiving.getArmorPosition(item) - 1;
 			if (slot == module.getSlotType())
 				return true;
 			else

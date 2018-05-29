@@ -63,9 +63,9 @@ public class BlockBasicTitan extends Block implements IDetectableResource, IPlan
 		}
 	}
 
-	public BlockBasicTitan(String assetName) {
+	public BlockBasicTitan(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

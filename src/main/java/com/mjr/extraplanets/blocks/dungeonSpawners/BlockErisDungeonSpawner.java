@@ -9,8 +9,8 @@ import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawne
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerErisDefault;
 
 public class BlockErisDungeonSpawner extends BlockBossSpawner {
-	public BlockErisDungeonSpawner(String assetName) {
-		super(assetName);
+	public BlockErisDungeonSpawner(String name) {
+		super(name);
 	}
 
 	@Override

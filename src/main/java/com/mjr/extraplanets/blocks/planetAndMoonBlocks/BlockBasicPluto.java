@@ -66,9 +66,9 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
 		}
 	}
 
-	public BlockBasicPluto(String assetName) {
+	public BlockBasicPluto(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

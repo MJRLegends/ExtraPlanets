@@ -62,9 +62,9 @@ public class BlockBasicIapetus extends Block implements IDetectableResource, IPl
 		}
 	}
 
-	public BlockBasicIapetus(String assetName) {
+	public BlockBasicIapetus(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

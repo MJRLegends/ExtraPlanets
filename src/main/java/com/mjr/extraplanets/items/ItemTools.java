@@ -15,11 +15,11 @@ import com.mjr.extraplanets.ExtraPlanets;
 public class ItemTools extends Item {
 	public static final String[] names = { "sledge_hammer", "grinding_wheel", "mesh", "filter" };
 
-	public ItemTools(String assetName) {
+	public ItemTools(String name) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 

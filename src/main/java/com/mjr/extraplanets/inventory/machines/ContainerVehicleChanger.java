@@ -41,7 +41,7 @@ public class ContainerVehicleChanger extends Container {
 	}
 
 	@Override
-	public ItemStack transferStackInSlot(EntityPlayer par1EntityPlayer, int par2) {
+	public ItemStack transferStackInSlot(EntityPlayer entityPlayer, int par2) {
 		ItemStack var3 = null;
 		final Slot slot = this.inventorySlots.get(par2);
 
@@ -83,7 +83,7 @@ public class ContainerVehicleChanger extends Container {
 				return null;
 			}
 
-			slot.onPickupFromSlot(par1EntityPlayer, var5);
+			slot.onPickupFromSlot(entityPlayer, var5);
 		}
 
 		return var3;

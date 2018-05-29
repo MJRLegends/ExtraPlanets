@@ -62,9 +62,9 @@ public class BlockBasicRhea extends Block implements IDetectableResource, IPlant
 		}
 	}
 
-	public BlockBasicRhea(String assetName) {
+	public BlockBasicRhea(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

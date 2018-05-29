@@ -66,9 +66,9 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
 		}
 	}
 
-	public BlockBasicUranus(String assetName) {
+	public BlockBasicUranus(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

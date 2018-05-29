@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.api.enitity;
 
+import micdoodle8.mods.galacticraft.api.entity.ICargoEntity;
+
 import com.mjr.extraplanets.api.block.IPowerDock;
 import com.mjr.extraplanets.api.block.IPowerable;
-
-import micdoodle8.mods.galacticraft.api.entity.ICargoEntity;
 
 /**
  * Implement into entities that are placed on fuel docks to load with cargo and fuel

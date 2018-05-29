@@ -63,9 +63,9 @@ public class BlockBasicMercury extends Block implements IDetectableResource, IPl
 		}
 	}
 
-	public BlockBasicMercury(String assetName) {
+	public BlockBasicMercury(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

@@ -23,8 +23,8 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class ItemBasicKit extends ItemBasicMeta {
 	public int tier;
 
-	public ItemBasicKit(String assetName, int tier) {
-		super(assetName, ExtraPlanets.ItemsTab, getItemList());
+	public ItemBasicKit(String name, int tier) {
+		super(name, ExtraPlanets.ItemsTab, getItemList());
 		this.tier = tier;
 	}
 

@@ -62,9 +62,9 @@ public class BlockBasicIo extends Block implements IDetectableResource, IPlantab
 		}
 	}
 
-	public BlockBasicIo(String assetName) {
+	public BlockBasicIo(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

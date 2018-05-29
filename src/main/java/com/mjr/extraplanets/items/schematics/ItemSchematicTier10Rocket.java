@@ -28,12 +28,12 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 public class ItemSchematicTier10Rocket extends ItemHangingEntity implements ISchematicItem, ISortableItem {
 	private static int indexOffset = 0;
 
-	public ItemSchematicTier10Rocket(String assetName) {
+	public ItemSchematicTier10Rocket(String name) {
 		super(EntityHangingSchematic.class);
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		this.setMaxStackSize(1);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 

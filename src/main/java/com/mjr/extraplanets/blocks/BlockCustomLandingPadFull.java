@@ -57,12 +57,12 @@ public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPar
 		}
 	}
 
-	public BlockCustomLandingPadFull(String assetName) {
+	public BlockCustomLandingPadFull(String name) {
 		super(Material.rock);
 		this.setHardness(1.0F);
 		this.setResistance(10.0F);
 		this.setStepSound(Block.soundTypeMetal);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override

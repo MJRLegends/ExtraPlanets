@@ -30,12 +30,12 @@ import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPad;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class Tier10Rocket extends Item implements IHoldableItem {
-	public Tier10Rocket(String assetName) {
+	public Tier10Rocket(String name) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		this.setMaxStackSize(1);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 

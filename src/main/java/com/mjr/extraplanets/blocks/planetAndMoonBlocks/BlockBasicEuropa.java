@@ -62,9 +62,9 @@ public class BlockBasicEuropa extends Block implements IDetectableResource, IPla
 		}
 	}
 
-	public BlockBasicEuropa(String assetName) {
+	public BlockBasicEuropa(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

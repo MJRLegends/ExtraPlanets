@@ -64,10 +64,10 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 		}
 	}
 
-	public BlockSolar(String assetName) {
+	public BlockSolar(String name) {
 		super(Material.iron);
 		this.setHardness(1.0F);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override

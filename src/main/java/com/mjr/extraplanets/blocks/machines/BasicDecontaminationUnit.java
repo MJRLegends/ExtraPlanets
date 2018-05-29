@@ -33,10 +33,10 @@ import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBlock {
-	protected BasicDecontaminationUnit(String assetName) {
+	protected BasicDecontaminationUnit(String name) {
 		super(Material.iron);
 		this.blockHardness = 3.0F;
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setStepSound(Block.soundTypeMetal);
 	}
 

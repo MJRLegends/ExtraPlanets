@@ -9,8 +9,8 @@ import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawne
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerUranusDefault;
 
 public class BlockUranusDungeonSpawner extends BlockBossSpawner {
-	public BlockUranusDungeonSpawner(String assetName) {
-		super(assetName);
+	public BlockUranusDungeonSpawner(String name) {
+		super(name);
 	}
 
 	@Override

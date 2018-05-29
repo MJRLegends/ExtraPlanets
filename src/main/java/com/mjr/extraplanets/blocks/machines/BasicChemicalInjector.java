@@ -35,10 +35,10 @@ public class BasicChemicalInjector extends BlockAdvancedTile implements IShiftDe
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-	public BasicChemicalInjector(String assetName) {
+	public BasicChemicalInjector(String name) {
 		super(Material.rock);
 		this.setHardness(1.0F);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 	}
 
 	@Override

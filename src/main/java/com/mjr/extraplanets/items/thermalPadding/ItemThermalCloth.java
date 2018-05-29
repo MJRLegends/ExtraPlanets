@@ -15,12 +15,12 @@ import com.mjr.extraplanets.ExtraPlanets;
 public class ItemThermalCloth extends Item {
 	public static String[] names = { "tier3_thermal_cloth", "tier4_thermal_cloth", "tier5_thermal_cloth" };
 
-	public ItemThermalCloth(String assetName) {
+	public ItemThermalCloth(String name) {
 		super();
 		this.setMaxDamage(0);
 		this.setHasSubtypes(true);
 		this.setMaxStackSize(1);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 	}
 

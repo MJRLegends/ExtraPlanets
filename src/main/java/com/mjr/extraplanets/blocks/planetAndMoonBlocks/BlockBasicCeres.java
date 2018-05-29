@@ -63,9 +63,9 @@ public class BlockBasicCeres extends Block implements IDetectableResource, IPlan
 		}
 	}
 
-	public BlockBasicCeres(String assetName) {
+	public BlockBasicCeres(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

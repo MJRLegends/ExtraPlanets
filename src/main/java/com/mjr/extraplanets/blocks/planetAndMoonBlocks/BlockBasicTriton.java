@@ -62,9 +62,9 @@ public class BlockBasicTriton extends Block implements IDetectableResource, IPla
 		}
 	}
 
-	public BlockBasicTriton(String assetName) {
+	public BlockBasicTriton(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 

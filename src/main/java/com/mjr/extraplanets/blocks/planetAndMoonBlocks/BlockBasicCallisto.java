@@ -67,9 +67,9 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
 		}
 	}
 
-	public BlockBasicCallisto(String assetName) {
+	public BlockBasicCallisto(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
@@ -208,24 +208,24 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
 	}
 
 	@Override
-	public void harvestBlock(World worldIn, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te) {
+	public void harvestBlock(World world, EntityPlayer player, BlockPos pos, IBlockState state, TileEntity te) {
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.SHALE_OIL) {
-			if (this.canSilkHarvest(worldIn, pos, worldIn.getBlockState(pos), player) && EnchantmentHelper.getSilkTouchModifier(player)) {
+			if (this.canSilkHarvest(world, pos, world.getBlockState(pos), player) && EnchantmentHelper.getSilkTouchModifier(player)) {
 				java.util.List<ItemStack> items = new java.util.ArrayList<ItemStack>();
 				ItemStack itemstack = this.createStackedBlock(state);
 
 				if (itemstack != null)
 					items.add(itemstack);
 
-				net.minecraftforge.event.ForgeEventFactory.fireBlockHarvesting(items, worldIn, pos, worldIn.getBlockState(pos), 0, 1.0f, true, player);
+				net.minecraftforge.event.ForgeEventFactory.fireBlockHarvesting(items, world, pos, world.getBlockState(pos), 0, 1.0f, true, player);
 
 				for (ItemStack is : items)
-					spawnAsEntity(worldIn, pos, is);
+					spawnAsEntity(world, pos, is);
 			} else {
 				String oilID = ConfigManagerCore.useOldOilFluidID ? "oilgc" : "oil";
-				worldIn.setBlockState(pos, FluidRegistry.getFluid(oilID).getBlock().getDefaultState(), 1);
+				world.setBlockState(pos, FluidRegistry.getFluid(oilID).getBlock().getDefaultState(), 1);
 			}
 		} else
-			super.harvestBlock(worldIn, player, pos, state, te);
+			super.harvestBlock(world, player, pos, state, te);
 	}
 }

@@ -28,9 +28,9 @@ import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemMarsRover extends Item implements IHoldableItem {
-	public ItemMarsRover(String assetName) {
+	public ItemMarsRover(String name) {
 		super();
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setMaxStackSize(1);
 	}
 

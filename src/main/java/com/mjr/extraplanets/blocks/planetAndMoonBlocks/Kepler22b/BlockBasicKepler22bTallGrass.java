@@ -98,7 +98,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	 * Whether this IGrowable can grow
 	 */
 	@Override
-	public boolean canGrow(World worldIn, BlockPos pos, IBlockState state, boolean isClient) {
+	public boolean canGrow(World world, BlockPos pos, IBlockState state, boolean isClient) {
 		if (this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_BLUE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_GREEN_TALL.getMeta()
 				&& this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_PURPLE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_RED_TALL.getMeta()
 				&& this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_YELLOW_TALL.getMeta())
@@ -113,11 +113,11 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	}
 
 	@Override
-	public void grow(World worldIn, Random rand, BlockPos pos, IBlockState state) {
-		if (this.canPlaceBlockAt(worldIn, pos) && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_BLUE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_GREEN_TALL.getMeta()
+	public void grow(World world, Random rand, BlockPos pos, IBlockState state) {
+		if (this.canPlaceBlockAt(world, pos) && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_BLUE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_GREEN_TALL.getMeta()
 				&& this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_PURPLE_TALL.getMeta() && this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_RED_TALL.getMeta()
 				&& this.getMetaFromState(state) != BlockBasicKepler22bTallGrass.EnumType.MAPLE_YELLOW_TALL.getMeta()) {
-			worldIn.setBlockState(pos, this.getStateFromMeta(this.getMetaFromState(state) + 1));
+			world.setBlockState(pos, this.getStateFromMeta(this.getMetaFromState(state) + 1));
 		}
 	}
 

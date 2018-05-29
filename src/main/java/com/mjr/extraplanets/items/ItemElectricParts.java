@@ -11,8 +11,8 @@ import com.mjr.mjrlegendslib.item.ItemBasicMeta;
 
 public class ItemElectricParts extends ItemBasicMeta {
 
-	public ItemElectricParts(String assetName) {
-		super(assetName, ExtraPlanets.ItemsTab, getItemList());
+	public ItemElectricParts(String name) {
+		super(name, ExtraPlanets.ItemsTab, getItemList());
 		this.setMaxStackSize(1);
 	}
 

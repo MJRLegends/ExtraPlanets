@@ -207,17 +207,17 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	 * Applies a velocity to each of the entities pushing them away from each other. Args: entity
 	 */
 	@Override
-	public void applyEntityCollision(Entity entityIn) {
-		super.applyEntityCollision(entityIn);
+	public void applyEntityCollision(Entity entity) {
+		super.applyEntityCollision(entity);
 	}
 
 	/**
 	 * Called by a player entity when they collide with an entity
 	 */
 	@Override
-	public void onCollideWithPlayer(EntityPlayer entityIn) {
+	public void onCollideWithPlayer(EntityPlayer entity) {
 		if (this.canDamagePlayer()) {
-			this.func_175451_e(entityIn);
+			this.func_175451_e(entity);
 		}
 	}
 
@@ -553,15 +553,15 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 
 	@Override
 	public EntityItem entityDropItem(ItemStack itemStack, float par2) {
-		final EntityItem entityitem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, itemStack);
-		entityitem.motionY = -2.0D;
-		entityitem.setDefaultPickupDelay();
+		final EntityItem EntityItem = new EntityItem(this.worldObj, this.posX, this.posY + par2, this.posZ, itemStack);
+		EntityItem.motionY = -2.0D;
+		EntityItem.setDefaultPickupDelay();
 		if (this.captureDrops) {
-			this.capturedDrops.add(entityitem);
+			this.capturedDrops.add(EntityItem);
 		} else {
-			this.worldObj.spawnEntityInWorld(entityitem);
+			this.worldObj.spawnEntityInWorld(EntityItem);
 		}
-		return entityitem;
+		return EntityItem;
 	}
 
 	@Override

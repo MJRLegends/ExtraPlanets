@@ -62,9 +62,9 @@ public class BlockBasicPhobos extends Block implements IDetectableResource, IPla
 		}
 	}
 
-	public BlockBasicPhobos(String assetName) {
+	public BlockBasicPhobos(String name) {
 		super(Material.rock);
-		this.setUnlocalizedName(assetName);
+		this.setUnlocalizedName(name);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
 	}
 
