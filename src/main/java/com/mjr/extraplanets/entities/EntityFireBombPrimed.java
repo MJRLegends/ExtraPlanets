@@ -8,7 +8,7 @@ import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class EntityFireBombPrimed extends EntityTNTPrimed {
+public class EntityFireBombPrimed extends EntityTNTPrimed { // TODO: Clean up
 	/** How long the fuse is */
 	public int fuse;
 	private EntityLivingBase tntPlacedBy;

@@ -21,18 +21,15 @@ public class EntitySmallSnowball extends EntitySnowball {
 		super(world, x, y, z);
 	}
 
-	/**
-	 * Called when this EntityThrowable hits a block or entity.
-	 */
 	@Override
-	protected void onImpact(RayTraceResult p_70184_1_) {
-		if (p_70184_1_.entityHit != null) {
+	protected void onImpact(RayTraceResult result) {
+		if (result.entityHit != null) {
 			int i = 0;
-			if (p_70184_1_.entityHit instanceof EntityPlayer) {
+			if (result.entityHit instanceof EntityPlayer) {
 				i = 20;
 			}
 
-			p_70184_1_.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), i);
+			result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), i);
 		}
 
 		for (int j = 0; j < 8; ++j) {

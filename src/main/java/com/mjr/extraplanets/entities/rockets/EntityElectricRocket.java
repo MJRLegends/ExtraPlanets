@@ -41,8 +41,8 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 		this.setCurrentPowerCapacity(0);
 	}
 
-	public EntityElectricRocket(World par1World, double x, double y, double z, EnumRocketType rocketType) {
-		super(par1World, x, y, z);
+	public EntityElectricRocket(World world, double x, double y, double z, EnumRocketType rocketType) {
+		super(world, x, y, z);
 		this.rocketType = rocketType;
 		this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 		this.setPowerMaxCapacity(10000);

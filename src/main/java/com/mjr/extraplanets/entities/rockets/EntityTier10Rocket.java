@@ -40,8 +40,8 @@ public class EntityTier10Rocket extends EntityTieredRocket {
 		this.setSize(1.8F, 6F);
 	}
 
-	public EntityTier10Rocket(World par1World, double x, double y, double z, EnumRocketType rocketType) {
-		super(par1World, x, y, z);
+	public EntityTier10Rocket(World world, double x, double y, double z, EnumRocketType rocketType) {
+		super(world, x, y, z);
 		this.rocketType = rocketType;
 		this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 	}

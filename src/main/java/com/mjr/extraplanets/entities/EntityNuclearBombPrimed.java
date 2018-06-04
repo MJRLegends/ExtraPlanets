@@ -6,7 +6,7 @@ import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.world.World;
 
-public class EntityNuclearBombPrimed extends EntityTNTPrimed {
+public class EntityNuclearBombPrimed extends EntityTNTPrimed { // TODO: Clean up
 	/** How long the fuse is */
 	public int fuse;
 	private EntityLivingBase tntPlacedBy;

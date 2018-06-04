@@ -17,13 +17,13 @@ import com.mjr.extraplanets.tileEntities.blocks.TileEntityPoweredChargingPad;
 
 public class EntityVenusRover extends EntityPoweredVehicleBase {
 
-	public EntityVenusRover(World var1) {
-		super(var1);
+	public EntityVenusRover(World world) {
+		super(world);
 		this.invertControls = true;
 	}
 
-	public EntityVenusRover(World par2World, float f, float g, float h, int itemDamage) {
-		super(par2World, f, g, h, itemDamage);
+	public EntityVenusRover(World world, float f, float g, float h, int itemDamage) {
+		super(world, f, g, h, itemDamage);
 		this.invertControls = true;
 	}
 

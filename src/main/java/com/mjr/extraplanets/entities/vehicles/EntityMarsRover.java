@@ -18,12 +18,12 @@ public class EntityMarsRover extends EntityPoweredVehicleBase implements IInvent
 	public float targetAngle;
 	public float currentAngle;
 
-	public EntityMarsRover(World var1) {
-		super(var1);
+	public EntityMarsRover(World world) {
+		super(world);
 	}
 
-	public EntityMarsRover(World par2World, float f, float g, float h, int itemDamage) {
-		super(par2World, f, g, h, itemDamage);
+	public EntityMarsRover(World world, float f, float g, float h, int itemDamage) {
+		super(world, f, g, h, itemDamage);
 	}
 
 	@Override
