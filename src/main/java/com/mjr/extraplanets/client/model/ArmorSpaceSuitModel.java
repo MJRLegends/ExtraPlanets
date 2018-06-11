@@ -1,5 +1,14 @@
 package com.mjr.extraplanets.client.model;
 
+import org.lwjgl.opengl.GL11;
+
+import com.google.common.base.Function;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.ModelUtilities;
+
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
@@ -9,15 +18,6 @@ import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.client.model.obj.OBJModel;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
-
-import com.google.common.base.Function;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.mjr.extraplanets.Constants;
-import com.mjr.mjrlegendslib.util.MCUtilities;
-import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class ArmorSpaceSuitModel extends ArmorCustomModel {
@@ -66,17 +66,16 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 				Function<ResourceLocation, TextureAtlasSprite> spriteFunction = location -> MCUtilities.getMinecraft().getTextureMapBlocks().getAtlasSprite(location.toString());
 
 				armourModelHead = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList
-								.of("HelmetPart1", "HelmetPart2", "HelmetPart4", "HelmetPart5", "HelmetPart6", "HelmetPart7", "HelmetPart8", "HelmetPart9", "HelmetPart10", "HelmetPart11", "MainPartHelmet", "SpacerAntenna2"), false),
+						new OBJModel.OBJState(
+								ImmutableList.of("HelmetPart1", "HelmetPart2", "HelmetPart4", "HelmetPart5", "HelmetPart6", "HelmetPart7", "HelmetPart8", "HelmetPart9", "HelmetPart10", "HelmetPart11", "MainPartHelmet", "SpacerAntenna2"), false),
 						DefaultVertexFormats.ITEM, spriteFunction);
 
 				armourModelTanks = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("HelmetOxygenCapsule1", "HelmetOxygenCapsule2"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
 				armourModelHeadGlass = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("HelmetPart3"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
-				armourModelPipes = (OBJModel.OBJBakedModel) model.bake(
-						new OBJModel.OBJState(ImmutableList.of("BodyPart1", "BodyPart10", "BodyPart11", "BodyPart12", "BodyPart13", "BodyPart14", "BodyPart15", "BodyPart16", "BodyPart17", "BodyPart18", "BodyPart3", "BodyPart4", "BodyPart5",
-								"BodyPart6", "BodyPart7", "BodyPart8", "BodyPart9"), false), DefaultVertexFormats.ITEM, spriteFunction);
+				armourModelPipes = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("BodyPart1", "BodyPart10", "BodyPart11", "BodyPart12", "BodyPart13", "BodyPart14", "BodyPart15", "BodyPart16", "BodyPart17", "BodyPart18",
+						"BodyPart3", "BodyPart4", "BodyPart5", "BodyPart6", "BodyPart7", "BodyPart8", "BodyPart9"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
 				armourModelBody = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("BodyPart2"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
@@ -149,6 +148,10 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	@Override
 	public void partRightArm() {
 		if (partType == EntityEquipmentSlot.CHEST) {
+			if (isSneak)
+				GL11.glScalef(1.1F, 1F, 1.3F);
+			else
+				GL11.glScalef(1F, 1F, 1.0F);
 			GL11.glTranslatef(-0.3525F, -1.375F, 0F);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ModelUtilities.drawBakedModel(armourModelRightArm);
@@ -160,6 +163,10 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	@Override
 	public void partLeftArm() {
 		if (partType == EntityEquipmentSlot.CHEST) {
+			if (isSneak)
+				GL11.glScalef(1.1F, 1F, 1.3F);
+			else
+				GL11.glScalef(1F, 1F, 1.0F);
 			GL11.glTranslatef(0.3525F, -1.375F, 0F);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ModelUtilities.drawBakedModel(armourModelLeftArm);
@@ -171,8 +178,11 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	@Override
 	public void partRightLeg() {
 		if (partType == EntityEquipmentSlot.LEGS) {
-			GL11.glScalef(1F, 1F, 1.4F);
-			GL11.glTranslatef(-0.125F, -0.7F, -0.01F);
+			GL11.glScalef(1F, 1F, 1.5F);
+			if (isSneak)
+				GL11.glTranslatef(-0.100F, -0.7F, 0.04F);
+			else
+				GL11.glTranslatef(-0.100F, -0.7F, -0.01F);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ModelUtilities.drawBakedModel(armourModelLeftLeg);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
@@ -185,8 +195,11 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	@Override
 	public void partLeftLeg() {
 		if (partType == EntityEquipmentSlot.LEGS) {
-			GL11.glScalef(1F, 1F, 1.4F);
-			GL11.glTranslatef(0.125F, -0.7F, -0.01F);
+			GL11.glScalef(1F, 1F, 1.5F);
+			if (isSneak)
+				GL11.glTranslatef(0.100F, -0.7F, 0.04F);
+			else
+				GL11.glTranslatef(0.100F, -0.7F, -0.01F);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_white.png"));
 			ModelUtilities.drawBakedModel(armourModelRightLeg);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
