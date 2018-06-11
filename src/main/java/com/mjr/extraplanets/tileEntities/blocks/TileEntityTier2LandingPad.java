@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import com.mjr.extraplanets.blocks.BlockCustomMulti;
+import com.mjr.extraplanets.blocks.BlockCustomMulti.EnumBlockMultiType;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+
 import micdoodle8.mods.galacticraft.api.entity.ICargoEntity;
 import micdoodle8.mods.galacticraft.api.entity.IDockable;
 import micdoodle8.mods.galacticraft.api.entity.IFuelable;
@@ -28,11 +33,6 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-import com.mjr.extraplanets.blocks.BlockCustomMulti;
-import com.mjr.extraplanets.blocks.BlockCustomMulti.EnumBlockMultiType;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.mjrlegendslib.util.MCUtilities;
-
 public class TileEntityTier2LandingPad extends TileEntityMulti implements IMultiBlock, IFuelable, IFuelDock, ICargoEntity {
 	public TileEntityTier2LandingPad() {
 		super(null);
@@ -51,8 +51,8 @@ public class TileEntityTier2LandingPad extends TileEntityMulti implements IMulti
 		}
 
 		if (!this.worldObj.isRemote) {
-			final List<Entity> list = this.worldObj.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(this.getPos().getX() - 3.5D, this.getPos().getY(), this.getPos().getZ() - 3.5D, this.getPos().getX() + 3.5D, this.getPos().getY() + 10.0D, this
-					.getPos().getZ() + 3.5D));
+			final List<Entity> list = this.worldObj.getEntitiesWithinAABB(Entity.class,
+					new AxisAlignedBB(this.getPos().getX() - 0.5D, this.getPos().getY(), this.getPos().getZ() - 0.5D, this.getPos().getX() + 0.5D, this.getPos().getY() + 1.25D, this.getPos().getZ() + 0.5D));
 
 			boolean docked = false;
 
