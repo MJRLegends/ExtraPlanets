@@ -14,19 +14,20 @@ public abstract class JetpackArmorBase extends ElectricArmorBase implements IJet
 		super(materialIn, renderIndexIn, equipmentSlotIn);
 	}
 
-	@Override
-	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
-		if (stack.hasTagCompound() && stack.getTagCompound().getBoolean("active") && this.getElectricityStored(stack) >= this.powerPerTick()) {
-			useJetPack(player);
-			if (player instanceof EntityPlayerMP && !((EntityPlayerMP) player).isCreative())
-				this.discharge(stack, this.powerPerTick(), true);
-		}
-	}
+    @Override
+    public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
+        if (stack.hasTagCompound() && stack.getTagCompound().getBoolean("active") && this.getElectricityStored(stack) >= this.powerPerTick()) {
+            useJetPack(player);
+            if (player instanceof EntityPlayerMP && !((EntityPlayerMP) player).isCreative())
+                this.discharge(stack, this.powerPerTick(), true);
+        }
+    }
 
-	public void useJetPack(EntityPlayer player) {
-		player.motionY = Math.min(player.motionY + this.getJetpackAccelSpeed(), this.getJetpackMaxAccelSpeed());
-		player.fallDistance = 0.0F;
-	}
+    public void useJetPack(EntityPlayer player) {
+        player.motionY = Math.min(player.motionY + this.getJetpackAccelSpeed(), this.getJetpackMaxAccelSpeed());
+        player.fallDistance = 0.0F;
+    }
+
 
 	@Override
 	public abstract double getJetpackAccelSpeed();
