@@ -54,6 +54,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		return false;
 	}
 
+	@Override
 	public boolean showDurabilityBar(ItemStack stack) {
 		return false;
 	}
