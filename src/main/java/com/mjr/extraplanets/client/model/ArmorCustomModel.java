@@ -100,7 +100,7 @@ public abstract class ArmorCustomModel extends ModelBiped {
 			GL11.glRotatef(180F, 1F, 0F, 0F);
 			GL11.glRotatef(180F, 0F, 1F, 0F);
 			if (isSneak)
-				GL11.glTranslatef(-0.04F, -0.1F, -0.10F + limbSwingAmount / 10);
+				GL11.glTranslatef(0.02F, -0.1F, -0.05F + (-0.02F + limbSwingAmount / 10));
 			partRightArm();
 			GL11.glPopMatrix();
 		}
@@ -114,7 +114,7 @@ public abstract class ArmorCustomModel extends ModelBiped {
 			GL11.glRotatef(180F, 1F, 0F, 0F);
 			GL11.glRotatef(180F, 0F, 1F, 0F);
 			if (isSneak)
-				GL11.glTranslatef(0.04F, -0.1F, -0.15F + limbSwingAmount / 10);
+				GL11.glTranslatef(-0.02F, -0.1F, -0.05F + (-0.02F + limbSwingAmount / 10));
 			partLeftArm();
 			GL11.glPopMatrix();
 		}
