@@ -298,6 +298,7 @@ public class ExtraPlanets {
 		registerCreatures();
 
 		packetPipeline = ExtraPlanetsChannelHandler.init();
+		// packetPipeline = NetworkManager.registerNetworkChannel(PacketSimpleEP.class, Constants.modID);
 
 		// Register Recipes
 		ExtraPlanets_Recipes.init();
