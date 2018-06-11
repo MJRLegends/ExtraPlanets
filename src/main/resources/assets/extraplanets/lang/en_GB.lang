@@ -1082,6 +1082,9 @@ space.suit.information.extra=The Tier of each part of the Space Suits counts
 space.suit.information.extra.2=towards reducing the amount of radiation gained
 space.suit.information.extra.3=The Higher the Space Suit Tier the 
 space.suit.information.extra.4=slower radiation will be gained
+space.suit.power.info=Use Galacticraft Blocks to recharge,
+space.suit.power.info.2=e.g Energy Storage Module
+
 
 item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info
 item_desc.spacesuit.module.shift.name=Press %s for Installed Modules

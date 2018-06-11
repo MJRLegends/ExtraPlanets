@@ -1076,12 +1076,14 @@ item.tier4_space_suit_legings.name=Tier 4 Space Suit Leggings ##NEEDS TRANSLATE#
 item.tier4_space_suit_boots.name=Tier 4 Space Suit Boots ##NEEDS TRANSLATE##
 item.tier4_space_suit_gravity_boots.name=Tier 4 Space Suit Gravity Boots ##NEEDS TRANSLATE##
 
-tier1.space.suit.information.gc=Required for Moon, Mars, Venus, Asteroids ##NEEDS TRANSLATE##
-tier1.space.suit.information.gc.2=Mercury and Ceres including their moons ##NEEDS TRANSLATE##
-tier1.space.suit.information=Required for Mercury, Ceres including their moons ##NEEDS TRANSLATE##
-tier2.space.suit.information=Required for Jupiter including their moons ##NEEDS TRANSLATE##
-tier3.space.suit.information=Required for Saturn, Uranus including their moons ##NEEDS TRANSLATE##
-tier4.space.suit.information=Required for Neptune, Pluto, Eris including their moons ##NEEDS TRANSLATE##
+space.suit.information=Used to full stop pressure damage ##NEEDS TRANSLATE##
+space.suit.information.2=& slow down the rate of radiation gained ##NEEDS TRANSLATE##
+space.suit.information.extra=The Tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
+space.suit.information.extra.2=towards reducing the amount of radiation gained ##NEEDS TRANSLATE##
+space.suit.information.extra.3=The Higher the Space Suit Tier the ##NEEDS TRANSLATE##
+space.suit.information.extra.4=slower radiation will be gained ##NEEDS TRANSLATE##
+space.suit.power.info=Use Galacticraft Blocks to recharge, ##NEEDS TRANSLATE##
+space.suit.power.info.2=e.g Energy Storage Module ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
 item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
