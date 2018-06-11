@@ -48,8 +48,8 @@ public class TileEntityRocketChargingPad extends TileEntityMulti implements IMul
 		}
 
 		if (!this.worldObj.isRemote) {
-			final List<Entity> list = this.worldObj.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(this.getPos().getX() - 3.5D, this.getPos().getY(), this.getPos().getZ() - 3.5D, this.getPos().getX() + 3.5D, this.getPos().getY() + 10.0D, this
-					.getPos().getZ() + 3.5D));
+			final List<Entity> list = this.worldObj.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(this.getPos().getX() - 0.5D, this.getPos().getY(), this.getPos().getZ() - 0.5D, this.getPos().getX() + 0.5D, this.getPos().getY() + 1.50D, this
+					.getPos().getZ() + 0.5D));
 
 			boolean docked = false;
 
