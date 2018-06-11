@@ -2,6 +2,8 @@ package com.mjr.extraplanets.items.armor.bases;
 
 import java.util.List;
 
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import ic2.api.item.IElectricItemManager;
 import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
@@ -10,6 +12,7 @@ import micdoodle8.mods.galacticraft.core.energy.EnergyConfigHandler;
 import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
 import micdoodle8.mods.galacticraft.core.energy.item.ElectricItemManagerIC2;
 import micdoodle8.mods.galacticraft.core.items.ItemBatteryInfinite;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import micdoodle8.mods.miccore.Annotations.RuntimeInterface;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
@@ -78,6 +81,8 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		}
 
 		tooltip.add(color + EnergyDisplayHelper.getEnergyDisplayS(joules) + "/" + EnergyDisplayHelper.getEnergyDisplayS(this.getMaxElectricityStored(itemStack)));
+		tooltip.add(EnumColor.RED + TranslateUtilities.translate("space.suit.power.info"));
+		tooltip.add(EnumColor.RED + TranslateUtilities.translate("space.suit.power.info.2"));
 	}
 
 	/**
