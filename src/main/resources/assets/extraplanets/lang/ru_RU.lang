@@ -1082,6 +1082,9 @@ space.suit.information.extra=Уровень каждой части скафан
 space.suit.information.extra.2=к уменьшению количества полученной радиации
 space.suit.information.extra.3=Чем выше уровень скафандра, тем
 space.suit.information.extra.4=более медленная радиация будет получена
+space.suit.power.info=Use Galacticraft Blocks to recharge, ##NEEDS TRANSLATE##
+space.suit.power.info.2=e.g Energy Storage Module ##NEEDS TRANSLATE##
+
 
 item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
 item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
