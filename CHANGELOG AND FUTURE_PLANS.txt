@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v0.3.9
+*Clean up/Small Fixing/Refactoring of code
+*Fixed issue #316
+*Fixed issue #318
+*Fixed issue #315
+*Added Tooltip to Tier 1 - 4 Space Suits to explain current charging abilities, related to issue #319
+
 v0.3.8
 *Added a Space Ship(Rocket) structure to Jupiter
 *Added a Satellite Tower Structure to Ceres
