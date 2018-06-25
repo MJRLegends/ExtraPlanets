@@ -169,6 +169,8 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			if (alpha > 0.0F) {
 				GlStateManager.pushMatrix();
 				Matrix4f worldMatrixLocal = setupMatrix(body, worldMatrix, fb, hasParent ? 0.25F : 1.0F);
+				
+				// Render Names for Planets & Moons
 				this.mc.renderEngine.bindTexture(new ResourceLocation("textures/font/ascii.png"));
 				if (!this.isZoomed() && !(body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
 					this.drawCenteredString(this.fontRendererObj, body.getLocalizedName(), 0, 5, 14737632);
@@ -184,7 +186,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				}
 
 				if (!preEvent.isCanceled()) {
-					int size = getWidthForCelestialBodyStatic(body);
+					int size = getWidthForCelestialBody(body);
 					this.drawTexturedModalRect(-size / 2, -size / 2, size, size, 0, 0, preEvent.textureSize, preEvent.textureSize, false, false, preEvent.textureSize, preEvent.textureSize);
 					matrixMap.put(body, worldMatrixLocal);
 				}
