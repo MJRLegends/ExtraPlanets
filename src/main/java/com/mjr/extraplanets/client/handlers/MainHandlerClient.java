@@ -446,21 +446,21 @@ public class MainHandlerClient {
 		if (mc.currentScreen instanceof GuiCelestialSelection) {
 			if (event.celestialBody == ExtraPlanets_Planets.SATURN) {
 				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn_rings.png"));
-				float size = GuiCelestialSelection.getWidthForCelestialBodyStatic(event.celestialBody) / 6.0F;
+				float size = ((GuiCelestialSelection)mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
 				((GuiCelestialSelection) mc.currentScreen).drawTexturedModalRect(-7.5F * size, -1.75F * size, 15.0F * size, 3.5F * size, 0, 0, 30, 7, false, false, 30, 7);
 			} else if (event.celestialBody == ExtraPlanets_Planets.URANUS) {
 				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/uranus_rings.png"));
-				float size = GuiCelestialSelection.getWidthForCelestialBodyStatic(event.celestialBody) / 6.0F;
+				float size = ((GuiCelestialSelection)mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
 				((GuiCelestialSelection) mc.currentScreen).drawTexturedModalRect(-1.75F * size, -7.0F * size, 3.5F * size, 14.0F * size, 0, 0, 28, 7, false, false, 28, 7);
 			}
 		} else if (mc.currentScreen instanceof CustomCelestialSelection) {
 			if (event.celestialBody == ExtraPlanets_Planets.SATURN) {
 				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn_rings.png"));
-				float size = GuiCelestialSelection.getWidthForCelestialBodyStatic(event.celestialBody) / 6.0F;
+				float size = ((GuiCelestialSelection)mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
 				((CustomCelestialSelection) mc.currentScreen).drawTexturedModalRect(-7.5F * size, -1.75F * size, 15.0F * size, 3.5F * size, 0, 0, 30, 7, false, false, 30, 7);
 			} else if (event.celestialBody == ExtraPlanets_Planets.URANUS) {
 				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/uranus_rings.png"));
-				float size = GuiCelestialSelection.getWidthForCelestialBodyStatic(event.celestialBody) / 6.0F;
+				float size = ((GuiCelestialSelection)mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
 				((CustomCelestialSelection) mc.currentScreen).drawTexturedModalRect(-1.75F * size, -7.0F * size, 3.5F * size, 14.0F * size, 0, 0, 28, 7, false, false, 28, 7);
 			}
 		}
