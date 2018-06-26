@@ -5,6 +5,10 @@
 
 
 ===========================================Released Updates===========================================
+v0.4.0
+*Changes to Celestial Selection screen to match GC changes
+*Set required GC version requirement to Build 178
+
 v0.3.9
 *Clean up/Small Fixing/Refactoring of code
 *Fixed issue #316
