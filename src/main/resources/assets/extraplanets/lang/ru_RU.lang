@@ -560,50 +560,51 @@ gui.celestial_body_has_dungeon.name=Сокровищницы
 
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Открыть инвентарь заряженного транспорта
-keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
-keybind.module.pre.launch.name=Open Pre Launch Checklist GUI ##NEEDS TRANSLATE##
+keybind.module.manager.name=Открыть менеджер модулей
+keybind.module.pre.launch.name=Открыть интерфейс списка предзапуска
+keybind.module.nasa.workbench.name=Открыть интерфейс портативного верстака NASA 
 
 #GUI Module Manager
-gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
-gui.modules_helmet.name=Helmet Modules ##NEEDS TRANSLATE##
-gui.modules_chest.name=Chest Modules ##NEEDS TRANSLATE##
-gui.modules_leggings.name=Leggings Modules ##NEEDS TRANSLATE##
-gui.modules_boots.name=Boots Modules ##NEEDS TRANSLATE##
-gui.module_list.name=Modules List ##NEEDS TRANSLATE##
-gui.button.install.name=Install ##NEEDS TRANSLATE##
-gui.button.uninstall.name=Uninstall ##NEEDS TRANSLATE##
-gui.button.disable_module.name=Enable ##NEEDS TRANSLATE##
-gui.button.enable_module.name=Disable ##NEEDS TRANSLATE##
-gui.module_cost.name=Cost ##NEEDS TRANSLATE##
-gui.module.installed.name=Module Installed! ##NEEDS TRANSLATE##
-gui.module.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
-gui.module.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
-gui.module.description.name=Module Description ##NEEDS TRANSLATE##
-gui.module.name.name=Module Name ##NEEDS TRANSLATE##
-gui.module.type.name=Module Type ##NEEDS TRANSLATE##
-gui.module.type.helmet.name=Helmet ##NEEDS TRANSLATE##
-gui.module.type.chest.name=Chestplate ##NEEDS TRANSLATE##
-gui.module.type.leggings.name=Leggings ##NEEDS TRANSLATE##
-gui.module.type.boots.name=Boots ##NEEDS TRANSLATE##
-gui.module.power.name=Module Power ##NEEDS TRANSLATE##
+gui.module_manager.name=Менеджер модулей
+gui.modules_helmet.name=Модули шлема
+gui.modules_chest.name=Модули нагрудника
+gui.modules_leggings.name=Модули поножей
+gui.modules_boots.name=Модули ботинок
+gui.module_list.name=Список модулей
+gui.button.install.name=Установить
+gui.button.uninstall.name=Удалить
+gui.button.disable_module.name=Включить
+gui.button.enable_module.name=Отключить
+gui.module_cost.name=Стоимость
+gui.module.installed.name=Модуль установлен!
+gui.module.missing_requirements.name=Извините, вы не отвечаете требованиям для установки этого модуля!
+gui.module.already_installed.name=У вас уже установлен этот модуль!
+gui.module.description.name=Описание модуля
+gui.module.name.name=Имя модуля
+gui.module.type.name=Тип модуля
+gui.module.type.helmet.name=Шлем
+gui.module.type.chest.name=Нагрудник
+gui.module.type.leggings.name=Поножи
+gui.module.type.boots.name=Ботинки
+gui.module.power.name=Модуль энергии
 
-gui.module.sensor_glasses.name=Sensor Glasses ##NEEDS TRANSLATE##
-gui.module.no_fall_damage.name=No Fall Damage ##NEEDS TRANSLATE##
-gui.module.geiger_counter.name=Geiger Counter ##NEEDS TRANSLATE##
-gui.module.test.name=Test Module ##NEEDS TRANSLATE##
-gui.module.pre_launch_checklist.name=Pre Launch Checklist ##NEEDS TRANSLATE##
-gui.module.nasa_workbench.name=Portable NASA Workbench ##NEEDS TRANSLATE##
-gui.module.oxygen_tank_switch.name=Oxygen Tank Auto Swapper ##NEEDS TRANSLATE##
-gui.module.auto_space_gear_equip.name=Space Gear Auto Equip ##NEEDS TRANSLATE##
+gui.module.sensor_glasses.name=Сенсорные очки
+gui.module.no_fall_damage.name=Отсутствие урона от падения
+gui.module.geiger_counter.name=Счетчик Гейгера
+gui.module.test.name=Тестовый модуль
+gui.module.pre_launch_checklist.name=Предконтрольный список для запуска
+gui.module.nasa_workbench.name=Портативный верстак NASA
+gui.module.oxygen_tank_switch.name=Автосмена кислородного резервуара
+gui.module.auto_space_gear_equip.name=Автоэкипировка космического снанряжения
 
-gui.module.sensor_glasses.desc=Functions the same as the Galacticraft Sensor Glasses ##NEEDS TRANSLATE##
-gui.module.no_fall_damage.desc=Removes fall damage from the player ##NEEDS TRANSLATE##
-gui.module.geiger_counter.desc=Displays your current amount of Radiation on your HUD/Screen ##NEEDS TRANSLATE##
-gui.module.test.desc=Test Module ##NEEDS TRANSLATE##
-gui.module.pre_launch_checklist.desc=Allows easy access to the Pre Launch Checklist from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
-gui.module.nasa_workbench.desc=Allows portable access to a NASA Workbench from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
-gui.module.oxygen_tank_switch.desc=Swappers out equipped empty tanks with any available non empty oxygen tank in your inventory ##NEEDS TRANSLATE##
-gui.module.auto_space_gear_equip.desc=Automatically equip any space related gear in your inventory ##NEEDS TRANSLATE##
+gui.module.sensor_glasses.desc=Функции такие же, как и сенсорные очки Galacticraft
+gui.module.no_fall_damage.desc=Удаляет урон от падения игрока
+gui.module.geiger_counter.desc=Отображает текущее количество излучения на вашем HUD/экране
+gui.module.test.desc=Тестовый модуль
+gui.module.pre_launch_checklist.desc=Позволяет легко получить доступ к контрольному списку предварительного запуска из Galacticraft, смотри клавиши управления, чтобы открыть
+gui.module.nasa_workbench.desc=Предоставляет доступ к портативному верстаку NASA Galacticraft, смотри клавиши управления, чтобы открыть
+gui.module.oxygen_tank_switch.desc=Подкачки из оборудованных пустых резервуаров с любым доступным не пустом кислородный баком в вашем инвентаре
+gui.module.auto_space_gear_equip.desc=Автоматически экипировывает любое связанное с космосом снаряжение в вашем инвентаре
 
 #Other Blocks
 tile.nuclear_bomb.name=Ядерная бомба
@@ -1052,25 +1053,25 @@ item.green_diamond_boots.name=Ботинки из зелёного алмаза
 
 item.tier1_space_suit_helmet.name=Шлем космического скафандра 1-го уровня
 item.tier1_space_suit_chest.name=Нагрудник космического скафандра 1-го уровня
-item.tier1_space_suit_jetpack_chest.name=Tier 1 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
+item.tier1_space_suit_jetpack_chest.name=Реактивный нагрудник космического скафандра 1-го уровня
 item.tier1_space_suit_legings.name=Поножи космического скафандра 1-го уровня
 item.tier1_space_suit_boots.name=Ботинки космического скафандра 1-го уровня
 item.tier1_space_suit_gravity_boots.name=Гравитационные ботинки космического скафандра 1-го уровня
 item.tier2_space_suit_helmet.name=Шлем космического скафандра 2-го уровня
 item.tier2_space_suit_chest.name=Нагрудник космического скафандра 2-го уровня
-item.tier2_space_suit_jetpack_chest.name=Tier 2 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
+item.tier2_space_suit_jetpack_chest.name=Реактивный нагрудник космического скафандра 2-го уровня
 item.tier2_space_suit_legings.name=Поножи космического скафандра 2-го уровня
 item.tier2_space_suit_boots.name=Ботинки космического скафандра 2-го уровня
 item.tier2_space_suit_gravity_boots.name=Гравитационные ботинки космического скафандра 2-го уровня
 item.tier3_space_suit_helmet.name=Шлем космического скафандра 3-го уровня
 item.tier3_space_suit_chest.name=Нагрудник космического скафандра 3-го уровня
-item.tier3_space_suit_jetpack_chest.name=Tier 3 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
+item.tier3_space_suit_jetpack_chest.name=Реактивный нагрудник космического скафандра 3-го уровня
 item.tier3_space_suit_legings.name=Поножи космического скафандра 3-го уровня
 item.tier3_space_suit_boots.name=Ботинки космического скафандра 3-го уровня
 item.tier3_space_suit_gravity_boots.name=Гравитационные ботинки космического скафандра 3-го уровня
 item.tier4_space_suit_helmet.name=Шлем космического скафандра 4-го уровня
 item.tier4_space_suit_chest.name=Нагрудник космического скафандра 4-го уровня
-item.tier4_space_suit_jetpack_chest.name=Tier 4 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
+item.tier4_space_suit_jetpack_chest.name=Реактивный нагрудник космического скафандра 4-го уровня
 item.tier4_space_suit_legings.name=Поножи космического скафандра 4-го уровня
 item.tier4_space_suit_boots.name=Ботинки космического скафандра 4-го уровня
 item.tier4_space_suit_gravity_boots.name=Гравитационные ботинки космического скафандра 4-го уровня
@@ -1081,9 +1082,12 @@ space.suit.information.extra=Уровень каждой части скафан
 space.suit.information.extra.2=к уменьшению количества полученной радиации
 space.suit.information.extra.3=Чем выше уровень скафандра, тем
 space.suit.information.extra.4=более медленная радиация будет получена
+space.suit.power.info=Используйте Galacticraft блоки для перезарядки,
+space.suit.power.info.2=например модуля хранения энергии
 
-item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
-item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
+
+item_desc.spacesuit.shift.name=Нажмите %s для информации о давлении и радиации
+item_desc.spacesuit.module.shift.name=Нажмите %s для установленных модулей
 
 item.tier3_thermal_helm.name=Теплоустойчивый шлем 3-го уровня
 item.tier3_thermal_chestplate.name=Теплоустойчивый нагрудник 3-го уровня
@@ -1103,20 +1107,20 @@ tier4.thermal.padding.information=Требуется для Юпитера, Са
 tier5.thermal.padding.information=Требуется для Урана, Нептуна, Плутона, Эриды, в том числе и их спутников
 
 #Space Suit Layers
-item.tier1_pressure_layer.name=Слой «Давление» 1-го уровня
-item.tier2_pressure_layer.name=Слой «Давление» 2-го уровня
-item.tier3_pressure_layer.name=Слой «Давление» 3-го уровня
-item.tier4_pressure_layer.name=Слой «Давление» 4-го уровня
+item.tier1_pressure_layer.name=Слой "Давление" 1-го уровня
+item.tier2_pressure_layer.name=Слой "Давление" 2-го уровня
+item.tier3_pressure_layer.name=Слой "Давление" 3-го уровня
+item.tier4_pressure_layer.name=Слой "Давление" 4-го уровня
 
-item.tier1_radiation_layer.name=Слой «Радиация» 1-го уровня
-item.tier2_radiation_layer.name=Слой «Радиация» 2-го уровня
-item.tier3_radiation_layer.name=Слой «Радиация» 3-го уровня
-item.tier4_radiation_layer.name=Слой «Радиация» 4-го уровня
+item.tier1_radiation_layer.name=Слой "Радиация" 1-го уровня
+item.tier2_radiation_layer.name=Слой "Радиация" 2-го уровня
+item.tier3_radiation_layer.name=Слой "Радиация" 3-го уровня
+item.tier4_radiation_layer.name=Слой "Радиация" 4-го уровня
 
-item.tier1_armor_layer.name=Слой «Броня» 1-го уровня
-item.tier2_armor_layer.name=Слой «Броня» 2-го уровня
-item.tier3_armor_layer.name=Слой «Броня» 3-го уровня
-item.tier4_armor_layer.name=Слой «Броня» 4-го уровня
+item.tier1_armor_layer.name=Слой "Броня" 1-го уровня
+item.tier2_armor_layer.name=Слой "Броня" 2-го уровня
+item.tier3_armor_layer.name=Слой "Броня" 3-го уровня
+item.tier4_armor_layer.name=Слой "Броня" 4-го уровня
 
 tier1_armor_layer.desc=Рецепт Компрессора: 4 Алюминиевых слитка
 tier2_armor_layer.desc=Рецепт Компрессора: 4 Титановых слитка
@@ -1145,9 +1149,9 @@ item.tier4_un_prepared_space_suit_legings.name=Поножи неподготов
 item.tier4_un_prepared_space_suit_boots.name=Ботинки неподготовленного космического скафандра 4-го уровня
 
 #Module Items
-item.module_items.no_fall_boots.name=No Fall Damage Module ##NEEDS TRANSLATE##
-item.module_items.oxygen_controller.name=Oxygen Controller ##NEEDS TRANSLATE##
-item.module_items.space_gear_controller.name=Space Gear Controller ##NEEDS TRANSLATE##
+item.module_items.no_fall_boots.name=Модуль отсутствия повреждения при падении
+item.module_items.oxygen_controller.name=Кислородный контроллер
+item.module_items.space_gear_controller.name=Контроллер космического снаряжения
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Очень большой кислородный баллон
@@ -1421,10 +1425,10 @@ fluid.liquid_chocolate_fluid=Жидкий шоколад
 fluid.liquid_caramel_fluid=Жидкая карамель
 
 #Gui/Damage Sources
-gui.warning.high.pressure=High Environment Pressure ##NEEDS TRANSLATE##
-gui.warning.high.radiation=Warning High Radiation Consumed ##NEEDS TRANSLATE##
-gui.warning.med.radiation=Medium Radiation Consumed ##NEEDS TRANSLATE##
-gui.warning.low.radiation=Very Low Radiation Consumed ##NEEDS TRANSLATE##
+gui.warning.high.pressure=Высокое давление окружающей среды
+gui.warning.high.radiation=Предупреждение о высоком потреблении радиации
+gui.warning.med.radiation=Среднее давление окружающей среды
+gui.warning.low.radiation=Очень низкое давление окружающей среды
 death.attack.radiation=%1$s забыл радиационную защиту
 death.attack.pressure=%1$s забыл защиту от давления
 death.attack.hypothermia=%1$s умер от гипотермии
