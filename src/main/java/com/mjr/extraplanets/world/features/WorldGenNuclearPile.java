@@ -64,8 +64,11 @@ public class WorldGenNuclearPile extends WorldGenerator {
 		world.setBlock(x + 3, y + 1, z + 5, ExtraPlanets_Blocks.slimeBlock, 1, 3);
 		world.setBlock(x + 3, y + 1, z + 6, ExtraPlanets_Blocks.slimeBlock, 1, 3);
 		world.setBlock(x + 3, y + 2, z + 2, ExtraPlanets_Blocks.slimeBlock, 1, 3);
-		world.setBlock(x + 3, y + 2, z + 3, ExtraPlanets_Blocks.nuclearBomb, 1, 3);
-		world.setBlock(x + 3, y + 2, z + 4, ExtraPlanets_Blocks.nuclearBomb, 1, 3);
+		if(Config.nuclearBomb) {
+			world.setBlock(x + 3, y + 2, z + 3, ExtraPlanets_Blocks.nuclearBomb, 1, 3);
+			world.setBlock(x + 3, y + 2, z + 4, ExtraPlanets_Blocks.nuclearBomb, 1, 3);
+			world.setBlock(x + 3, y + 2, z + 5, ExtraPlanets_Blocks.nuclearBomb, 1, 3);
+		}
 		world.setBlock(x + 3, y + 2, z + 6, ExtraPlanets_Blocks.slimeBlock, 1, 3);
 		world.setBlock(x + 3, y + 3, z + 2, ExtraPlanets_Blocks.slimeBlock, 1, 3);
 		world.setBlock(x + 3, y + 3, z + 3, ExtraPlanets_Blocks.slimeBlock, 1, 3);
