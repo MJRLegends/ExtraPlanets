@@ -2,16 +2,16 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.util.BlockPos;
-import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenerator;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.util.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenNuclearPile extends WorldGenerator {
 
@@ -70,9 +70,11 @@ public class WorldGenNuclearPile extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 3, y + 1, z + 5), Blocks.slime_block.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 1, z + 6), Blocks.slime_block.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 2, z + 2), Blocks.slime_block.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 2, z + 3), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 2, z + 4), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 2, z + 5), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
+		if (Config.NUCLEAR_BOMB) {
+			world.setBlockState(new BlockPos(x + 3, y + 2, z + 3), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
+			world.setBlockState(new BlockPos(x + 3, y + 2, z + 4), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
+			world.setBlockState(new BlockPos(x + 3, y + 2, z + 5), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
+		}
 		world.setBlockState(new BlockPos(x + 3, y + 2, z + 6), Blocks.slime_block.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 3, z + 2), Blocks.slime_block.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 3, z + 3), Blocks.slime_block.getDefaultState(), 3);
