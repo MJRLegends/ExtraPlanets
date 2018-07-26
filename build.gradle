@@ -70,6 +70,22 @@ processResources
     }
 }
 
+task deobfJar(type: Jar) {
+    from sourceSets.main.output
+    classifier = 'dev'
+	//manifest {
+    //    attributes.put("FMLAT", "extraplanets.cfg")
+    //    attributes.put("FMLCorePluginContainsFMLMod", "true")
+    //}
+}
+
+task apiJar(type: Jar) {
+    from(sourceSets.main.java) {
+        include "com/mjr/extraplanets/api/**"
+    }
+    classifier = 'api'
+}
+
 task signJar(type: SignJar, dependsOn: reobfJar) {
     onlyIf {
         project.hasProperty('keyStore')
