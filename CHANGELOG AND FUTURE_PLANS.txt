@@ -5,6 +5,11 @@
 
 
 ===========================================Released Updates===========================================
+v2.0.5
+*Fixed issue #335
+*Added ko_KR.lang (Thanks to mindy15963)
+*Updated ru_RU.lang (Thanks to kellixon)
+
 v2.0.4
 *Added support for the future release of ExtendedPlanets v1.4 Alpha
 *Fixes/Changes for More Planets Compatibility/Changed More Planets Compatibility config options
