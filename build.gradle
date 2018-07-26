@@ -74,7 +74,7 @@ task deobfJar(type: Jar) {
     from sourceSets.main.output
     classifier = 'dev'
 	//manifest {
-    //    attributes.put("FMLAT", "extraplanets.cfg")
+    //    attributes.put("FMLAT", "extraplanets_at.cfg")
     //    attributes.put("FMLCorePluginContainsFMLMod", "true")
     //}
 }
