@@ -5,6 +5,11 @@
 
 
 ===========================================Released Updates===========================================
+v0.4.1
+*Fixed issue #335
+*Added ko_KR.lang (Thanks to mindy15963)
+*Updated ru_RU.lang (Thanks to kellixon)
+
 v0.4.0
 *Changes to Celestial Selection screen to match GC changes
 *Set required GC version requirement to Build 178
