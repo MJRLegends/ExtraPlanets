@@ -67,3 +67,19 @@ processResources
         exclude 'mcmod.info'
     }
 }
+
+task deobfJar(type: Jar) {
+    from sourceSets.main.output
+    classifier = 'dev'
+	//manifest {
+    //    attributes.put("FMLAT", "extraplanets_at.cfg")
+    //    attributes.put("FMLCorePluginContainsFMLMod", "true")
+    //}
+}
+
+task apiJar(type: Jar) {
+    from(sourceSets.main.java) {
+        include "com/mjr/extraplanets/api/**"
+    }
+    classifier = 'api'
+}
