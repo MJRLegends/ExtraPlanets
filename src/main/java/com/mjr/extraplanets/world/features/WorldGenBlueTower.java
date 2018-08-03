@@ -66,7 +66,7 @@ public class WorldGenBlueTower extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 1, z + 2), ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 1, z + 2), ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 2, y + 1, z + 3), ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState(), 3);
-		if (Config.NUCLEAR_BOMB) {
+		if (Config.CERES && Config.NUCLEAR_BOMB) {
 			world.setBlockState(new BlockPos(x + 3, y + 1, z + 3), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 4, y + 1, z + 3), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 5, y + 1, z + 3), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
@@ -75,7 +75,7 @@ public class WorldGenBlueTower extends WorldGenerator {
 			world.setBlockState(new BlockPos(x + 3, y + 1, z + 5), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 4, y + 1, z + 5), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 5, y + 1, z + 5), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
-		} else if (Config.FIRE_BOMB) {
+		} else if (Config.SATURN && Config.FIRE_BOMB) {
 			world.setBlockState(new BlockPos(x + 3, y + 1, z + 3), ExtraPlanets_Blocks.FIRE_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 4, y + 1, z + 3), ExtraPlanets_Blocks.FIRE_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 5, y + 1, z + 3), ExtraPlanets_Blocks.FIRE_BOMB.getDefaultState(), 3);
