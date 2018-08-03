@@ -70,7 +70,7 @@ public class WorldGenNuclearPile extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 3, y + 1, z + 5), Blocks.slime_block.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 1, z + 6), Blocks.slime_block.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 2, z + 2), Blocks.slime_block.getDefaultState(), 3);
-		if (Config.NUCLEAR_BOMB) {
+		if (Config.CERES && Config.NUCLEAR_BOMB) {
 			world.setBlockState(new BlockPos(x + 3, y + 2, z + 3), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 3, y + 2, z + 4), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
 			world.setBlockState(new BlockPos(x + 3, y + 2, z + 5), ExtraPlanets_Blocks.NUCLEAR_BOMB.getDefaultState(), 3);
