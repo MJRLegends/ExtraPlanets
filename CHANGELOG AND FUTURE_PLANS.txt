@@ -5,6 +5,11 @@
 
 
 ===========================================Released Updates===========================================
+v1.4.7
+*Fixed issue #336
+*Fixed issue #340
+*Updated ru_RU.lang (Thanks to rykllan)
+
 v1.4.6
 *Fixed issue #335
 *Added ko_KR.lang (Thanks to mindy15963)
