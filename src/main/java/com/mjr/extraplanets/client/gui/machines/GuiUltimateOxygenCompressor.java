@@ -21,7 +21,7 @@ import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class GuiUltimateOxygenCompressor extends GuiContainerGC {
-	private static final ResourceLocation compressorTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/tileEntity.png");
+	private static final ResourceLocation compressorTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/compressor.png");
 
 	private final TileEntityUltimateOxygenCompressor tileEntity;
 
