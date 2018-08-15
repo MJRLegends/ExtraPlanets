@@ -165,15 +165,8 @@ public class MainHandlerClient {
 				player.motionY = 0;
 			}
 
-			boolean isPressed = micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.spaceKey.isKeyDown();
-
-			if (!isPressed) {
-				ClientProxyCore.lastSpacebarDown = false;
-			}
-
-			if (player.ridingEntity != null && isPressed && !ClientProxyCore.lastSpacebarDown) {
+			if (player.ridingEntity != null && micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.spaceKey.isKeyDown()) {
 				ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_IGNITE_ROCKET, GCCoreUtil.getDimensionID(player.worldObj), new Object[] {}));
-				ClientProxyCore.lastSpacebarDown = true;
 			}
 		}
 	}
