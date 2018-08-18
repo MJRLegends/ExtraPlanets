@@ -1076,11 +1076,11 @@ item.tier4_space_suit_legings.name=Tier 4 Space Suit Leggings ##NEEDS TRANSLATE#
 item.tier4_space_suit_boots.name=Tier 4 Space Suit Boots ##NEEDS TRANSLATE##
 item.tier4_space_suit_gravity_boots.name=Tier 4 Space Suit Gravity Boots ##NEEDS TRANSLATE##
 
-space.suit.information=Used to full stop pressure damage ##NEEDS TRANSLATE##
-space.suit.information.2=& slow down the rate of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra=The Tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
+space.suit.information=Used to fully stop pressure damage ##NEEDS TRANSLATE##
+space.suit.information.2=& to slow down the rate of radiation gained ##NEEDS TRANSLATE##
+space.suit.information.extra=The tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
 space.suit.information.extra.2=towards reducing the amount of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra.3=The Higher the Space Suit Tier the ##NEEDS TRANSLATE##
+space.suit.information.extra.3=The higher the Space Suit tier the ##NEEDS TRANSLATE##
 space.suit.information.extra.4=slower radiation will be gained ##NEEDS TRANSLATE##
 space.suit.power.info=Use Galacticraft Blocks to recharge, ##NEEDS TRANSLATE##
 space.suit.power.info.2=e.g Energy Storage Module ##NEEDS TRANSLATE##

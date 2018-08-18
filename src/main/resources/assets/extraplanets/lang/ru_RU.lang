@@ -1085,7 +1085,6 @@ space.suit.information.extra.4=более медленная радиация б
 space.suit.power.info=Используйте Galacticraft блоки для перезарядки,
 space.suit.power.info.2=например, модуля хранения энергии
 
-
 item_desc.spacesuit.shift.name=Нажмите %s для информации о давлении и радиации
 item_desc.spacesuit.module.shift.name=Нажмите %s для установленных модулей
 
