@@ -38,6 +38,7 @@ public class Config {
 	public static boolean GENERATE_JUITPER_SKY_FEATURE;
 	public static boolean GENERATE_MERCURY_METEORS;
 	public static boolean GENERATE_CERES_SATELLITE_TOWER;
+	public static boolean GENERATE_GANYMEDE_ICE_CHUNKS;
 	public static boolean JUITPER_LIGHTING;
 	public static boolean CUSTOM_FOG;
 
@@ -509,6 +510,7 @@ public class Config {
 		GENERATE_JUITPER_SKY_FEATURE = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Jupiter", true, "Setting this option to false will disable & remove the Sky Feature on Jupiter").getBoolean(true);
 		GENERATE_MERCURY_METEORS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Meteors on Mercury", true, "Setting this option to false will disable & remove the Meteors on Mercury").getBoolean(true);
 		GENERATE_CERES_SATELLITE_TOWER = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Satellite Towers on Ceres", true, "Setting this option to false will disable & remove the Satellite Towers on Ceres").getBoolean(true);
+		GENERATE_GANYMEDE_ICE_CHUNKS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Chunks under the surface of Ganymede", true, "Setting this option to false will disable & remove the Ice Chunks on Ganymede").getBoolean(true);
 		JUITPER_LIGHTING = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable & remove Lighting & Lighting Effects on Jupiter").getBoolean(true);
 		CUSTOM_FOG = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
 				.getBoolean(true);
