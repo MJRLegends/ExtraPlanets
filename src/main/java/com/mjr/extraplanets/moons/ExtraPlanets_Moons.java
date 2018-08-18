@@ -267,7 +267,7 @@ public class ExtraPlanets_Moons {
 			TITAN.setDimensionInfo(Config.TITAN_ID, WorldProviderTitan.class);
 			TITAN.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? 80.0F : 5.0F, 0.0F, 0.2F));
 			TITAN.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute");
-			TITAN.setBiomeInfo(TitanBiomes.titan);
+			TITAN.setBiomeInfo(TitanBiomes.titan, TitanBiomes.titanMethaneHills, TitanBiomes.titanMethaneSea);
 			TITAN.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			TITAN.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 			TITAN.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
