@@ -78,7 +78,7 @@ public class BiomeDecoratorGanymede extends BiomeDecoratorSpace {
 		if (Config.GENERATE_GANYMEDE_ICE_CHUNKS) {
 			for (int i = 0; i < 3; i++) {
 				if (rand.nextInt(5) == 1) {
-					WorldGenUtilities.generateStructureWithRangeY(new WorldGenSphere(true, Constants.modID, Blocks.ICE.getDefaultState(), 12, 2), this.currentWorld, rand, new BlockPos(this.posX, 0, this.posZ), 6, 60);
+					WorldGenUtilities.generateStructureWithRangeY(new WorldGenSphere(false, Constants.modID, Blocks.ICE.getDefaultState(), 12, 2), this.currentWorld, rand, new BlockPos(this.posX, 0, this.posZ), 6, 60);
 				}
 			}
 		}
