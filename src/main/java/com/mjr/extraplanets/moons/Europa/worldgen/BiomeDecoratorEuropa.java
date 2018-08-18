@@ -1,7 +1,9 @@
 package com.mjr.extraplanets.moons.Europa.worldgen;
 
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -13,6 +15,8 @@ import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
+import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaIceValleys;
+import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnNuclearLand;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 import com.mjr.mjrlegendslib.world.features.WorldGenSphere;
 
@@ -23,7 +27,10 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 	private WorldGenerator ironGen;
 	private WorldGenerator gravelGen;
 	private WorldGenerator fossilsGen;
-
+	private WorldGenerator iceGen;
+	private WorldGenerator iceSubSurfaceGen;
+	private WorldGenerator iceSurfaceGen;
+	
 	private int LakesPerChunk = 5;
 
 	private World currentWorld;
@@ -36,6 +43,9 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 		}
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.EUROPA_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 1);
+		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
+		this.iceSubSurfaceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 1);
+		this.iceSurfaceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 0);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
@@ -59,6 +69,10 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 		}
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
+		this.generateOre(15, this.iceGen, 0, 256);
+		this.generateOre(15, this.iceSubSurfaceGen, 0, 256);
+		if (!((BiomeAdaptive) this.getCurrentWorld().getBiome(new BlockPos(this.posX, 0, this.posZ))).isInstance(BiomeGenEuropaIceValleys.class))
+			this.generateOre(15, this.iceSurfaceGen, 0, 256);
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
 
