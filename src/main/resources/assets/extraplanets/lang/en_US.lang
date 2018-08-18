@@ -562,6 +562,7 @@ gui.celestial_body_has_dungeon.name=Has Dungeon
 keybind.vehicle_inv.name=Open Powered Vehicle Inventory
 keybind.module.manager.name=Open Module Manager
 keybind.module.pre.launch.name=Open Pre Launch Checklist GUI
+keybind.module.nasa.workbench.name=Open Portable NASA Workbench GUI ##NEEDS TRANSLATE##
 
 #GUI Module Manager
 gui.module_manager.name=Module Manager
@@ -1075,12 +1076,14 @@ item.tier4_space_suit_legings.name=Tier 4 Space Suit Leggings
 item.tier4_space_suit_boots.name=Tier 4 Space Suit Boots
 item.tier4_space_suit_gravity_boots.name=Tier 4 Space Suit Gravity Boots
 
-space.suit.information=Used to full stop pressure damage
-space.suit.information.2=& slow down the rate of radiation gained
-space.suit.information.extra=The Tier of each part of the Space Suits counts 
+space.suit.information=Used to fully stop pressure damage
+space.suit.information.2=& to slow down the rate of radiation gained
+space.suit.information.extra=The tier of each part of the Space Suits counts 
 space.suit.information.extra.2=towards reducing the amount of radiation gained
-space.suit.information.extra.3=The Higher the Space Suit Tier the 
+space.suit.information.extra.3=The higher the Space Suit tier the 
 space.suit.information.extra.4=slower radiation will be gained
+space.suit.power.info=Use Galacticraft Blocks to recharge,
+space.suit.power.info.2=e.g Energy Storage Module
 
 item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info
 item_desc.spacesuit.module.shift.name=Press %s for Installed Modules

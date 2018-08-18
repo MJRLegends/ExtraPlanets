@@ -562,6 +562,7 @@ gui.celestial_body_has_dungeon.name=有无地牢
 keybind.vehicle_inv.name=打开电力漫游车物品栏
 keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
 keybind.module.pre.launch.name=Open Pre Launch Checklist GUI ##NEEDS TRANSLATE##
+keybind.module.nasa.workbench.name=Open Portable NASA Workbench GUI ##NEEDS TRANSLATE##
 
 #GUI Module Manager
 gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
@@ -1075,12 +1076,14 @@ item.tier4_space_suit_legings.name=4 阶太空服护腿
 item.tier4_space_suit_boots.name=4 阶太空服靴子
 item.tier4_space_suit_gravity_boots.name=4 阶太空服重力靴子
 
-space.suit.information=Used to full stop pressure damage ##NEEDS TRANSLATE##
-space.suit.information.2=& slow down the rate of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra=The Tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
+space.suit.information=Used to fully stop pressure damage ##NEEDS TRANSLATE##
+space.suit.information.2=& to slow down the rate of radiation gained ##NEEDS TRANSLATE##
+space.suit.information.extra=The tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
 space.suit.information.extra.2=towards reducing the amount of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra.3=The Higher the Space Suit Tier the ##NEEDS TRANSLATE##
+space.suit.information.extra.3=The higher the Space Suit tier the ##NEEDS TRANSLATE##
 space.suit.information.extra.4=slower radiation will be gained ##NEEDS TRANSLATE##
+space.suit.power.info=Use Galacticraft Blocks to recharge, ##NEEDS TRANSLATE##
+space.suit.power.info.2=e.g Energy Storage Module ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
 item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
