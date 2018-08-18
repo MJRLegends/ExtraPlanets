@@ -43,9 +43,9 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 		}
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.EUROPA_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 1);
-		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
-		this.iceSubSurfaceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 1);
-		this.iceSurfaceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 0);
+		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
+		this.iceSubSurfaceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 1);
+		this.iceSurfaceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 0);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
