@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.moons.Europa.worldgen;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.init.Blocks;
@@ -71,7 +70,7 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 		this.generateOre(10, this.fossilsGen, 0, 256);
 		this.generateOre(15, this.iceGen, 0, 256);
 		this.generateOre(15, this.iceSubSurfaceGen, 0, 256);
-		if (!((BiomeAdaptive) this.getCurrentWorld().getBiome(new BlockPos(this.posX, 0, this.posZ))).isInstance(BiomeGenEuropaIceValleys.class))
+		if (this.getCurrentWorld().getBiome(new BlockPos(this.posX, 0, this.posZ)) instanceof BiomeGenEuropaIceValleys)
 			this.generateOre(15, this.iceSurfaceGen, 0, 256);
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);
