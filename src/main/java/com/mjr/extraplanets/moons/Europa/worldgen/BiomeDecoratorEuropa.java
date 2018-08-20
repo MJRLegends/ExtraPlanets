@@ -42,9 +42,9 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 		}
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.EUROPA_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 1);
-		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
-		this.iceSubSurfaceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 1);
-		this.iceSurfaceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 0);
+		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 10, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 2);
+		this.iceSubSurfaceGen = new WorldGenMinableMeta(Blocks.ice, 10, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 1);
+		this.iceSurfaceGen = new WorldGenMinableMeta(Blocks.ice, 10, 0, true, ExtraPlanets_Blocks.EUROPA_BLOCKS, 0);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
@@ -70,7 +70,7 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 		this.generateOre(10, this.fossilsGen, 0, 256);
 		this.generateOre(15, this.iceGen, 0, 256);
 		this.generateOre(15, this.iceSubSurfaceGen, 0, 256);
-		if (this.getCurrentWorld().getBiome(new BlockPos(this.posX, 0, this.posZ)) instanceof BiomeGenEuropaIceValleys)
+		if (this.getCurrentWorld().getBiomeGenForCoords(new BlockPos(this.posX, 0, this.posZ)) instanceof BiomeGenEuropaIceValleys)
 			this.generateOre(15, this.iceSurfaceGen, 0, 256);
 
 		// generateOre(int amountPerChunk, WorldGenerator worldGenerator, int minY, int maxY);

@@ -10,7 +10,7 @@ import com.mjr.mjrlegendslib.world.features.WorldGenSphere;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
@@ -38,8 +38,8 @@ public class BiomeDecoratorGanymede extends BiomeDecoratorSpace {
 		}
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.GANYMEDE_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
 		this.fossilsGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.FOSSIL, 3, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 1);
-		this.iceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
-		this.iceSubSurfaceGen = new WorldGenMinableMeta(Blocks.ICE, 10, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 1);
+		this.iceGen = new WorldGenMinableMeta(Blocks.ice, 10, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
+		this.iceSubSurfaceGen = new WorldGenMinableMeta(Blocks.ice, 10, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 1);
 
 		// WorldGenMinableMeta(Block OreBlock, int numberOfBlocks, int OreMeta, boolean usingMetaData, Block StoneBlock, int StoneMeta);
 	}
@@ -78,7 +78,7 @@ public class BiomeDecoratorGanymede extends BiomeDecoratorSpace {
 		if (Config.GENERATE_GANYMEDE_ICE_CHUNKS) {
 			for (int i = 0; i < 3; i++) {
 				if (rand.nextInt(5) == 1) {
-					WorldGenUtilities.generateStructureWithRangeY(new WorldGenSphere(false, Constants.modID, Blocks.ICE.getDefaultState(), 12, 2), this.currentWorld, rand, new BlockPos(this.posX, 0, this.posZ), 6, 60);
+					WorldGenUtilities.generateStructureWithRangeY(new WorldGenSphere(false, Constants.modID, Blocks.ice.getDefaultState(), 12, 2), this.currentWorld, rand, new BlockPos(this.posX, 0, this.posZ), 6, 60);
 				}
 			}
 		}
