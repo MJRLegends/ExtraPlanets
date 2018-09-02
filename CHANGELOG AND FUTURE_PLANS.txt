@@ -5,6 +5,14 @@
 
 
 ===========================================Released Updates===========================================
+v0.4.3
+*Fixed a few typos in Space Suit tooltips
+*Added large amounts of Ice generation below the surface of Ganymede, with config option to disable
+*Added large amounts of Ice generation to all layers of Europa, with config option to disable
+*Added config option to disabled Iron Chunks under the surface of Europa
+*Fixed Titan not generating its two other biomes
+*Updated ko_KR.lang (Thanks to mindy15963)
+
 v0.4.2
 *Fixed issue #336
 *Fixed issue #337
