@@ -1,31 +1,8 @@
 package com.mjr.extraplanets.network;
 
-import io.netty.buffer.ByteBuf;
-
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-
-import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
-import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
-import micdoodle8.mods.galacticraft.core.items.ItemParaChute;
-import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
-import micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
-import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.client.settings.GameSettings;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.network.INetHandler;
-import net.minecraft.network.Packet;
-import net.minecraft.network.PacketBuffer;
-import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.fml.client.FMLClientHandler;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
@@ -43,17 +20,37 @@ import com.mjr.extraplanets.items.armor.modules.ExtraPlanets_Modules;
 import com.mjr.extraplanets.items.armor.modules.Module;
 import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.extraplanets.util.ExtraPlanetsUtli;
-import com.mjr.mjrlegendslib.network.PacketBase;
+import com.mjr.mjrlegendslib.network.PacketSimpleBase;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-public class PacketSimpleEP extends PacketBase implements Packet {
+import io.netty.buffer.ByteBuf;
+import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
+import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
+import micdoodle8.mods.galacticraft.core.items.ItemParaChute;
+import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
+import micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
+import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.settings.GameSettings;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.network.INetHandler;
+import net.minecraft.util.math.BlockPos;
+import net.minecraftforge.fml.client.FMLClientHandler;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+public class PacketSimpleEP extends PacketSimpleBase {
 	public enum EnumSimplePacket {
 		// SERVER
-		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class), S_IGNITE_ROCKET(Side.SERVER), S_UPDATE_JETPACK(Side.SERVER, Integer.class), S_OPEN_MODULE_MANANGER_GUI(Side.SERVER, String.class), S_UNINSTALL_MODULE(
-				Side.SERVER, String.class), S_INSTALL_MODULE(Side.SERVER, String.class), S_UPDATE_MODULE_STATE(Side.SERVER, String.class),
+		S_OPEN_FUEL_GUI(Side.SERVER, String.class), S_OPEN_POWER_GUI(Side.SERVER, String.class), S_IGNITE_ROCKET(Side.SERVER), S_UPDATE_JETPACK(Side.SERVER, Integer.class), S_OPEN_MODULE_MANANGER_GUI(Side.SERVER,
+				String.class), S_UNINSTALL_MODULE(Side.SERVER, String.class), S_INSTALL_MODULE(Side.SERVER, String.class), S_UPDATE_MODULE_STATE(Side.SERVER, String.class),
 
 		// CLIENT
 		C_DISPLAY_ROCKET_CONTROLS(Side.CLIENT), C_OPEN_PARACHEST_GUI(Side.CLIENT, Integer.class, Integer.class, Integer.class), C_UPDATE_SOLAR_RADIATION_LEVEL(Side.CLIENT, Double.class), C_OPEN_MODULE_MANANGER_GUI(Side.CLIENT, Integer.class,
@@ -149,8 +146,8 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 					MCUtilities.getClient().displayGuiScreen(new GuiVehicleBase(playerBaseClient.inventory, (EntityVehicleBase) playerBaseClient.getRidingEntity(), ((EntityVehicleBase) playerBaseClient.getRidingEntity()).getType()));
 					playerBaseClient.openContainer.windowId = (Integer) this.data.get(0);
 				} else if (playerBaseClient.getRidingEntity() instanceof EntityPoweredVehicleBase) {
-					MCUtilities.getClient().displayGuiScreen(
-							new GuiPoweredVehicleBase(playerBaseClient.inventory, (EntityPoweredVehicleBase) playerBaseClient.getRidingEntity(), ((EntityPoweredVehicleBase) playerBaseClient.getRidingEntity()).getType()));
+					MCUtilities.getClient()
+							.displayGuiScreen(new GuiPoweredVehicleBase(playerBaseClient.inventory, (EntityPoweredVehicleBase) playerBaseClient.getRidingEntity(), ((EntityPoweredVehicleBase) playerBaseClient.getRidingEntity()).getType()));
 					playerBaseClient.openContainer.windowId = (Integer) this.data.get(0);
 				}
 				break;
@@ -334,16 +331,6 @@ public class PacketSimpleEP extends PacketBase implements Packet {
 		default:
 			break;
 		}
-	}
-
-	@Override
-	public void readPacketData(PacketBuffer var1) {
-		this.decodeInto(var1);
-	}
-
-	@Override
-	public void writePacketData(PacketBuffer var1) {
-		this.encodeInto(var1);
 	}
 
 	@SideOnly(Side.CLIENT)
