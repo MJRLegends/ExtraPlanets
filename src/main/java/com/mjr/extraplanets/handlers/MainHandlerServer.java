@@ -475,15 +475,4 @@ public class MainHandlerServer {
 			}
 		}
 	}
-
-	/*
-	 * Debug use for changing dimensions since /dimensiontp screen is broke in dev workspace
-	 */
-	// @SubscribeEvent(priority = EventPriority.LOWEST)
-	// public void onPlayerJoin(PlayerLoggedInEvent event) {
-	// if (event.player instanceof EntityPlayer) {
-	// final WorldServer world = (WorldServer) ((EntityPlayerMP) event.player).world;
-	// WorldUtil.transferEntityToDimension((EntityPlayerMP) event.player, Config.KEPLER22B_ID, world);
-	// }
-	// }
 }
