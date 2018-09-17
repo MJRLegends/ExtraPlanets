@@ -15,7 +15,6 @@ public abstract class Module {
 	private int slotType;
 	private ItemStack icon;
 	private boolean active;
-	private String description = "";
 	private int passivePowerCost = 0;
 	private int usePowerCost = 0;
 
