@@ -37,7 +37,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 	public EntityElectricRocket(World par1World) {
 		super(par1World);
 		this.setSize(1.8F, 6F);
-		this.setPowerMaxCapacity(10000);
+		this.setPowerMaxCapacity(20000);
 		this.setCurrentPowerCapacity(0);
 	}
 
@@ -45,7 +45,7 @@ public class EntityElectricRocket extends EntityElectricRocketBase {
 		super(par1World, x, y, z);
 		this.rocketType = rocketType;
 		this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
-		this.setPowerMaxCapacity(10000);
+		this.setPowerMaxCapacity(20000);
 		this.setCurrentPowerCapacity(0);
 	}
 

@@ -66,7 +66,7 @@ public class GuiElectricRocketInventory extends GuiContainerGC {
 		this.drawTexturedModalRect(var5, var6, 0, 0, 176, this.ySize);
 
 		if (this.mc.player != null && this.mc.player.getRidingEntity() != null && this.mc.player.getRidingEntity() instanceof EntityElectricRocketBase) {
-			final int percentage = (int) ((int) (((EntityElectricRocketBase) this.mc.player.getRidingEntity()).getCurrentPowerCapacity() / 100) / 2.6);
+			final int percentage = (int) ((int) ((((EntityElectricRocketBase) this.mc.player.getRidingEntity()).getCurrentPowerCapacity() / 100) / 2) / 2.6);
 			this.drawTexturedModalRect((this.width - this.xSize) / 2 + 95, (this.height - this.ySize) / 2 + 45 - percentage, 176, 38 - percentage, 25, percentage);
 		}
 	}
