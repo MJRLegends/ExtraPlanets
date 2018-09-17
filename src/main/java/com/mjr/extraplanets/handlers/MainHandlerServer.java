@@ -35,6 +35,7 @@ import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerWakeUpEvent;
 import net.minecraftforge.event.world.WorldEvent;
+import net.minecraftforge.fluids.BlockFluidBase;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent;
@@ -207,7 +208,7 @@ public class MainHandlerServer {
 			if (isInGlowstone((EntityPlayerMP) entityLiving))
 				entityLiving.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 500, 0));
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
-			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.world, entityLiving.getEntityBoundingBox(), true) == false)
+			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.world, entityLiving.getEntityBoundingBox(), true) == false && !(entityLiving.world.getBlockState(new BlockPos(entityLiving.posX, entityLiving.posY, entityLiving.posZ)) instanceof BlockFluidBase))
 				runChecks(event, entityLiving);
 		}
 	}
