@@ -6,17 +6,12 @@ import javax.annotation.Nullable;
 
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import ic2.api.item.IElectricItemManager;
 import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
 import micdoodle8.mods.galacticraft.api.item.IItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.EnergyConfigHandler;
 import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
-import micdoodle8.mods.galacticraft.core.energy.item.ElectricItemManagerIC2;
-import micdoodle8.mods.galacticraft.core.items.ItemBatteryInfinite;
-import micdoodle8.mods.galacticraft.core.util.CompatibilityManager;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.miccore.Annotations.RuntimeInterface;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
@@ -36,7 +31,6 @@ import net.minecraftforge.common.ISpecialArmor;
 
 public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor {
 
-	private static Object itemManagerIC2;
 	public float transferMax = 200;
 	private static final int DAMAGE_RANGE = 100;
 
@@ -45,10 +39,6 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		this.setMaxStackSize(1);
 		this.setMaxDamage(DAMAGE_RANGE);
 		this.setNoRepair();
-
-		if (EnergyConfigHandler.isIndustrialCraft2Loaded()) {
-			itemManagerIC2 = new ElectricItemManagerIC2();
-		}
 	}
 
 	@Override
@@ -66,12 +56,11 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	public boolean isEnchantable(ItemStack stack) {
 		return false;
 	}
-	
-    @Override
-    public float getMaxTransferGC(ItemStack itemStack)
-    {
-        return this.transferMax;
-    }
+
+	@Override
+	public float getMaxTransferGC(ItemStack itemStack) {
+		return this.transferMax;
+	}
 
 	@Override
 	public void addInformation(ItemStack itemStack, @Nullable World world, List<String> tooltip, ITooltipFlag flagIn) {
@@ -257,85 +246,5 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		}
 
 		return false;
-	}
-
-	// For RF compatibility
-
-	@RuntimeInterface(clazz = "cofh.redstoneflux.api.IEnergyContainerItem", modID = "")
-	public int receiveEnergy(ItemStack container, int maxReceive, boolean simulate) {
-		return (int) (this.recharge(container, maxReceive * EnergyConfigHandler.RF_RATIO, !simulate) / EnergyConfigHandler.RF_RATIO);
-	}
-
-	@RuntimeInterface(clazz = "cofh.redstoneflux.api.IEnergyContainerItem", modID = "")
-	public int extractEnergy(ItemStack container, int maxExtract, boolean simulate) {
-		return (int) (this.discharge(container, maxExtract / EnergyConfigHandler.TO_RF_RATIO, !simulate) * EnergyConfigHandler.TO_RF_RATIO);
-	}
-
-	@RuntimeInterface(clazz = "cofh.redstoneflux.api.IEnergyContainerItem", modID = "")
-	public int getEnergyStored(ItemStack container) {
-		return (int) (this.getElectricityStored(container) * EnergyConfigHandler.TO_RF_RATIO);
-	}
-
-	@RuntimeInterface(clazz = "cofh.redstoneflux.api.IEnergyContainerItem", modID = "")
-	public int getMaxEnergyStored(ItemStack container) {
-		return (int) (this.getMaxElectricityStored(container) * EnergyConfigHandler.TO_RF_RATIO);
-	}
-
-	// The following seven methods are for Mekanism compatibility
-
-	@RuntimeInterface(clazz = "mekanism.api.energy.IEnergizedItem", modID = CompatibilityManager.modidMekanism)
-	public double getEnergy(ItemStack itemStack) {
-		return this.getElectricityStored(itemStack) * EnergyConfigHandler.TO_MEKANISM_RATIO;
-	}
-
-	@RuntimeInterface(clazz = "mekanism.api.energy.IEnergizedItem", modID = CompatibilityManager.modidMekanism)
-	public void setEnergy(ItemStack itemStack, double amount) {
-		this.setElectricity(itemStack, (float) amount * EnergyConfigHandler.MEKANISM_RATIO);
-	}
-
-	@RuntimeInterface(clazz = "mekanism.api.energy.IEnergizedItem", modID = CompatibilityManager.modidMekanism)
-	public double getMaxEnergy(ItemStack itemStack) {
-		return this.getMaxElectricityStored(itemStack) * EnergyConfigHandler.TO_MEKANISM_RATIO;
-	}
-
-	@RuntimeInterface(clazz = "mekanism.api.energy.IEnergizedItem", modID = CompatibilityManager.modidMekanism)
-	public double getMaxTransfer(ItemStack itemStack) {
-		return this.transferMax * EnergyConfigHandler.TO_MEKANISM_RATIO;
-	}
-
-	@RuntimeInterface(clazz = "mekanism.api.energy.IEnergizedItem", modID = CompatibilityManager.modidMekanism)
-	public boolean canReceive(ItemStack itemStack) {
-		return (itemStack != null && !(itemStack.getItem() instanceof ItemBatteryInfinite));
-	}
-
-	public boolean canSend(ItemStack itemStack) {
-		return true;
-	}
-
-	// All the following methods are for IC2 compatibility
-
-	@RuntimeInterface(clazz = "ic2.api.item.ISpecialElectricItem", modID = CompatibilityManager.modidIC2)
-	public IElectricItemManager getManager(ItemStack itemstack) {
-		return (IElectricItemManager) ElectricArmorBase.itemManagerIC2;
-	}
-
-	@RuntimeInterface(clazz = "ic2.api.item.IElectricItem", modID = CompatibilityManager.modidIC2)
-	public boolean canProvideEnergy(ItemStack itemStack) {
-		return true;
-	}
-
-	@RuntimeInterface(clazz = "ic2.api.item.IElectricItem", modID = CompatibilityManager.modidIC2)
-	public int getTier(ItemStack itemStack) {
-		return 1;
-	}
-
-	@RuntimeInterface(clazz = "ic2.api.item.IElectricItem", modID = CompatibilityManager.modidIC2)
-	public double getMaxCharge(ItemStack itemStack) {
-		return this.getMaxElectricityStored(itemStack) / EnergyConfigHandler.IC2_RATIO;
-	}
-
-	@RuntimeInterface(clazz = "ic2.api.item.IElectricItem", modID = CompatibilityManager.modidIC2)
-	public double getTransferLimit(ItemStack itemStack) {
-		return this.transferMax * EnergyConfigHandler.TO_IC2_RATIO;
 	}
 }
