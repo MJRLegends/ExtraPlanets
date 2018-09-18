@@ -1,3 +1,5 @@
+[![](http://cf.way2muchnoise.eu/full_extraplanets_downloads.svg)](https://minecraft.curseforge.com/projects/extraplanets) [![](http://cf.way2muchnoise.eu/versions/Minecraft_extraplanets_all.svg)](https://minecraft.curseforge.com/projects/extraplanets)
+
 # ExtraPlanets
 A Galacticraft Addon, Made By MJRLegends 
 
