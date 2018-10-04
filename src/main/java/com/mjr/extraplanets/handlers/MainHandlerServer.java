@@ -208,7 +208,7 @@ public class MainHandlerServer {
 			if (isInGlowstone((EntityPlayerMP) entityLiving))
 				entityLiving.addPotionEffect(new PotionEffect(Potion.nightVision.id, 500, 0));
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
-			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.worldObj, entityLiving.getEntityBoundingBox(), true) == false && !(entityLiving.worldObj.getBlockState(new BlockPos(entityLiving.posX, entityLiving.posY, entityLiving.posZ)) instanceof BlockFluidBase))
+			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.worldObj, entityLiving.getEntityBoundingBox(), true) == false && !(entityLiving.worldObj.getBlockState(new BlockPos(entityLiving.posX, entityLiving.posY, entityLiving.posZ)).getBlock() instanceof BlockFluidBase))
 				runChecks(event, entityLiving);
 		}
 	}
