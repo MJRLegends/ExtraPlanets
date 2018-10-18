@@ -6,7 +6,6 @@ import java.util.List;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
-import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDeconstructor;
@@ -171,7 +170,6 @@ public class ExtraPlanets {
 	// Block/Item/Biome Events Registering Lists
 	public static List<Item> itemList = new ArrayList<>();
 	public static List<Block> blocksList = new ArrayList<>();
-	public static List<BiomeGenBaseGC> biomesList = new ArrayList<>();
 
 	// Blocks Creative Tab
 	public static CreativeTabs BlocksTab = new CreativeTabs("SpaceBlocksTab") {
