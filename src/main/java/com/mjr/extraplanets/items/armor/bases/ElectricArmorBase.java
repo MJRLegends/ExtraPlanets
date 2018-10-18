@@ -46,6 +46,11 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	public boolean isItemTool(ItemStack stack) {
 		return false;
 	}
+	
+	@Override
+    public boolean isBookEnchantable(ItemStack stack, ItemStack book){
+        return false;
+    }
 
 	@Override
 	public boolean showDurabilityBar(ItemStack stack) {

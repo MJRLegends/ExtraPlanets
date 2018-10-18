@@ -28,10 +28,10 @@ public class ExtraPlanets_Armor {
 	private static ArmorMaterial YELLOW_DIAMOND_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Yellow_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
 	private static ArmorMaterial GREEM_DIAMOND_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Green_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
 
-	private static ArmorMaterial TIER_1_SPACE_SUIT_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Tier1_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial TIER_2_SPACE_SUIT_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Tier2_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial TIER_3_SPACE_SUIT_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Tier3_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
-	private static ArmorMaterial TIER_4_SPACE_SUIT_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Tier4_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7);
+	private static ArmorMaterial TIER_1_SPACE_SUIT_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Tier1_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 0);
+	private static ArmorMaterial TIER_2_SPACE_SUIT_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Tier2_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 0);
+	private static ArmorMaterial TIER_3_SPACE_SUIT_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Tier3_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 0);
+	private static ArmorMaterial TIER_4_SPACE_SUIT_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Tier4_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 0);
 
 	public static Item CARBON_HELMET;
 	public static Item CARBON_CHEST;
