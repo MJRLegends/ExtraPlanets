@@ -4,11 +4,15 @@ import java.util.List;
 
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
+import ic2.api.item.IElectricItem;
+import ic2.api.item.IElectricItemManager;
+import ic2.api.item.ISpecialElectricItem;
 import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
 import micdoodle8.mods.galacticraft.api.item.IItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.EnergyConfigHandler;
 import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
+import micdoodle8.mods.galacticraft.core.energy.item.ElectricItemManagerIC2;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
@@ -23,9 +27,12 @@ import net.minecraft.nbt.NBTTagFloat;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
+import net.minecraftforge.fml.common.Optional;
 
-public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor {
+@Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem") 
+public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor, IElectricItem, ISpecialElectricItem {
 
+    private static Object itemManagerIC2;
 	public float transferMax = 200;
 	private static final int DAMAGE_RANGE = 100;
 
@@ -34,6 +41,11 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		this.setMaxStackSize(1);
 		this.setMaxDamage(DAMAGE_RANGE);
 		this.setNoRepair();
+		
+        if (EnergyConfigHandler.isIndustrialCraft2Loaded())
+        {
+            itemManagerIC2 = new ElectricItemManagerIC2();
+        }
 	}
 
 	@Override
@@ -246,5 +258,32 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		}
 
 		return false;
+	}
+
+	// IC2 Compact
+	@Override
+    public IElectricItemManager getManager(ItemStack itemstack)
+    {
+        return (IElectricItemManager) ElectricArmorBase.itemManagerIC2;
+    }
+    
+	@Override
+	public boolean canProvideEnergy(ItemStack itemStack) {
+		return true;
+	}
+
+	@Override
+	public int getTier(ItemStack itemStack) {
+		return 1;
+	}
+
+	@Override
+	public double getMaxCharge(ItemStack itemStack) {
+		return this.getMaxElectricityStored(itemStack) / EnergyConfigHandler.IC2_RATIO;
+	}
+
+	@Override
+	public double getTransferLimit(ItemStack itemStack) {
+		return this.transferMax * EnergyConfigHandler.TO_IC2_RATIO;
 	}
 }
