@@ -1082,8 +1082,8 @@ space.suit.information.extra=각 부분의 우주복의 티어를 셉니다
 space.suit.information.extra.2=방사능의 세기를 줄이기 위해서는 말이죠
 space.suit.information.extra.3=우주복 티어가 높을수록
 space.suit.information.extra.4=방사능 피폭이 느려집니다
-space.suit.power.info=충전하려면 갤럭티크래프트의 블록을 사용하세요
-space.suit.power.info.2=예시:에너지 저장 모듈
+space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
+space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=압력과 방사능 정보는 %s을 누르세요.
 item_desc.spacesuit.module.shift.name=설치된 모듈 확인은 %s을 누르세요.
