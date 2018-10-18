@@ -1082,8 +1082,8 @@ space.suit.information.extra=Уровень каждой части скафан
 space.suit.information.extra.2=к уменьшению количества полученной радиации
 space.suit.information.extra.3=Чем выше уровень скафандра, тем
 space.suit.information.extra.4=более медленная радиация будет получена
-space.suit.power.info=Используйте Galacticraft блоки для перезарядки,
-space.suit.power.info.2=например, модуля хранения энергии
+space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
+space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=Нажмите %s для информации о давлении и радиации
 item_desc.spacesuit.module.shift.name=Нажмите %s для установленных модулей

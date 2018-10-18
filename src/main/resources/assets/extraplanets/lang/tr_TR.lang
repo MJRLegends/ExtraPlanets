@@ -1082,8 +1082,8 @@ space.suit.information.extra=Radrasyonu azaltmak için tüm seti giyin
 space.suit.information.extra.2=Alınan radrasyonu azaltmak için kullanılabilir
 space.suit.information.extra.3=Yüksek seviye uzay giysileri
 space.suit.information.extra.4=radrasyonu daha iyi yavaşlatacaktır
-space.suit.power.info=Şarj etmek için galacticraft bloklarını kullanın
-space.suit.power.info.2=Enerji Depolama Modülü
+space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
+space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=%s tuşuna basarak radrasyon ve basınç seviyeni ölç
 item_desc.spacesuit.module.shift.name=%s tuşuna basarak modülü yükleyebilirsin
