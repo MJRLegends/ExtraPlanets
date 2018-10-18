@@ -181,7 +181,7 @@ public class ExtraPlanets_Tools {
 			MAGNESIUM_SWORD = new BasicSword(MAGNESIUM_MATERIAL, "magnesium_sword", 6.5).setCreativeTab(ExtraPlanets.ToolsTab);
 		}
 		if (Config.URANUS) {
-			if (Config.ITEMS_PALLADIUM) {
+			if (Config.ITEMS_CRYSTAL) {
 				CRYSTAL_PICKAXE = new BasicPickaxe(CRYSTAL_MATERIAL, "crystal_pickaxe").setCreativeTab(ExtraPlanets.ToolsTab);
 				CRYSTAL_AXE = new BasicAxe(CRYSTAL_MATERIAL, "crystal_axe").setCreativeTab(ExtraPlanets.ToolsTab);
 				CRYSTAL_HOE = new BasicHoe(CRYSTAL_MATERIAL, "crystal_hoe").setCreativeTab(ExtraPlanets.ToolsTab);
