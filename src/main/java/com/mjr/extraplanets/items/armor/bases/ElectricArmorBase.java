@@ -8,12 +8,15 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import cofh.redstoneflux.api.IEnergyContainerItem;
 import ic2.api.item.IElectricItem;
+import ic2.api.item.IElectricItemManager;
+import ic2.api.item.ISpecialElectricItem;
 import mekanism.api.energy.IEnergizedItem;
 import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
 import micdoodle8.mods.galacticraft.api.item.IItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.EnergyConfigHandler;
 import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
+import micdoodle8.mods.galacticraft.core.energy.item.ElectricItemManagerIC2;
 import micdoodle8.mods.galacticraft.core.items.ItemBatteryInfinite;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.util.ITooltipFlag;
@@ -37,7 +40,10 @@ import net.minecraftforge.fml.common.Optional;
 @Optional.Interface(modid = "redstoneflux", iface = "cofh.redstoneflux.api.IEnergyContainerItem")
 @Optional.Interface(modid = "mekanism", iface = "mekanism.api.energy.IEnergizedItem")
 @Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem")
-public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor, IEnergyContainerItem, IEnergizedItem, IElectricItem {
+@Optional.Interface(modid = "ic2", iface = "ic2.api.item.ISpecialElectricItem")
+public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor, IEnergyContainerItem, IEnergizedItem, IElectricItem, ISpecialElectricItem {
+
+    private static Object itemManagerIC2;
 	public float transferMax = 200;
 	private static final int DAMAGE_RANGE = 100;
 
@@ -46,6 +52,11 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		this.setMaxStackSize(1);
 		this.setMaxDamage(DAMAGE_RANGE);
 		this.setNoRepair();
+		
+        if (EnergyConfigHandler.isIndustrialCraft2Loaded())
+        {
+            itemManagerIC2 = new ElectricItemManagerIC2();
+        }
 	}
 
 	@Override
@@ -312,6 +323,12 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	}
 
 	// IC2 Compact
+	@Override
+    public IElectricItemManager getManager(ItemStack itemstack)
+    {
+        return (IElectricItemManager) ElectricArmorBase.itemManagerIC2;
+    }
+    
 	@Override
 	public boolean canProvideEnergy(ItemStack itemStack) {
 		return true;
