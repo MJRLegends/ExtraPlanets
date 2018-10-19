@@ -68,7 +68,7 @@ dependencies {
 		"Galacticraft-Planets-Dev-${version_galacticraft}.jar",
 		"MicdoodleCore-Dev-${version_galacticraft}.jar",
 		"MJRLegendsLib-${version_mjrlegendslib}-dev.jar",
-		"Mekanism-${version_mekanism}-api.jar",
+		"Mekanism-${version_mekanism}.jar",
 		"CoFHCore-${version_cofh_core}-universal.jar"
 	)
 	runtime "mezz.jei:jei_${minecraft_version}:${jei_version}"
