@@ -29,10 +29,10 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.fml.common.Optional;
 
-@Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem") 
+@Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem")
 public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor, IElectricItem, ISpecialElectricItem {
 
-    private static Object itemManagerIC2;
+	private static Object itemManagerIC2;
 	public float transferMax = 200;
 	private static final int DAMAGE_RANGE = 100;
 
@@ -41,11 +41,10 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		this.setMaxStackSize(1);
 		this.setMaxDamage(DAMAGE_RANGE);
 		this.setNoRepair();
-		
-        if (EnergyConfigHandler.isIndustrialCraft2Loaded())
-        {
-            itemManagerIC2 = new ElectricItemManagerIC2();
-        }
+
+		if (EnergyConfigHandler.isIndustrialCraft2Loaded()) {
+			itemManagerIC2 = new ElectricItemManagerIC2();
+		}
 	}
 
 	@Override
@@ -58,11 +57,11 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	public boolean isItemTool(ItemStack stack) {
 		return false;
 	}
-	
+
 	@Override
-    public boolean isBookEnchantable(ItemStack stack, ItemStack book){
-        return false;
-    }
+	public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
+		return false;
+	}
 
 	@Override
 	public boolean showDurabilityBar(ItemStack stack) {
@@ -262,11 +261,10 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 
 	// IC2 Compact
 	@Override
-    public IElectricItemManager getManager(ItemStack itemstack)
-    {
-        return (IElectricItemManager) ElectricArmorBase.itemManagerIC2;
-    }
-    
+	public IElectricItemManager getManager(ItemStack itemstack) {
+		return (IElectricItemManager) ElectricArmorBase.itemManagerIC2;
+	}
+
 	@Override
 	public boolean canProvideEnergy(ItemStack itemStack) {
 		return true;
