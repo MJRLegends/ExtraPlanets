@@ -5,6 +5,21 @@
 
 
 ===========================================Released Updates===========================================
+v1.4.9
+*Changed network system to use a base class from MJRLegendsLib
+*Increased the max amount power a electric rocket can hold, fixes issue #352
+*Fixed issue #350
+*Removed not needed code from the Electric Armour class
+*Removed not needed variable from Module class
+*Updated tr_TR.lang (Thanks to kralrindo)
+*Changed to use ConfigGuiFactoryBase from MJRLegendsLib
+*Another small tweak towards issue #350
+*Fixed issue #361
+*Added support for IC2 energy system for Tier 1 - 4 Space suits (Fixes issue #319 )
+*Updated lang files to support fix for issue #319
+*Set minimum version of MJRLegendsLib requirement to v1.1.1
+*Fixed issue #360
+
 v1.4.8
 *Fixed a few typos in Space Suit tooltips
 *Added large amounts of Ice generation below the surface of Ganymede, with config option to disable
