@@ -28,8 +28,13 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagDouble;
 import net.minecraft.nbt.NBTTagFloat;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ICapabilityProvider;
+import net.minecraftforge.energy.CapabilityEnergy;
+import net.minecraftforge.energy.EnergyStorage;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.Optional.InterfaceList;
 
@@ -40,7 +45,7 @@ import net.minecraftforge.fml.common.Optional.InterfaceList;
 })
 public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor, IEnergyContainerItem, IEnergizedItem, IElectricItem, ISpecialElectricItem {
 
-    private static Object itemManagerIC2;
+	private static Object itemManagerIC2;
 	public float transferMax = 200;
 	private static final int DAMAGE_RANGE = 100;
 
@@ -49,11 +54,10 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		this.setMaxStackSize(1);
 		this.setMaxDamage(DAMAGE_RANGE);
 		this.setNoRepair();
-		
-        if (EnergyConfigHandler.isIndustrialCraft2Loaded())
-        {
-            itemManagerIC2 = new ElectricItemManagerIC2();
-        }
+
+		if (EnergyConfigHandler.isIndustrialCraft2Loaded()) {
+			itemManagerIC2 = new ElectricItemManagerIC2();
+		}
 	}
 
 	@Override
@@ -66,11 +70,11 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	public boolean isItemTool(ItemStack stack) {
 		return false;
 	}
-	
+
 	@Override
-    public boolean isBookEnchantable(ItemStack stack, ItemStack book){
-        return false;
-    }
+	public boolean isBookEnchantable(ItemStack stack, ItemStack book) {
+		return false;
+	}
 
 	@Override
 	public boolean showDurabilityBar(ItemStack stack) {
@@ -321,11 +325,10 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 
 	// IC2 Compact
 	@Override
-    public IElectricItemManager getManager(ItemStack itemstack)
-    {
-        return (IElectricItemManager) ElectricArmorBase.itemManagerIC2;
-    }
-    
+	public IElectricItemManager getManager(ItemStack itemstack) {
+		return (IElectricItemManager) ElectricArmorBase.itemManagerIC2;
+	}
+
 	@Override
 	public boolean canProvideEnergy(ItemStack itemStack) {
 		return true;
@@ -344,5 +347,57 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	@Override
 	public double getTransferLimit(ItemStack itemStack) {
 		return this.transferMax * EnergyConfigHandler.TO_IC2_RATIO;
+	}
+
+	// Forge Energy Compact
+	@Override
+	public ICapabilityProvider initCapabilities(ItemStack stack, NBTTagCompound nbt) {
+		return new EnergyCapabilityProvider(stack, this);
+	}
+
+	private class EnergyCapabilityProvider implements ICapabilityProvider {
+		EnergyStorage storage;
+
+		public EnergyCapabilityProvider(ItemStack stack, ElectricArmorBase item) {
+			storage = new EnergyStorage((int) (item.getMaxElectricityStored(stack) * EnergyConfigHandler.TO_RF_RATIO), (int) item.transferMax) {
+				@Override
+				public int receiveEnergy(int maxReceive, boolean simulate) {
+					if (!this.canReceive()) {
+						return 0;
+					}
+					return (int) (item.recharge(stack, maxReceive * EnergyConfigHandler.RF_RATIO, !simulate) / EnergyConfigHandler.RF_RATIO);
+				}
+
+				@Override
+				public int extractEnergy(int maxExtract, boolean simulate) {
+					if (!canExtract()) {
+						return 0;
+					}
+					return (int) (item.discharge(stack, maxReceive / EnergyConfigHandler.RF_RATIO, !simulate) * EnergyConfigHandler.RF_RATIO);
+				}
+
+				@Override
+				public int getEnergyStored() {
+					return (int) (item.getMaxElectricityStored(stack) * EnergyConfigHandler.TO_RF_RATIO);
+				}
+			};
+		}
+
+		@Override
+		public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
+			if (capability == CapabilityEnergy.ENERGY) {
+				return true;
+			} else
+				return false;
+		}
+
+		@Override
+		public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
+			if (hasCapability(capability, facing)) {
+				return CapabilityEnergy.ENERGY.cast(storage);
+			} else {
+				return null;
+			}
+		}
 	}
 }
