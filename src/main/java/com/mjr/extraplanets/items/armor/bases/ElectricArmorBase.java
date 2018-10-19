@@ -29,9 +29,14 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagDouble;
 import net.minecraft.nbt.NBTTagFloat;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ICapabilityProvider;
+import net.minecraftforge.energy.CapabilityEnergy;
+import net.minecraftforge.energy.EnergyStorage;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.Optional.InterfaceList;
 
@@ -347,4 +352,56 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	public double getTransferLimit(ItemStack itemStack) {
 		return this.transferMax * EnergyConfigHandler.TO_IC2_RATIO;
 	}
+
+	// Forge Energy Compact
+	@Override
+	public ICapabilityProvider initCapabilities(ItemStack stack, NBTTagCompound nbt) {
+		return new EnergyCapabilityProvider(stack, this);
+	}
+
+	private class EnergyCapabilityProvider implements ICapabilityProvider {
+		EnergyStorage storage;
+		public EnergyCapabilityProvider(ItemStack stack, ElectricArmorBase item) {
+			storage = new EnergyStorage((int) (item.getMaxElectricityStored(stack) * EnergyConfigHandler.TO_RF_RATIO), (int) item.transferMax) {
+				@Override
+				public int receiveEnergy(int maxReceive, boolean simulate) {
+					if (!this.canReceive()) {
+						return 0;
+					}
+					return (int) (item.recharge(stack, maxReceive * EnergyConfigHandler.RF_RATIO, !simulate) / EnergyConfigHandler.RF_RATIO);
+				}
+
+				@Override
+				public int extractEnergy(int maxExtract, boolean simulate) {
+					if (!canExtract()) {
+						return 0;
+					}
+					return (int) (item.discharge(stack, maxReceive / EnergyConfigHandler.RF_RATIO, !simulate) * EnergyConfigHandler.RF_RATIO);
+				}
+
+				@Override
+				public int getEnergyStored() {
+					return (int) (item.getMaxElectricityStored(stack) * EnergyConfigHandler.TO_RF_RATIO);
+				}
+			};
+		}
+
+		@Override
+		public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
+			if (capability == CapabilityEnergy.ENERGY) {
+				return true;
+			} else
+				return false;
+		}
+
+		@Override
+		public <T> T getCapability(Capability<T> capability, EnumFacing facing) {
+			if (hasCapability(capability, facing)) {
+				return CapabilityEnergy.ENERGY.cast(storage);
+			} else {
+				return null;
+			}
+		}
+	}
 }
+
