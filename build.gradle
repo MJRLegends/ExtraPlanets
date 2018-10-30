@@ -114,3 +114,17 @@ task signJar(type: SignJar, dependsOn: reobfJar) {
 }
 
 build.dependsOn signJar
+
+artifacts {
+    archives apiJar, deobfJar
+}
+apply plugin: 'maven'
+uploadArchives {
+	repositories {
+		mavenDeployer {
+			if (project.hasProperty("local_maven")) {
+				repository(url: "file://${local_maven}")
+			}
+		}
+	}
+}
