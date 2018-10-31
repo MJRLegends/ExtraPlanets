@@ -27,6 +27,10 @@ repositories {
 	    name 'IC2'
 	    url = "http://maven.ic2.player.to"
     }
+	maven {
+	    name 'MJRLegends'
+	    url = "https://maven.mjrlegends.com/"
+    }
 }
 
 apply plugin: 'net.minecraftforge.gradle.forge'
@@ -54,12 +58,12 @@ minecraft {
 dependencies {
     compile "mezz.jei:jei_${minecraft_version}:${jei_version}"
 	compile "net.industrial-craft:industrialcraft-2:${version_ic2}:api"
+	deobfCompile "com.mjr.mjrlegendslib:MJRLegendsLib:${version_mjrlegendslib}:dev"
 	compile files (
 		"Galacticraft-API-${version_galacticraft}.jar",
 		"GalacticraftCore-Dev-${version_galacticraft}.jar",
 		"Galacticraft-Planets-Dev-${version_galacticraft}.jar",
-		"MicdoodleCore-Dev-${version_galacticraft}.jar",
-		"MJRLegendsLib-${version_mjrlegendslib}-dev.jar"
+		"MicdoodleCore-Dev-${version_galacticraft}.jar"
 	)
 	runtime "mezz.jei:jei_${minecraft_version}:${jei_version}"	
 }
