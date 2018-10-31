@@ -5,7 +5,7 @@ A Galacticraft Addon, Made By MJRLegends
 
 **Download:** http://minecraft.curseforge.com/projects/extraplanets
 
-**Change Log and Future Plans:** https://github.com/MJRLegends/ExtraPlanets/blob/master/CHANGELOG%20AND%20FUTURE_PLANS.txt
+**Change Log and Future Plans:** https://github.com/MJRLegends/ExtraPlanets/blob/dev_1.8.9/CHANGELOG%20AND%20FUTURE_PLANS.txt
 
 ## Translators Information:
 
