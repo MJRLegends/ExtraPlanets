@@ -48,7 +48,7 @@ minecraft {
     version = "1.8.9-11.15.1.2318-1.8.9"
     runDir = "run"
     mappings = "stable_20"
-    makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
+    makeObfSourceJar = true // an Srg named sources jar is made by default. uncomment this to disable.
 }
 
 dependencies {
@@ -106,3 +106,17 @@ task signJar(type: SignJar, dependsOn: reobfJar) {
 }
 
 build.dependsOn signJar
+
+artifacts {
+    archives apiJar, deobfJar
+}
+apply plugin: 'maven'
+uploadArchives {
+	repositories {
+		mavenDeployer {
+			if (project.hasProperty("local_maven")) {
+				repository(url: "file://${local_maven}")
+			}
+		}
+	}
+}
