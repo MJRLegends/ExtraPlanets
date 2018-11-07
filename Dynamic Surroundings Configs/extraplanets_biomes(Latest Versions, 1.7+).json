@@ -359,6 +359,21 @@
             "soundReset": true,
             "sounds": []
         },
+		{
+            "conditions": "biome.name == 'Callisto Shale Small Mountains'",
+            "soundReset": true,
+            "sounds": []
+        },
+		{
+            "conditions": "biome.name == 'Callisto Shale Large Mountains'",
+            "soundReset": true,
+            "sounds": []
+        },
+		{
+            "conditions": "biome.name == 'Callisto Salt Sea'",
+            "soundReset": true,
+            "sounds": []
+        },
         {
             "conditions": "biome.name == 'Deimos'",
             "soundReset": true,
