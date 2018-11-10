@@ -52,7 +52,7 @@ repositories {
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'com.matthewprenger.cursegradle'
 
-version = "1.11.2-0.8.1"
+version = "1.11.2-0.8.2"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -143,7 +143,7 @@ uploadArchives {
 }
 
 curseforge {
-	apiKey = project.hasProperty("curseforge_key")
+	apiKey = project.findProperty("curseforge_key")
 	project {
 		id = "241291"
 		releaseType = "release"
