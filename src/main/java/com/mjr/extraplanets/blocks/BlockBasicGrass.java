@@ -81,7 +81,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 						// if (Blocks.TALLGRASS.canBlockStay(world, blockpos1, iblockstate1)) {
 						// world.setBlockState(blockpos1, iblockstate1, 3);
 						// }
-						// }
+						// } TODO Add Ability to bone meal grass
 					}
 
 					break;
