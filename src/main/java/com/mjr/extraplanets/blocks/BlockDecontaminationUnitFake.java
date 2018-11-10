@@ -159,24 +159,26 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 	@Override
 	public EnumFacing getBedDirection(IBlockAccess world, BlockPos pos) {
 		TileEntity tileEntity = world.getTileEntity(pos);
-		BlockPos mainBlockPosition = ((TileEntityBasicDecontaminationUnitFake) tileEntity).mainBlockPosition;
-
-		if (mainBlockPosition != null) {
-			return world.getBlockState(pos).getBlock().getBedDirection(world, mainBlockPosition);
+		if (tileEntity instanceof TileEntityBasicDecontaminationUnitFake) {
+			BlockPos mainBlockPosition = ((TileEntityBasicDecontaminationUnitFake) tileEntity).mainBlockPosition;
+	
+			if (mainBlockPosition != null) {
+				return world.getBlockState(pos).getBlock().getBedDirection(world, mainBlockPosition);
+			}
 		}
-
 		return getActualState(world.getBlockState(pos), world, pos).getValue(BlockDirectional.FACING);
 	}
 
 	@Override
 	public boolean isBed(IBlockAccess world, BlockPos pos, Entity player) {
 		TileEntity tileEntity = world.getTileEntity(pos);
-		BlockPos mainBlockPosition = ((TileEntityBasicDecontaminationUnitFake) tileEntity).mainBlockPosition;
-
-		if (mainBlockPosition != null) {
-			return world.getBlockState(pos).getBlock().isBed(world, mainBlockPosition, player);
+		if (tileEntity instanceof TileEntityBasicDecontaminationUnitFake) {
+			BlockPos mainBlockPosition = ((TileEntityBasicDecontaminationUnitFake) tileEntity).mainBlockPosition;
+	
+			if (mainBlockPosition != null) {
+				return world.getBlockState(pos).getBlock().isBed(world, mainBlockPosition, player);
+			}
 		}
-
 		return super.isBed(world, pos, player);
 	}
 
