@@ -5,6 +5,9 @@
 
 
 ===========================================Released Updates===========================================
+v1.1.7
+*Fixed issue #363
+
 v1.1.6
 *Changed network system to use a base class from MJRLegendsLib
 *Increased the max amount power a electric rocket can hold, fixes issue #352

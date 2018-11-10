@@ -17,9 +17,13 @@ buildscript {
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
         }
+		maven {
+			url 'https://plugins.gradle.org/m2/'
+		}
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+		classpath "gradle.plugin.com.matthewprenger:CurseGradle:1.1.0"
     }
 }
 
@@ -48,7 +52,7 @@ repositories {
 
 apply plugin: 'net.minecraftforge.gradle.forge'
 
-version = "1.10.2-1.1.6"
+version = "1.10.2-1.1.7"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -136,5 +140,21 @@ uploadArchives {
 				repository(url: "file://${local_maven}")
 			}
 		}
+	}
+}
+
+curseforge {
+	apiKey = project.findProperty("curseforge_key")
+	project {
+		id = "241291"
+		releaseType = "release"
+		addGameVersion "${minecraft_version}"
+		mainArtifact(jar) {
+			relations {
+				requiredLibrary 'mjrlegendslib'
+			}
+		}
+		addArtifact(apiJar)
+		addArtifact(deobfJar)
 	}
 }
