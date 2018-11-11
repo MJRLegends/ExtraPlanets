@@ -15,14 +15,14 @@ buildscript {
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
         }
+		maven {
+			url 'https://plugins.gradle.org/m2/'
+		}
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+		classpath "gradle.plugin.com.matthewprenger:CurseGradle:1.1.0"
     }
-}
-
-plugins {
-    id "com.matthewprenger.cursegradle" version "1.1.0"
 }
 
 repositories {
@@ -49,6 +49,7 @@ repositories {
 }
 
 apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'com.matthewprenger.cursegradle'
 
 version = "1.12.2-0.4.5"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -121,24 +122,25 @@ task signJar(type: SignJar, dependsOn: reobfJar) {
     outputFile = jar.archivePath
 }
 
-build.dependsOn signJar
-
 artifacts {
     archives apiJar, deobfJar
 }
-apply plugin: 'maven'
-uploadArchives {
-	repositories {
-		mavenDeployer {
-			if (project.hasProperty("local_maven")) {
-				repository(url: "file://${local_maven}")
+
+task ("uploadMaven"){
+	apply plugin: 'maven'
+	uploadArchives {
+		repositories {
+			mavenDeployer {
+				if (project.hasProperty("local_maven")) {
+					repository(url: "file://${local_maven}")
+				}
 			}
 		}
 	}
 }
 
 curseforge {
-	apiKey = project.hasProperty("curseforge_key")
+	apiKey = project.findProperty("curseforge_key")
 	project {
 		id = "241291"
 		releaseType = "release"
@@ -152,3 +154,7 @@ curseforge {
 		addArtifact(deobfJar)
 	}
 }
+
+build.dependsOn signJar
+tasks.build.dependsOn signJar
+tasks.curseforge.dependsOn build
