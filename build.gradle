@@ -128,17 +128,18 @@ task signJar(type: SignJar, dependsOn: reobfJar) {
     outputFile = jar.archivePath
 }
 
-build.dependsOn signJar
-
 artifacts {
     archives apiJar, deobfJar
 }
-apply plugin: 'maven'
-uploadArchives {
-	repositories {
-		mavenDeployer {
-			if (project.hasProperty("local_maven")) {
-				repository(url: "file://${local_maven}")
+
+task ("uploadMaven"){
+	apply plugin: 'maven'
+	uploadArchives {
+		repositories {
+			mavenDeployer {
+				if (project.hasProperty("local_maven")) {
+					repository(url: "file://${local_maven}")
+				}
 			}
 		}
 	}
@@ -159,3 +160,7 @@ curseforge {
 		addArtifact(deobfJar)
 	}
 }
+
+build.dependsOn signJar
+tasks.build.dependsOn signJar
+tasks.curseforge.dependsOn build
