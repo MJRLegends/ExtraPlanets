@@ -15,9 +15,13 @@ buildscript {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
+		maven {
+			url 'https://plugins.gradle.org/m2/'
+		}
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+		classpath "gradle.plugin.com.matthewprenger:CurseGradle:1.1.0"
     }
 }
 
@@ -29,8 +33,9 @@ repositories {
 }
 
 apply plugin: 'forge'
+apply plugin: 'com.matthewprenger.cursegradle'
 
-version = "1.7.10-2.0.5"
+version = "1.7.10-2.0.6"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -87,13 +92,32 @@ task apiJar(type: Jar) {
 artifacts {
     archives apiJar, deobfJar
 }
-apply plugin: 'maven'
-uploadArchives {
-	repositories {
-		mavenDeployer {
-			if (project.hasProperty("local_maven")) {
-				repository(url: "file://${local_maven}")
+
+task ("uploadMaven"){
+	apply plugin: 'maven'
+	uploadArchives {
+		repositories {
+			mavenDeployer {
+				if (project.hasProperty("local_maven")) {
+					repository(url: "file://${local_maven}")
+				}
 			}
 		}
+	}
+}
+
+curseforge {
+	apiKey = project.getProperty("curseforge_key")
+	project {
+		id = "241291"
+		releaseType = "release"
+		addGameVersion "${minecraft_version}"
+		mainArtifact(jar) {
+			relations {
+				requiredLibrary 'mjrlegendslib'
+			}
+		}
+		addArtifact(apiJar)
+		addArtifact(deobfJar)
 	}
 }

@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v2.0.6
+*Fixed issue #336
+*Updated ko_KR.lang (Thanks to mindy15963)
+*Updated tr_TR.lang (Thanks to kralrindo)
+*Updated lang files to match 1.8+ changes
+*Fixed issue #368
+
 v2.0.5
 *Fixed issue #335
 *Added ko_KR.lang (Thanks to mindy15963)
