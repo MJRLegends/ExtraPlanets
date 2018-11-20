@@ -113,9 +113,6 @@ curseforge {
 		releaseType = "release"
 		addGameVersion "${minecraft_version}"
 		mainArtifact(jar) {
-			relations {
-				requiredLibrary 'mjrlegendslib'
-			}
 		}
 		addArtifact(apiJar)
 		addArtifact(deobfJar)
