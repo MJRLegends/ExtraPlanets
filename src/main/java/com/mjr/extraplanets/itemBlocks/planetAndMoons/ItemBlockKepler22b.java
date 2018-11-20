@@ -28,11 +28,11 @@ public class ItemBlockKepler22b extends ItemBlockDefaults {
 			break;
 		}
 		case 3: {
-			name = "ore_tin";
+			name = "ore_copper";
 			break;
 		}
 		case 4: {
-			name = "ore_copper";
+			name = "ore_tin";
 			break;
 		}
 		case 5: {
