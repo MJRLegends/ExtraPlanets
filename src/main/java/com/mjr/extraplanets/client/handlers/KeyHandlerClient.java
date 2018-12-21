@@ -23,7 +23,7 @@ public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding openFuelGui;
 
 	static {
-		openFuelGui = new KeyBinding(GCCoreUtil.translate("keybind.vehicleInv.name"), ConfigManagerCore.keyOverrideFuelLevelI == 0 ? Keyboard.KEY_F : ConfigManagerCore.keyOverrideFuelLevelI, Constants.MOD_NAME_SIMPLE);
+		openFuelGui = new KeyBinding(GCCoreUtil.translate("keybind.vehicle_inv.name"), ConfigManagerCore.keyOverrideFuelLevelI == 0 ? Keyboard.KEY_F : ConfigManagerCore.keyOverrideFuelLevelI, Constants.MOD_NAME_SIMPLE);
 	}
 
 	public static KeyBinding accelerateKey;
