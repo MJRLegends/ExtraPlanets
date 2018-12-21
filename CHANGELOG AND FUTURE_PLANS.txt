@@ -5,6 +5,10 @@
 
 
 ===========================================Released Updates===========================================
+v2.0.7
+*Fixed issue #380
+*Updated lang files to match 1.8+ changes
+
 v2.0.6
 *Fixed issue #336
 *Updated ko_KR.lang (Thanks to mindy15963)
