@@ -579,6 +579,7 @@ gui.module_cost.name=Fiyat
 gui.module.installed.name=Modül Yüklendi!
 gui.module.missing_requirements.name=Üzgünüm, bu modülü yüklemek için gereken gereksinimleri karşılamıyorsun
 gui.module.already_installed.name=Zaten bu modülü yükledin
+gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
 gui.module.description.name=Modül Açıklaması
 gui.module.name.name=Modül İsmi
 gui.module.type.name=Modül Tipi
