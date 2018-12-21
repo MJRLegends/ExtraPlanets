@@ -44,12 +44,14 @@ import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector2f;
+import org.lwjgl.util.vector.Vector3f;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class CustomCelestialSelection extends GuiCelestialSelection {
@@ -88,6 +90,10 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	 */
 	@Override
 	public void initGui() {
+		for (SolarSystem star : GalaxyRegistry.getRegisteredSolarSystems().values()) {
+			this.celestialBodyTicks.put(star.getMainStar(), 0);
+		}
+		
 		for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
 			this.celestialBodyTicks.put(planet, 0);
 		}
