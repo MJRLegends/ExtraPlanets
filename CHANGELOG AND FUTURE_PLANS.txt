@@ -5,6 +5,11 @@
 
 
 ===========================================Released Updates===========================================
+v0.8.3
+*Fixed issue #379
+*Fixed issue with getting false message when installing a space suit module for a armour item you dont have
+*Fixed possible crash with other GC addons when using Galaxy Map
+
 v0.8.2
 *Fixed issue #363
 
