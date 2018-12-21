@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v0.4.6
+*Fixed issue #379
+*Fixed issue with getting false message when installing a space suit module for a armour item you dont have
+*Fixed possible crash with other GC addons when using Galaxy Map
+*Force crash game with custom crash log if GalaxyMap from Galaxy Space/AsmodeusCore is still enabled to stop possible conflicts
+*Added a temp fix to stop issues being caused on Galaxy map by GalaxySpace addon, not registering unreachable planets correctly
+
 v0.4.5
 *Fixed issue #363
 
