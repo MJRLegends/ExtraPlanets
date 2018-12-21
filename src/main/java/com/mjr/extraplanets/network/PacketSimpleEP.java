@@ -271,45 +271,71 @@ public class PacketSimpleEP extends PacketSimpleBase {
 					installModule = temp;
 			}
 			if (installModule != null) {
+				boolean missingArmour = true;
 				boolean meetRequirements = true;
 				boolean alreadyHas = false;
 				ItemStack stack = playerBase.inventory.armorInventory.get(3);
-				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
-					if (!ModuleHelper.hasModule(stack, installModule))
-						if (playerBase.capabilities.isCreativeMode)
-							ModuleHelper.addModule(stack, installModule);
+				if (ModuleHelper.checkModuleCompact(stack, installModule)) {
+					if (stack.getItem() instanceof IModularArmor) {
+						missingArmour = false;
+						if (!ModuleHelper.hasModule(stack, installModule))
+							if (playerBase.capabilities.isCreativeMode)
+								ModuleHelper.addModule(stack, installModule);
+							else
+								meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 						else
-							meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
-					else
-						alreadyHas = true;
+							alreadyHas = true;
+					} else
+						meetRequirements = false;
+				}
 				stack = playerBase.inventory.armorInventory.get(2);
-				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
-					if (!ModuleHelper.hasModule(stack, installModule))
-						if (playerBase.capabilities.isCreativeMode)
-							ModuleHelper.addModule(stack, installModule);
+				if (ModuleHelper.checkModuleCompact(stack, installModule)) {
+					if (stack.getItem() instanceof IModularArmor) {
+						missingArmour = false;
+						if (!ModuleHelper.hasModule(stack, installModule))
+							if (playerBase.capabilities.isCreativeMode)
+								ModuleHelper.addModule(stack, installModule);
+							else
+								meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 						else
-							meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
-					else
-						alreadyHas = true;
+							alreadyHas = true;
+
+					} else
+						meetRequirements = false;
+				}
 				stack = playerBase.inventory.armorInventory.get(1);
-				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
-					if (!ModuleHelper.hasModule(stack, installModule))
-						if (playerBase.capabilities.isCreativeMode)
-							ModuleHelper.addModule(stack, installModule);
+				if (ModuleHelper.checkModuleCompact(stack, installModule)) {
+					if (stack.getItem() instanceof IModularArmor) {
+						missingArmour = false;
+						if (!ModuleHelper.hasModule(stack, installModule))
+							if (playerBase.capabilities.isCreativeMode)
+								ModuleHelper.addModule(stack, installModule);
+							else
+								meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 						else
-							meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
-					else
-						alreadyHas = true;
+							alreadyHas = true;
+
+					} else
+						meetRequirements = false;
+				}
 				stack = playerBase.inventory.armorInventory.get(0);
-				if (stack.getItem() instanceof IModularArmor && ModuleHelper.checkModuleCompact(stack, installModule))
-					if (!ModuleHelper.hasModule(stack, installModule))
-						if (playerBase.capabilities.isCreativeMode)
-							ModuleHelper.addModule(stack, installModule);
+				if (ModuleHelper.checkModuleCompact(stack, installModule)) {
+					if (stack.getItem() instanceof IModularArmor) {
+						missingArmour = false;
+						if (!ModuleHelper.hasModule(stack, installModule))
+							if (playerBase.capabilities.isCreativeMode)
+								ModuleHelper.addModule(stack, installModule);
+							else
+								meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
 						else
-							meetRequirements = ModuleHelper.installModule(stack, installModule, playerBase);
-					else
-						alreadyHas = true;
-				if (!meetRequirements && !alreadyHas)
+							alreadyHas = true;
+
+					} else
+						meetRequirements = false;
+				}
+				if (missingArmour)
+					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.missing_armour.name"));
+				else if (!meetRequirements && !alreadyHas)
 					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.missing_requirements.name"));
 				else if (alreadyHas)
 					PlayerUtilties.sendMessage(playerBase, TranslateUtilities.translate("gui.module.already_installed.name"));
