@@ -579,6 +579,7 @@ gui.module_cost.name=비용
 gui.module.installed.name=모듈이 설치되었습니다!
 gui.module.missing_requirements.name=모듈 설치에 불필요한 아이템이 있습니다!
 gui.module.already_installed.name=모듈이 이미 설치되었습니다!
+gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
 gui.module.description.name=모듈 형태
 gui.module.name.name=모듈명
 gui.module.type.name=모듈 유형
