@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import com.mjr.extraplanets.inventory.rockets.InventorySchematicTier4Rocket;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.core.recipe.NasaWorkbenchRecipe;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.inventory.rockets.InventorySchematicTier4Rocket;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class Tier4RocketRecipes {
 	private static List<INasaWorkbenchRecipe> tier4RocketRecipes = new ArrayList<INasaWorkbenchRecipe>();
@@ -34,6 +34,14 @@ public class Tier4RocketRecipes {
 
 	public static List<INasaWorkbenchRecipe> getTier4RocketRecipes() {
 		return tier4RocketRecipes;
+	}
+
+	public static void removeTier4RocketRecipe(INasaWorkbenchRecipe recipe) {
+		tier4RocketRecipes.remove(recipe);
+	}
+
+	public static void removeAllTier4RocketRecipes() {
+		tier4RocketRecipes.clear();
 	}
 
 	public static void registerRocketCraftingRecipe() {

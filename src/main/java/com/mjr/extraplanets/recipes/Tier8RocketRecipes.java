@@ -36,6 +36,14 @@ public class Tier8RocketRecipes {
 		return tier8RocketRecipes;
 	}
 
+	public static void removeTier8RocketRecipe(INasaWorkbenchRecipe recipe) {
+		tier8RocketRecipes.remove(recipe);
+	}
+
+	public static void removeAllTier8RocketRecipes() {
+		tier8RocketRecipes.clear();
+	}
+
 	public static void registerRocketCraftingRecipe() {
 		HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
 		input.put(1, new ItemStack(ExtraPlanets_Items.TIER_8_NOSE_CONE)); // Cone

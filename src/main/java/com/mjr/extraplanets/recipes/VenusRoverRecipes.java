@@ -37,6 +37,14 @@ public class VenusRoverRecipes {
 		return venusRoverRecipes;
 	}
 
+	public static void removeVenusRoverRecipe(INasaWorkbenchRecipe recipe) {
+		venusRoverRecipes.remove(recipe);
+	}
+
+	public static void removeAllVenusRoverRecipes() {
+		venusRoverRecipes.clear();
+	}
+
 	public static void registerRoverCraftingRecipe() {
 		HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
 		input.put(1, new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 3));

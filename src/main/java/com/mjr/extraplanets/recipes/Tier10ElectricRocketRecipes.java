@@ -36,6 +36,14 @@ public class Tier10ElectricRocketRecipes {
 		return tier10ElectricRocketRecipes;
 	}
 
+	public static void removeTier10ElectricRocketRecipe(INasaWorkbenchRecipe recipe) {
+		tier10ElectricRocketRecipes.remove(recipe);
+	}
+
+	public static void removeAllTier10ElectricRocketRecipes() {
+		tier10ElectricRocketRecipes.clear();
+	}
+
 	public static void registerRocketCraftingRecipe() {
 		HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
 		input.put(1, new ItemStack(ExtraPlanets_Items.TIER_10_NOSE_CONE)); // Cone
