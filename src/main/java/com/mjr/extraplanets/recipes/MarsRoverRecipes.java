@@ -38,6 +38,14 @@ public class MarsRoverRecipes {
 		return marsRoverRecipes;
 	}
 
+	public static void removeMarsRoverRecipe(INasaWorkbenchRecipe recipe) {
+		marsRoverRecipes.remove(recipe);
+	}
+
+	public static void removeAllMarsRoverRecipes() {
+		marsRoverRecipes.clear();
+	}
+
 	public static void registerRoverCraftingRecipe() {
 		HashMap<Integer, ItemStack> input = new HashMap<Integer, ItemStack>();
 		input.put(1, new ItemStack(MarsItems.marsItemBasic, 1, 3));
