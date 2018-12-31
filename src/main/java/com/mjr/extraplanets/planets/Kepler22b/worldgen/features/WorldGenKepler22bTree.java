@@ -2,9 +2,11 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.features;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCocoa;
-import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.BlockVine;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
@@ -15,25 +17,18 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
-
 public class WorldGenKepler22bTree extends WorldGenAbstractTree {
-	/** The minimum height of a generated tree. */
 	private final int minTreeHeight;
-	/** True if this tree should grow Vines. */
 	private final boolean vinesGrow;
-	/** The metadata value of the wood to use in tree generation. */
-	private final IBlockState metaWood;
-	/** The metadata value of the leaves to use in tree generation. */
-	private final IBlockState metaLeaves;
+	private final IBlockState log;
+	private final IBlockState leaves;
 
-	public WorldGenKepler22bTree(boolean p_i46446_1_, int p_i46446_2_, IBlockState p_i46446_3_, IBlockState p_i46446_4_, boolean p_i46446_5_) {
-		super(p_i46446_1_);
-		this.minTreeHeight = p_i46446_2_;
-		this.metaWood = p_i46446_3_;
-		this.metaLeaves = p_i46446_4_;
-		this.vinesGrow = p_i46446_5_;
+	public WorldGenKepler22bTree(boolean doBlockNotify, int minTreeHeight, IBlockState log, IBlockState leaves, boolean vinesGrow) {
+		super(doBlockNotify);
+		this.minTreeHeight = minTreeHeight;
+		this.log = log;
+		this.leaves = leaves;
+		this.vinesGrow = vinesGrow;
 	}
 
 	@Override
@@ -72,13 +67,12 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 				return false;
 			} else {
 				BlockPos down = position.down();
-				Block block1 = world.getBlockState(down).getBlock();
-				boolean isSoil = block1.canSustainPlant(world, down, net.minecraft.util.EnumFacing.UP, (BlockKepler22bMapleTreeSapling) ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING);
+				Block block = world.getBlockState(down).getBlock();
+				boolean isSoil = block.canSustainPlant(world, down, net.minecraft.util.EnumFacing.UP, (BlockKepler22bMapleTreeSapling) ExtraPlanets_Blocks.KEPLER22B_MAPLE_SAPLING);
 				position = new BlockPos(position.getX(), position.getY() - 1, position.getZ());
-				if ((isSoil || block1.equals(ExtraPlanets_Blocks.DIAMOND_GRIT.getDefaultState()) || block1.equals(ExtraPlanets_Blocks.GOLD_GRIT.getDefaultState()) || block1.equals(ExtraPlanets_Blocks.COAL_GRIT.getDefaultState())
-						|| block1.equals(ExtraPlanets_Blocks.IRON_GRIT.getDefaultState()) || block1.equals(ExtraPlanets_Blocks.EMERALD_GRIT.getDefaultState()))
-						&& position.getY() < 256 - i - 1) {
-					block1.onPlantGrow(world, down, position);
+				if ((isSoil || block.equals(ExtraPlanets_Blocks.DIAMOND_GRIT.getDefaultState()) || block.equals(ExtraPlanets_Blocks.GOLD_GRIT.getDefaultState()) || block.equals(ExtraPlanets_Blocks.COAL_GRIT.getDefaultState())
+						|| block.equals(ExtraPlanets_Blocks.IRON_GRIT.getDefaultState()) || block.equals(ExtraPlanets_Blocks.EMERALD_GRIT.getDefaultState())) && position.getY() < 256 - i - 1) {
+					block.onPlantGrow(world, down, position);
 					int k2 = 3;
 					int l2 = 0;
 
@@ -94,10 +88,10 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 
 								if (Math.abs(l1) != j1 || Math.abs(j2) != j1 || rand.nextInt(2) != 0 && i4 != 0) {
 									BlockPos blockpos = new BlockPos(k1, i3, i2);
-									Block block = world.getBlockState(blockpos).getBlock();
+									Block block1 = world.getBlockState(blockpos).getBlock();
 
-									if (block.isAir(world, blockpos) || block.isLeaves(world, blockpos) || block.getMaterial() == Material.vine) {
-										this.setBlockAndNotifyAdequately(world, blockpos, this.metaLeaves);
+									if (block1.isAir(world, blockpos) || block1.isLeaves(world, blockpos) || block1.getMaterial() == Material.vine) {
+										this.setBlockAndNotifyAdequately(world, blockpos, this.leaves);
 									}
 								}
 							}
@@ -109,23 +103,23 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 						Block block2 = world.getBlockState(upN).getBlock();
 
 						if (block2.isAir(world, upN) || block2.isLeaves(world, upN) || block2.getMaterial() == Material.vine) {
-							this.setBlockAndNotifyAdequately(world, position.up(j3), this.metaWood);
+							this.setBlockAndNotifyAdequately(world, position.up(j3), this.log);
 
 							if (this.vinesGrow && j3 > 0) {
 								if (rand.nextInt(3) > 0 && world.isAirBlock(position.add(-1, j3, 0))) {
-									this.func_181651_a(world, position.add(-1, j3, 0), BlockVine.EAST);
+									this.addVine(world, position.add(-1, j3, 0), BlockVine.EAST);
 								}
 
 								if (rand.nextInt(3) > 0 && world.isAirBlock(position.add(1, j3, 0))) {
-									this.func_181651_a(world, position.add(1, j3, 0), BlockVine.WEST);
+									this.addVine(world, position.add(1, j3, 0), BlockVine.WEST);
 								}
 
 								if (rand.nextInt(3) > 0 && world.isAirBlock(position.add(0, j3, -1))) {
-									this.func_181651_a(world, position.add(0, j3, -1), BlockVine.SOUTH);
+									this.addVine(world, position.add(0, j3, -1), BlockVine.SOUTH);
 								}
 
 								if (rand.nextInt(3) > 0 && world.isAirBlock(position.add(0, j3, 1))) {
-									this.func_181651_a(world, position.add(0, j3, 1), BlockVine.NORTH);
+									this.addVine(world, position.add(0, j3, 1), BlockVine.NORTH);
 								}
 							}
 						}
@@ -148,19 +142,19 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 										BlockPos blockpos1 = blockpos$mutableblockpos1.south();
 
 										if (rand.nextInt(4) == 0 && world.getBlockState(blockpos2).getBlock().isAir(world, blockpos2)) {
-											this.func_181650_b(world, blockpos2, BlockVine.EAST);
+											this.addHangingVine(world, blockpos2, BlockVine.EAST);
 										}
 
 										if (rand.nextInt(4) == 0 && world.getBlockState(blockpos3).getBlock().isAir(world, blockpos3)) {
-											this.func_181650_b(world, blockpos3, BlockVine.WEST);
+											this.addHangingVine(world, blockpos3, BlockVine.WEST);
 										}
 
 										if (rand.nextInt(4) == 0 && world.getBlockState(blockpos4).getBlock().isAir(world, blockpos4)) {
-											this.func_181650_b(world, blockpos4, BlockVine.SOUTH);
+											this.addHangingVine(world, blockpos4, BlockVine.SOUTH);
 										}
 
 										if (rand.nextInt(4) == 0 && world.getBlockState(blockpos1).getBlock().isAir(world, blockpos1)) {
-											this.func_181650_b(world, blockpos1, BlockVine.NORTH);
+											this.addHangingVine(world, blockpos1, BlockVine.NORTH);
 										}
 									}
 								}
@@ -172,7 +166,7 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 								for (EnumFacing enumfacing : EnumFacing.Plane.HORIZONTAL) {
 									if (rand.nextInt(4 - l3) == 0) {
 										EnumFacing enumfacing1 = enumfacing.getOpposite();
-										this.func_181652_a(world, rand.nextInt(3), position.add(enumfacing1.getFrontOffsetX(), i - 5 + l3, enumfacing1.getFrontOffsetZ()), enumfacing);
+										this.placeCocoa(world, rand.nextInt(3), position.add(enumfacing1.getFrontOffsetX(), i - 5 + l3, enumfacing1.getFrontOffsetZ()), enumfacing);
 									}
 								}
 							}
@@ -189,28 +183,21 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 		}
 	}
 
-	private void func_181652_a(World p_181652_1_, int p_181652_2_, BlockPos p_181652_3_, EnumFacing p_181652_4_) {
-		this.setBlockAndNotifyAdequately(p_181652_1_, p_181652_3_, Blocks.cocoa.getDefaultState().withProperty(BlockCocoa.AGE, Integer.valueOf(p_181652_2_)).withProperty(BlockDirectional.FACING, p_181652_4_));
+	private void placeCocoa(World worldIn, int p_181652_2_, BlockPos pos, EnumFacing side) {
+		this.setBlockAndNotifyAdequately(worldIn, pos, Blocks.cocoa.getDefaultState().withProperty(BlockCocoa.AGE, Integer.valueOf(p_181652_2_)).withProperty(BlockCocoa.FACING, side));
 	}
 
-	private void func_181651_a(World p_181651_1_, BlockPos p_181651_2_, PropertyBool p_181651_3_) {
-		this.setBlockAndNotifyAdequately(p_181651_1_, p_181651_2_, Blocks.vine.getDefaultState().withProperty(p_181651_3_, Boolean.valueOf(true)));
+	private void addVine(World worldIn, BlockPos pos, PropertyBool prop) {
+		this.setBlockAndNotifyAdequately(worldIn, pos, Blocks.vine.getDefaultState().withProperty(prop, Boolean.valueOf(true)));
 	}
 
-	private void func_181650_b(World p_181650_1_, BlockPos p_181650_2_, PropertyBool p_181650_3_) {
-		this.func_181651_a(p_181650_1_, p_181650_2_, p_181650_3_);
+	private void addHangingVine(World worldIn, BlockPos pos, PropertyBool prop) {
+		this.addVine(worldIn, pos, prop);
 		int i = 4;
 
-		for (p_181650_2_ = p_181650_2_.down(); p_181650_1_.getBlockState(p_181650_2_).getBlock().isAir(p_181650_1_, p_181650_2_) && i > 0; --i) {
-			this.func_181651_a(p_181650_1_, p_181650_2_, p_181650_3_);
-			p_181650_2_ = p_181650_2_.down();
-		}
-	}
-
-	@Override
-	protected void func_175921_a(World world, BlockPos p_175921_2_) {
-		if (world.getBlockState(p_175921_2_).getBlock() != ExtraPlanets_Blocks.KEPLER22B_BLOCKS) {
-			this.setBlockAndNotifyAdequately(world, p_175921_2_, ExtraPlanets_Blocks.KEPLER22B_BLOCKS.getDefaultState());
+		for (BlockPos blockpos = pos.down(); worldIn.isAirBlock(blockpos) && i > 0; --i) {
+			this.addVine(worldIn, blockpos, prop);
+			blockpos = blockpos.down();
 		}
 	}
 }
