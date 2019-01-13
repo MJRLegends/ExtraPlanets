@@ -29,8 +29,8 @@ public class ChunkProviderMercury extends ChunkProviderSingleBiomeSpace {
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.MERCURY_BLOCKS, 0, 1, 2);
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonMercury(new DungeonConfiguration(ExtraPlanets_Blocks.MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.DUNGEON_BRICK), 30,
-			8, 16, 7, 7, RoomBossMercury.class, RoomTreasureMercury.class));
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonMercury(
+			new DungeonConfiguration(ExtraPlanets_Blocks.MERCURY_BLOCKS.getDefaultState().withProperty(BlockBasicMercury.BASIC_TYPE, BlockBasicMercury.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7, RoomBossMercury.class, RoomTreasureMercury.class));
 
 	public ChunkProviderMercury(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);

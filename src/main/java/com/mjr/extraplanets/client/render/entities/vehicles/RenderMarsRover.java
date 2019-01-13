@@ -40,12 +40,12 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 	private void updateModels() {
 		if (modelRover == null) {
 			try {
-				modelRover = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "mars_rover.obj"), ImmutableList.of("RoofRover", "FloorRover", "Clip1", "Clip2", "AxisBack", "AxisFront", "AxisFront001", "AxisMiddle",
-						"FrameSegment010", "FrameSegment011", "FrameSegment012", "FrameSegment013", "FrameSegment014", "FrameSegment015", "FrameSegment021", "FrameSegment022", "FrameSegment023", "FrameSegment024", "FrameSegment025",
-						"FrameSegment026", "FrameSegment027", "FrameSegment028", "FrameSegment029", "FrameSegment030", "FrameSegment031", "FrameSegment032", "FrameSegment033", "FrameSegment044", "FrameSegment045", "FrameSegment046",
-						"FrameSegment047", "FrameSegment048", "FrameSegment049", "FrameSegment050", "FrameSegment051", "FrameSegment052", "FrameSegment053", "FrameSegment054", "FrameSegment055", "FrameSegment056", "FrameSegment057",
-						"FrameSegment058", "FrameSegment059", "Line001", "HelmKeeper", "Helm", "Seat", "Seat001", "SolarPanel", "PoleSolarPanel", "SolarPanelBlock", "Wire", "Battery", "Line002", "WindowBack", "WindowFragment3", "Lightning",
-						"Lightning2", "CaseBack1", "CaseBack2", "CaseBack3", "SolarPlane"));
+				modelRover = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "mars_rover.obj"),
+						ImmutableList.of("RoofRover", "FloorRover", "Clip1", "Clip2", "AxisBack", "AxisFront", "AxisFront001", "AxisMiddle", "FrameSegment010", "FrameSegment011", "FrameSegment012", "FrameSegment013", "FrameSegment014",
+								"FrameSegment015", "FrameSegment021", "FrameSegment022", "FrameSegment023", "FrameSegment024", "FrameSegment025", "FrameSegment026", "FrameSegment027", "FrameSegment028", "FrameSegment029", "FrameSegment030",
+								"FrameSegment031", "FrameSegment032", "FrameSegment033", "FrameSegment044", "FrameSegment045", "FrameSegment046", "FrameSegment047", "FrameSegment048", "FrameSegment049", "FrameSegment050", "FrameSegment051",
+								"FrameSegment052", "FrameSegment053", "FrameSegment054", "FrameSegment055", "FrameSegment056", "FrameSegment057", "FrameSegment058", "FrameSegment059", "Line001", "HelmKeeper", "Helm", "Seat", "Seat001", "SolarPanel",
+								"PoleSolarPanel", "SolarPanelBlock", "Wire", "Battery", "Line002", "WindowBack", "WindowFragment3", "Lightning", "Lightning2", "CaseBack1", "CaseBack2", "CaseBack3", "SolarPlane"));
 
 				modelRoverWindows = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "mars_rover.obj"), ImmutableList.of("WindowFront1", "WindowFront2"));
 				modelRoverCase1 = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "mars_rover.obj"), ImmutableList.of("Container"));

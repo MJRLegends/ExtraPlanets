@@ -52,8 +52,8 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 	@Override
 	public void update() {
 		if (!this.worldObj.isRemote) {
-			List<EntityPlayerMP> containedEntities = worldObj.getEntitiesWithinAABB(EntityPlayerMP.class, new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2, this
-					.getPos().getZ() + 1));
+			List<EntityPlayerMP> containedEntities = worldObj.getEntitiesWithinAABB(EntityPlayerMP.class,
+					new AxisAlignedBB(this.getPos().getX(), this.getPos().getY(), this.getPos().getZ(), this.getPos().getX() + 1, this.getPos().getY() + 2, this.getPos().getZ() + 1));
 			if (containedEntities.size() == 1) {
 				EntityPlayerMP player = (containedEntities.get(0));
 				if (this.storage.getEnergyStoredGC() >= 1000000) {
@@ -76,8 +76,8 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 								+ (int) stats.getRadiationLevel() + "%");
 					}
 				} else if (this.ticks % 40 == 0)
-					PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD
-							+ ", You need to add more power to use this! The machine needs 1,000,000 gJ or 625,000 RF per use!");
+					PlayerUtilties.sendMessage(player,
+							"" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", You need to add more power to use this! The machine needs 1,000,000 gJ or 625,000 RF per use!");
 			} else if (this.ticks % 40 == 0)
 				for (int i = 0; i < containedEntities.size(); i++) {
 					EntityPlayerMP player = (containedEntities.get(i));

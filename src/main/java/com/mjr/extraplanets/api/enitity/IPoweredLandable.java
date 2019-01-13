@@ -8,7 +8,7 @@ import net.minecraft.util.BlockPos;
 public interface IPoweredLandable extends IPoweredDockable {
 	/**
 	 * Called when the entity lands on a dock
-	 * 
+	 *
 	 * @param pos
 	 *            coordinates of the dock
 	 */

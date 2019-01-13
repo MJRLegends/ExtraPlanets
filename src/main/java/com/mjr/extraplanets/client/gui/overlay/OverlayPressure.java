@@ -102,8 +102,8 @@ public class OverlayPressure extends Overlay {
 					addY = 60;
 				}
 			}
-			OverlayPressure.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlayPressure.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - pressureLevelScaled - OverlayPressure.minecraft.fontRendererObj.FONT_HEIGHT
-					/ 2 + addY, ColorUtil.to32BitColor(255, 102, 178, 255));
+			OverlayPressure.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlayPressure.minecraft.fontRendererObj.getStringWidth(value),
+					(int) bottomY - pressureLevelScaled - OverlayPressure.minecraft.fontRendererObj.FONT_HEIGHT / 2 + addY, ColorUtil.to32BitColor(255, 102, 178, 255));
 		}
 		GlStateManager.disableBlend();
 	}

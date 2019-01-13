@@ -34,8 +34,8 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 	public static final PropertyInteger STAGE = PropertyInteger.create("stage", 0, 1);
 
 	public static enum EnumType implements IStringSerializable {
-		MAPLE_BLUE(0, "maple_blue_sapling", MapColor.blueColor), MAPLE_RED(1, "maple_red_sapling", MapColor.redColor), MAPLE_PURPLE(2, "maple_purple_sapling", MapColor.purpleColor), MAPLE_YELLOW(3, "maple_yellow_sapling", MapColor.yellowColor), MAPLE_GREEN(
-				4, "maple_green_sapling", MapColor.greenColor), MAPLE_BROWN(5, "maple_brown_sapling", MapColor.brownColor);
+		MAPLE_BLUE(0, "maple_blue_sapling", MapColor.blueColor), MAPLE_RED(1, "maple_red_sapling", MapColor.redColor), MAPLE_PURPLE(2, "maple_purple_sapling", MapColor.purpleColor), MAPLE_YELLOW(3, "maple_yellow_sapling",
+				MapColor.yellowColor), MAPLE_GREEN(4, "maple_green_sapling", MapColor.greenColor), MAPLE_BROWN(5, "maple_brown_sapling", MapColor.brownColor);
 
 		private static final BlockKepler22bMapleTreeSapling.EnumType[] META_LOOKUP = new BlockKepler22bMapleTreeSapling.EnumType[values().length];
 		private final int meta;

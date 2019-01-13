@@ -161,7 +161,7 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 		TileEntity tileEntity = world.getTileEntity(pos);
 		if (tileEntity instanceof TileEntityBasicDecontaminationUnitFake) {
 			BlockPos mainBlockPosition = ((TileEntityBasicDecontaminationUnitFake) tileEntity).mainBlockPosition;
-	
+
 			if (mainBlockPosition != null) {
 				return world.getBlockState(pos).getBlock().getBedDirection(world, mainBlockPosition);
 			}
@@ -174,7 +174,7 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 		TileEntity tileEntity = world.getTileEntity(pos);
 		if (tileEntity instanceof TileEntityBasicDecontaminationUnitFake) {
 			BlockPos mainBlockPosition = ((TileEntityBasicDecontaminationUnitFake) tileEntity).mainBlockPosition;
-	
+
 			if (mainBlockPosition != null) {
 				return world.getBlockState(pos).getBlock().isBed(world, mainBlockPosition, player);
 			}

@@ -42,8 +42,9 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypesaturn", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		SURFACE(0, "saturn_surface"), SUB_SURFACE(1, "saturn_sub_surface"), STONE(2, "saturn_stone"), ORE_IRON(3, "saturn_ore_iron"), ORE_TIN(4, "saturn_ore_tin"), ORE_COPPER(5, "saturn_ore_copper"), ORE_MAGNESIUM(6, "saturn_ore_magnesium"), MAGNESIUM_BLOCK(
-				7, "saturn_magnesium_block"), STONEBRICKS(8, "saturn_stonebricks"), DUNGEON_BRICK(9, "saturn_dungeon_brick"), BROKEN_INFECTED_STONE(10, "broken_infected_stone"), INFECTED_STONE(11, "infected_stone"), ORE_SLIME(12, "saturn_ore_slime");
+		SURFACE(0, "saturn_surface"), SUB_SURFACE(1, "saturn_sub_surface"), STONE(2, "saturn_stone"), ORE_IRON(3, "saturn_ore_iron"), ORE_TIN(4, "saturn_ore_tin"), ORE_COPPER(5, "saturn_ore_copper"), ORE_MAGNESIUM(6,
+				"saturn_ore_magnesium"), MAGNESIUM_BLOCK(7, "saturn_magnesium_block"), STONEBRICKS(8,
+						"saturn_stonebricks"), DUNGEON_BRICK(9, "saturn_dungeon_brick"), BROKEN_INFECTED_STONE(10, "broken_infected_stone"), INFECTED_STONE(11, "infected_stone"), ORE_SLIME(12, "saturn_ore_slime");
 
 		private final int meta;
 		private final String name;

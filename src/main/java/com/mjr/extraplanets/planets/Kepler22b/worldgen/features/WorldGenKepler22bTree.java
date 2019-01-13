@@ -7,6 +7,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bM
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCocoa;
+import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.BlockVine;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyBool;
@@ -184,7 +185,7 @@ public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 	}
 
 	private void placeCocoa(World worldIn, int p_181652_2_, BlockPos pos, EnumFacing side) {
-		this.setBlockAndNotifyAdequately(worldIn, pos, Blocks.cocoa.getDefaultState().withProperty(BlockCocoa.AGE, Integer.valueOf(p_181652_2_)).withProperty(BlockCocoa.FACING, side));
+		this.setBlockAndNotifyAdequately(worldIn, pos, Blocks.cocoa.getDefaultState().withProperty(BlockCocoa.AGE, Integer.valueOf(p_181652_2_)).withProperty(BlockDirectional.FACING, side));
 	}
 
 	private void addVine(World worldIn, BlockPos pos, PropertyBool prop) {
