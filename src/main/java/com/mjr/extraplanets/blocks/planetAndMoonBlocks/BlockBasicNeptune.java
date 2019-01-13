@@ -42,8 +42,8 @@ public class BlockBasicNeptune extends Block implements IDetectableResource, IPl
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypeneptune", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		SURFACE(0, "neptune_surface"), SUB_SURFACE(1, "neptune_sub_surface"), STONE(2, "neptune_stone"), ORE_IRON(3, "neptune_ore_iron"), ORE_TIN(4, "neptune_ore_tin"), ORE_COPPER(5, "neptune_ore_copper"), ORE_ZINC(6, "neptune_ore_zinc"), ZINC_BLOCK(
-				7, "neptune_zinc_block"), STONEBRICKS(8, "neptune_stonebricks"), DUNGEON_BRICK(9, "neptune_dungeon_brick"), ORE_BLUE_GEM(10, "neptune_ore_blue_gem"), BLUE_GEM_BLOCK(11, "neptune_blue_gem_block");
+		SURFACE(0, "neptune_surface"), SUB_SURFACE(1, "neptune_sub_surface"), STONE(2, "neptune_stone"), ORE_IRON(3, "neptune_ore_iron"), ORE_TIN(4, "neptune_ore_tin"), ORE_COPPER(5, "neptune_ore_copper"), ORE_ZINC(6,
+				"neptune_ore_zinc"), ZINC_BLOCK(7, "neptune_zinc_block"), STONEBRICKS(8, "neptune_stonebricks"), DUNGEON_BRICK(9, "neptune_dungeon_brick"), ORE_BLUE_GEM(10, "neptune_ore_blue_gem"), BLUE_GEM_BLOCK(11, "neptune_blue_gem_block");
 
 		private final int meta;
 		private final String name;

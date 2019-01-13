@@ -66,10 +66,10 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 	public void register(@Nonnull IModRegistry registry) {
 		if (Config.JEI_SUPPORT) {
 			IGuiHelper guiHelper = registry.getJeiHelpers().getGuiHelper();
-			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper),
-					new Tier8RocketRecipeCategory(guiHelper), new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper),
-					new BlockSmasherRecipeCategory(guiHelper), new SolarEvaporationChamberRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(
-							guiHelper), new PurifierRecipeCategory(guiHelper), new DensifierRecipeCategory(guiHelper));
+			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper), new Tier8RocketRecipeCategory(guiHelper),
+					new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper), new BlockSmasherRecipeCategory(guiHelper),
+					new SolarEvaporationChamberRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(guiHelper),
+					new PurifierRecipeCategory(guiHelper), new DensifierRecipeCategory(guiHelper));
 			registry.addRecipeHandlers(new Tier4RocketRecipeHandler(), new Tier5RocketRecipeHandler(), new Tier6RocketRecipeHandler(), new Tier7RocketRecipeHandler(), new Tier8RocketRecipeHandler(), new Tier9RocketRecipeHandler(),
 					new Tier10RocketRecipeHandler(), new MarsRoverRecipeHandler(), new VenusRoverRecipeHandler(), new BlockSmasherRecipeHandler(), new SolarEvaporationChamberRecipeHandler(), new Tier10ElectricRocketRecipeHandler(),
 					new ChemicalInjectorRecipeHandler(), new CrystallizerRecipeHandler(), new PurifierRecipeHandler(), new DensifierRecipeHandler());

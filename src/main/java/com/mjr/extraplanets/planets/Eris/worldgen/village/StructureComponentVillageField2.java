@@ -68,8 +68,9 @@ public class StructureComponentVillageField2 extends StructureComponentVillage {
 
 	public static StructureComponentVillageField2 func_74900_a(StructureComponentVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random rand, int par3, int par4, int par5, EnumFacing par6, int par7) {
 		final StructureBoundingBox structureboundingbox = StructureBoundingBox.getComponentToAddBoundingBox(par3, par4, par5, 0, 0, 0, 13, 4, 9, par6);
-		return StructureComponentVillage.canVillageGoDeeper(structureboundingbox) && StructureComponent.findIntersecting(par1List, structureboundingbox) == null ? new StructureComponentVillageField2(par0ComponentVillageStartPiece, par7, rand,
-				structureboundingbox, par6) : null;
+		return StructureComponentVillage.canVillageGoDeeper(structureboundingbox) && StructureComponent.findIntersecting(par1List, structureboundingbox) == null
+				? new StructureComponentVillageField2(par0ComponentVillageStartPiece, par7, rand, structureboundingbox, par6)
+				: null;
 	}
 
 	/**

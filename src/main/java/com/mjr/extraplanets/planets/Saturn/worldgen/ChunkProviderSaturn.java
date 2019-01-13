@@ -28,8 +28,8 @@ public class ChunkProviderSaturn extends ChunkProviderMultiBiomeSpace {
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.SATURN_BLOCKS, 0, 1, 2);
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonSaturn(new DungeonConfiguration(ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.DUNGEON_BRICK), 30, 8,
-			16, 7, 7, RoomBossSaturn.class, RoomTreasureSaturn.class));
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonSaturn(
+			new DungeonConfiguration(ExtraPlanets_Blocks.SATURN_BLOCKS.getDefaultState().withProperty(BlockBasicSaturn.BASIC_TYPE, BlockBasicSaturn.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7, RoomBossSaturn.class, RoomTreasureSaturn.class));
 
 	public ChunkProviderSaturn(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);

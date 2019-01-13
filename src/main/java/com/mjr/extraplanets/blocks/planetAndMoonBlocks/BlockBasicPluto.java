@@ -42,8 +42,8 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypepluto", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		SURFACE(0, "pluto_surface"), SUB_SURFACE(1, "pluto_sub_surface"), STONE(2, "pluto_stone"), ORE_IRON(3, "pluto_ore_iron"), ORE_TIN(4, "pluto_ore_tin"), ORE_COPPER(5, "pluto_ore_copper"), ORE_TUNGSTEN(6, "pluto_ore_tungsten"), TUNGSTEN_BLOCK(
-				7, "pluto_tungsten_block"), STONEBRICKS(8, "pluto_stonebricks"), DUNGEON_BRICK(9, "pluto_dungeon_brick");
+		SURFACE(0, "pluto_surface"), SUB_SURFACE(1, "pluto_sub_surface"), STONE(2, "pluto_stone"), ORE_IRON(3, "pluto_ore_iron"), ORE_TIN(4, "pluto_ore_tin"), ORE_COPPER(5, "pluto_ore_copper"), ORE_TUNGSTEN(6, "pluto_ore_tungsten"), TUNGSTEN_BLOCK(7,
+				"pluto_tungsten_block"), STONEBRICKS(8, "pluto_stonebricks"), DUNGEON_BRICK(9, "pluto_dungeon_brick");
 
 		private final int meta;
 		private final String name;

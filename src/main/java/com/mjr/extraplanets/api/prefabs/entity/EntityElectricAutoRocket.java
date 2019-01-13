@@ -335,8 +335,8 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 					if (e != null) {
 						if (e.dimension != this.dimension) {
 							if (e instanceof EntityPlayer) {
-								e = WorldUtil.forceRespawnClient(this.dimension, e.worldObj.getDifficulty().getDifficultyId(), e.worldObj.getWorldInfo().getTerrainType().getWorldTypeName(), ((EntityPlayerMP) e).interactionManager.getGameType()
-										.getID());
+								e = WorldUtil.forceRespawnClient(this.dimension, e.worldObj.getDifficulty().getDifficultyId(), e.worldObj.getWorldInfo().getTerrainType().getWorldTypeName(),
+										((EntityPlayerMP) e).interactionManager.getGameType().getID());
 								e.startRiding(this);
 							}
 						} else
@@ -351,8 +351,8 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 					if (e != null) {
 						if (e.dimension != this.dimension) {
 							if (e instanceof EntityPlayer) {
-								e = WorldUtil.forceRespawnClient(this.dimension, e.worldObj.getDifficulty().getDifficultyId(), e.worldObj.getWorldInfo().getTerrainType().getWorldTypeName(), ((EntityPlayerMP) e).interactionManager.getGameType()
-										.getID());
+								e = WorldUtil.forceRespawnClient(this.dimension, e.worldObj.getDifficulty().getDifficultyId(), e.worldObj.getWorldInfo().getTerrainType().getWorldTypeName(),
+										((EntityPlayerMP) e).interactionManager.getGameType().getID());
 								e.startRiding(this);
 							}
 						} else
@@ -801,8 +801,8 @@ public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBa
 	}
 
 	public static enum EnumAutoLaunch {
-		CARGO_IS_UNLOADED(0, "cargo_unloaded"), CARGO_IS_FULL(1, "cargo_full"), ROCKET_IS_POWERED(2, "fully_powered"), INSTANT(3, "instant"), TIME_10_SECONDS(4, "ten_sec"), TIME_30_SECONDS(5, "thirty_sec"), TIME_1_MINUTE(6, "one_min"), REDSTONE_SIGNAL(
-				7, "redstone_sig");
+		CARGO_IS_UNLOADED(0, "cargo_unloaded"), CARGO_IS_FULL(1, "cargo_full"), ROCKET_IS_POWERED(2, "fully_powered"), INSTANT(3, "instant"), TIME_10_SECONDS(4, "ten_sec"), TIME_30_SECONDS(5, "thirty_sec"), TIME_1_MINUTE(6,
+				"one_min"), REDSTONE_SIGNAL(7, "redstone_sig");
 
 		private final int index;
 		private String title;
