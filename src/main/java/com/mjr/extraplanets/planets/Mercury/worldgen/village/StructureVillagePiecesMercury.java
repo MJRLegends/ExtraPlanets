@@ -111,7 +111,8 @@ public class StructureVillagePiecesMercury {
 	/**
 	 * attempts to find a next Structure Component to be spawned, private Village function
 	 */
-	private static StructureComponent getNextVillageStructureComponent(StructureComponentMercuryVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7) {
+	private static StructureComponent getNextVillageStructureComponent(StructureComponentMercuryVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6,
+			int par7) {
 		if (par7 > 50) {
 			return null;
 		} else if (Math.abs(par3 - par0ComponentVillageStartPiece.getBoundingBox().minX) <= 112 && Math.abs(par5 - par0ComponentVillageStartPiece.getBoundingBox().minZ) <= 112) {

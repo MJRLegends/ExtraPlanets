@@ -177,8 +177,8 @@ public class EntityEvolvedWitch extends EntityMob implements IRangedAttackMob, I
 	public void handleHealthUpdate(byte p_70103_1_) {
 		if (p_70103_1_ == 15) {
 			for (int i = 0; i < this.rand.nextInt(35) + 10; ++i) {
-				this.worldObj.spawnParticle("witchMagic", this.posX + this.rand.nextGaussian() * 0.12999999523162842D, this.boundingBox.maxY + 0.5D + this.rand.nextGaussian() * 0.12999999523162842D, this.posZ + this.rand.nextGaussian()
-						* 0.12999999523162842D, 0.0D, 0.0D, 0.0D);
+				this.worldObj.spawnParticle("witchMagic", this.posX + this.rand.nextGaussian() * 0.12999999523162842D, this.boundingBox.maxY + 0.5D + this.rand.nextGaussian() * 0.12999999523162842D,
+						this.posZ + this.rand.nextGaussian() * 0.12999999523162842D, 0.0D, 0.0D, 0.0D);
 			}
 		} else {
 			super.handleHealthUpdate(p_70103_1_);

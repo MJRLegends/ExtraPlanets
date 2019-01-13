@@ -38,7 +38,8 @@ public class StructureComponentJupiterVillageWoodHut extends StructureComponentJ
 		this.averageGroundLevel = nbt.getInteger("AvgGroundLevel");
 	}
 
-	public static StructureComponentJupiterVillageWoodHut func_74908_a(StructureComponentJupiterVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7) {
+	public static StructureComponentJupiterVillageWoodHut func_74908_a(StructureComponentJupiterVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6,
+			int par7) {
 		final StructureBoundingBox var8 = StructureBoundingBox.getComponentToAddBoundingBox(par3, par4, par5, 0, 0, 0, 17, 9, 17, par6);
 		return StructureComponent.findIntersecting(par1List, var8) == null ? new StructureComponentJupiterVillageWoodHut(par0ComponentVillageStartPiece, par7, par2Random, var8, par6) : null;
 	}

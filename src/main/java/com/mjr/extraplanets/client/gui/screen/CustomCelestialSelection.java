@@ -212,9 +212,8 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 			for (Satellite satellite : GalaxyRegistry.getRegisteredSatellites().values()) {
 				if (this.possibleBodies != null && this.possibleBodies.contains(satellite)) {
-					if ((satellite == this.selectedBody || (satellite.getParentPlanet() == this.selectedBody && this.selectionCount != 1))
-							&& (this.ticksSinceSelection > 35 || this.selectedBody == satellite || (this.lastSelectedBody instanceof Satellite && GalaxyRegistry.getSatellitesForCelestialBody(((Satellite) this.lastSelectedBody).getParentPlanet())
-									.contains(satellite)))) {
+					if ((satellite == this.selectedBody || (satellite.getParentPlanet() == this.selectedBody && this.selectionCount != 1)) && (this.ticksSinceSelection > 35 || this.selectedBody == satellite
+							|| (this.lastSelectedBody instanceof Satellite && GalaxyRegistry.getSatellitesForCelestialBody(((Satellite) this.lastSelectedBody).getParentPlanet()).contains(satellite)))) {
 						GL11.glPushMatrix();
 						Matrix4f worldMatrix1 = new Matrix4f(worldMatrix0);
 						Matrix4f.translate(this.getCelestialBodyPosition(satellite), worldMatrix1, worldMatrix1);

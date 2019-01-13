@@ -59,7 +59,8 @@ public class StructureVillagePiecesVenus {
 		return (StructureComponentVenusVillage) var10;
 	}
 
-	private static StructureComponentVenusVillage getNextVillageComponent(StructureComponentVenusVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7) {
+	private static StructureComponentVenusVillage getNextVillageComponent(StructureComponentVenusVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6,
+			int par7) {
 		final int var8 = StructureVillagePiecesVenus.func_75079_a(par0ComponentVillageStartPiece.structureVillageWeightedPieceList);
 
 		if (var8 <= 0) {

@@ -205,7 +205,7 @@ public class MapGenRavineIapetus extends MapGenBase {
 	/**
 	 * Digs out the current block, default implementation removes stone, filler, and top block Sets the block to lava if y is less then 10, and air other wise. If setting to air, it also checks to see if we've broken the surface and if so tries to
 	 * make the floor the biome's top block
-	 * 
+	 *
 	 * @param data
 	 *            Block data array
 	 * @param index

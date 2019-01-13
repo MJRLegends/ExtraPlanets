@@ -159,9 +159,9 @@ public class PacketSimple extends Packet implements IPacket {
 	}
 
 	/*
-	 * 
+	 *
 	 * BEGIN "net.minecraft.network.Packet" IMPLEMENTATION
-	 * 
+	 *
 	 * This is for handling server->client packets before the player has joined the world
 	 */
 
@@ -184,9 +184,9 @@ public class PacketSimple extends Packet implements IPacket {
 	}
 
 	/*
-	 * 
+	 *
 	 * END "net.minecraft.network.Packet" IMPLEMENTATION
-	 * 
+	 *
 	 * This is for handling server->client packets before the player has joined the world
 	 */
 }

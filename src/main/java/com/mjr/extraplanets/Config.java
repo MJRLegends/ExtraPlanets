@@ -570,7 +570,9 @@ public class Config {
 		evolvedGiantSpider = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Giant Spider", true, "").getBoolean(true);
 		evolvedMiniEnderman = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Mini Enderman", true, "").getBoolean(true);
 
-		morePlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable More Planets Compatibility", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings, FOR v1.4.4 & ABOVE YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!").getBoolean(false);
+		morePlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable More Planets Compatibility", false,
+				"This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings, FOR v1.4.4 & ABOVE YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!")
+				.getBoolean(false);
 		morePlanetsCompatibilityAdv143 = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Progression Fixes for More Planets Compatibility (Only needed for v1.4.3 & below!)", false,
 				"This option will do the same as the basic one but will also fix the progression between ExtraPlanets & MorePlanets").getBoolean(false);
 		amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false,
@@ -580,8 +582,8 @@ public class Config {
 		// galaxySpaceCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
 		extendedPlanetsCompatibility13Alpha = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility (v1.3.1 Alpha)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations")
 				.getBoolean(false);
-		extendedPlanetsCompatibility14Alpha = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility (v1.4 Alpha)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations FOR THIS TO WORK PLEASE ENABLE THE 'enableExtraPlanetsCompatibility' in the ExtendedPlanets/base.cfg config file")
-				.getBoolean(false);
+		extendedPlanetsCompatibility14Alpha = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility (v1.4 Alpha)", false,
+				"This option will disable & remove conflicting Planets/Moons/SpaceStations FOR THIS TO WORK PLEASE ENABLE THE 'enableExtraPlanetsCompatibility' in the ExtendedPlanets/base.cfg config file").getBoolean(false);
 
 		kepler22SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		kepler22SystemPitchOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
@@ -653,8 +655,7 @@ public class Config {
 			jupiterSpaceStation = false;
 			plutoSpaceStation = false;
 			thermalPaddings = false;
-		}
-		else if (morePlanetsCompatibilityAdv143)
+		} else if (morePlanetsCompatibilityAdv143)
 			morePlanetsCompatibilityAdv143 = false;
 
 		if (galaxySpaceCompatibility) {

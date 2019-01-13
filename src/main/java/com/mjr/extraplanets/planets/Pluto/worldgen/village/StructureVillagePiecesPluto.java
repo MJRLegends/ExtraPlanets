@@ -59,7 +59,8 @@ public class StructureVillagePiecesPluto {
 		return (StructureComponentPlutoVillage) var10;
 	}
 
-	private static StructureComponentPlutoVillage getNextVillageComponent(StructureComponentPlutoVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6, int par7) {
+	private static StructureComponentPlutoVillage getNextVillageComponent(StructureComponentPlutoVillageStartPiece par0ComponentVillageStartPiece, List<StructureComponent> par1List, Random par2Random, int par3, int par4, int par5, int par6,
+			int par7) {
 		final int var8 = StructureVillagePiecesPluto.func_75079_a(par0ComponentVillageStartPiece.structureVillageWeightedPieceList);
 
 		if (var8 <= 0) {
