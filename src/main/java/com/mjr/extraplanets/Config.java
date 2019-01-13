@@ -479,20 +479,20 @@ public class Config {
 		USE_DEFAULT_BOSSES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Setting this option to false will disable & remove all custom bosses and will replace them with Creeper Bosses!")
 				.getBoolean(false);
 
-		GENERATE_KEPLER22B_DUNGEONS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Vanilla Style Dungeons on Kepler22b", true,
-				"Setting this option to false will disable & remove Vanilla Style Dungeons from generating on Kepler22b").getBoolean(true);
-		GENERATE_KEPLER22B_SMALL_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Small Trees on Kepler22b", true, "Setting this option to false will disable & remove Small Trees from generating on Kepler22b").getBoolean(
-				true);
-		GENERATE_KEPLER22B_NO_LEAF_SMALL_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate No Leaf Small Trees on Kepler22b", true,
-				"Setting this option to false will disable & remove No Leaf Small Trees from generating on Kepler22b").getBoolean(true);
-		GENERATE_KEPLER22B_NO_LEAF_BIG_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate No Leaf Big Trees on Kepler22b", true,
-				"Setting this option to false will disable & remove No Leaf Big Trees from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_DUNGEONS = config
+				.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Vanilla Style Dungeons on Kepler22b", true, "Setting this option to false will disable & remove Vanilla Style Dungeons from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_SMALL_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Small Trees on Kepler22b", true, "Setting this option to false will disable & remove Small Trees from generating on Kepler22b")
+				.getBoolean(true);
+		GENERATE_KEPLER22B_NO_LEAF_SMALL_TREES = config
+				.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate No Leaf Small Trees on Kepler22b", true, "Setting this option to false will disable & remove No Leaf Small Trees from generating on Kepler22b").getBoolean(true);
+		GENERATE_KEPLER22B_NO_LEAF_BIG_TREES = config
+				.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate No Leaf Big Trees on Kepler22b", true, "Setting this option to false will disable & remove No Leaf Big Trees from generating on Kepler22b").getBoolean(true);
 		GENERATE_KEPLER22B_SPHERES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Material Spheres on Kepler22b", true, "Setting this option to false will disable & remove Material Spheres from generating on Kepler22b")
 				.getBoolean(true);
 		GENERATE_KEPLER22B_MATERIAL_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Material Trees on Kepler22b", true, "Setting this option to false will disable & remove Material Trees from generating on Kepler22b")
 				.getBoolean(true);
-		GENERATE_KEPLER22B_CANDY_CANES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Candy Canes on Kepler22b", true, "Setting this option to false will disable & remove Candy Canes from generating on Kepler22b").getBoolean(
-				true);
+		GENERATE_KEPLER22B_CANDY_CANES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Candy Canes on Kepler22b", true, "Setting this option to false will disable & remove Candy Canes from generating on Kepler22b")
+				.getBoolean(true);
 		GENERATE_KEPLER22B_COOKIE_ROCKS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Cookie Rocks on Kepler22b", true, "Setting this option to false will disable & remove Cookie Rocks from generating on Kepler22b")
 				.getBoolean(true);
 		GENERATE_KEPLER22B_HUTS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Huts on Kepler22b", true, "Setting this option to false will disable & remove Huts from generating on Kepler22b").getBoolean(true);
@@ -502,8 +502,8 @@ public class Config {
 				.getBoolean(true);
 		GENERATE_JUPITER_SPACE_SHIP = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Space Ship on Jupiter", true, "Setting this option to false will disable & remove Space Ship from generating on Jupiter").getBoolean(true);
 		GENERATE_IO_VOLCANOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanos on Io", true, "Setting this option to false will disable & remove Volcanos from generating on Io").getBoolean(true);
-		GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Frozen Nitrongen Piles on Neptune", true,
-				"Setting this option to false will disable & remove Frozen Nitrongen Piles from generating on Neptune").getBoolean(true);
+		GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES = config
+				.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Frozen Nitrongen Piles on Neptune", true, "Setting this option to false will disable & remove Frozen Nitrongen Piles from generating on Neptune").getBoolean(true);
 		GENERATE_SATURN_NUCLEAR_PILES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Nuclear Piles on Saturn", true, "Setting this option to false will disable & remove Nuclear Piles from generating on Saturn").getBoolean(true);
 		GENERATE_SATURN_SLIME_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Slime Trees on Saturn", true, "Setting this option to false will disable & remove Slime Trees from generating on Saturn").getBoolean(true);
 		GENERATE_URANUS_IGLOOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Setting this option to false will disable & remove Igloos from generating on Uranus").getBoolean(true);
@@ -511,7 +511,8 @@ public class Config {
 		GENERATE_JUITPER_SKY_FEATURE = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Jupiter", true, "Setting this option to false will disable & remove the Sky Feature on Jupiter").getBoolean(true);
 		GENERATE_MERCURY_METEORS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Meteors on Mercury", true, "Setting this option to false will disable & remove the Meteors on Mercury").getBoolean(true);
 		GENERATE_CERES_SATELLITE_TOWER = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Satellite Towers on Ceres", true, "Setting this option to false will disable & remove the Satellite Towers on Ceres").getBoolean(true);
-		GENERATE_GANYMEDE_ICE_CHUNKS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Chunks under the surface of Ganymede", true, "Setting this option to false will disable & remove the Ice Chunks on Ganymede").getBoolean(true);
+		GENERATE_GANYMEDE_ICE_CHUNKS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Chunks under the surface of Ganymede", true, "Setting this option to false will disable & remove the Ice Chunks on Ganymede")
+				.getBoolean(true);
 		GENERATE_EUROPA_IRON_CHUNKS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Iron Chunks under the surface of Europa", true, "Setting this option to false will disable & remove the Iron Chunks on Europa").getBoolean(true);
 		JUITPER_LIGHTING = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable & remove Lighting & Lighting Effects on Jupiter").getBoolean(true);
 		CUSTOM_FOG = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
@@ -585,10 +586,10 @@ public class Config {
 				.getBoolean(true);
 		JUPITER = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Jupiter & Tier 5 Rocket", true, "Setting this option to false will remove the Jupiter & Tier 5 Rocket with all the related items/block/tools/armour/space stations!")
 				.getBoolean(true);
-		SATURN = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Saturn & Tier 6 Rocket", true, "Setting this option to false will remove the Saturn & Tier 6 Rocket with all the related items/block/tools/armour!/space stations").getBoolean(
-				true);
-		URANUS = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Uranus & Tier 7 Rocket", true, "Setting this option to false will remove the Uranus & Tier 7 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(
-				true);
+		SATURN = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Saturn & Tier 6 Rocket", true, "Setting this option to false will remove the Saturn & Tier 6 Rocket with all the related items/block/tools/armour!/space stations")
+				.getBoolean(true);
+		URANUS = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Uranus & Tier 7 Rocket", true, "Setting this option to false will remove the Uranus & Tier 7 Rocket with all the related items/block/tools/armour/space stations!")
+				.getBoolean(true);
 		NEPTUNE = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Neptune & Tier 8 Rocket", true, "Setting this option to false will remove the Neptune & Tier 8 Rocket with all the related items/block/tools/armour/space stations!")
 				.getBoolean(true);
 		PLUTO = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Pluto & Tier 9 Rocket", true, "Setting this option to false will remove the Pluto & Tier 9 Rocket with all the related items/block/tools/armour/space stations!").getBoolean(true);
@@ -778,8 +779,9 @@ public class Config {
 		ORE_DICTIONARY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of All Planet/Moons Ores to the Ore Dictionary", true, "Setting this to false will disable & remove all Ore Dictionary Support for Planet and Moon Ores!")
 				.getBoolean(true);
 		ORE_DICTIONARY_INGOTS = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of all Ingots to the Ore Dictionary", true, "Setting this to false will disable & remove all Ore Dictionary Support for All Ingots!").getBoolean(true);
-		ORE_DICTIONARY_OTHER = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of all Items excluding Ingots to the Ore Dictionary", true,
-				"Setting this to false will disable & remove all Ore Dictionary Support for All needed Items excluding Ingots!").getBoolean(true);
+		ORE_DICTIONARY_OTHER = config
+				.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of all Items excluding Ingots to the Ore Dictionary", true, "Setting this to false will disable & remove all Ore Dictionary Support for All needed Items excluding Ingots!")
+				.getBoolean(true);
 
 		MORE_PLANETS_COMPATIBILITY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable More Planets Compatibility", false,
 				"FOR THIS TO WORK YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!").getBoolean(false);
@@ -787,16 +789,17 @@ public class Config {
 		EXTREME_REACTORS_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Extreme Reactors Compatibility", true, "Setting this to false will disable & remove Extreme Reactors Compatibility!").getBoolean(true);
 		MC_MULITPART_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable MC MultiPart Compatibility", true, "Setting this to false will disable & remove MC MultiPart Compatibility!").getBoolean(true);
 
-		GC_DECONSTRUCTOR_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galacticraft Deconstuctor Machine Compatibility", true, "Setting this to false will disable Galacticraft Deconstuctor Machine Compatibility!").getBoolean(
-				true);
+		GC_DECONSTRUCTOR_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galacticraft Deconstuctor Machine Compatibility", true, "Setting this to false will disable Galacticraft Deconstuctor Machine Compatibility!")
+				.getBoolean(true);
 
 		ACHIEVEMENTS = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Achievements", true, "Setting this option to false will disable & remove Achievements for ExtraPlanets").getBoolean(true);
 
 		ORE_LEAD_GENERATION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable generation of Lead Ore in the Overworld", true, "Setting this option to false will completely remove Lead Ore/Ingot from the world").getBoolean(true);
 		ORE_LEAD_GENERATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Amount of Lead Ore Generation per chunk", 5, "This option is used for changing the Lead Ore Spawn Rate [range: 0 ~ 2147483647, default: 5]").getInt();
 
-		USE_CUSTOM_CELESTAIAL_SELECTION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestaial Selection Screen", true,
-				"Setting this option to false, will change it back to be using the Galacticraft Galaxy Map/Celestaial Selection Screen").getBoolean(true);
+		USE_CUSTOM_CELESTAIAL_SELECTION = config
+				.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestaial Selection Screen", true, "Setting this option to false, will change it back to be using the Galacticraft Galaxy Map/Celestaial Selection Screen")
+				.getBoolean(true);
 
 		CUSTOM_GALAXIES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Custom Galaxies on Celestaial Selection Screen", true,
 				"Setting this option to false will disable & remove the Custom Galaxies on Celestaial Selection Screen (Note: Will get disabled by the 'Use Custom Galaxy Map/Celestaial Selection Screen' option)").getBoolean(true);
@@ -810,10 +813,12 @@ public class Config {
 
 		PRESSURE = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Pressure", true, "Setting this option to false will disable & remove the Pressure System").getBoolean(true);
 		RADIATION = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Radiation", true, "Setting this option to false will disable & remove the Radiation System").getBoolean(true);
-		GC_RADIATION = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Radiation for Galacticraft Planets & Moons", true,
-				"Setting this option to false will disable & remove the Radiation System for Galacticraft Planets & Moons").getBoolean(true);
-		GC_PRESSURE = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Pressure for Galacticraft Planets & Moons", true,
-				"Setting this option to false will disable & remove the Pressure System for Galacticraft Planets & Moons").getBoolean(true);
+		GC_RADIATION = config
+				.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Radiation for Galacticraft Planets & Moons", true, "Setting this option to false will disable & remove the Radiation System for Galacticraft Planets & Moons")
+				.getBoolean(true);
+		GC_PRESSURE = config
+				.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Enable Pressure for Galacticraft Planets & Moons", true, "Setting this option to false will disable & remove the Pressure System for Galacticraft Planets & Moons")
+				.getBoolean(true);
 
 		HIDE_RADIATION_PRESSURE_HUD = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Hide Pressure & Radiation HUD Bars when not needed", true,
 				"Will hide the Pressure & Radiation HUD Bars for Planets & Moons & Space Stations that have disabled Pressure and Radiation or a value of 0").getBoolean(true);

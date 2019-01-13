@@ -123,8 +123,8 @@ public class OverlaySolarRadiation extends Overlay {
 				addY = Math.abs(radiationLevel) < 50 ? addY - 10 : Math.abs(radiationLevel) >= 80 ? addY + 10 : Math.abs(radiationLevel) >= 50 && Math.abs(radiationLevel) < 80 ? addY + 10 : addY;
 			}
 		}
-		OverlaySolarRadiation.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlaySolarRadiation.minecraft.fontRendererObj.getStringWidth(value), (int) bottomY - radiationLevelScaled
-				- OverlaySolarRadiation.minecraft.fontRendererObj.FONT_HEIGHT / 2 + addY, ColorUtil.to32BitColor(255, 255, 10, 10));
+		OverlaySolarRadiation.minecraft.fontRendererObj.drawString(value, minLeftX + addX - OverlaySolarRadiation.minecraft.fontRendererObj.getStringWidth(value),
+				(int) bottomY - radiationLevelScaled - OverlaySolarRadiation.minecraft.fontRendererObj.FONT_HEIGHT / 2 + addY, ColorUtil.to32BitColor(255, 255, 10, 10));
 
 		GlStateManager.disableBlend();
 	}

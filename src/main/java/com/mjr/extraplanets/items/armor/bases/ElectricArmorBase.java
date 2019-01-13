@@ -40,14 +40,11 @@ import net.minecraftforge.energy.EnergyStorage;
 import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.Optional.InterfaceList;
 
-@InterfaceList({ 
-	@Optional.Interface(modid = "cofhcore", iface = "cofh.api.energy.IEnergyContainerItem"), 
-	@Optional.Interface(modid = "mekanism", iface = "mekanism.api.energy.IEnergizedItem"),
-	@Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem") 
-})
+@InterfaceList({ @Optional.Interface(modid = "cofhcore", iface = "cofh.api.energy.IEnergyContainerItem"), @Optional.Interface(modid = "mekanism", iface = "mekanism.api.energy.IEnergizedItem"),
+		@Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem") })
 public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor, IEnergyContainerItem, IEnergizedItem, IElectricItem, ISpecialElectricItem {
 
-    private static Object itemManagerIC2;
+	private static Object itemManagerIC2;
 	public float transferMax = 200;
 	private static final int DAMAGE_RANGE = 100;
 
@@ -56,11 +53,10 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		this.setMaxStackSize(1);
 		this.setMaxDamage(DAMAGE_RANGE);
 		this.setNoRepair();
-		
-        if (EnergyConfigHandler.isIndustrialCraft2Loaded())
-        {
-            itemManagerIC2 = new ElectricItemManagerIC2();
-        }
+
+		if (EnergyConfigHandler.isIndustrialCraft2Loaded()) {
+			itemManagerIC2 = new ElectricItemManagerIC2();
+		}
 	}
 
 	@Override
@@ -322,17 +318,17 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		return (itemStack != null && !(itemStack.getItem() instanceof ItemBatteryInfinite));
 	}
 
+	@Override
 	public boolean canSend(ItemStack itemStack) {
 		return true;
 	}
 
 	// IC2 Compact
 	@Override
-    public IElectricItemManager getManager(ItemStack itemstack)
-    {
-        return (IElectricItemManager) ElectricArmorBase.itemManagerIC2;
-    }
-    
+	public IElectricItemManager getManager(ItemStack itemstack) {
+		return (IElectricItemManager) ElectricArmorBase.itemManagerIC2;
+	}
+
 	@Override
 	public boolean canProvideEnergy(ItemStack itemStack) {
 		return true;
@@ -361,6 +357,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 
 	private class EnergyCapabilityProvider implements ICapabilityProvider {
 		EnergyStorage storage;
+
 		public EnergyCapabilityProvider(ItemStack stack, ElectricArmorBase item) {
 			storage = new EnergyStorage((int) (item.getMaxElectricityStored(stack) * EnergyConfigHandler.TO_RF_RATIO), (int) item.transferMax) {
 				@Override
@@ -404,4 +401,3 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		}
 	}
 }
-

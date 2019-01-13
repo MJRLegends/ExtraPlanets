@@ -28,8 +28,8 @@ public class ChunkProviderNeptune extends ChunkProviderMultiBiomeSpace {
 	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 0, 1, 2);
 
-	private final MapGenDungeon dungeonGenerator = new MapGenDungeonNeptune(new DungeonConfiguration(ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.DUNGEON_BRICK), 30,
-			8, 16, 7, 7, RoomBossNeptune.class, RoomTreasureNeptune.class));
+	private final MapGenDungeon dungeonGenerator = new MapGenDungeonNeptune(
+			new DungeonConfiguration(ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.DUNGEON_BRICK), 30, 8, 16, 7, 7, RoomBossNeptune.class, RoomTreasureNeptune.class));
 
 	public ChunkProviderNeptune(World par1World, long seed, boolean mapFeaturesEnabled) {
 		super(par1World, seed, mapFeaturesEnabled);

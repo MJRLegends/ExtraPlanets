@@ -42,9 +42,10 @@ public class RenderVenusRover extends Render<EntityVenusRover> {
 	private void updateModels() {
 		if (modelRover == null) {
 			try {
-				modelRover = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover.obj"), ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003",
-						"BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2", "BraceFrontWheelRight003", "BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle",
-						"Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG", "Seat", "Spinka", "Helm", "PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003"));
+				modelRover = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover.obj"),
+						ImmutableList.of("Battery", "Battery2", "BraceFrontWheelLeft", "BraceFrontWheelLeft2", "BraceFrontWheelLeft003", "BraceFrontWheelLeft004", "BraceFrontWheelRight", "BraceFrontWheelRight2", "BraceFrontWheelRight003",
+								"BraceFrontWheelRight004", "BraceFrontWheelRight005", "BraceFrontWheelRight006", "Clip1", "Clip2", "door", "doorhandle", "Doorhinge1", "Doorhinge2", "Floor", "Frame2", "Frame003", "RTG", "Seat", "Spinka", "Helm",
+								"PoleHelm", "RTGPart1", "RtGPart2", "TRGPart3", "TRGPart4", "TRGPart5", "Line001", "Box002", "Box003"));
 
 				modelRoverWindows = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover.obj"), ImmutableList.of("FrontWindow", "LeftWall", "RightWall"));
 				modelRoverCase1 = ModelUtilities.modelFromOBJ(new ResourceLocation(Constants.ASSET_PREFIX, "venus_rover.obj"), ImmutableList.of("Container"));

@@ -412,8 +412,8 @@ public class ExtraPlanets_Recipes {
 		if (Config.MERCURY) {
 			// Battery
 			if (Config.BATTERIES)
-				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, ExtraPlanets_Items.BATTERY_MERCURY.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T',
-						new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), 'R', "dustRedstone", 'C', Items.COAL });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, ExtraPlanets_Items.BATTERY_MERCURY.getMaxDamage()),
+						new Object[] { " T ", "TRT", "TCT", 'T', new ItemStack(ExtraPlanets_Items.COMPRESSED_MERCURY, 1, 0), 'R', "dustRedstone", 'C', Items.COAL });
 
 			// Stone Bricks
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 4, 8), new Object[] { "   ", "SS ", "SS ", 'S', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 2) });
@@ -906,24 +906,24 @@ public class ExtraPlanets_Recipes {
 					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5) });
 
 			// Planks to Trap Doors (4 Planks per 4 Trap Doors)
-			RecipeUtilities.addShapelessRecipe(new ItemStack(Blocks.TRAPDOOR, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0),
-					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0),
-					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0) });
-			RecipeUtilities.addShapelessRecipe(new ItemStack(Blocks.TRAPDOOR, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1),
-					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1),
-					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1) });
-			RecipeUtilities.addShapelessRecipe(new ItemStack(Blocks.TRAPDOOR, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2),
-					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2),
-					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2) });
-			RecipeUtilities.addShapelessRecipe(new ItemStack(Blocks.TRAPDOOR, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3),
-					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3),
-					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3) });
-			RecipeUtilities.addShapelessRecipe(new ItemStack(Blocks.TRAPDOOR, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4),
-					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4),
-					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4) });
-			RecipeUtilities.addShapelessRecipe(new ItemStack(Blocks.TRAPDOOR, 4, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5),
-					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5),
-					new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5) });
+			RecipeUtilities.addShapelessRecipe(new ItemStack(Blocks.TRAPDOOR, 4, 0),
+					new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0),
+							new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0) });
+			RecipeUtilities.addShapelessRecipe(new ItemStack(Blocks.TRAPDOOR, 4, 0),
+					new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1),
+							new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 1) });
+			RecipeUtilities.addShapelessRecipe(new ItemStack(Blocks.TRAPDOOR, 4, 0),
+					new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2),
+							new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 2) });
+			RecipeUtilities.addShapelessRecipe(new ItemStack(Blocks.TRAPDOOR, 4, 0),
+					new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3),
+							new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 3) });
+			RecipeUtilities.addShapelessRecipe(new ItemStack(Blocks.TRAPDOOR, 4, 0),
+					new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4),
+							new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 4) });
+			RecipeUtilities.addShapelessRecipe(new ItemStack(Blocks.TRAPDOOR, 4, 0),
+					new Object[] { new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5),
+							new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5), new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 5) });
 
 			// Planks to Chests (8 Planks per 2 Chests)
 			RecipeUtilities.addRecipe(new ItemStack(Blocks.CHEST, 2, 0), new Object[] { "WWW", "W W", "WWW", 'W', new ItemStack(ExtraPlanets_Blocks.KEPLER22B_MAPLE_PLANKS, 1, 0) });
@@ -1002,8 +1002,8 @@ public class ExtraPlanets_Recipes {
 		}
 		if (Config.JUPITER || Config.KEPLER22B) {
 			// Red Sand to Red Sandstone
-			RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.RED_SANDSTONE, 1, 0), new Object[] { new ItemStack(ExtraPlanets_Blocks.RED_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.RED_SAND, 1, 0),
-					new ItemStack(ExtraPlanets_Blocks.RED_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.RED_SAND, 1, 0) });
+			RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Blocks.RED_SANDSTONE, 1, 0),
+					new Object[] { new ItemStack(ExtraPlanets_Blocks.RED_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.RED_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.RED_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.RED_SAND, 1, 0) });
 		}
 		if (Config.CUSTOM_APPLES) {
 			// Diamond Apples
@@ -1045,8 +1045,8 @@ public class ExtraPlanets_Recipes {
 			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED), new Object[] { "XXX", "XZX", "WYW", 'W', INGOT_PALLADIUM, 'X', INGOT_NICKEL, 'Y', RED_GEM, 'Z', new ItemStack(GCBlocks.fuelLoader) });
 		if (Config.FUEL_LOADER_ULTIMATE)
 			if (Config.FUEL_LOADER_ADVANCED)
-				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE), new Object[] { "XXX", "XZX", "WYW", 'W', INGOT_ZINC, 'X', INGOT_TUNGSTEN, 'Y', BLUE_GEM, 'Z',
-						new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED) });
+				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE),
+						new Object[] { "XXX", "XZX", "WYW", 'W', INGOT_ZINC, 'X', INGOT_TUNGSTEN, 'Y', BLUE_GEM, 'Z', new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ADVANCED) });
 			else
 				RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Machines.FUEL_LOADER_ULTIMATE), new Object[] { "XXX", "XZX", "WYW", 'W', INGOT_ZINC, 'X', INGOT_TUNGSTEN, 'Y', BLUE_GEM, 'Z', new ItemStack(GCBlocks.fuelLoader) });
 		if (Config.VEHICLE_CHARGER)
@@ -1073,21 +1073,21 @@ public class ExtraPlanets_Recipes {
 
 		// Advanced & Ultimate Battery
 		if (Config.BATTERIES) {
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()), new Object[] { " T ", "TRT", "TCT", 'T', COMPRESSED_TITANIUM, 'R',
-					new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()), 'C', new ItemStack(MarsBlocks.marsBlock, 1, 8) });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ULTIMATE, 1, ExtraPlanets_Items.BATTERY_ULTIMATE.getMaxDamage()), new Object[] { "WRB", "CPM", "TAZ", 'W', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 7), 'R',
-					new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 11), 'B', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 10), 'C', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 11), 'P',
-					new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 8), 'M', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 7), 'T', INGOT_TUNGSTEN, 'A',
-					new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()), 'Z', INGOT_ZINC });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_MASSIVE, 1, ExtraPlanets_Items.BATTERY_MASSIVE.getMaxDamage()), new Object[] { "PPP", "ASA", "NNN", 'P', COMPRESSED_PALLADIUM, 'N', COMPRESSED_NICKEL, 'S',
-					Items.NETHER_STAR, 'A', new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()) });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()),
+					new Object[] { " T ", "TRT", "TCT", 'T', COMPRESSED_TITANIUM, 'R', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()), 'C', new ItemStack(MarsBlocks.marsBlock, 1, 8) });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_ULTIMATE, 1, ExtraPlanets_Items.BATTERY_ULTIMATE.getMaxDamage()),
+					new Object[] { "WRB", "CPM", "TAZ", 'W', new ItemStack(ExtraPlanets_Blocks.URANUS_BLOCKS, 1, 7), 'R', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 11), 'B', new ItemStack(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 1, 10), 'C',
+							new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 11), 'P', new ItemStack(ExtraPlanets_Blocks.JUPITER_BLOCKS, 1, 8), 'M', new ItemStack(ExtraPlanets_Blocks.SATURN_BLOCKS, 1, 7), 'T', INGOT_TUNGSTEN, 'A',
+							new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()), 'Z', INGOT_ZINC });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.BATTERY_MASSIVE, 1, ExtraPlanets_Items.BATTERY_MASSIVE.getMaxDamage()),
+					new Object[] { "PPP", "ASA", "NNN", 'P', COMPRESSED_PALLADIUM, 'N', COMPRESSED_NICKEL, 'S', Items.NETHER_STAR, 'A', new ItemStack(ExtraPlanets_Items.BATTERY_ADVANCED, 1, ExtraPlanets_Items.BATTERY_ADVANCED.getMaxDamage()) });
 		}
 		// Cloth
 		RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.CLOTH, 8, 0), new Object[] { new ItemStack(Blocks.WOOL), new ItemStack(Blocks.WOOL), new ItemStack(Blocks.WOOL), new ItemStack(Blocks.WOOL) });
 
 		// Gravity Controller
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1, 0), new Object[] { "RTR", "TCT", "RTR", 'T', new ItemStack(GCItems.basicItem, 1, 14), 'R', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()),
-				'C', new ItemStack(GCItems.itemBasicMoon, 1, 0) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1, 0),
+				new Object[] { "RTR", "TCT", "RTR", 'T', new ItemStack(GCItems.basicItem, 1, 14), 'R', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()), 'C', new ItemStack(GCItems.itemBasicMoon, 1, 0) });
 
 		// Sledge Hammer
 		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), new Object[] { "XXX", "YSY", " S ", 'X', INGOT_VOLCANIC, 'Y', new ItemStack(GCItems.itemBasicMoon), 'S', "stickWood" });
@@ -1187,8 +1187,8 @@ public class ExtraPlanets_Recipes {
 					'C', ExtraPlanets_Items.TIER_1_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_1_ARMOR_LAYER });
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_CHEST, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_CHEST,
 					'C', ExtraPlanets_Items.TIER_1_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_1_ARMOR_LAYER });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 'P',
-					ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS, 'C', ExtraPlanets_Items.TIER_1_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_1_ARMOR_LAYER });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_LEGINGS,
+					'C', ExtraPlanets_Items.TIER_1_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_1_ARMOR_LAYER });
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_1_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_1_UNPREPARED_SPACE_SUIT_BOOTS,
 					'C', ExtraPlanets_Items.TIER_1_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_1_ARMOR_LAYER });
 
@@ -1196,8 +1196,8 @@ public class ExtraPlanets_Recipes {
 					'C', ExtraPlanets_Items.TIER_2_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_2_ARMOR_LAYER });
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_CHEST, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_CHEST,
 					'C', ExtraPlanets_Items.TIER_2_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_2_ARMOR_LAYER });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 'P',
-					ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS, 'C', ExtraPlanets_Items.TIER_2_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_2_ARMOR_LAYER });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_LEGINGS,
+					'C', ExtraPlanets_Items.TIER_2_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_2_ARMOR_LAYER });
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_2_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_2_UNPREPARED_SPACE_SUIT_BOOTS,
 					'C', ExtraPlanets_Items.TIER_2_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_2_ARMOR_LAYER });
 
@@ -1205,8 +1205,8 @@ public class ExtraPlanets_Recipes {
 					'C', ExtraPlanets_Items.TIER_3_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_3_ARMOR_LAYER });
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_CHEST, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_CHEST,
 					'C', ExtraPlanets_Items.TIER_3_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_3_ARMOR_LAYER });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 'P',
-					ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS, 'C', ExtraPlanets_Items.TIER_3_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_3_ARMOR_LAYER });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_LEGINGS,
+					'C', ExtraPlanets_Items.TIER_3_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_3_ARMOR_LAYER });
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_BOOTS, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_3_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_3_UNPREPARED_SPACE_SUIT_BOOTS,
 					'C', ExtraPlanets_Items.TIER_3_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_3_ARMOR_LAYER });
 
@@ -1214,30 +1214,30 @@ public class ExtraPlanets_Recipes {
 					'C', ExtraPlanets_Items.TIER_4_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_4_ARMOR_LAYER });
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_CHEST, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_CHEST,
 					'C', ExtraPlanets_Items.TIER_4_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_4_ARMOR_LAYER });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 'P',
-					ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS, 'C', ExtraPlanets_Items.TIER_4_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_4_ARMOR_LAYER });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_LEGINGS, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_LEGINGS,
+					'C', ExtraPlanets_Items.TIER_4_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_4_ARMOR_LAYER });
 			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_BOOTS, 1, 0), new Object[] { "RAC", "RPC", "RAC", 'R', ExtraPlanets_Items.TIER_4_RADIATION_LAYER, 'P', ExtraPlanets_Items.TIER_4_UNPREPARED_SPACE_SUIT_BOOTS,
 					'C', ExtraPlanets_Items.TIER_4_PRESSURE_LAYER, 'A', ExtraPlanets_Items.TIER_4_ARMOR_LAYER });
 
 			// Tier 1 - 4 Gravity Boots
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS, 'G',
-					new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS, 'G',
-					new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_3_SPACE_SUIT_BOOTS, 'G',
-					new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_GRAVITY_BOOTS, 1, 0), new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_4_SPACE_SUIT_BOOTS, 'G',
-					new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_GRAVITY_BOOTS, 1, 0),
+					new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_1_SPACE_SUIT_BOOTS, 'G', new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_GRAVITY_BOOTS, 1, 0),
+					new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS, 'G', new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_GRAVITY_BOOTS, 1, 0),
+					new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_3_SPACE_SUIT_BOOTS, 'G', new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_GRAVITY_BOOTS, 1, 0),
+					new Object[] { " G ", "GRG", " G ", 'R', ExtraPlanets_Armor.TIER_4_SPACE_SUIT_BOOTS, 'G', new ItemStack(ExtraPlanets_Items.GRAVITY_CONTROLLER, 1) });
 
 			// Tier 1 - 4 Jetpack Chestplates
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_JETPACK_CHEST, 1, 0), new Object[] { "BBB", "GRG", "BBB", 'R', ExtraPlanets_Armor.TIER_1_SPACE_SUIT_CHEST, 'G', new ItemStack(AsteroidsItems.basicItem, 1, 1),
-					'B', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_JETPACK_CHEST, 1, 0), new Object[] { "BBB", "GRG", "BBB", 'R', ExtraPlanets_Armor.TIER_2_SPACE_SUIT_CHEST, 'G',
-					new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 0), 'B', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_JETPACK_CHEST, 1, 0), new Object[] { "BBB", "GRG", "BBB", 'R', ExtraPlanets_Armor.TIER_3_SPACE_SUIT_CHEST, 'G',
-					new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 0), 'B', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_JETPACK_CHEST, 1, 0), new Object[] { "BBB", "GRG", "BBB", 'R', ExtraPlanets_Armor.TIER_4_SPACE_SUIT_CHEST, 'G',
-					new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 0), 'B', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_1_SPACE_SUIT_JETPACK_CHEST, 1, 0),
+					new Object[] { "BBB", "GRG", "BBB", 'R', ExtraPlanets_Armor.TIER_1_SPACE_SUIT_CHEST, 'G', new ItemStack(AsteroidsItems.basicItem, 1, 1), 'B', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_2_SPACE_SUIT_JETPACK_CHEST, 1, 0),
+					new Object[] { "BBB", "GRG", "BBB", 'R', ExtraPlanets_Armor.TIER_2_SPACE_SUIT_CHEST, 'G', new ItemStack(ExtraPlanets_Items.TIER_4_ITEMS, 1, 0), 'B', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_3_SPACE_SUIT_JETPACK_CHEST, 1, 0),
+					new Object[] { "BBB", "GRG", "BBB", 'R', ExtraPlanets_Armor.TIER_3_SPACE_SUIT_CHEST, 'G', new ItemStack(ExtraPlanets_Items.TIER_6_ITEMS, 1, 0), 'B', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Armor.TIER_4_SPACE_SUIT_JETPACK_CHEST, 1, 0),
+					new Object[] { "BBB", "GRG", "BBB", 'R', ExtraPlanets_Armor.TIER_4_SPACE_SUIT_CHEST, 'G', new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 0), 'B', new ItemStack(GCItems.battery, 1, GCItems.battery.getMaxDamage()) });
 
 			// Module Items
 			RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MODULE_ITEMS, 1, 0), new Object[] { "   ", "STS", "STS", 'T', new ItemStack(AsteroidsItems.titaniumBoots, 1), 'S', "itemSilicon" });
@@ -1249,21 +1249,20 @@ public class ExtraPlanets_Recipes {
 		}
 		if (Config.RADIATION) {
 			// Anti Radiation Drinks
-			RecipeUtilities.addNBTRecipe(
-					new ItemStack(ExtraPlanets_Items.ANTI_RADIATION, 1, 0),
+			RecipeUtilities.addNBTRecipe(new ItemStack(ExtraPlanets_Items.ANTI_RADIATION, 1, 0),
 					new ItemStack[] { new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), COMPRESSED_MAGNESIUM, new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE),
 							UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.CLEAN_WATER_FLUID), new ItemStack(Items.GLASS_BOTTLE),
 							UniversalBucket.getFilledBucket(ForgeModContainer.getInstance().universalBucket, ExtraPlanets_Fluids.CLEAN_WATER_FLUID), new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE), COMPRESSED_MAGNESIUM,
 							new ItemStack(ExtraPlanets_Items.POTASSIUM_IODIDE) });
 			// Machines
 			if (Config.BASIC_SOLAR_EVAPORTATION_CHAMBER)
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_SOLAR_EVAPORTATION_CHAMBER, 1, 0), new Object[] { "SBS", "MMM", "SBS", 'S', GCBlocks.solarPanel, 'M', ExtraPlanets_Items.COMPRESSED_MERCURY, 'B',
-						new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 7) });
+				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_SOLAR_EVAPORTATION_CHAMBER, 1, 0),
+						new Object[] { "SBS", "MMM", "SBS", 'S', GCBlocks.solarPanel, 'M', ExtraPlanets_Items.COMPRESSED_MERCURY, 'B', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 7) });
 			if (Config.BASIC_CRYSTALLIZER)
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_CRYSALLIZER, 1, 0), new Object[] { "SBS", "MMM", "SBS", 'S', Blocks.PISTON, 'M', COMPRESSED_CARBON, 'B', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 7) });
 			if (Config.BASIC_DECRYSTALLIZER)
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_DECRYSALLIZER, 1, 0), new Object[] { "SBS", "MCM", "SBS", 'S', ExtraPlanets_Items.IODIDE_SALT, 'M', COMPRESSED_CARBON, 'B',
-						new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 11), 'C', ExtraPlanets_Machines.BASIC_CRYSALLIZER });
+				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_DECRYSALLIZER, 1, 0),
+						new Object[] { "SBS", "MCM", "SBS", 'S', ExtraPlanets_Items.IODIDE_SALT, 'M', COMPRESSED_CARBON, 'B', new ItemStack(ExtraPlanets_Blocks.MERCURY_BLOCKS, 1, 11), 'C', ExtraPlanets_Machines.BASIC_CRYSALLIZER });
 			if (Config.BASIC_SMASHER)
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_SMASHER, 1, 0), new Object[] { "MAM", "PPP", "MAM", 'P', Blocks.PISTON, 'M', ExtraPlanets_Items.COMPRESSED_MERCURY, 'A', Blocks.ANVIL });
 			if (Config.BASIC_CHEMICAL_INJECTOR) {
@@ -1273,11 +1272,11 @@ public class ExtraPlanets_Recipes {
 					RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_CHEMICAL_INJECTOR, 1, 0), new Object[] { "UUU", "PPP", "UUU", 'P', Blocks.PISTON, 'U', ExtraPlanets_Items.POTASSIUM });
 			}
 			if (Config.BASIC_PURIFIER)
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_PURIFIER, 1, 0), new Object[] { "FMF", "ESE", "FMF", 'F', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), 'M', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 2), 'E',
-						COMPRESSED_CARBON, 'S', GCBlocks.solarPanel });
+				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_PURIFIER, 1, 0),
+						new Object[] { "FMF", "ESE", "FMF", 'F', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), 'M', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 2), 'E', COMPRESSED_CARBON, 'S', GCBlocks.solarPanel });
 			if (Config.BASIC_DENSIFIER)
-				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_DENSIFIER, 1, 0), new Object[] { "FMF", "ESE", "FMF", 'F', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), 'M', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), 'E',
-						COMPRESSED_CARBON, 'S', COMPRESSED_STEEL });
+				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_DENSIFIER, 1, 0),
+						new Object[] { "FMF", "ESE", "FMF", 'F', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), 'M', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), 'E', COMPRESSED_CARBON, 'S', COMPRESSED_STEEL });
 			if (Config.BASIC_DECONTAMINATION_UNIT)
 				RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT, 1, 0), new Object[] { "EBV", "SFS", "VBE", 'F', new ItemStack(ExtraPlanets_Items.TOOLS, 1, 3), 'S',
 						new ItemStack(ExtraPlanets_Items.IODIDE_SALT, 1), 'B', new ItemStack(Blocks.LAPIS_BLOCK, 1), 'V', INGOT_VOLCANIC, 'E', new ItemStack(ExtraPlanets_Items.BATTERY_MERCURY, 1, ExtraPlanets_Items.BATTERY_MERCURY.getMaxDamage()) });
@@ -1285,104 +1284,104 @@ public class ExtraPlanets_Recipes {
 
 		// Oxygen Tanks
 		if (Config.OXYGEN_TANKS) {
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY, 1, ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', GCItems.oxTankHeavy, 'Y', INGOT_PALLADIUM, 'Z',
-					new ItemStack(Blocks.WOOL, 1, 11) });
-			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY, 1, ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X',
-					ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY, 'Y', INGOT_ZINC, 'Z', new ItemStack(Blocks.WOOL, 1, 4) });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY, 1, ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY.getMaxDamage()),
+					new Object[] { "ZZZ", "XXX", "YYY", 'X', GCItems.oxTankHeavy, 'Y', INGOT_PALLADIUM, 'Z', new ItemStack(Blocks.WOOL, 1, 11) });
+			RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY, 1, ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY.getMaxDamage()),
+					new Object[] { "ZZZ", "XXX", "YYY", 'X', ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY, 'Y', INGOT_ZINC, 'Z', new ItemStack(Blocks.WOOL, 1, 4) });
 		}
 
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BLACK, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BLACK.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 15) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_RED, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_RED.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 14) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_GREEN, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_GREEN.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 13) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BROWN, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BROWN.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 12) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BLUE, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BLUE.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 11) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_PURPLE, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_PURPLE.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 10) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_CYAN, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_CYAN.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 9) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_LIGHT_GRAY, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_LIGHT_GRAY.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 8) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_GRAY, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_GRAY.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 7) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_PINK, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_PINK.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 6) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_YELLOW, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_YELLOW.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 4) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_LIGHT_BLUE, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_LIGHT_BLUE.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 3) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_MAGENTA, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_MAGENTA.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 2) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_ORANGE, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_ORANGE.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 1) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_WHITE, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_WHITE.getMaxDamage()), new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 0) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BLACK, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BLACK.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 15) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_RED, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_RED.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 14) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_GREEN, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_GREEN.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 13) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BROWN, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BROWN.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 12) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BLUE, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_BLUE.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 11) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_PURPLE, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_PURPLE.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 10) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_CYAN, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_CYAN.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 9) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_LIGHT_GRAY, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_LIGHT_GRAY.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 8) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_GRAY, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_GRAY.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 7) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_PINK, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_PINK.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 6) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_YELLOW, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_YELLOW.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 4) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_LIGHT_BLUE, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_LIGHT_BLUE.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 3) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_MAGENTA, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_MAGENTA.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 2) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_ORANGE, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_ORANGE.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 1) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.LIGHT_OXYGEN_TANK_WHITE, 1, ExtraPlanets_Items.LIGHT_OXYGEN_TANK_WHITE.getMaxDamage()),
+				new Object[] { "Z", "X", "Y", 'X', TIN_CANISTER, 'Y', "compressedCopper", 'Z', new ItemStack(Blocks.WOOL, 1, 0) });
 
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_BLACK, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_BLACK.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 15) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_RED, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_RED.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 14) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_GREEN, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_GREEN.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 13) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_BROWN, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_BROWN.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 12) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_BLUE, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_BLUE.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 11) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_PURPLE, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_PURPLE.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 10) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_CYAN, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_CYAN.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 9) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_LIGHT_GRAY, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_LIGHT_GRAY.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 8) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_GRAY, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_GRAY.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 7) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_PINK, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_PINK.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 6) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_YELLOW, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_YELLOW.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 4) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_LIGHT_BLUE, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_LIGHT_BLUE.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 3) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_MAGENTA, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_MAGENTA.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 2) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_LIME, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_LIME.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 5) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_WHITE, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_WHITE.getMaxDamage()), new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 0) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_BLACK, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_BLACK.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 15) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_RED, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_RED.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 14) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_GREEN, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_GREEN.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 13) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_BROWN, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_BROWN.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 12) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_BLUE, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_BLUE.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 11) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_PURPLE, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_PURPLE.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 10) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_CYAN, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_CYAN.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 9) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_LIGHT_GRAY, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_LIGHT_GRAY.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 8) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_GRAY, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_GRAY.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 7) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_PINK, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_PINK.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 6) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_YELLOW, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_YELLOW.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 4) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_LIGHT_BLUE, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_LIGHT_BLUE.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 3) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_MAGENTA, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_MAGENTA.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 2) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_LIME, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_LIME.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 5) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.MED_OXYGEN_TANK_WHITE, 1, ExtraPlanets_Items.MED_OXYGEN_TANK_WHITE.getMaxDamage()),
+				new Object[] { "ZZ", "XX", "YY", 'X', TIN_CANISTER, 'Y', "compressedTin", 'Z', new ItemStack(Blocks.WOOL, 1, 0) });
 
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BLACK, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BLACK.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 15) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIME, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIME.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 5) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_GREEN, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_GREEN.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 13) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BROWN, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BROWN.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 12) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BLUE, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BLUE.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 11) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_PURPLE, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_PURPLE.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 10) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_CYAN, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_CYAN.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 9) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIGHT_GRAY, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIGHT_GRAY.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel",
-				'Z', new ItemStack(Blocks.WOOL, 1, 8) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_GRAY, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_GRAY.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 7) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_PINK, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_PINK.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 6) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_YELLOW, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_YELLOW.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 4) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIGHT_BLUE, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIGHT_BLUE.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel",
-				'Z', new ItemStack(Blocks.WOOL, 1, 3) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_MAGENTA, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_MAGENTA.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 2) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_ORANGE, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_ORANGE.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 1) });
-		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_WHITE, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_WHITE.getMaxDamage()), new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z',
-				new ItemStack(Blocks.WOOL, 1, 0) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BLACK, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BLACK.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 15) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIME, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIME.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 5) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_GREEN, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_GREEN.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 13) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BROWN, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BROWN.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 12) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BLUE, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_BLUE.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 11) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_PURPLE, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_PURPLE.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 10) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_CYAN, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_CYAN.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 9) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIGHT_GRAY, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIGHT_GRAY.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 8) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_GRAY, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_GRAY.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 7) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_PINK, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_PINK.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 6) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_YELLOW, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_YELLOW.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 4) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIGHT_BLUE, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_LIGHT_BLUE.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 3) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_MAGENTA, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_MAGENTA.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 2) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_ORANGE, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_ORANGE.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 1) });
+		RecipeUtilities.addOreRecipe(new ItemStack(ExtraPlanets_Items.HEAVY_OXYGEN_TANK_WHITE, 1, ExtraPlanets_Items.HEAVY_OXYGEN_TANK_WHITE.getMaxDamage()),
+				new Object[] { "ZZZ", "XXX", "YYY", 'X', TIN_CANISTER, 'Y', "compressedSteel", 'Z', new ItemStack(Blocks.WOOL, 1, 0) });
 
 		// Decorative Blocks
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 1), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.DECORATIVE_BLOCKS, 1, 0) });
@@ -1416,24 +1415,24 @@ public class ExtraPlanets_Recipes {
 		// Kits
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, 1, 0), new Object[] { "MGF", "TAT", " P ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(GCItems.oxTankLight), 'P', new ItemStack(ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, 1, 5), 'A', new ItemStack(GCItems.parachute) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, 1, 1), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankLight),
-				'P', new ItemStack(GCItems.parachute) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, 1, 1),
+				new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankLight), 'P', new ItemStack(GCItems.parachute) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, 1, 2), new Object[] { "FPA", "BCD", "   ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(AsteroidsItems.thermalPadding, 1, 0), 'B',
 				new ItemStack(AsteroidsItems.thermalPadding, 1, 1), 'C', new ItemStack(AsteroidsItems.thermalPadding, 1, 2), 'D', new ItemStack(AsteroidsItems.thermalPadding, 1, 3), 'P', new ItemStack(GCItems.parachute) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, 1, 3), new Object[] { "MGF", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(GCItems.oxTankLight), 'P', new ItemStack(GCItems.parachute) });
-		RecipeUtilities
-				.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, 1, 4), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankLight) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, 1, 5), new Object[] { "ABC", " D ", "   ", 'A', new ItemStack(AsteroidsItems.thermalPadding, 1, 0), 'B', new ItemStack(AsteroidsItems.thermalPadding, 1, 1),
-				'C', new ItemStack(AsteroidsItems.thermalPadding, 1, 2), 'D', new ItemStack(AsteroidsItems.thermalPadding, 1, 3) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, 1, 4),
+				new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankLight) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_EQUIPMENT_KIT, 1, 5), new Object[] { "ABC", " D ", "   ", 'A', new ItemStack(AsteroidsItems.thermalPadding, 1, 0), 'B', new ItemStack(AsteroidsItems.thermalPadding, 1, 1), 'C',
+				new ItemStack(AsteroidsItems.thermalPadding, 1, 2), 'D', new ItemStack(AsteroidsItems.thermalPadding, 1, 3) });
 
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, 1, 0), new Object[] { "MGF", "T T", " P ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(GCItems.oxTankMedium), 'P', new ItemStack(ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, 1, 5), 'A', new ItemStack(GCItems.parachute) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, 1, 1), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankMedium),
-				'P', new ItemStack(GCItems.parachute) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, 1, 2), new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(VenusItems.thermalPaddingTier2, 1, 0), 'B',
-				new ItemStack(VenusItems.thermalPaddingTier2, 1, 1), 'C', new ItemStack(VenusItems.thermalPaddingTier2, 1, 2), 'D', new ItemStack(VenusItems.thermalPaddingTier2, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P',
-				new ItemStack(GCItems.parachute) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, 1, 1),
+				new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankMedium), 'P', new ItemStack(GCItems.parachute) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, 1, 2),
+				new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(VenusItems.thermalPaddingTier2, 1, 0), 'B', new ItemStack(VenusItems.thermalPaddingTier2, 1, 1), 'C',
+						new ItemStack(VenusItems.thermalPaddingTier2, 1, 2), 'D', new ItemStack(VenusItems.thermalPaddingTier2, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, 1, 3), new Object[] { "MGF", "TPT", " S ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(GCItems.oxTankMedium), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_EQUIPMENT_KIT, 1, 4),
@@ -1443,48 +1442,48 @@ public class ExtraPlanets_Recipes {
 
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 0), new Object[] { "MGF", "TAT", " P ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(GCItems.oxTankHeavy), 'P', new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 5), 'A', new ItemStack(GCItems.parachute) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 1), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankHeavy),
-				'P', new ItemStack(GCItems.parachute) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 2), new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 0),
-				'B', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 3), 'S',
-				new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 1),
+				new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankHeavy), 'P', new ItemStack(GCItems.parachute) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 2),
+				new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 1), 'C',
+						new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 3), new Object[] { "MGF", "TPT", " S ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(GCItems.oxTankHeavy), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
-		RecipeUtilities
-				.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 4), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankHeavy) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 5), new Object[] { "ABC", " D ", " S ", 'A', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 0), 'B',
-				new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 3), 'S',
-				new ItemStack(VenusItems.basicItem, 1, 0) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 4),
+				new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(GCItems.oxTankHeavy) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_EQUIPMENT_KIT, 1, 5),
+				new Object[] { "ABC", " D ", " S ", 'A', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 1), 'C',
+						new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_3_THERMAL_PADDING, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0) });
 
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 0), new Object[] { "MGF", "TAT", " P ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'P', new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 5), 'A', new ItemStack(GCItems.parachute) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 1), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T',
-				new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'P', new ItemStack(GCItems.parachute) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 2), new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 0),
-				'B', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 3), 'S',
-				new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 1),
+				new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'P', new ItemStack(GCItems.parachute) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 2),
+				new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 1), 'C',
+						new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 3), new Object[] { "MGF", "TPT", " S ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 4), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T',
-				new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 5), new Object[] { "ABC", " D ", " S ", 'A', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 0), 'B',
-				new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 3), 'S',
-				new ItemStack(VenusItems.basicItem, 1, 0) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 4),
+				new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_VERY_HEAVY) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_EQUIPMENT_KIT, 1, 5),
+				new Object[] { "ABC", " D ", " S ", 'A', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 1), 'C',
+						new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_4_THERMAL_PADDING, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0) });
 
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 0), new Object[] { "MGF", "TAT", " P ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY), 'P', new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 5), 'A', new ItemStack(GCItems.parachute) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 1), new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T',
-				new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY), 'P', new ItemStack(GCItems.parachute) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 2), new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 0),
-				'B', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 3), 'S',
-				new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 1),
+				new Object[] { "M G", "TPT", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY), 'P', new ItemStack(GCItems.parachute) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 2),
+				new Object[] { "FPA", "BCD", " S ", 'F', new ItemStack(GCItems.basicItem, 1, 19), 'A', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 1), 'C',
+						new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
 		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 3), new Object[] { "MGF", "TPT", " S ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'F',
 				new ItemStack(GCItems.basicItem, 1, 19), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY), 'S', new ItemStack(VenusItems.basicItem, 1, 0), 'P', new ItemStack(GCItems.parachute) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 4), new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T',
-				new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY) });
-		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 5), new Object[] { "ABC", " D ", " S ", 'A', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 0), 'B',
-				new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 1), 'C', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 3), 'S',
-				new ItemStack(VenusItems.basicItem, 1, 0) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 4),
+				new Object[] { "M G", "T T", "   ", 'M', new ItemStack(GCItems.oxMask), 'G', new ItemStack(GCItems.oxygenGear), 'T', new ItemStack(ExtraPlanets_Items.OXYGEN_TANK_EXTREMELY_HEAVY) });
+		RecipeUtilities.addRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_EQUIPMENT_KIT, 1, 5),
+				new Object[] { "ABC", " D ", " S ", 'A', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 0), 'B', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 1), 'C',
+						new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 2), 'D', new ItemStack(ExtraPlanets_Items.TIER_5_THERMAL_PADDING, 1, 3), 'S', new ItemStack(VenusItems.basicItem, 1, 0) });
 	}
 
 	private static void registerCompressorRecipes() {
@@ -1524,14 +1523,14 @@ public class ExtraPlanets_Recipes {
 			GCRecipeUtilities.addCompresssorShapelessRecipe(TIER_10_HEAVY_PLATING, TIER_9_HEAVY_PLATING, COMPRESSED_DARK_IRON, new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 1, 4), COMPRESSED_DARK_IRON, COMPRESSED_DARK_IRON, COMPRESSED_DARK_IRON);
 		}
 		if (Config.KEPLER22B) {
-			GCRecipeUtilities.addCompresssorShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 6), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), new ItemStack(
-					ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5));
+			GCRecipeUtilities.addCompresssorShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 6), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5),
+					new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5));
 		}
 		// Tier 1 - 4 Armour Layers
 		if (Config.PRESSURE || Config.RADIATION) {
 			GCRecipeUtilities.addCompresssorShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_1_ARMOR_LAYER, 1, 0), INGOT_ALUMINUM, INGOT_ALUMINUM, INGOT_ALUMINUM, INGOT_ALUMINUM);
-			GCRecipeUtilities.addCompresssorShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_ARMOR_LAYER, 1, 0), new ItemStack(AsteroidsItems.basicItem, 1, 0), new ItemStack(AsteroidsItems.basicItem, 1, 0), new ItemStack(
-					AsteroidsItems.basicItem, 1, 0), new ItemStack(AsteroidsItems.basicItem, 1, 0));
+			GCRecipeUtilities.addCompresssorShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_2_ARMOR_LAYER, 1, 0), new ItemStack(AsteroidsItems.basicItem, 1, 0), new ItemStack(AsteroidsItems.basicItem, 1, 0),
+					new ItemStack(AsteroidsItems.basicItem, 1, 0), new ItemStack(AsteroidsItems.basicItem, 1, 0));
 			GCRecipeUtilities.addCompresssorShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_3_ARMOR_LAYER, 1, 0), INGOT_PALLADIUM, INGOT_PALLADIUM, new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 5), INGOT_PALLADIUM);
 			GCRecipeUtilities.addCompresssorShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_4_ARMOR_LAYER, 1, 0), INGOT_ZINC, INGOT_ZINC, new ItemStack(ExtraPlanets_Items.TIER_8_ITEMS, 1, 5), INGOT_ZINC);
 		}

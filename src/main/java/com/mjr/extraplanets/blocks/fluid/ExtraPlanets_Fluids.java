@@ -120,8 +120,8 @@ public class ExtraPlanets_Fluids {
 		FluidRegistry.registerFluid(NITROGEN_ICE_FLUID);
 		FluidRegistry.addBucketForFluid(NITROGEN_ICE_FLUID);
 
-		LIQUID_HYDROCARBON_FLUID = new Fluid("liquid_hydrocarbon_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_hydrocarbon_still"), new ResourceLocation(Constants.TEXTURE_PREFIX
-				+ "blocks/fluids/liquid_hydrocarbon_flow")).setBlock(LIQUID_HYDROCARBON).setDensity(800).setViscosity(1500);
+		LIQUID_HYDROCARBON_FLUID = new Fluid("liquid_hydrocarbon_fluid", new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_hydrocarbon_still"),
+				new ResourceLocation(Constants.TEXTURE_PREFIX + "blocks/fluids/liquid_hydrocarbon_flow")).setBlock(LIQUID_HYDROCARBON).setDensity(800).setViscosity(1500);
 		FluidRegistry.registerFluid(LIQUID_HYDROCARBON_FLUID);
 		FluidRegistry.addBucketForFluid(LIQUID_HYDROCARBON_FLUID);
 
