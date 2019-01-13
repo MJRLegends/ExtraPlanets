@@ -16,7 +16,6 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
 import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaIceValleys;
-import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnNuclearLand;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 import com.mjr.mjrlegendslib.world.features.WorldGenSphere;
 
@@ -30,7 +29,7 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 	private WorldGenerator iceGen;
 	private WorldGenerator iceSubSurfaceGen;
 	private WorldGenerator iceSurfaceGen;
-	
+
 	private int LakesPerChunk = 5;
 
 	private World currentWorld;
@@ -87,7 +86,7 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 				WorldGenUtilities.generateLake(this.currentWorld, this.rand, new BlockPos(this.posX, 0, this.posZ), ExtraPlanets_Fluids.RADIO_ACTIVE_WATER, ExtraPlanets_Blocks.CERES_BLOCKS);
 			}
 		}
-		if(Config.GENERATE_EUROPA_IRON_CHUNKS) {
+		if (Config.GENERATE_EUROPA_IRON_CHUNKS) {
 			for (int i = 0; i < 2; i++) {
 				if (this.rand.nextInt(20) == 1) {
 					WorldGenUtilities.generateStructureWithRangeY(

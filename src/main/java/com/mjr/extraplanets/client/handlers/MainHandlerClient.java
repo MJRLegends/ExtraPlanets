@@ -375,7 +375,8 @@ public class MainHandlerClient {
 					Fluid fluid = fluidStack.getFluid();
 					if (fluid.equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.GLOWSTONE_FLUID) || fluid.equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID)
 							|| fluid.equals(ExtraPlanets_Fluids.MAGMA_FLUID) || fluid.equals(ExtraPlanets_Fluids.METHANE_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_FLUID) || fluid.equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID)
-							|| fluid.equals(ExtraPlanets_Fluids.SALT_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID) || fluid.equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)) {
+							|| fluid.equals(ExtraPlanets_Fluids.SALT_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID) || fluid.equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID)
+							|| fluid.equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)) {
 						event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.bucket.message.finding"));
 						event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.bucket.message.finding.2." + fluid.getUnlocalizedName().substring(6)));
 					} else if (fluid.equals(ExtraPlanets_Fluids.CLEAN_WATER_FLUID))
@@ -400,7 +401,7 @@ public class MainHandlerClient {
 	public void onGuiOpenEvent(GuiOpenEvent event) {
 		if (Config.USE_CUSTOM_CELESTAIAL_SELECTION) {
 			if (((event.getGui() instanceof GuiCelestialSelection))) {
-				if(event.getGui().getClass().getName().equalsIgnoreCase("asmodeuscore.core.astronomy.gui.screen.NewGuiCelestialSelection"))
+				if (event.getGui().getClass().getName().equalsIgnoreCase("asmodeuscore.core.astronomy.gui.screen.NewGuiCelestialSelection"))
 					MessageUtilities.throwCrashError("Please disable the following option: enableNewGalaxyMap in configs/AsmodeusCore/core.conf");
 				if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap)) {
 					event.setGui(new CustomCelestialSelection(true, ((GuiCelestialSelection) event.getGui()).possibleBodies, ((GuiCelestialSelection) event.getGui()).canCreateStations));
@@ -442,21 +443,21 @@ public class MainHandlerClient {
 		if (mc.currentScreen instanceof GuiCelestialSelection) {
 			if (event.celestialBody == ExtraPlanets_Planets.SATURN) {
 				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn_rings.png"));
-				float size = ((GuiCelestialSelection)mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
+				float size = ((GuiCelestialSelection) mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
 				((GuiCelestialSelection) mc.currentScreen).drawTexturedModalRect(-7.5F * size, -1.75F * size, 15.0F * size, 3.5F * size, 0, 0, 30, 7, false, false, 30, 7);
 			} else if (event.celestialBody == ExtraPlanets_Planets.URANUS) {
 				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/uranus_rings.png"));
-				float size = ((GuiCelestialSelection)mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
+				float size = ((GuiCelestialSelection) mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
 				((GuiCelestialSelection) mc.currentScreen).drawTexturedModalRect(-1.75F * size, -7.0F * size, 3.5F * size, 14.0F * size, 0, 0, 28, 7, false, false, 28, 7);
 			}
 		} else if (mc.currentScreen instanceof CustomCelestialSelection) {
 			if (event.celestialBody == ExtraPlanets_Planets.SATURN) {
 				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn_rings.png"));
-				float size = ((GuiCelestialSelection)mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
+				float size = ((GuiCelestialSelection) mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
 				((CustomCelestialSelection) mc.currentScreen).drawTexturedModalRect(-7.5F * size, -1.75F * size, 15.0F * size, 3.5F * size, 0, 0, 30, 7, false, false, 30, 7);
 			} else if (event.celestialBody == ExtraPlanets_Planets.URANUS) {
 				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/uranus_rings.png"));
-				float size = ((GuiCelestialSelection)mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
+				float size = ((GuiCelestialSelection) mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
 				((CustomCelestialSelection) mc.currentScreen).drawTexturedModalRect(-1.75F * size, -7.0F * size, 3.5F * size, 14.0F * size, 0, 0, 28, 7, false, false, 28, 7);
 			}
 		}

@@ -44,8 +44,8 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypecallisto", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		SURFACE(0, "callisto_surface"), SUB_SURFACE(1, "callisto_sub_surface"), STONE(2, "callisto_stone"), ORE_IRON(3, "callisto_ore_iron"), ORE_TIN(4, "callisto_ore_tin"), ORE_COPPER(5, "callisto_ore_copper"), DRIED_OIL(6, "callisto_dried_oil"), SHALE_OIL(
-				7, "callisto_shale_oil");
+		SURFACE(0, "callisto_surface"), SUB_SURFACE(1, "callisto_sub_surface"), STONE(2, "callisto_stone"), ORE_IRON(3, "callisto_ore_iron"), ORE_TIN(4, "callisto_ore_tin"), ORE_COPPER(5, "callisto_ore_copper"), DRIED_OIL(6,
+				"callisto_dried_oil"), SHALE_OIL(7, "callisto_shale_oil");
 
 		private final int meta;
 		private final String name;

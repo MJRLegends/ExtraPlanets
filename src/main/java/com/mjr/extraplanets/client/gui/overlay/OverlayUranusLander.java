@@ -39,10 +39,9 @@ public class OverlayUranusLander extends Overlay {
 			final int alpha = (int) (255 * Math.sin(OverlayUranusLander.screenTicks / 20.0F));
 			final String press1 = TranslateUtilities.translate("gui.lander.warning2");
 			final String press2 = TranslateUtilities.translate("gui.lander.warning3");
-			OverlayUranusLander.minecraft.fontRenderer
-					.drawString(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2,
-							width / 4 - OverlayUranusLander.minecraft.fontRenderer.getStringWidth(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2) / 2, height / 8,
-							ColorUtil.to32BitColor(alpha, alpha, alpha, alpha));
+			OverlayUranusLander.minecraft.fontRenderer.drawString(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2,
+					width / 4 - OverlayUranusLander.minecraft.fontRenderer.getStringWidth(press1 + GameSettings.getKeyDisplayString(KeyHandlerClient.spaceKey.getKeyCode()) + press2) / 2, height / 8,
+					ColorUtil.to32BitColor(alpha, alpha, alpha, alpha));
 		}
 
 		GL11.glPopMatrix();

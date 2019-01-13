@@ -51,7 +51,6 @@ import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
 import com.mjr.mjrlegendslib.util.MCUtilities;
-import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class CustomCelestialSelection extends GuiCelestialSelection {
@@ -93,7 +92,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		for (SolarSystem star : GalaxyRegistry.getRegisteredSolarSystems().values()) {
 			this.celestialBodyTicks.put(star.getMainStar(), 0);
 		}
-		
+
 		for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
 			this.celestialBodyTicks.put(planet, 0);
 		}
@@ -132,13 +131,12 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	 * Overriding for the purpose of to temp fix to stop issues being caused on Galaxy map by GalaxySpace addon, not registering unreachable planets correctly
 	 */
 	@Override
-    protected Vector3f getCelestialBodyPosition(CelestialBody cBody)
-    {
-    	if(this.celestialBodyTicks.get(cBody) == null)
-    		return new Vector3f(0.0F, 0.0F, 0.0F);
+	protected Vector3f getCelestialBodyPosition(CelestialBody cBody) {
+		if (this.celestialBodyTicks.get(cBody) == null)
+			return new Vector3f(0.0F, 0.0F, 0.0F);
 		return super.getCelestialBodyPosition(cBody);
-    }
-	
+	}
+
 	/*
 	 * Overriding for the purpose of to change the body list depending on the galaxy selected
 	 */
@@ -186,7 +184,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			if (alpha > 0.0F) {
 				GlStateManager.pushMatrix();
 				Matrix4f worldMatrixLocal = setupMatrix(body, worldMatrix, fb, hasParent ? 0.25F : 1.0F);
-				
+
 				// Render Names for Planets & Moons
 				this.mc.renderEngine.bindTexture(new ResourceLocation("textures/font/ascii.png"));
 				if (!this.isZoomed() && !(body instanceof Moon) && !(body instanceof Satellite) && !(body instanceof Star)) {
@@ -267,8 +265,8 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, BLUE);
 					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_details.name") + ": ", xOffset + 10, yOffset + 8, BLUE);
 					this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, BLUE);
-					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_orbit_time.name") + ": " + this.selectedBody.getRelativeOrbitTime() * 24 + " " + TranslateUtilities.translate("gui.type_days.name"),
-							xOffset + 10, yOffset + 23, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_orbit_time.name") + ": " + this.selectedBody.getRelativeOrbitTime() * 24 + " " + TranslateUtilities.translate("gui.type_days.name"), xOffset + 10,
+							yOffset + 23, 14737632);
 					float gravity = 0;
 					long dayLength = 0;
 					if (this.selectedBody.getReachable() && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld")) {
@@ -328,8 +326,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						breathable = true;
 					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_breathable.name") + ": " + (this.selectedBody.getReachable() ? breathable : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10,
 							yOffset + 80, 14737632);
-					this.drawString(
-							this.fontRenderer,
+					this.drawString(this.fontRenderer,
 							TranslateUtilities.translate("gui.celestial_body_corrosive_atmosphere.name") + ": " + (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isCorrosive() : TranslateUtilities.translate("gui.type_unknown.name")),
 							xOffset + 10, yOffset + 90, 14737632);
 					int radiationLevel = 0;
@@ -369,9 +366,8 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						}
 					}
 
-					this.drawString(this.fontRenderer,
-							TranslateUtilities.translate("gui.celestial_body_radiation_level.name") + ": " + (this.selectedBody.getReachable() ? radiationLevel + "%" : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10,
-							yOffset + 100, 14737632);
+					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_radiation_level.name") + ": " + (this.selectedBody.getReachable() ? radiationLevel + "%" : TranslateUtilities.translate("gui.type_unknown.name")),
+							xOffset + 10, yOffset + 100, 14737632);
 					this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_pressure_level.name") + ": " + (this.selectedBody.getReachable() ? pressureLevel + "%" : TranslateUtilities.translate("gui.type_unknown.name")),
 							xOffset + 10, yOffset + 110, 14737632);
 				} else if (this.selectedBody instanceof Star) {
@@ -912,11 +908,14 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					boolean flag0 = GalaxyRegistry.getSatellitesForCelestialBody(this.selectedBody).size() > 0;
 					boolean flag1 = this.selectedBody instanceof Planet && GalaxyRegistry.getMoonsForPlanet((Planet) this.selectedBody).size() > 0;
 					if (flag0 && flag1) {
-						this.drawSplitString(TranslateUtilities.translate("gui.message.click_again.0.name"), RHS - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE + 2 - sliderPos, 79, GREY5, false, false);
+						this.drawSplitString(TranslateUtilities.translate("gui.message.click_again.0.name"), RHS - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE + 2 - sliderPos, 79, GREY5, false,
+								false);
 					} else if (!flag0 && flag1) {
-						this.drawSplitString(TranslateUtilities.translate("gui.message.click_again.1.name"), RHS - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE + 6 - sliderPos, 79, GREY5, false, false);
+						this.drawSplitString(TranslateUtilities.translate("gui.message.click_again.1.name"), RHS - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE + 6 - sliderPos, 79, GREY5, false,
+								false);
 					} else if (flag0) {
-						this.drawSplitString(TranslateUtilities.translate("gui.message.click_again.2.name"), RHS - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE + 6 - sliderPos, 79, GREY5, false, false);
+						this.drawSplitString(TranslateUtilities.translate("gui.message.click_again.2.name"), RHS - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE + 6 - sliderPos, 79, GREY5, false,
+								false);
 					} else {
 						this.drawSplitString(TranslateUtilities.translate("gui.message.click_again.3.name"), RHS - 182 + 41, height - GuiCelestialSelection.BORDER_SIZE - GuiCelestialSelection.BORDER_EDGE_SIZE + 11 - sliderPos, 79, GREY5, false,
 								false);

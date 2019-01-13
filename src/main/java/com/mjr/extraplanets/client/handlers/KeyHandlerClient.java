@@ -91,7 +91,7 @@ public class KeyHandlerClient extends KeyHandler {
 			if (kb.getKeyCode() == KeyHandlerClient.openModuleManagerGUI.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
 				if ((!playerBase.inventory.armorItemInSlot(0).isEmpty() && !playerBase.inventory.armorItemInSlot(1).isEmpty() && !playerBase.inventory.armorItemInSlot(2).isEmpty() && !playerBase.inventory.armorItemInSlot(3).isEmpty())
 						&& (playerBase.inventory.armorItemInSlot(0).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(1).getItem() instanceof IModularArmor
-						|| playerBase.inventory.armorItemInSlot(2).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(3).getItem() instanceof IModularArmor))
+								|| playerBase.inventory.armorItemInSlot(2).getItem() instanceof IModularArmor || playerBase.inventory.armorItemInSlot(3).getItem() instanceof IModularArmor))
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_OPEN_MODULE_MANANGER_GUI, mc.world.provider.getDimension(), new Object[] { playerBase.getGameProfile().getName() }));
 			}
 			if (kb.getKeyCode() == KeyHandlerClient.openPreLaunchChecklistGUI.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {

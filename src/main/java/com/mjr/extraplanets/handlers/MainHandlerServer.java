@@ -208,7 +208,8 @@ public class MainHandlerServer {
 			if (isInGlowstone((EntityPlayerMP) entityLiving))
 				entityLiving.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 500, 0));
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
-			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.world, entityLiving.getEntityBoundingBox(), true) == false && !(entityLiving.world.getBlockState(new BlockPos(entityLiving.posX, entityLiving.posY, entityLiving.posZ)).getBlock() instanceof BlockFluidBase))
+			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.world, entityLiving.getEntityBoundingBox(), true) == false
+					&& !(entityLiving.world.getBlockState(new BlockPos(entityLiving.posX, entityLiving.posY, entityLiving.posZ)).getBlock() instanceof BlockFluidBase))
 				runChecks(event, entityLiving);
 		}
 	}
@@ -442,8 +443,8 @@ public class MainHandlerServer {
 				stats.setRadiationLevel(0);
 			else {
 				stats.setRadiationLevel(stats.getRadiationLevel() - level);
-				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
-						+ Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "%");
+				PlayerUtilties.sendMessage(player,
+						"" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " " + Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "%");
 				PlayerUtilties.sendMessage(player,
 						"" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
 			}

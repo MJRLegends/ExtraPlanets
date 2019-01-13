@@ -30,9 +30,10 @@ public class BlockDecorativeBlocks extends Block implements IDetectableResource,
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypedecorativeblocks", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		MARBLE(0, "marble"), MARBLE_BRICKS(1, "marble_bricks"), SNOW_BRICKS(2, "snow_bricks"), ICE_BRICKS(3, "ice_bricks"), FIRE_BRICKS(4, "fire_bricks"), BLACK_WHITE_FLOOR(5, "black_white_floor"), MARBLE_TITLED_FLOOR(6, "marble_titled_floor"), MARBLE_BROKEN_TITLED_FLOOR(
-				7, "marble_broken_titled_floor"), METAL_MESH(8, "metal_mesh"), FROZEN_NITROGEN_BRICKS(9, "frozen_nitrogen_bricks"), VOLCANIC_ROCK_BRICKS(10, "volcanic_rock_bricks"), CARBON_TITLED_FLOOR(11, "carbon_titled_floor"), CARBON_BROKEN_TITLED_FLOOR(
-				12, "carbon_broken_titled_floor"), MAGNESIUM_TITLED_FLOOR(13, "magnesium_titled_floor"), MAGNESIUM_BROKEN_TITLED_FLOOR(14, "magnesium_broken_titled_floor"), ASH_BRICKS(15, "ash_bricks");
+		MARBLE(0, "marble"), MARBLE_BRICKS(1, "marble_bricks"), SNOW_BRICKS(2, "snow_bricks"), ICE_BRICKS(3, "ice_bricks"), FIRE_BRICKS(4, "fire_bricks"), BLACK_WHITE_FLOOR(5, "black_white_floor"), MARBLE_TITLED_FLOOR(6,
+				"marble_titled_floor"), MARBLE_BROKEN_TITLED_FLOOR(7, "marble_broken_titled_floor"), METAL_MESH(8, "metal_mesh"), FROZEN_NITROGEN_BRICKS(9, "frozen_nitrogen_bricks"), VOLCANIC_ROCK_BRICKS(10,
+						"volcanic_rock_bricks"), CARBON_TITLED_FLOOR(11, "carbon_titled_floor"), CARBON_BROKEN_TITLED_FLOOR(12,
+								"carbon_broken_titled_floor"), MAGNESIUM_TITLED_FLOOR(13, "magnesium_titled_floor"), MAGNESIUM_BROKEN_TITLED_FLOOR(14, "magnesium_broken_titled_floor"), ASH_BRICKS(15, "ash_bricks");
 
 		private final int meta;
 		private final String name;

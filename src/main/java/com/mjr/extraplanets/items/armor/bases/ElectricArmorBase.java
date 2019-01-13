@@ -322,6 +322,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		return (itemStack != null && !(itemStack.getItem() instanceof ItemBatteryInfinite));
 	}
 
+	@Override
 	public boolean canSend(ItemStack itemStack) {
 		return true;
 	}
@@ -360,6 +361,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 
 	private class EnergyCapabilityProvider implements ICapabilityProvider {
 		EnergyStorage storage;
+
 		public EnergyCapabilityProvider(ItemStack stack, ElectricArmorBase item) {
 			storage = new EnergyStorage((int) (item.getMaxElectricityStored(stack) * EnergyConfigHandler.TO_RF_RATIO), (int) item.transferMax) {
 				@Override

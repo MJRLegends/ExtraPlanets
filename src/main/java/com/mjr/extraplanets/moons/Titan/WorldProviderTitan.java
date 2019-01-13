@@ -24,8 +24,6 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
 import com.mjr.extraplanets.moons.Titan.worldgen.BiomeProviderTitan;
 import com.mjr.extraplanets.moons.Titan.worldgen.ChunkProviderTitan;
-import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.BiomeProviderJupiter;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class WorldProviderTitan extends WorldProviderRealisticSpace {
@@ -66,7 +64,7 @@ public class WorldProviderTitan extends WorldProviderRealisticSpace {
 		BiomeAdaptive.setBodyMultiBiome(ExtraPlanets_Moons.TITAN);
 		return BiomeProviderTitan.class;
 	}
-	
+
 	@Override
 	@SideOnly(Side.CLIENT)
 	public float getStarBrightness(float par1) {

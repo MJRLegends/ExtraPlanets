@@ -38,6 +38,7 @@ public class ItemTier11Items extends ItemBasicMeta {
 	}
 
 	public static String[] getItemList() {
-		return new String[] { "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "ingot_platinum", "compressed_platinum", "blue_sticks", "red_sticks", "purple_sticks", "yellow_sticks", "green_sticks", "brown_sticks" };
+		return new String[] { "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "ingot_platinum", "compressed_platinum", "blue_sticks", "red_sticks", "purple_sticks", "yellow_sticks", "green_sticks",
+				"brown_sticks" };
 	}
 }

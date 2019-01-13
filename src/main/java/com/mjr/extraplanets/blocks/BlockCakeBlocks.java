@@ -31,8 +31,8 @@ public class BlockCakeBlocks extends Block implements IDetectableResource, ISort
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypecakeblocks", EnumBlockBasic.class);
 
 	public enum EnumBlockBasic implements IStringSerializable {
-		CAKE_BLOCK(0, "cake_block"), CAKE_BLOCK_RED_VERVET(1, "cake_block_red_velvet"), CAKE_BLOCK_CHOCOLATE(2, "cake_block_chocolate"), WHITE_ICING_RED_DOTS(3, "white_icing_red_dots"), WHITE_ICING_GREEN_DOTS(4, "white_icing_green_dots"), WHITE_ICING_PINK_DOTS(
-				5, "white_icing_pink_dots"), WHITE_ICING_ORANGE_DOTS(6, "white_icing_orange_dots"), COOKIE_ROCKS(7, "cookie_rocks");
+		CAKE_BLOCK(0, "cake_block"), CAKE_BLOCK_RED_VERVET(1, "cake_block_red_velvet"), CAKE_BLOCK_CHOCOLATE(2, "cake_block_chocolate"), WHITE_ICING_RED_DOTS(3, "white_icing_red_dots"), WHITE_ICING_GREEN_DOTS(4,
+				"white_icing_green_dots"), WHITE_ICING_PINK_DOTS(5, "white_icing_pink_dots"), WHITE_ICING_ORANGE_DOTS(6, "white_icing_orange_dots"), COOKIE_ROCKS(7, "cookie_rocks");
 
 		private final int meta;
 		private final String name;
