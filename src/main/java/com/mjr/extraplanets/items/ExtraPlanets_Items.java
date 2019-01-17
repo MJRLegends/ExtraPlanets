@@ -449,7 +449,7 @@ public class ExtraPlanets_Items {
 		MED_OXYGEN_TANK_YELLOW = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "yellow");
 		MED_OXYGEN_TANK_LIGHT_BLUE = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "light_blue");
 		MED_OXYGEN_TANK_MAGENTA = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "magenta");
-		MED_OXYGEN_TANK_LIME = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "orange");
+		MED_OXYGEN_TANK_LIME = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "lime");
 		MED_OXYGEN_TANK_WHITE = new ItemCustomOxygenTank(2, "oxygen_tank_med_full_" + "white");
 
 		HEAVY_OXYGEN_TANK_BLACK = new ItemCustomOxygenTank(3, "oxygen_tank_heavy_full_" + "black");
