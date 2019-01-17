@@ -5,6 +5,10 @@
 
 
 ===========================================Released Updates===========================================
+v1.1.9
+*Fixed issue #387 #384 #364
+*Fixed issue #389
+
 v1.1.8
 *Fixed issue #379
 *Fixed issue with getting false message when installing a space suit module for a armour item you dont have
