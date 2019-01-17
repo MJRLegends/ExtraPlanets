@@ -28,8 +28,9 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.fml.common.Optional;
+import net.minecraftforge.fml.common.Optional.InterfaceList;
 
-@Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem")
+@InterfaceList({ @Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem"), @Optional.Interface(modid = "ic2", iface = "ic2.api.item.ISpecialElectricItem") })
 public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor, IElectricItem, ISpecialElectricItem {
 
 	private static Object itemManagerIC2;
