@@ -186,7 +186,7 @@ tile.eris.ore_tin.name=Mena de Estaño de Eris
 tile.eris.ore_copper.name=Mena de Cobre de Eris
 tile.eris.stone_bricks.name=Ladrillos de Roca de Eris
 tile.eris.dungeon_brick.name=Ladrillo de Mazmorra de Eris
-tile.eris.ore_dark_iron.name=Mena de Hierro Oscuro de Eris 
+tile.eris.ore_dark_iron.name=Mena de Hierro Oscuro de Eris
 tile.eris.dark_iron_block.name=Bloque de Hierro Oscuro
 
 tile.kepler22b.dirt.name=Tierra de Kepler 22b
@@ -976,7 +976,7 @@ schematic.rocket.t7.name=Cohete Nivel 7
 schematic.rocket.t8.name=Cohete Nivel 8
 schematic.rocket.t9.name=Cohete Nivel 9
 schematic.rocket.t10.name=Cohete Nivel 10
-schematic.rocket.electric.t10.name=Cohete Eléctrico 
+schematic.rocket.electric.t10.name=Cohete Eléctrico
 
 #Batteries
 item.mercury_battery.name=Batería de mercurio
@@ -1290,6 +1290,7 @@ item.canned_food.dehydrated_porkchop.name=Chuletas de cerdo deshidratadas
 item.canned_food.dehydrated_fish.name=Pescados deshidratados
 item.canned_food.dehydrated_salmon.name=Salmones deshidratados
 item.canned_food.dehydrated_chicken.name=Pollos deshidratados
+item.canned_food.dehydrated_beef.name=Dehydrated Beef ##NEEDS TRANSLATE##
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=Tier 1 Battery ##NEEDS TRANSLATE##
@@ -1398,7 +1399,7 @@ achievement.craft_rocket_10.desc=Crea un Cohete Nivel 10
 #Liquids/Fluid
 tile.glowstone.name=Piedra luminosa líquida
 tile.magma.name=Magma líquido
-tile.nitrogen.name=Nitrógeno líquido 
+tile.nitrogen.name=Nitrógeno líquido
 tile.frozen_water.name=Agua Congelada
 tile.salt.name=Lqiuid Crystallized Water Bucket ##NEEDS TRANSLATE##
 tile.radioactive_water.name=Radioactive Water ##NEEDS TRANSLATE##
@@ -1412,7 +1413,7 @@ tile.liquid_caramel.name=Liquid Caramel ##NEEDS TRANSLATE##
 
 fluid.glowstone_fluid=Piedra Luminosa Líquida
 fluid.magma_fluid=Magma Líquido
-fluid.nitrogen_fluid=Nitrógeno Líquido 
+fluid.nitrogen_fluid=Nitrógeno Líquido
 fluid.frozen_water_fluid=Agua Congelada
 fluid.salt_fluid=Lqiuid Crystallized Water ##NEEDS TRANSLATE##
 fluid.radioactive_water_fluid=Radioactive Water ##NEEDS TRANSLATE##
