@@ -851,7 +851,7 @@ item.bucket_methane.name=액체 메탄 양동이
 item.bucket_nitrogen_ice.name=액체 질소 얼음 양동이
 item.bucket_liquid_hydrocarbon.name=액체 탄화수소 양동이
 item.bucket_liquid_caramel.name=액체 캐러멜 양동이
-item.bucket_liquid_chocolate.name=액체 초콜릿 
+item.bucket_liquid_chocolate.name=액체 초콜릿
 
 #Keys
 item.T4key.name=4티어 던전 열쇠
@@ -1290,6 +1290,7 @@ item.canned_food.dehydrated_porkchop.name=건조 폭찹
 item.canned_food.dehydrated_fish.name=건조 대구
 item.canned_food.dehydrated_salmon.name=건조 연어
 item.canned_food.dehydrated_chicken.name=건조 닭고기
+item.canned_food.dehydrated_beef.name=Dehydrated Beef ##NEEDS TRANSLATE##
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=1티어 배터리
