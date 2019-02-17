@@ -1,5 +1,5 @@
 {
-    "parent":"extraplanets:block/ceres_ore_copper_model",
+    "parent":"extraplanets:block/deimos_ore_copper_model",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
