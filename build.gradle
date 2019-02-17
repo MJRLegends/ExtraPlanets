@@ -144,7 +144,7 @@ task ("uploadMaven"){
 }
 
 curseforge {
-	if( project.hasProperty('keyStore')){
+    if (project.hasProperty('curseforge_key')){
 		apiKey = project.findProperty("curseforge_key")
 		project {
 			id = "241291"
