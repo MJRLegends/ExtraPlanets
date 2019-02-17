@@ -1511,7 +1511,7 @@ public class ExtraPlanets_Recipes {
 		}
 		if (Config.NEPTUNE) {
 			GCRecipeUtilities.addCompresssorShapelessRecipe(COMPRESSED_ZINC, INGOT_ZINC, INGOT_ZINC);
-			GCRecipeUtilities.addCompresssorShapelessRecipe(TIER_8_HEAVY_PLATING, TIER_7_HEAVY_PLATING, INGOT_ZINC, INGOT_ZINC, INGOT_ZINC, INGOT_ZINC, INGOT_ZINC);
+			GCRecipeUtilities.addCompresssorShapelessRecipe(TIER_8_HEAVY_PLATING, TIER_7_HEAVY_PLATING, COMPRESSED_ZINC, COMPRESSED_ZINC, COMPRESSED_ZINC, COMPRESSED_ZINC, COMPRESSED_ZINC);
 		}
 		if (Config.PLUTO) {
 			GCRecipeUtilities.addCompresssorShapelessRecipe(COMPRESSED_TUNGSTEN, INGOT_TUNGSTEN, INGOT_TUNGSTEN);
@@ -1519,7 +1519,7 @@ public class ExtraPlanets_Recipes {
 		}
 		if (Config.ERIS) {
 			GCRecipeUtilities.addCompresssorShapelessRecipe(COMPRESSED_DARK_IRON, INGOT_DARK_IRON, INGOT_DARK_IRON);
-			GCRecipeUtilities.addCompresssorShapelessRecipe(TIER_10_HEAVY_PLATING, TIER_9_HEAVY_PLATING, COMPRESSED_DARK_IRON, new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 1, 4), COMPRESSED_DARK_IRON, COMPRESSED_DARK_IRON, COMPRESSED_DARK_IRON);
+			GCRecipeUtilities.addCompresssorShapelessRecipe(TIER_10_HEAVY_PLATING, TIER_9_HEAVY_PLATING, COMPRESSED_DARK_IRON, COMPRESSED_DARK_IRON, COMPRESSED_DARK_IRON, COMPRESSED_DARK_IRON, COMPRESSED_DARK_IRON);
 		}
 		if (Config.KEPLER22B) {
 			GCRecipeUtilities.addCompresssorShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 6), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5),
