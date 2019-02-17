@@ -140,18 +140,20 @@ task ("uploadMaven"){
 }
 
 curseforge {
-	apiKey = project.findProperty("curseforge_key")
-	project {
-		id = "241291"
-		releaseType = "release"
-		addGameVersion "${minecraft_version}"
-		mainArtifact(jar) {
-			relations {
-				requiredLibrary 'mjrlegendslib'
+    if (project.hasProperty('curseforge_key')){
+		apiKey = project.findProperty("curseforge_key")
+		project {
+			id = "241291"
+			releaseType = "release"
+			addGameVersion "${minecraft_version}"
+			mainArtifact(jar) {
+				relations {
+					requiredLibrary 'mjrlegendslib'
+				}
 			}
+			addArtifact(apiJar)
+			addArtifact(deobfJar)
 		}
-		addArtifact(apiJar)
-		addArtifact(deobfJar)
 	}
 }
 
