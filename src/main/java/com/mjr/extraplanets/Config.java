@@ -262,6 +262,7 @@ public class Config {
 	public static boolean EXTREME_REACTORS_SUPPORT;
 	public static boolean MC_MULITPART_SUPPORT;
 	public static boolean GC_DECONSTRUCTOR_SUPPORT;
+	public static boolean MORE_PLANETS_ROCKET_CRUSHER_SUPPORT;
 
 	public static boolean CUSTOM_GALAXIES;
 	public static boolean USE_CUSTOM_CELESTAIAL_SELECTION;
@@ -677,6 +678,9 @@ public class Config {
 		GC_DECONSTRUCTOR_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galacticraft Deconstuctor Machine Compatibility", true, "Setting this to false will disable Galacticraft Deconstuctor Machine Compatibility!")
 				.getBoolean(true);
 
+		MORE_PLANETS_ROCKET_CRUSHER_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable More Planets Rocket Crusher Machine Compatibility", true, "Setting this to false will disable More Planets Rocket Crusher Machine Compatibility!")
+				.getBoolean(true);
+		
 		ACHIEVEMENTS = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable Achievements", true, "Setting this option to false will disable & remove Achievements for ExtraPlanets").getBoolean(true);
 
 		ORE_LEAD_GENERATION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable generation of Lead Ore in the Overworld", true, "Setting this option to false will completely remove Lead Ore/Ingot from the world").getBoolean(true);

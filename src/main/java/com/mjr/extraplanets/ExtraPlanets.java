@@ -41,6 +41,7 @@ import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.compatibility.ExtremeReactorsCompatibility;
 import com.mjr.extraplanets.compatibility.MCMultiPartCompatibility;
+import com.mjr.extraplanets.compatibility.MorePlanetsCompatibility;
 import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
@@ -632,6 +633,9 @@ public class ExtraPlanets {
 		@SubscribeEvent(priority = EventPriority.LOWEST)
 		public static void registerRecipesEvent(RegistryEvent.Register<IRecipe> event) {
 			ExtraPlanets_Recipes.initEvent();
+
+			if(Config.MORE_PLANETS_ROCKET_CRUSHER_SUPPORT)
+				MorePlanetsCompatibility.init();
 		}
 	}
 
