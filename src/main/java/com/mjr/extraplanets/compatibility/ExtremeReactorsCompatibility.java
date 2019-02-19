@@ -2,6 +2,9 @@ package com.mjr.extraplanets.compatibility;
 
 import java.lang.reflect.Method;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
+
 public class ExtremeReactorsCompatibility {
 
 	public static void init() {
@@ -30,6 +33,8 @@ public class ExtremeReactorsCompatibility {
 				registerMethod.invoke(null, "infected_water_fluid", 0.33f, 0.5f, 1.33f, 0.1f);
 			}
 		} catch (Exception e) {
+			MessageUtilities.fatalErrorMessageToLog(Constants.modID, "Error when setting up ExtremeReactors Compatibility, ErrorMessage: ");
+			e.printStackTrace();
 		}
 	}
 }
