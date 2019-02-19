@@ -31,6 +31,7 @@ import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
+import com.mjr.extraplanets.compatibility.MorePlanetsCompatibility;
 import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
@@ -335,6 +336,9 @@ public class ExtraPlanets {
 		if (Config.GC_DECONSTRUCTOR_SUPPORT)
 			RegisterDeconstructorCompatibility();
 
+		if(Config.MORE_PLANETS_ROCKET_CRUSHER_SUPPORT)
+			MorePlanetsCompatibility.init();
+		
 		// Register Custom Recipe Type
 		RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
 
