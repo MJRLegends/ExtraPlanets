@@ -2,6 +2,9 @@ package com.mjr.extraplanets.blocks;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.Material;
@@ -15,8 +18,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicGrass extends Block implements IGrowable {
 	protected BlockBasicGrass() {
@@ -62,6 +63,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 		return true;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void grow(World world, Random rand, BlockPos pos, IBlockState state) {
 		BlockPos blockpos = pos.up();
@@ -73,15 +75,42 @@ public class BlockBasicGrass extends Block implements IGrowable {
 			while (true) {
 				if (j >= i / 16) {
 					if (world.isAirBlock(blockpos1)) {
-						// if (rand.nextInt(8) == 0) {
-						// world.getBiome(blockpos1).plantFlower(world, rand, blockpos1);
-						// } else {
-						// IBlockState iblockstate1 = Blocks.TALLGRASS.getDefaultState().withProperty(BlockTallGrass.TYPE, BlockTallGrass.EnumType.GRASS);
-						//
-						// if (Blocks.TALLGRASS.canBlockStay(world, blockpos1, iblockstate1)) {
-						// world.setBlockState(blockpos1, iblockstate1, 3);
-						// }
-						// } TODO Add Ability to bone meal grass
+						if (rand.nextInt(8) == 0) {
+							world.getBiome(blockpos1).plantFlower(world, rand, blockpos1);
+						} else {
+							IBlockState iblockstate1;
+							if (state.getBlock().equals(ExtraPlanets_Blocks.KEPLER22B_GRASS_BLUE)) {
+								int type = rand.nextInt(3 + 1 - 1) + 0;
+								iblockstate1 = ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS.getStateFromMeta(type);
+								if (((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS).canBlockStay(world, blockpos1, iblockstate1)) {
+									world.setBlockState(blockpos1, iblockstate1, 3);
+								}
+							} else if (state.getBlock().equals(ExtraPlanets_Blocks.KEPLER22B_GRASS_GREEN)) {
+								int type = 11 + (rand.nextInt(3 + 1 - 1) + 1);
+								iblockstate1 = ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS.getStateFromMeta(type);
+								if (((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS).canBlockStay(world, blockpos1, iblockstate1)) {
+									world.setBlockState(blockpos1, iblockstate1, 3);
+								}
+							} else if (state.getBlock().equals(ExtraPlanets_Blocks.KEPLER22B_GRASS_PURPLE)) {
+								int type = 5 + (rand.nextInt(3 + 1 - 1) + 1);
+								iblockstate1 = ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS.getStateFromMeta(type);
+								if (((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS).canBlockStay(world, blockpos1, iblockstate1)) {
+									world.setBlockState(blockpos1, iblockstate1, 3);
+								}
+							} else if (state.getBlock().equals(ExtraPlanets_Blocks.KEPLER22B_GRASS_RED)) {
+								int type = 2 + (rand.nextInt(3 + 1 - 1) + 1);
+								iblockstate1 = ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS.getStateFromMeta(type);
+								if (((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS).canBlockStay(world, blockpos1, iblockstate1)) {
+									world.setBlockState(blockpos1, iblockstate1, 3);
+								}
+							} else if (state.getBlock().equals(ExtraPlanets_Blocks.KEPLER22B_GRASS_YELLOW)) {
+								int type = 8 + (rand.nextInt(3 + 1 - 1) + 1);
+								iblockstate1 = ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS.getStateFromMeta(type);
+								if (((BlockBasicKepler22bTallGrass) ExtraPlanets_Blocks.KEPLER22B_MAPLE_FLOWERS).canBlockStay(world, blockpos1, iblockstate1)) {
+									world.setBlockState(blockpos1, iblockstate1, 3);
+								}
+							}
+						}
 					}
 
 					break;
