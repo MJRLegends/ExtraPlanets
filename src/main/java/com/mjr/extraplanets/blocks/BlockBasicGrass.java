@@ -63,7 +63,6 @@ public class BlockBasicGrass extends Block implements IGrowable {
 		return true;
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public void grow(World world, Random rand, BlockPos pos, IBlockState state) {
 		BlockPos blockpos = pos.up();
@@ -76,7 +75,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 				if (j >= i / 16) {
 					if (world.isAirBlock(blockpos1)) {
 						if (rand.nextInt(8) == 0) {
-							world.getBiome(blockpos1).plantFlower(world, rand, blockpos1);
+							world.getBiomeGenForCoords(blockpos1).plantFlower(world, rand, blockpos1);
 						} else {
 							IBlockState iblockstate1;
 							if (state.getBlock().equals(ExtraPlanets_Blocks.KEPLER22B_GRASS_BLUE)) {
