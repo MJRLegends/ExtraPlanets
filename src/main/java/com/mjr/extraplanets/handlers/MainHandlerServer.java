@@ -318,43 +318,61 @@ public class MainHandlerServer {
 
 	public boolean isValidSpaceSuit(ItemStack helmet, ItemStack chest, ItemStack leggins, ItemStack boots, List<String> list) {
 		boolean valid = false;
-		for(String temp : list) {
+		if (list.size() == 0)
+			list.add("test:test:0");
+		for (String temp : list) {
 			temp = temp.substring(0, temp.lastIndexOf(':'));
-		if (helmet == null)
-			return false;
-		if ((helmet.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-			valid = true;
-		if (!(helmet.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-			valid = true;
-		if (!(helmet.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-			return false;
+			if (helmet == null)
+				return false;
+			if ((helmet.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
+				valid = true;
+			if (!(helmet.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
+				valid = true;
+			if ((helmet.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
+				valid = true;
+			if (!(helmet.getItem() instanceof IRadiationSuit) && temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
+				valid = true;
+			if (!(helmet.getItem() instanceof IPressureSuit) && !(helmet.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
+				return false;
 
-		if (chest == null)
-			return false;
-		if ((chest.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-			valid = true;
-		if (!(chest.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-			valid = true;
-		if (!(chest.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-			return false;
+			if (chest == null)
+				return false;
+			if ((chest.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
+				valid = true;
+			if (!(chest.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
+				valid = true;
+			if ((chest.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
+				valid = true;
+			if (!(chest.getItem() instanceof IRadiationSuit) && temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
+				valid = true;
+			if (!(chest.getItem() instanceof IPressureSuit) && !(chest.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
+				return false;
 
-		if (leggins == null)
-			return false;
-		if ((leggins.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-			valid = true;
-		if (!(leggins.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-			valid = true;
-		if (!(leggins.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-			return false;
+			if (leggins == null)
+				return false;
+			if ((leggins.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
+				valid = true;
+			if (!(leggins.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
+				valid = true;
+			if ((leggins.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
+				valid = true;
+			if (!(leggins.getItem() instanceof IRadiationSuit) && temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
+				valid = true;
+			if (!(leggins.getItem() instanceof IPressureSuit) && !(leggins.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
+				return false;
 
-		if (boots == null)
-			return false;
-		if ((boots.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
-			valid = true;
-		if (!(boots.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
-			valid = true;
-		if (!(boots.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
-			return false;
+			if (boots == null)
+				return false;
+			if ((boots.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
+				valid = true;
+			if (!(boots.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
+				valid = true;
+			if ((boots.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
+				valid = true;
+			if (!(boots.getItem() instanceof IRadiationSuit) && temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
+				valid = true;
+			if (!(boots.getItem() instanceof IPressureSuit) && !(boots.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
+				return false;
 		}
 		if (valid)
 			return true;
@@ -363,7 +381,7 @@ public class MainHandlerServer {
 	}
 
 	public int getTier(ItemStack testItem, List<String> list) {
-		if (testItem.getItem() instanceof IPressureSuit)
+		if (testItem.getItem() instanceof IRadiationSuit)
 			return ((IRadiationSuit) testItem.getItem()).getArmorTier();
 
 		for (String line : list) {
