@@ -281,41 +281,99 @@ public class MainHandlerServer {
 		if ((entityLiving.ridingEntity instanceof EntitySpaceshipBase))
 			return;
 		if (entityLiving.worldObj.provider instanceof IGalacticraftWorldProvider) {
+			List<String> list = Lists.newArrayList(Config.SPACE_SUIT_SUPPORTED_ARMOUR);
 			if (((EntityPlayerMP) entityLiving).worldObj.provider instanceof WorldProviderRealisticSpace) {
 				if (Config.PRESSURE)
-					checkPressure(event, player, ((WorldProviderRealisticSpace) player.worldObj.provider).getPressureLevel());
+					checkPressure(event, player, ((WorldProviderRealisticSpace) player.worldObj.provider).getPressureLevel(), list);
 				if (Config.RADIATION)
-					checkRadiation(event, player, ((WorldProviderRealisticSpace) player.worldObj.provider).getSolarRadiationLevel());
+					checkRadiation(event, player, ((WorldProviderRealisticSpace) player.worldObj.provider).getSolarRadiationLevel(), list);
 			} else if (player.worldObj.provider instanceof WorldProviderMoon) {
 				if (Config.GC_PRESSURE && Config.PRESSURE)
-					checkPressure(event, player, 80);
+					checkPressure(event, player, 80, list);
 				if (Config.GC_RADIATION && Config.RADIATION)
-					checkRadiation(event, player, Config.MOON_RADIATION_AMOUNT);
+					checkRadiation(event, player, Config.MOON_RADIATION_AMOUNT, list);
 			} else if (player.worldObj.provider instanceof WorldProviderMars) {
 				if (Config.GC_PRESSURE && Config.PRESSURE)
-					checkPressure(event, player, 90);
+					checkPressure(event, player, 90, list);
 				if (Config.GC_RADIATION && Config.RADIATION)
-					checkRadiation(event, player, Config.MARS_RADIATION_AMOUNT);
+					checkRadiation(event, player, Config.MARS_RADIATION_AMOUNT, list);
 			} else if (player.worldObj.provider instanceof WorldProviderVenus) {
 				if (Config.GC_PRESSURE && Config.PRESSURE)
-					checkPressure(event, player, 100);
+					checkPressure(event, player, 100, list);
 				if (Config.GC_RADIATION && Config.RADIATION)
-					checkRadiation(event, player, Config.VENUS_RADIATION_AMOUNT);
+					checkRadiation(event, player, Config.VENUS_RADIATION_AMOUNT, list);
 			} else if (player.worldObj.provider instanceof WorldProviderAsteroids) {
 				if (Config.GC_PRESSURE && Config.PRESSURE)
-					checkPressure(event, player, 100);
+					checkPressure(event, player, 100, list);
 				if (Config.GC_RADIATION && Config.RADIATION)
-					checkRadiation(event, player, Config.ASTEROIDS_RADIATION_AMOUNT);
+					checkRadiation(event, player, Config.ASTEROIDS_RADIATION_AMOUNT, list);
 			} else if (player.worldObj.provider instanceof WorldProviderSpaceStation) {
 				if (Config.GC_PRESSURE && Config.PRESSURE)
-					checkPressure(event, player, 100);
+					checkPressure(event, player, 100, list);
 				if (Config.GC_RADIATION && Config.RADIATION)
-					checkRadiation(event, player, Config.SPACE_STATION_RADIATION_AMOUNT);
+					checkRadiation(event, player, Config.SPACE_STATION_RADIATION_AMOUNT, list);
 			}
 		}
 	}
 
-	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityPlayerMP playerMP, int amount) {
+	public boolean isValidSpaceSuit(ItemStack helmet, ItemStack chest, ItemStack leggins, ItemStack boots, List<String> list) {
+		boolean valid = false;
+		for(String temp : list) {
+			temp = temp.substring(0, temp.lastIndexOf(':'));
+		if (helmet == null)
+			return false;
+		if ((helmet.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
+			valid = true;
+		if (!(helmet.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
+			valid = true;
+		if (!(helmet.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
+			return false;
+
+		if (chest == null)
+			return false;
+		if ((chest.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
+			valid = true;
+		if (!(chest.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
+			valid = true;
+		if (!(chest.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
+			return false;
+
+		if (leggins == null)
+			return false;
+		if ((leggins.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
+			valid = true;
+		if (!(leggins.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
+			valid = true;
+		if (!(leggins.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
+			return false;
+
+		if (boots == null)
+			return false;
+		if ((boots.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
+			valid = true;
+		if (!(boots.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
+			valid = true;
+		if (!(boots.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
+			return false;
+		}
+		if (valid)
+			return true;
+		else
+			return false;
+	}
+
+	public int getTier(ItemStack testItem, List<String> list) {
+		if (testItem.getItem() instanceof IPressureSuit)
+			return ((IRadiationSuit) testItem.getItem()).getArmorTier();
+
+		for (String line : list) {
+			if (line.substring(0, line.lastIndexOf(':')).equalsIgnoreCase(testItem.getItem().getRegistryName().toString()))
+				return Integer.parseInt(line.substring(line.lastIndexOf(':') + 1));
+		}
+		return -1;
+	}
+
+	private void checkPressure(LivingEvent.LivingUpdateEvent event, EntityPlayerMP playerMP, int amount, List<String> list) {
 		if ((playerMP.ticksExisted - 1) % 50 == 0) {
 			if (amount == 0)
 				return;
@@ -328,18 +386,7 @@ public class MainHandlerServer {
 			ItemStack leggins = playerMP.inventory.armorInventory[2];
 			ItemStack boots = playerMP.inventory.armorInventory[3];
 
-			boolean doDamage = false;
-
-			if (helmet == null || !(helmet.getItem() instanceof IPressureSuit))
-				doDamage = true;
-			else if (chest == null || !(chest.getItem() instanceof IPressureSuit))
-				doDamage = true;
-			else if (leggins == null || !(leggins.getItem() instanceof IPressureSuit))
-				doDamage = true;
-			else if (boots == null || !(boots.getItem() instanceof IPressureSuit))
-				doDamage = true;
-
-			if (doDamage) {
+			if (!isValidSpaceSuit(helmet, chest, leggins, boots, list)) {
 				float tempLevel = amount;
 				tempLevel = (tempLevel / 100) * 8;
 				if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE)
@@ -349,7 +396,7 @@ public class MainHandlerServer {
 		}
 	}
 
-	private void checkRadiation(LivingEvent.LivingUpdateEvent event, EntityPlayerMP playerMP, int amount) {
+	private void checkRadiation(LivingEvent.LivingUpdateEvent event, EntityPlayerMP playerMP, int amount, List<String> list) {
 		// Tier 1 Space Suit
 		// 25 Level = 36 mins
 		// 50 Level = 14 mins
@@ -364,26 +411,30 @@ public class MainHandlerServer {
 		boolean doDamage = false;
 		boolean doArmorCheck = false;
 		double damageModifer = 0;
-		if (playerMP.inventory.armorInventory[0] == null || playerMP.inventory.armorInventory[1] == null || playerMP.inventory.armorInventory[2] == null || playerMP.inventory.armorInventory[3] == null) {
+
+		ItemStack helmet = playerMP.inventory.armorInventory[3];
+		ItemStack chest = playerMP.inventory.armorInventory[2];
+		ItemStack leggins = playerMP.inventory.armorInventory[1];
+		ItemStack boots = playerMP.inventory.armorInventory[0];
+		if (!isValidSpaceSuit(helmet, chest, leggins, boots, list)) {
 			damageModifer = 0.1;
 			doDamage = true;
-		} else if (!(playerMP.inventory.armorInventory[0].getItem() instanceof IRadiationSuit) && !(playerMP.inventory.armorInventory[1].getItem() instanceof IRadiationSuit)
-				&& !(playerMP.inventory.armorInventory[2].getItem() instanceof IRadiationSuit) && !(playerMP.inventory.armorInventory[3].getItem() instanceof IRadiationSuit)) {
-			damageModifer = 0.1;
-			doDamage = true;
-		} else if (playerMP.inventory.armorInventory[0].getItem() instanceof IRadiationSuit && playerMP.inventory.armorInventory[1].getItem() instanceof IRadiationSuit && playerMP.inventory.armorInventory[2].getItem() instanceof IRadiationSuit
-				&& playerMP.inventory.armorInventory[3].getItem() instanceof IRadiationSuit) {
+		} else {
 			doArmorCheck = true;
 			doDamage = false;
-		} else {
-			damageModifer = 0.1;
-			doDamage = true;
 		}
 		if (doArmorCheck) {
-			int helmetTier = ((IRadiationSuit) playerMP.inventory.armorInventory[0].getItem()).getArmorTier();
-			int chestTier = ((IRadiationSuit) playerMP.inventory.armorInventory[1].getItem()).getArmorTier();
-			int legginsTier = ((IRadiationSuit) playerMP.inventory.armorInventory[2].getItem()).getArmorTier();
-			int bootsTier = ((IRadiationSuit) playerMP.inventory.armorInventory[3].getItem()).getArmorTier();
+			int helmetTier = getTier(helmet, list);
+			int chestTier = getTier(chest, list);
+			int legginsTier = getTier(leggins, list);
+			int bootsTier = getTier(boots, list);
+
+			if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE) {
+				MessageUtilities.debugMessageToLog(Constants.modID, "Helmet Tier: " + helmetTier);
+				MessageUtilities.debugMessageToLog(Constants.modID, "Chest Tier: " + chestTier);
+				MessageUtilities.debugMessageToLog(Constants.modID, "Leggins Tier: " + legginsTier);
+				MessageUtilities.debugMessageToLog(Constants.modID, "Boots Tier: " + bootsTier);
+			}
 
 			int tierValue = (helmetTier + chestTier + legginsTier + bootsTier) / 2;
 			double damageToTake = 0.005 * tierValue;
