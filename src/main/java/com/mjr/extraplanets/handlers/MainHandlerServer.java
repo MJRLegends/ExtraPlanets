@@ -458,7 +458,6 @@ public class MainHandlerServer {
 				if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE)
 					MessageUtilities.debugMessageToLog(Constants.modID, "Gained amount of Radiation: " + tempLevel);
 				stats.setRadiationLevel(stats.getRadiationLevel() + tempLevel);
-				stats.setRadiationLevel(0);
 			} else
 				stats.setRadiationLevel(0);
 		}
