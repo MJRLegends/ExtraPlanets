@@ -282,6 +282,7 @@ public class Config {
 	public static int RADIATION_SLEEPING_REDUCE_AMOUNT;
 	public static int RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT;
 	public static int RADIATION_ANTI_RAD_REDUCE_AMOUNT;
+	public static String[] SPACE_SUIT_SUPPORTED_ARMOUR;
 
 	public static int SPACE_STATION_RADIATION_AMOUNT;
 
@@ -715,6 +716,9 @@ public class Config {
 		RADIATION_SLEEPING_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Sleeping", 5, "[range: -2147483647 ~ 2147483647, default: 5]").getInt();
 		RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Decontamination Unit", 10, "[range: -2147483647 ~ 2147483647, default: 10]").getInt();
 		RADIATION_ANTI_RAD_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Anti Rad Drinks", 50, "[range: -2147483647 ~ 2147483647, default: 50]").getInt();
+
+		SPACE_SUIT_SUPPORTED_ARMOUR = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "List of armour items to be considered as a space suit", new String[0], "Format: 'modID:item:tier' | example: minecraft:iron_chestplate:4")
+				.getStringList();
 
 		SPACE_STATION_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Space Stations (in %)", 4, "[0 = Disabled. range: 0 ~ 100, default: 4]").getInt();
 
