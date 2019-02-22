@@ -3,6 +3,9 @@ package com.mjr.extraplanets.api.prefabs.world;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.mjrlegendslib.world.ChunkProviderBase;
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
+
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.perlin.generator.Gradient;
@@ -17,9 +20,6 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.chunk.IChunkProvider;
-
-import com.mjr.mjrlegendslib.world.ChunkProviderBase;
-import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 
 /*
  * Class from Galacticraft Core

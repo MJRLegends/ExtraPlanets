@@ -2,13 +2,13 @@ package com.mjr.extraplanets.moons.Titan.worldgen.biomes;
 
 import java.util.List;
 
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenTitanMethaneSea extends BiomeGenBase {
 	public BiomeGenTitanMethaneSea(int par1) {

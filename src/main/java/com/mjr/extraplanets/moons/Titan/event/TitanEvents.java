@@ -1,11 +1,11 @@
 package com.mjr.extraplanets.moons.Titan.event;
 
+import com.mjr.extraplanets.Config;
+
 import micdoodle8.mods.galacticraft.api.event.oxygen.GCCoreOxygenSuffocationEvent;
 import micdoodle8.mods.galacticraft.core.event.EventWakePlayer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
-import com.mjr.extraplanets.Config;
 
 public class TitanEvents {
 	@SubscribeEvent

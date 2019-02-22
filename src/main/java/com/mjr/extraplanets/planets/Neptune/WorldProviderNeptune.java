@@ -3,13 +3,6 @@ package com.mjr.extraplanets.planets.Neptune;
 import java.util.LinkedList;
 import java.util.List;
 
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
-import net.minecraft.block.Block;
-import net.minecraft.world.biome.WorldChunkManager;
-import net.minecraft.world.chunk.IChunkProvider;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -17,6 +10,13 @@ import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.planets.Neptune.worldgen.ChunkProviderNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.WorldChunkManagerNeptune;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
+import net.minecraft.block.Block;
+import net.minecraft.world.biome.WorldChunkManager;
+import net.minecraft.world.chunk.IChunkProvider;
 
 public class WorldProviderNeptune extends WorldProviderRealisticSpace {
 

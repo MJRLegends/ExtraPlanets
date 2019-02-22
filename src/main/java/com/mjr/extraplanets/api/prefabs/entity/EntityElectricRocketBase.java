@@ -1,10 +1,13 @@
 package com.mjr.extraplanets.api.prefabs.entity;
 
-import io.netty.buffer.ByteBuf;
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.enitity.IPoweredDockable;
+import com.mjr.extraplanets.network.PacketSimpleEP;
+
+import io.netty.buffer.ByteBuf;
 import micdoodle8.mods.galacticraft.api.entity.ICameraZoomEntity;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.entity.IWorldTransferCallback;
@@ -20,10 +23,6 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.api.enitity.IPoweredDockable;
-import com.mjr.extraplanets.network.PacketSimpleEP;
 
 /**
  * Do not include this prefab class in your released mod download.

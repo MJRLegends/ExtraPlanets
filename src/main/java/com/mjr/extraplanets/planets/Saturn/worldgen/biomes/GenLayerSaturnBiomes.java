@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.planets.Saturn.worldgen.biomes;
 
+import com.mjr.extraplanets.planets.Saturn.worldgen.SaturnBiomes;
+
 import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
-
-import com.mjr.extraplanets.planets.Saturn.worldgen.SaturnBiomes;
 
 public class GenLayerSaturnBiomes extends GenLayer {
 	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { SaturnBiomes.saturn, SaturnBiomes.saturnHydroCarbonSea, SaturnBiomes.saturnNuclearLand };

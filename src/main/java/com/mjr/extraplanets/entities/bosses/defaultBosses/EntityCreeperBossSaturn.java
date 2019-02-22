@@ -3,6 +3,8 @@ package com.mjr.extraplanets.entities.bosses.defaultBosses;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.core.Constants;
@@ -34,8 +36,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
-
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityCreeperBossSaturn extends EntityBossBase implements IEntityBreathable, IRangedAttackMob {
 	protected long ticks = 0;

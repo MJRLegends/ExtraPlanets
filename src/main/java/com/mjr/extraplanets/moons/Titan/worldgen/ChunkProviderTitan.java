@@ -3,10 +3,6 @@ package com.mjr.extraplanets.moons.Titan.worldgen;
 import java.util.List;
 import java.util.Random;
 
-import net.minecraft.world.World;
-import net.minecraft.world.chunk.Chunk;
-import net.minecraft.world.chunk.ChunkPrimer;
-
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
@@ -14,6 +10,10 @@ import com.mjr.mjrlegendslib.world.ChunkProviderMultiBiomeSpace;
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
 import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
+
+import net.minecraft.world.World;
+import net.minecraft.world.chunk.Chunk;
+import net.minecraft.world.chunk.ChunkPrimer;
 
 public class ChunkProviderTitan extends ChunkProviderMultiBiomeSpace {
 	private final BiomeDecoratorTitan ceresBiomeDecorator = new BiomeDecoratorTitan();

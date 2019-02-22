@@ -1,9 +1,5 @@
 package com.mjr.extraplanets.items.tools;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.Item.ToolMaterial;
-import net.minecraftforge.common.util.EnumHelper;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.mjrlegendslib.item.BasicAxe;
@@ -12,6 +8,10 @@ import com.mjr.mjrlegendslib.item.BasicPickaxe;
 import com.mjr.mjrlegendslib.item.BasicShovel;
 import com.mjr.mjrlegendslib.item.BasicSword;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraftforge.common.util.EnumHelper;
 
 public class ExtraPlanets_Tools {
 	private static ToolMaterial CARBON_MATERIAL = EnumHelper.addToolMaterial("Carbon Material", 3, 40, 4.0F, 3.0F, 30);

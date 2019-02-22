@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.moons.Europa.worldgen.biomes;
 
+import com.mjr.extraplanets.moons.Europa.worldgen.EuropaBiomes;
+
 import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
-
-import com.mjr.extraplanets.moons.Europa.worldgen.EuropaBiomes;
 
 public class GenLayerEuropaBiomes extends GenLayer {
 	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { EuropaBiomes.europa, EuropaBiomes.europaSaltSea, EuropaBiomes.europaIceValleys };

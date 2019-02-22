@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.moons.Europa.worldgen.biomes.GenLayerEuropa;
+
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
@@ -14,8 +16,6 @@ import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.moons.Europa.worldgen.biomes.GenLayerEuropa;
 
 public class WorldChunkManagerEuropa extends WorldChunkManager {
 	private GenLayer unzoomedBiomes;

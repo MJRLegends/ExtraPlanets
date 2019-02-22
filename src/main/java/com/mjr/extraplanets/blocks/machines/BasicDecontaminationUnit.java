@@ -2,6 +2,12 @@ package com.mjr.extraplanets.blocks.machines;
 
 import java.util.List;
 
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.core.blocks.BlockTileGC;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
@@ -25,12 +31,6 @@ import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
-import com.mjr.mjrlegendslib.util.PlayerUtilties;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class BasicDecontaminationUnit extends BlockTileGC implements ISortableBlock {
 	protected BasicDecontaminationUnit(String name) {

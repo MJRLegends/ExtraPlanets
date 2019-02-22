@@ -3,15 +3,15 @@ package com.mjr.extraplanets.tileEntities.dungeonSpawners;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 
 public class TileEntityDungeonSpawnerSaturn extends TileEntityDungeonSpawner<EntityEvolvedGhastBoss> {
 	public TileEntityDungeonSpawnerSaturn() {

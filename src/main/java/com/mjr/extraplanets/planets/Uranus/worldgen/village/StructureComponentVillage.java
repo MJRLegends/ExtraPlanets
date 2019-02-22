@@ -3,6 +3,8 @@ package com.mjr.extraplanets.planets.Uranus.worldgen.village;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.planets.Uranus.worldgen.MapGenVillageUranus;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityAlienVillager;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.BlockPos;
@@ -10,8 +12,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
-
-import com.mjr.extraplanets.planets.Uranus.worldgen.MapGenVillageUranus;
 
 public abstract class StructureComponentVillage extends StructureComponent {
 	static {

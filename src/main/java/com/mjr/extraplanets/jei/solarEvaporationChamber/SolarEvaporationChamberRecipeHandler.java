@@ -2,11 +2,11 @@ package com.mjr.extraplanets.jei.solarEvaporationChamber;
 
 import javax.annotation.Nonnull;
 
+import com.mjr.extraplanets.jei.RecipeCategories;
+
 import mezz.jei.api.recipe.IRecipeHandler;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import micdoodle8.mods.galacticraft.core.util.GCLog;
-
-import com.mjr.extraplanets.jei.RecipeCategories;
 
 public class SolarEvaporationChamberRecipeHandler implements IRecipeHandler<SolarEvaporationChamberRecipeWrapper> {
 	@Nonnull

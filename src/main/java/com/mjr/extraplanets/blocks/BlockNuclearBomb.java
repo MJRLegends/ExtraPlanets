@@ -1,13 +1,13 @@
 package com.mjr.extraplanets.blocks;
 
+import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
+import com.mjr.mjrlegendslib.block.BlockBasicExplosion;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
-import com.mjr.mjrlegendslib.block.BlockBasicExplosion;
 
 public class BlockNuclearBomb extends BlockBasicExplosion {
 

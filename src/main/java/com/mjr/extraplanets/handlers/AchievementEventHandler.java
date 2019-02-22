@@ -1,12 +1,5 @@
 package com.mjr.extraplanets.handlers;
 
-import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets_Achievements;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
@@ -17,6 +10,13 @@ import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedSpacemanBoss;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
+import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 
 public class AchievementEventHandler {
 	@SubscribeEvent

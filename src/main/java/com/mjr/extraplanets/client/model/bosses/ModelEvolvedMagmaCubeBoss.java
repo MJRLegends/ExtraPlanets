@@ -1,13 +1,13 @@
 package com.mjr.extraplanets.client.model.bosses;
 
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
+
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
 
 @SideOnly(Side.CLIENT)
 public class ModelEvolvedMagmaCubeBoss extends ModelBase {

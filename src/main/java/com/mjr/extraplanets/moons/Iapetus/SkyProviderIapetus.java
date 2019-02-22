@@ -2,6 +2,11 @@ package com.mjr.extraplanets.moons.Iapetus;
 
 import java.util.Random;
 
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL12;
+
+import com.mjr.mjrlegendslib.util.MCUtilities;
+
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
@@ -17,11 +22,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Vec3;
 import net.minecraftforge.client.IRenderHandler;
-
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL12;
-
-import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class SkyProviderIapetus extends IRenderHandler {
 	private static final ResourceLocation overworldTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn.png");

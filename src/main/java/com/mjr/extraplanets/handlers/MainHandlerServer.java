@@ -3,6 +3,33 @@ package com.mjr.extraplanets.handlers;
 import java.util.List;
 import java.util.Random;
 
+import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.item.IModularArmor;
+import com.mjr.extraplanets.api.item.IPressureSuit;
+import com.mjr.extraplanets.api.item.IRadiationSuit;
+import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
+import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.blocks.fluid.FluidBlockEP;
+import com.mjr.extraplanets.client.handlers.capabilities.CapabilityProviderStatsClient;
+import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
+import com.mjr.extraplanets.handlers.capabilities.CapabilityProviderStats;
+import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
+import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.items.armor.modules.Module;
+import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
+import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
+import com.mjr.extraplanets.network.PacketSimpleEP;
+import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
+import com.mjr.extraplanets.util.DamageSourceEP;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderMoon;
@@ -43,33 +70,6 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.WorldTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.google.common.collect.Lists;
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.api.item.IModularArmor;
-import com.mjr.extraplanets.api.item.IPressureSuit;
-import com.mjr.extraplanets.api.item.IRadiationSuit;
-import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
-import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.blocks.fluid.FluidBlockEP;
-import com.mjr.extraplanets.client.handlers.capabilities.CapabilityProviderStatsClient;
-import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
-import com.mjr.extraplanets.handlers.capabilities.CapabilityProviderStats;
-import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
-import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.items.armor.modules.Module;
-import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
-import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
-import com.mjr.extraplanets.network.PacketSimpleEP;
-import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
-import com.mjr.extraplanets.util.DamageSourceEP;
-import com.mjr.mjrlegendslib.util.MessageUtilities;
-import com.mjr.mjrlegendslib.util.PlayerUtilties;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class MainHandlerServer {
 

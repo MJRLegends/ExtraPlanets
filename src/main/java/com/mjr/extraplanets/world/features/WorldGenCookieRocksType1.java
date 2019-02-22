@@ -2,16 +2,16 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
-import net.minecraft.util.BlockPos;
-import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenerator;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.BlockCakeBlocks;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
+
+import net.minecraft.util.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenCookieRocksType1 extends WorldGenerator {
 

@@ -2,6 +2,14 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.features;
 
 import java.util.Random;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
@@ -12,14 +20,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 public class WorldGenKepler22bDungeons extends WorldGenerator {
 	private static final Logger LOGGER = LogManager.getLogger();

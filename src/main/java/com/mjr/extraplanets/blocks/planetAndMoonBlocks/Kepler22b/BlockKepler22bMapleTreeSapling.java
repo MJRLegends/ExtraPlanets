@@ -3,6 +3,10 @@ package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
+
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
 import net.minecraft.block.material.MapColor;
@@ -24,10 +28,6 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
 
 public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowable, IPlantable {
 	public static final PropertyEnum<BlockKepler22bMapleTreeSapling.EnumType> VARIANT = PropertyEnum.<BlockKepler22bMapleTreeSapling.EnumType> create("variant", BlockKepler22bMapleTreeSapling.EnumType.class);

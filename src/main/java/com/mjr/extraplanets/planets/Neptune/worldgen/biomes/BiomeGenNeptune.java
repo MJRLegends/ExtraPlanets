@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.planets.Neptune.worldgen.biomes;
 
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
+
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenNeptune extends NeptuneBiomes {
 

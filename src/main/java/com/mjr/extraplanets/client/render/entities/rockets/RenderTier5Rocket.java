@@ -1,5 +1,12 @@
 package com.mjr.extraplanets.client.render.entities.rockets;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT5;
+import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
+import com.mjr.mjrlegendslib.util.ModelUtilities;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -12,13 +19,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT5;
-import com.mjr.extraplanets.entities.rockets.EntityTier5Rocket;
-import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderTier5Rocket extends Render<EntityTier5Rocket> {

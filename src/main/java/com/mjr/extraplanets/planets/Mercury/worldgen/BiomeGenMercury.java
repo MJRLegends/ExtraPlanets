@@ -1,8 +1,8 @@
 package com.mjr.extraplanets.planets.Mercury.worldgen;
 
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.mjr.extraplanets.Config;
+
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenMercury extends MercuryBiomes {
 

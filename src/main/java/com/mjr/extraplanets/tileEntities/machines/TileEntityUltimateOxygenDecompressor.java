@@ -2,6 +2,10 @@ package com.mjr.extraplanets.tileEntities.machines;
 
 import java.util.EnumSet;
 
+import com.mjr.extraplanets.blocks.machines.UltimateOxygenCompressor;
+import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityOxygen;
@@ -12,10 +16,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.EnumFacing;
-
-import com.mjr.extraplanets.blocks.machines.UltimateOxygenCompressor;
-import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityUltimateOxygenDecompressor extends TileEntityOxygen implements IInventoryDefaults, ISidedInventory {
 	private ItemStack[] containingItems = new ItemStack[2];

@@ -1,10 +1,15 @@
 package com.mjr.extraplanets.api.prefabs.entity;
 
-import io.netty.buffer.ByteBuf;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mjr.extraplanets.api.block.IPowerDock;
+import com.mjr.extraplanets.api.enitity.IPoweredLandable;
+import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
+import io.netty.buffer.ByteBuf;
 import micdoodle8.mods.galacticraft.api.entity.IEntityNoisy;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.IOrbitDimension;
@@ -40,12 +45,6 @@ import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.network.ByteBufUtils;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.api.block.IPowerDock;
-import com.mjr.extraplanets.api.enitity.IPoweredLandable;
-import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
-import com.mjr.mjrlegendslib.util.PlayerUtilties;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityElectricAutoRocket extends EntityElectricSpaceshipBase implements IPoweredLandable, IInventoryDefaults, IEntityNoisy {
 	public BlockPos targetVec;

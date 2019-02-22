@@ -2,6 +2,9 @@ package com.mjr.extraplanets.blocks.fluid;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.util.DamageSourceEP;
+import com.mjr.mjrlegendslib.block.FluidBasicBlock;
+
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import net.minecraft.block.material.Material;
@@ -13,9 +16,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.util.DamageSourceEP;
-import com.mjr.mjrlegendslib.block.FluidBasicBlock;
 
 public class FluidBlockEP extends FluidBasicBlock {
 

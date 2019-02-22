@@ -2,14 +2,14 @@ package com.mjr.extraplanets.moons.Europa.worldgen.biomes;
 
 import java.util.List;
 
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.Europa.worldgen.EuropaBiomes;
+
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenEuropaSaltSea extends EuropaBiomes {
 	public BiomeGenEuropaSaltSea(int var1) {

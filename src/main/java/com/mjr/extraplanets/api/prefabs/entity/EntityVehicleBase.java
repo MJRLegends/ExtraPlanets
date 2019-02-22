@@ -1,12 +1,17 @@
 package com.mjr.extraplanets.api.prefabs.entity;
 
-import io.netty.buffer.ByteBuf;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
+import io.netty.buffer.ByteBuf;
 import micdoodle8.mods.galacticraft.api.entity.IDockable;
 import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -37,12 +42,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
-import com.mjr.mjrlegendslib.util.MCUtilities;
-import com.mjr.mjrlegendslib.util.PlayerUtilties;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityVehicleBase extends Entity implements IInventoryDefaults, IPacketReceiver, IDockable, IControllableEntity, IEntityFullSync {
 	public final int tankCapacity = 1000;

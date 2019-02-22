@@ -1,5 +1,10 @@
 package com.mjr.extraplanets.schematicPages;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.client.gui.rockets.GuiSchematicTier7Rocket;
+import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier7Rocket;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicPage;
 import micdoodle8.mods.galacticraft.core.items.ItemSchematic;
 import net.minecraft.client.gui.GuiScreen;
@@ -9,11 +14,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.client.gui.rockets.GuiSchematicTier7Rocket;
-import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier7Rocket;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class SchematicTier7Rocket extends ItemSchematic implements ISchematicPage {
 

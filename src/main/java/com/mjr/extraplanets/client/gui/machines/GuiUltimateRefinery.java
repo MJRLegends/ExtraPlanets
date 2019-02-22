@@ -3,6 +3,13 @@ package com.mjr.extraplanets.client.gui.machines;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.inventory.machines.ContainerUltimateRefinery;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
@@ -17,13 +24,6 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.inventory.machines.ContainerUltimateRefinery;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
-import com.mjr.mjrlegendslib.util.MCUtilities;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SideOnly(Side.CLIENT)
 public class GuiUltimateRefinery extends GuiContainerGC {

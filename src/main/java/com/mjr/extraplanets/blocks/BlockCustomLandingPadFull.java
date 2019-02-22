@@ -2,6 +2,11 @@ package com.mjr.extraplanets.blocks;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityPoweredChargingPad;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityRocketChargingPad;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier2LandingPad;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPad;
+
 import micdoodle8.mods.galacticraft.api.block.IPartialSealableBlock;
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
@@ -23,11 +28,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.tileEntities.blocks.TileEntityPoweredChargingPad;
-import com.mjr.extraplanets.tileEntities.blocks.TileEntityRocketChargingPad;
-import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier2LandingPad;
-import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPad;
 
 public class BlockCustomLandingPadFull extends BlockAdvancedTile implements IPartialSealableBlock {
 	public static final PropertyEnum<EnumLandingPadFullType> PAD_TYPE = PropertyEnum.create("type", EnumLandingPadFullType.class);

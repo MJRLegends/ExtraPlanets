@@ -1,5 +1,15 @@
 package com.mjr.extraplanets.client.render.tile;
 
+import org.lwjgl.opengl.GL11;
+
+import com.google.common.base.Function;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.ModelUtilities;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -10,16 +20,6 @@ import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.client.model.obj.OBJModel;
-
-import org.lwjgl.opengl.GL11;
-
-import com.google.common.base.Function;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
-import com.mjr.mjrlegendslib.util.MCUtilities;
-import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 public class TileEntityBasicDecontaminationUnitRenderer extends TileEntitySpecialRenderer<TileEntityBasicDecontaminationUnit> {
 	private static OBJModel.OBJBakedModel mainModel;

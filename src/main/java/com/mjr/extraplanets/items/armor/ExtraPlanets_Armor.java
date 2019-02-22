@@ -1,11 +1,11 @@
 package com.mjr.extraplanets.items.armor;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.mjrlegendslib.util.RegisterUtilities;
+
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 public class ExtraPlanets_Armor {
 	private static ArmorMaterial CARBON_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Carbon_Armor", "Test", 26, new int[] { 3, 8, 6, 3 }, 15);

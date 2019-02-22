@@ -1,5 +1,11 @@
 package com.mjr.extraplanets.client.gui.overlay;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.entities.landers.EntityUranusLander;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.core.client.gui.overlay.Overlay;
 import micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
@@ -9,12 +15,6 @@ import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.settings.GameSettings;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.entities.landers.EntityUranusLander;
-import com.mjr.mjrlegendslib.util.MCUtilities;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SideOnly(Side.CLIENT)
 public class OverlayUranusLander extends Overlay {

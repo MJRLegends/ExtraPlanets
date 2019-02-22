@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.moons.Deimos.worldgen;
 
+import com.mjr.extraplanets.Config;
+
 import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.world.biome.BiomeGenBase;
-
-import com.mjr.extraplanets.Config;
 
 public class DeimosBiomes extends BiomeGenBaseGC {
 

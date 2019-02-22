@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
+
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenKepler22bIronPlains extends Kepler22bBiomes {
 	public BiomeGenKepler22bIronPlains(int var1) {

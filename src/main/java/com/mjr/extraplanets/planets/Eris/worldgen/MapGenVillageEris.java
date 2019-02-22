@@ -4,11 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.gen.structure.MapGenStructure;
-import net.minecraft.world.gen.structure.MapGenStructureIO;
-import net.minecraft.world.gen.structure.StructureStart;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillageField;
@@ -21,6 +16,11 @@ import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVill
 import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillageWoodHut;
 import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureVillageStartEris;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
+
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.gen.structure.MapGenStructure;
+import net.minecraft.world.gen.structure.MapGenStructureIO;
+import net.minecraft.world.gen.structure.StructureStart;
 
 public class MapGenVillageEris extends MapGenStructure {
 	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { BiomeGenEris.eris });

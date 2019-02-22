@@ -2,6 +2,12 @@ package com.mjr.extraplanets.planets.Jupiter.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiter;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterMagmaSea;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterSands;
+
 import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -11,12 +17,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiter;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterMagmaSea;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.biomes.BiomeGenJupiterSands;
 
 public class JupiterBiomes extends BiomeGenBaseGC {
 	public static final BiomeGenBase jupiter = new BiomeGenJupiter(Config.JUPITER_BIOME_ID).setBiomeName("Jupiter").setHeight(new Height(0.125F, 0.05F));

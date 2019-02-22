@@ -2,12 +2,12 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.features;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
-
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKepler22bTallGrass;
 
 public class WorldGenKepler22bFlowers extends WorldGenerator {
 	private BlockBasicKepler22bTallGrass flowerBlock;

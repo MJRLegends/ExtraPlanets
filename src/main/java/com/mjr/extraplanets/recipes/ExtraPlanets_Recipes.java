@@ -2,6 +2,16 @@ package com.mjr.extraplanets.recipes;
 
 import java.util.HashMap;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.items.armor.ExtraPlanets_Armor;
+import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
+import com.mjr.extraplanets.util.GCRecipeUtilities;
+import com.mjr.mjrlegendslib.util.RecipeUtilities;
+
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
@@ -16,16 +26,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.oredict.OreDictionary;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.items.armor.ExtraPlanets_Armor;
-import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
-import com.mjr.extraplanets.util.GCRecipeUtilities;
-import com.mjr.mjrlegendslib.util.RecipeUtilities;
 
 @SuppressWarnings("unused")
 public class ExtraPlanets_Recipes {

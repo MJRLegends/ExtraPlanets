@@ -2,6 +2,11 @@ package com.mjr.extraplanets.entities.rockets;
 
 import java.util.List;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier2LandingPad;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.api.entity.IRocketType;
 import micdoodle8.mods.galacticraft.api.prefab.entity.EntityTieredRocket;
 import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
@@ -18,11 +23,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier2LandingPad;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class EntityTier6Rocket extends EntityTieredRocket {
 	public EntityTier6Rocket(World world) {

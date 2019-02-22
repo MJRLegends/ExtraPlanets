@@ -2,30 +2,6 @@ package com.mjr.extraplanets;
 
 import java.io.File;
 
-import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
-import micdoodle8.mods.galacticraft.core.GCItems;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityDeconstructor;
-import micdoodle8.mods.galacticraft.planets.asteroids.AsteroidsModule;
-import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
-import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.FMLCommonHandler;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLFingerprintViolationEvent;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLServerAboutToStartEvent;
-import net.minecraftforge.oredict.RecipeSorter;
-
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
@@ -133,6 +109,30 @@ import com.mjr.mjrlegendslib.recipe.ShapedNBTRecipe;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.NetworkUtilities;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
+
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
+import micdoodle8.mods.galacticraft.core.GCItems;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import micdoodle8.mods.galacticraft.core.tile.TileEntityDeconstructor;
+import micdoodle8.mods.galacticraft.planets.asteroids.AsteroidsModule;
+import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
+import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLFingerprintViolationEvent;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerAboutToStartEvent;
+import net.minecraftforge.oredict.RecipeSorter;
 
 @Mod(modid = Constants.modID, name = Constants.modName, version = Constants.modVersion, dependencies = Constants.DEPENDENCIES_FORGE
 		+ Constants.DEPENDENCIES_MODS, guiFactory = Constants.GUIFACTORY, certificateFingerprint = Constants.CERTIFICATEFINGERPRINT)
@@ -336,9 +336,9 @@ public class ExtraPlanets {
 		if (Config.GC_DECONSTRUCTOR_SUPPORT)
 			RegisterDeconstructorCompatibility();
 
-		if(Config.MORE_PLANETS_ROCKET_CRUSHER_SUPPORT)
+		if (Config.MORE_PLANETS_ROCKET_CRUSHER_SUPPORT)
 			MorePlanetsCompatibility.init();
-		
+
 		// Register Custom Recipe Type
 		RecipeSorter.register("extraplanets:shapedNBTRecipe", ShapedNBTRecipe.class, RecipeSorter.Category.SHAPED, "before:minecraft:shaped");
 

@@ -1,5 +1,11 @@
 package com.mjr.extraplanets.client.gui.rockets;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier7Rocket;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiPositionedContainer;
@@ -7,12 +13,6 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.ResourceLocation;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier7Rocket;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class GuiSchematicTier7Rocket extends GuiPositionedContainer implements ISchematicResultPage {
 	private static final ResourceLocation rocketBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/rocketbench_tier7.png");

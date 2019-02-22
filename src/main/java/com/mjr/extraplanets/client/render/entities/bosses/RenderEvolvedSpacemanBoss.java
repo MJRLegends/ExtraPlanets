@@ -1,5 +1,15 @@
 package com.mjr.extraplanets.client.render.entities.bosses;
 
+import org.lwjgl.opengl.GL11;
+
+import com.google.common.base.Function;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedSpacemanBoss;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.ModelUtilities;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;
@@ -12,16 +22,6 @@ import net.minecraftforge.client.model.ModelLoaderRegistry;
 import net.minecraftforge.client.model.obj.OBJModel;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
-
-import com.google.common.base.Function;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedSpacemanBoss;
-import com.mjr.mjrlegendslib.util.MCUtilities;
-import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedSpacemanBoss extends Render<EntityEvolvedSpacemanBoss> {

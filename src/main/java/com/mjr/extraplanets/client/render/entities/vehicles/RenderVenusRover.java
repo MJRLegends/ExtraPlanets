@@ -1,5 +1,13 @@
 package com.mjr.extraplanets.client.render.entities.vehicles;
 
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL12;
+
+import com.google.common.collect.ImmutableList;
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
+import com.mjr.mjrlegendslib.util.ModelUtilities;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -12,14 +20,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.IFlexibleBakedModel;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL12;
-
-import com.google.common.collect.ImmutableList;
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
-import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderVenusRover extends Render<EntityVenusRover> {

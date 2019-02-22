@@ -1,11 +1,11 @@
 package com.mjr.extraplanets.moons.Callisto.worldgen.biomes;
 
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
 import com.mjr.extraplanets.moons.Callisto.worldgen.CallistoBiomes;
+
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenCallistoShaleMountains extends CallistoBiomes {
 

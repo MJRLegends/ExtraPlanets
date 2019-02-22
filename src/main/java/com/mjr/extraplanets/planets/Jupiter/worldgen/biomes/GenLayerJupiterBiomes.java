@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen.biomes;
 
+import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
+
 import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
-
-import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
 
 public class GenLayerJupiterBiomes extends GenLayer {
 	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { JupiterBiomes.jupiter, JupiterBiomes.jupiterMagmaSea, JupiterBiomes.jupiterSands };

@@ -2,6 +2,8 @@ package com.mjr.extraplanets.planets.Mercury.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
@@ -9,8 +11,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class RoomTreasureMercury extends RoomTreasure {
 	public RoomTreasureMercury() {

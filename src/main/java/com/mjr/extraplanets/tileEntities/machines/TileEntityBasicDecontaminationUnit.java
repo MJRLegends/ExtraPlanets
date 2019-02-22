@@ -4,6 +4,16 @@ import java.util.EnumSet;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.BlockDecontaminationUnitFake;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
+import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
@@ -27,16 +37,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.blocks.BlockDecontaminationUnitFake;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
-import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
-import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
-import com.mjr.mjrlegendslib.util.PlayerUtilties;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock implements IMultiBlock, IInventoryDefaults, ISidedInventory {
 	private ItemStack[] containingItems = new ItemStack[1];

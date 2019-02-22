@@ -1,5 +1,10 @@
 package com.mjr.extraplanets.moons.Titan.worldgen;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
+
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.util.BlockPos;
@@ -7,11 +12,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class BiomeDecoratorTitan extends BiomeDecoratorSpace {
 

@@ -2,6 +2,13 @@ package com.mjr.extraplanets.moons.Callisto.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
+import com.mjr.extraplanets.moons.Callisto.worldgen.biomes.BiomeGenCallisto;
+import com.mjr.extraplanets.moons.Callisto.worldgen.biomes.BiomeGenCallistoSaltSea;
+import com.mjr.extraplanets.moons.Callisto.worldgen.biomes.BiomeGenCallistoShaleMountains;
+
 import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -10,13 +17,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
-import com.mjr.extraplanets.moons.Callisto.worldgen.biomes.BiomeGenCallisto;
-import com.mjr.extraplanets.moons.Callisto.worldgen.biomes.BiomeGenCallistoSaltSea;
-import com.mjr.extraplanets.moons.Callisto.worldgen.biomes.BiomeGenCallistoShaleMountains;
 
 public class CallistoBiomes extends BiomeGenBaseGC {
 	public static final BiomeGenBase callisto = new BiomeGenCallisto(Config.CALLISTO_BIOME_ID).setBiomeName("Callisto").setHeight(new Height(0.125F, 0.05F));

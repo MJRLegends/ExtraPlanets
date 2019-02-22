@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.moons.Callisto.worldgen.biomes;
 
+import com.mjr.extraplanets.moons.Callisto.worldgen.CallistoBiomes;
+
 import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
-
-import com.mjr.extraplanets.moons.Callisto.worldgen.CallistoBiomes;
 
 public class GenLayerCallistoBiomes extends GenLayer {
 	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { CallistoBiomes.callisto, CallistoBiomes.callistoSaltSea, CallistoBiomes.callistoShaleLargeMountains, CallistoBiomes.callistoShaleSmallMountains };

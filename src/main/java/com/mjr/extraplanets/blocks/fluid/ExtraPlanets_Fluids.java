@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.blocks.fluid;
 
+import com.mjr.extraplanets.Constants;
+
 import micdoodle8.mods.galacticraft.core.items.ItemBlockGC;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
@@ -9,8 +11,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-
-import com.mjr.extraplanets.Constants;
 
 public class ExtraPlanets_Fluids {
 	public static Block GLOWSTONE;

@@ -2,6 +2,10 @@ package com.mjr.extraplanets.blocks.machines;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecrystallizer;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
@@ -25,10 +29,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecrystallizer;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class BasicDecrystallizer extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	private final Random crystallizerRand = new Random();

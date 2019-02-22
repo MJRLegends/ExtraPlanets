@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.moons.Titan.worldgen.biomes;
 
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.Titan.worldgen.TitanBiomes;
+
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenTitanMethaneHills extends TitanBiomes {
 	public BiomeGenTitanMethaneHills(int par1) {

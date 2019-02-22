@@ -2,14 +2,14 @@ package com.mjr.extraplanets.util;
 
 import java.util.ArrayList;
 
+import com.mjr.extraplanets.Constants;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Moon;
 import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
 import net.minecraft.util.ResourceLocation;
-
-import com.mjr.extraplanets.Constants;
 
 public class GCRegisterUtilities {
 	public static Planet registerUnreachablePlanet(String name, SolarSystem system) {

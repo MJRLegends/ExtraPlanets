@@ -3,6 +3,8 @@ package com.mjr.extraplanets.blocks;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
@@ -24,8 +26,6 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockCakeBlocks extends Block implements IDetectableResource, ISortableBlock {
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypecakeblocks", EnumBlockBasic.class);

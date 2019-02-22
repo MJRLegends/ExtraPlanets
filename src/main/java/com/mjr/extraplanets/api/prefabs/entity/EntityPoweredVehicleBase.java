@@ -1,11 +1,18 @@
 package com.mjr.extraplanets.api.prefabs.entity;
 
-import io.netty.buffer.ByteBuf;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.api.block.IPowerDock;
+import com.mjr.extraplanets.api.enitity.IPoweredDockable;
+import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
+import io.netty.buffer.ByteBuf;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.TransformerHooks;
 import micdoodle8.mods.galacticraft.core.entities.IControllableEntity;
@@ -30,14 +37,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry.TargetPoint;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.api.block.IPowerDock;
-import com.mjr.extraplanets.api.enitity.IPoweredDockable;
-import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
-import com.mjr.mjrlegendslib.util.MCUtilities;
-import com.mjr.mjrlegendslib.util.PlayerUtilties;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityPoweredVehicleBase extends Entity implements IInventoryDefaults, IPacketReceiver, IPoweredDockable, IControllableEntity, IEntityFullSync {
 	protected long ticks = 0;

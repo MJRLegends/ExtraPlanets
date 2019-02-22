@@ -2,6 +2,14 @@ package com.mjr.extraplanets.entities.rockets;
 
 import java.util.List;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.api.block.IPowerDock;
+import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
+import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityRocketChargingPad;
+
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.api.world.IOrbitDimension;
@@ -21,14 +29,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.api.block.IPowerDock;
-import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
-import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tileEntities.blocks.TileEntityRocketChargingPad;
 
 public class EntityElectricRocket extends EntityElectricRocketBase {
 	public EntityElectricRocket(World par1World) {

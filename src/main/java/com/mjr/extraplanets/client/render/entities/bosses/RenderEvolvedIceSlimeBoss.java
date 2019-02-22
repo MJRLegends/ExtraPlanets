@@ -1,15 +1,15 @@
 package com.mjr.extraplanets.client.render.entities.bosses;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.client.model.bosses.ModelEvolvedIceSlimeBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
+
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.client.model.bosses.ModelEvolvedIceSlimeBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
 
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedIceSlimeBoss extends RenderLiving<EntityEvolvedIceSlimeBoss> {

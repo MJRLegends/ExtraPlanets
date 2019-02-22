@@ -2,6 +2,8 @@ package com.mjr.extraplanets.items;
 
 import java.util.List;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
@@ -13,8 +15,6 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemAppleIron extends ItemFood {
 	public ItemAppleIron(int amount, float saturation, boolean isWolfFood) {

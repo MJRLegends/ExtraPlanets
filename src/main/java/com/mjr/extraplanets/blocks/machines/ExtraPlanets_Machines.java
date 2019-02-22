@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.blocks.machines;
 
-import net.minecraft.block.Block;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockAdvancedOxygenCompressor;
@@ -27,6 +25,8 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecomp
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
+
+import net.minecraft.block.Block;
 
 public class ExtraPlanets_Machines {
 	// Machines

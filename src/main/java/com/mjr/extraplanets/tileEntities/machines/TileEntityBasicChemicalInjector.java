@@ -1,5 +1,9 @@
 package com.mjr.extraplanets.tileEntities.machines;
 
+import com.mjr.extraplanets.blocks.machines.BasicChemicalInjector;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
@@ -10,10 +14,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraftforge.fml.relauncher.Side;
-
-import com.mjr.extraplanets.blocks.machines.BasicChemicalInjector;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityBasicChemicalInjector extends TileBaseElectricBlockWithInventory implements ISidedInventory {
 	public static final int PROCESS_TIME_REQUIRED = 100;

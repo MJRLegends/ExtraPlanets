@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.client.render.entities.projectiles;
 
+import com.mjr.mjrlegendslib.util.MCUtilities;
+
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms.TransformType;
 import net.minecraft.client.renderer.entity.Render;
@@ -10,8 +12,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.mjrlegendslib.util.MCUtilities;
 
 @SuppressWarnings("deprecation")
 @SideOnly(Side.CLIENT)

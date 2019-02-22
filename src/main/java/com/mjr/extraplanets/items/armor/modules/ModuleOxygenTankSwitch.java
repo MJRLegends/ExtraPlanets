@@ -3,6 +3,8 @@ package com.mjr.extraplanets.items.armor.modules;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.items.ItemOxygenTank;
@@ -11,8 +13,6 @@ import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class ModuleOxygenTankSwitch extends Module {
 

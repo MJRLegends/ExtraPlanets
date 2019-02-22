@@ -2,6 +2,12 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.BlockPos;
@@ -9,12 +15,6 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.ChestGenHooks;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.mjrlegendslib.util.MessageUtilities;
-import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class WorldGenPurpleHut extends WorldGenerator {
 

@@ -2,6 +2,11 @@ package com.mjr.extraplanets.planets.Eris.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerEris;
+import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerErisDefault;
+
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomBoss;
@@ -10,11 +15,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerEris;
-import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerErisDefault;
 
 public class RoomBossEris extends RoomBoss {
 	public RoomBossEris() {

@@ -2,6 +2,15 @@ package com.mjr.extraplanets.planets.Pluto.worldgen;
 
 import java.util.List;
 
+import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.api.prefabs.world.ChunkProviderSingleBiomeSpace;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPluto;
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
+import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
+import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
+
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
@@ -12,15 +21,6 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraft.world.chunk.IChunkProvider;
-
-import com.google.common.collect.Lists;
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.api.prefabs.world.ChunkProviderSingleBiomeSpace;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicPluto;
-import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
-import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
-import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
 public class ChunkProviderPluto extends ChunkProviderSingleBiomeSpace {
 	private final MapGenVillagePluto villageGenerator = new MapGenVillagePluto();

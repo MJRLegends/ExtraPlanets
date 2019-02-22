@@ -1,5 +1,9 @@
 package com.mjr.extraplanets.client.render.entities.bosses;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.client.model.bosses.ModelEvolvedFireBatBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
+
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -7,10 +11,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.client.model.bosses.ModelEvolvedFireBatBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
 
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedFireBatBoss extends RenderLiving<EntityEvolvedFireBatBoss> {

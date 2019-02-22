@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.handlers;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import net.minecraftforge.event.entity.player.BonemealEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BoneMealHandler {
 	@SubscribeEvent

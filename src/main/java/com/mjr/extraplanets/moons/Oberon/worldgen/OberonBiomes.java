@@ -2,6 +2,12 @@ package com.mjr.extraplanets.moons.Oberon.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberon;
+import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonLargeMountain;
+import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonValleys;
+
 import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -10,12 +16,6 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.ChunkPrimer;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberon;
-import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonLargeMountain;
-import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberonValleys;
 
 public class OberonBiomes extends BiomeGenBaseGC {
 	public static final BiomeGenBase oberon = new BiomeGenOberon(Config.OBERON_BIOME_ID).setBiomeName("Oberon").setHeight(new Height(2.5F, 0.4F));

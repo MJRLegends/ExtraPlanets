@@ -1,13 +1,5 @@
 package com.mjr.extraplanets.client.gui.rockets;
 
-import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
-import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
-import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
@@ -15,6 +7,14 @@ import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
 import com.mjr.extraplanets.inventory.rockets.ContainerElectricRocketInventory;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
+import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
+import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class GuiElectricRocketInventory extends GuiContainerGC {

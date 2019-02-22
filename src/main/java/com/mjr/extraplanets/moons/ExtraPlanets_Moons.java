@@ -1,20 +1,5 @@
 package com.mjr.extraplanets.moons;
 
-import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
-import micdoodle8.mods.galacticraft.api.galaxies.Moon;
-import micdoodle8.mods.galacticraft.api.world.AtmosphereInfo;
-import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedEnderman;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
-import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
-import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.moons.Callisto.TeleportTypeCallisto;
@@ -55,6 +40,21 @@ import com.mjr.extraplanets.moons.Triton.WorldProviderTriton;
 import com.mjr.extraplanets.moons.Triton.worldgen.TritonBiomes;
 import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.extraplanets.util.GCRegisterUtilities;
+
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
+import micdoodle8.mods.galacticraft.api.galaxies.Moon;
+import micdoodle8.mods.galacticraft.api.world.AtmosphereInfo;
+import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedEnderman;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
+import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
+import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
 
 public class ExtraPlanets_Moons {
 

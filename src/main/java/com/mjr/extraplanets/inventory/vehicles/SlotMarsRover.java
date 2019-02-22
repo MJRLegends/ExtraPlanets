@@ -2,6 +2,8 @@ package com.mjr.extraplanets.inventory.vehicles;
 
 import java.util.List;
 
+import com.mjr.extraplanets.recipes.MarsRoverRecipes;
+
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
@@ -12,8 +14,6 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
-
-import com.mjr.extraplanets.recipes.MarsRoverRecipes;
 
 public class SlotMarsRover extends Slot {
 	private final int index;

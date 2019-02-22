@@ -1,8 +1,8 @@
 package com.mjr.extraplanets.moons.Deimos.worldgen;
 
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.mjr.extraplanets.Config;
+
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenDeimos extends DeimosBiomes {
 

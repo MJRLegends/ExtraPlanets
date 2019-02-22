@@ -1,11 +1,11 @@
 package com.mjr.extraplanets.moons.Europa.worldgen.biomes;
 
-import net.minecraft.init.Blocks;
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.Europa.worldgen.EuropaBiomes;
+
+import net.minecraft.init.Blocks;
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenEuropaIceValleys extends EuropaBiomes {
 	public BiomeGenEuropaIceValleys(int var1) {

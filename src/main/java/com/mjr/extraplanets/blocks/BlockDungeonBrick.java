@@ -1,13 +1,13 @@
 package com.mjr.extraplanets.blocks;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockDungeonBrick extends Block {
 

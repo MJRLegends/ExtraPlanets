@@ -2,6 +2,8 @@ package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 
 import java.util.List;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -15,8 +17,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicKepler22bPlanks extends Block {
 	public static final PropertyEnum<BlockBasicKepler22bPlanks.EnumType> VARIANT = PropertyEnum.<BlockBasicKepler22bPlanks.EnumType> create("variant", BlockBasicKepler22bPlanks.EnumType.class);

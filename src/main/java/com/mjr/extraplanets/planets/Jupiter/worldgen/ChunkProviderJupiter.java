@@ -3,14 +3,6 @@ package com.mjr.extraplanets.planets.Jupiter.worldgen;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
-import net.minecraft.util.BlockPos;
-import net.minecraft.world.ChunkCoordIntPair;
-import net.minecraft.world.World;
-import net.minecraft.world.chunk.Chunk;
-import net.minecraft.world.chunk.ChunkPrimer;
-
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -20,6 +12,14 @@ import com.mjr.mjrlegendslib.world.ChunkProviderMultiBiomeSpace;
 import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
 import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
+
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
+import net.minecraft.util.BlockPos;
+import net.minecraft.world.ChunkCoordIntPair;
+import net.minecraft.world.World;
+import net.minecraft.world.chunk.Chunk;
+import net.minecraft.world.chunk.ChunkPrimer;
 
 public class ChunkProviderJupiter extends ChunkProviderMultiBiomeSpace {
 	private final MapGenVillageJupiter villageGenerator = new MapGenVillageJupiter();

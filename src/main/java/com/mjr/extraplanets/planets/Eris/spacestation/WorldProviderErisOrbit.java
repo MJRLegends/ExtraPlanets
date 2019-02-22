@@ -1,5 +1,9 @@
 package com.mjr.extraplanets.planets.Eris.spacestation;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
@@ -9,10 +13,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 
 public class WorldProviderErisOrbit extends WorldProviderOverworldOrbit {
 	@Override

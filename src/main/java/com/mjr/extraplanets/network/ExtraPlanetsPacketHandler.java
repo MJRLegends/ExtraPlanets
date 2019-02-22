@@ -1,19 +1,8 @@
 package com.mjr.extraplanets.network;
 
-import io.netty.channel.ChannelHandler.Sharable;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.SimpleChannelInboundHandler;
-
 import java.util.Map;
 import java.util.Queue;
 import java.util.concurrent.ConcurrentHashMap;
-
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.network.INetHandler;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
-import net.minecraftforge.fml.relauncher.Side;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
@@ -22,6 +11,16 @@ import com.mjr.extraplanets.client.handlers.MainHandlerClient;
 import com.mjr.extraplanets.handlers.MainHandlerServer;
 import com.mjr.mjrlegendslib.network.IPacket;
 import com.mjr.mjrlegendslib.util.MCUtilities;
+
+import io.netty.channel.ChannelHandler.Sharable;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.channel.SimpleChannelInboundHandler;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.network.INetHandler;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.relauncher.Side;
 
 @Sharable
 public class ExtraPlanetsPacketHandler extends SimpleChannelInboundHandler<IPacket> {

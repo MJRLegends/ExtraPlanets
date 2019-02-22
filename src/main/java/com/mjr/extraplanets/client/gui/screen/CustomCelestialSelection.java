@@ -12,6 +12,20 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.lwjgl.BufferUtils;
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.util.vector.Matrix4f;
+import org.lwjgl.util.vector.Vector2f;
+
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
@@ -40,19 +54,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.FMLClientHandler;
-
-import org.lwjgl.BufferUtils;
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.util.vector.Matrix4f;
-import org.lwjgl.util.vector.Vector2f;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
-import com.mjr.mjrlegendslib.util.MCUtilities;
-import com.mjr.mjrlegendslib.util.MessageUtilities;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class CustomCelestialSelection extends GuiCelestialSelection {
 

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.GenLayerKepler22b;
+
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeCache;
@@ -11,8 +13,6 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.WorldChunkManager;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
-
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.GenLayerKepler22b;
 
 public class WorldChunkManagerKepler22b extends WorldChunkManager {
 	private GenLayer unzoomedBiomes;
