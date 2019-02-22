@@ -3,15 +3,15 @@ package com.mjr.extraplanets.jei.densifier;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.fluids.UniversalBucket;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class DensifierRecipeMaker {
 	public static List<DensifierRecipeWrapper> getRecipesList() {

@@ -3,17 +3,17 @@ package com.mjr.extraplanets.entities.vehicles;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.entity.Entity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.math.RayTraceResult;
-import net.minecraft.world.World;
-
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.api.block.IPowerDock;
 import com.mjr.extraplanets.api.prefabs.entity.EntityPoweredVehicleBase;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 import com.mjr.extraplanets.tileEntities.blocks.TileEntityPoweredChargingPad;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.world.World;
 
 public class EntityVenusRover extends EntityPoweredVehicleBase {
 

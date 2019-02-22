@@ -1,14 +1,14 @@
 package com.mjr.extraplanets.client.render.tile;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT5TreasureChest;
+
 import micdoodle8.mods.galacticraft.core.client.model.block.ModelTreasureChest;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT5TreasureChest;
 
 @SideOnly(Side.CLIENT)
 public class TileEntityT5TreasureChestRenderer extends TileEntitySpecialRenderer<TileEntityT5TreasureChest> {

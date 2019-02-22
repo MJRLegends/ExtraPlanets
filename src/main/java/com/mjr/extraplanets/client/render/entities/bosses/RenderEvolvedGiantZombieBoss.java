@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.client.render.entities.bosses;
 
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedGiantZombieBoss;
+
 import net.minecraft.client.model.ModelZombie;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderBiped;
@@ -8,8 +10,6 @@ import net.minecraft.client.renderer.entity.layers.LayerBipedArmor;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedGiantZombieBoss;
 
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedGiantZombieBoss extends RenderBiped<EntityEvolvedGiantZombieBoss> {

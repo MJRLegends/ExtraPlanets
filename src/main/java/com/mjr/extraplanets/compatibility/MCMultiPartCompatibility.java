@@ -2,12 +2,12 @@ package com.mjr.extraplanets.compatibility;
 
 import java.lang.reflect.Method;
 
-import net.minecraft.block.Block;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
+
+import net.minecraft.block.Block;
 
 public class MCMultiPartCompatibility {
 
@@ -70,7 +70,7 @@ public class MCMultiPartCompatibility {
 				}
 			}
 		} catch (Exception e) {
-			MessageUtilities.fatalErrorMessageToLog(Constants.modID, "Error when setting up MCMultiPart Compatibility, ErrorMessage: "); 
+			MessageUtilities.fatalErrorMessageToLog(Constants.modID, "Error when setting up MCMultiPart Compatibility, ErrorMessage: ");
 			e.printStackTrace();
 		}
 	}

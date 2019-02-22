@@ -2,16 +2,6 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Blocks;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeDecorator;
-import net.minecraft.world.chunk.ChunkPrimer;
-
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bBlueMapleForest;
@@ -27,6 +17,16 @@ import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bRe
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bRedMapleForest;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bWasteLands;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.biome.BiomeGenKepler22bYellowMapleForest;
+
+import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.init.Blocks;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeDecorator;
+import net.minecraft.world.chunk.ChunkPrimer;
 
 public class Kepler22bBiomes extends BiomeGenBaseGC {
 	public static final Biome kepler22bPlains = new BiomeGenKepler22bPlains(new BiomeProperties("Kepler22b Plains").setBaseHeight(0.125F).setHeightVariation(0.05F).setRainfall(0.0F).setRainDisabled());

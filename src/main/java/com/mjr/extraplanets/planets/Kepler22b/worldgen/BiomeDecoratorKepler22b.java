@@ -2,12 +2,6 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen;
 
 import java.util.Random;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.BiomeDecorator;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -34,6 +28,12 @@ import com.mjr.extraplanets.world.features.WorldGenWhiteSugerCane;
 import com.mjr.extraplanets.world.features.WorldGenYellowHut;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 import com.mjr.mjrlegendslib.world.features.WorldGenSphere;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.BiomeDecorator;
 
 public class BiomeDecoratorKepler22b extends BiomeDecorator {
 

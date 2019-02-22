@@ -4,6 +4,9 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import com.google.common.base.Predicate;
+import com.mjr.extraplanets.ExtraPlanets;
+
 import micdoodle8.mods.galacticraft.api.block.IDetectableResource;
 import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
@@ -37,9 +40,6 @@ import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.google.common.base.Predicate;
-import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicCallisto extends Block implements IDetectableResource, IPlantableBlock, ITerraformableBlock, ISortableBlock {
 	public static final PropertyEnum<EnumBlockBasic> BASIC_TYPE = PropertyEnum.create("basictypecallisto", EnumBlockBasic.class);

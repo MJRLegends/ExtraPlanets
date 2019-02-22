@@ -5,6 +5,8 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.properties.IProperty;
@@ -23,8 +25,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BlockKepler22bMapleTreeLeaves2 extends BlockLeaves {
 	public static final PropertyEnum<BlockKepler22bMapleTreeLeaves2.EnumType> VARIANT = PropertyEnum.<BlockKepler22bMapleTreeLeaves2.EnumType> create("variant", BlockKepler22bMapleTreeLeaves2.EnumType.class);

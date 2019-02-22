@@ -1,13 +1,13 @@
 package com.mjr.extraplanets.client.render.entities.bosses.defaultBosses;
 
+import com.mjr.extraplanets.client.model.bosses.defaultBosses.ModelCreeperBossUranus;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
+
 import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
-
-import com.mjr.extraplanets.client.model.bosses.defaultBosses.ModelCreeperBossUranus;
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossUranus;
 
 public class RenderCreeperBossUranus extends RenderLiving<EntityCreeperBossUranus> {
 	private static final ResourceLocation creeperTexture = new ResourceLocation(GalacticraftPlanets.ASSET_PREFIX, "textures/model/creeper.png");

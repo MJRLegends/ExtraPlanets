@@ -1,5 +1,8 @@
 package com.mjr.extraplanets.inventory.machines;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicSmasher;
+
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
 import micdoodle8.mods.galacticraft.core.energy.EnergyUtil;
 import micdoodle8.mods.galacticraft.core.inventory.SlotSpecific;
@@ -9,9 +12,6 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicSmasher;
 
 public class ContainerBasicSmasher extends Container {
 	private final TileEntityBasicSmasher tileEntity;

@@ -3,10 +3,10 @@ package com.mjr.extraplanets.jei.blocksmasher;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.item.ItemStack;
-
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
+import net.minecraft.item.ItemStack;
 
 public class BlockSmasherRecipeMaker {
 	public static List<BlockSmasherRecipeWrapper> getRecipesList() {

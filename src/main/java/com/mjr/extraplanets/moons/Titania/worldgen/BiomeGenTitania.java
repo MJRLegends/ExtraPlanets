@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.moons.Titania.worldgen;
 
-import net.minecraft.world.biome.Biome;
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+
+import net.minecraft.world.biome.Biome;
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenTitania extends TitaniaBiomes {
 

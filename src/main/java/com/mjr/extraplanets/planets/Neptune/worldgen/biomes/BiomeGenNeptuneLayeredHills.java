@@ -2,6 +2,13 @@ package com.mjr.extraplanets.planets.Neptune.worldgen.biomes;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.BlockDecorativeBlocks2;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
+import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -10,13 +17,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.ChunkPrimer;
 import net.minecraftforge.common.BiomeDictionary;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.BlockDecorativeBlocks2;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
-import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
 
 public class BiomeGenNeptuneLayeredHills extends NeptuneBiomes {
 

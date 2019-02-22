@@ -2,6 +2,8 @@ package com.mjr.extraplanets.planets.Saturn.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityTreasureChest;
@@ -13,8 +15,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class RoomTreasureSaturn extends RoomTreasure {
 	public RoomTreasureSaturn() {

@@ -3,6 +3,8 @@ package com.mjr.extraplanets.planets.Mercury.worldgen.village;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.planets.Mercury.worldgen.MapGenVillageMercury;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityAlienVillager;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
@@ -11,8 +13,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.template.TemplateManager;
-
-import com.mjr.extraplanets.planets.Mercury.worldgen.MapGenVillageMercury;
 
 public abstract class StructureComponentVillage extends StructureComponent {
 	static {

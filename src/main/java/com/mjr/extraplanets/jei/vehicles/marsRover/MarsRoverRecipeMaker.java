@@ -3,10 +3,10 @@ package com.mjr.extraplanets.jei.vehicles.marsRover;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mjr.extraplanets.recipes.MarsRoverRecipes;
+
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.core.client.jei.tier1rocket.Tier1RocketRecipeMaker;
-
-import com.mjr.extraplanets.recipes.MarsRoverRecipes;
 
 public class MarsRoverRecipeMaker {
 	public static List<MarsRoverRecipeWrapper> getRecipesList() {

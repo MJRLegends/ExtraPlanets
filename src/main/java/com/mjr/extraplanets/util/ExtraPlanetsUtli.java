@@ -1,15 +1,15 @@
 package com.mjr.extraplanets.util;
 
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.inventory.IInventory;
-
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.inventory.ContainerModuleManager;
 import com.mjr.extraplanets.inventory.vehicles.ContainerPoweredVehicleBase;
 import com.mjr.extraplanets.inventory.vehicles.ContainerVehicleBase;
 import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
+
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.inventory.IInventory;
 
 public class ExtraPlanetsUtli {
 	public static void openFuelVehicleInv(EntityPlayerMP player, IInventory buggyInv, int type) {

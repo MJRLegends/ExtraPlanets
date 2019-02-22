@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import com.mjr.extraplanets.api.block.IPowerDock;
+import com.mjr.extraplanets.api.block.IPowerable;
+import com.mjr.extraplanets.api.enitity.IPoweredDockable;
+import com.mjr.extraplanets.blocks.BlockCustomMulti;
+import com.mjr.extraplanets.blocks.BlockCustomMulti.EnumBlockMultiType;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+
 import micdoodle8.mods.galacticraft.api.entity.ICargoEntity;
 import micdoodle8.mods.galacticraft.api.entity.ILandable;
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
@@ -21,14 +29,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.api.block.IPowerDock;
-import com.mjr.extraplanets.api.block.IPowerable;
-import com.mjr.extraplanets.api.enitity.IPoweredDockable;
-import com.mjr.extraplanets.blocks.BlockCustomMulti;
-import com.mjr.extraplanets.blocks.BlockCustomMulti.EnumBlockMultiType;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class TileEntityRocketChargingPad extends TileEntityMulti implements IMultiBlock, IPowerable, IPowerDock, ICargoEntity {
 	public TileEntityRocketChargingPad() {

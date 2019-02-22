@@ -2,13 +2,13 @@ package com.mjr.extraplanets.jei.rockets.tier8;
 
 import javax.annotation.Nonnull;
 
+import com.google.common.collect.Lists;
+
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeWrapper;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import net.minecraft.item.ItemStack;
-
-import com.google.common.collect.Lists;
 
 public class Tier8RocketRecipeWrapper extends BlankRecipeWrapper implements IRecipeWrapper {
 	@Nonnull

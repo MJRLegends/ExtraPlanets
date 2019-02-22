@@ -3,6 +3,11 @@ package com.mjr.extraplanets.client.gui.vehicles;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.api.prefabs.entity.EntityVehicleBase;
+import com.mjr.extraplanets.inventory.vehicles.ContainerVehicleBase;
+
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
 import micdoodle8.mods.galacticraft.core.client.gui.element.GuiElementInfoRegion;
@@ -13,11 +18,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.api.prefabs.entity.EntityVehicleBase;
-import com.mjr.extraplanets.inventory.vehicles.ContainerVehicleBase;
 
 @SideOnly(Side.CLIENT)
 public class GuiVehicleBase extends GuiContainerGC {

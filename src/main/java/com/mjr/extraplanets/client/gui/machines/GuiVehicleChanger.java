@@ -3,6 +3,13 @@ package com.mjr.extraplanets.client.gui.machines;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.inventory.machines.ContainerVehicleChanger;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
 import micdoodle8.mods.galacticraft.core.client.gui.element.GuiElementInfoRegion;
@@ -14,13 +21,6 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.inventory.machines.ContainerVehicleChanger;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class GuiVehicleChanger extends GuiContainerGC {
 	private static final ResourceLocation vehicleChangerTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/vehicle_charger.png");

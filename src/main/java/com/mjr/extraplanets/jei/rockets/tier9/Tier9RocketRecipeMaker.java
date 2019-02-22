@@ -3,10 +3,10 @@ package com.mjr.extraplanets.jei.rockets.tier9;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mjr.extraplanets.recipes.Tier9RocketRecipes;
+
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.core.client.jei.tier1rocket.Tier1RocketRecipeMaker;
-
-import com.mjr.extraplanets.recipes.Tier9RocketRecipes;
 
 public class Tier9RocketRecipeMaker {
 	public static List<Tier9RocketRecipeWrapper> getRecipesList() {

@@ -3,6 +3,9 @@ package com.mjr.extraplanets.entities.bosses;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -35,9 +38,6 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedIceSlimeBoss extends EntityBossBase implements IEntityBreathable {
 	public float squishAmount;

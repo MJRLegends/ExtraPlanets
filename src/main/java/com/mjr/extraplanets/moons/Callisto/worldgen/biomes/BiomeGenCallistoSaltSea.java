@@ -2,16 +2,16 @@ package com.mjr.extraplanets.moons.Callisto.worldgen.biomes;
 
 import java.util.List;
 
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.world.biome.Biome;
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCallisto;
 import com.mjr.extraplanets.moons.Callisto.worldgen.CallistoBiomes;
+
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.world.biome.Biome;
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenCallistoSaltSea extends CallistoBiomes {
 	public BiomeGenCallistoSaltSea(BiomeProperties properties) {

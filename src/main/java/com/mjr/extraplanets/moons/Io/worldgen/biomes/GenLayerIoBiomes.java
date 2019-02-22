@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.moons.Io.worldgen.biomes;
 
+import com.mjr.extraplanets.moons.Io.worldgen.IoBiomes;
+
 import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
-
-import com.mjr.extraplanets.moons.Io.worldgen.IoBiomes;
 
 public class GenLayerIoBiomes extends GenLayer {
 	private static final Biome[] biomes = new Biome[] { IoBiomes.io, IoBiomes.ioAshLands, IoBiomes.ioBurningPlains };

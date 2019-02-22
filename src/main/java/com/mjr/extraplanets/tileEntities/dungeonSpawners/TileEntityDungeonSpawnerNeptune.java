@@ -3,6 +3,8 @@ package com.mjr.extraplanets.tileEntities.dungeonSpawners;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
+
 import micdoodle8.mods.galacticraft.core.client.sounds.GCSounds;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSkeleton;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
@@ -11,8 +13,6 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityDungeonSpawner;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.SoundCategory;
-
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
 
 public class TileEntityDungeonSpawnerNeptune extends TileEntityDungeonSpawner<EntityEvolvedSnowmanBoss> {
 	public TileEntityDungeonSpawnerNeptune() {

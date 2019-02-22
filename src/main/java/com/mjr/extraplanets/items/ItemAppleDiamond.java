@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.items;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
@@ -12,8 +14,6 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemAppleDiamond extends ItemFood {
 	public ItemAppleDiamond(int amount, float saturation, boolean isWolfFood) {
