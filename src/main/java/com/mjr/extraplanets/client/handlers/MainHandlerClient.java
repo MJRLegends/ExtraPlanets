@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Map;
 
 import micdoodle8.mods.galacticraft.api.event.client.CelestialBodyRenderEvent;
+import micdoodle8.mods.galacticraft.api.galaxies.Moon;
+import micdoodle8.mods.galacticraft.api.galaxies.Satellite;
+import micdoodle8.mods.galacticraft.api.galaxies.Star;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -441,24 +444,15 @@ public class MainHandlerClient {
 	public void onRenderPlanetPost(CelestialBodyRenderEvent.Post event) {
 		Minecraft mc = MCUtilities.getMinecraft();
 		if (mc.currentScreen instanceof GuiCelestialSelection) {
+			GuiCelestialSelection screen = ((GuiCelestialSelection) mc.currentScreen);
 			if (event.celestialBody == ExtraPlanets_Planets.SATURN) {
 				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn_rings.png"));
-				float size = ((GuiCelestialSelection) mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
-				((GuiCelestialSelection) mc.currentScreen).drawTexturedModalRect(-7.5F * size, -1.75F * size, 15.0F * size, 3.5F * size, 0, 0, 30, 7, false, false, 30, 7);
+				float size = screen.getWidthForCelestialBody(event.celestialBody) / 6.0F;
+				screen.drawTexturedModalRect(-7.5F * size, -1.75F * size, 15.0F * size, 3.5F * size, 0, 0, 30, 7, false, false, 32, 32);
 			} else if (event.celestialBody == ExtraPlanets_Planets.URANUS) {
 				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/uranus_rings.png"));
-				float size = ((GuiCelestialSelection) mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
-				((GuiCelestialSelection) mc.currentScreen).drawTexturedModalRect(-1.75F * size, -7.0F * size, 3.5F * size, 14.0F * size, 0, 0, 28, 7, false, false, 28, 7);
-			}
-		} else if (mc.currentScreen instanceof CustomCelestialSelection) {
-			if (event.celestialBody == ExtraPlanets_Planets.SATURN) {
-				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/saturn_rings.png"));
-				float size = ((GuiCelestialSelection) mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
-				((CustomCelestialSelection) mc.currentScreen).drawTexturedModalRect(-7.5F * size, -1.75F * size, 15.0F * size, 3.5F * size, 0, 0, 30, 7, false, false, 30, 7);
-			} else if (event.celestialBody == ExtraPlanets_Planets.URANUS) {
-				mc.renderEngine.bindTexture(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/uranus_rings.png"));
-				float size = ((GuiCelestialSelection) mc.currentScreen).getWidthForCelestialBody(event.celestialBody) / 6.0F;
-				((CustomCelestialSelection) mc.currentScreen).drawTexturedModalRect(-1.75F * size, -7.0F * size, 3.5F * size, 14.0F * size, 0, 0, 28, 7, false, false, 28, 7);
+				float size = screen.getWidthForCelestialBody(event.celestialBody) / 6.0F;
+				screen.drawTexturedModalRect(-1.75F * size, -7.0F * size, 3.5F * size, 14.0F * size, 0, 0, 7, 28, false, false, 32, 32);
 			}
 		}
 	}
