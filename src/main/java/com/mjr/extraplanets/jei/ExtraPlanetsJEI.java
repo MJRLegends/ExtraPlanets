@@ -2,15 +2,6 @@ package com.mjr.extraplanets.jei;
 
 import javax.annotation.Nonnull;
 
-import mezz.jei.api.IGuiHelper;
-import mezz.jei.api.IModPlugin;
-import mezz.jei.api.IModRegistry;
-import mezz.jei.api.JEIPlugin;
-import mezz.jei.api.recipe.IRecipeCategoryRegistration;
-import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
-import micdoodle8.mods.galacticraft.core.GCBlocks;
-import net.minecraft.item.ItemStack;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
 import com.mjr.extraplanets.jei.blocksmasher.BlockSmasherRecipeCategory;
@@ -61,6 +52,15 @@ import com.mjr.extraplanets.jei.vehicles.marsRover.MarsRoverRecipeWrapper;
 import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeCategory;
 import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeMaker;
 import com.mjr.extraplanets.jei.vehicles.venusRover.VenusRoverRecipeWrapper;
+
+import mezz.jei.api.IGuiHelper;
+import mezz.jei.api.IModPlugin;
+import mezz.jei.api.IModRegistry;
+import mezz.jei.api.JEIPlugin;
+import mezz.jei.api.recipe.IRecipeCategoryRegistration;
+import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
+import micdoodle8.mods.galacticraft.core.GCBlocks;
+import net.minecraft.item.ItemStack;
 
 @JEIPlugin
 public class ExtraPlanetsJEI implements IModPlugin {

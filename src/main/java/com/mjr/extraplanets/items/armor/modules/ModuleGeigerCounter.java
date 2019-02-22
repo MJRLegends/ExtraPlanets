@@ -3,14 +3,14 @@ package com.mjr.extraplanets.items.armor.modules;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mjr.extraplanets.client.gui.overlay.OverlayGeigerCounter;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.client.gui.overlay.OverlayGeigerCounter;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class ModuleGeigerCounter extends Module {
 

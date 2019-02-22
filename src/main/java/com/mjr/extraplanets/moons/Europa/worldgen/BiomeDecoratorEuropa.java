@@ -1,5 +1,14 @@
 package com.mjr.extraplanets.moons.Europa.worldgen;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
+import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaIceValleys;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
+import com.mjr.mjrlegendslib.world.features.WorldGenSphere;
+
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
@@ -9,15 +18,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicEuropa;
-import com.mjr.extraplanets.moons.Europa.worldgen.biomes.BiomeGenEuropaIceValleys;
-import com.mjr.mjrlegendslib.util.WorldGenUtilities;
-import com.mjr.mjrlegendslib.world.features.WorldGenSphere;
 
 public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 

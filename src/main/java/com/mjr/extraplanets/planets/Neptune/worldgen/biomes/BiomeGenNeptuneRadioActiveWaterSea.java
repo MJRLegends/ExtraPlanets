@@ -2,15 +2,15 @@ package com.mjr.extraplanets.planets.Neptune.worldgen.biomes;
 
 import java.util.List;
 
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.world.biome.Biome;
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
+
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.world.biome.Biome;
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenNeptuneRadioActiveWaterSea extends NeptuneBiomes {
 

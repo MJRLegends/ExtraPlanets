@@ -1,5 +1,12 @@
 package com.mjr.extraplanets.blocks;
 
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityPoweredChargingPadSingle;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityRocketChargingPadSingle;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier2LandingPadSingle;
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPadSingle;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.api.block.IPartialSealableBlock;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
@@ -25,13 +32,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.tileEntities.blocks.TileEntityPoweredChargingPadSingle;
-import com.mjr.extraplanets.tileEntities.blocks.TileEntityRocketChargingPadSingle;
-import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier2LandingPadSingle;
-import com.mjr.extraplanets.tileEntities.blocks.TileEntityTier3LandingPadSingle;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartialSealableBlock, IShiftDescription, ISortableBlock {
 	public static final PropertyEnum<EnumLandingPadType> PAD_TYPE = PropertyEnum.create("type", EnumLandingPadType.class);

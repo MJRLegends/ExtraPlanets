@@ -6,6 +6,9 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.GenLayerUranus;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import net.minecraft.util.math.BlockPos;
@@ -18,9 +21,6 @@ import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.GenLayerUranus;
 
 public class BiomeProviderUranus extends BiomeProvider {
 	private GenLayer unzoomedBiomes;

@@ -6,6 +6,9 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
+import com.mjr.extraplanets.moons.Europa.worldgen.biomes.GenLayerEuropa;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import net.minecraft.util.math.BlockPos;
@@ -18,9 +21,6 @@ import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
-import com.mjr.extraplanets.moons.Europa.worldgen.biomes.GenLayerEuropa;
 
 public class BiomeProviderEuropa extends BiomeProvider {
 	private GenLayer unzoomedBiomes;

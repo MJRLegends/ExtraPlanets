@@ -4,6 +4,20 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import org.lwjgl.input.Keyboard;
+
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.api.item.IModularArmor;
+import com.mjr.extraplanets.api.item.IPressureSuit;
+import com.mjr.extraplanets.api.item.IRadiationSuit;
+import com.mjr.extraplanets.client.model.ArmorCustomModel;
+import com.mjr.extraplanets.client.model.ArmorSpaceSuitModel;
+import com.mjr.extraplanets.items.armor.bases.JetpackArmorBase;
+import com.mjr.extraplanets.items.armor.modules.Module;
+import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.api.item.IBreathableArmor;
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.gui.ScaledResolution;
@@ -19,20 +33,6 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.input.Keyboard;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.api.item.IModularArmor;
-import com.mjr.extraplanets.api.item.IPressureSuit;
-import com.mjr.extraplanets.api.item.IRadiationSuit;
-import com.mjr.extraplanets.client.model.ArmorCustomModel;
-import com.mjr.extraplanets.client.model.ArmorSpaceSuitModel;
-import com.mjr.extraplanets.items.armor.bases.JetpackArmorBase;
-import com.mjr.extraplanets.items.armor.modules.Module;
-import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class Tier3SpaceSuitArmorJetpack extends JetpackArmorBase implements IPressureSuit, IRadiationSuit, IBreathableArmor, IModularArmor {
 	public String name;

@@ -1,5 +1,10 @@
 package com.mjr.extraplanets.blocks.machines;
 
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenCompressor;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecompressor;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
@@ -22,11 +27,6 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenCompressor;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecompressor;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class UltimateOxygenCompressor extends BlockAdvancedTile implements IShiftDescription, ISortableBlock {
 	public static final int OXYGEN_COMPRESSOR_METADATA = 0;

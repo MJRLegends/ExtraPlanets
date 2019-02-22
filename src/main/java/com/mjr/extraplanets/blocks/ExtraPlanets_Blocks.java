@@ -2,13 +2,6 @@ package com.mjr.extraplanets.blocks;
 
 import java.lang.reflect.Constructor;
 
-import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-
 import com.google.common.collect.ObjectArrays;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
@@ -126,6 +119,13 @@ import com.mjr.mjrlegendslib.block.BlockBasicGravel;
 import com.mjr.mjrlegendslib.block.BlockBasicStairs;
 import com.mjr.mjrlegendslib.itemBlock.ItemBlockDefault;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
+
+import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ExtraPlanets_Blocks {
 

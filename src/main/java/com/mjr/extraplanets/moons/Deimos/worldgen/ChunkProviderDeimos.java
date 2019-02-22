@@ -2,6 +2,13 @@ package com.mjr.extraplanets.moons.Deimos.worldgen;
 
 import java.util.List;
 
+import com.google.common.collect.Lists;
+import com.mjr.extraplanets.api.prefabs.world.ChunkProviderSingleBiomeSpace;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
+import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
+import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
+
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
@@ -9,13 +16,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.ChunkPrimer;
-
-import com.google.common.collect.Lists;
-import com.mjr.extraplanets.api.prefabs.world.ChunkProviderSingleBiomeSpace;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
-import com.mjr.mjrlegendslib.world.gen.MapGenCaveGen;
-import com.mjr.mjrlegendslib.world.gen.MapGenRavineGen;
 
 public class ChunkProviderDeimos extends ChunkProviderSingleBiomeSpace {
 	private final BiomeDecoratorDeimos ceresBiomeDecorator = new BiomeDecoratorDeimos();

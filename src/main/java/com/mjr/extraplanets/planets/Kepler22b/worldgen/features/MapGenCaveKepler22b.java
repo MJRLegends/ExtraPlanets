@@ -2,16 +2,16 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.features;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.ChunkPrimer;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.mjrlegendslib.world.gen.MapGenBaseMeta;
 
 public class MapGenCaveKepler22b extends MapGenBaseMeta {
 	public static final int BREAK_THROUGH_CHANCE = 25; // 1 in n chance

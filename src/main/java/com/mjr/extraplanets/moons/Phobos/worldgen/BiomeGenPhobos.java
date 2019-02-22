@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.moons.Phobos.worldgen;
 
+import com.mjr.extraplanets.Config;
+
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
-
-import com.mjr.extraplanets.Config;
 
 public class BiomeGenPhobos extends PhobosBiomes {
 

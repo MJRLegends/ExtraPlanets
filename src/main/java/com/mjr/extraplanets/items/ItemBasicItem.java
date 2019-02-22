@@ -4,6 +4,13 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
+import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
@@ -19,13 +26,6 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
-import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
-import com.mjr.mjrlegendslib.util.PlayerUtilties;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class ItemBasicItem extends Item {
 	public ItemBasicItem(String name) {

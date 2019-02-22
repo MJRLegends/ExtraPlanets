@@ -3,6 +3,16 @@ package com.mjr.extraplanets.moons.Titan;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
+import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
+import com.mjr.extraplanets.moons.Titan.worldgen.BiomeProviderTitan;
+import com.mjr.extraplanets.moons.Titan.worldgen.ChunkProviderTitan;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
@@ -15,16 +25,6 @@ import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanetsDimensions;
-import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
-import com.mjr.extraplanets.moons.Titan.worldgen.BiomeProviderTitan;
-import com.mjr.extraplanets.moons.Titan.worldgen.ChunkProviderTitan;
-import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class WorldProviderTitan extends WorldProviderRealisticSpace {
 	@Override

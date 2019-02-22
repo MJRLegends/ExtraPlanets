@@ -1,8 +1,8 @@
 package com.mjr.extraplanets.items.noseCones;
 
-import net.minecraft.item.Item;
-
 import com.mjr.extraplanets.ExtraPlanets;
+
+import net.minecraft.item.Item;
 
 public class Tier10NoseCone extends Item {
 	public Tier10NoseCone(String name) {

@@ -1,5 +1,12 @@
 package com.mjr.extraplanets.client.render.entities.landers;
 
+import org.lwjgl.opengl.GL11;
+
+import com.google.common.collect.ImmutableList;
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.entities.landers.EntityGeneralLander;
+import com.mjr.mjrlegendslib.util.ModelUtilities;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.block.model.IBakedModel;
@@ -11,13 +18,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
-
-import com.google.common.collect.ImmutableList;
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.entities.landers.EntityGeneralLander;
-import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderGeneralLander extends Render<EntityGeneralLander> {

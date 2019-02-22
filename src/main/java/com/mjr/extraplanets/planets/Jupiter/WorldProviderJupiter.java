@@ -3,6 +3,15 @@ package com.mjr.extraplanets.planets.Jupiter;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
+import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.BiomeProviderJupiter;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.ChunkProviderJupiter;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
@@ -12,15 +21,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.IChunkGenerator;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.ExtraPlanetsDimensions;
-import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.BiomeProviderJupiter;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.ChunkProviderJupiter;
-import com.mjr.mjrlegendslib.util.MCUtilities;
 
 public class WorldProviderJupiter extends WorldProviderRealisticSpace {
 

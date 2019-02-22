@@ -4,13 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.structure.MapGenStructure;
-import net.minecraft.world.gen.structure.MapGenStructureIO;
-import net.minecraft.world.gen.structure.StructureStart;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.planets.Mercury.worldgen.village.StructureComponentVillageField;
@@ -23,6 +16,13 @@ import com.mjr.extraplanets.planets.Mercury.worldgen.village.StructureComponentV
 import com.mjr.extraplanets.planets.Mercury.worldgen.village.StructureComponentVillageWoodHut;
 import com.mjr.extraplanets.planets.Mercury.worldgen.village.StructureVillageStartMercury;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
+
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.structure.MapGenStructure;
+import net.minecraft.world.gen.structure.MapGenStructureIO;
+import net.minecraft.world.gen.structure.StructureStart;
 
 public class MapGenVillageMercury extends MapGenStructure {
 	public static List<Biome> villageSpawnBiomes = Arrays.asList(new Biome[] { BiomeGenMercury.mercury });

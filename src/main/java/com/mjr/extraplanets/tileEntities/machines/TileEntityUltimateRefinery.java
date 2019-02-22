@@ -2,6 +2,9 @@ package com.mjr.extraplanets.tileEntities.machines;
 
 import javax.annotation.Nullable;
 
+import com.mjr.extraplanets.blocks.machines.UltimateRefinery;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.GCFluids;
 import micdoodle8.mods.galacticraft.core.GCItems;
@@ -26,9 +29,6 @@ import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
-
-import com.mjr.extraplanets.blocks.machines.UltimateRefinery;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityUltimateRefinery extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandlerWrapper {
 	private final int tankCapacity = 24000 * 4;

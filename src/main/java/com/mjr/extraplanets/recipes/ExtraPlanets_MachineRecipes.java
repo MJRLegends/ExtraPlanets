@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-import net.minecraft.item.ItemStack;
-
 import com.google.common.collect.ImmutableMap;
+
+import net.minecraft.item.ItemStack;
 
 public class ExtraPlanets_MachineRecipes {
 	private static HashMap<ItemStack, ItemStack> blockSmasherRecipes = new HashMap<>();

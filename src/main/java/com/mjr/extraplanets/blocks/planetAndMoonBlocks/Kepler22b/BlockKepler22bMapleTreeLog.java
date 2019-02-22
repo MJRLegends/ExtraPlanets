@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b;
 
+import com.google.common.base.Predicate;
+
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.properties.IProperty;
@@ -12,8 +14,6 @@ import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.google.common.base.Predicate;
 
 public class BlockKepler22bMapleTreeLog extends BlockLog {
 	public static enum EnumType implements IStringSerializable {

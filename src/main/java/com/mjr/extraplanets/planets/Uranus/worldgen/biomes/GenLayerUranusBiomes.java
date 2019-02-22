@@ -1,11 +1,11 @@
 package com.mjr.extraplanets.planets.Uranus.worldgen.biomes;
 
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeAdaptive;
 import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
-
-import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 
 public class GenLayerUranusBiomes extends GenLayer {
 	private static final Biome[] biomes = BiomeAdaptive.getBiomesListFor(ExtraPlanets_Planets.URANUS).toArray(new Biome[0]);

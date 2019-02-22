@@ -3,6 +3,12 @@ package com.mjr.extraplanets.recipes;
 import java.util.HashMap;
 import java.util.List;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.util.GCRecipeUtilities;
+import com.mjr.mjrlegendslib.util.RecipeUtilities;
+
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
@@ -13,12 +19,6 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.oredict.OreDictionary;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.util.GCRecipeUtilities;
-import com.mjr.mjrlegendslib.util.RecipeUtilities;
 
 public class ExtraPlanets_Recipes {
 	public static void init() {

@@ -2,6 +2,9 @@ package com.mjr.extraplanets.tileEntities.machines;
 
 import javax.annotation.Nullable;
 
+import com.mjr.extraplanets.blocks.machines.AdvancedFuelLoader;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.api.entity.IFuelable;
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
 import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
@@ -34,9 +37,6 @@ import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fml.relauncher.Side;
-
-import com.mjr.extraplanets.blocks.machines.AdvancedFuelLoader;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandlerWrapper, ILandingPadAttachable, IMachineSides {
 	private final int tankCapacity = 12000 * 2;

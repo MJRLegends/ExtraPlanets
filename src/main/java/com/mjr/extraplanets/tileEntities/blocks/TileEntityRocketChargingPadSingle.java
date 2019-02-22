@@ -2,14 +2,14 @@ package com.mjr.extraplanets.tileEntities.blocks;
 
 import java.util.ArrayList;
 
+import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.blocks.BlockCustomLandingPadFull;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class TileEntityRocketChargingPadSingle extends TileEntity implements ITickable {
 	private int corner = 0;

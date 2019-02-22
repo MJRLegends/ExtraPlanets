@@ -1,5 +1,12 @@
 package com.mjr.extraplanets.client.render.entities.rockets;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT8;
+import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
+import com.mjr.mjrlegendslib.util.ModelUtilities;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -12,13 +19,6 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.MathHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.client.model.rockets.ItemModelRocketT8;
-import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
-import com.mjr.mjrlegendslib.util.ModelUtilities;
 
 @SideOnly(Side.CLIENT)
 public class RenderTier8Rocket extends Render<EntityTier8Rocket> {

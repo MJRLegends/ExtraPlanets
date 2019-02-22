@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 
-import net.minecraft.item.ItemStack;
-
 import com.mjr.extraplanets.recipes.ExtraPlanets_MachineRecipes;
+
+import net.minecraft.item.ItemStack;
 
 public class BlockSmasherRecipeMaker {
 	public static List<BlockSmasherRecipeWrapper> getRecipesList() {

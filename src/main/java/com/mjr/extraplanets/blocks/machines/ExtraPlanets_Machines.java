@@ -1,8 +1,5 @@
 package com.mjr.extraplanets.blocks.machines;
 
-import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
-import net.minecraft.block.Block;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -29,6 +26,9 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecomp
 import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
+
+import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
+import net.minecraft.block.Block;
 
 public class ExtraPlanets_Machines {
 	// Machines

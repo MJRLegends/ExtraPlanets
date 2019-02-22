@@ -1,13 +1,13 @@
 package com.mjr.extraplanets.items.armor;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class ExtraPlanets_Armor {
 	private static ArmorMaterial CARBON_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Carbon_Armor", "Test", 26, new int[] { 3, 8, 6, 3 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);

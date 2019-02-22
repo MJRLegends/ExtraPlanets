@@ -3,9 +3,9 @@ package com.mjr.extraplanets.jei.chemicalInjector;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.item.ItemStack;
-
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
+import net.minecraft.item.ItemStack;
 
 public class ChemicalInjectorRecipeMaker {
 	public static List<ChemicalInjectorRecipeWrapper> getRecipesList() {

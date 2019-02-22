@@ -2,12 +2,12 @@ package com.mjr.extraplanets.recipes;
 
 import java.util.function.BooleanSupplier;
 
+import com.google.gson.JsonObject;
+import com.mjr.extraplanets.Config;
+
 import net.minecraft.util.JsonUtils;
 import net.minecraftforge.common.crafting.IConditionFactory;
 import net.minecraftforge.common.crafting.JsonContext;
-
-import com.google.gson.JsonObject;
-import com.mjr.extraplanets.Config;
 
 public class RecipeEnabledCondition implements IConditionFactory {
 	@Override

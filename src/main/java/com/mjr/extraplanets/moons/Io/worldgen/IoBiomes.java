@@ -2,6 +2,12 @@ package com.mjr.extraplanets.moons.Io.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIo;
+import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIOBurningPlains;
+import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIo;
+import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIoAshLands;
+
 import micdoodle8.mods.galacticraft.api.world.BiomeGenBaseGC;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -11,12 +17,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.chunk.ChunkPrimer;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIo;
-import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIOBurningPlains;
-import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIo;
-import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIoAshLands;
 
 public class IoBiomes extends BiomeGenBaseGC {
 

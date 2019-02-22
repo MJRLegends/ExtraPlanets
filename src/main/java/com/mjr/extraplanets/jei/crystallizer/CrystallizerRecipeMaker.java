@@ -3,12 +3,12 @@ package com.mjr.extraplanets.jei.crystallizer;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.ForgeModContainer;
 import net.minecraftforge.fluids.UniversalBucket;
-
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class CrystallizerRecipeMaker {
 	public static List<CrystallizerRecipeWrapper> getRecipesList() {
