@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen.biomes;
 
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
+
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenJupiterMagmaSea extends JupiterBiomes {
 

@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.itemBlocks.planetAndMoons;
 
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDefaults;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDefaults;
 
 public class ItemBlockVenus extends ItemBlockDefaults {
 	public ItemBlockVenus(Block block) {

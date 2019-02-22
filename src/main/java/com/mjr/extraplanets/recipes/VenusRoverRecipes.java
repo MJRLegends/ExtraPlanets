@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import com.mjr.extraplanets.inventory.vehicles.InventoryVenusRover;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.core.items.GCItems;
 import micdoodle8.mods.galacticraft.core.recipe.NasaWorkbenchRecipe;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.inventory.vehicles.InventoryVenusRover;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class VenusRoverRecipes {
 	private static List<INasaWorkbenchRecipe> venusRoverRecipes = new ArrayList<INasaWorkbenchRecipe>();

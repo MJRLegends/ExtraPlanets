@@ -1,18 +1,6 @@
 package com.mjr.extraplanets.network;
 
-import io.netty.buffer.ByteBuf;
-import io.netty.channel.ChannelHandlerContext;
-
 import java.util.EnumMap;
-
-import micdoodle8.mods.galacticraft.core.network.IPacket;
-import micdoodle8.mods.galacticraft.core.network.PacketControllableEntity;
-import micdoodle8.mods.galacticraft.core.network.PacketDynamic;
-import micdoodle8.mods.galacticraft.core.network.PacketDynamicInventory;
-import micdoodle8.mods.galacticraft.core.network.PacketEntityUpdate;
-import micdoodle8.mods.galacticraft.core.network.PacketRotateRocket;
-import micdoodle8.mods.galacticraft.core.util.GCLog;
-import net.minecraft.entity.player.EntityPlayerMP;
 
 import com.mjr.extraplanets.Constants;
 
@@ -22,6 +10,16 @@ import cpw.mods.fml.common.network.FMLIndexedMessageToMessageCodec;
 import cpw.mods.fml.common.network.FMLOutboundHandler;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.relauncher.Side;
+import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelHandlerContext;
+import micdoodle8.mods.galacticraft.core.network.IPacket;
+import micdoodle8.mods.galacticraft.core.network.PacketControllableEntity;
+import micdoodle8.mods.galacticraft.core.network.PacketDynamic;
+import micdoodle8.mods.galacticraft.core.network.PacketDynamicInventory;
+import micdoodle8.mods.galacticraft.core.network.PacketEntityUpdate;
+import micdoodle8.mods.galacticraft.core.network.PacketRotateRocket;
+import micdoodle8.mods.galacticraft.core.util.GCLog;
+import net.minecraft.entity.player.EntityPlayerMP;
 
 public class ExtraPlanetsChannelHandler extends FMLIndexedMessageToMessageCodec<IPacket> {
 	private EnumMap<Side, FMLEmbeddedChannel> channels;

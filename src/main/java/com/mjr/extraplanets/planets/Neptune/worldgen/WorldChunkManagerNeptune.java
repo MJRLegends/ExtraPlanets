@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.GenLayerNeptune;
+
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.WorldChunkManagerSpace;
 import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.World;
@@ -11,8 +13,6 @@ import net.minecraft.world.biome.BiomeCache;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
-
-import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.GenLayerNeptune;
 
 public class WorldChunkManagerNeptune extends WorldChunkManagerSpace {
 	private GenLayer unzoomedBiomes;

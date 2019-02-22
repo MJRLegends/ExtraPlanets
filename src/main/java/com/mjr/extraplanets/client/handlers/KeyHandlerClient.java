@@ -1,14 +1,5 @@
 package com.mjr.extraplanets.client.handlers;
 
-import micdoodle8.mods.galacticraft.core.Constants;
-import micdoodle8.mods.galacticraft.core.client.KeyHandler;
-import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.EntityClientPlayerMP;
-import net.minecraft.client.settings.KeyBinding;
-
 import org.lwjgl.input.Keyboard;
 
 import com.mjr.extraplanets.ExtraPlanets;
@@ -18,6 +9,14 @@ import com.mjr.extraplanets.network.PacketSimple;
 import com.mjr.extraplanets.network.PacketSimple.EnumSimplePacket;
 
 import cpw.mods.fml.common.gameevent.TickEvent.Type;
+import micdoodle8.mods.galacticraft.core.Constants;
+import micdoodle8.mods.galacticraft.core.client.KeyHandler;
+import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityClientPlayerMP;
+import net.minecraft.client.settings.KeyBinding;
 
 public class KeyHandlerClient extends KeyHandler {
 	public static KeyBinding openFuelGui;

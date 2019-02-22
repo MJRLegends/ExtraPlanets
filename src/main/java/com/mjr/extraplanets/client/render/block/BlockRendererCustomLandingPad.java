@@ -1,16 +1,15 @@
 package com.mjr.extraplanets.client.render.block;
 
-import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.world.IBlockAccess;
-
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.api.IPowerDock;
 
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
+import micdoodle8.mods.galacticraft.api.tile.IFuelDock;
+import net.minecraft.block.Block;
+import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.world.IBlockAccess;
 
 public class BlockRendererCustomLandingPad implements ISimpleBlockRenderingHandler {
 	final int renderID;

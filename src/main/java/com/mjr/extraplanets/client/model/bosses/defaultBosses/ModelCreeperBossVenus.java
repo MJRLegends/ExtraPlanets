@@ -1,12 +1,12 @@
 package com.mjr.extraplanets.client.model.bosses.defaultBosses;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossVenus;
+
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossVenus;
 
 public class ModelCreeperBossVenus extends ModelBase {
 	ModelRenderer headMain;

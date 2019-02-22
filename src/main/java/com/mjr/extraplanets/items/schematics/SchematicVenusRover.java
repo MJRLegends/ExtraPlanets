@@ -2,6 +2,11 @@ package com.mjr.extraplanets.items.schematics;
 
 import java.util.List;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicItem;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -9,12 +14,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class SchematicVenusRover extends Item implements ISchematicItem {
 	public SchematicVenusRover(String name) {

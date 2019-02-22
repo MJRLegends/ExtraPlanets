@@ -2,6 +2,14 @@ package com.mjr.extraplanets.planets.Saturn.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturn;
+import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnNuclearLand;
+import com.mjr.extraplanets.util.WorldGenHelper;
+import com.mjr.extraplanets.world.features.WorldGenNuclearPile;
+import com.mjr.extraplanets.world.features.WorldGenSlimeTree;
+
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
@@ -10,14 +18,6 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturn;
-import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnNuclearLand;
-import com.mjr.extraplanets.util.WorldGenHelper;
-import com.mjr.extraplanets.world.features.WorldGenNuclearPile;
-import com.mjr.extraplanets.world.features.WorldGenSlimeTree;
 
 public class BiomeDecoratorSaturn extends BiomeDecorator {
 

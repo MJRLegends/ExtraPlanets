@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.planets.Uranus.worldgen.biomes;
 
-import net.minecraft.init.Blocks;
-
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
+
+import net.minecraft.init.Blocks;
 
 public class BiomeGenUranusSnowLands extends UranusBiomes {
 	public BiomeGenUranusSnowLands(int par1) {

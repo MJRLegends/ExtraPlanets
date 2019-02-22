@@ -3,6 +3,11 @@ package com.mjr.extraplanets.tileEntities.machines;
 import java.util.HashSet;
 import java.util.List;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
+import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.api.entity.IDockable;
 import micdoodle8.mods.galacticraft.api.entity.IFuelable;
 import micdoodle8.mods.galacticraft.api.entity.ILandable;
@@ -22,12 +27,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fluids.FluidStack;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-
-import cpw.mods.fml.client.FMLClientHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class TileEntityTier3LandingPad extends TileEntityMulti implements IMultiBlock, IFuelable, IFuelDock {
 	private IDockable dockedEntity;

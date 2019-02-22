@@ -2,6 +2,8 @@ package com.mjr.extraplanets.entities.monsters;
 
 import java.util.UUID;
 
+import com.mjr.extraplanets.entities.ai.EntityAIBlueCreeperSwell;
+
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.core.items.GCItems;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
@@ -25,8 +27,6 @@ import net.minecraft.potion.Potion;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
-
-import com.mjr.extraplanets.entities.ai.EntityAIBlueCreeperSwell;
 
 public class EntityBlueCreeper extends EntityCustomBlueCreeper implements IEntityBreathable {
 	private float sizeXBase = -1.0F;

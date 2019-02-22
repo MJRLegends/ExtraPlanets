@@ -1,13 +1,13 @@
 package com.mjr.extraplanets.planets.Kepler22b.worldgen.biome;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
+
 import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntitySpider;
 import net.minecraft.entity.monster.EntityZombie;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.Kepler22bBiomes;
 
 public class BiomeGenKepler22bRedDesert extends Kepler22bBiomes {
 	@SuppressWarnings("unchecked")

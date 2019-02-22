@@ -2,6 +2,11 @@ package com.mjr.extraplanets.items.planetAndMoonItems;
 
 import java.util.List;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -9,12 +14,6 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemTier11Items extends Item {
 	public static final String[] names = { "blue_diamond", "red_diamond", "purple_diamond", "yellow_diamond", "green_diamond", "blue_sticks", "red_sticks", "purple_sticks", "yellow_sticks", "green_sticks", "brown_sticks", "ingot_platinum",

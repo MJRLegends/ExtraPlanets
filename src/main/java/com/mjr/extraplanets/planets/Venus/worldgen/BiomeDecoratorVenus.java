@@ -1,5 +1,10 @@
 package com.mjr.extraplanets.planets.Venus.worldgen;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.WorldGenHelper;
+import com.mjr.extraplanets.world.features.WorldGenVolcano;
+
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.init.Blocks;
@@ -7,11 +12,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.util.WorldGenHelper;
-import com.mjr.extraplanets.world.features.WorldGenVolcano;
 
 public class BiomeDecoratorVenus extends BiomeDecoratorSpace {
 

@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.blocks;
 
-import net.minecraft.block.material.Material;
-
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
+
+import net.minecraft.block.material.Material;
 
 public class BlockSand extends BlockFalling {
 	protected BlockSand(String name) {

@@ -2,13 +2,13 @@ package com.mjr.extraplanets;
 
 import java.util.ArrayList;
 
-import net.minecraft.stats.Achievement;
-import net.minecraftforge.common.AchievementPage;
-import net.minecraftforge.common.MinecraftForge;
-
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.handlers.AchievementEventHandler;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
+import net.minecraft.stats.Achievement;
+import net.minecraftforge.common.AchievementPage;
+import net.minecraftforge.common.MinecraftForge;
 
 public class ExtraPlanets_Achievements {
 

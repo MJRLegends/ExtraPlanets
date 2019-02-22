@@ -2,14 +2,14 @@ package com.mjr.extraplanets.moons.Iapetus.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class MapGenCaveIapetus extends MapGenBaseMeta {
 	private Block grassblock = ExtraPlanets_Blocks.iapetusBlocks;

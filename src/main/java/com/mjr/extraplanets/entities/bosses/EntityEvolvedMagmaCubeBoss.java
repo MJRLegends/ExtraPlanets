@@ -3,6 +3,11 @@ package com.mjr.extraplanets.entities.bosses;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT4TreasureChest;
+
+import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
@@ -31,12 +36,6 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ChestGenHooks;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT4TreasureChest;
-
-import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
 
 public class EntityEvolvedMagmaCubeBoss extends EntityMob implements IEntityBreathable, IBossDisplayData, IBoss {
 	public int deathTicks = 0;

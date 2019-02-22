@@ -1,12 +1,5 @@
 package com.mjr.extraplanets.planets;
 
-import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
-import micdoodle8.mods.galacticraft.api.galaxies.Satellite;
-import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
-import net.minecraft.util.ResourceLocation;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.planets.Ceres.spacestation.TeleportTypeCeresOrbit;
 import com.mjr.extraplanets.planets.Ceres.spacestation.WorldProviderCeresOrbit;
@@ -30,6 +23,13 @@ import com.mjr.extraplanets.planets.Venus.spacestation.TeleportTypeVenusOrbit;
 import com.mjr.extraplanets.planets.Venus.spacestation.WorldProviderVenusOrbit;
 import com.mjr.extraplanets.planets.mars.spacestation.TeleportTypeMarsOrbit;
 import com.mjr.extraplanets.planets.mars.spacestation.WorldProviderMarsOrbit;
+
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
+import micdoodle8.mods.galacticraft.api.galaxies.Satellite;
+import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
+import net.minecraft.util.ResourceLocation;
 
 public class ExtraPlanets_SpaceStations {
 

@@ -1,13 +1,5 @@
 package com.mjr.extraplanets.planets;
 
-import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
-import micdoodle8.mods.galacticraft.api.galaxies.Planet;
-import micdoodle8.mods.galacticraft.api.world.IAtmosphericGas;
-import micdoodle8.mods.galacticraft.core.GalacticraftCore;
-import net.minecraft.util.ResourceLocation;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets_SolarSystems;
@@ -32,6 +24,14 @@ import com.mjr.extraplanets.planets.Uranus.WorldProviderUranus;
 import com.mjr.extraplanets.planets.Venus.TeleportTypeVenus;
 import com.mjr.extraplanets.planets.Venus.WorldProviderVenus;
 import com.mjr.extraplanets.util.RegisterHelper;
+
+import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
+import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
+import micdoodle8.mods.galacticraft.api.galaxies.Planet;
+import micdoodle8.mods.galacticraft.api.world.IAtmosphericGas;
+import micdoodle8.mods.galacticraft.core.GalacticraftCore;
+import net.minecraft.util.ResourceLocation;
 
 public class ExtraPlanets_Planets {
 	public static Planet mercury;

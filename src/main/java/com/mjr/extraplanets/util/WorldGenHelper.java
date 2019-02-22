@@ -2,11 +2,11 @@ package com.mjr.extraplanets.util;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.world.features.WorldGenCustomLake;
+
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
-
-import com.mjr.extraplanets.world.features.WorldGenCustomLake;
 
 public class WorldGenHelper {
 

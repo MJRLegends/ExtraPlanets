@@ -3,6 +3,12 @@ package com.mjr.extraplanets.entities.bosses;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT5TreasureChest;
+
+import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
@@ -33,13 +39,6 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ChestGenHooks;
-
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT5TreasureChest;
-
-import cpw.mods.fml.common.network.NetworkRegistry.TargetPoint;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class EntityEvolvedFireBatBoss extends EntityMob implements IMob, IEntityBreathable, IBossDisplayData, IBoss {
 	private Vector3 roomCoords;

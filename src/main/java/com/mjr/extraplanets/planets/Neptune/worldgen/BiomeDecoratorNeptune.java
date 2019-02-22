@@ -2,6 +2,11 @@ package com.mjr.extraplanets.planets.Neptune.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.util.WorldGenHelper;
+import com.mjr.extraplanets.world.features.WorldGenFrozenNitrogenPile;
+
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
@@ -9,11 +14,6 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.terraingen.DecorateBiomeEvent;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.util.WorldGenHelper;
-import com.mjr.extraplanets.world.features.WorldGenFrozenNitrogenPile;
 
 public class BiomeDecoratorNeptune extends BiomeDecorator {
 

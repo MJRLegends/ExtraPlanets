@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.inventory.rockets;
 
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
@@ -8,8 +10,6 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class SlotSchematicTier8Rocket extends Slot {
 	private final int index;

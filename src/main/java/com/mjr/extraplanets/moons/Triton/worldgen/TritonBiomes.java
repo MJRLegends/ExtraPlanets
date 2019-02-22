@@ -2,6 +2,12 @@ package com.mjr.extraplanets.moons.Triton.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTriton;
+import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTritonIceLands;
+import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTritonIceSea;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.block.Block;
@@ -10,12 +16,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTriton;
-import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTritonIceLands;
-import com.mjr.extraplanets.moons.Triton.worldgen.biomes.BiomeGenTritonIceSea;
 
 public class TritonBiomes extends BiomeGenBase {
 	public static final BiomeGenBase triton = new BiomeGenTriton(Config.tritonBiomeID).setBiomeName("triton").setHeight(new Height(0.125F, 0.05F));

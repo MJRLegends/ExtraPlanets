@@ -2,6 +2,14 @@ package com.mjr.extraplanets.items.rockets;
 
 import java.util.List;
 
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityTier2LandingPad;
+
+import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.api.item.IHoldableItem;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -15,15 +23,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.FluidStack;
-
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.entities.rockets.EntityTier8Rocket;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityTier2LandingPad;
-
-import cpw.mods.fml.client.FMLClientHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class Tier8Rocket extends Item implements IHoldableItem {
 	public Tier8Rocket(String assetName) {

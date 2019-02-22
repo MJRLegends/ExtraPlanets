@@ -2,6 +2,11 @@ package com.mjr.extraplanets.planets.Neptune.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptune;
+import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneRadioActiveWaterSea;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.block.Block;
@@ -10,11 +15,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptune;
-import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptuneRadioActiveWaterSea;
 
 public class NeptuneBiomes extends BiomeGenBase {
 	public static BiomeGenBase neptune = new BiomeGenNeptune(Config.neptuneBiomeID).setBiomeName("Neptune").setHeight(BiomeGenBase.height_LowPlains);

@@ -1,7 +1,5 @@
 package com.mjr.extraplanets.blocks;
 
-import net.minecraft.block.Block;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.items.slabs.CeresStoneItemSlab;
@@ -20,6 +18,7 @@ import com.mjr.extraplanets.items.slabs.VenusDungeonBrickStoneItemSlab;
 import com.mjr.extraplanets.items.slabs.VenusStoneItemSlab;
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
 
 public class ExtraPlanets_SlabsStairsBlocks {
 	// Slabs

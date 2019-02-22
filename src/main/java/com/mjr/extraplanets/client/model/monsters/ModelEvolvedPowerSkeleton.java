@@ -1,11 +1,11 @@
 package com.mjr.extraplanets.client.model.monsters;
 
+import com.mjr.extraplanets.Constants;
+
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.MathHelper;
-
-import com.mjr.extraplanets.Constants;
 
 public class ModelEvolvedPowerSkeleton extends ModelBiped {
 	ModelRenderer leftOxygenTank;

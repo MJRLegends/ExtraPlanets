@@ -4,6 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedEnderman;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedPowerSkeleton;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.MapGenDungeon;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomBossPluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomChestsPluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomEmptyPluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomSpawnerPluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomTreasurePluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.village.MapGenVillagePluto;
+
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
@@ -17,19 +30,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import com.google.common.collect.Lists;
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.entities.monsters.EntityEvolvedEnderman;
-import com.mjr.extraplanets.entities.monsters.EntityEvolvedPowerSkeleton;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.MapGenDungeon;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomBossPluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomChestsPluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomEmptyPluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomSpawnerPluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomTreasurePluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.village.MapGenVillagePluto;
 
 public class ChunkProviderPluto extends ChunkProviderSpace {
 	private final BiomeDecoratorPluto biomeDecorator = new BiomeDecoratorPluto();

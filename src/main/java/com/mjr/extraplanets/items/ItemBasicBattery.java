@@ -1,16 +1,15 @@
 package com.mjr.extraplanets.items;
 
-import micdoodle8.mods.galacticraft.api.item.IItemElectric;
-import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
-import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
-import net.minecraft.item.EnumRarity;
-import net.minecraft.item.ItemStack;
-
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import micdoodle8.mods.galacticraft.api.item.IItemElectric;
+import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
+import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
+import net.minecraft.item.EnumRarity;
+import net.minecraft.item.ItemStack;
 
 public class ItemBasicBattery extends ItemElectricBase implements IItemElectric {
 

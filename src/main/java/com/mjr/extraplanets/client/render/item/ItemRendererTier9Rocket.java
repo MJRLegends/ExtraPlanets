@@ -1,5 +1,11 @@
 package com.mjr.extraplanets.client.render.item;
 
+import org.lwjgl.Sys;
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.Constants;
+
+import cpw.mods.fml.client.FMLClientHandler;
 import micdoodle8.mods.galacticraft.api.entity.IRocketType.EnumRocketType;
 import micdoodle8.mods.galacticraft.core.entities.EntityTier1Rocket;
 import net.minecraft.client.model.ModelChest;
@@ -10,13 +16,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.IItemRenderer;
 import net.minecraftforge.client.model.IModelCustom;
-
-import org.lwjgl.Sys;
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.Constants;
-
-import cpw.mods.fml.client.FMLClientHandler;
 
 public class ItemRendererTier9Rocket implements IItemRenderer {
 	protected static final ResourceLocation chestTexture = new ResourceLocation("textures/entity/chest/normal.png");

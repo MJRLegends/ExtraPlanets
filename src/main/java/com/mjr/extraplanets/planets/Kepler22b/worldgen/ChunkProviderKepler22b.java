@@ -3,15 +3,15 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
-import net.minecraft.block.Block;
-import net.minecraft.world.World;
-
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenCaveKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.MapGenRavineKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.village.MapGenVillageKepler22b;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderSpaceNormal;
+
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import net.minecraft.block.Block;
+import net.minecraft.world.World;
 
 public class ChunkProviderKepler22b extends ChunkProviderSpaceNormal {
 	private MapGenCaveKepler22b caveGenerator = new MapGenCaveKepler22b();

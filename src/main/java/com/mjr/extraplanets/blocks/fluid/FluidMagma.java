@@ -2,16 +2,15 @@ package com.mjr.extraplanets.blocks.fluid;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.Constants;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class FluidMagma extends FluidBasic {
 	public FluidMagma(String name) {

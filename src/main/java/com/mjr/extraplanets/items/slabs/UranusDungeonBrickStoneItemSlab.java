@@ -1,11 +1,11 @@
 package com.mjr.extraplanets.items.slabs;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSlab;
 import net.minecraft.item.ItemSlab;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
 
 public class UranusDungeonBrickStoneItemSlab extends ItemSlab {
 	public UranusDungeonBrickStoneItemSlab(Block block) {

@@ -3,6 +3,15 @@ package com.mjr.extraplanets.recipes;
 import java.util.HashMap;
 import java.util.List;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
+import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
+
+import cpw.mods.fml.common.registry.GameRegistry;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.recipe.CircuitFabricatorRecipes;
 import micdoodle8.mods.galacticraft.api.recipe.CompressorRecipes;
@@ -22,16 +31,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.armor.ExtraPlanets_Armor;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.ExtraPlanets_SlabsStairsBlocks;
-import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ExtraPlanets_Recipes {
 	public static void init() {

@@ -2,14 +2,14 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
-import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenerator;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.util.MessageUtilities;
 import com.mjr.extraplanets.util.WorldGenHelper;
+
+import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenBigBlueTree extends WorldGenerator {
 

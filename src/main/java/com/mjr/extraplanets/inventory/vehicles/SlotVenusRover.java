@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.inventory.vehicles;
 
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.items.GCItems;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
@@ -9,8 +11,6 @@ import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class SlotVenusRover extends Slot {
 	private final int index;

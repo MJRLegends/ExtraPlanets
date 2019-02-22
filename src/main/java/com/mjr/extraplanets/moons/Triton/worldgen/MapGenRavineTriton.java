@@ -2,15 +2,15 @@ package com.mjr.extraplanets.moons.Triton.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.MapGenBase;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class MapGenRavineTriton extends MapGenBase {
 	private float[] field_75046_d = new float[1024];

@@ -3,6 +3,13 @@ package com.mjr.extraplanets.blocks.treasureChest;
 import java.util.Iterator;
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.proxy.ClientProxy;
+import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT8TreasureChest;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
@@ -24,14 +31,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.proxy.ClientProxy;
-import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT8TreasureChest;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class T8TreasureChest extends BlockContainer implements ITileEntityProvider, ItemBlockDesc.IBlockShiftDesc {
 	private final Random random = new Random();

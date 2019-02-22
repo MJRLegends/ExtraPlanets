@@ -1,5 +1,10 @@
 package com.mjr.extraplanets.client.gui.vehicles;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.inventory.vehicles.ContainerSchematicMarsRover;
+
 import micdoodle8.mods.galacticraft.api.recipe.ISchematicResultPage;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
@@ -7,11 +12,6 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.inventory.vehicles.ContainerSchematicMarsRover;
 
 public class GuiSchematicMarsRover extends GuiContainerGC implements ISchematicResultPage {
 	private static final ResourceLocation marsRoverBenchTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/mars_roverbench.png");

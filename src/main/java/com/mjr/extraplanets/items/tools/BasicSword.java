@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.items.tools;
 
-import net.minecraft.item.ItemSword;
-
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
+
+import net.minecraft.item.ItemSword;
 
 public class BasicSword extends ItemSword {
 	protected BasicSword(ToolMaterial p_i45347_1_, String name) {

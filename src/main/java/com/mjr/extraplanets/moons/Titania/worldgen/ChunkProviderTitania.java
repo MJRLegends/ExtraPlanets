@@ -3,6 +3,13 @@ package com.mjr.extraplanets.moons.Titania.worldgen;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.common.collect.Lists;
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedEnderman;
+import com.mjr.extraplanets.entities.monsters.EntityEvolvedWitch;
+import com.mjr.extraplanets.moons.Titania.worldgen.village.MapGenVillageTitania;
+
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.ChunkProviderSpace;
@@ -16,13 +23,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
 import net.minecraft.world.chunk.IChunkProvider;
-
-import com.google.common.collect.Lists;
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.entities.monsters.EntityEvolvedEnderman;
-import com.mjr.extraplanets.entities.monsters.EntityEvolvedWitch;
-import com.mjr.extraplanets.moons.Titania.worldgen.village.MapGenVillageTitania;
 
 public class ChunkProviderTitania extends ChunkProviderSpace {
 

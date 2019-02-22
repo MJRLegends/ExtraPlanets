@@ -2,6 +2,12 @@ package com.mjr.extraplanets.tileEntities.machines;
 
 import java.util.EnumSet;
 
+import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
+import com.mjr.extraplanets.inventory.IInventoryDefaults;
+
+import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.api.tile.IDisableableMachine;
 import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.api.transmission.tile.IConnector;
@@ -25,13 +31,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
-import com.mjr.extraplanets.inventory.IInventoryDefaults;
-
-import cpw.mods.fml.client.FMLClientHandler;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class TileEntitySolar extends TileBaseUniversalElectricalSource implements IMultiBlock, IDisableableMachine, IInventoryDefaults, ISidedInventory, IConnector {
 	@NetworkedField(targetSide = Side.CLIENT)

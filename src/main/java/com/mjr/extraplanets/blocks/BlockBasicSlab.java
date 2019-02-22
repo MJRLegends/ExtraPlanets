@@ -2,14 +2,14 @@ package com.mjr.extraplanets.blocks;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+
 import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.Constants;
 
 public class BlockBasicSlab extends BlockSlab {
 	String name;

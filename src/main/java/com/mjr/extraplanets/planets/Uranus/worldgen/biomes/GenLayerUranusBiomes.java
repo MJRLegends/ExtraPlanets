@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.planets.Uranus.worldgen.biomes;
 
+import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
+
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
-
-import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
 
 public class GenLayerUranusBiomes extends GenLayer {
 	protected BiomeGenBase[] biomes = { UranusBiomes.uranus, UranusBiomes.uranusFrozenSea, UranusBiomes.uranusSnowLands };

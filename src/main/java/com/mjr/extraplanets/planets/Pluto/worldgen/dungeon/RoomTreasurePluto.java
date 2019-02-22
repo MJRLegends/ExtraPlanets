@@ -3,13 +3,13 @@ package com.mjr.extraplanets.planets.Pluto.worldgen.dungeon;
 import java.util.HashSet;
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT9TreasureChest;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT9TreasureChest;
 
 public class RoomTreasurePluto extends DungeonRoom {
 	int sizeX;

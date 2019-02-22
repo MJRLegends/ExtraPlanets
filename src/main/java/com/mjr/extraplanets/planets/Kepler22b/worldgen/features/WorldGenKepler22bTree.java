@@ -2,14 +2,14 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.features;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.Direction;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
 
 public class WorldGenKepler22bTree extends WorldGenAbstractTree {
 	private int minTreeHeight;

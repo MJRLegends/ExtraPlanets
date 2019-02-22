@@ -3,14 +3,14 @@ package com.mjr.extraplanets.entities.vehicles;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mjr.extraplanets.api.IPowerDock;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityPoweredChargingPad;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.api.IPowerDock;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityPoweredChargingPad;
 
 public class EntityMarsRover extends EntityPoweredVehicleBase {
 	public float targetAngle;

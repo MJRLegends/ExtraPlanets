@@ -2,9 +2,9 @@ package com.mjr.extraplanets.blocks;
 
 import java.lang.reflect.Method;
 
-import net.minecraft.block.Block;
-
 import com.mjr.extraplanets.Config;
+
+import net.minecraft.block.Block;
 
 public class ExtraPlanets_MicroBlocks {
 

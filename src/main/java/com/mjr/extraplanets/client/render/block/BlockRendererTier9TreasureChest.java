@@ -1,10 +1,5 @@
 package com.mjr.extraplanets.client.render.block;
 
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.RenderBlocks;
-import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
-import net.minecraft.world.IBlockAccess;
-
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
@@ -12,6 +7,10 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT9TreasureChest;
 
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
+import net.minecraft.block.Block;
+import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
+import net.minecraft.world.IBlockAccess;
 
 public class BlockRendererTier9TreasureChest implements ISimpleBlockRenderingHandler {
 	final int renderID;

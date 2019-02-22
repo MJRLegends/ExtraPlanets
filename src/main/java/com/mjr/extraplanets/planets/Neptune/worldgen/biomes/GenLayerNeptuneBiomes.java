@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.planets.Neptune.worldgen.biomes;
 
+import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
+
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
-
-import com.mjr.extraplanets.planets.Neptune.worldgen.NeptuneBiomes;
 
 public class GenLayerNeptuneBiomes extends GenLayer {
 	protected BiomeGenBase[] biomes = { NeptuneBiomes.neptune, NeptuneBiomes.neptuneRadioActiveWaterSea };

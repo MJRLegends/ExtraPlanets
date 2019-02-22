@@ -2,10 +2,10 @@ package com.mjr.extraplanets.handlers;
 
 import java.lang.reflect.Method;
 
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.util.MessageUtilities;
+
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 
 public class GalacticraftVersionChecker {
 	@SuppressWarnings("unused")

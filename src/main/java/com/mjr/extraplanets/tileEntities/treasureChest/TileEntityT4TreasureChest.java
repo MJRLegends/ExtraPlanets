@@ -3,6 +3,9 @@ package com.mjr.extraplanets.tileEntities.treasureChest;
 import java.util.Iterator;
 import java.util.List;
 
+import com.mjr.extraplanets.blocks.treasureChest.T4TreasureChest;
+
+import cpw.mods.fml.relauncher.Side;
 import micdoodle8.mods.galacticraft.api.item.IKeyable;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
@@ -19,10 +22,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.AxisAlignedBB;
-
-import com.mjr.extraplanets.blocks.treasureChest.T4TreasureChest;
-
-import cpw.mods.fml.relauncher.Side;
 
 public class TileEntityT4TreasureChest extends TileEntityAdvanced implements IInventory, IKeyable {
 	private ItemStack[] chestContents = new ItemStack[36];

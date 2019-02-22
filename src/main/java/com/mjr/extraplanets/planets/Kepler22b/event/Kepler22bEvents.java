@@ -1,12 +1,11 @@
 package com.mjr.extraplanets.planets.Kepler22b.event;
 
-import micdoodle8.mods.galacticraft.core.event.EventWakePlayer;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.world.WorldServer;
-
 import com.mjr.extraplanets.Config;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import micdoodle8.mods.galacticraft.core.event.EventWakePlayer;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.WorldServer;
 
 public class Kepler22bEvents {
 	@SubscribeEvent

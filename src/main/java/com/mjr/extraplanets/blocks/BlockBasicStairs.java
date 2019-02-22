@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.blocks;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
-
-import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockBasicStairs extends BlockStairs {
 	public BlockBasicStairs(Block block, int par3, String name) {

@@ -1,15 +1,5 @@
 package com.mjr.extraplanets.proxy;
 
-import micdoodle8.mods.galacticraft.core.client.render.item.ItemRendererKey;
-import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemRendererThermalArmor;
-import net.minecraft.block.Block;
-import net.minecraft.client.renderer.entity.RenderSnowball;
-import net.minecraft.init.Items;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.MinecraftForgeClient;
-import net.minecraftforge.client.model.AdvancedModelLoader;
-import net.minecraftforge.client.model.IModelCustom;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -130,6 +120,15 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import micdoodle8.mods.galacticraft.core.client.render.item.ItemRendererKey;
+import micdoodle8.mods.galacticraft.planets.asteroids.client.render.item.ItemRendererThermalArmor;
+import net.minecraft.block.Block;
+import net.minecraft.client.renderer.entity.RenderSnowball;
+import net.minecraft.init.Items;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.client.model.AdvancedModelLoader;
+import net.minecraftforge.client.model.IModelCustom;
 
 public class ClientProxy extends CommonProxy {
 

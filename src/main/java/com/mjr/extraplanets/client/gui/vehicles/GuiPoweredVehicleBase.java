@@ -1,11 +1,5 @@
 package com.mjr.extraplanets.client.gui.vehicles;
 
-import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
-import micdoodle8.mods.galacticraft.core.util.EnumColor;
-import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.util.ResourceLocation;
-
 import org.lwjgl.opengl.GL11;
 
 import com.mjr.extraplanets.Constants;
@@ -14,6 +8,11 @@ import com.mjr.extraplanets.inventory.vehicles.ContainerPoweredVehicleBase;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
+import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.util.ResourceLocation;
 
 @SideOnly(Side.CLIENT)
 public class GuiPoweredVehicleBase extends GuiContainerGC {

@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.tileEntities.machines;
 
+import cpw.mods.fml.relauncher.Side;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
@@ -21,7 +22,6 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.IFluidHandler;
-import cpw.mods.fml.relauncher.Side;
 
 public class TileEntityUltimateRefinery extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
 	private final int tankCapacity = 24000 * 4;

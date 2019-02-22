@@ -3,14 +3,14 @@ package com.mjr.extraplanets.moons.Titania.worldgen.village;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import micdoodle8.mods.galacticraft.core.blocks.GCBlocks;
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class StructureComponentTitaniaVillageWoodHut extends StructureComponentTitaniaVillage {
 	private int averageGroundLevel = -1;

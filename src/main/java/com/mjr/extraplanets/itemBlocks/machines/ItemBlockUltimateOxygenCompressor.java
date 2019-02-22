@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.itemBlocks.machines;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemStack;
-
 import com.mjr.extraplanets.blocks.machines.UltimateOxygenCompressor;
 import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDescDefaults;
+
+import net.minecraft.block.Block;
+import net.minecraft.item.ItemStack;
 
 public class ItemBlockUltimateOxygenCompressor extends ItemBlockDescDefaults {
 	public ItemBlockUltimateOxygenCompressor(Block block) {

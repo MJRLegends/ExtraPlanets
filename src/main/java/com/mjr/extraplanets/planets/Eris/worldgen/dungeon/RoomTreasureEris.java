@@ -3,13 +3,13 @@ package com.mjr.extraplanets.planets.Eris.worldgen.dungeon;
 import java.util.HashSet;
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT10TreasureChest;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT10TreasureChest;
 
 public class RoomTreasureEris extends DungeonRoom {
 	int sizeX;

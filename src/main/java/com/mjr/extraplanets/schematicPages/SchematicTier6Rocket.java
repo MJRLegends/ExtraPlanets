@@ -1,11 +1,5 @@
 package com.mjr.extraplanets.schematicPages;
 
-import micdoodle8.mods.galacticraft.api.recipe.SchematicPage;
-import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.Container;
-import net.minecraft.item.ItemStack;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.client.gui.rockets.GuiSchematicTier6Rocket;
 import com.mjr.extraplanets.inventory.rockets.ContainerSchematicTier6Rocket;
@@ -13,6 +7,11 @@ import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import micdoodle8.mods.galacticraft.api.recipe.SchematicPage;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
+import net.minecraft.item.ItemStack;
 
 public class SchematicTier6Rocket extends SchematicPage {
 	@Override

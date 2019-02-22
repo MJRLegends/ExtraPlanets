@@ -2,13 +2,13 @@ package com.mjr.extraplanets.blocks;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.EntityFallingBlock;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.ExtraPlanets;
 
 public class BlockFalling extends Block {
 	public static boolean fallInstantly;

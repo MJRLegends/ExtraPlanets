@@ -3,13 +3,13 @@ package com.mjr.extraplanets.planets.Uranus.worldgen.dungeon;
 import java.util.HashSet;
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT7TreasureChest;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT7TreasureChest;
 
 public class RoomTreasureUranus extends DungeonRoom {
 	int sizeX;

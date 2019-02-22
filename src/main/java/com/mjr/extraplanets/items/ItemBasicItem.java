@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.items;
 
-import net.minecraft.item.Item;
-
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
+
+import net.minecraft.item.Item;
 
 public class ItemBasicItem extends Item {
 	public ItemBasicItem(String assetName) {
