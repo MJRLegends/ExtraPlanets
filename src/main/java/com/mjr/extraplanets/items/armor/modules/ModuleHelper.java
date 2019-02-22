@@ -3,15 +3,15 @@ package com.mjr.extraplanets.items.armor.modules;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mjr.extraplanets.api.item.IModularArmor;
+import com.mjr.extraplanets.items.armor.bases.ElectricArmorBase;
+
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
-
-import com.mjr.extraplanets.api.item.IModularArmor;
-import com.mjr.extraplanets.items.armor.bases.ElectricArmorBase;
 
 public class ModuleHelper {
 

@@ -1,5 +1,10 @@
 package com.mjr.extraplanets.tileEntities.machines;
 
+import com.mjr.extraplanets.api.block.IPowerable;
+import com.mjr.extraplanets.blocks.machines.AdvancedFuelLoader;
+import com.mjr.extraplanets.blocks.machines.VehicleCharger;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
 import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
 import micdoodle8.mods.galacticraft.core.GCItems;
@@ -18,11 +23,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.fml.relauncher.Side;
-
-import com.mjr.extraplanets.api.block.IPowerable;
-import com.mjr.extraplanets.blocks.machines.AdvancedFuelLoader;
-import com.mjr.extraplanets.blocks.machines.VehicleCharger;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory implements ISidedInventory, ILandingPadAttachable, IMachineSides {
 	@NetworkedField(targetSide = Side.CLIENT)

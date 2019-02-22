@@ -1,11 +1,11 @@
 package com.mjr.extraplanets.planets.Uranus.worldgen.biomes;
 
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicUranus;
 import com.mjr.extraplanets.planets.Uranus.worldgen.UranusBiomes;
+
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenUranus extends UranusBiomes {
 

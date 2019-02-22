@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b;
 
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
 
 public class ItemBlockKepler22bMapleLog extends ItemBlock {
 	public ItemBlockKepler22bMapleLog(Block block) {

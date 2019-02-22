@@ -1,12 +1,12 @@
 package com.mjr.extraplanets.client.model;
 
+import org.lwjgl.opengl.GL11;
+
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityArmorStand;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
 
 @SideOnly(Side.CLIENT)
 public abstract class ArmorCustomModel extends ModelBiped {

@@ -1,12 +1,12 @@
 package com.mjr.extraplanets.planets.Pluto.worldgen;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.WorldGenMinableMeta;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class BiomeDecoratorPluto extends BiomeDecoratorSpace {
 

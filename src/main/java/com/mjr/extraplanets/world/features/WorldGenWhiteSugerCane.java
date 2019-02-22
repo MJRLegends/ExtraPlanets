@@ -2,12 +2,12 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 
 public class WorldGenWhiteSugerCane extends WorldGenerator {
 	@Override

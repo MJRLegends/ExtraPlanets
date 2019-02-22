@@ -3,6 +3,14 @@ package com.mjr.extraplanets.client.gui.machines;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.inventory.machines.ContainerBasicDecrystallizer;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecrystallizer;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
 import micdoodle8.mods.galacticraft.core.client.gui.element.GuiElementInfoRegion;
 import micdoodle8.mods.galacticraft.core.energy.EnergyDisplayHelper;
@@ -12,14 +20,6 @@ import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.inventory.machines.ContainerBasicDecrystallizer;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecrystallizer;
-import com.mjr.mjrlegendslib.util.MCUtilities;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SideOnly(Side.CLIENT)
 public class GuiBasicDecrystallizer extends GuiContainerGC {

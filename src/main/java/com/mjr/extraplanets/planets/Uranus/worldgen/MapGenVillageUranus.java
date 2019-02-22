@@ -4,11 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.structure.MapGenStructure;
-import net.minecraft.world.gen.structure.MapGenStructureIO;
-import net.minecraft.world.gen.structure.StructureStart;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranus;
@@ -22,6 +17,11 @@ import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVi
 import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageWoodHut;
 import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureVillageStartUranus;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
+
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.gen.structure.MapGenStructure;
+import net.minecraft.world.gen.structure.MapGenStructureIO;
+import net.minecraft.world.gen.structure.StructureStart;
 
 public class MapGenVillageUranus extends MapGenStructure {
 	public static List<Biome> villageSpawnBiomes = Arrays.asList(new Biome[] { BiomeGenUranus.uranus });

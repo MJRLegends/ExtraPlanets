@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.moons.Oberon.worldgen.biomes;
 
+import com.mjr.extraplanets.moons.Oberon.worldgen.OberonBiomes;
+
 import micdoodle8.mods.miccore.IntCache;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.layer.GenLayer;
-
-import com.mjr.extraplanets.moons.Oberon.worldgen.OberonBiomes;
 
 public class GenLayerOberonBiomes extends GenLayer {
 	private static final Biome[] biomes = new Biome[] { OberonBiomes.oberon, OberonBiomes.oberonValleys };

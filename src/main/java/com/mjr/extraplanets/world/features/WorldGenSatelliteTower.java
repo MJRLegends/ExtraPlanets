@@ -2,6 +2,11 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
+import com.mjr.mjrlegendslib.util.WorldGenUtilities;
+
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.planets.asteroids.blocks.AsteroidBlocks;
 import micdoodle8.mods.galacticraft.planets.mars.world.gen.RoomTreasureMars;
@@ -10,11 +15,6 @@ import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.Constants;
-import com.mjr.mjrlegendslib.util.MessageUtilities;
-import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 public class WorldGenSatelliteTower extends WorldGenerator {
 

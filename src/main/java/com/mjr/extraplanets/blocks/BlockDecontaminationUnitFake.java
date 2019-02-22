@@ -2,6 +2,8 @@ package com.mjr.extraplanets.blocks;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.tileEntities.blocks.TileEntityBasicDecontaminationUnitFake;
+
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
 import net.minecraft.block.Block;
@@ -26,8 +28,6 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.tileEntities.blocks.TileEntityBasicDecontaminationUnitFake;
 
 public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements ITileEntityProvider {
 	public static final PropertyBool TOP = PropertyBool.create("top");

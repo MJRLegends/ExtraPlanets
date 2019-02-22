@@ -1,5 +1,9 @@
 package com.mjr.extraplanets.planets.venus.spacestation;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
+import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
@@ -11,10 +15,6 @@ import net.minecraft.world.DimensionType;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanetsDimensions;
-import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 
 public class WorldProviderVenusOrbit extends WorldProviderOverworldOrbit {
 	@Override

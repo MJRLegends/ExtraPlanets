@@ -3,6 +3,9 @@ package com.mjr.extraplanets.planets.Ceres.worldgen.village;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCeres;
+
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
@@ -10,9 +13,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicCeres;
 
 public class StructureComponentVillageWell extends StructureComponentVillage {
 	private int averageGroundLevel = -1;

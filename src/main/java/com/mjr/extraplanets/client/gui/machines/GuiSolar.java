@@ -3,6 +3,12 @@ package com.mjr.extraplanets.client.gui.machines;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.inventory.machines.ContainerSolar;
+import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
@@ -14,12 +20,6 @@ import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.inventory.machines.ContainerSolar;
-import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class GuiSolar extends GuiContainerGC {
 	private static final ResourceLocation solarGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/solar.png");

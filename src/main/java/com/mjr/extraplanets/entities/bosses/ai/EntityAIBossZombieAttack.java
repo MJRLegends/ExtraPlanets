@@ -1,8 +1,8 @@
 package com.mjr.extraplanets.entities.bosses.ai;
 
-import net.minecraft.entity.ai.EntityAIAttackMelee;
-
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGiantZombieBoss;
+
+import net.minecraft.entity.ai.EntityAIAttackMelee;
 
 public class EntityAIBossZombieAttack extends EntityAIAttackMelee {
 	private final EntityEvolvedGiantZombieBoss zombie;

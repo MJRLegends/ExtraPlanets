@@ -6,18 +6,17 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-
 import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import codechicken.lib.gui.GuiDraw;
 import codechicken.nei.api.stack.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 import codechicken.nei.util.NEIServerUtils;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 
 public class VenusRoverRecipeHandler extends TemplateRecipeHandler {
 	private static final ResourceLocation venusRoverGuiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/venusRoverbench.png");

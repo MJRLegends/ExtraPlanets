@@ -6,16 +6,15 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import micdoodle8.mods.galacticraft.core.Constants;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-
 import org.lwjgl.opengl.GL11;
 
 import codechicken.lib.gui.GuiDraw;
 import codechicken.nei.api.stack.PositionedStack;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 import codechicken.nei.util.NEIServerUtils;
+import micdoodle8.mods.galacticraft.core.Constants;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 
 public class CircuitFabricatorRecipeHandler extends TemplateRecipeHandler {
 	private static final ResourceLocation circuitFabricatorTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/circuitFabricator.png");

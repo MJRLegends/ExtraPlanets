@@ -1,13 +1,13 @@
 package com.mjr.extraplanets.client.render.tile;
 
+import com.mjr.extraplanets.blocks.machines.BlockSolar;
+import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
+
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.client.model.block.ModelSolarPanel;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.util.ResourceLocation;
-
-import com.mjr.extraplanets.blocks.machines.BlockSolar;
-import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
 
 public class TileEntitySolarPanelRenderer extends TileEntitySpecialRenderer<TileEntitySolar> {
 	private static final ResourceLocation solarPanelAdvTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/model/solar_panel_advanced.png");

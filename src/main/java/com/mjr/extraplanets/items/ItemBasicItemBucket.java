@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.items;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -9,8 +11,6 @@ import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemBasicItemBucket extends ItemBucket {
 	public ItemBasicItemBucket(String name, Block block) {

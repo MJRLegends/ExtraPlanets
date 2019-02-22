@@ -6,6 +6,8 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import com.mjr.extraplanets.moons.Triton.worldgen.biomes.GenLayerTriton;
+
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
@@ -16,8 +18,6 @@ import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.moons.Triton.worldgen.biomes.GenLayerTriton;
 
 public class BiomeProviderTriton extends BiomeProvider {
 	private GenLayer unzoomedBiomes;

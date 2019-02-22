@@ -39,7 +39,7 @@ import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.Optional.InterfaceList;
 
 @InterfaceList({ @Optional.Interface(modid = "cofhcore", iface = "cofh.api.energy.IEnergyContainerItem"), @Optional.Interface(modid = "mekanism", iface = "mekanism.api.energy.IEnergizedItem"),
-	@Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem"), @Optional.Interface(modid = "ic2", iface = "ic2.api.item.ISpecialElectricItem") })
+		@Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem"), @Optional.Interface(modid = "ic2", iface = "ic2.api.item.ISpecialElectricItem") })
 public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor, IEnergyContainerItem, IEnergizedItem, IElectricItem, ISpecialElectricItem {
 
 	private static Object itemManagerIC2;

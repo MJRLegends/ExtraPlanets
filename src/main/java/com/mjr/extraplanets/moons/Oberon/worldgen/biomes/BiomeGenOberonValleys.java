@@ -1,11 +1,11 @@
 package com.mjr.extraplanets.moons.Oberon.worldgen.biomes;
 
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicOberon;
 import com.mjr.extraplanets.moons.Oberon.worldgen.OberonBiomes;
+
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenOberonValleys extends OberonBiomes {
 

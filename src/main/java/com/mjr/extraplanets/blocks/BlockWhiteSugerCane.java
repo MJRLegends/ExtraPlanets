@@ -4,6 +4,9 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -21,9 +24,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class BlockWhiteSugerCane extends Block implements net.minecraftforge.common.IPlantable {
 	public static final PropertyInteger AGE = PropertyInteger.create("age", 0, 15);

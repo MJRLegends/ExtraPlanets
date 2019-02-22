@@ -1,5 +1,11 @@
 package com.mjr.extraplanets.client.gui.overlay;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.Constants;
+import com.mjr.mjrlegendslib.util.MCUtilities;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import micdoodle8.mods.galacticraft.core.client.gui.overlay.Overlay;
 import micdoodle8.mods.galacticraft.core.util.ClientUtil;
 import micdoodle8.mods.galacticraft.core.util.ColorUtil;
@@ -12,12 +18,6 @@ import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.mjrlegendslib.util.MCUtilities;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 @SideOnly(Side.CLIENT)
 public class OverlaySolarRadiation extends Overlay {

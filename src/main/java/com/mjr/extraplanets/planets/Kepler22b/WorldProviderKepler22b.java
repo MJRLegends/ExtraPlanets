@@ -3,6 +3,13 @@ package com.mjr.extraplanets.planets.Kepler22b;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.mjr.extraplanets.ExtraPlanetsDimensions;
+import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.BiomeProviderKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.worldgen.ChunkProviderKepler22b;
+
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
@@ -12,13 +19,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.chunk.IChunkGenerator;
-
-import com.mjr.extraplanets.ExtraPlanetsDimensions;
-import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.BiomeProviderKepler22b;
-import com.mjr.extraplanets.planets.Kepler22b.worldgen.ChunkProviderKepler22b;
 
 public class WorldProviderKepler22b extends WorldProviderRealisticSpace {
 

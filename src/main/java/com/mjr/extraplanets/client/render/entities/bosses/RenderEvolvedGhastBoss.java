@@ -1,14 +1,14 @@
 package com.mjr.extraplanets.client.render.entities.bosses;
 
+import com.mjr.extraplanets.client.model.bosses.ModelEvolvedGhastBoss;
+import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
+
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.client.model.bosses.ModelEvolvedGhastBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
 
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedGhastBoss extends RenderLiving<EntityEvolvedGhastBoss> {

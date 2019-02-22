@@ -2,15 +2,15 @@ package com.mjr.extraplanets.moons.Triton.worldgen.biomes;
 
 import java.util.List;
 
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.world.biome.Biome;
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicTriton;
 import com.mjr.extraplanets.moons.Triton.worldgen.TritonBiomes;
+
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.world.biome.Biome;
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenTritonIceSea extends TritonBiomes {
 

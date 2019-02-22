@@ -2,18 +2,18 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
-import net.minecraft.init.Blocks;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenerator;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLeaves;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeLog;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
+
+import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
+import net.minecraft.init.Blocks;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenBigRedTree extends WorldGenerator {
 

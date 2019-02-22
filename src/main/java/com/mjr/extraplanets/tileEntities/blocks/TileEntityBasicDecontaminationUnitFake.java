@@ -4,6 +4,8 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
+import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
+
 import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlock;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
@@ -15,8 +17,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.relauncher.Side;
-
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
 
 public class TileEntityBasicDecontaminationUnitFake extends TileBaseElectricBlock {
 	// The the position of the main block

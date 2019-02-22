@@ -5,6 +5,9 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
@@ -39,9 +42,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedFireBatBoss extends EntityBossBase implements IMob, IEntityBreathable {
 	private int explosionStrength = 2;

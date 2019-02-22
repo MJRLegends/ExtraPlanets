@@ -4,6 +4,10 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.jei.RecipeCategories;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IDrawableAnimated;
@@ -16,10 +20,6 @@ import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.jei.RecipeCategories;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public class PurifierRecipeCategory extends BlankRecipeCategory<IRecipeWrapper> {
 	private static final ResourceLocation guiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/purifier.png");

@@ -5,6 +5,9 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -30,9 +33,6 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.world.BossInfo.Color;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
-
-import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class EntityEvolvedSnowmanBoss extends EntityBossBase implements IRangedAttackMob, IEntityBreathable {
 

@@ -1,16 +1,5 @@
 package com.mjr.extraplanets.client.gui;
 
-import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
-import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraftforge.fml.common.network.IGuiHandler;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-
 import com.mjr.extraplanets.api.prefabs.entity.EntityElectricRocketBase;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedFuelLoader;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedOxygenCompressor;
@@ -70,6 +59,17 @@ import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
 import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.PlayerUtilties;
+
+import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
+import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.common.network.IGuiHandler;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class GuiHandler implements IGuiHandler {
 	@Override

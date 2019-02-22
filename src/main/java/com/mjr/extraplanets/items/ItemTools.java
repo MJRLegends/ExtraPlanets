@@ -2,6 +2,8 @@ package com.mjr.extraplanets.items;
 
 import java.util.List;
 
+import com.mjr.extraplanets.ExtraPlanets;
+
 import micdoodle8.mods.galacticraft.core.proxy.ClientProxyCore;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
@@ -9,8 +11,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.mjr.extraplanets.ExtraPlanets;
 
 public class ItemTools extends Item {
 	public static final String[] names = { "sledge_hammer", "grinding_wheel", "mesh", "filter" };

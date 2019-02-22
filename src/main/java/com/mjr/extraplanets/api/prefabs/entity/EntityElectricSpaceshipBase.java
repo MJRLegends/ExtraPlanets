@@ -1,10 +1,14 @@
 package com.mjr.extraplanets.api.prefabs.entity;
 
-import io.netty.buffer.ByteBuf;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import org.lwjgl.opengl.GL11;
+
+import com.google.common.base.Predicate;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
+
+import io.netty.buffer.ByteBuf;
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.entity.IIgnoreShift;
 import micdoodle8.mods.galacticraft.api.entity.ITelemetry;
@@ -40,11 +44,6 @@ import net.minecraftforge.event.entity.EntityEvent;
 import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import org.lwjgl.opengl.GL11;
-
-import com.google.common.base.Predicate;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 public abstract class EntityElectricSpaceshipBase extends Entity implements IPacketReceiver, IIgnoreShift, ITelemetry {
 	public static enum EnumLaunchPhase {
