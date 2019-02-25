@@ -5,6 +5,14 @@
 
 
 ===========================================Released Updates===========================================
+v2.0.8
+*Missing Dehydrated Beef lang (Thanks to spannerman79)
+*Clean up/Fix Formatting
+*Added french language support (Thanks to divergnight) #398
+*Updated lang files to match 1.8+ changes
+*Added try catch around the custom CelestialSelection screen features rendering, to allow the gui to render in event of a error
+*Fixed Uranus & Saturn Ring rendering
+
 v2.0.7
 *Fixed issue #380
 *Updated lang files to match 1.8+ changes
