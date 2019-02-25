@@ -5,6 +5,21 @@
 
 
 ===========================================Released Updates===========================================
+v0.4.8
+*Fixed issue #390
+*Missing Dehydrated Beef lang (Thanks to spannerman79)
+*Added french language support (Thanks to divergnight) #398
+*Fixed issue #399
+*Added More Planets Rocket Crusher Machine Compatibility
+*Added error logging for ExtremeReactors/MC Multipart compact
+*Fixed Lime Medium Oxygen Tank recipe
+*Added CraftTweaker support for Tier 4 - 10 rockets recipe changing
+*Added ability to bone meal kepler22b grass
+*Added Support for other armour to be used a space suit style armor via config option, #341
+*Added try catch around the custom CelestialSelection screen features rendering, to allow the gui to render in event of a error
+*Fixed Uranus & Saturn Ring rendering
+*Fixed/Clean up of formatting
+
 v0.4.7
 *Fixed issue #389
 
