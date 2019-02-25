@@ -5,6 +5,20 @@
 
 
 ===========================================Released Updates===========================================
+v1.5.3
+*Fixed issue #390
+*Missing Dehydrated Beef lang (Thanks to spannerman79)
+*Added french language support (Thanks to divergnight) #398
+*Fixed issue #399
+*Added More Planets Rocket Crusher Machine Compatibility
+*Added ability to bone meal kepler22b grass
+*Added Support for other armour to be used a space suit style armor via config option, #341
+*Added try catch around the custom CelestialSelection screen features rendering, to allow the gui to render in event of a error
+*Fixed Uranus & Saturn Ring rendering
+*Fixed/Clean up of formatting
+*Fixed a few json missing errors
+*Added a missing texture
+
 v1.5.2
 *Fixed issue #387 #384 #364
 *Fixed issue #389
