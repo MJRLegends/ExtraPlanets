@@ -55,21 +55,21 @@ public class FluidBlockEP extends FluidBasicBlock {
 		}
 	}
 
-	@SuppressWarnings("deprecation")
-	@Override
-	@SideOnly(Side.CLIENT)
-	public void randomDisplayTick(IBlockState stateIn, World world, BlockPos pos, Random rand) {
-		super.randomDisplayTick(stateIn, world, pos, rand);
-
-		if (rand.nextInt(1200) == 0) {
-			world.playSound(null, pos.getX() + 0.5F, pos.getY() + 0.5F, pos.getZ() + 0.5F, SoundEvents.BLOCK_LAVA_AMBIENT, SoundCategory.BLOCKS, rand.nextFloat() * 0.25F + 0.75F, 0.00001F + rand.nextFloat() * 0.5F);
-		}
-		if (rand.nextInt(10) == 0) {
-			BlockPos below = pos.down();
-			IBlockState state = world.getBlockState(below);
-			if (state.getBlock().isSideSolid(state, world, below, EnumFacing.UP) && !world.getBlockState(pos.down(2)).getBlock().getMaterial(world.getBlockState(pos)).blocksMovement()) {
-				GalacticraftCore.proxy.spawnParticle("", new Vector3(pos.getX() + rand.nextFloat(), pos.getY() - 1.05D, pos.getZ() + rand.nextFloat()), new Vector3(0, 0, 0), new Object[] {});
-			}
-		}
-	}
+//	@SuppressWarnings("deprecation")  TODO Fix
+//	@Override
+//	@SideOnly(Side.CLIENT)
+//	public void randomDisplayTick(IBlockState stateIn, World world, BlockPos pos, Random rand) {
+//		super.randomDisplayTick(stateIn, world, pos, rand);
+//
+//		if (rand.nextInt(1200) == 0) {
+//			world.playSound(null, pos.getX() + 0.5F, pos.getY() + 0.5F, pos.getZ() + 0.5F, SoundEvents.BLOCK_LAVA_AMBIENT, SoundCategory.BLOCKS, rand.nextFloat() * 0.25F + 0.75F, 0.00001F + rand.nextFloat() * 0.5F);
+//		}
+//		if (rand.nextInt(10) == 0) {
+//			BlockPos below = pos.down();
+//			IBlockState state = world.getBlockState(below);
+//			if (state.getBlock().isSideSolid(state, world, below, EnumFacing.UP) && !world.getBlockState(pos.down(2)).getBlock().getMaterial(world.getBlockState(pos)).blocksMovement()) {
+//				GalacticraftCore.proxy.spawnParticle("", new Vector3(pos.getX() + rand.nextFloat(), pos.getY() - 1.05D, pos.getZ() + rand.nextFloat()), new Vector3(0, 0, 0), new Object[] {});
+//			}
+//		}
+//	}
 }
