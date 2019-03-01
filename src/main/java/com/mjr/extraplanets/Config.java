@@ -324,6 +324,7 @@ public class Config {
 
 	public static boolean CUSTOM_GALAXIES;
 	public static boolean USE_CUSTOM_CELESTAIAL_SELECTION;
+	public static boolean SHOW_EXINFO_CUSTOM_CELESTAIAL_SELECTION;
 	public static boolean REGISTER_BIOME_TYPES;
 	public static boolean ORE_LEAD_GENERATION;
 	public static int ORE_LEAD_GENERATION_AMOUNT;
@@ -805,6 +806,9 @@ public class Config {
 		USE_CUSTOM_CELESTAIAL_SELECTION = config
 				.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestaial Selection Screen", true, "Setting this option to false, will change it back to be using the Galacticraft Galaxy Map/Celestaial Selection Screen")
 				.getBoolean(true);
+
+		SHOW_EXINFO_CUSTOM_CELESTAIAL_SELECTION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Show Extended info panel on Custom Galaxy Map/Celestaial Selection Screen", true,
+				"Setting this option to false, will change disabled extended info panel on Custom Celestaial Selection Screen").getBoolean(true);
 
 		CUSTOM_GALAXIES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Custom Galaxies on Celestaial Selection Screen", true,
 				"Setting this option to false will disable & remove the Custom Galaxies on Celestaial Selection Screen (Note: Will get disabled by the 'Use Custom Galaxy Map/Celestaial Selection Screen' option)").getBoolean(true);
