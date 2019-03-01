@@ -5,6 +5,12 @@
 
 
 ===========================================Released Updates===========================================
+v0.4.9
+*Fixed issue #404
+*Added GalaxySpace compact config option, Added config option to disable Extended info panel on Custom Galaxy Map/Celestaial Selection Screen
+*Fixed crash issue in first fix for issue #404
+*Fixed issue #405 (Commented out pointless code that needs fixing for real seems to be left over from porting from 1.7.10)
+
 v0.4.8
 *Fixed issue #390
 *Missing Dehydrated Beef lang (Thanks to spannerman79)
