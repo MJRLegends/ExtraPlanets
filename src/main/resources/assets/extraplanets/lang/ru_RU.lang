@@ -45,6 +45,12 @@ planet.kuiperBelt=Пояс Койпера
 planet.makemake=Макемаке
 planet.haumea=Хаумеа
 
+planet.MercuryEP=Меркурий 2.0
+planet.CeresEP=Церера 2.0
+planet.JupiterEP=Юпитер 2.0
+planet.NeptuneEP=Нептун 2.0
+planet.PlutoEP=Плутон 2.0
+
 planet.kepler62b=Кеплер-62 b
 planet.kepler62c=Кеплер-62 c
 planet.kepler62d=Кеплер-62 d
@@ -90,6 +96,15 @@ moon.charon=Харон
 moon.nix=Никта
 moon.hydra=Гидра
 moon.dysnomia=Дисномия
+
+moon.tritonEP=Тритон 2.0
+moon.callistoEP=Каллисто 2.0
+moon.europaEP=Европа 2.0
+moon.ganymedeEP=Ганимед 2.0
+moon.ioEP=Ио 2.0
+moon.deimosEP=Феймос 2.0
+moon.phobosEP=Фобос 2.0
+moon.oberonEP=Оберон 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=Поверхность Меркурия

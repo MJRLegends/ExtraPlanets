@@ -108,10 +108,10 @@ public class ExtraPlanets_Planets {
 
 	private static void initializePlanets() {
 		if (Config.MERCURY) {
-			MERCURY = new Planet("Mercury").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			MERCURY = new Planet(Config.GALAXY_SPACE_COMPATIBILITY ? "MercuryEP" : "Mercury").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			MERCURY.setTierRequired(3);
 			MERCURY.setRingColorRGB(0.1F, 0.9F, 0.6F);
-			MERCURY.setPhaseShift(1.45F);
+			MERCURY.setPhaseShift(Config.GALAXY_SPACE_COMPATIBILITY ? 0 : 1.45F);
 			MERCURY.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F + Config.MERCURY_DISTANCE_OFFSET, 0.5F + Config.MERCURY_DISTANCE_OFFSET));
 			MERCURY.setRelativeOrbitTime(0.24096385542168674698795180722892F);
 			MERCURY.atmosphereComponent(EnumAtmosphericGas.HYDROGEN);
@@ -127,10 +127,10 @@ public class ExtraPlanets_Planets {
 			MERCURY.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.CERES) {
-			CERES = new Planet("Ceres").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			CERES = new Planet(Config.GALAXY_SPACE_COMPATIBILITY ? "CeresEP" : "Ceres").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			CERES.setTierRequired(4);
 			CERES.setRingColorRGB(0.1F, 0.9F, 0.6F);
-			CERES.setPhaseShift(Constants.floatPI);
+			CERES.setPhaseShift(Config.GALAXY_SPACE_COMPATIBILITY ? 6 : Constants.floatPI);
 			CERES.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.50F + Config.CERES_DISTANCE_OFFSET, 1.50F + Config.CERES_DISTANCE_OFFSET));
 			CERES.setRelativeOrbitTime((float) 11.861993428258488499452354874042 / 2);
 			CERES.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM);
@@ -146,10 +146,10 @@ public class ExtraPlanets_Planets {
 			CERES.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.JUPITER) {
-			JUPITER = new Planet("Jupiter").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			JUPITER = new Planet(Config.GALAXY_SPACE_COMPATIBILITY ? "JupiterEP" : "Jupiter").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			JUPITER.setTierRequired(4);
 			JUPITER.setRingColorRGB(0.1F, 0.9F, 0.6F);
-			JUPITER.setPhaseShift(Constants.floatPI);
+			JUPITER.setPhaseShift(Config.GALAXY_SPACE_COMPATIBILITY ? 0 : Constants.floatPI);
 			JUPITER.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(1.75F + Config.JUPITER_DISTANCE_OFFSET, 1.75F + Config.JUPITER_DISTANCE_OFFSET));
 			JUPITER.setRelativeOrbitTime(11.861993428258488499452354874042F);
 			JUPITER.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM);
@@ -203,10 +203,10 @@ public class ExtraPlanets_Planets {
 			URANUS.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.NEPTUNE) {
-			NEPTUNE = new Planet("Neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			NEPTUNE = new Planet(Config.GALAXY_SPACE_COMPATIBILITY ? "NeptuneEP" : "Neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			NEPTUNE.setTierRequired(7);
 			NEPTUNE.setRingColorRGB(0.1F, 0.9F, 0.6F);
-			NEPTUNE.setPhaseShift(1.0F);
+			NEPTUNE.setPhaseShift(Config.GALAXY_SPACE_COMPATIBILITY ? 8 : 1.0F);
 			NEPTUNE.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.50F + Config.NEPTUNE_DISTANCE_OFFSET, 2.50F + Config.NEPTUNE_DISTANCE_OFFSET));
 			NEPTUNE.setRelativeOrbitTime(164.84118291347207009857612267251F);
 			NEPTUNE.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
@@ -222,10 +222,10 @@ public class ExtraPlanets_Planets {
 			NEPTUNE.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.PLUTO) {
-			PLUTO = new Planet("Pluto").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			PLUTO = new Planet(Config.GALAXY_SPACE_COMPATIBILITY ? "PlutoEP" : "Pluto").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			PLUTO.setTierRequired(8);
 			PLUTO.setRingColorRGB(0.1F, 0.9F, 0.6F);
-			PLUTO.setPhaseShift(2.0F);
+			PLUTO.setPhaseShift(Config.GALAXY_SPACE_COMPATIBILITY ? 0 : 2.0F);
 			PLUTO.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(2.75F + Config.PLUTO_DISTANCE_OFFSET, 2.75F + Config.PLUTO_DISTANCE_OFFSET));
 			PLUTO.setRelativeOrbitTime((float) (164.84118291347207009857612267251 * 2));
 			PLUTO.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
@@ -285,7 +285,7 @@ public class ExtraPlanets_Planets {
 			KEPLER22B.addMobInfo(new SpawnListEntry(EntityChicken.class, 10, 4, 4));
 			KEPLER22B.addMobInfo(new SpawnListEntry(EntityCow.class, 8, 4, 4));
 		}
-		if (Config.KUIPER_BELT) {
+		if (Config.KUIPER_BELT && !Config.GALAXY_SPACE_COMPATIBILITY) {
 			KUIPER_BELT = GCRegisterUtilities.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
 			if (KUIPER_BELT != null) {
 				KUIPER_BELT.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(4.0F + Config.KUIPER_BELT_DISTANCE_OFFSET, 4.0F + Config.KUIPER_BELT_DISTANCE_OFFSET))

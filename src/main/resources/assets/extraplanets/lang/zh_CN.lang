@@ -45,6 +45,12 @@ planet.kuiperBelt=柯伊伯带
 planet.makemake=鸟神星
 planet.haumea=妊神星
 
+planet.MercuryEP=水星 2.0
+planet.CeresEP=谷神星 2.0
+planet.JupiterEP=木星 2.0
+planet.NeptuneEP=海王星 2.0
+planet.PlutoEP=冥王星 2.0
+
 planet.kepler62b=开普勒-62b
 planet.kepler62c=开普勒-62c
 planet.kepler62d=开普勒-62d
@@ -90,6 +96,15 @@ moon.charon=冥卫一
 moon.nix=冥卫二
 moon.hydra=冥卫三
 moon.dysnomia=阋卫一
+
+moon.tritonEP=海卫一 2.0
+moon.callistoEP=木卫四 2.0
+moon.europaEP=木卫二 2.0
+moon.ganymedeEP=木卫三 2.0
+moon.ioEP=木卫一 2.0
+moon.deimosEP=火卫二 2.0
+moon.phobosEP=火卫一 2.0
+moon.oberonEP=天卫四 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=水星地表岩石

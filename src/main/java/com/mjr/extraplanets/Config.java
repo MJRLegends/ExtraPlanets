@@ -256,6 +256,7 @@ public class Config {
 	public static boolean ORE_DICTIONARY_OTHER;
 
 	public static boolean MORE_PLANETS_COMPATIBILITY;
+	public static boolean GALAXY_SPACE_COMPATIBILITY;
 	public static boolean NEI_SUPPORT;
 	public static boolean JEI_SUPPORT;
 	public static boolean ACHIEVEMENTS;
@@ -266,6 +267,7 @@ public class Config {
 
 	public static boolean CUSTOM_GALAXIES;
 	public static boolean USE_CUSTOM_CELESTAIAL_SELECTION;
+	public static boolean SHOW_EXINFO_CUSTOM_CELESTAIAL_SELECTION;
 	public static boolean REGISTER_BIOME_TYPES;
 	public static boolean ORE_LEAD_GENERATION;
 	public static int ORE_LEAD_GENERATION_AMOUNT;
@@ -673,6 +675,11 @@ public class Config {
 		MORE_PLANETS_COMPATIBILITY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable More Planets Compatibility", false,
 				"FOR THIS TO WORK YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!").getBoolean(false);
 
+		GALAXY_SPACE_COMPATIBILITY = config
+				.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galaxy Space Compatibility", false,
+						"Will tweak ExtraPlanets Planets/Moons, to allow them to work along side GalaxySpace version of the same planets! Will rename ExtraPlanets versions of doubled Planets/Moons to have 2.0 on the end. Example: Jupiter 2.0")
+				.getBoolean(false);
+
 		EXTREME_REACTORS_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Extreme Reactors Compatibility", true, "Setting this to false will disable & remove Extreme Reactors Compatibility!").getBoolean(true);
 		MC_MULITPART_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable MC MultiPart Compatibility", true, "Setting this to false will disable & remove MC MultiPart Compatibility!").getBoolean(true);
 
@@ -690,6 +697,9 @@ public class Config {
 		USE_CUSTOM_CELESTAIAL_SELECTION = config
 				.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestaial Selection Screen", true, "Setting this option to false, will change it back to be using the Galacticraft Galaxy Map/Celestaial Selection Screen")
 				.getBoolean(true);
+
+		SHOW_EXINFO_CUSTOM_CELESTAIAL_SELECTION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Show Extended info panel on Custom Galaxy Map/Celestaial Selection Screen", true,
+				"Setting this option to false, will change disabled extended info panel on Custom Celestaial Selection Screen").getBoolean(true);
 
 		CUSTOM_GALAXIES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Custom Galaxies on Celestaial Selection Screen", true,
 				"Setting this option to false will disable & remove the Custom Galaxies on Celestaial Selection Screen (Note: Will get disabled by the 'Use Custom Galaxy Map/Celestaial Selection Screen' option)").getBoolean(true);
@@ -776,6 +786,14 @@ public class Config {
 		if (MORE_PLANETS_COMPATIBILITY) {
 			KEPLER62_SYSTEM_X_OFFSET = 0.40F;
 			KEPLER62_SYSTEM_Y_OFFSET = 0.8F;
+		}
+
+		if (GALAXY_SPACE_COMPATIBILITY) {
+			MERCURY_DISTANCE_OFFSET = 0.15f;
+			CERES_DISTANCE_OFFSET = 0.3f;
+			JUPITER_DISTANCE_OFFSET = 0.4f;
+			NEPTUNE_DISTANCE_OFFSET = 0.5f;
+			PLUTO_DISTANCE_OFFSET = 0.4f;
 		}
 		config.save();
 	}

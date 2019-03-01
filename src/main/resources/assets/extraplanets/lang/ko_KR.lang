@@ -45,6 +45,12 @@ planet.kuiperBelt=카이퍼 벨트
 planet.makemake=마케마케
 planet.haumea=하우메아
 
+planet.MercuryEP=수성 2.0
+planet.CeresEP=세레스 2.0
+planet.JupiterEP=목성 2.0
+planet.NeptuneEP=해왕성 2.0
+planet.PlutoEP=명왕성 2.0
+
 planet.kepler62b=케플러 62b
 planet.kepler62c=케플러 62c
 planet.kepler62d=케플러 62d
@@ -90,6 +96,15 @@ moon.charon=카론
 moon.nix=닉스
 moon.hydra=히드라
 moon.dysnomia=디스노미아
+
+moon.tritonEP=트리톤 2.0
+moon.callistoEP=칼리스토 2.0
+moon.europaEP=에우로파 2.0
+moon.ganymedeEP=가니메데 2.0
+moon.ioEP=이오 2.0
+moon.deimosEP=데이모스 2.0
+moon.phobosEP=포보스 2.0
+moon.oberonEP=오베론 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=수성 표면석

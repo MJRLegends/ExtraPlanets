@@ -438,7 +438,8 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	 */
 	@Override
 	public void drawButtons(int mousePosX, int mousePosY) {
-		this.drawCustomButtons(mousePosX, mousePosY);
+		if(Config.SHOW_EXINFO_CUSTOM_CELESTAIAL_SELECTION)
+			this.drawCustomButtons(mousePosX, mousePosY);
 		this.zLevel = 0.0F;
 		boolean handledSliderPos = false;
 
