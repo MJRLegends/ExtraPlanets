@@ -45,6 +45,12 @@ planet.kuiperBelt=Kuipergordel
 planet.makemake=Makemake
 planet.haumea=Haumea
 
+planet.MercuryEP=Mercurius 2.0
+planet.CeresEP=Ceres 2.0
+planet.JupiterEP=Jupiter 2.0
+planet.NeptuneEP=Neptunus 2.0
+planet.PlutoEP=Pluto 2.0
+
 planet.kepler62b=Kepler 62b
 planet.kepler62c=Kepler 62c
 planet.kepler62d=Kepler 62d
@@ -90,6 +96,15 @@ moon.charon=Charon
 moon.nix=Nix
 moon.hydra=Hydra
 moon.dysnomia=Dysnomia
+
+moon.tritonEP=Triton 2.0
+moon.callistoEP=Callisto 2.0
+moon.europaEP=Europa 2.0
+moon.ganymedeEP=Ganymedes 2.0
+moon.ioEP=Io 2.0
+moon.deimosEP=Deimos 2.0
+moon.phobosEP=Phobos 2.0
+moon.oberonEP=Oberon 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=Mercurus Oppervlaktesteen
