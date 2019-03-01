@@ -299,6 +299,8 @@ public class ExtraPlanets {
 
 		packetPipeline = ExtraPlanetsChannelHandler.init();
 		// packetPipeline = NetworkManager.registerNetworkChannel(PacketSimpleEP.class, Constants.modID);
+		
+		ExtraPlanets_Recipes.initOther();
 
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
