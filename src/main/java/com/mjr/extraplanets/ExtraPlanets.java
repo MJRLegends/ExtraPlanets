@@ -300,9 +300,6 @@ public class ExtraPlanets {
 		packetPipeline = ExtraPlanetsChannelHandler.init();
 		// packetPipeline = NetworkManager.registerNetworkChannel(PacketSimpleEP.class, Constants.modID);
 
-		// Register Recipes
-		ExtraPlanets_Recipes.init();
-
 		// Proxy Init Method
 		ExtraPlanets.proxy.init(event);
 	}
@@ -632,7 +629,7 @@ public class ExtraPlanets {
 
 		@SubscribeEvent(priority = EventPriority.LOWEST)
 		public static void registerRecipesEvent(RegistryEvent.Register<IRecipe> event) {
-			ExtraPlanets_Recipes.initEvent();
+			ExtraPlanets_Recipes.init();
 
 			if (Config.MORE_PLANETS_ROCKET_CRUSHER_SUPPORT)
 				MorePlanetsCompatibility.init();
