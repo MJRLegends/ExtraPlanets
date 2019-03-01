@@ -45,6 +45,12 @@ planet.kuiperBelt=Kuiperbæltet
 planet.makemake=Makemake ##NEEDS TRANSLATE##
 planet.haumea=Haumea ##NEEDS TRANSLATE##
 
+planet.MercuryEP=Mercury 2.0 ##NEEDS TRANSLATE##
+planet.CeresEP=Ceres 2.0 ##NEEDS TRANSLATE##
+planet.JupiterEP=Jupiter 2.0 ##NEEDS TRANSLATE##
+planet.NeptuneEP=Neptune 2.0 ##NEEDS TRANSLATE##
+planet.PlutoEP=Pluto 2.0 ##NEEDS TRANSLATE##
+
 planet.kepler62b=Kepler 62b ##NEEDS TRANSLATE##
 planet.kepler62c=Kepler 62c ##NEEDS TRANSLATE##
 planet.kepler62d=Kepler 62d ##NEEDS TRANSLATE##
@@ -90,6 +96,15 @@ moon.charon=Charon ##NEEDS TRANSLATE##
 moon.nix=Nix ##NEEDS TRANSLATE##
 moon.hydra=Hydra ##NEEDS TRANSLATE##
 moon.dysnomia=Dysnomia ##NEEDS TRANSLATE##
+
+moon.tritonEP=Triton 2.0 ##NEEDS TRANSLATE##
+moon.callistoEP=Kallisto 2.0 ##NEEDS TRANSLATE##
+moon.europaEP=Europa 2.0 ##NEEDS TRANSLATE##
+moon.ganymedeEP=Ganymed 2.0 ##NEEDS TRANSLATE##
+moon.ioEP=Io 2.0 ##NEEDS TRANSLATE##
+moon.deimosEP=Deimos 2.0 ##NEEDS TRANSLATE##
+moon.phobosEP=Phobos 2.0 ##NEEDS TRANSLATE##
+moon.oberonEP=Oberon 2.0 ##NEEDS TRANSLATE##
 
 #Planet Blocks
 tile.mercury.surface.name=Merkur Surface Rock
