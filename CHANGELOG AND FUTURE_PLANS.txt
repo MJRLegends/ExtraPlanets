@@ -5,6 +5,11 @@
 
 
 ===========================================Released Updates===========================================
+v1.2.1
+*Added config option to disable Extended info panel on Custom Galaxy Map/Celestaial Selection Screen
+*Fixed issue #405 (Commented out pointless code that needs fixing for real seems to be left over from porting from 1.7.10)
+*Updated lang files to match MC 1.12.2 for consistency
+
 v1.2.0
 *Fixed issue #390
 *Missing Dehydrated Beef lang (Thanks to spannerman79)
