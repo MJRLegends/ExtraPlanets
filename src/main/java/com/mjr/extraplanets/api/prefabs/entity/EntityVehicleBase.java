@@ -179,7 +179,7 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 	public void performHurtAnimation() {
 		this.dataManager.set(ROCK_DIRECTION, -this.dataManager.get(ROCK_DIRECTION));
 		this.dataManager.set(TIME_SINCE_HIT, 10);
-		this.dataManager.set(CURRENT_DAMAGE, this.dataManager.get(CURRENT_DAMAGE) * 5);
+		this.dataManager.set(CURRENT_DAMAGE, (int) (this.dataManager.get(CURRENT_DAMAGE) * 5));
 	}
 
 	@Override
@@ -311,8 +311,8 @@ public abstract class EntityVehicleBase extends Entity implements IInventoryDefa
 			this.dataManager.set(TIME_SINCE_HIT, this.dataManager.get(TIME_SINCE_HIT) - 1);
 		}
 
-		if (this.dataManager.get(CURRENT_DAMAGE) > 0) {
-			this.dataManager.set(CURRENT_DAMAGE, this.dataManager.get(CURRENT_DAMAGE) - 1);
+		if ((int)this.dataManager.get(CURRENT_DAMAGE) > 0) {
+			this.dataManager.set(CURRENT_DAMAGE, (int) (this.dataManager.get(CURRENT_DAMAGE) - 1));
 		}
 
 		if (!this.onGround) {
