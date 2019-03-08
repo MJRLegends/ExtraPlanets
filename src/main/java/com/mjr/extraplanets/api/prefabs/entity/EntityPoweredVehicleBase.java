@@ -175,7 +175,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 	public void performHurtAnimation() {
 		this.dataManager.set(ROCK_DIRECTION, -this.dataManager.get(ROCK_DIRECTION));
 		this.dataManager.set(TIME_SINCE_HIT, 10);
-		this.dataManager.set(CURRENT_DAMAGE, this.dataManager.get(CURRENT_DAMAGE) * 5);
+		this.dataManager.set(CURRENT_DAMAGE, (int) (this.dataManager.get(CURRENT_DAMAGE) * 5));
 	}
 
 	@Override
@@ -191,7 +191,7 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			} else {
 				this.dataManager.set(ROCK_DIRECTION, -this.dataManager.get(ROCK_DIRECTION));
 				this.dataManager.set(TIME_SINCE_HIT, 10);
-				this.dataManager.set(CURRENT_DAMAGE, (int) (this.dataManager.get(CURRENT_DAMAGE) + var2 * 10));
+				this.dataManager.set(CURRENT_DAMAGE, (int) ((this.dataManager.get(CURRENT_DAMAGE) + var2 * 10)));
 				this.markVelocityChanged();
 
 				if (e instanceof EntityPlayer && ((EntityPlayer) e).capabilities.isCreativeMode) {
@@ -307,8 +307,8 @@ public abstract class EntityPoweredVehicleBase extends Entity implements IInvent
 			this.dataManager.set(TIME_SINCE_HIT, this.dataManager.get(TIME_SINCE_HIT) - 1);
 		}
 
-		if (this.dataManager.get(CURRENT_DAMAGE) > 0) {
-			this.dataManager.set(CURRENT_DAMAGE, this.dataManager.get(CURRENT_DAMAGE) - 1);
+		if ((int)this.dataManager.get(CURRENT_DAMAGE) > 0) {
+			this.dataManager.set(CURRENT_DAMAGE, (int) (this.dataManager.get(CURRENT_DAMAGE) - 1));
 		}
 
 		if (!this.onGround) {
