@@ -50,7 +50,7 @@ public class ContainerVehicleChanger extends Container {
 			var3 = var5.copy();
 
 			if (par2 < 2) {
-				if (!this.mergeItemStack(var5, 2, 38, true)) {
+				if (!this.mergeItemStack(var5, 1, 37, true)) {
 					return null;
 				}
 			} else {
