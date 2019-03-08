@@ -1,7 +1,7 @@
 package com.mjr.extraplanets.client.model.bosses.defaultBosses;
 
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossEris;
+import com.mjr.extraplanets.entities.bosses.defaultBosses.EntityCreeperBossSaturn;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
@@ -104,7 +104,7 @@ public class ModelCreeperBossSaturn extends ModelBase {
 		super.render(entity, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale);
 		this.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale, entity);
 
-		final EntityCreeperBossEris creeper = (EntityCreeperBossEris) entity;
+		final EntityCreeperBossSaturn creeper = (EntityCreeperBossSaturn) entity;
 
 		if (creeper.headsRemaining > 2) {
 			this.headLeft.render(scale);
