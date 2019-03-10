@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v0.5.0
+*Fixed issue #407
+*Fixed config option comment being backwards in its explaining.
+*Few tweaks that could fix some rover crash issues...
+*Attempt to fix issue #409
+*Fixed default/creeper bosses for Mercury, Jupiter, Saturn, Uranus, Neptune, Pluto not rendering correctly
+
 v0.4.9
 *Fixed issue #404
 *Added GalaxySpace compact config option, Added config option to disable Extended info panel on Custom Galaxy Map/Celestaial Selection Screen
