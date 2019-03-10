@@ -5,6 +5,10 @@
 
 
 ===========================================Released Updates===========================================
+v1.5.5
+*Fixed issue #407
+*Fixed config option comment being backwards in its explaining.
+
 v1.5.4
 *Added config option to disable Extended info panel on Custom Galaxy Map/Celestaial Selection Screen
 *Fixed issue #405 (Commented out pointless code that needs fixing for real seems to be left over from porting from 1.7.10)
