@@ -93,20 +93,20 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 	}
 
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
-		if (this.getStackInSlot(slot) != null && FluidUtil.isValidContainer(this.getStackInSlot(slot))) {
-			if (FluidUtil.isEmptyContainer(this.getStackInSlot(slot)) == false && FluidUtil.getFluidContained(this.getStackInSlot(slot)) != null && FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid() != null) {
-				if (slot == 1 && FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid().equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID) && tank.getFluidAmount() <= tank.getCapacity()) {
-					tank.fill(FluidRegistry.getFluidStack("radioactive_water_fluid", 1000), true);
-					this.stacks.set(slot, new ItemStack(Items.BUCKET));
+		ItemStack item = this.getStackInSlot(slot);
+		FluidStack stack = FluidUtil.getFluidContained(item);
+		if (item != null && FluidUtil.isValidContainer(item)) {
+			if (FluidUtil.isEmptyContainer(item) == false && stack != null && stack.getFluid() != null) {
+				if (slot == 1 && stack.getFluid().equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID) && tank.getFluidAmount() <= tank.getCapacity()) {
+					FluidUtil.loadFromContainer(tank, ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID, stacks, slot, stack.amount);
 				}
-				if (slot == 2 && FluidUtil.getFluidContained(this.getStackInSlot(slot)).getFluid().equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) && tank.getFluidAmount() <= tank.getCapacity()) {
-					tank.fill(FluidRegistry.getFluidStack("infected_water_fluid", 1000), true);
-					this.stacks.set(slot, new ItemStack(Items.BUCKET));
+				if (slot == 2 && stack.getFluid().equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) && tank.getFluidAmount() <= tank.getCapacity()) {
+					FluidUtil.loadFromContainer(tank, ExtraPlanets_Fluids.INFECTED_WATER_FLUID, stacks, slot, stack.amount);
 				}
 			}
 			if (slot == 3) {
-				if (this.getStackInSlot(slot).getItem() == Items.BUCKET && tank.getFluidAmount() >= 1000 && this.getStackInSlot(slot).getCount() == 1) {
-					if (FluidUtil.isValidContainer(this.getStackInSlot(slot))) {
+				if (item.getItem() == Items.BUCKET && tank.getFluidAmount() >= 1000 && item.getCount() == 1) {
+					if (FluidUtil.isValidContainer(item)) {
 						final FluidStack liquid = tank.getFluid();
 
 						if (liquid != null) {
