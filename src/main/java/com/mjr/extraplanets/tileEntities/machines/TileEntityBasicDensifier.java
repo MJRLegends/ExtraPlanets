@@ -25,6 +25,7 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidTank;
 import net.minecraftforge.fluids.FluidTankInfo;
 import net.minecraftforge.fluids.IFluidHandler;
+import net.minecraftforge.fluids.UniversalBucket;
 import net.minecraftforge.fml.relauncher.Side;
 
 public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory implements ISidedInventory, IFluidHandler {
@@ -73,68 +74,70 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	}
 
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
-		if (this.containingItems[slot] != null) {
-			if (FluidUtil.isEmptyContainer(this.containingItems[slot]) == false && FluidUtil.getFluidContained(this.getStackInSlot(slot)) != null && FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() != null) {
-				if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID)) {
+		ItemStack item = this.containingItems[slot];
+		if (item != null) {
+			FluidStack stack = FluidUtil.getFluidContained(item);
+			if (item.getItem() instanceof UniversalBucket && FluidUtil.isEmptyContainer(item) == false && stack != null && stack.getFluid() != null) {
+				if (stack.getFluid().equals(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID)) {
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("liquid_caramel_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.bucket);
-					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
+						this.setInventorySlotContents(slot, new ItemStack(Items.bucket));
+					} else if (stack.getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("liquid_caramel_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.bucket);
 					}
-				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID)) {
+				} else if (stack.getFluid().equals(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID)) {
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("liquid_chocolate_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.bucket);
-					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
+						this.setInventorySlotContents(slot, new ItemStack(Items.bucket));
+					} else if (stack.getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("liquid_chocolate_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.bucket);
 					}
-				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)) {
+				} else if (stack.getFluid().equals(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID)) {
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.NITROGEN_ICE_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("nitrogen_ice_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.bucket);
-					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
+						this.setInventorySlotContents(slot, new ItemStack(Items.bucket));
+					} else if (stack.getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("nitrogen_ice_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.bucket);
 					}
-				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.GLOWSTONE_FLUID)) {
+				} else if (stack.getFluid().equals(ExtraPlanets_Fluids.GLOWSTONE_FLUID)) {
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.GLOWSTONE_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("glowstone_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.bucket);
-					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
+						this.setInventorySlotContents(slot, new ItemStack(Items.bucket));
+					} else if (stack.getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("glowstone_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.bucket);
 					}
-				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.NITROGEN_FLUID)) {
+				} else if (stack.getFluid().equals(ExtraPlanets_Fluids.NITROGEN_FLUID)) {
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.NITROGEN_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("nitrogen_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.bucket);
-					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
+						this.setInventorySlotContents(slot, new ItemStack(Items.bucket));
+					} else if (stack.getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("nitrogen_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.bucket);
 					}
-				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID)) {
+				} else if (stack.getFluid().equals(ExtraPlanets_Fluids.FROZEN_WATER_FLUID)) {
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.FROZEN_WATER_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("frozen_water_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.bucket);
-					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
+						this.setInventorySlotContents(slot, new ItemStack(Items.bucket));
+					} else if (stack.getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("frozen_water_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.bucket);
 					}
-				} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID)) {
+				} else if (stack.getFluid().equals(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID)) {
 					if (this.inputTank.getFluid() == null) {
 						this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.LIQUID_HYDROCARBON_FLUID, 0));
 						tank.fill(FluidRegistry.getFluidStack("liquid_hydrocarbon_fluid", 1000), true);
-						this.containingItems[slot].setItem(Items.bucket);
-					} else if (FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() == this.inputTank.getFluid().getFluid()) {
+						this.setInventorySlotContents(slot, new ItemStack(Items.bucket));
+					} else if (stack.getFluid() == this.inputTank.getFluid().getFluid()) {
 						tank.fill(FluidRegistry.getFluidStack("liquid_hydrocarbon_fluid", 1000), true);
 						this.containingItems[slot].setItem(Items.bucket);
 					}
