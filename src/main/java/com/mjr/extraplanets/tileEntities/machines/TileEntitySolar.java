@@ -59,13 +59,14 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 
 	private boolean initialised = false;
 	private boolean initialisedMulti = false;
+	private AxisAlignedBB renderAABB;
 
 	public TileEntitySolar() {
 		this(2);
 	}
 
 	/*
-	 * @param tier: 1 = Basic Solar 2 = Advanced Solar
+	 * @param tier: 1 = Hybrid Solar 2 = Ultimate Solar
 	 */
 	public TileEntitySolar(int tier) {
 		this.storage.setMaxExtract(TileEntitySolar.MAX_GENERATE_WATTS);
@@ -406,7 +407,16 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	@Override
 	@SideOnly(Side.CLIENT)
 	public AxisAlignedBB getRenderBoundingBox() {
-		return new AxisAlignedBB(getPos().getX() - 1, getPos().getY(), getPos().getZ() - 1, getPos().getX() + 2, getPos().getY() + 4, getPos().getZ() + 2);
+		if (this.renderAABB == null) {
+			this.renderAABB = new AxisAlignedBB(getPos().getX() - 1, getPos().getY(), getPos().getZ() - 1, getPos().getX() + 2, getPos().getY() + 4, getPos().getZ() + 2);
+		}
+		return this.renderAABB;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public double getMaxRenderDistanceSquared() {
+		return micdoodle8.mods.galacticraft.core.Constants.RENDERDISTANCE_LONG;
 	}
 
 	@Override
