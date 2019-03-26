@@ -40,7 +40,10 @@ public class Config {
 	public static boolean GENERATE_CERES_SATELLITE_TOWER;
 	public static boolean GENERATE_GANYMEDE_ICE_CHUNKS;
 	public static boolean GENERATE_EUROPA_IRON_CHUNKS;
-	public static boolean JUITPER_LIGHTING;
+	public static boolean JUITPER_LIGHTING_CLIENT;
+	public static boolean JUITPER_LIGHTING_SERVER;
+	public static boolean JUITPER_CLOUDS;
+	public static int JUITPER_CLOUDS_SPEED;
 	public static boolean CUSTOM_FOG;
 
 	public static boolean GENERATE_ORES_MERCURY;
@@ -517,7 +520,18 @@ public class Config {
 		GENERATE_GANYMEDE_ICE_CHUNKS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Chunks under the surface of Ganymede", true, "Setting this option to false will disable & remove the Ice Chunks on Ganymede")
 				.getBoolean(true);
 		GENERATE_EUROPA_IRON_CHUNKS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Iron Chunks under the surface of Europa", true, "Setting this option to false will disable & remove the Iron Chunks on Europa").getBoolean(true);
-		JUITPER_LIGHTING = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable & remove Lighting & Lighting Effects on Jupiter").getBoolean(true);
+		
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", "Enable Client Fake Lighting Effects & Thunder sounds on Jupiter");
+		JUITPER_LIGHTING_CLIENT = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Client Fake Lighting Effects & Thunder sounds on Jupiter", true, "Setting this option to false will disable & remove Fake Lighting Effects & Thunder sounds on Jupiter (CLIENT SIDE)").getBoolean(true);
+		JUITPER_LIGHTING_SERVER = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Server Real Lighting Bolts on Jupiter", true, "Setting this option to false will disable & remove Real Lighting Bolts on Jupiter (SERVER SIDE)").getBoolean(true);
+		
+		JUITPER_CLOUDS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Clouds on Jupiter", true, "Setting this option to false will disable & remove Clouds on Jupiter").getBoolean(true);
+		JUITPER_CLOUDS_SPEED = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Clouds Speed on Jupiter", 3, "[range: 1 ~ 10, default: 3]").getInt();
+		if(JUITPER_CLOUDS_SPEED > 5)
+			JUITPER_CLOUDS_SPEED = 5;
+		else if(JUITPER_CLOUDS_SPEED < 1)
+			JUITPER_CLOUDS_SPEED = 1;
+		
 		CUSTOM_FOG = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
 				.getBoolean(true);
 
