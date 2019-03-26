@@ -27,10 +27,6 @@ public class CloudRenderJupiter extends IRenderHandler {
 		double d1 = (mc.renderViewEntity.prevPosX + (mc.renderViewEntity.posX - mc.renderViewEntity.prevPosX) * partialTicks + d0 * 0.029999999329447746D) / f2;
 		double d2 = (mc.renderViewEntity.prevPosZ + (mc.renderViewEntity.posZ - mc.renderViewEntity.prevPosZ) * partialTicks) / f2 + 0.33000001311302185D;
 		float f4 = world.provider.getCloudHeight() - f1 + 0.33F;
-		int i = MathHelper.floor_double(d1 / 2048.0D);
-		int j = MathHelper.floor_double(d2 / 2048.0D);
-		d1 -= i * 2048;
-		d2 -= j * 2048;
 		mc.renderEngine.bindTexture(CLOUDS_TEXTURES);
 		GL11.glEnable(GL11.GL_BLEND);
 		OpenGlHelper.glBlendFunc(770, 771, 1, 0);

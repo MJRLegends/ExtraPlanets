@@ -29,7 +29,7 @@ import net.minecraftforge.client.event.GuiOpenEvent;
 public class MainHandler {
 	@SubscribeEvent
 	public void onPlayer(PlayerTickEvent event) {
-		if (Config.jupiterLighting && event.player.worldObj.provider.dimensionId == Config.jupiterID) {
+		if (Config.jupiterLightingClient && event.player.worldObj.provider.dimensionId == Config.jupiterID) {
 			Random rand = new Random();
 			int addX = rand.nextInt(64);
 			int addZ = rand.nextInt(64);

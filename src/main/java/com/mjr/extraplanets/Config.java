@@ -17,7 +17,10 @@ public class Config {
 	public static boolean genUranusIgloos;
 	public static boolean genUranusIceSpikes;
 	public static boolean genJupiterSkyFeature;
-	public static boolean jupiterLighting;
+	public static boolean jupiterLightingClient;
+	public static boolean jupiterLightingServer;
+	public static boolean jupiterClouds;
+	public static int jupiterCloudsSpeed;
 	public static boolean customFog;
 
 	public static boolean carbonItems;
@@ -365,11 +368,22 @@ public class Config {
 		mercuryRocketTier = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mercury Rocket required", 4, "Changing this will change the Tier required to go to Mercury").getInt();
 		ceresRocketTier = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Ceres Rocket required", 4, "Changing this will change the Tier required to go to Ceres").getInt();
 
+
 		genVenusVolcanos = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanos on Venus", true, "Setting this option to false will disable & remove Volcanos from generating on Venus").getBoolean(true);
 		genUranusIgloos = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Setting this option to false will disable & remove Igloos from generating on Uranus").getBoolean(true);
 		genUranusIceSpikes = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Setting this option to false will disable & remove Ice Spikes from generating on Uranus").getBoolean(true);
 		genJupiterSkyFeature = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Jupiter", true, "Setting this option to false will disable & remove the Sky Feature on Jupiter").getBoolean(true);
-		jupiterLighting = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable & remove Lighting & Lighting Effects on Jupiter").getBoolean(true);
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", "Enable Client Fake Lighting Effects & Thunder sounds on Jupiter");
+		jupiterLightingClient = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Client Fake Lighting Effects & Thunder sounds on Jupiter", true, "Setting this option to false will disable & remove Fake Lighting Effects & Thunder sounds on Jupiter (CLIENT SIDE)").getBoolean(true);
+		jupiterLightingServer = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Server Real Lighting Bolts on Jupiter", true, "Setting this option to false will disable & remove Real Lighting Bolts on Jupiter (SERVER SIDE)").getBoolean(true);
+		
+		jupiterClouds = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Clouds on Jupiter", true, "Setting this option to false will disable & remove Clouds on Jupiter").getBoolean(true);
+		jupiterCloudsSpeed = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Clouds Speed on Jupiter", 3, "[range: 1 ~ 10, default: 3]").getInt();
+		if(jupiterCloudsSpeed > 5)
+			jupiterCloudsSpeed = 5;
+		else if(jupiterCloudsSpeed < 1)
+			jupiterCloudsSpeed = 1;
+
 		customFog = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
 				.getBoolean(true);
 

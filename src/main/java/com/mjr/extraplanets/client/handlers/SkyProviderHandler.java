@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.client.handlers;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.moons.Callisto.SkyProviderCallisto;
 import com.mjr.extraplanets.moons.Callisto.WorldProviderCallisto;
@@ -113,11 +114,13 @@ public class SkyProviderHandler {
 					world.provider.setSkyRenderer(new SkyProviderJupiter((IGalacticraftWorldProvider) world.provider));
 				}
 
-				if (world.provider.getCloudRenderer() == null) {
-					world.provider.setCloudRenderer(new CloudRenderJupiter());
-				} else {
-					if (!FMLClientHandler.instance().getClient().isGamePaused()) {
-						CloudRenderJupiter.cloudTickCounter += 5;
+				if(Config.jupiterClouds) {
+					if (world.provider.getCloudRenderer() == null) {
+						world.provider.setCloudRenderer(new CloudRenderJupiter());
+					} else {
+						if (!FMLClientHandler.instance().getClient().isGamePaused()) {
+							CloudRenderJupiter.cloudTickCounter += Config.jupiterCloudsSpeed;
+						}
 					}
 				}
 			}
