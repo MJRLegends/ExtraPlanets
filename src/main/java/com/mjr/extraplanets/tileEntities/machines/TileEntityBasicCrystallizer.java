@@ -66,12 +66,11 @@ public class TileEntityBasicCrystallizer extends TileBaseElectricBlockWithInvent
 
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
 		if (this.containingItems[slot] != null) {
-			if (FluidUtil.isEmptyContainer(this.containingItems[slot]) == false && FluidUtil.getFluidContained(this.containingItems[slot]).getFluid() != null
-					&& FluidUtil.getFluidContained(this.containingItems[slot]).getFluid().equals(ExtraPlanets_Fluids.SALT_FLUID)) {
-				tank.fill(FluidRegistry.getFluidStack("salt_fluid", 1000), true);
-				this.containingItems[slot].setItem(Items.bucket);
-			} else
-				FluidUtil.tryFillContainerFuel(tank, this.containingItems, slot);
+			ItemStack item = this.getStackInSlot(slot);
+			FluidStack stack = FluidUtil.getFluidContained(item);
+			if (FluidUtil.isEmptyContainer(this.getStackInSlot(slot)) == false && stack != null && stack.getFluid() != null && stack.getFluid().equals(ExtraPlanets_Fluids.SALT_FLUID)) {
+				FluidUtil.loadFromContainer(inputTank, ExtraPlanets_Fluids.SALT_FLUID, this.containingItems, slot, stack.amount);
+			}
 		}
 	}
 
