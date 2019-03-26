@@ -83,8 +83,8 @@ public class TileEntitySolar extends TileBaseUniversalElectricalSource implement
 	public void update() {
 		if (!this.initialised) {
 			int metadata = this.getBlockMetadata();
-			if (metadata >= BlockSolar.HYBRID_METADATA) {
-				this.storage.setCapacity(30000);
+			if (metadata >= BlockSolar.ULTIMATE_METADATA) {
+				this.storage.setCapacity(90000);
 				this.setTierGC(2);
 			}
 			this.initialised = true;

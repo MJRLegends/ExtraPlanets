@@ -9,6 +9,7 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 import micdoodle8.mods.galacticraft.api.block.IPartialSealableBlock;
 import micdoodle8.mods.galacticraft.core.blocks.BlockTileGC;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
+import micdoodle8.mods.galacticraft.core.blocks.BlockSolar.EnumSolarType;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
 import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
@@ -222,7 +223,7 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 
 	@Override
 	public int getMetaFromState(IBlockState state) {
-		return state.getValue(FACING).getHorizontalIndex() + state.getValue(TYPE).getMeta() * 4;
+        return ((EnumFacing) state.getValue(FACING)).getHorizontalIndex() + ((EnumSolarType) state.getValue(TYPE)).getMeta() * 4;
 	}
 
 	@Override
