@@ -5,6 +5,15 @@
 
 
 ===========================================Released Updates===========================================
+v0.5.1
+*Fixed issue #406
+*Fixed issue #416
+*Small amount of clean up for TileEntitySolar class
+*Removed not needed imports
+*Fixed issue #415
+*Fixes for Basic Densifier/Purifier machines
+*Added/Improved config options for issue #412
+
 v0.5.0
 *Fixed issue #407
 *Fixed config option comment being backwards in its explaining.
