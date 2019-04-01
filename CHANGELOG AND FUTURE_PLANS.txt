@@ -5,6 +5,9 @@
 
 
 ===========================================Released Updates===========================================
+v2.1.0
+*Added/Improved config options for issue #412
+
 v2.0.9
 *Fixed issue #407
 *Fixed config option comment being backwards in its explaining.
