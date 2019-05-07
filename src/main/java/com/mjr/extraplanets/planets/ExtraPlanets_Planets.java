@@ -104,6 +104,7 @@ public class ExtraPlanets_Planets {
 	public static void init() {
 		initializePlanets();
 		registerPlanets();
+		initializeUnReachablePlanets();
 	}
 
 	private static void initializePlanets() {
@@ -285,6 +286,8 @@ public class ExtraPlanets_Planets {
 			KEPLER22B.addMobInfo(new SpawnListEntry(EntityChicken.class, 10, 4, 4));
 			KEPLER22B.addMobInfo(new SpawnListEntry(EntityCow.class, 8, 4, 4));
 		}
+	}
+	public static void initializeUnReachablePlanets() {
 		if (Config.KUIPER_BELT) {
 			KUIPER_BELT = GCRegisterUtilities.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
 			if (KUIPER_BELT != null) {
