@@ -64,6 +64,7 @@ public class ExtraPlanets_Planets {
 	public static void init() {
 		initializePlanets();
 		registerPlanets();
+		initializeUnReachablePlanets();
 	}
 
 	private static void initializePlanets() {
@@ -192,6 +193,8 @@ public class ExtraPlanets_Planets {
 			kepler22b.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"));
 			kepler22b.setDimensionInfo(Config.kepler22bID, WorldProviderKepler22b.class);
 		}
+	}
+	public static void initializeUnReachablePlanets() {
 		if (Config.kuiperBelt) {
 			kuiperBelt = RegisterHelper.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
 			if (kuiperBelt != null)
