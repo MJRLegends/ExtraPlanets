@@ -45,6 +45,7 @@ import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
 import micdoodle8.mods.galacticraft.api.galaxies.Moon;
+import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.world.AtmosphereInfo;
 import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedCreeper;
@@ -102,10 +103,23 @@ public class ExtraPlanets_Moons {
 				DYSNOMIA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(25.5785754286855436F);
 		}
 	}
+	
+	private static Planet getParentPlanet(Planet possiablePlanet, String possiablePlanetName) {
+		if(possiablePlanet != null)
+			return possiablePlanet;
+		else {
+			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
+				String planetName = planet.getUnlocalizedName().substring(planet.getUnlocalizedName().indexOf(".") + 1);
+				if (planetName.equalsIgnoreCase(possiablePlanetName))
+					return planet;
+			}
+		}
+		return null;
+	}
 
 	private static void initializeMoons() {
 		if (Config.TRITON) {
-			TRITON = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "tritonEP" : "triton").setParentPlanet(ExtraPlanets_Planets.NEPTUNE);
+			TRITON = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "tritonEP" : "triton").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.NEPTUNE, "Neptune"));
 			TRITON.setPhaseShift(2.436F);
 			TRITON.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			TRITON.setRelativeOrbitTime(75.0F);
@@ -162,7 +176,7 @@ public class ExtraPlanets_Moons {
 			DEIMOS.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.IO) {
-			IO = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "ioEP" : "io").setParentPlanet(ExtraPlanets_Planets.JUPITER);
+			IO = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "ioEP" : "io").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.JUPITER, "Jupiter"));
 			IO.setPhaseShift(2.436F);
 			IO.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			IO.setRelativeOrbitTime(43.59976842345364536F);
@@ -181,7 +195,7 @@ public class ExtraPlanets_Moons {
 			IO.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.EUROPA) {
-			EUROPA = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "europaEP" : "europa").setParentPlanet(ExtraPlanets_Planets.JUPITER);
+			EUROPA = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "europaEP" : "europa").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.JUPITER, "Jupiter"));
 			EUROPA.setPhaseShift(2.436F);
 			EUROPA.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
 			EUROPA.setRelativeOrbitTime(87.55354354345685345F);
@@ -201,7 +215,7 @@ public class ExtraPlanets_Moons {
 		}
 
 		if (Config.GANYMEDE) {
-			GANYMEDE = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "ganymedeEP" : "ganymede").setParentPlanet(ExtraPlanets_Planets.JUPITER);
+			GANYMEDE = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "ganymedeEP" : "ganymede").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.JUPITER, "Jupiter"));
 			GANYMEDE.setPhaseShift(2.436F);
 			GANYMEDE.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F));
 			GANYMEDE.setRelativeOrbitTime(123.252594612756974F);
@@ -220,7 +234,7 @@ public class ExtraPlanets_Moons {
 			GANYMEDE.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.CALLISTO) {
-			CALLISTO = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "callistoEP" : "callisto").setParentPlanet(ExtraPlanets_Planets.JUPITER);
+			CALLISTO = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "callistoEP" : "callisto").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.JUPITER, "Jupiter"));
 			CALLISTO.setPhaseShift(2.436F);
 			CALLISTO.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(36F, 36F));
 			CALLISTO.setRelativeOrbitTime(157.84524858485412315F);
@@ -239,7 +253,7 @@ public class ExtraPlanets_Moons {
 			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.RHEA) {
-			RHEA = new Moon("rhea").setParentPlanet(ExtraPlanets_Planets.SATURN);
+			RHEA = new Moon("rhea").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.SATURN, "Saturn"));
 			RHEA.setPhaseShift(1.45F);
 			RHEA.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			RHEA.setRelativeOrbitTime(42.74914745741246F);
@@ -258,7 +272,7 @@ public class ExtraPlanets_Moons {
 			RHEA.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.TITAN) {
-			TITAN = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "titanEP" : "titan").setParentPlanet(ExtraPlanets_Planets.SATURN);
+			TITAN = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "titanEP" : "titan").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.SATURN, "Saturn"));
 			TITAN.setPhaseShift(1.45F);
 			TITAN.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
 			TITAN.setRelativeOrbitTime(71.452415154621642F);
@@ -277,7 +291,7 @@ public class ExtraPlanets_Moons {
 			TITAN.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.IAPETUS) {
-			IAPETUS = new Moon("iapetus").setParentPlanet(ExtraPlanets_Planets.SATURN);
+			IAPETUS = new Moon("iapetus").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.SATURN, "Saturn"));
 			IAPETUS.setPhaseShift(1.45F);
 			IAPETUS.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F));
 			IAPETUS.setRelativeOrbitTime(68.5411941552618F);
@@ -296,7 +310,7 @@ public class ExtraPlanets_Moons {
 			IAPETUS.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.OBERON) {
-			OBERON = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "oberonEP" : "oberon").setParentPlanet(ExtraPlanets_Planets.URANUS);
+			OBERON = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "oberonEP" : "oberon").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.URANUS, "Uranus"));
 			OBERON.setPhaseShift(1.45F);
 			OBERON.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
 			OBERON.setRelativeOrbitTime(68.5411941552618F);
@@ -315,7 +329,7 @@ public class ExtraPlanets_Moons {
 			OBERON.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.TITANIA) {
-			TITANIA = new Moon("titania").setParentPlanet(ExtraPlanets_Planets.URANUS);
+			TITANIA = new Moon("titania").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.URANUS, "Uranus"));
 			TITANIA.setPhaseShift(1.45F);
 			TITANIA.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			TITANIA.setRelativeOrbitTime(68.5411941552618F);
