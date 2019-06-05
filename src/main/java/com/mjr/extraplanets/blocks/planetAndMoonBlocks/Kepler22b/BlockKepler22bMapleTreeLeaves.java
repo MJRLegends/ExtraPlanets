@@ -98,11 +98,6 @@ public class BlockKepler22bMapleTreeLeaves extends BlockLeavesBase implements IS
 		return true;
 	}
 
-	@Override
-	public boolean isOpaqueCube() {
-		return !this.field_150121_P;
-	}
-
 	@SideOnly(Side.CLIENT)
 	public void setGraphicsLevel(boolean par1) {
 		this.field_150121_P = par1;

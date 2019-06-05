@@ -58,7 +58,7 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeavesBase implements I
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta) {
 		setGraphicsLevel(Minecraft.getMinecraft().gameSettings.fancyGraphics);
-		return (meta & 3) == 1 ? this.leafTextures[this.field_150127_b][1] : ((meta & 3) == 3 ? this.leafTextures[this.field_150127_b][3] : ((meta & 3) == 2 ? this.leafTextures[this.field_150127_b][2] : this.leafTextures[this.field_150127_b][0]));
+		return (meta & 3) == 1 ? this.leafTextures[this.field_150127_b][1] : this.leafTextures[this.field_150127_b][0];
 	}
 
 	@Override
@@ -96,11 +96,6 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeavesBase implements I
 	@Override
 	public boolean isLeaves(IBlockAccess world, int x, int y, int z) {
 		return true;
-	}
-
-	@Override
-	public boolean isOpaqueCube() {
-		return !this.field_150121_P;
 	}
 
 	@SideOnly(Side.CLIENT)
