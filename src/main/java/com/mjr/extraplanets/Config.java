@@ -906,6 +906,8 @@ public class Config {
 			KEPLER62_SYSTEM_X_OFFSET = 0.40F;
 			KEPLER62_SYSTEM_Y_OFFSET = 0.8F;
 		}
+		if (USE_CUSTOM_CELESTAIAL_SELECTION == false)
+			CUSTOM_GALAXIES = false;
 		config.save();
 	}
 
