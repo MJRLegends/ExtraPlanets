@@ -5,6 +5,11 @@
 
 
 ===========================================Released Updates===========================================
+v0.9.0
+*Added config option to disable unreachable moons on galaxy map screen #422
+*Two possible fixes towards issue #425
+*Fixed Custom galaxies not getting auto disabled when custom celestial selection screen is used, issue #420
+
 v0.8.9
 *Fixed issue #418 / #406
 
