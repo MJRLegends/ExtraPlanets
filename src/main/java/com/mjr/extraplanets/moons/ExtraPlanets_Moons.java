@@ -110,7 +110,7 @@ public class ExtraPlanets_Moons {
 		else {
 			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
 				String planetName = planet.getUnlocalizedName().substring(planet.getUnlocalizedName().indexOf(".") + 1);
-				if (planetName.equalsIgnoreCase(possiablePlanetName))
+				if (planetName.equalsIgnoreCase(possiablePlanetName) || planetName.equalsIgnoreCase(possiablePlanetName + "EP"))
 					return planet;
 			}
 		}
