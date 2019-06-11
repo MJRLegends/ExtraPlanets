@@ -811,6 +811,9 @@ public class Config {
 			NEPTUNE_DISTANCE_OFFSET = 0.5f;
 			PLUTO_DISTANCE_OFFSET = 0.4f;
 		}
+
+		if (USE_CUSTOM_CELESTAIAL_SELECTION == false)
+			CUSTOM_GALAXIES = false;
 		config.save();
 	}
 
