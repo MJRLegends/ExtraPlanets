@@ -119,8 +119,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				this.bodiesToRender.add(planet);
 		}
 		for (Moon moon : GalaxyRegistry.getRegisteredMoons().values()) {
-			if (moon.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
+			if (moon.getParentPlanet() != null && moon.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
 				this.bodiesToRender.add(moon);
+			else if(moon.getParentPlanet() == null)
+				MessageUtilities.fatalErrorMessageToLog(Constants.modID, "The moon " + moon.getUnlocalizedName() + " seems to have a null parent planet. Please check the log for other errors!");
+				
 		}
 		for (Satellite satellite : GalaxyRegistry.getRegisteredSatellites().values()) {
 			if (satellite.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
