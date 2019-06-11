@@ -5,6 +5,11 @@
 
 
 ===========================================Released Updates===========================================
+v2.1.1
+*Added config option to disable unreachable moons on galaxy map screen #422
+*Fixed an xray bug with some Kepler22b Leafs (Thanks to kmecpp)
+*Fixed an client crash bug for some Kepler22b Leafs (Thanks to kmecpp)
+
 v2.1.0
 *Added/Improved config options for issue #412
 
