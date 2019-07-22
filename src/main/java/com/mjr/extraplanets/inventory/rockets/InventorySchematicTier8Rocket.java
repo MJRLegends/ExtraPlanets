@@ -5,6 +5,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 
 public class InventorySchematicTier8Rocket implements IInventoryDefaults {
@@ -91,6 +92,21 @@ public class InventorySchematicTier8Rocket implements IInventoryDefaults {
 
 	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemStack) {
+		return false;
+	}
+
+	@Override
+	public int[] getSlotsForFace(EnumFacing side) {
+		return null;
+	}
+
+	@Override
+	public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction) {
+		return false;
+	}
+
+	@Override
+	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction) {
 		return false;
 	}
 }

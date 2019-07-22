@@ -26,7 +26,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
@@ -38,15 +37,14 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWithInventory implements IMultiBlock, ISidedInventory {
-	private NonNullList<ItemStack> stacks = NonNullList.withSize(1, ItemStack.EMPTY);
-	private ItemStack[] containingItems = new ItemStack[1];
 	@NetworkedField(targetSide = Side.CLIENT)
 	private AxisAlignedBB renderAABB;
 
 	public TileEntityBasicDecontaminationUnit() {
-		super();
+		super("container.basic.decontamination.unit.name");
 		this.storage.setCapacity(1000000);
 		this.storage.setMaxExtract(1000);
+		this.inventory = NonNullList.withSize(1, ItemStack.EMPTY);
 	}
 
 	@Override
@@ -88,25 +86,6 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 
 	@Override
 	public void slowDischarge() {
-	}
-
-	@Override
-	public void readFromNBT(NBTTagCompound nbt) {
-		super.readFromNBT(nbt);
-		this.stacks = this.readStandardItemsFromNBT(nbt);
-
-	}
-
-	@Override
-	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
-		super.writeToNBT(nbt);
-		this.writeStandardItemsToNBT(nbt, this.stacks);
-		return nbt;
-	}
-
-	@Override
-	protected NonNullList<ItemStack> getContainingItems() {
-		return this.stacks;
 	}
 
 	@Override
@@ -203,18 +182,8 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 	}
 
 	@Override
-	public String getName() {
-		return TranslateUtilities.translate("container.basic.decontamination.unit.name");
-	}
-
-	@Override
 	public int[] getSlotsForFace(EnumFacing side) {
 		return new int[] { 0 };
-	}
-
-	@Override
-	public boolean hasCustomName() {
-		return true;
 	}
 
 	@Override

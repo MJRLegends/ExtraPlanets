@@ -3,7 +3,6 @@ package com.mjr.extraplanets.tileEntities.machines;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.BasicDecrystallizer;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
@@ -31,10 +30,11 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	public static final int PROCESS_TIME_REQUIRED = 1;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
-	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 
 	public TileEntityBasicDecrystallizer() {
+		super("container.basic.decrystallizer.name");
 		this.outputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.SALT_FLUID, 0));
+		this.inventory = NonNullList.withSize(3, ItemStack.EMPTY);
 	}
 
 	@Override
@@ -66,7 +66,7 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 					final FluidStack liquid = tank.getFluid();
 
 					if (liquid != null) {
-						FluidUtil.tryFillContainer(tank, liquid, this.stacks, slot, ForgeModContainer.getInstance().universalBucket);
+						FluidUtil.tryFillContainer(tank, liquid, this.getInventory(), slot, ForgeModContainer.getInstance().universalBucket);
 					}
 				}
 			}
@@ -81,9 +81,9 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 		if (this.outputTank.getFluidAmount() >= this.outputTank.getCapacity()) {
 			return false;
 		}
-		if (this.stacks.get(1).isEmpty())
+		if (this.getInventory().get(1).isEmpty())
 			return false;
-		else if (this.stacks.get(1).getItem() != ExtraPlanets_Items.IODIDE_SALT)
+		else if (this.getInventory().get(1).getItem() != ExtraPlanets_Items.IODIDE_SALT)
 			return false;
 		else if (this.getStackInSlot(1).getCount() < 6)
 			return false;
@@ -107,7 +107,6 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
-		this.stacks = this.readStandardItemsFromNBT(nbt);
 
 		if (nbt.hasKey("outputTank")) {
 			this.outputTank.readFromNBT(nbt.getCompoundTag("outputTank"));
@@ -121,27 +120,11 @@ public class TileEntityBasicDecrystallizer extends TileBaseElectricBlockWithInve
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
-		this.writeStandardItemsToNBT(nbt, this.stacks);
 
 		if (this.outputTank.getFluid() != null) {
 			nbt.setTag("outputTank", this.outputTank.writeToNBT(new NBTTagCompound()));
 		}
 		return nbt;
-	}
-
-	@Override
-	protected NonNullList<ItemStack> getContainingItems() {
-		return this.stacks;
-	}
-
-	@Override
-	public String getName() {
-		return TranslateUtilities.translate("container.basic.decrystallizer.name");
-	}
-
-	@Override
-	public boolean hasCustomName() {
-		return true;
 	}
 
 	// ISidedInventory Implementation:

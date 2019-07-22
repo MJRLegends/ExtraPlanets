@@ -19,6 +19,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.fml.relauncher.Side;
 
 public class TileEntityBasicDecontaminationUnitFake extends TileBaseElectricBlock {
+	public TileEntityBasicDecontaminationUnitFake() {
+		super("container.basic.decontamination.unit.fake.name");
+	}
+
 	// The the position of the main block
 	@NetworkedField(targetSide = Side.CLIENT)
 	public BlockPos mainBlockPosition;
@@ -216,5 +220,10 @@ public class TileEntityBasicDecontaminationUnitFake extends TileBaseElectricBloc
 		}
 
 		this.canConnect = false;
+	}
+
+	@Override
+	public int[] getSlotsForFace(EnumFacing side) {
+		return new int[0];
 	}
 }

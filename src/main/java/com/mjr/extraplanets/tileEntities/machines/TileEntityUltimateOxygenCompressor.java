@@ -3,8 +3,6 @@ package com.mjr.extraplanets.tileEntities.machines;
 import java.util.EnumSet;
 
 import com.mjr.extraplanets.blocks.machines.UltimateOxygenCompressor;
-import com.mjr.mjrlegendslib.inventory.IInventoryDefaults;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import micdoodle8.mods.galacticraft.api.item.IItemOxygenSupply;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
@@ -13,22 +11,18 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityOxygen;
 import micdoodle8.mods.galacticraft.core.util.FluidUtil;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.ISidedInventory;
-import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
 
-public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen implements IInventoryDefaults, ISidedInventory {
-	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
-
+public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen {
 	public static final int TANK_TRANSFER_SPEED = 6;
 	private boolean usingEnergy = false;
 
 	public TileEntityUltimateOxygenCompressor() {
-		super(3600, 32);
+		super("container.ultimateoxygencompressor.name", 3600, 32);
 		this.storage.setMaxExtract(35);
+		this.inventory = NonNullList.withSize(3, ItemStack.EMPTY);
 	}
 
 	@Override
@@ -50,7 +44,7 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
 		if (!this.world.isRemote) {
 			this.usingEnergy = false;
 			if (this.getOxygenStored() > 0 && this.hasEnoughEnergyToRun) {
-				ItemStack tank0 = this.stacks.get(0);
+				ItemStack tank0 = this.getInventory().get(0);
 
 				if (tank0 != null) {
 					if (tank0.getItem() instanceof ItemOxygenTank && tank0.getItemDamage() > 0) {
@@ -61,79 +55,6 @@ public class TileEntityUltimateOxygenCompressor extends TileEntityOxygen impleme
 				}
 			}
 		}
-	}
-
-	@Override
-	public void readFromNBT(NBTTagCompound nbt) {
-		super.readFromNBT(nbt);
-
-		this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
-		ItemStackHelper.loadAllItems(nbt, this.stacks);
-	}
-
-	@Override
-	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
-		super.writeToNBT(nbt);
-
-		ItemStackHelper.saveAllItems(nbt, this.stacks);
-		return nbt;
-	}
-
-	@Override
-	public int getSizeInventory() {
-		return this.stacks.size();
-	}
-
-	@Override
-	public ItemStack getStackInSlot(int par1) {
-		return this.stacks.get(par1);
-	}
-
-	@Override
-	public ItemStack decrStackSize(int index, int count) {
-		ItemStack itemStack = ItemStackHelper.getAndSplit(this.stacks, index, count);
-
-		if (!itemStack.isEmpty()) {
-			this.markDirty();
-		}
-
-		return itemStack;
-	}
-
-	@Override
-	public ItemStack removeStackFromSlot(int index) {
-		ItemStack oldstack = ItemStackHelper.getAndRemove(this.stacks, index);
-		if (!oldstack.isEmpty()) {
-			this.markDirty();
-		}
-		return oldstack;
-	}
-
-	@Override
-	public void setInventorySlotContents(int index, ItemStack stack) {
-		this.stacks.set(index, stack);
-
-		if (stack.getCount() > this.getInventoryStackLimit()) {
-			stack.setCount(this.getInventoryStackLimit());
-		}
-
-		this.markDirty();
-	}
-
-	@Override
-	public boolean isEmpty() {
-		for (ItemStack itemStack : this.stacks) {
-			if (!itemStack.isEmpty()) {
-				return false;
-			}
-		}
-
-		return true;
-	}
-
-	@Override
-	public String getName() {
-		return TranslateUtilities.translate("container.ultimateoxygencompressor.name");
 	}
 
 	@Override

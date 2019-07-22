@@ -3,7 +3,6 @@ package com.mjr.extraplanets.tileEntities.machines;
 import com.mjr.extraplanets.api.block.IPowerable;
 import com.mjr.extraplanets.blocks.machines.AdvancedFuelLoader;
 import com.mjr.extraplanets.blocks.machines.VehicleCharger;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
 import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
@@ -16,7 +15,6 @@ import micdoodle8.mods.galacticraft.core.tile.TileEntityMulti;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.NonNullList;
@@ -26,10 +24,11 @@ import net.minecraft.world.IBlockAccess;
 public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory implements ISidedInventory, ILandingPadAttachable, IMachineSides {
 	public IPowerable attachedPowerable;
 	private boolean loadedPowerLastTick = false;
-	private NonNullList<ItemStack> stacks = NonNullList.withSize(1, ItemStack.EMPTY);
 
 	public TileEntityVehicleChanger() {
+		super("container.vehicle.charger.name");
 		this.storage.setMaxExtract(30);
+		this.inventory = NonNullList.withSize(1, ItemStack.EMPTY);
 	}
 
 	@Override
@@ -71,24 +70,6 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 	}
 
 	@Override
-	public void readFromNBT(NBTTagCompound par1NBTTagCompound) {
-		super.readFromNBT(par1NBTTagCompound);
-		this.stacks = this.readStandardItemsFromNBT(par1NBTTagCompound);
-	}
-
-	@Override
-	public NBTTagCompound writeToNBT(NBTTagCompound par1NBTTagCompound) {
-		super.writeToNBT(par1NBTTagCompound);
-		this.writeStandardItemsToNBT(par1NBTTagCompound, this.stacks);
-		return par1NBTTagCompound;
-	}
-
-	@Override
-	public String getName() {
-		return TranslateUtilities.translate("container.vehicle.charger.name");
-	}
-
-	@Override
 	public int getInventoryStackLimit() {
 		return 1;
 	}
@@ -108,11 +89,6 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 	@Override
 	public boolean canExtractItem(int index, ItemStack itemStackIn, EnumFacing direction) {
 		return false;
-	}
-
-	@Override
-	public boolean hasCustomName() {
-		return true;
 	}
 
 	@Override
@@ -178,10 +154,5 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 			return state.getValue(VehicleCharger.FACING);
 		}
 		return EnumFacing.NORTH;
-	}
-
-	@Override
-	protected NonNullList<ItemStack> getContainingItems() {
-		return this.stacks;
 	}
 }

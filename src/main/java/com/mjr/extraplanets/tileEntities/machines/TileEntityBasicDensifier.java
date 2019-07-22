@@ -4,7 +4,6 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.BasicDensifier;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
@@ -41,7 +40,6 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public static final int PROCESS_TIME_REQUIRED = 5;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
-	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 
 	private ItemStack producingStack = null;
 
@@ -51,7 +49,9 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public int outputTextureOffsetY;
 
 	public TileEntityBasicDensifier() {
+		super("container.basic.densifier.name");
 		inputTank = new FluidTank(this.tankCapacity);
+		this.inventory = NonNullList.withSize(3, ItemStack.EMPTY);
 	}
 
 	@Override
@@ -223,13 +223,13 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		if (this.producingStack.isEmpty()) {
 			return false;
 		}
-		if (this.stacks.get(1).isEmpty()) {
+		if (this.getInventory().get(1).isEmpty()) {
 			return true;
 		}
-		if (!this.stacks.get(1).isEmpty() && !this.stacks.get(1).isItemEqual(this.producingStack)) {
+		if (!this.getInventory().get(1).isEmpty() && !this.getInventory().get(1).isItemEqual(this.producingStack)) {
 			return false;
 		}
-		int result = this.stacks.get(1).isEmpty() ? 0 : this.stacks.get(1).getCount() + this.producingStack.getCount();
+		int result = this.getInventory().get(1).isEmpty() ? 0 : this.getInventory().get(1).getCount() + this.producingStack.getCount();
 		return result <= this.getInventoryStackLimit() && result <= this.producingStack.getMaxStackSize();
 	}
 
@@ -247,11 +247,11 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 			this.inputTank.drain(amountToDrain, true);
 			if (amountDrain >= 1000) {
 				amountDrain = 0;
-				if (this.stacks.get(1).isEmpty()) {
-					this.stacks.set(1, resultItemStack.copy());
-				} else if (this.stacks.get(1).isItemEqual(resultItemStack)) {
-					if (this.stacks.get(1).getCount() + resultItemStack.getCount() > 64) {
-						for (int i = 0; i < this.stacks.get(1).getCount() + resultItemStack.getCount() - 64; i++) {
+				if (this.getInventory().get(1).isEmpty()) {
+					this.getInventory().set(1, resultItemStack.copy());
+				} else if (this.getInventory().get(1).isItemEqual(resultItemStack)) {
+					if (this.getInventory().get(1).getCount() + resultItemStack.getCount() > 64) {
+						for (int i = 0; i < this.getInventory().get(1).getCount() + resultItemStack.getCount() - 64; i++) {
 							float var = 0.7F;
 							double dx = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 							double dy = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
@@ -260,9 +260,9 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 							entityitem.setPickupDelay(10);
 							this.world.spawnEntity(entityitem);
 						}
-						this.stacks.get(1).setCount(64);
+						this.getInventory().get(1).setCount(64);
 					} else {
-						this.stacks.get(1).grow(resultItemStack.getCount());
+						this.getInventory().get(1).grow(resultItemStack.getCount());
 					}
 				}
 			}
@@ -273,7 +273,6 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
-		this.stacks = this.readStandardItemsFromNBT(nbt);
 
 		if (nbt.hasKey("inputTank")) {
 			this.inputTank.readFromNBT(nbt.getCompoundTag("inputTank"));
@@ -284,27 +283,11 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
-		this.writeStandardItemsToNBT(nbt, this.stacks);
 
 		if (this.inputTank.getFluid() != null) {
 			nbt.setTag("inputTank", this.inputTank.writeToNBT(new NBTTagCompound()));
 		}
 		return nbt;
-	}
-
-	@Override
-	protected NonNullList<ItemStack> getContainingItems() {
-		return this.stacks;
-	}
-
-	@Override
-	public String getName() {
-		return TranslateUtilities.translate("container.basic.densifier.name");
-	}
-
-	@Override
-	public boolean hasCustomName() {
-		return true;
 	}
 
 	// ISidedInventory Implementation:

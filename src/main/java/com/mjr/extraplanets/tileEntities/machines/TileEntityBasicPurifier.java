@@ -3,7 +3,6 @@ package com.mjr.extraplanets.tileEntities.machines;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.BasicPurifier;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
@@ -46,12 +45,13 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 	public static final int PROCESS_TIME_REQUIRED = 5;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
-	private NonNullList<ItemStack> stacks = NonNullList.withSize(5, ItemStack.EMPTY);
 
 	public TileEntityBasicPurifier() {
+		super("container.basic.purifier.name");
 		this.inputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID, 0));
 		this.inputTank2.setFluid(new FluidStack(ExtraPlanets_Fluids.INFECTED_WATER_FLUID, 0));
 		this.outputTank.setFluid(new FluidStack(ExtraPlanets_Fluids.CLEAN_WATER_FLUID, 0));
+		this.inventory = NonNullList.withSize(5, ItemStack.EMPTY);
 	}
 
 	@Override
@@ -98,10 +98,10 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 		if (item != null && FluidUtil.isValidContainer(item)) {
 			if (FluidUtil.isEmptyContainer(item) == false && stack != null && stack.getFluid() != null) {
 				if (slot == 1 && stack.getFluid().equals(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID) && tank.getFluidAmount() <= tank.getCapacity()) {
-					FluidUtil.loadFromContainer(tank, ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID, stacks, slot, stack.amount);
+					FluidUtil.loadFromContainer(tank, ExtraPlanets_Fluids.RADIO_ACTIVE_WATER_FLUID, this.getInventory(), slot, stack.amount);
 				}
 				if (slot == 2 && stack.getFluid().equals(ExtraPlanets_Fluids.INFECTED_WATER_FLUID) && tank.getFluidAmount() <= tank.getCapacity()) {
-					FluidUtil.loadFromContainer(tank, ExtraPlanets_Fluids.INFECTED_WATER_FLUID, stacks, slot, stack.amount);
+					FluidUtil.loadFromContainer(tank, ExtraPlanets_Fluids.INFECTED_WATER_FLUID, this.getInventory(), slot, stack.amount);
 				}
 			}
 			if (slot == 3) {
@@ -110,7 +110,7 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 						final FluidStack liquid = tank.getFluid();
 
 						if (liquid != null) {
-							FluidUtil.tryFillContainer(tank, liquid, this.stacks, slot, ForgeModContainer.getInstance().universalBucket);
+							FluidUtil.tryFillContainer(tank, liquid, this.getInventory(), slot, ForgeModContainer.getInstance().universalBucket);
 						}
 					}
 				}
@@ -141,11 +141,11 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 	}
 
 	public boolean canPurify() {
-		if (this.stacks.get(4).isEmpty())
+		if (this.getInventory().get(4).isEmpty())
 			return false;
-		else if (this.stacks.get(4).getItem() != ExtraPlanets_Items.IODIDE_SALT)
+		else if (this.getInventory().get(4).getItem() != ExtraPlanets_Items.IODIDE_SALT)
 			return false;
-		else if (this.stacks.get(4).getCount() <= 6)
+		else if (this.getInventory().get(4).getCount() <= 6)
 			return false;
 		else
 			return true;
@@ -153,8 +153,8 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 
 	public boolean hasInputs() {
 		if (this.inputTank.getFluidAmount() >= 50 || this.inputTank2.getFluidAmount() >= 50)
-			if (!this.stacks.get(4).isEmpty() && this.stacks.get(4).getItem() == ExtraPlanets_Items.IODIDE_SALT)
-				if (this.stacks.get(4).getCount() >= 6)
+			if (!this.getInventory().get(4).isEmpty() && this.getInventory().get(4).getItem() == ExtraPlanets_Items.IODIDE_SALT)
+				if (this.getInventory().get(4).getCount() >= 6)
 					return true;
 		return false;
 	}
@@ -187,7 +187,6 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
-		this.stacks = this.readStandardItemsFromNBT(nbt);
 
 		if (nbt.hasKey("inputTank")) {
 			this.inputTank.readFromNBT(nbt.getCompoundTag("inputTank"));
@@ -213,7 +212,6 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
-		this.writeStandardItemsToNBT(nbt, this.stacks);
 
 		if (this.inputTank.getFluid() != null) {
 			nbt.setTag("inputTank", this.inputTank.writeToNBT(new NBTTagCompound()));
@@ -225,21 +223,6 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 			nbt.setTag("outputTank", this.outputTank.writeToNBT(new NBTTagCompound()));
 		}
 		return nbt;
-	}
-
-	@Override
-	protected NonNullList<ItemStack> getContainingItems() {
-		return this.stacks;
-	}
-
-	@Override
-	public String getName() {
-		return TranslateUtilities.translate("container.basic.purifier.name");
-	}
-
-	@Override
-	public boolean hasCustomName() {
-		return true;
 	}
 
 	// ISidedInventory Implementation:

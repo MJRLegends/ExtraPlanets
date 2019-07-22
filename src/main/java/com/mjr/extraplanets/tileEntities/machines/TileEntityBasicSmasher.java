@@ -2,7 +2,6 @@ package com.mjr.extraplanets.tileEntities.machines;
 
 import com.mjr.extraplanets.blocks.machines.BasicSmasher;
 import com.mjr.extraplanets.recipes.ExtraPlanets_MachineRecipes;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
@@ -20,17 +19,18 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public static final int PROCESS_TIME_REQUIRED = 50;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
-	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 
 	private ItemStack producingStack = ItemStack.EMPTY;
 
 	public TileEntityBasicSmasher() {
+		super("container.basic.smasher.name");
+		this.inventory = NonNullList.withSize(3, ItemStack.EMPTY);
 	}
 
 	@Override
 	public void update() {
 		super.update();
-		this.producingStack = ExtraPlanets_MachineRecipes.getBlockSmasherOutputForInput(this.stacks.get(1));
+		this.producingStack = ExtraPlanets_MachineRecipes.getBlockSmasherOutputForInput(this.getInventory().get(1));
 
 		if (!this.world.isRemote) {
 			if (this.canProcess() && canOutput() && this.hasEnoughEnergyToRun) {
@@ -52,7 +52,7 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 		if (this.producingStack.isEmpty()) {
 			return false;
 		}
-		if (this.stacks.get(1).isEmpty())
+		if (this.getInventory().get(1).isEmpty())
 			return false;
 		return !this.getDisabled(0);
 	}
@@ -62,18 +62,18 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 		if (itemStack == null) {
 			return false;
 		}
-		if (this.stacks.get(2).isEmpty()) {
+		if (this.getInventory().get(2).isEmpty()) {
 			return true;
 		}
-		if (!this.stacks.get(2).isItemEqual(itemStack)) {
+		if (!this.getInventory().get(2).isItemEqual(itemStack)) {
 			return false;
 		}
-		int result = this.stacks.get(2).isEmpty() ? 0 : this.stacks.get(2).getCount() + this.producingStack.getCount();
+		int result = this.getInventory().get(2).isEmpty() ? 0 : this.getInventory().get(2).getCount() + this.producingStack.getCount();
 		return result <= this.getInventoryStackLimit() && result <= this.producingStack.getMaxStackSize();
 	}
 
 	public boolean hasInputs() {
-		if (!this.stacks.get(1).isEmpty() && this.stacks.get(1).getCount() >= ExtraPlanets_MachineRecipes.getBlockSmasherInputForOutput(this.producingStack).getCount())
+		if (!this.getInventory().get(1).isEmpty() && this.getInventory().get(1).getCount() >= ExtraPlanets_MachineRecipes.getBlockSmasherInputForOutput(this.producingStack).getCount())
 			return true;
 		return false;
 	}
@@ -81,11 +81,11 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public void smeltItem() {
 		ItemStack resultItemStack = this.producingStack;
 		if (this.canProcess() && canOutput() && hasInputs()) {
-			if (this.stacks.get(2).isEmpty()) {
-				this.stacks.set(2, resultItemStack.copy());
-			} else if (this.stacks.get(2).isItemEqual(resultItemStack)) {
-				if (this.stacks.get(2).getCount() + resultItemStack.getCount() > 64) {
-					for (int i = 0; i < this.stacks.get(2).getCount() + resultItemStack.getCount() - 64; i++) {
+			if (this.getInventory().get(2).isEmpty()) {
+				this.getInventory().set(2, resultItemStack.copy());
+			} else if (this.getInventory().get(2).isItemEqual(resultItemStack)) {
+				if (this.getInventory().get(2).getCount() + resultItemStack.getCount() > 64) {
+					for (int i = 0; i < this.getInventory().get(2).getCount() + resultItemStack.getCount() - 64; i++) {
 						float var = 0.7F;
 						double dx = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
 						double dy = this.world.rand.nextFloat() * var + (1.0F - var) * 0.5D;
@@ -94,9 +94,9 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 						entityitem.setPickupDelay(10);
 						this.world.spawnEntity(entityitem);
 					}
-					this.stacks.get(2).setCount(64);
+					this.getInventory().get(2).setCount(64);
 				} else {
-					this.stacks.get(2).grow(resultItemStack.getCount());
+					this.getInventory().get(2).grow(resultItemStack.getCount());
 				}
 			}
 			this.decrStackSize(1, ExtraPlanets_MachineRecipes.getBlockSmasherInputForOutput(this.producingStack).getCount());
@@ -107,30 +107,13 @@ public class TileEntityBasicSmasher extends TileBaseElectricBlockWithInventory i
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
-		this.stacks = this.readStandardItemsFromNBT(nbt);
 	}
 
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
-		this.writeStandardItemsToNBT(nbt, this.stacks);
 		return nbt;
-	}
-
-	@Override
-	protected NonNullList<ItemStack> getContainingItems() {
-		return this.stacks;
-	}
-
-	@Override
-	public String getName() {
-		return TranslateUtilities.translate("container.basic.smasher.name");
-	}
-
-	@Override
-	public boolean hasCustomName() {
-		return true;
 	}
 
 	// ISidedInventory Implementation:

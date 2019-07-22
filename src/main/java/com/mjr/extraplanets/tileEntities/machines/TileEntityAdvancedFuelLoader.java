@@ -3,7 +3,6 @@ package com.mjr.extraplanets.tileEntities.machines;
 import javax.annotation.Nullable;
 
 import com.mjr.extraplanets.blocks.machines.AdvancedFuelLoader;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import micdoodle8.mods.galacticraft.api.entity.IFuelable;
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
@@ -42,12 +41,13 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 	private final int tankCapacity = 12000 * 2;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public FluidTank fuelTank = new FluidTank(this.tankCapacity);
-	private NonNullList<ItemStack> stacks = NonNullList.withSize(2, ItemStack.EMPTY);
 	public IFuelable attachedFuelable;
 	private boolean loadedFuelLastTick = false;
 
 	public TileEntityAdvancedFuelLoader() {
+		super("container.advanced.fuelloader.name");
 		this.storage.setMaxExtract(30 * 2);
+		this.inventory = NonNullList.withSize(2, ItemStack.EMPTY);
 	}
 
 	public int getScaledFuelLevel(int i) {
@@ -63,9 +63,9 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 		if (!this.world.isRemote) {
 			this.loadedFuelLastTick = false;
 
-			final FluidStack liquidContained = FluidUtil.getFluidContained(this.stacks.get(1));
+			final FluidStack liquidContained = FluidUtil.getFluidContained(this.getInventory().get(1));
 			if (FluidUtil.isFuel(liquidContained)) {
-				FluidUtil.loadFromContainer(this.fuelTank, GCFluids.fluidFuel, this.stacks, 1, liquidContained.amount);
+				FluidUtil.loadFromContainer(this.fuelTank, GCFluids.fluidFuel, this.getInventory(), 1, liquidContained.amount);
 			}
 
 			if (this.ticks % 100 == 0) {
@@ -104,7 +104,6 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 	@Override
 	public void readFromNBT(NBTTagCompound par1NBTTagCompound) {
 		super.readFromNBT(par1NBTTagCompound);
-		this.stacks = this.readStandardItemsFromNBT(par1NBTTagCompound);
 
 		if (par1NBTTagCompound.hasKey("fuelTank")) {
 			this.fuelTank.readFromNBT(par1NBTTagCompound.getCompoundTag("fuelTank"));
@@ -116,7 +115,6 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
-		this.writeStandardItemsToNBT(nbt, this.stacks);
 
 		if (this.fuelTank.getFluid() != null) {
 			nbt.setTag("fuelTank", this.fuelTank.writeToNBT(new NBTTagCompound()));
@@ -125,16 +123,6 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 		this.addMachineSidesToNBT(nbt); // Needed by IMachineSides
 
 		return nbt;
-	}
-
-	@Override
-	protected NonNullList<ItemStack> getContainingItems() {
-		return this.stacks;
-	}
-
-	@Override
-	public String getName() {
-		return TranslateUtilities.translate("container.advanced.fuelloader.name");
 	}
 
 	@Override
@@ -240,6 +228,7 @@ public class TileEntityAdvancedFuelLoader extends TileBaseElectricBlockWithInven
 		return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY || super.hasCapability(capability, facing);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Nullable
 	@Override
 	public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing) {

@@ -3,7 +3,6 @@ package com.mjr.extraplanets.tileEntities.machines;
 import javax.annotation.Nullable;
 
 import com.mjr.extraplanets.blocks.machines.AdvancedRefinery;
-import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.GCFluids;
@@ -41,12 +40,13 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	public static final int OUTPUT_PER_SECOND = 2;
 	@NetworkedField(targetSide = Side.CLIENT)
 	public int processTicks = 0;
-	private NonNullList<ItemStack> stacks = NonNullList.withSize(3, ItemStack.EMPTY);
 
 	public TileEntityAdvancedRefinery() {
+		super("container.advanced.refinery.name");
 		this.storage.setMaxExtract(ConfigManagerCore.hardMode ? 90 : 60);
 		this.oilTank.setFluid(new FluidStack(GCFluids.fluidOil, 0));
 		this.fuelTank.setFluid(new FluidStack(GCFluids.fluidFuel, 0));
+		this.inventory = NonNullList.withSize(3, ItemStack.EMPTY);
 	}
 
 	@Override
@@ -54,9 +54,9 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 		super.update();
 
 		if (!this.world.isRemote) {
-			final FluidStack liquid = FluidUtil.getFluidContained(this.stacks.get(1));
+			final FluidStack liquid = FluidUtil.getFluidContained(this.getInventory().get(1));
 			if (FluidUtil.isFluidFuzzy(liquid, "oil")) {
-				FluidUtil.loadFromContainer(this.oilTank, GCFluids.fluidOil, this.stacks, 1, liquid.amount);
+				FluidUtil.loadFromContainer(this.oilTank, GCFluids.fluidOil, this.getInventory(), 1, liquid.amount);
 			}
 
 			checkFluidTankTransfer(2, this.fuelTank);
@@ -81,7 +81,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	}
 
 	private void checkFluidTankTransfer(int slot, FluidTank tank) {
-		FluidUtil.tryFillContainerFuel(tank, this.stacks, slot);
+		FluidUtil.tryFillContainerFuel(tank, this.getInventory(), slot);
 	}
 
 	public int getScaledOilLevel(int i) {
@@ -121,7 +121,6 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	public void readFromNBT(NBTTagCompound nbt) {
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
-		this.stacks = this.readStandardItemsFromNBT(nbt);
 
 		if (nbt.hasKey("oilTank")) {
 			this.oilTank.readFromNBT(nbt.getCompoundTag("oilTank"));
@@ -142,7 +141,6 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 	public NBTTagCompound writeToNBT(NBTTagCompound nbt) {
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
-		this.writeStandardItemsToNBT(nbt, this.stacks);
 
 		if (this.oilTank.getFluid() != null) {
 			nbt.setTag("oilTank", this.oilTank.writeToNBT(new NBTTagCompound()));
@@ -152,21 +150,6 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 			nbt.setTag("fuelTank", this.fuelTank.writeToNBT(new NBTTagCompound()));
 		}
 		return nbt;
-	}
-
-	@Override
-	protected NonNullList<ItemStack> getContainingItems() {
-		return this.stacks;
-	}
-
-	@Override
-	public String getName() {
-		return TranslateUtilities.translate("container.advanced.refinery.name");
-	}
-
-	@Override
-	public boolean hasCustomName() {
-		return true;
 	}
 
 	// ISidedInventory Implementation:
@@ -323,6 +306,7 @@ public class TileEntityAdvancedRefinery extends TileBaseElectricBlockWithInvento
 		return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY || super.hasCapability(capability, facing);
 	}
 
+	@SuppressWarnings("unchecked")
 	@Nullable
 	@Override
 	public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing) {
