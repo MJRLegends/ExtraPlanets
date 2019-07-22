@@ -529,6 +529,7 @@ gui.message.general.tank.fluid.name=流體
 gui.status.densifier.name=濃縮中
 gui.bucket.message.extreme.reactors.compact=這種液體具有極端的反應堆兼容性
 gui.radiation.reduced.message=你的輻射水平已經降低
+gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=你目前的輻射水平為
 gui.radiation.subject.message=你現在受制於
 gui.radiation.reverse.message=你可以使用以下方法：睡眠，淨化裝置，防輻射飲料幫助扭轉傷害
@@ -1226,7 +1227,7 @@ item.potassium_iodide.name=碘化鉀
 item.potassium.name=鉀
 item.potash_shards.name=鉀肥碎片
 item.anti_radiation.name=防輻射
-anti_radiation.desc=將輻射水平降低50%
+anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=一階全套工具箱

@@ -41,8 +41,12 @@ public class ItemBasicItem extends Item {
 				list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier3_armor_layer.desc"));
 			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_4_ARMOR_LAYER)
 				list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier4_armor_layer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
-				list.add(EnumColor.YELLOW + TranslateUtilities.translate("anti_radiation.desc"));
+			else if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION) {
+				String text = TranslateUtilities.translate("anti_radiation.desc");
+				if(text.contains("{PERCENT}"))
+					text.replace("{PERCENT}", Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%");
+				list.add(EnumColor.YELLOW + text);
+			}
 		}
 	}
 
@@ -87,8 +91,8 @@ public class ItemBasicItem extends Item {
 					stats.setRadiationLevel(0);
 				else
 					stats.setRadiationLevel(level);
-				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", Your Radiation Level has been reduced by " + Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%");
-				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%");
+				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " " + Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "% "+ TranslateUtilities.translate("gui.radiation.reduced.message.2"));
+				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
 			}
 
 			if (!player.capabilities.isCreativeMode) {
