@@ -70,8 +70,7 @@ public class MCMultiPartCompatibility {
 				}
 			}
 		} catch (Exception e) {
-			MessageUtilities.fatalErrorMessageToLog(Constants.modID, "Error when setting up MCMultiPart Compatibility, ErrorMessage: ");
-			e.printStackTrace();
+			MessageUtilities.warnErrorMessageToLog(Constants.modID, "An error occurred when setting up MCMultiPart Compatibility, this is most likey intended!");
 		}
 	}
 }
