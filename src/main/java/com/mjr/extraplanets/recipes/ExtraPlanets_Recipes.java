@@ -982,9 +982,9 @@ public class ExtraPlanets_Recipes {
 			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.electricParts, 1, 0), new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(ExtraPlanets_Items.ingotLead, 1, 0) });
 			if (Config.venus)
 				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.electricParts, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 'X', new ItemStack(ExtraPlanets_Items.ingotLead, 1, 0) });
-			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), new Object[] { " W ", "WXW", " W ", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(GCItems.partBuggy, 1, 0) });
+			GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.electricParts, 1, 2), new Object[] { " W ", "WXW", " W ", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(GCItems.partBuggy, 1, 0) });
 			if (Config.venus)
-				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.electricParts, 1, 4), new Object[] { " W ", "WXW", " W ", 'W', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 'X', new ItemStack(ExtraPlanets_Items.electricParts, 1, 3) });
+				GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Items.electricParts, 1, 3), new Object[] { " W ", "WXW", " W ", 'W', new ItemStack(ExtraPlanets_Items.tier4Items, 1, 3), 'X', new ItemStack(ExtraPlanets_Items.electricParts, 1, 2) });
 		}
 		// Decorative Blocks
 		GameRegistry.addRecipe(new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 1), new Object[] { "MMM", "MMM", "MMM", 'M', new ItemStack(ExtraPlanets_Blocks.decorativeBlocks, 1, 0) });
