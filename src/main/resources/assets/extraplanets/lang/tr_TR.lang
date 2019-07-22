@@ -529,6 +529,7 @@ gui.message.general.tank.fluid.name=Yakıt
 gui.status.densifier.name=Yoğunlaştırıcı yoğunlaştırıyor
 gui.bucket.message.extreme.reactors.compact=Bu yakıt çılgın derecede reaktörle uyumlu
 gui.radiation.reduced.message=Radrasyon seviyen düşüyor
+gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=Şuan ki radrasyon seviyen
 gui.radiation.subject.message=Şimdi ki konun
 gui.radiation.reverse.message=Bu yolları deneyebilirsin: Uyumak,hasar almamak için Anti Rad içmek
@@ -1226,7 +1227,7 @@ item.potassium_iodide.name=Potasyum İyodu
 item.potassium.name=Potasyum
 item.potash_shards.name=Potasyum Parçacığı
 item.anti_radiation.name=Anti-Radrasyon
-anti_radiation.desc=Radrasyonu %50 düşürür
+anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=Seviye 1 Tam Kit
