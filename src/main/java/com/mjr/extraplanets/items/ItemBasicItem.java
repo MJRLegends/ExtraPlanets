@@ -36,17 +36,19 @@ public class ItemBasicItem extends Item {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void addInformation(ItemStack itemStack, EntityPlayer player, List<String> list, boolean par4) {
-		if (player.world.isRemote) {
-			if (itemStack.getItem() == ExtraPlanets_Items.TIER_1_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier1_armor_layer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_2_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier2_armor_layer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_3_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier3_armor_layer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.TIER_4_ARMOR_LAYER)
-				list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier4_armor_layer.desc"));
-			else if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION)
-				list.add(EnumColor.YELLOW + TranslateUtilities.translate("anti_radiation.desc"));
+		if (itemStack.getItem() == ExtraPlanets_Items.TIER_1_ARMOR_LAYER)
+			list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier1_armor_layer.desc"));
+		else if (itemStack.getItem() == ExtraPlanets_Items.TIER_2_ARMOR_LAYER)
+			list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier2_armor_layer.desc"));
+		else if (itemStack.getItem() == ExtraPlanets_Items.TIER_3_ARMOR_LAYER)
+			list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier3_armor_layer.desc"));
+		else if (itemStack.getItem() == ExtraPlanets_Items.TIER_4_ARMOR_LAYER)
+			list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier4_armor_layer.desc"));
+		else if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION) {
+			String text = TranslateUtilities.translate("anti_radiation.desc");
+			if(text.contains("{PERCENT}"))
+				text.replace("{PERCENT}", Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%");
+			list.add(EnumColor.YELLOW + text);
 		}
 	}
 
@@ -92,8 +94,8 @@ public class ItemBasicItem extends Item {
 					stats.setRadiationLevel(0);
 				else
 					stats.setRadiationLevel(level);
-				PlayerUtilties.sendMessage(entityplayer, "" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.GOLD + ", Your Radiation Level has been reduced by " + Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%");
-				PlayerUtilties.sendMessage(entityplayer, "" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.DARK_AQUA + ", Your Current Radiation Level is: " + (int) stats.getRadiationLevel() + "%");
+				PlayerUtilties.sendMessage(entityplayer, "" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " " + Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "% "+ TranslateUtilities.translate("gui.radiation.reduced.message.2"));
+				PlayerUtilties.sendMessage(entityplayer, "" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
 			}
 
 			if (entityplayer == null || !entityplayer.capabilities.isCreativeMode) {
