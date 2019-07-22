@@ -33,8 +33,7 @@ public class ExtremeReactorsCompatibility {
 				registerMethod.invoke(null, "infected_water_fluid", 0.33f, 0.5f, 1.33f, 0.1f);
 			}
 		} catch (Exception e) {
-			MessageUtilities.fatalErrorMessageToLog(Constants.modID, "Error when setting up ExtremeReactors Compatibility, ErrorMessage: ");
-			e.printStackTrace();
+			MessageUtilities.warnErrorMessageToLog(Constants.modID, "An error occurred when setting up ExtremeReactors Compatibility, this is most likey intended!");
 		}
 	}
 }

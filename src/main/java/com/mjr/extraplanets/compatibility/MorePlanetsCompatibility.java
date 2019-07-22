@@ -45,8 +45,7 @@ public class MorePlanetsCompatibility {
 				}
 			}
 		} catch (Exception e) {
-			MessageUtilities.fatalErrorMessageToLog(Constants.modID, "Error when setting up MorePlanets Compatibility, ErrorMessage: ");
-			e.printStackTrace();
+			MessageUtilities.warnErrorMessageToLog(Constants.modID, "An error occurred when setting up MorePlanets Compatibility, this is most likey intended!");
 		}
 	}
 }
