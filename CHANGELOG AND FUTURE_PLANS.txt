@@ -5,6 +5,15 @@
 
 
 ===========================================Released Updates===========================================
+v0.5.4
+*Improvements to output messages for mod compact not working, Fixed #440
+*Improvement towards #439
+*Tweaks/improvements to reduced radiation message Fixed #445
+*Fixed Anti Rad tooltip not supporting config changes
+*Match Galacticraft API changes
+*Changed Galacticraft minimum version to Build 212
+*Set minimum version of MJRLegendsLib requirement to v1.1.8
+
 v0.5.3
 *Added config option to disable unreachable moons on galaxy map screen #422
 *Two possible fixes towards issue #425

@@ -2,8 +2,8 @@ def minecraft_version="1.12.2"
 def jei_version="4.8.5.147"
 def version_minetweaker="4.0.8.277"
 def version_rf="1.12-2.1.0.6"
-def version_mjrlegendslib="1.12.2-1.1.6"
-def version_galacticraft="1.12.2-4.0.1.178"
+def version_mjrlegendslib="1.12.2-1.1.8"
+def version_galacticraft="1.12.2-4.0.2.212"
 def version_mekanism="1.12.2-9.4.13.349"
 def version_ic2="2.8.99-ex112"
 
@@ -51,7 +51,7 @@ repositories {
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'com.matthewprenger.cursegradle'
 
-version = "1.12.2-0.5.3"
+version = "1.12.2-0.5.4"
 group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "ExtraPlanets"
 
@@ -59,7 +59,7 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 minecraft {
-    version = "1.12.2-14.23.5.2768"
+    version = "1.12.2-14.23.5.2838"
     runDir = "run"
     mappings = "snapshot_20171003"
     makeObfSourceJar = true // an Srg named sources jar is made by default. uncomment this to disable.
