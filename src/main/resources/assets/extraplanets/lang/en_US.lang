@@ -45,6 +45,12 @@ planet.kuiperBelt=Kuiper Belt
 planet.makemake=Makemake
 planet.haumea=Haumea
 
+planet.MercuryEP=Mercury 2.0
+planet.CeresEP=Ceres 2.0
+planet.JupiterEP=Jupiter 2.0
+planet.NeptuneEP=Neptune 2.0
+planet.PlutoEP=Pluto 2.0
+
 planet.kepler62b=Kepler 62b
 planet.kepler62c=Kepler 62c
 planet.kepler62d=Kepler 62d
@@ -90,6 +96,15 @@ moon.charon=Charon
 moon.nix=Nix
 moon.hydra=Hydra
 moon.dysnomia=Dysnomia
+
+moon.tritonEP=Triton 2.0
+moon.callistoEP=Callisto 2.0
+moon.europaEP=Europa 2.0
+moon.ganymedeEP=Ganymede 2.0
+moon.ioEP=Io 2.0
+moon.deimosEP=Deimos 2.0
+moon.phobosEP=Phobos 2.0
+moon.oberonEP=Oberon 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=Mercury Surface Rock
@@ -514,6 +529,7 @@ gui.message.general.tank.fluid.name=Fluid
 gui.status.densifier.name=Densifying
 gui.bucket.message.extreme.reactors.compact=This Fluid has Extreme Reactors Compatibility
 gui.radiation.reduced.message=Your Radiation Level has been reduced by
+gui.radiation.reduced.message.2=from your initial/current amount
 gui.radiation.current.message=Your Current Radiation Level is
 gui.radiation.subject.message=You're now subject to
 gui.radiation.reverse.message=You can use the following ways: Sleeping, Decontamination Unit, Anti Rad Drinks to help reverse the damage
@@ -1211,7 +1227,7 @@ item.potassium_iodide.name=Potassium Iodide
 item.potassium.name=Potassium
 item.potash_shards.name=Potash Shard
 item.anti_radiation.name=Anti-Rad
-anti_radiation.desc=Reduces Radiation Level by 50%
+anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount
 
 #Kits
 item.tier1_kit.full.name=Tier 1 Full Kit

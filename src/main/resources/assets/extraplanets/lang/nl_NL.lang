@@ -45,6 +45,12 @@ planet.kuiperBelt=Kuipergordel
 planet.makemake=Makemake
 planet.haumea=Haumea
 
+planet.MercuryEP=Mercurius 2.0
+planet.CeresEP=Ceres 2.0
+planet.JupiterEP=Jupiter 2.0
+planet.NeptuneEP=Neptunus 2.0
+planet.PlutoEP=Pluto 2.0
+
 planet.kepler62b=Kepler 62b
 planet.kepler62c=Kepler 62c
 planet.kepler62d=Kepler 62d
@@ -90,6 +96,15 @@ moon.charon=Charon
 moon.nix=Nix
 moon.hydra=Hydra
 moon.dysnomia=Dysnomia
+
+moon.tritonEP=Triton 2.0
+moon.callistoEP=Callisto 2.0
+moon.europaEP=Europa 2.0
+moon.ganymedeEP=Ganymedes 2.0
+moon.ioEP=Io 2.0
+moon.deimosEP=Deimos 2.0
+moon.phobosEP=Phobos 2.0
+moon.oberonEP=Oberon 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=Mercurus Oppervlaktesteen
@@ -514,6 +529,7 @@ gui.message.general.tank.fluid.name=Vloeistof
 gui.status.densifier.name=Aan het Verdichten
 gui.bucket.message.extreme.reactors.compact=Deze vloeistof kan gebruikt worden voor Extreme Reactors
 gui.radiation.reduced.message=Je Radioactiviteit is verlaagd met
+gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=Je huidige Radioactiviteit is
 gui.radiation.subject.message=Je staat nu bloot aan
 gui.radiation.reverse.message=Je kan de volgende manieren gebruiken om radioactiviteit te verminderen: Slapen, Ontsmetapparaat, Anti Rad drinken
@@ -1211,7 +1227,7 @@ item.potassium_iodide.name=Potassium Iodide ##NEEDS TRANSLATE##
 item.potassium.name=Potassium ##NEEDS TRANSLATE##
 item.potash_shards.name=Potash Shard ##NEEDS TRANSLATE##
 item.anti_radiation.name=Anti-Rad ##NEEDS TRANSLATE##
-anti_radiation.desc=Reduces Radiation Level by 50% ##NEEDS TRANSLATE##
+anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=Tier 1 Full Kit ##NEEDS TRANSLATE##

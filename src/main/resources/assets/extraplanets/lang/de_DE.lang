@@ -45,6 +45,12 @@ planet.kuiperBelt=Kuipergürtel
 planet.makemake=Makemake
 planet.haumea=Haumea
 
+planet.MercuryEP=Merkur 2.0
+planet.CeresEP=Ceres 2.0
+planet.JupiterEP=Jupiter 2.0
+planet.NeptuneEP=Neptun 2.0
+planet.PlutoEP=Zwergplanet Pluto 2.0
+
 planet.kepler62b=Kepler-62b
 planet.kepler62c=Kepler-62c
 planet.kepler62d=Kepler-62d
@@ -90,6 +96,15 @@ moon.charon=Charon
 moon.nix=Nix
 moon.hydra=Hydra
 moon.dysnomia=Dysnomia
+
+moon.tritonEP=Triton 2.0
+moon.callistoEP=Kallisto 2.0
+moon.europaEP=Europa 2.0
+moon.ganymedeEP=Ganymed 2.0
+moon.ioEP=Io 2.0
+moon.deimosEP=Deimos 2.0
+moon.phobosEP=Phobos 2.0
+moon.oberonEP=Oberon 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=Merkur Oberflächengestein
@@ -514,6 +529,7 @@ gui.message.general.tank.fluid.name=Fluid ##NEEDS TRANSLATE##
 gui.status.densifier.name=Densifying ##NEEDS TRANSLATE##
 gui.bucket.message.extreme.reactors.compact=Diese Flüssigkeit ist kompatibel mit Extreme Reactors
 gui.radiation.reduced.message=Die Schwere deiner Verstrahlung wurde reduziert um
+gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=So schwer bist du aktuell verstrahlt
 gui.radiation.subject.message=Du gehörst nun
 gui.radiation.reverse.message=Folgendermaßen kannst du fortfahren: Schlafen, Dekontaminieren, Anti-Strahlungs-Getränke um den entstandenen Schaden rückgängig zu machen
@@ -1211,7 +1227,7 @@ item.potassium_iodide.name=Kaliumiodid
 item.potassium.name=Kalium
 item.potash_shards.name=Potaschenstück
 item.anti_radiation.name=Anti-Verstrahlt
-anti_radiation.desc=Reduziert Strahlungsschwere um 50%
+anti_radiation.desc=Reduces Radiation Level by {{PERCENT}} of the current amount ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=Stufe 1 komplettes Set

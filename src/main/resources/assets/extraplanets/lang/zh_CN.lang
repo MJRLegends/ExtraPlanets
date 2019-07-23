@@ -45,6 +45,12 @@ planet.kuiperBelt=柯伊伯带
 planet.makemake=鸟神星
 planet.haumea=妊神星
 
+planet.MercuryEP=水星 2.0
+planet.CeresEP=谷神星 2.0
+planet.JupiterEP=木星 2.0
+planet.NeptuneEP=海王星 2.0
+planet.PlutoEP=冥王星 2.0
+
 planet.kepler62b=开普勒-62b
 planet.kepler62c=开普勒-62c
 planet.kepler62d=开普勒-62d
@@ -90,6 +96,15 @@ moon.charon=冥卫一
 moon.nix=冥卫二
 moon.hydra=冥卫三
 moon.dysnomia=阋卫一
+
+moon.tritonEP=海卫一 2.0
+moon.callistoEP=木卫四 2.0
+moon.europaEP=木卫二 2.0
+moon.ganymedeEP=木卫三 2.0
+moon.ioEP=木卫一 2.0
+moon.deimosEP=火卫二 2.0
+moon.phobosEP=火卫一 2.0
+moon.oberonEP=天卫四 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=水星地表岩石
@@ -514,6 +529,7 @@ gui.message.general.tank.fluid.name=液体
 gui.status.densifier.name=浓缩中
 gui.bucket.message.extreme.reactors.compact=这种液体有 Extreme Reactors 相关兼容
 gui.radiation.reduced.message=你的辐射等级降低了
+gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=你当前的辐射等级是
 gui.radiation.subject.message=你现在受制于
 gui.radiation.reverse.message=你可以使用以下方法来帮助你减少所受的伤害：睡觉、辐射消除装置、防辐射药剂
@@ -1211,7 +1227,7 @@ item.potassium_iodide.name=碘化钾
 item.potassium.name=钾
 item.potash_shards.name=草木灰碎片
 item.anti_radiation.name=防辐射药剂
-anti_radiation.desc=减少 50% 的辐射等级
+anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=1 阶全套工具箱

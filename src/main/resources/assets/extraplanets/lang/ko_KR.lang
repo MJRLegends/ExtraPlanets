@@ -45,6 +45,12 @@ planet.kuiperBelt=카이퍼 벨트
 planet.makemake=마케마케
 planet.haumea=하우메아
 
+planet.MercuryEP=수성 2.0
+planet.CeresEP=세레스 2.0
+planet.JupiterEP=목성 2.0
+planet.NeptuneEP=해왕성 2.0
+planet.PlutoEP=명왕성 2.0
+
 planet.kepler62b=케플러 62b
 planet.kepler62c=케플러 62c
 planet.kepler62d=케플러 62d
@@ -90,6 +96,15 @@ moon.charon=카론
 moon.nix=닉스
 moon.hydra=히드라
 moon.dysnomia=디스노미아
+
+moon.tritonEP=트리톤 2.0
+moon.callistoEP=칼리스토 2.0
+moon.europaEP=에우로파 2.0
+moon.ganymedeEP=가니메데 2.0
+moon.ioEP=이오 2.0
+moon.deimosEP=데이모스 2.0
+moon.phobosEP=포보스 2.0
+moon.oberonEP=오베론 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=수성 표면석
@@ -514,6 +529,7 @@ gui.message.general.tank.fluid.name=유체
 gui.status.densifier.name=고밀도화
 gui.bucket.message.extreme.reactors.compact=이 유체는 반응성이 매우 높습니다.
 gui.radiation.reduced.message=방사선 수준이 다음에 의해 감소되었습니다.
+gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=현재 방사선 수준은
 gui.radiation.subject.message=지금 해야할 것은
 gui.radiation.reverse.message=다음과 같은 방법을 쓸 수 있습니다: 취침, 기본 정화장치, 데미지 감소를 도와주는 제염 음료
@@ -1211,7 +1227,7 @@ item.potassium_iodide.name=아이오딘화 칼륨
 item.potassium.name=칼륨
 item.potash_shards.name=칼륨 조각
 item.anti_radiation.name=제염
-anti_radiation.desc=방사성 수준이 50%로 내려갑니다.
+anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=1티어 전체 상자

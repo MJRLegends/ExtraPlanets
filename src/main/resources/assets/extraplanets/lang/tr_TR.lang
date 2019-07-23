@@ -45,6 +45,12 @@ planet.kuiperBelt=Kuiper Kuşağı
 planet.makemake=Makemake
 planet.haumea=Haumea
 
+planet.MercuryEP=Merkür 2.0
+planet.CeresEP=Ceres 2.0
+planet.JupiterEP=Jüpiter 2.0
+planet.NeptuneEP=Neptün 2.0
+planet.PlutoEP=Pluto 2.0
+
 planet.kepler62b=Kepler 62b
 planet.kepler62c=Kepler 62c
 planet.kepler62d=Kepler 62d
@@ -90,6 +96,15 @@ moon.charon=Charon
 moon.nix=Niks
 moon.hydra=Hidra
 moon.dysnomia=Dinomiya
+
+moon.tritonEP=Triton 2.0
+moon.callistoEP=Kallisto 2.0
+moon.europaEP=Avrupa 2.0
+moon.ganymedeEP=Ganymed 2.0
+moon.ioEP=Io 2.0
+moon.deimosEP=Deimos 2.0
+moon.phobosEP=Rezzan 2.0
+moon.oberonEP=Oberon 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=Merkür Yüzey Kayası
@@ -514,6 +529,7 @@ gui.message.general.tank.fluid.name=Yakıt
 gui.status.densifier.name=Yoğunlaştırıcı yoğunlaştırıyor
 gui.bucket.message.extreme.reactors.compact=Bu yakıt çılgın derecede reaktörle uyumlu
 gui.radiation.reduced.message=Radrasyon seviyen düşüyor
+gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=Şuan ki radrasyon seviyen
 gui.radiation.subject.message=Şimdi ki konun
 gui.radiation.reverse.message=Bu yolları deneyebilirsin: Uyumak,hasar almamak için Anti Rad içmek
@@ -1211,7 +1227,7 @@ item.potassium_iodide.name=Potasyum İyodu
 item.potassium.name=Potasyum
 item.potash_shards.name=Potasyum Parçacığı
 item.anti_radiation.name=Anti-Radrasyon
-anti_radiation.desc=Radrasyonu %50 düşürür
+anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=Seviye 1 Tam Kit
