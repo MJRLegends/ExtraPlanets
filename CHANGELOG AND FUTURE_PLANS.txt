@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v1.2.6
+*Improvements to output messages for mod compact not working, Fixed #440
+*Improvement towards #439
+*Tweaks/improvements to reduced radiation message Fixed #445
+*Fixed Anti Rad tooltip not supporting config changes
+*Set minimum version of MJRLegendsLib requirement to v1.1.5
+
 v1.2.5
 *Added config option to disable unreachable moons on galaxy map screen #422
 *Two possible fixes towards issue #425
