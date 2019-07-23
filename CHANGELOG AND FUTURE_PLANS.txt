@@ -5,6 +5,12 @@
 
 
 ===========================================Released Updates===========================================
+v1.5.9
+*Improvements to output messages for mod compact not working, Fixed #440
+*Improvement towards #439
+*Tweaks/improvements to reduced radiation message Fixed #445
+*Fixed Anti Rad tooltip not supporting config changes
+
 v1.5.8
 *Added config option to disable unreachable moons on galaxy map screen #422
 *Two possible fixes towards issue #425
