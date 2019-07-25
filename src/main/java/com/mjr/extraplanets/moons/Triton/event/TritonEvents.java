@@ -1,14 +1,13 @@
 package com.mjr.extraplanets.moons.Triton.event;
 
+import com.mjr.extraplanets.Config;
+
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import micdoodle8.mods.galacticraft.api.event.oxygen.GCCoreOxygenSuffocationEvent;
 import micdoodle8.mods.galacticraft.core.event.EventWakePlayer;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.WorldServer;
-
-import com.mjr.extraplanets.Config;
-
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class TritonEvents {
 	@SubscribeEvent

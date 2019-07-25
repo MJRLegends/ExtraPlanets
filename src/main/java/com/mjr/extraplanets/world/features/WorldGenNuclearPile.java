@@ -2,13 +2,13 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
-import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenerator;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.util.MessageUtilities;
 import com.mjr.extraplanets.util.WorldGenHelper;
+
+import net.minecraft.world.World;
+import net.minecraft.world.gen.feature.WorldGenerator;
 
 public class WorldGenNuclearPile extends WorldGenerator {
 
@@ -64,8 +64,11 @@ public class WorldGenNuclearPile extends WorldGenerator {
 		world.setBlock(x + 3, y + 1, z + 5, ExtraPlanets_Blocks.slimeBlock, 1, 3);
 		world.setBlock(x + 3, y + 1, z + 6, ExtraPlanets_Blocks.slimeBlock, 1, 3);
 		world.setBlock(x + 3, y + 2, z + 2, ExtraPlanets_Blocks.slimeBlock, 1, 3);
-		world.setBlock(x + 3, y + 2, z + 3, ExtraPlanets_Blocks.nuclearBomb, 1, 3);
-		world.setBlock(x + 3, y + 2, z + 4, ExtraPlanets_Blocks.nuclearBomb, 1, 3);
+		if (Config.ceres && Config.nuclearBomb) {
+			world.setBlock(x + 3, y + 2, z + 3, ExtraPlanets_Blocks.nuclearBomb, 1, 3);
+			world.setBlock(x + 3, y + 2, z + 4, ExtraPlanets_Blocks.nuclearBomb, 1, 3);
+			world.setBlock(x + 3, y + 2, z + 5, ExtraPlanets_Blocks.nuclearBomb, 1, 3);
+		}
 		world.setBlock(x + 3, y + 2, z + 6, ExtraPlanets_Blocks.slimeBlock, 1, 3);
 		world.setBlock(x + 3, y + 3, z + 2, ExtraPlanets_Blocks.slimeBlock, 1, 3);
 		world.setBlock(x + 3, y + 3, z + 3, ExtraPlanets_Blocks.slimeBlock, 1, 3);

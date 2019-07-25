@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.entities.monsters;
 
+import com.mjr.extraplanets.Constants;
+
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -14,8 +16,6 @@ import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
-
-import com.mjr.extraplanets.Constants;
 
 public class EntityEvolvedIceSlime extends EntityLiving implements IMob, IEntityBreathable {
 	public float squishAmount;

@@ -1,13 +1,13 @@
 package com.mjr.extraplanets.util;
 
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.inventory.IInventory;
-
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.inventory.vehicles.ContainerPoweredVehicleBase;
 import com.mjr.extraplanets.inventory.vehicles.ContainerVehicleBase;
 import com.mjr.extraplanets.network.PacketSimple;
 import com.mjr.extraplanets.network.PacketSimple.EnumSimplePacket;
+
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.inventory.IInventory;
 
 public class ExtraPlanetsUtli {
 	public static void openFuelVehicleInv(EntityPlayerMP player, IInventory buggyInv, int type) {

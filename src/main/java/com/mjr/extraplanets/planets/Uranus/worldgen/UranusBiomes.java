@@ -2,6 +2,12 @@ package com.mjr.extraplanets.planets.Uranus.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranus;
+import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusFrozenSea;
+import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusSnowLands;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.block.Block;
@@ -10,12 +16,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranus;
-import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusFrozenSea;
-import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranusSnowLands;
 
 public class UranusBiomes extends BiomeGenBase {
 	public static BiomeGenBase uranus = new BiomeGenUranus(Config.uranusBiomeID).setBiomeName("Uranus").setHeight(BiomeGenBase.height_LowPlains);

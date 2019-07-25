@@ -63,9 +63,8 @@ public class WorldGenCustomLake extends WorldGenerator {
 			for (i1 = 0; i1 < 16; ++i1) {
 				for (j2 = 0; j2 < 16; ++j2) {
 					for (j1 = 0; j1 < 8; ++j1) {
-						flag = !aboolean[(i1 * 16 + j2) * 8 + j1]
-								&& (i1 < 15 && aboolean[((i1 + 1) * 16 + j2) * 8 + j1] || i1 > 0 && aboolean[((i1 - 1) * 16 + j2) * 8 + j1] || j2 < 15 && aboolean[(i1 * 16 + j2 + 1) * 8 + j1] || j2 > 0 && aboolean[(i1 * 16 + (j2 - 1)) * 8 + j1]
-										|| j1 < 7 && aboolean[(i1 * 16 + j2) * 8 + j1 + 1] || j1 > 0 && aboolean[(i1 * 16 + j2) * 8 + (j1 - 1)]);
+						flag = !aboolean[(i1 * 16 + j2) * 8 + j1] && (i1 < 15 && aboolean[((i1 + 1) * 16 + j2) * 8 + j1] || i1 > 0 && aboolean[((i1 - 1) * 16 + j2) * 8 + j1] || j2 < 15 && aboolean[(i1 * 16 + j2 + 1) * 8 + j1]
+								|| j2 > 0 && aboolean[(i1 * 16 + (j2 - 1)) * 8 + j1] || j1 < 7 && aboolean[(i1 * 16 + j2) * 8 + j1 + 1] || j1 > 0 && aboolean[(i1 * 16 + j2) * 8 + (j1 - 1)]);
 
 						if (flag) {
 							Material material = p_76484_1_.getBlock(p_76484_3_ + i1, p_76484_4_ + j1, p_76484_5_ + j2).getMaterial();
@@ -113,9 +112,8 @@ public class WorldGenCustomLake extends WorldGenerator {
 				for (i1 = 0; i1 < 16; ++i1) {
 					for (j2 = 0; j2 < 16; ++j2) {
 						for (j1 = 0; j1 < 8; ++j1) {
-							flag = !aboolean[(i1 * 16 + j2) * 8 + j1]
-									&& (i1 < 15 && aboolean[((i1 + 1) * 16 + j2) * 8 + j1] || i1 > 0 && aboolean[((i1 - 1) * 16 + j2) * 8 + j1] || j2 < 15 && aboolean[(i1 * 16 + j2 + 1) * 8 + j1] || j2 > 0 && aboolean[(i1 * 16 + (j2 - 1)) * 8 + j1]
-											|| j1 < 7 && aboolean[(i1 * 16 + j2) * 8 + j1 + 1] || j1 > 0 && aboolean[(i1 * 16 + j2) * 8 + (j1 - 1)]);
+							flag = !aboolean[(i1 * 16 + j2) * 8 + j1] && (i1 < 15 && aboolean[((i1 + 1) * 16 + j2) * 8 + j1] || i1 > 0 && aboolean[((i1 - 1) * 16 + j2) * 8 + j1] || j2 < 15 && aboolean[(i1 * 16 + j2 + 1) * 8 + j1]
+									|| j2 > 0 && aboolean[(i1 * 16 + (j2 - 1)) * 8 + j1] || j1 < 7 && aboolean[(i1 * 16 + j2) * 8 + j1 + 1] || j1 > 0 && aboolean[(i1 * 16 + j2) * 8 + (j1 - 1)]);
 
 							if (flag && (j1 < 4 || p_76484_2_.nextInt(2) != 0) && p_76484_1_.getBlock(p_76484_3_ + i1, p_76484_4_ + j1, p_76484_5_ + j2).getMaterial().isSolid()) {
 								p_76484_1_.setBlock(p_76484_3_ + i1, p_76484_4_ + j1, p_76484_5_ + j2, block, 0, 2);
@@ -188,9 +186,8 @@ public class WorldGenCustomLake extends WorldGenerator {
 			for (i1 = 0; i1 < 16; ++i1) {
 				for (j2 = 0; j2 < 16; ++j2) {
 					for (j1 = 0; j1 < 8; ++j1) {
-						flag = !aboolean[(i1 * 16 + j2) * 8 + j1]
-								&& (i1 < 15 && aboolean[((i1 + 1) * 16 + j2) * 8 + j1] || i1 > 0 && aboolean[((i1 - 1) * 16 + j2) * 8 + j1] || j2 < 15 && aboolean[(i1 * 16 + j2 + 1) * 8 + j1] || j2 > 0 && aboolean[(i1 * 16 + (j2 - 1)) * 8 + j1]
-										|| j1 < 7 && aboolean[(i1 * 16 + j2) * 8 + j1 + 1] || j1 > 0 && aboolean[(i1 * 16 + j2) * 8 + (j1 - 1)]);
+						flag = !aboolean[(i1 * 16 + j2) * 8 + j1] && (i1 < 15 && aboolean[((i1 + 1) * 16 + j2) * 8 + j1] || i1 > 0 && aboolean[((i1 - 1) * 16 + j2) * 8 + j1] || j2 < 15 && aboolean[(i1 * 16 + j2 + 1) * 8 + j1]
+								|| j2 > 0 && aboolean[(i1 * 16 + (j2 - 1)) * 8 + j1] || j1 < 7 && aboolean[(i1 * 16 + j2) * 8 + j1 + 1] || j1 > 0 && aboolean[(i1 * 16 + j2) * 8 + (j1 - 1)]);
 
 						if (flag) {
 							Material material = p_76484_1_.getBlock(p_76484_3_ + i1, p_76484_4_ + j1, p_76484_5_ + j2).getMaterial();
@@ -238,9 +235,8 @@ public class WorldGenCustomLake extends WorldGenerator {
 				for (i1 = 0; i1 < 16; ++i1) {
 					for (j2 = 0; j2 < 16; ++j2) {
 						for (j1 = 0; j1 < 8; ++j1) {
-							flag = !aboolean[(i1 * 16 + j2) * 8 + j1]
-									&& (i1 < 15 && aboolean[((i1 + 1) * 16 + j2) * 8 + j1] || i1 > 0 && aboolean[((i1 - 1) * 16 + j2) * 8 + j1] || j2 < 15 && aboolean[(i1 * 16 + j2 + 1) * 8 + j1] || j2 > 0 && aboolean[(i1 * 16 + (j2 - 1)) * 8 + j1]
-											|| j1 < 7 && aboolean[(i1 * 16 + j2) * 8 + j1 + 1] || j1 > 0 && aboolean[(i1 * 16 + j2) * 8 + (j1 - 1)]);
+							flag = !aboolean[(i1 * 16 + j2) * 8 + j1] && (i1 < 15 && aboolean[((i1 + 1) * 16 + j2) * 8 + j1] || i1 > 0 && aboolean[((i1 - 1) * 16 + j2) * 8 + j1] || j2 < 15 && aboolean[(i1 * 16 + j2 + 1) * 8 + j1]
+									|| j2 > 0 && aboolean[(i1 * 16 + (j2 - 1)) * 8 + j1] || j1 < 7 && aboolean[(i1 * 16 + j2) * 8 + j1 + 1] || j1 > 0 && aboolean[(i1 * 16 + j2) * 8 + (j1 - 1)]);
 
 							if (flag && (j1 < 4 || p_76484_2_.nextInt(2) != 0) && p_76484_1_.getBlock(p_76484_3_ + i1, p_76484_4_ + j1, p_76484_5_ + j2).getMaterial().isSolid()) {
 								p_76484_1_.setBlock(p_76484_3_ + i1, p_76484_4_ + j1, p_76484_5_ + j2, Blocks.stone, 0, 2);

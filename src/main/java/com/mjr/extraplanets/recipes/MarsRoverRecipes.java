@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import com.mjr.extraplanets.inventory.vehicles.InventoryMarsRover;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
 import micdoodle8.mods.galacticraft.api.recipe.INasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.core.items.GCItems;
 import micdoodle8.mods.galacticraft.core.recipe.NasaWorkbenchRecipe;
 import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.inventory.vehicles.InventoryMarsRover;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 public class MarsRoverRecipes {
 	private static List<INasaWorkbenchRecipe> marsRoverRecipes = new ArrayList<INasaWorkbenchRecipe>();
@@ -55,12 +55,12 @@ public class MarsRoverRecipes {
 		input.put(13, new ItemStack(MarsItems.marsItemBasic, 1, 3));
 		input.put(14, new ItemStack(MarsItems.marsItemBasic, 1, 3));
 		input.put(15, new ItemStack(MarsItems.marsItemBasic, 1, 3));
-		input.put(16, new ItemStack(ExtraPlanets_Items.electricParts, 1, 3));
-		input.put(17, new ItemStack(ExtraPlanets_Items.electricParts, 1, 3));
-		input.put(18, new ItemStack(ExtraPlanets_Items.electricParts, 1, 3));
-		input.put(19, new ItemStack(ExtraPlanets_Items.electricParts, 1, 3));
-		input.put(20, new ItemStack(ExtraPlanets_Items.electricParts, 1, 3));
-		input.put(21, new ItemStack(ExtraPlanets_Items.electricParts, 1, 3));
+		input.put(16, new ItemStack(ExtraPlanets_Items.electricParts, 1, 2));
+		input.put(17, new ItemStack(ExtraPlanets_Items.electricParts, 1, 2));
+		input.put(18, new ItemStack(ExtraPlanets_Items.electricParts, 1, 2));
+		input.put(19, new ItemStack(ExtraPlanets_Items.electricParts, 1, 2));
+		input.put(20, new ItemStack(ExtraPlanets_Items.electricParts, 1, 2));
+		input.put(21, new ItemStack(ExtraPlanets_Items.electricParts, 1, 2));
 		input.put(22, null);
 		input.put(23, null);
 		input.put(24, null);

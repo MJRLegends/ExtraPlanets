@@ -45,6 +45,12 @@ planet.kuiperBelt=Kuiperbæltet
 planet.makemake=Makemake ##NEEDS TRANSLATE##
 planet.haumea=Haumea ##NEEDS TRANSLATE##
 
+planet.MercuryEP=Mercury 2.0 ##NEEDS TRANSLATE##
+planet.CeresEP=Ceres 2.0 ##NEEDS TRANSLATE##
+planet.JupiterEP=Jupiter 2.0 ##NEEDS TRANSLATE##
+planet.NeptuneEP=Neptune 2.0 ##NEEDS TRANSLATE##
+planet.PlutoEP=Pluto 2.0 ##NEEDS TRANSLATE##
+
 planet.kepler62b=Kepler 62b ##NEEDS TRANSLATE##
 planet.kepler62c=Kepler 62c ##NEEDS TRANSLATE##
 planet.kepler62d=Kepler 62d ##NEEDS TRANSLATE##
@@ -90,6 +96,15 @@ moon.charon=Charon ##NEEDS TRANSLATE##
 moon.nix=Nix ##NEEDS TRANSLATE##
 moon.hydra=Hydra ##NEEDS TRANSLATE##
 moon.dysnomia=Dysnomia ##NEEDS TRANSLATE##
+
+moon.tritonEP=Triton 2.0 ##NEEDS TRANSLATE##
+moon.callistoEP=Kallisto 2.0 ##NEEDS TRANSLATE##
+moon.europaEP=Europa 2.0 ##NEEDS TRANSLATE##
+moon.ganymedeEP=Ganymed 2.0 ##NEEDS TRANSLATE##
+moon.ioEP=Io 2.0 ##NEEDS TRANSLATE##
+moon.deimosEP=Deimos 2.0 ##NEEDS TRANSLATE##
+moon.phobosEP=Phobos 2.0 ##NEEDS TRANSLATE##
+moon.oberonEP=Oberon 2.0 ##NEEDS TRANSLATE##
 
 #Planet Blocks
 tile.mercury.surface.name=Merkur Surface Rock
@@ -514,6 +529,7 @@ gui.message.general.tank.fluid.name=Fluid ##NEEDS TRANSLATE##
 gui.status.densifier.name=Densifying ##NEEDS TRANSLATE##
 gui.bucket.message.extreme.reactors.compact=This Fluid has Extreme Reactors Compatibility ##NEEDS TRANSLATE##
 gui.radiation.reduced.message=Your Radiation Level has been reduced by ##NEEDS TRANSLATE##
+gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=Your Current Radiation Level is ##NEEDS TRANSLATE##
 gui.radiation.subject.message=You're now subject to ##NEEDS TRANSLATE##
 gui.radiation.reverse.message=You can use the following ways: Sleeping, Decontamination Unit, Anti Rad Drinks to help reverse the damage ##NEEDS TRANSLATE##
@@ -562,6 +578,7 @@ gui.celestial_body_has_dungeon.name=Has Dungeon ##NEEDS TRANSLATE##
 keybind.vehicle_inv.name=Open Powered Vehicle Inventory ##NEEDS TRANSLATE##
 keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
 keybind.module.pre.launch.name=Open Pre Launch Checklist GUI ##NEEDS TRANSLATE##
+keybind.module.nasa.workbench.name=Open Portable NASA Workbench GUI ##NEEDS TRANSLATE##
 
 #GUI Module Manager
 gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
@@ -578,6 +595,7 @@ gui.module_cost.name=Cost ##NEEDS TRANSLATE##
 gui.module.installed.name=Module Installed! ##NEEDS TRANSLATE##
 gui.module.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
 gui.module.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
+gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
 gui.module.description.name=Module Description ##NEEDS TRANSLATE##
 gui.module.name.name=Module Name ##NEEDS TRANSLATE##
 gui.module.type.name=Module Type ##NEEDS TRANSLATE##
@@ -1075,12 +1093,14 @@ item.tier4_space_suit_legings.name=Tier 4 Space Suit Leggings ##NEEDS TRANSLATE#
 item.tier4_space_suit_boots.name=Tier 4 Space Suit Boots ##NEEDS TRANSLATE##
 item.tier4_space_suit_gravity_boots.name=Tier 4 Space Suit Gravity Boots ##NEEDS TRANSLATE##
 
-space.suit.information=Used to full stop pressure damage ##NEEDS TRANSLATE##
-space.suit.information.2=& slow down the rate of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra=The Tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
+space.suit.information=Used to fully stop pressure damage ##NEEDS TRANSLATE##
+space.suit.information.2=& to slow down the rate of radiation gained ##NEEDS TRANSLATE##
+space.suit.information.extra=The tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
 space.suit.information.extra.2=towards reducing the amount of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra.3=The Higher the Space Suit Tier the ##NEEDS TRANSLATE##
+space.suit.information.extra.3=The higher the Space Suit tier the ##NEEDS TRANSLATE##
 space.suit.information.extra.4=slower radiation will be gained ##NEEDS TRANSLATE##
+space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
+space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
 item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
@@ -1182,7 +1202,7 @@ item.oxygen_tank_med_full_pink.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
 item.oxygen_tank_med_full_yellow.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
 item.oxygen_tank_med_full_light_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
 item.oxygen_tank_med_full_magenta.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_orange.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_lime.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
 item.oxygen_tank_med_full_white.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
 
 item.oxygen_tank_heavy_full_black.name=Stor Oxygen Tank ##NEEDS TRANSLATE##
@@ -1207,7 +1227,7 @@ item.potassium_iodide.name=Potassium Iodide ##NEEDS TRANSLATE##
 item.potassium.name=Potassium ##NEEDS TRANSLATE##
 item.potash_shards.name=Potash Shard ##NEEDS TRANSLATE##
 item.anti_radiation.name=Anti-Rad ##NEEDS TRANSLATE##
-anti_radiation.desc=Reduces Radiation Level by 50% ##NEEDS TRANSLATE##
+anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=Tier 1 Full Kit ##NEEDS TRANSLATE##
@@ -1286,6 +1306,7 @@ item.canned_food.dehydrated_porkchop.name=Dehydrated Porkchop ##NEEDS TRANSLATE#
 item.canned_food.dehydrated_fish.name=Dehydrated Fish ##NEEDS TRANSLATE##
 item.canned_food.dehydrated_salmon.name=Dehydrated Salmon ##NEEDS TRANSLATE##
 item.canned_food.dehydrated_chicken.name=Dehydrated Chicken ##NEEDS TRANSLATE##
+item.canned_food.dehydrated_beef.name=Dehydrated Beef ##NEEDS TRANSLATE##
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=Tier 1 Battery ##NEEDS TRANSLATE##

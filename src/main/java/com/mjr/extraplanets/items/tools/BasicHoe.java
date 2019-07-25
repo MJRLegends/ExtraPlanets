@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.items.tools;
 
-import net.minecraft.item.ItemHoe;
-
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets;
+
+import net.minecraft.item.ItemHoe;
 
 public class BasicHoe extends ItemHoe {
 	protected BasicHoe(ToolMaterial p_i45347_1_, String name) {

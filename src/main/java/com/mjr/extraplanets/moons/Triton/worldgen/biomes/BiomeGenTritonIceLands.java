@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.moons.Triton.worldgen.biomes;
 
-import net.minecraftforge.common.BiomeDictionary;
-
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.moons.Triton.worldgen.TritonBiomes;
+
+import net.minecraftforge.common.BiomeDictionary;
 
 public class BiomeGenTritonIceLands extends TritonBiomes {
 	public BiomeGenTritonIceLands(int var1) {

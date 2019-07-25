@@ -1,10 +1,10 @@
 package com.mjr.extraplanets.moons.Triton.worldgen.biomes;
 
+import com.mjr.extraplanets.moons.Triton.worldgen.TritonBiomes;
+
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
-
-import com.mjr.extraplanets.moons.Triton.worldgen.TritonBiomes;
 
 public class GenLayerTritonBiomes extends GenLayer {
 	private static final BiomeGenBase[] biomes = new BiomeGenBase[] { TritonBiomes.triton, TritonBiomes.tritonMethaneSea, TritonBiomes.tritonMethaneHills };

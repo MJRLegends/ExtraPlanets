@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b;
 
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDefaults;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDefaults;
 
 public class ItemBlockKepler22bMapleLeaf extends ItemBlockDefaults {
 	public ItemBlockKepler22bMapleLeaf(Block block) {

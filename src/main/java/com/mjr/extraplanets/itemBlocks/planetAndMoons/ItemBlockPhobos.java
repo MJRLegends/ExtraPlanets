@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.itemBlocks.planetAndMoons;
 
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDefaults;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDefaults;
 
 public class ItemBlockPhobos extends ItemBlockDefaults {
 	public ItemBlockPhobos(Block block) {

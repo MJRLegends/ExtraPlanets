@@ -3,14 +3,14 @@ package com.mjr.extraplanets.planets.Kepler22b.worldgen.village;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class StructureComponentKepler22bVillageWell extends StructureComponentKepler22bVillage {
 	private int averageGroundLevel = -1;
@@ -49,14 +49,14 @@ public class StructureComponentKepler22bVillageWell extends StructureComponentKe
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public void buildComponent(StructureComponent par1StructureComponent, List par2List, Random par3Random) {
-		StructureVillagePiecesKepler22b.getNextStructureComponentVillagePath((StructureComponentKepler22bVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.maxY - 4,
-				this.boundingBox.minZ + 1, 1, this.getComponentType());
-		StructureVillagePiecesKepler22b.getNextStructureComponentVillagePath((StructureComponentKepler22bVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.maxY - 4,
-				this.boundingBox.minZ + 1, 3, this.getComponentType());
-		StructureVillagePiecesKepler22b.getNextStructureComponentVillagePath((StructureComponentKepler22bVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX + 1, this.boundingBox.maxY - 4,
-				this.boundingBox.minZ - 1, 2, this.getComponentType());
-		StructureVillagePiecesKepler22b.getNextStructureComponentVillagePath((StructureComponentKepler22bVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX + 1, this.boundingBox.maxY - 4,
-				this.boundingBox.maxZ + 1, 0, this.getComponentType());
+		StructureVillagePiecesKepler22b.getNextStructureComponentVillagePath((StructureComponentKepler22bVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX - 1, this.boundingBox.maxY - 4, this.boundingBox.minZ + 1,
+				1, this.getComponentType());
+		StructureVillagePiecesKepler22b.getNextStructureComponentVillagePath((StructureComponentKepler22bVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.maxX + 1, this.boundingBox.maxY - 4, this.boundingBox.minZ + 1,
+				3, this.getComponentType());
+		StructureVillagePiecesKepler22b.getNextStructureComponentVillagePath((StructureComponentKepler22bVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX + 1, this.boundingBox.maxY - 4, this.boundingBox.minZ - 1,
+				2, this.getComponentType());
+		StructureVillagePiecesKepler22b.getNextStructureComponentVillagePath((StructureComponentKepler22bVillageStartPiece) par1StructureComponent, par2List, par3Random, this.boundingBox.minX + 1, this.boundingBox.maxY - 4, this.boundingBox.maxZ + 1,
+				0, this.getComponentType());
 	}
 
 	@Override

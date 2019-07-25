@@ -4,14 +4,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
+import com.mjr.extraplanets.util.MessageUtilities;
+
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.gen.structure.MapGenStructure;
 import net.minecraft.world.gen.structure.MapGenStructureIO;
 import net.minecraft.world.gen.structure.StructureStart;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.JupiterBiomes;
-import com.mjr.extraplanets.util.MessageUtilities;
 
 public class MapGenVillageJupiter extends MapGenStructure {
 	public static List<BiomeGenBase> villageSpawnBiomes = Arrays.asList(new BiomeGenBase[] { JupiterBiomes.jupiter });

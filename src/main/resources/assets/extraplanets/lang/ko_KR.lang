@@ -45,11 +45,11 @@ planet.kuiperBelt=카이퍼 벨트
 planet.makemake=마케마케
 planet.haumea=하우메아
 
-planet.MercuryEP=제2수성
-planet.CeresEP=제2세레스
-planet.JupiterEP=제2목성
-planet.NeptuneEP=제2해왕성
-planet.PlutoEP=제2명왕성
+planet.MercuryEP=수성 2.0
+planet.CeresEP=세레스 2.0
+planet.JupiterEP=목성 2.0
+planet.NeptuneEP=해왕성 2.0
+planet.PlutoEP=명왕성 2.0
 
 planet.kepler62b=케플러 62b
 planet.kepler62c=케플러 62c
@@ -97,14 +97,14 @@ moon.nix=닉스
 moon.hydra=히드라
 moon.dysnomia=디스노미아
 
-moon.tritonEP=제2트리톤
-moon.callistoEP=제2칼리스토
-moon.europaEP=제2에우로파
-moon.ganymedeEP=제2가니메데
-moon.ioEP=제2이오
-moon.deimosEP=제2데이모스
-moon.phobosEP=제2포모스
-moon.oberonEP=제2오베론
+moon.tritonEP=트리톤 2.0
+moon.callistoEP=칼리스토 2.0
+moon.europaEP=에우로파 2.0
+moon.ganymedeEP=가니메데 2.0
+moon.ioEP=이오 2.0
+moon.deimosEP=데이모스 2.0
+moon.phobosEP=포보스 2.0
+moon.oberonEP=오베론 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=수성 표면석
@@ -529,7 +529,9 @@ gui.message.general.tank.fluid.name=유체
 gui.status.densifier.name=고밀도화
 gui.bucket.message.extreme.reactors.compact=이 유체는 반응성이 매우 높습니다.
 gui.radiation.reduced.message=방사선 수준이 다음에 의해 감소되었습니다.
+
 gui.radiation.reduced.message.2=당신의 최초/현재 양에서
+
 gui.radiation.current.message=현재 방사선 수준은
 gui.radiation.subject.message=지금 해야할 것은
 gui.radiation.reverse.message=다음과 같은 방법을 쓸 수 있습니다: 취침, 기본 정화장치, 데미지 감소를 도와주는 제염 음료
@@ -595,7 +597,9 @@ gui.module_cost.name=비용
 gui.module.installed.name=모듈이 설치되었습니다!
 gui.module.missing_requirements.name=모듈 설치에 불필요한 아이템이 있습니다!
 gui.module.already_installed.name=모듈이 이미 설치되었습니다!
+
 gui.module.missing_armour.name=우주복의 일부가 없어서 설치할 수 없습니다!
+
 gui.module.description.name=모듈 형태
 gui.module.name.name=모듈명
 gui.module.type.name=모듈 유형
@@ -867,7 +871,7 @@ item.bucket_methane.name=액체 메탄 양동이
 item.bucket_nitrogen_ice.name=액체 질소 얼음 양동이
 item.bucket_liquid_hydrocarbon.name=액체 탄화수소 양동이
 item.bucket_liquid_caramel.name=액체 캐러멜 양동이
-item.bucket_liquid_chocolate.name=액체 초콜릿 
+item.bucket_liquid_chocolate.name=액체 초콜릿
 
 #Keys
 item.T4key.name=4티어 던전 열쇠
@@ -1099,8 +1103,8 @@ space.suit.information.extra=각 부분의 우주복의 티어를 셉니다
 space.suit.information.extra.2=방사능의 세기를 줄이기 위해서는 말이죠
 space.suit.information.extra.3=우주복 티어가 높을수록
 space.suit.information.extra.4=방사능 피폭이 느려집니다
-space.suit.power.info=충전하려면 갤럭티크래프트의 블록을 사용하세요
-space.suit.power.info.2=예시:에너지 저장 모듈
+space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
+space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=압력과 방사능 정보는 %s을 누르세요.
 item_desc.spacesuit.module.shift.name=설치된 모듈 확인은 %s을 누르세요.
@@ -1202,7 +1206,7 @@ item.oxygen_tank_med_full_pink.name=중형 산소 탱크
 item.oxygen_tank_med_full_yellow.name=중형 산소 탱크
 item.oxygen_tank_med_full_light_blue.name=중형 산소 탱크
 item.oxygen_tank_med_full_magenta.name=중형 산소 탱크
-item.oxygen_tank_med_full_orange.name=중형 산소 탱크
+item.oxygen_tank_med_full_lime.name=중형 산소 탱크
 item.oxygen_tank_med_full_white.name=중형 산소 탱크
 
 item.oxygen_tank_heavy_full_black.name=대형 산소 탱크
@@ -1227,7 +1231,7 @@ item.potassium_iodide.name=아이오딘화 칼륨
 item.potassium.name=칼륨
 item.potash_shards.name=칼륨 조각
 item.anti_radiation.name=제염
-anti_radiation.desc=방사성 수준이 50%로 내려갑니다.
+anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=1티어 전체 상자

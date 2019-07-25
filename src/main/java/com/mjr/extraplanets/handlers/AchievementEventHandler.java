@@ -1,9 +1,5 @@
 package com.mjr.extraplanets.handlers;
 
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
-
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets_Achievements;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
@@ -27,6 +23,9 @@ import com.mjr.extraplanets.items.tools.ExtraPlanets_Tools;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 
 public class AchievementEventHandler {
 	@SubscribeEvent

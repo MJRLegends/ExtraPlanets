@@ -2,11 +2,11 @@ package com.mjr.extraplanets.tileEntities.machines;
 
 import java.util.ArrayList;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class TileEntityTier2LandingPadSingle extends TileEntity {
 	@Override

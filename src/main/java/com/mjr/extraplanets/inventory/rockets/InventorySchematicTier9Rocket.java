@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.inventory.rockets;
 
+import com.mjr.extraplanets.inventory.IInventoryDefaults;
+
 import net.minecraft.inventory.Container;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.inventory.IInventoryDefaults;
 
 public class InventorySchematicTier9Rocket implements IInventoryDefaults {
 	private final ItemStack[] stackList;

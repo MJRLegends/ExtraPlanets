@@ -2,6 +2,12 @@ package com.mjr.extraplanets.moons.Oberon.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenLargeMountain;
+import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberon;
+import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenValleys;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.block.Block;
@@ -10,12 +16,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenLargeMountain;
-import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenOberon;
-import com.mjr.extraplanets.moons.Oberon.worldgen.biomes.BiomeGenValleys;
 
 public class OberonBiomes extends BiomeGenBase {
 	public static final BiomeGenBase oberon = new BiomeGenOberon(Config.oberonBiomeID).setBiomeName("oberon").setHeight(new Height(0.125F, 0.05F));

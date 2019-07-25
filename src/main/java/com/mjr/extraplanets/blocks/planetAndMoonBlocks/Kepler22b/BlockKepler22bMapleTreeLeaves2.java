@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLeavesBase;
 import net.minecraft.block.material.Material;
@@ -18,12 +23,6 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IShearable;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockKepler22bMapleTreeLeaves2 extends BlockLeavesBase implements IShearable {
 
@@ -59,7 +58,7 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeavesBase implements I
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta) {
 		setGraphicsLevel(Minecraft.getMinecraft().gameSettings.fancyGraphics);
-		return (meta & 3) == 1 ? this.leafTextures[this.field_150127_b][1] : ((meta & 3) == 3 ? this.leafTextures[this.field_150127_b][3] : ((meta & 3) == 2 ? this.leafTextures[this.field_150127_b][2] : this.leafTextures[this.field_150127_b][0]));
+		return (meta & 3) == 1 ? this.leafTextures[this.field_150127_b][1] : this.leafTextures[this.field_150127_b][0];
 	}
 
 	@Override
@@ -97,11 +96,6 @@ public class BlockKepler22bMapleTreeLeaves2 extends BlockLeavesBase implements I
 	@Override
 	public boolean isLeaves(IBlockAccess world, int x, int y, int z) {
 		return true;
-	}
-
-	@Override
-	public boolean isOpaqueCube() {
-		return !this.field_150121_P;
 	}
 
 	@SideOnly(Side.CLIENT)

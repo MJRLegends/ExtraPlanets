@@ -3,11 +3,6 @@ package com.mjr.extraplanets.planets.Neptune.worldgen;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
-import net.minecraft.block.Block;
-import net.minecraft.world.World;
-import net.minecraftforge.common.util.ForgeDirection;
-
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -20,6 +15,11 @@ import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.RoomSpawnerNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.RoomTreasureNeptune;
 import com.mjr.extraplanets.planets.Neptune.worldgen.village.MapGenVillageNeptune;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
+
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import net.minecraft.block.Block;
+import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 public class ChunkProviderNeptune extends ChunkProviderCustomSpace {
 	private final BiomeDecoratorNeptune biomeDecorator = new BiomeDecoratorNeptune();

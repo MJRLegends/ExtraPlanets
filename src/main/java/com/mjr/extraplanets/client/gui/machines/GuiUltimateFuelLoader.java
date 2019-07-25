@@ -3,6 +3,11 @@ package com.mjr.extraplanets.client.gui.machines;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.inventory.machines.ContainerUltimateFuelLoader;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateFuelLoader;
+
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.gui.container.GuiContainerGC;
 import micdoodle8.mods.galacticraft.core.client.gui.element.GuiElementInfoRegion;
@@ -14,11 +19,6 @@ import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.inventory.machines.ContainerUltimateFuelLoader;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateFuelLoader;
 
 public class GuiUltimateFuelLoader extends GuiContainerGC {
 	private static final ResourceLocation fuelLoaderTexture = new ResourceLocation(GalacticraftCore.ASSET_PREFIX, "textures/gui/fuel_loader.png");

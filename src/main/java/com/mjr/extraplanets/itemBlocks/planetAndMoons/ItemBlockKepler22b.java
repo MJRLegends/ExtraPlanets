@@ -1,9 +1,9 @@
 package com.mjr.extraplanets.itemBlocks.planetAndMoons;
 
+import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDefaults;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
-
-import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDefaults;
 
 public class ItemBlockKepler22b extends ItemBlockDefaults {
 	public ItemBlockKepler22b(Block block) {
@@ -28,11 +28,11 @@ public class ItemBlockKepler22b extends ItemBlockDefaults {
 			break;
 		}
 		case 3: {
-			name = "ore_tin";
+			name = "ore_copper";
 			break;
 		}
 		case 4: {
-			name = "ore_copper";
+			name = "ore_tin";
 			break;
 		}
 		case 5: {

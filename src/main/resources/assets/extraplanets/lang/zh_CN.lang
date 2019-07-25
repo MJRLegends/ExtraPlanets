@@ -45,6 +45,12 @@ planet.kuiperBelt=柯伊伯带
 planet.makemake=鸟神星
 planet.haumea=妊神星
 
+planet.MercuryEP=水星 2.0
+planet.CeresEP=谷神星 2.0
+planet.JupiterEP=木星 2.0
+planet.NeptuneEP=海王星 2.0
+planet.PlutoEP=冥王星 2.0
+
 planet.kepler62b=开普勒-62b
 planet.kepler62c=开普勒-62c
 planet.kepler62d=开普勒-62d
@@ -90,6 +96,15 @@ moon.charon=冥卫一
 moon.nix=冥卫二
 moon.hydra=冥卫三
 moon.dysnomia=阋卫一
+
+moon.tritonEP=海卫一 2.0
+moon.callistoEP=木卫四 2.0
+moon.europaEP=木卫二 2.0
+moon.ganymedeEP=木卫三 2.0
+moon.ioEP=木卫一 2.0
+moon.deimosEP=火卫二 2.0
+moon.phobosEP=火卫一 2.0
+moon.oberonEP=天卫四 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=水星地表岩石
@@ -514,6 +529,7 @@ gui.message.general.tank.fluid.name=液体
 gui.status.densifier.name=浓缩中
 gui.bucket.message.extreme.reactors.compact=这种液体有 Extreme Reactors 相关兼容
 gui.radiation.reduced.message=你的辐射等级降低了
+gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=你当前的辐射等级是
 gui.radiation.subject.message=你现在受制于
 gui.radiation.reverse.message=你可以使用以下方法来帮助你减少所受的伤害：睡觉、辐射消除装置、防辐射药剂
@@ -562,6 +578,7 @@ gui.celestial_body_has_dungeon.name=有无地牢
 keybind.vehicle_inv.name=打开电力漫游车物品栏
 keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
 keybind.module.pre.launch.name=Open Pre Launch Checklist GUI ##NEEDS TRANSLATE##
+keybind.module.nasa.workbench.name=Open Portable NASA Workbench GUI ##NEEDS TRANSLATE##
 
 #GUI Module Manager
 gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
@@ -578,6 +595,7 @@ gui.module_cost.name=Cost ##NEEDS TRANSLATE##
 gui.module.installed.name=Module Installed! ##NEEDS TRANSLATE##
 gui.module.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
 gui.module.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
+gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
 gui.module.description.name=Module Description ##NEEDS TRANSLATE##
 gui.module.name.name=Module Name ##NEEDS TRANSLATE##
 gui.module.type.name=Module Type ##NEEDS TRANSLATE##
@@ -1075,12 +1093,14 @@ item.tier4_space_suit_legings.name=4 阶太空服护腿
 item.tier4_space_suit_boots.name=4 阶太空服靴子
 item.tier4_space_suit_gravity_boots.name=4 阶太空服重力靴子
 
-space.suit.information=Used to full stop pressure damage ##NEEDS TRANSLATE##
-space.suit.information.2=& slow down the rate of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra=The Tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
+space.suit.information=Used to fully stop pressure damage ##NEEDS TRANSLATE##
+space.suit.information.2=& to slow down the rate of radiation gained ##NEEDS TRANSLATE##
+space.suit.information.extra=The tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
 space.suit.information.extra.2=towards reducing the amount of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra.3=The Higher the Space Suit Tier the ##NEEDS TRANSLATE##
+space.suit.information.extra.3=The higher the Space Suit tier the ##NEEDS TRANSLATE##
 space.suit.information.extra.4=slower radiation will be gained ##NEEDS TRANSLATE##
+space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
+space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
 item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
@@ -1182,7 +1202,7 @@ item.oxygen_tank_med_full_pink.name=中型氧气罐
 item.oxygen_tank_med_full_yellow.name=中型氧气罐
 item.oxygen_tank_med_full_light_blue.name=中型氧气罐
 item.oxygen_tank_med_full_magenta.name=中型氧气罐
-item.oxygen_tank_med_full_orange.name=中型氧气罐
+item.oxygen_tank_med_full_lime.name=中型氧气罐
 item.oxygen_tank_med_full_white.name=中型氧气罐
 
 item.oxygen_tank_heavy_full_black.name=重型氧气罐
@@ -1207,7 +1227,7 @@ item.potassium_iodide.name=碘化钾
 item.potassium.name=钾
 item.potash_shards.name=草木灰碎片
 item.anti_radiation.name=防辐射药剂
-anti_radiation.desc=减少 50% 的辐射等级
+anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=1 阶全套工具箱
@@ -1286,6 +1306,7 @@ item.canned_food.dehydrated_porkchop.name=脱水猪排
 item.canned_food.dehydrated_fish.name=脱水鱼
 item.canned_food.dehydrated_salmon.name=脱水鲑鱼
 item.canned_food.dehydrated_chicken.name=脱水鸡肉
+item.canned_food.dehydrated_beef.name=Dehydrated Beef ##NEEDS TRANSLATE##
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=1 阶电池

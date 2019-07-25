@@ -1,13 +1,12 @@
 package com.mjr.extraplanets.itemBlocks.planetAndMoons.Kepler22b;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.IIcon;
-
 import com.mjr.extraplanets.itemBlocks.blocks.ItemBlockDefaults;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
 
 public class ItemBlockKepler22bMapleSapling extends ItemBlockDefaults {
 	public ItemBlockKepler22bMapleSapling(Block block) {

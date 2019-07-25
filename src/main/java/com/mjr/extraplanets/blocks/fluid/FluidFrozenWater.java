@@ -2,16 +2,15 @@ package com.mjr.extraplanets.blocks.fluid;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.Constants;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class FluidFrozenWater extends FluidBasic {
 	public FluidFrozenWater(String name) {

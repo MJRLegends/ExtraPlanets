@@ -1,23 +1,8 @@
 package com.mjr.extraplanets.network;
 
-import io.netty.buffer.ByteBuf;
-import io.netty.channel.ChannelHandlerContext;
-
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-
-import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStatsClient;
-import micdoodle8.mods.galacticraft.core.network.IPacket;
-import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
-import micdoodle8.mods.galacticraft.core.util.GCLog;
-import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
-import net.minecraft.client.entity.EntityClientPlayerMP;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.network.INetHandler;
-import net.minecraft.network.Packet;
-import net.minecraft.network.PacketBuffer;
 
 import com.mjr.extraplanets.client.gui.vehicles.GuiPoweredVehicleBase;
 import com.mjr.extraplanets.client.gui.vehicles.GuiVehicleBase;
@@ -29,6 +14,19 @@ import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelHandlerContext;
+import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStatsClient;
+import micdoodle8.mods.galacticraft.core.network.IPacket;
+import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
+import micdoodle8.mods.galacticraft.core.util.GCLog;
+import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
+import net.minecraft.client.entity.EntityClientPlayerMP;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.network.INetHandler;
+import net.minecraft.network.Packet;
+import net.minecraft.network.PacketBuffer;
 
 public class PacketSimple extends Packet implements IPacket {
 	public static enum EnumSimplePacket {
@@ -159,9 +157,9 @@ public class PacketSimple extends Packet implements IPacket {
 	}
 
 	/*
-	 * 
+	 *
 	 * BEGIN "net.minecraft.network.Packet" IMPLEMENTATION
-	 * 
+	 *
 	 * This is for handling server->client packets before the player has joined the world
 	 */
 
@@ -184,9 +182,9 @@ public class PacketSimple extends Packet implements IPacket {
 	}
 
 	/*
-	 * 
+	 *
 	 * END "net.minecraft.network.Packet" IMPLEMENTATION
-	 * 
+	 *
 	 * This is for handling server->client packets before the player has joined the world
 	 */
 }

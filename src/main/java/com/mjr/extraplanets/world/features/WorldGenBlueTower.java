@@ -2,17 +2,17 @@ package com.mjr.extraplanets.world.features;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.util.MessageUtilities;
+import com.mjr.extraplanets.util.WorldGenHelper;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.ChestGenHooks;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.util.MessageUtilities;
-import com.mjr.extraplanets.util.WorldGenHelper;
 
 public class WorldGenBlueTower extends WorldGenerator {
 
@@ -61,7 +61,7 @@ public class WorldGenBlueTower extends WorldGenerator {
 		world.setBlock(x + 5, y + 1, z + 2, ExtraPlanets_Blocks.kepler22bBlocks, 0, 3);
 		world.setBlock(x + 6, y + 1, z + 2, ExtraPlanets_Blocks.kepler22bBlocks, 0, 3);
 		world.setBlock(x + 2, y + 1, z + 3, ExtraPlanets_Blocks.kepler22bBlocks, 0, 3);
-		if (Config.nuclearBomb) {
+		if (Config.ceres && Config.nuclearBomb) {
 			world.setBlock(x + 3, y + 1, z + 3, ExtraPlanets_Blocks.nuclearBomb, 0, 3);
 			world.setBlock(x + 4, y + 1, z + 3, ExtraPlanets_Blocks.nuclearBomb, 0, 3);
 			world.setBlock(x + 5, y + 1, z + 3, ExtraPlanets_Blocks.nuclearBomb, 0, 3);
@@ -70,7 +70,7 @@ public class WorldGenBlueTower extends WorldGenerator {
 			world.setBlock(x + 3, y + 1, z + 5, ExtraPlanets_Blocks.nuclearBomb, 0, 3);
 			world.setBlock(x + 4, y + 1, z + 5, ExtraPlanets_Blocks.nuclearBomb, 0, 3);
 			world.setBlock(x + 5, y + 1, z + 5, ExtraPlanets_Blocks.nuclearBomb, 0, 3);
-		} else if (Config.fireBomb) {
+		} else if (Config.saturn && Config.fireBomb) {
 			world.setBlock(x + 3, y + 1, z + 3, ExtraPlanets_Blocks.fireBomb, 0, 3);
 			world.setBlock(x + 4, y + 1, z + 3, ExtraPlanets_Blocks.fireBomb, 0, 3);
 			world.setBlock(x + 5, y + 1, z + 3, ExtraPlanets_Blocks.fireBomb, 0, 3);

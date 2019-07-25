@@ -45,6 +45,12 @@ planet.kuiperBelt=Kuipergürtel
 planet.makemake=Makemake
 planet.haumea=Haumea
 
+planet.MercuryEP=Merkur 2.0
+planet.CeresEP=Ceres 2.0
+planet.JupiterEP=Jupiter 2.0
+planet.NeptuneEP=Neptun 2.0
+planet.PlutoEP=Zwergplanet Pluto 2.0
+
 planet.kepler62b=Kepler-62b
 planet.kepler62c=Kepler-62c
 planet.kepler62d=Kepler-62d
@@ -91,6 +97,15 @@ moon.nix=Nix
 moon.hydra=Hydra
 moon.dysnomia=Dysnomia
 
+moon.tritonEP=Triton 2.0
+moon.callistoEP=Kallisto 2.0
+moon.europaEP=Europa 2.0
+moon.ganymedeEP=Ganymed 2.0
+moon.ioEP=Io 2.0
+moon.deimosEP=Deimos 2.0
+moon.phobosEP=Phobos 2.0
+moon.oberonEP=Oberon 2.0
+
 #Planet Blocks
 tile.mercury.surface.name=Merkur Oberflächengestein
 tile.mercury.sub_surface.name=Merkur Untergrundgestein
@@ -100,7 +115,7 @@ tile.mercury.ore_tin.name=Merkur Zinnerz
 tile.mercury.ore_copper.name=Merkur Kupfererz
 tile.mercury.ore_mercury.name=Quecksilbererz
 tile.mercury.stone_bricks.name=Quecksilber Steinziegel
-tile.mercury.mercury_block.name=Quecksilberblock 
+tile.mercury.mercury_block.name=Quecksilberblock
 tile.mercury.ore_carbon.name=Kohlenstofferz
 tile.mercury.carbon_block.name=Kohlenstoffblock
 tile.mercury.dungeon_brick.name=Merkur Verließziegel
@@ -402,7 +417,7 @@ tile.basic_decrystallizer.name=Einfacher Entkristallisator
 tile.basic_crystallizer.name=Einfacher Kristallisator
 tile.basic_smasher.name=Einfacher Zertrümmerer
 tile.basic_chemical_injector.name=Einfacher chemischer Injektor
-tile.basic_solar_evaporation_chamber.name=Einfache Solarverdampfungskammer 
+tile.basic_solar_evaporation_chamber.name=Einfache Solarverdampfungskammer
 tile.advanced_launch_pad.tier2LandingPad.name=Stufe 2 Raketenstartrampe
 tile.advanced_launch_pad.tier3LandingPad.name=Stufe 3 Raketenstartrampe
 tile.advanced_launch_pad.poweredChargingPad.name=Fahrzeugsaufladungsplatform
@@ -448,7 +463,7 @@ container.basic.smasher.name=Einfacher Zertrümmerer
 container.basic.chemical_injector.name=Einfacher chemischer Injektor
 container.advanced.fuelloader.name=Fortgeschrittener Treibstofftanker
 container.ultimate.fuelloader.name=Ultimativer Treibstofftanker
-container.basic.solar.evaporation.chamber.name=Einfache Solarverdampfungskammer 
+container.basic.solar.evaporation.chamber.name=Einfache Solarverdampfungskammer
 container.vehicle.charger.name=Ladedock für Fahrzeuge
 container.basic.purifier.name=Einfacher Reiniger
 container.basic.densifier.name=Basic Densifier ##NEEDS TRANSLATE##
@@ -474,7 +489,7 @@ gui.button.loadpower.name=Strom aufladen
 gui.powered.inv.name=Inventar / Strom
 gui.status.purifiering.name=Reinigen
 gui.radioactive_water_tank.desc.4=Tank für radioaktives Wasser
-gui.message.radioactive_water.name=Radioaktives Wasser 
+gui.message.radioactive_water.name=Radioaktives Wasser
 gui.infected_water_tank.desc.4=Tank für infiziertes Wasser
 gui.message.infected_water.name=Infiziertes Wasser
 gui.clean_water_tank.desc.4=Tank für sauberes Wasser
@@ -514,6 +529,7 @@ gui.message.general.tank.fluid.name=Fluid ##NEEDS TRANSLATE##
 gui.status.densifier.name=Densifying ##NEEDS TRANSLATE##
 gui.bucket.message.extreme.reactors.compact=Diese Flüssigkeit ist kompatibel mit Extreme Reactors
 gui.radiation.reduced.message=Die Schwere deiner Verstrahlung wurde reduziert um
+gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=So schwer bist du aktuell verstrahlt
 gui.radiation.subject.message=Du gehörst nun
 gui.radiation.reverse.message=Folgendermaßen kannst du fortfahren: Schlafen, Dekontaminieren, Anti-Strahlungs-Getränke um den entstandenen Schaden rückgängig zu machen
@@ -562,6 +578,7 @@ gui.celestial_body_has_dungeon.name=Besitzt Verließ
 keybind.vehicle_inv.name=Fahrzeuginventar öffnen
 keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
 keybind.module.pre.launch.name=Open Pre Launch Checklist GUI ##NEEDS TRANSLATE##
+keybind.module.nasa.workbench.name=Open Portable NASA Workbench GUI ##NEEDS TRANSLATE##
 
 #GUI Module Manager
 gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
@@ -578,6 +595,7 @@ gui.module_cost.name=Cost ##NEEDS TRANSLATE##
 gui.module.installed.name=Module Installed! ##NEEDS TRANSLATE##
 gui.module.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
 gui.module.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
+gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
 gui.module.description.name=Module Description ##NEEDS TRANSLATE##
 gui.module.name.name=Module Name ##NEEDS TRANSLATE##
 gui.module.type.name=Module Type ##NEEDS TRANSLATE##
@@ -661,15 +679,15 @@ tile.decorative_blocks.snow_bricks.name=Schneeziegel
 tile.decorative_blocks.ice_bricks.name=Eisziegel
 tile.decorative_blocks.fire_bricks.name=Feuerziegel
 tile.decorative_blocks.black_white_floor.name=Schwarz/Weiße Fließen
-tile.decorative_blocks.marble_titled_floor.name=Marmorfließen 
-tile.decorative_blocks.marble_broken_titled_floor.name=Zerbrochene Marmorfließen 
-tile.decorative_blocks.metal_mesh.name=Metallnetz 
+tile.decorative_blocks.marble_titled_floor.name=Marmorfließen
+tile.decorative_blocks.marble_broken_titled_floor.name=Zerbrochene Marmorfließen
+tile.decorative_blocks.metal_mesh.name=Metallnetz
 tile.decorative_blocks.frozen_nitrogen_bricks.name=Ziegel aus eingefrorenem Stickstoff
 tile.decorative_blocks.volcanic_rock_bricks.name=Ziegel aus Vulkangestein
 tile.decorative_blocks.carbon_titled_floor.name=Kohlenstofffließen
 tile.decorative_blocks.carbon_broken_titled_floor.name=Zerbrochene Kohlenstofffließen
 tile.decorative_blocks.magnesium_titled_floor.name=Magnesiumfließen
-tile.decorative_blocks.magnesium_broken_titled_floor.name=Zerbrochene Magnesiumfließen 
+tile.decorative_blocks.magnesium_broken_titled_floor.name=Zerbrochene Magnesiumfließen
 tile.decorative_blocks.ash_bricks.name=Aschenziegel
 tile.decorative_blocks2.white_block.name=Weißer Block
 tile.decorative_blocks2.red_block.name=Roter Block
@@ -679,7 +697,7 @@ tile.decorative_blocks2.yellow_block.name=Gelber Block
 tile.decorative_blocks2.green_block.name=Grüner Block
 
 #Stairs
-tile.mercury_stairs_surface.name=Merkur Oberflächengesteintreppe 
+tile.mercury_stairs_surface.name=Merkur Oberflächengesteintreppe
 tile.mercury_stairs_sub_surface.name=Merkur Untergrundgesteintreppe
 tile.mercury_stairs_stone.name=Merkursteintreppe
 tile.mercury_stairs_stone_bricks.name=Merkursteinziegeltreppen
@@ -689,7 +707,7 @@ tile.ceres_stairs_sub_surface.name=Ceres Untergrundgesteintreppe
 tile.ceres_stairs_stone.name=Ceressteintreppe
 tile.ceres_stairs_stone_bricks.name=Ceressteinziegeltreppen
 
-tile.jupiter_stairs_surface.name=Jupiter Oberflächengesteintreppe 
+tile.jupiter_stairs_surface.name=Jupiter Oberflächengesteintreppe
 tile.jupiter_stairs_sub_surface.name=Jupiter Untergrundgesteintreppe
 tile.jupiter_stairs_stone.name=Jupitersteintreppe
 tile.jupiter_stairs_stone_bricks.name=Jupitersteinziegeltreppen
@@ -1075,18 +1093,20 @@ item.tier4_space_suit_legings.name=Stufe 4 Raumanzug-Hose
 item.tier4_space_suit_boots.name=Stufe 4 Raumanzug-Stiefel
 item.tier4_space_suit_gravity_boots.name=Stufe 4 Raumanzug-Stiefel mit Gravitationshilfe
 
-space.suit.information=Used to full stop pressure damage ##NEEDS TRANSLATE##
-space.suit.information.2=& slow down the rate of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra=The Tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
+space.suit.information=Used to fully stop pressure damage ##NEEDS TRANSLATE##
+space.suit.information.2=& to slow down the rate of radiation gained ##NEEDS TRANSLATE##
+space.suit.information.extra=The tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
 space.suit.information.extra.2=towards reducing the amount of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra.3=The Higher the Space Suit Tier the ##NEEDS TRANSLATE##
+space.suit.information.extra.3=The higher the Space Suit tier the ##NEEDS TRANSLATE##
 space.suit.information.extra.4=slower radiation will be gained ##NEEDS TRANSLATE##
+space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
+space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
 item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
 
 item.tier3_thermal_helm.name=Stufe 3 Thermalpolsterhelm
-item.tier3_thermal_chestplate.name=Stufe 3 Thermalpolsterbrustpanzer 
+item.tier3_thermal_chestplate.name=Stufe 3 Thermalpolsterbrustpanzer
 item.tier3_thermal_leggings.name=Stufe 3 Thermalpolsterbeinschutz
 item.tier3_thermal_boots.name=Stufe 3 Thermalpolsterstiefel
 item.tier4_thermal_helm.name=Stufe 4 Thermalpolsterhelm
@@ -1182,7 +1202,7 @@ item.oxygen_tank_med_full_pink.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
 item.oxygen_tank_med_full_yellow.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
 item.oxygen_tank_med_full_light_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
 item.oxygen_tank_med_full_magenta.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_orange.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_lime.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
 item.oxygen_tank_med_full_white.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
 
 item.oxygen_tank_heavy_full_black.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
@@ -1207,7 +1227,7 @@ item.potassium_iodide.name=Kaliumiodid
 item.potassium.name=Kalium
 item.potash_shards.name=Potaschenstück
 item.anti_radiation.name=Anti-Verstrahlt
-anti_radiation.desc=Reduziert Strahlungsschwere um 50%
+anti_radiation.desc=Reduces Radiation Level by {{PERCENT}} of the current amount ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=Stufe 1 komplettes Set
@@ -1286,6 +1306,7 @@ item.canned_food.dehydrated_porkchop.name=Getrocknetes Schweinefleisch
 item.canned_food.dehydrated_fish.name=Getrockneter Fisch
 item.canned_food.dehydrated_salmon.name=Getrockneter Lachs
 item.canned_food.dehydrated_chicken.name=Getrocknetes Hühnerfleisch
+item.canned_food.dehydrated_beef.name=Dehydrated Beef ##NEEDS TRANSLATE##
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=Stufe 1 Batterie
@@ -1519,11 +1540,11 @@ tile.ExtraPlanets_uranusVerließBrickStoneBlockhalfslab.name=Uranus Verließzieg
 tile.ExtraPlanets_neptuneVerließBrickStoneBlockhalfslab.name=Neptune Verließziegelstufe
 
 #Dungeon Bricks Stairs
-tile.venusVerließBrickStoneStairs.name=Venus Verließziegeltreppen 
-tile.jupiterVerließBrickStoneStairs.name=Jupiter Verließziegeltreppen 
-tile.saturnVerließBrickStoneStairs.name=Saturn Verließziegeltreppen 
-tile.uranusVerließBrickStoneStairs.name=Uranus Verließziegeltreppen 
-tile.neptuneVerließBrickStoneStairs.name=Neptun Verließziegeltreppen 
+tile.venusVerließBrickStoneStairs.name=Venus Verließziegeltreppen
+tile.jupiterVerließBrickStoneStairs.name=Jupiter Verließziegeltreppen
+tile.saturnVerließBrickStoneStairs.name=Saturn Verließziegeltreppen
+tile.uranusVerließBrickStoneStairs.name=Uranus Verließziegeltreppen
+tile.neptuneVerließBrickStoneStairs.name=Neptun Verließziegeltreppen
 
 #Planets
 planet.Venus=Venus

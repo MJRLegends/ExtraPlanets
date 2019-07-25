@@ -3,6 +3,12 @@ package com.mjr.extraplanets.blocks.planetAndMoonBlocks;
 import java.util.List;
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.items.ExtraPlanets_Items;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -17,13 +23,6 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.items.ExtraPlanets_Items;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockBasicCeres extends Block {
 	@SideOnly(Side.CLIENT)
@@ -128,9 +127,9 @@ public class BlockBasicCeres extends Block {
 				if (thermalPaddingHelm == null && thermalPaddingChestplate == null && thermalPaddingLeggings == null && thermalPaddingBoots == null)
 					giveEffect = true;
 				else if (thermalPaddingHelm.getItem() != ExtraPlanets_Items.tier2ThermalPadding && thermalPaddingChestplate.getItem() != ExtraPlanets_Items.tier2ThermalPadding
-						&& thermalPaddingLeggings.getItem() != ExtraPlanets_Items.tier2ThermalPadding && thermalPaddingBoots.getItem() != ExtraPlanets_Items.tier2ThermalPadding
-						&& thermalPaddingHelm.getItem() != ExtraPlanets_Items.tier3ThermalPadding && thermalPaddingChestplate.getItem() != ExtraPlanets_Items.tier3ThermalPadding
-						&& thermalPaddingLeggings.getItem() != ExtraPlanets_Items.tier3ThermalPadding && thermalPaddingBoots.getItem() != ExtraPlanets_Items.tier3ThermalPadding)
+						&& thermalPaddingLeggings.getItem() != ExtraPlanets_Items.tier2ThermalPadding && thermalPaddingBoots.getItem() != ExtraPlanets_Items.tier2ThermalPadding && thermalPaddingHelm.getItem() != ExtraPlanets_Items.tier3ThermalPadding
+						&& thermalPaddingChestplate.getItem() != ExtraPlanets_Items.tier3ThermalPadding && thermalPaddingLeggings.getItem() != ExtraPlanets_Items.tier3ThermalPadding
+						&& thermalPaddingBoots.getItem() != ExtraPlanets_Items.tier3ThermalPadding)
 					giveEffect = true;
 
 				if (giveEffect)

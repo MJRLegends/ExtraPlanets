@@ -17,7 +17,10 @@ public class Config {
 	public static boolean genUranusIgloos;
 	public static boolean genUranusIceSpikes;
 	public static boolean genJupiterSkyFeature;
-	public static boolean jupiterLighting;
+	public static boolean jupiterLightingClient;
+	public static boolean jupiterLightingServer;
+	public static boolean jupiterClouds;
+	public static int jupiterCloudsSpeed;
 	public static boolean customFog;
 
 	public static boolean carbonItems;
@@ -77,6 +80,7 @@ public class Config {
 	public static boolean haumea;
 	public static boolean kuiperBelt;
 	public static boolean keplerSolarSystems;
+	public static boolean generateUnreachableMoons;
 
 	public static boolean kepler22b;
 
@@ -359,17 +363,28 @@ public class Config {
 		fireBomb = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Fire Bomb", true, "This option will disable & remove the Fire Bomb").getBoolean(true);
 
 		mobSuffocation = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mob Suffocation", true, "Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
-		useDefaultBosses = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Setting this option to false will disable & remove all custom bosses and will replace them with Creeper Bosses!")
+		useDefaultBosses = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Setting this option to true will disable & remove all custom bosses and will replace them with Creeper Bosses!")
 				.getBoolean(false);
 
 		mercuryRocketTier = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mercury Rocket required", 4, "Changing this will change the Tier required to go to Mercury").getInt();
 		ceresRocketTier = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Ceres Rocket required", 4, "Changing this will change the Tier required to go to Ceres").getInt();
 
+
 		genVenusVolcanos = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanos on Venus", true, "Setting this option to false will disable & remove Volcanos from generating on Venus").getBoolean(true);
 		genUranusIgloos = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Setting this option to false will disable & remove Igloos from generating on Uranus").getBoolean(true);
 		genUranusIceSpikes = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Setting this option to false will disable & remove Ice Spikes from generating on Uranus").getBoolean(true);
 		genJupiterSkyFeature = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Jupiter", true, "Setting this option to false will disable & remove the Sky Feature on Jupiter").getBoolean(true);
-		jupiterLighting = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", true, "Setting this option to false will disable & remove Lighting & Lighting Effects on Jupiter").getBoolean(true);
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", "Enable Client Fake Lighting Effects & Thunder sounds on Jupiter");
+		jupiterLightingClient = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Client Fake Lighting Effects & Thunder sounds on Jupiter", true, "Setting this option to false will disable & remove Fake Lighting Effects & Thunder sounds on Jupiter (CLIENT SIDE)").getBoolean(true);
+		jupiterLightingServer = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Server Real Lighting Bolts on Jupiter", true, "Setting this option to false will disable & remove Real Lighting Bolts on Jupiter (SERVER SIDE)").getBoolean(true);
+		
+		jupiterClouds = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Clouds on Jupiter", true, "Setting this option to false will disable & remove Clouds on Jupiter").getBoolean(true);
+		jupiterCloudsSpeed = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Clouds Speed on Jupiter", 3, "[range: 1 ~ 10, default: 3]").getInt();
+		if(jupiterCloudsSpeed > 5)
+			jupiterCloudsSpeed = 5;
+		else if(jupiterCloudsSpeed < 1)
+			jupiterCloudsSpeed = 1;
+
 		customFog = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
 				.getBoolean(true);
 
@@ -393,6 +408,7 @@ public class Config {
 		makemake = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Makemake", true, "Setting this option to false will remove Makemake").getBoolean(true);
 		kuiperBelt = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kuiper Belt", true, "Setting this option to false will remove Kuiper Belt").getBoolean(true);
 		keplerSolarSystems = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler SolarSystems", true, "Setting this option to false will remove all Kepler Solar Systems and their Planets/Moons!").getBoolean(true);
+		generateUnreachableMoons = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Unreachable moons on the Celestaial Selection Screen", true, "Setting this option to false will remove all unreachable moons added by ExtraPlanets, from showing on the Celestaial Selection Screen!").getBoolean(true);
 
 		kepler22b = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler 22b", true, "Setting this option to false will remove Kepler 22b & all the related items/block/tools/armour/space stations!").getBoolean(true);
 
@@ -570,7 +586,9 @@ public class Config {
 		evolvedGiantSpider = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Giant Spider", true, "").getBoolean(true);
 		evolvedMiniEnderman = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Mini Enderman", true, "").getBoolean(true);
 
-		morePlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable More Planets Compatibility", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings, FOR v1.4.4 & ABOVE YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!").getBoolean(false);
+		morePlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable More Planets Compatibility", false,
+				"This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings, FOR v1.4.4 & ABOVE YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!")
+				.getBoolean(false);
 		morePlanetsCompatibilityAdv143 = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Progression Fixes for More Planets Compatibility (Only needed for v1.4.3 & below!)", false,
 				"This option will do the same as the basic one but will also fix the progression between ExtraPlanets & MorePlanets").getBoolean(false);
 		amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false,
@@ -580,8 +598,8 @@ public class Config {
 		// galaxySpaceCompatibilityAdv = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Advanced Galaxy Space Compatibility", false, "").getBoolean(false);
 		extendedPlanetsCompatibility13Alpha = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility (v1.3.1 Alpha)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations")
 				.getBoolean(false);
-		extendedPlanetsCompatibility14Alpha = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility (v1.4 Alpha)", false, "This option will disable & remove conflicting Planets/Moons/SpaceStations FOR THIS TO WORK PLEASE ENABLE THE 'enableExtraPlanetsCompatibility' in the ExtendedPlanets/base.cfg config file")
-				.getBoolean(false);
+		extendedPlanetsCompatibility14Alpha = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility (v1.4 Alpha)", false,
+				"This option will disable & remove conflicting Planets/Moons/SpaceStations FOR THIS TO WORK PLEASE ENABLE THE 'enableExtraPlanetsCompatibility' in the ExtendedPlanets/base.cfg config file").getBoolean(false);
 
 		kepler22SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		kepler22SystemPitchOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
@@ -653,8 +671,7 @@ public class Config {
 			jupiterSpaceStation = false;
 			plutoSpaceStation = false;
 			thermalPaddings = false;
-		}
-		else if (morePlanetsCompatibilityAdv143)
+		} else if (morePlanetsCompatibilityAdv143)
 			morePlanetsCompatibilityAdv143 = false;
 
 		if (galaxySpaceCompatibility) {

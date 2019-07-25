@@ -2,6 +2,12 @@ package com.mjr.extraplanets.planets.Saturn.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturn;
+import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnHydrocarbonSea;
+import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnNuclearLand;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.block.Block;
@@ -10,12 +16,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturn;
-import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnHydrocarbonSea;
-import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturnNuclearLand;
 
 public class SaturnBiomes extends BiomeGenBase {
 	public static BiomeGenBase saturn = new BiomeGenSaturn(Config.saturnBiomeID).setBiomeName("Saturn").setHeight(BiomeGenBase.height_LowPlains);

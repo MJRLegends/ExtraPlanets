@@ -45,6 +45,12 @@ planet.kuiperBelt=Пояс Койпера
 planet.makemake=Макемаке
 planet.haumea=Хаумеа
 
+planet.MercuryEP=Меркурий 2.0
+planet.CeresEP=Церера 2.0
+planet.JupiterEP=Юпитер 2.0
+planet.NeptuneEP=Нептун 2.0
+planet.PlutoEP=Плутон 2.0
+
 planet.kepler62b=Кеплер-62 b
 planet.kepler62c=Кеплер-62 c
 planet.kepler62d=Кеплер-62 d
@@ -90,6 +96,15 @@ moon.charon=Харон
 moon.nix=Никта
 moon.hydra=Гидра
 moon.dysnomia=Дисномия
+
+moon.tritonEP=Тритон 2.0
+moon.callistoEP=Каллисто 2.0
+moon.europaEP=Европа 2.0
+moon.ganymedeEP=Ганимед 2.0
+moon.ioEP=Ио 2.0
+moon.deimosEP=Феймос 2.0
+moon.phobosEP=Фобос 2.0
+moon.oberonEP=Оберон 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=Поверхность Меркурия
@@ -514,6 +529,7 @@ gui.message.general.tank.fluid.name=Жидкость
 gui.status.densifier.name=Уплотнение
 gui.bucket.message.extreme.reactors.compact=Эта жидкость совместима с Экстремальными реакторами
 gui.radiation.reduced.message=Ваш уровень радиации был уменьшен на
+gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=Ваш текущий уровень радиации
 gui.radiation.subject.message=Вы теперь подвержены
 gui.radiation.reverse.message=Вы можете использовать следующие способы: сон, блок дезактивации, антирадиационные напитки, чтобы помочь обратить вспять ущерб
@@ -562,7 +578,7 @@ gui.celestial_body_has_dungeon.name=Сокровищницы
 keybind.vehicle_inv.name=Открыть инвентарь заряженного транспорта
 keybind.module.manager.name=Открыть менеджер модулей
 keybind.module.pre.launch.name=Открыть интерфейс списка предзапуска
-keybind.module.nasa.workbench.name=Открыть интерфейс портативного верстака NASA 
+keybind.module.nasa.workbench.name=Открыть интерфейс портативного верстака NASA
 
 #GUI Module Manager
 gui.module_manager.name=Менеджер модулей
@@ -579,6 +595,7 @@ gui.module_cost.name=Стоимость
 gui.module.installed.name=Модуль установлен!
 gui.module.missing_requirements.name=Извините, вы не отвечаете требованиям для установки этого модуля!
 gui.module.already_installed.name=У вас уже установлен этот модуль!
+gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
 gui.module.description.name=Описание модуля
 gui.module.name.name=Имя модуля
 gui.module.type.name=Тип модуля
@@ -1082,9 +1099,8 @@ space.suit.information.extra=Уровень каждой части скафан
 space.suit.information.extra.2=к уменьшению количества полученной радиации
 space.suit.information.extra.3=Чем выше уровень скафандра, тем
 space.suit.information.extra.4=более медленная радиация будет получена
-space.suit.power.info=Используйте Galacticraft блоки для перезарядки,
-space.suit.power.info.2=например, модуля хранения энергии
-
+space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
+space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=Нажмите %s для информации о давлении и радиации
 item_desc.spacesuit.module.shift.name=Нажмите %s для установленных модулей
@@ -1186,7 +1202,7 @@ item.oxygen_tank_med_full_pink.name=Средний кислородный бал
 item.oxygen_tank_med_full_yellow.name=Средний кислородный баллон
 item.oxygen_tank_med_full_light_blue.name=Средний кислородный баллон
 item.oxygen_tank_med_full_magenta.name=Средний кислородный баллон
-item.oxygen_tank_med_full_orange.name=Средний кислородный баллон
+item.oxygen_tank_med_full_lime.name=Средний кислородный баллон
 item.oxygen_tank_med_full_white.name=Средний кислородный баллон
 
 item.oxygen_tank_heavy_full_black.name=Тяжёлый кислородный баллон
@@ -1211,7 +1227,7 @@ item.potassium_iodide.name=Иодид калия
 item.potassium.name=Калий
 item.potash_shards.name=Осколок калия
 item.anti_radiation.name=Анти-рад
-anti_radiation.desc=Снижает уровень радиации на 2
+anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=Полный комплект 1-го уровня
@@ -1290,6 +1306,7 @@ item.canned_food.dehydrated_porkchop.name=Дегидратированная ж�
 item.canned_food.dehydrated_fish.name=Дегидратированная рыба
 item.canned_food.dehydrated_salmon.name=Дегидратированный лосось
 item.canned_food.dehydrated_chicken.name=Дегидратированная жареная курица
+item.canned_food.dehydrated_beef.name=Dehydrated Beef ##NEEDS TRANSLATE##
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=Аккумулятор 1-го уровня

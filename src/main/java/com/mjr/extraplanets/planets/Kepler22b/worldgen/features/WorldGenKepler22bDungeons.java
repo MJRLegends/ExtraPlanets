@@ -4,6 +4,8 @@ import static net.minecraftforge.common.ChestGenHooks.DUNGEON_CHEST;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -14,8 +16,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.ChestGenHooks;
 import net.minecraftforge.common.DungeonHooks;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 
 public class WorldGenKepler22bDungeons extends WorldGenerator {
 	public static final WeightedRandomChestContent[] field_111189_a = new WeightedRandomChestContent[] { new WeightedRandomChestContent(Items.saddle, 0, 1, 1, 10), new WeightedRandomChestContent(Items.iron_ingot, 0, 1, 4, 10),

@@ -5,6 +5,46 @@
 
 
 ===========================================Released Updates===========================================
+v2.1.2
+*Fixed issue #438
+*Updated lang files to match 1.8+ changes
+
+v2.1.1
+*Added config option to disable unreachable moons on galaxy map screen #422
+*Fixed an xray bug with some Kepler22b Leafs (Thanks to kmecpp)
+*Fixed an client crash bug for some Kepler22b Leafs (Thanks to kmecpp)
+
+v2.1.0
+*Added/Improved config options for issue #412
+
+v2.0.9
+*Fixed issue #407
+*Fixed config option comment being backwards in its explaining.
+
+v2.0.8
+*Missing Dehydrated Beef lang (Thanks to spannerman79)
+*Clean up/Fix Formatting
+*Added french language support (Thanks to divergnight) #398
+*Updated lang files to match 1.8+ changes
+*Added try catch around the custom CelestialSelection screen features rendering, to allow the gui to render in event of a error
+*Fixed Uranus & Saturn Ring rendering
+
+v2.0.7
+*Fixed issue #380
+*Updated lang files to match 1.8+ changes
+
+v2.0.6
+*Fixed issue #336
+*Updated ko_KR.lang (Thanks to mindy15963)
+*Updated tr_TR.lang (Thanks to kralrindo)
+*Updated lang files to match 1.8+ changes
+*Fixed issue #368
+
+v2.0.5
+*Fixed issue #335
+*Added ko_KR.lang (Thanks to mindy15963)
+*Updated ru_RU.lang (Thanks to kellixon)
+
 v2.0.4
 *Added support for the future release of ExtendedPlanets v1.4 Alpha
 *Fixes/Changes for More Planets Compatibility/Changed More Planets Compatibility config options

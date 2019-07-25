@@ -1,5 +1,9 @@
 package com.mjr.extraplanets.entities.monsters;
 
+import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -10,11 +14,6 @@ import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class EntityEvolvedIceBlaze extends EntityMob implements IEntityBreathable {
 	/** Random offset used in floating behaviour */

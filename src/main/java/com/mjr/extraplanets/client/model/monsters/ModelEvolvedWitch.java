@@ -1,14 +1,13 @@
 package com.mjr.extraplanets.client.model.monsters;
 
-import net.minecraft.client.model.ModelRenderer;
-import net.minecraft.client.model.ModelVillager;
-import net.minecraft.entity.Entity;
-import net.minecraft.util.MathHelper;
-
 import com.mjr.extraplanets.Constants;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.model.ModelRenderer;
+import net.minecraft.client.model.ModelVillager;
+import net.minecraft.entity.Entity;
+import net.minecraft.util.MathHelper;
 
 @SideOnly(Side.CLIENT)
 public class ModelEvolvedWitch extends ModelVillager {

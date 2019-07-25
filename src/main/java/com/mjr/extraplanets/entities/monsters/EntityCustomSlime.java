@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.entities.monsters;
 
+import com.mjr.extraplanets.Constants;
+
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.IMob;
@@ -10,8 +12,6 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
-
-import com.mjr.extraplanets.Constants;
 
 public class EntityCustomSlime extends EntityLiving implements IMob {
 	public float squishAmount;

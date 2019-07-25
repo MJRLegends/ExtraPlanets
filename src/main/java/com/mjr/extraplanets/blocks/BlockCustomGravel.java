@@ -2,11 +2,11 @@ package com.mjr.extraplanets.blocks;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-
-import com.mjr.extraplanets.Constants;
 
 public class BlockCustomGravel extends BlockFalling {
 	public BlockCustomGravel(String name) {

@@ -2,6 +2,14 @@ package com.mjr.extraplanets.blocks;
 
 import java.util.List;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityPoweredChargingPadSingle;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityTier2LandingPadSingle;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityTier3LandingPadSingle;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.api.block.IPartialSealableBlock;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
@@ -17,15 +25,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityPoweredChargingPadSingle;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityTier2LandingPadSingle;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityTier3LandingPadSingle;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockCustomLandingPad extends BlockAdvancedTile implements IPartialSealableBlock, ItemBlockDesc.IBlockShiftDesc {
 	private IIcon[] icons = new IIcon[3];

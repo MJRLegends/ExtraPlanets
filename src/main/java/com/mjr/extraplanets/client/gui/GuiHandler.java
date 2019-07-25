@@ -1,13 +1,5 @@
 package com.mjr.extraplanets.client.gui;
 
-import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.ChatComponentText;
-import net.minecraft.world.World;
-
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedFuelLoader;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedOxygenCompressor;
 import com.mjr.extraplanets.client.gui.machines.GuiAdvancedOxygenDecompressor;
@@ -43,6 +35,13 @@ import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.IGuiHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.world.World;
 
 public class GuiHandler implements IGuiHandler {
 	@Override

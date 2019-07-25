@@ -2,6 +2,12 @@ package com.mjr.extraplanets.moons.Io.worldgen;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.Config;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIo;
+import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIoAshLands;
+import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIoBurningPlains;
+
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedSpider;
 import micdoodle8.mods.galacticraft.core.entities.EntityEvolvedZombie;
 import net.minecraft.block.Block;
@@ -10,12 +16,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeDecorator;
 import net.minecraft.world.biome.BiomeGenBase;
-
-import com.mjr.extraplanets.Config;
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIo;
-import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIoAshLands;
-import com.mjr.extraplanets.moons.Io.worldgen.biomes.BiomeGenIoBurningPlains;
 
 public class IoBiomes extends BiomeGenBase {
 	public static final BiomeGenBase io = new BiomeGenIo(Config.ioBiomeID).setBiomeName("io").setHeight(new Height(0.125F, 0.05F));

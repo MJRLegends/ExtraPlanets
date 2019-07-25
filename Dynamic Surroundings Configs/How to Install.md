@@ -1,6 +1,6 @@
 ## 1.7.10 Version:
 
-1. Download Latest Config file (labeled extraplanets_biomes(Latest Versions, 1.7+).json)
+1. Download Latest Config file (labeled extraplanets_biomes(1.7.10 only).json)
 2. Rename json file to extraplanets_biomes.json
 3. Move json file to \config\dsurround\ folder
 4. Open Dynamic Surroundings Config file
@@ -24,7 +24,7 @@ biomes {
 
 ## 1.8+ Version:
 
-1. Download Latest Config file (labeled extraplanets_biomes(Latest Versions, 1.7+).json)
+1. Download Latest Config file (labeled extraplanets_biomes(1.8+).json)
 2. Rename json file to extraplanets_biomes.json
 3. Move json file to \config\dsurround\ folder
 4. Open Dynamic Surroundings Config file

@@ -1,15 +1,15 @@
 package com.mjr.extraplanets.client.render.entities;
 
+import org.lwjgl.opengl.GL11;
+
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
+
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
-
-import org.lwjgl.opengl.GL11;
-
-import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
-import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 
 public class RenderNuclearBombPrimed extends Render {
 	private RenderBlocks blockRenderer = new RenderBlocks();

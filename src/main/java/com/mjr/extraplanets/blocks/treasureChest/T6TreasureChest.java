@@ -3,6 +3,13 @@ package com.mjr.extraplanets.blocks.treasureChest;
 import java.util.Iterator;
 import java.util.Random;
 
+import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.proxy.ClientProxy;
+import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT6TreasureChest;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
 import net.minecraft.block.Block;
@@ -24,14 +31,6 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.proxy.ClientProxy;
-import com.mjr.extraplanets.tileEntities.treasureChest.TileEntityT6TreasureChest;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class T6TreasureChest extends BlockContainer implements ITileEntityProvider, ItemBlockDesc.IBlockShiftDesc {
 	private final Random random = new Random();
@@ -252,13 +251,14 @@ public class T6TreasureChest extends BlockContainer implements ITileEntityProvid
 			++var5;
 		}
 
-		return var5 > 1 ? false : this.isThereANeighborChest(par1World, par2 - 1, par3, par4) ? false : this.isThereANeighborChest(par1World, par2 + 1, par3, par4) ? false : this.isThereANeighborChest(par1World, par2, par3, par4 - 1) ? false : !this
-				.isThereANeighborChest(par1World, par2, par3, par4 + 1);
+		return var5 > 1 ? false
+				: this.isThereANeighborChest(par1World, par2 - 1, par3, par4) ? false
+						: this.isThereANeighborChest(par1World, par2 + 1, par3, par4) ? false : this.isThereANeighborChest(par1World, par2, par3, par4 - 1) ? false : !this.isThereANeighborChest(par1World, par2, par3, par4 + 1);
 	}
 
 	private boolean isThereANeighborChest(World par1World, int par2, int par3, int par4) {
-		return par1World.getBlock(par2, par3, par4) != this ? false : par1World.getBlock(par2 - 1, par3, par4) == this ? true : par1World.getBlock(par2 + 1, par3, par4) == this ? true : par1World.getBlock(par2, par3, par4 - 1) == this ? true
-				: par1World.getBlock(par2, par3, par4 + 1) == this;
+		return par1World.getBlock(par2, par3, par4) != this ? false
+				: par1World.getBlock(par2 - 1, par3, par4) == this ? true : par1World.getBlock(par2 + 1, par3, par4) == this ? true : par1World.getBlock(par2, par3, par4 - 1) == this ? true : par1World.getBlock(par2, par3, par4 + 1) == this;
 	}
 
 	@Override

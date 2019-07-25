@@ -2,6 +2,12 @@ package com.mjr.extraplanets.blocks.machines;
 
 import java.util.Random;
 
+import com.mjr.extraplanets.ExtraPlanets;
+import com.mjr.extraplanets.proxy.ClientProxy;
+import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
@@ -20,13 +26,6 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
-
-import com.mjr.extraplanets.ExtraPlanets;
-import com.mjr.extraplanets.proxy.ClientProxy;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
 public class UltimateRefinery extends BlockAdvancedTile implements ItemBlockDesc.IBlockShiftDesc {
 	private final Random refineryRand = new Random();

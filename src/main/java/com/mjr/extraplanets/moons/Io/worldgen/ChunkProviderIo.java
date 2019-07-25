@@ -3,15 +3,15 @@ package com.mjr.extraplanets.moons.Io.worldgen;
 import java.util.List;
 import java.util.Random;
 
-import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
-import net.minecraft.block.Block;
-import net.minecraft.world.World;
-
 import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.moons.Io.worldgen.village.MapGenVillageIo;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
+
+import micdoodle8.mods.galacticraft.api.prefab.world.gen.MapGenBaseMeta;
+import net.minecraft.block.Block;
+import net.minecraft.world.World;
 
 public class ChunkProviderIo extends ChunkProviderCustomSpace {
 	private final BiomeDecoratorIo biomeDecorator = new BiomeDecoratorIo();

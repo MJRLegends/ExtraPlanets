@@ -1,12 +1,11 @@
 package com.mjr.extraplanets.handlers;
 
-import net.minecraftforge.event.entity.player.BonemealEvent;
-
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockKepler22bMapleTreeSapling;
 
 import cpw.mods.fml.common.eventhandler.Event.Result;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.event.entity.player.BonemealEvent;
 
 public class BoneMealHandler {
 	@SubscribeEvent
