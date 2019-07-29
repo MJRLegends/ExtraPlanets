@@ -30,6 +30,9 @@ import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 public class AchievementEventHandler {
 	@SubscribeEvent
 	public void onCrafting(ItemCraftedEvent event) {
+		if (event.crafting == null) {
+			return;
+		}
 		if (event.crafting.getItem() instanceof BasicPickaxe) {
 			if (event.crafting.getItem() == ExtraPlanets_Tools.carbonPickaxe) {
 
