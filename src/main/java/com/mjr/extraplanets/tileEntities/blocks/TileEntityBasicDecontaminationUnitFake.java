@@ -226,4 +226,9 @@ public class TileEntityBasicDecontaminationUnitFake extends TileBaseElectricBloc
 	public int[] getSlotsForFace(EnumFacing side) {
 		return new int[0];
 	}
+
+	@Override
+	protected boolean handleInventory() {
+		return false;
+	}
 }
