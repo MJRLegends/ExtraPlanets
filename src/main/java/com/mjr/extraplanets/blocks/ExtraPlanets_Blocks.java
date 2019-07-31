@@ -327,8 +327,8 @@ public class ExtraPlanets_Blocks {
 		if (Config.JUPITER) {
 			JUPITER_BLOCKS = new BlockBasicJupiter("jupiter");
 			JUPITER_GRAVEL = new BlockBasicGravel("jupiter_gravel").setCreativeTab(ExtraPlanets.BlocksTab);
-			VOLCANIC_ROCK = new BlockBasic(Material.rock).setUnlocalizedName("volcanic_rock").setHardness(5.0F).setResistance(4.0F).setCreativeTab(ExtraPlanets.BlocksTab);
-			ASH_ROCK = new BlockBasic(Material.rock).setUnlocalizedName("ash_rock").setHardness(2.0F).setResistance(1.5F).setCreativeTab(ExtraPlanets.BlocksTab);
+			VOLCANIC_ROCK = new BlockBasicValuable(Material.rock).setUnlocalizedName("volcanic_rock").setHardness(5.0F).setResistance(4.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			ASH_ROCK = new BlockBasic(Material.rock).setUnlocalizedName("ash_rock").setHardness(2.0F).setCreativeTab(ExtraPlanets.BlocksTab).setResistance(1.5F).setCreativeTab(ExtraPlanets.BlocksTab);
 			ORANGE_SAND = new BlockSand("orange_sand").setHardness(0.6F);
 			ORANGE_SANDSTONE = new BlockBasic(Material.rock).setUnlocalizedName("orange_sandstone").setHardness(2F).setResistance(2F).setCreativeTab(ExtraPlanets.BlocksTab);
 		}
@@ -342,7 +342,7 @@ public class ExtraPlanets_Blocks {
 		}
 		if (Config.NEPTUNE) {
 			NEPTUNE_BLOCKS = new BlockBasicNeptune("neptune");
-			FROZEN_NITROGEN = new BlockBasic(Material.ice).setUnlocalizedName("frozen_nitrogen").setCreativeTab(ExtraPlanets.BlocksTab);
+			FROZEN_NITROGEN = new BlockBasicValuable(Material.ice).setUnlocalizedName("frozen_nitrogen").setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.PLUTO) {
 			PLUTO_BLOCKS = new BlockBasicPluto("pluto");
@@ -407,7 +407,7 @@ public class ExtraPlanets_Blocks {
 		if (Config.SATURN && Config.FIRE_BOMB)
 			FIRE_BOMB = new BlockFireBomb().setUnlocalizedName("fire_bomb");
 		if (Config.ORE_LEAD_GENERATION)
-			ORE_LEAD = new BlockBasic(Material.rock).setUnlocalizedName("ore_lead").setHardness(5.0F).setResistance(3.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			ORE_LEAD = new BlockBasicValuable(Material.rock).setUnlocalizedName("ore_lead").setHardness(5.0F).setResistance(3.0F).setCreativeTab(ExtraPlanets.BlocksTab);
 		if (Config.KEPLER22B && Config.KEPLER_SOLAR_SYSTEMS) {
 			KEPLER22B_BLOCKS = new BlockBasicKepler22b("kepler22b");
 			KEPLER22B_GRASS_GREEN = new BlockBasicGrass().setUnlocalizedName("kepler22b_grass");
@@ -423,7 +423,7 @@ public class ExtraPlanets_Blocks {
 			RED_SANDSTONE = new BlockBasic(Material.rock).setUnlocalizedName("red_sandstone").setHardness(2F).setResistance(2F).setCreativeTab(ExtraPlanets.BlocksTab);
 		}
 		if (Config.RADIATION)
-			ORE_POTASH = new BlockBasic(Material.rock).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F).setCreativeTab(ExtraPlanets.BlocksTab);
+			ORE_POTASH = new BlockBasicValuable(Material.rock).setUnlocalizedName("potash").setHardness(5.0F).setResistance(3.0F).setCreativeTab(ExtraPlanets.BlocksTab);
 
 		ADVANCED_LAUCHPAD = new BlockCustomLandingPad("advanced_launch_pad");
 		ADVANCED_LAUCHPAD_FULL = new BlockCustomLandingPadFull("advanced_launch_pad_full");
