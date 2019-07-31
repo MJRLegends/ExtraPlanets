@@ -16,6 +16,7 @@ import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector2f;
+import org.lwjgl.util.vector.Vector3f;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -122,14 +123,24 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		for (Moon moon : GalaxyRegistry.getRegisteredMoons().values()) {
 			if (moon.getParentPlanet() != null && moon.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
 				this.bodiesToRender.add(moon);
-			else if(moon.getParentPlanet() == null)
+			else if (moon.getParentPlanet() == null)
 				MessageUtilities.fatalErrorMessageToLog(Constants.modID, "The moon " + moon.getUnlocalizedName() + " seems to have a null parent planet. Please check the log for other errors!");
-				
+
 		}
 		for (Satellite satellite : GalaxyRegistry.getRegisteredSatellites().values()) {
 			if (satellite.getParentPlanet().getParentSolarSystem().getUnlocalizedParentGalaxyName().equalsIgnoreCase(this.currentGalaxyName))
 				this.bodiesToRender.add(satellite);
 		}
+	}
+
+	/*
+	 * Overriding for the purpose of to fix possible init issues due to network packets delay
+	 */
+	@Override
+	protected Vector3f getCelestialBodyPosition(CelestialBody cBody) {
+		if (this.celestialBodyTicks.get(cBody) == null)
+			this.initGui();
+		return super.getCelestialBodyPosition(cBody);
 	}
 
 	/*
@@ -432,7 +443,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	 */
 	@Override
 	public void drawButtons(int mousePosX, int mousePosY) {
-		if(Config.SHOW_EXINFO_CUSTOM_CELESTAIAL_SELECTION)
+		if (Config.SHOW_EXINFO_CUSTOM_CELESTAIAL_SELECTION)
 			this.drawCustomButtons(mousePosX, mousePosY);
 		this.zLevel = 0.0F;
 		boolean handledSliderPos = false;
