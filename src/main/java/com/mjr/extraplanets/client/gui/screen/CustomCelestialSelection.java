@@ -133,14 +133,15 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 	}
 
 	/*
-	 * Overriding for the purpose of to temp fix to stop issues being caused on Galaxy map by GalaxySpace addon, not registering unreachable planets correctly
+	 * Overriding for the purpose of to fix possible init issues due to network packets delay
 	 */
 	@Override
-	protected Vector3f getCelestialBodyPosition(CelestialBody cBody) {
-		if (this.celestialBodyTicks.get(cBody) == null)
-			return new Vector3f(0.0F, 0.0F, 0.0F);
+    protected Vector3f getCelestialBodyPosition(CelestialBody cBody)
+    {
+        if(this.celestialBodyTicks.get(cBody) == null)
+        	this.initGui();
 		return super.getCelestialBodyPosition(cBody);
-	}
+    }
 
 	/*
 	 * Overriding for the purpose of to change the body list depending on the galaxy selected
