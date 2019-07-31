@@ -132,10 +132,11 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
 	@Override
 	public boolean isValueable(IBlockState state) {
 		switch (this.getMetaFromState(state)) {
-		case 0:
-		case 1:
-		case 2:
 		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 7:
 			return true;
 		default:
 			return false;
@@ -199,6 +200,7 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
 		case 4:
 		case 5:
 		case 6:
+		case 7:
 			return EnumSortCategoryBlock.ORE;
 		}
 		return EnumSortCategoryBlock.GENERAL;
