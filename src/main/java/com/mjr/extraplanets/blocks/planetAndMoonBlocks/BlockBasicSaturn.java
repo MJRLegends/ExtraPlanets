@@ -193,6 +193,8 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 
 	@Override
 	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player) {
+		if (world.getBlockState(pos).getValue(BASIC_TYPE) == EnumBlockBasic.ORE_SLIME)
+			return new ItemStack(Item.getItemFromBlock(this), 1, 12);
 		return super.getPickBlock(target, world, pos, player);
 	}
 
