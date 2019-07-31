@@ -529,7 +529,9 @@ gui.message.general.tank.fluid.name=유체
 gui.status.densifier.name=고밀도화
 gui.bucket.message.extreme.reactors.compact=이 유체는 반응성이 매우 높습니다.
 gui.radiation.reduced.message=방사선 수준이 다음에 의해 감소되었습니다.
-gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
+
+gui.radiation.reduced.message.2=당신의 최초/현재 양에서
+
 gui.radiation.current.message=현재 방사선 수준은
 gui.radiation.subject.message=지금 해야할 것은
 gui.radiation.reverse.message=다음과 같은 방법을 쓸 수 있습니다: 취침, 기본 정화장치, 데미지 감소를 도와주는 제염 음료
@@ -595,7 +597,9 @@ gui.module_cost.name=비용
 gui.module.installed.name=모듈이 설치되었습니다!
 gui.module.missing_requirements.name=모듈 설치에 불필요한 아이템이 있습니다!
 gui.module.already_installed.name=모듈이 이미 설치되었습니다!
-gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
+
+gui.module.missing_armour.name=우주복의 일부가 없어서 설치할 수 없습니다!
+
 gui.module.description.name=모듈 형태
 gui.module.name.name=모듈명
 gui.module.type.name=모듈 유형
@@ -603,7 +607,7 @@ gui.module.type.helmet.name=투구
 gui.module.type.chest.name=흉갑
 gui.module.type.leggings.name=각반
 gui.module.type.boots.name=부츠
-gui.module.power.name=모듈 힘
+gui.module.power.name=모듈 전력
 
 gui.module.sensor_glasses.name=감지경
 gui.module.no_fall_damage.name=추락 위험 없음
@@ -755,13 +759,13 @@ item.mars_rover.name=화성 탐사선
 item.venus_rover.name=금성 탐사선
 
 #Rocket Tiered Items
-item.nose_cone_tier4.name=4티어 머리원뿔
-item.nose_cone_tier5.name=5티어 머리원뿔
-item.nose_cone_tier6.name=6티어 머리원뿔
-item.nose_cone_tier7.name=7티어 머리원뿔
-item.nose_cone_tier8.name=8티어 머리원뿔
-item.nose_cone_tier9.name=9티어 머리원뿔
-item.nose_cone_tier10.name=10티어 머리원뿔
+item.nose_cone_tier4.name=4티어 누즈콘
+item.nose_cone_tier5.name=5티어 누즈콘
+item.nose_cone_tier6.name=6티어 누즈콘
+item.nose_cone_tier7.name=7티어 누즈콘
+item.nose_cone_tier8.name=8티어 누즈콘
+item.nose_cone_tier9.name=9티어 누즈콘
+item.nose_cone_tier10.name=10티어 누즈콘
 
 item.tier4_items.tier4fin.name=4티어 로켓핀
 item.tier5_items.tier5fin.name=5티어 로켓핀
@@ -961,17 +965,17 @@ item.green_diamond_hoe.name=초록색 다이아몬드 괭이
 item.green_diamond_shovel.name=초록색 다이아몬드 삽
 
 #Schematics
-item.schematic_mars_rover.name=KARI 워크벤치 설계도
-item.schematic_venus_rover.name=KARI 워크벤치 설계도
+item.schematic_mars_rover.name=KARI 작업대 설계도
+item.schematic_venus_rover.name=KARI 작업대 설계도
 
-item.schematic_tier4.name=KARI 워크벤치 설계도
-item.schematic_tier5.name=KARI 워크벤치 설계도
-item.schematic_tier6.name=KARI 워크벤치 설계도
-item.schematic_tier7.name=KARI 워크벤치 설계도
-item.schematic_tier8.name=KARI 워크벤치 설계도
-item.schematic_tier9.name=KARI 워크벤치 설계도
-item.schematic_tier10.name=KARI 워크벤치 설계도
-item.schematic_tier10_electric_rocket.name=KARI 워크벤치 설계도
+item.schematic_tier4.name=KARI 작업대 설계도
+item.schematic_tier5.name=KARI 작업대 설계도
+item.schematic_tier6.name=KARI 작업대 설계도
+item.schematic_tier7.name=KARI 작업대 설계도
+item.schematic_tier8.name=KARI 작업대 설계도
+item.schematic_tier9.name=KARI 작업대 설계도
+item.schematic_tier10.name=KARI 작업대 설계도
+item.schematic_tier10_electric_rocket.name=KARI 작업대 설계도
 
 schematic.mars.rover.name=화성 탐사선
 schematic.venus.rover.name=금성 탐사선
@@ -1302,11 +1306,11 @@ item.chocolate_bar.name=초콜릿 바
 item.caramel_bar.name=캐러멜 바
 
 #Canned Food
-item.canned_food.dehydrated_porkchop.name=건조 폭찹
+item.canned_food.dehydrated_porkchop.name=건조 돼지고기
 item.canned_food.dehydrated_fish.name=건조 대구
 item.canned_food.dehydrated_salmon.name=건조 연어
 item.canned_food.dehydrated_chicken.name=건조 닭고기
-item.canned_food.dehydrated_beef.name=Dehydrated Beef ##NEEDS TRANSLATE##
+item.canned_food.dehydrated_beef.name=건조 소고기
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=1티어 배터리
