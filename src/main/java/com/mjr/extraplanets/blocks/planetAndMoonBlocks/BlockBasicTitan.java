@@ -115,10 +115,9 @@ public class BlockBasicTitan extends Block implements IDetectableResource, IPlan
 	@Override
 	public boolean isValueable(IBlockState state) {
 		switch (this.getMetaFromState(state)) {
-		case 0:
-		case 1:
-		case 2:
 		case 3:
+		case 4:
+		case 5:
 			return true;
 		default:
 			return false;
@@ -181,7 +180,6 @@ public class BlockBasicTitan extends Block implements IDetectableResource, IPlan
 		case 3:
 		case 4:
 		case 5:
-		case 6:
 			return EnumSortCategoryBlock.ORE;
 		}
 		return EnumSortCategoryBlock.GENERAL;

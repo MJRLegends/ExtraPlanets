@@ -131,6 +131,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 		case 9:
 		case 10:
 		case 13:
+		case 14:
 			return true;
 		default:
 			return false;
@@ -200,6 +201,8 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 		case 10:
 		case 13:
 			return EnumSortCategoryBlock.ORE;
+		case 14:
+			return EnumSortCategoryBlock.INGOT_BLOCK;
 		case 11:
 			return EnumSortCategoryBlock.BRICKS;
 		}
