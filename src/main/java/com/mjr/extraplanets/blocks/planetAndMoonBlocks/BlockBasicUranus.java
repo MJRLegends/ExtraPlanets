@@ -135,10 +135,8 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
 	@Override
 	public boolean isValueable(IBlockState state) {
 		switch (this.getMetaFromState(state)) {
-		case 0:
-		case 1:
-		case 2:
 		case 3:
+		case 7:
 			return true;
 		default:
 			return false;
@@ -218,16 +216,13 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
 	public EnumSortCategoryBlock getCategory(int meta) {
 		switch (meta) {
 		case 3:
+		case 7:
+			return EnumSortCategoryBlock.ORE;
 		case 4:
+		case 8:
+			return EnumSortCategoryBlock.INGOT_BLOCK;
 		case 5:
 		case 6:
-		case 10:
-			return EnumSortCategoryBlock.ORE;
-		case 7:
-		case 11:
-			return EnumSortCategoryBlock.INGOT_BLOCK;
-		case 8:
-		case 9:
 			return EnumSortCategoryBlock.BRICKS;
 		}
 		return EnumSortCategoryBlock.GENERAL;

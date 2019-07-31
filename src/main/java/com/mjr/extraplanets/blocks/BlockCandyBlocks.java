@@ -123,6 +123,6 @@ public class BlockCandyBlocks extends Block implements IDetectableResource, ISor
 
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {
-		return EnumSortCategoryBlock.GENERAL;
+		return EnumSortCategoryBlock.DECORATION;
 	}
 }

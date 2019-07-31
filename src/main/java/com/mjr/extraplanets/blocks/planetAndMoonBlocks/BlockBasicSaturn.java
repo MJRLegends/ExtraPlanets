@@ -143,10 +143,11 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 	@Override
 	public boolean isValueable(IBlockState state) {
 		switch (this.getMetaFromState(state)) {
-		case 0:
-		case 1:
-		case 2:
 		case 3:
+		case 4:
+		case 5:
+		case 6:
+		case 12:
 			return true;
 		default:
 			return false;
@@ -229,6 +230,7 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 		case 4:
 		case 5:
 		case 6:
+		case 12:
 			return EnumSortCategoryBlock.ORE;
 		case 7:
 			return EnumSortCategoryBlock.INGOT_BLOCK;

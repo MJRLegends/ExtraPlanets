@@ -127,6 +127,6 @@ public class BlockCakeBlocks extends Block implements IDetectableResource, ISort
 
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {
-		return EnumSortCategoryBlock.GENERAL;
+		return EnumSortCategoryBlock.DECORATION;
 	}
 }
