@@ -272,8 +272,8 @@ tile.callisto.stone.name=Kallisto Stein
 tile.callisto.ore_iron.name=Kallisto Eisenerz
 tile.callisto.ore_tin.name=Kallisto Zinnerz
 tile.callisto.ore_copper.name=Kallisto Kupfererz
-tile.callisto.dried_oil.name=Callisto Dried Oil ##NEEDS TRANSLATE##
-tile.callisto.shale_oil.name=Callisto Shale Oil ##NEEDS TRANSLATE##
+tile.callisto.dried_oil.name=Kallisto Trockenöl 
+tile.callisto.shale_oil.name=Kallisto Schieferöl 
 
 tile.deimos.surface.name=Deimos Oberflächengestein
 tile.deimos.sub_surface.name=Deimos Untergrundgestein
@@ -431,22 +431,22 @@ tile.advanced_fuel_loader.name=Fortgeschrittener Treibstofftanker
 tile.ultimate_fuel_loader.name=Ultimativer Treibstofftanker
 tile.vehicle_charger.name=Ladedock für Fahrzeuge
 tile.basic_purifier.name=Einfacher Reiniger
-tile.basic_densifier.name=Basic Densifier ##NEEDS TRANSLATE##
+tile.basic_densifier.name=Einfacher Verdichter 
 tile.basic_decontamination_unit.name=Einfache Dekontaminationseinheit
 tile.basic_decontamination_unit_fake_block.name=Einfache Dekontaminationseinheit
 
-tile.advanced_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
-tile.ultimate_fuel_loader.description=After being connected to a launch pad, a Fuel Loader will allow fuel to passed into the connected Rocket or other vehicle. ##NEEDS TRANSLATE##
-tile.advanced_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
-tile.ultimate_refinery.description=Refinery will take an input of oil and energy, and output fuel used for rockets and vehicles. ##NEEDS TRANSLATE##
-tile.basic_decrystallizer.description=Used to convert Iodized Salt into Crystallized Water ##NEEDS TRANSLATE##
-tile.basic_crystallizer.description=Used to convert Crystallized Water into Iodized Salt ##NEEDS TRANSLATE##
-tile.basic_smasher.description=Used to smash blocks into pieces ##NEEDS TRANSLATE##
-tile.basic_chemical_injector.description=Used to combine a Blocks/Items into a chemical ##NEEDS TRANSLATE##
-tile.basic_solar_evaporation_chamber.description=Used to subject the input resource to evaporation ##NEEDS TRANSLATE##
-tile.basic_purifier.description=Used to Purify Infected & Radioactive Water ##NEEDS TRANSLATE##
-tile.basic_densifier.description=Used to compress Fluids into a dense form ##NEEDS TRANSLATE##
-tile.vehicle_charger.description=Place next to Vehicle Charging Pad or Powered Rocket Launch Pad to provide charging abilities ##NEEDS TRANSLATE##
+tile.advanced_fuel_loader.description=Nach dem Anschließen an eine Startrampe lässt ein Kraftstofflader Kraftstoff in die angeschlossene Rakete oder ein anderes Fahrzeug gelangen. 
+tile.ultimate_fuel_loader.description=Nach dem Anschließen an eine Startrampe lässt ein Kraftstofflader Kraftstoff in die angeschlossene Rakete oder ein anderes Fahrzeug gelangen. 
+tile.advanced_refinery.description=Die Raffinerie wird Öl und Energie verbrauchen und Treibstoff für Raketen und Fahrzeuge abgeben. 
+tile.ultimate_refinery.description=Die Raffinerie wird Öl und Energie verbrauchen und Treibstoff für Raketen und Fahrzeuge abgeben. 
+tile.basic_decrystallizer.description=Wird verwendet, um Jodsalz in kristallisiertes Wasser umzuwandeln 
+tile.basic_crystallizer.description=Wird verwendet, um Jodsalz in kristallisiertes Wasser umzuwandeln 
+tile.basic_smasher.description=Wird verwendet, um Blöcke in Stücke zu zerschlagen 
+tile.basic_chemical_injector.description=Wird verwendet, um Blöcke / Gegenstände zu eine Chemikalie zu kombinieren 
+tile.basic_solar_evaporation_chamber.description=Wird verwendet, um die Eingaberessource zu verdunsten 
+tile.basic_purifier.description=Zur Reinigung von infiziertem und radioaktivem Wasser 
+tile.basic_densifier.description=Wird zum Verdichten von Flüssigkeiten verwendet 
+tile.vehicle_charger.description=Platziere es neben dem Ladedock für Fahrzeuge oder der Powered Raketenstartrampe, um die Ladefähigkeit zu verbessern ##NEEDS TRANSLATE##
 
 #Machine Containers
 container.solarhybrid.name=Hybrides Solarmodul
@@ -466,7 +466,7 @@ container.ultimate.fuelloader.name=Ultimativer Treibstofftanker
 container.basic.solar.evaporation.chamber.name=Einfache Solarverdampfungskammer
 container.vehicle.charger.name=Ladedock für Fahrzeuge
 container.basic.purifier.name=Einfacher Reiniger
-container.basic.densifier.name=Basic Densifier ##NEEDS TRANSLATE##
+container.basic.densifier.name=Einfacher Verdichter 
 container.basic.decontamination.unit.name=Einfache Dekontaminationseinheit
 
 #GUI Components/Messages
@@ -518,18 +518,18 @@ gui.bucket.message.finding.2.nitrogen_ice_fluid=auf Triton
 gui.bucket.message.crafting=Drücke R um zu sehen wie man sie aufnimmt
 gui.status.missing.inputs.name=Fehlende Gegenstände/Flüssigkeiten
 gui.status.missing.power.name=Fehlender Strom
-gui.densifier_input.desc.0=You can place the following ##NEEDS TRANSLATE##
-gui.densifier_input.desc.1=buckets in this slot: ##NEEDS TRANSLATE##
-gui.densifier_input.desc.2=Liquid Caramel ##NEEDS TRANSLATE##
-gui.densifier_input.desc.3=Liquid Chocolate ##NEEDS TRANSLATE##
-gui.densifier_input.desc.4=Nitrogen Ice ##NEEDS TRANSLATE##
-gui.densifier_input.desc.5=1 Bucket of Fluid = 1000mb ##NEEDS TRANSLATE##
-gui.message.general.tank.name=Fluid Tank ##NEEDS TRANSLATE##
-gui.message.general.tank.fluid.name=Fluid ##NEEDS TRANSLATE##
-gui.status.densifier.name=Densifying ##NEEDS TRANSLATE##
+gui.densifier_input.desc.0=Sie können folgende Eimer 
+gui.densifier_input.desc.1=in diesen Steckplatz stellen: 
+gui.densifier_input.desc.2=Flüssiges Karamell 
+gui.densifier_input.desc.3=Flüssige Schokolade 
+gui.densifier_input.desc.4=Stickstoff-Eis 
+gui.densifier_input.desc.5=1 Eimer Flüssigkeit = 1000mb 
+gui.message.general.tank.name=Flüssigkeitsbehälter 
+gui.message.general.tank.fluid.name=Flüssigkeit 
+gui.status.densifier.name=Verdichtung 
 gui.bucket.message.extreme.reactors.compact=Diese Flüssigkeit ist kompatibel mit Extreme Reactors
 gui.radiation.reduced.message=Die Schwere deiner Verstrahlung wurde reduziert um
-gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
+gui.radiation.reduced.message.2=von Ihrem ursprünglichen / aktuellen Betrag 
 gui.radiation.current.message=So schwer bist du aktuell verstrahlt
 gui.radiation.subject.message=Du gehörst nun
 gui.radiation.reverse.message=Folgendermaßen kannst du fortfahren: Schlafen, Dekontaminieren, Anti-Strahlungs-Getränke um den entstandenen Schaden rückgängig zu machen
@@ -576,52 +576,52 @@ gui.celestial_body_has_dungeon.name=Besitzt Verließ
 
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Fahrzeuginventar öffnen
-keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
-keybind.module.pre.launch.name=Open Pre Launch Checklist GUI ##NEEDS TRANSLATE##
-keybind.module.nasa.workbench.name=Open Portable NASA Workbench GUI ##NEEDS TRANSLATE##
+keybind.module.manager.name=Öffne den Modul-Manager 
+keybind.module.pre.launch.name=Öffne "Vor dem Start - Checkliste" GUI 
+keybind.module.nasa.workbench.name=Öffne "Tragbare Raketenwerkbank" GUI 
 
 #GUI Module Manager
-gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
-gui.modules_helmet.name=Helmet Modules ##NEEDS TRANSLATE##
-gui.modules_chest.name=Chest Modules ##NEEDS TRANSLATE##
-gui.modules_leggings.name=Leggings Modules ##NEEDS TRANSLATE##
-gui.modules_boots.name=Boots Modules ##NEEDS TRANSLATE##
-gui.module_list.name=Modules List ##NEEDS TRANSLATE##
-gui.button.install.name=Install ##NEEDS TRANSLATE##
-gui.button.uninstall.name=Uninstall ##NEEDS TRANSLATE##
-gui.button.disable_module.name=Enable ##NEEDS TRANSLATE##
-gui.button.enable_module.name=Disable ##NEEDS TRANSLATE##
-gui.module_cost.name=Cost ##NEEDS TRANSLATE##
-gui.module.installed.name=Module Installed! ##NEEDS TRANSLATE##
-gui.module.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
-gui.module.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
-gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
-gui.module.description.name=Module Description ##NEEDS TRANSLATE##
-gui.module.name.name=Module Name ##NEEDS TRANSLATE##
-gui.module.type.name=Module Type ##NEEDS TRANSLATE##
-gui.module.type.helmet.name=Helmet ##NEEDS TRANSLATE##
-gui.module.type.chest.name=Chestplate ##NEEDS TRANSLATE##
-gui.module.type.leggings.name=Leggings ##NEEDS TRANSLATE##
-gui.module.type.boots.name=Boots ##NEEDS TRANSLATE##
-gui.module.power.name=Module Power ##NEEDS TRANSLATE##
+gui.module_manager.name=Modul-Manager 
+gui.modules_helmet.name=Helm-Module 
+gui.modules_chest.name=Brustpanzer-Module 
+gui.modules_leggings.name=Beinschutz-Module 
+gui.modules_boots.name=Stiefel-Module 
+gui.module_list.name=Modulliste 
+gui.button.install.name=Installieren 
+gui.button.uninstall.name=Deinstallieren 
+gui.button.disable_module.name=Aktivieren 
+gui.button.enable_module.name=Deaktivieren 
+gui.module_cost.name=Kosten 
+gui.module.installed.name=Modul installiert! 
+gui.module.missing_requirements.name=Entschuldigung, Sie erfüllen nicht die Voraussetzungen, um dieses Modul zu installieren! 
+gui.module.already_installed.name=Sie haben dieses Modul bereits installiert! 
+gui.module.missing_armour.name=Installation nicht möglich, da ein Teil der Raumanzug-Rüstung fehlt! 
+gui.module.description.name=Modulbeschreibung 
+gui.module.name.name=Modulname 
+gui.module.type.name=Modultyp 
+gui.module.type.helmet.name=Helm 
+gui.module.type.chest.name=Brustpanzer 
+gui.module.type.leggings.name=Beinschutz 
+gui.module.type.boots.name=Stiefel 
+gui.module.power.name=Modulleistung 
 
-gui.module.sensor_glasses.name=Sensor Glasses ##NEEDS TRANSLATE##
-gui.module.no_fall_damage.name=No Fall Damage ##NEEDS TRANSLATE##
-gui.module.geiger_counter.name=Geiger Counter ##NEEDS TRANSLATE##
-gui.module.test.name=Test Module ##NEEDS TRANSLATE##
-gui.module.pre_launch_checklist.name=Pre Launch Checklist ##NEEDS TRANSLATE##
-gui.module.nasa_workbench.name=Portable NASA Workbench ##NEEDS TRANSLATE##
-gui.module.oxygen_tank_switch.name=Oxygen Tank Auto Swapper ##NEEDS TRANSLATE##
-gui.module.auto_space_gear_equip.name=Space Gear Auto Equip ##NEEDS TRANSLATE##
+gui.module.sensor_glasses.name=Sensorbrille 
+gui.module.no_fall_damage.name=Kein Fallschaden 
+gui.module.geiger_counter.name=Geigerzähler 
+gui.module.test.name=Testmodul 
+gui.module.pre_launch_checklist.name=Vor dem Start - Checkliste 
+gui.module.nasa_workbench.name=Tragbare Raketenwerkbank 
+gui.module.oxygen_tank_switch.name=Auto Sauerstofftank wechsler 
+gui.module.auto_space_gear_equip.name=Auto Raumanzug-Rüstung ausrüster 
 
-gui.module.sensor_glasses.desc=Functions the same as the Galacticraft Sensor Glasses ##NEEDS TRANSLATE##
-gui.module.no_fall_damage.desc=Removes fall damage from the player ##NEEDS TRANSLATE##
-gui.module.geiger_counter.desc=Displays your current amount of Radiation on your HUD/Screen ##NEEDS TRANSLATE##
-gui.module.test.desc=Test Module ##NEEDS TRANSLATE##
-gui.module.pre_launch_checklist.desc=Allows easy access to the Pre Launch Checklist from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
-gui.module.nasa_workbench.desc=Allows portable access to a NASA Workbench from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
-gui.module.oxygen_tank_switch.desc=Swappers out equipped empty tanks with any available non empty oxygen tank in your inventory ##NEEDS TRANSLATE##
-gui.module.auto_space_gear_equip.desc=Automatically equip any space related gear in your inventory ##NEEDS TRANSLATE##
+gui.module.sensor_glasses.desc=Funktioniert wie die Galacticraft-Sensorbrille 
+gui.module.no_fall_damage.desc=Entfernt Sturzschäden vom Spieler 
+gui.module.geiger_counter.desc=Zeigt Ihre aktuelle Strahlungsmenge auf Ihrem HUD / Bildschirm an 
+gui.module.test.desc=Testmodul 
+gui.module.pre_launch_checklist.desc=Ermöglicht den einfachen Zugriff auf die Vor dem Start - Checkliste von Galacticraft. Siehe Tastenbelegung! 
+gui.module.nasa_workbench.desc=Ermöglicht den portablen Zugriff auf eine Raketenwerkbank von Galacticraft. Siehe Tastenbelegung! 
+gui.module.oxygen_tank_switch.desc=Tauscht leere Tanks mit einem verfügbaren nicht leeren Sauerstofftank in Ihrem Inventar aus 
+gui.module.auto_space_gear_equip.desc=Rüstet alle Raumanzugsgegenstände in Ihrem Inventar automatisch aus 
 
 #Other Blocks
 tile.nuclear_bomb.name=Atombombe
@@ -1070,40 +1070,40 @@ item.green_diamond_boots.name=Stiefel aus grünem Diamant
 
 item.tier1_space_suit_helmet.name=Stufe 1 Raumanzug-Helm
 item.tier1_space_suit_chest.name=Stufe 1 Raumanzug-Brustschutz
-item.tier1_space_suit_jetpack_chest.name=Tier 1 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
+item.tier1_space_suit_jetpack_chest.name=Stufe 1 Jetpack-Raumanzug-Brustschutz 
 item.tier1_space_suit_legings.name=Stufe 1 Raumanzug-Hose
 item.tier1_space_suit_boots.name=Stufe 1 Raumanzug-Stiefel
 item.tier1_space_suit_gravity_boots.name=Stufe 1 Raumanzug-Stiefel mit Gravitationshilfe
 item.tier2_space_suit_helmet.name=Stufe 2 Raumanzug-Helm
 item.tier2_space_suit_chest.name=Stufe 2 Raumanzug-Brustschutz
-item.tier2_space_suit_jetpack_chest.name=Tier 2 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
+item.tier2_space_suit_jetpack_chest.name=Stufe 2 Jetpack-Raumanzug-Brustschutz 
 item.tier2_space_suit_legings.name=Stufe 2 Raumanzug-Hose
 item.tier2_space_suit_boots.name=Stufe 2 Raumanzug-Stiefel
 item.tier2_space_suit_gravity_boots.name=Stufe 2 Raumanzug-Stiefel mit Gravitationshilfe
 item.tier3_space_suit_helmet.name=Stufe 3 Raumanzug-Helm
 item.tier3_space_suit_chest.name=Stufe 3 Raumanzug-Brustschutz
-item.tier3_space_suit_jetpack_chest.name=Tier 3 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
+item.tier3_space_suit_jetpack_chest.name=Stufe 3 Jetpack-Raumanzug-Brustschutz 
 item.tier3_space_suit_legings.name=Stufe 3 Raumanzug-Hose
 item.tier3_space_suit_boots.name=Stufe 3 Raumanzug-Stiefel
 item.tier3_space_suit_gravity_boots.name=Stufe 3 Raumanzug-Stiefel mit Gravitationshilfe
 item.tier4_space_suit_helmet.name=Stufe 4 Raumanzug-Helm
 item.tier4_space_suit_chest.name=Stufe 4 Raumanzug-Brustschutz
-item.tier4_space_suit_jetpack_chest.name=Tier 4 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
+item.tier4_space_suit_jetpack_chest.name=Stufe 4 Jetpack-Raumanzug-Brustschutz 
 item.tier4_space_suit_legings.name=Stufe 4 Raumanzug-Hose
 item.tier4_space_suit_boots.name=Stufe 4 Raumanzug-Stiefel
 item.tier4_space_suit_gravity_boots.name=Stufe 4 Raumanzug-Stiefel mit Gravitationshilfe
 
-space.suit.information=Used to fully stop pressure damage ##NEEDS TRANSLATE##
-space.suit.information.2=& to slow down the rate of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra=The tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
-space.suit.information.extra.2=towards reducing the amount of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra.3=The higher the Space Suit tier the ##NEEDS TRANSLATE##
-space.suit.information.extra.4=slower radiation will be gained ##NEEDS TRANSLATE##
-space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
-space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE##
+space.suit.information=Wird verwendet, um Druckschäden vollständig zu stoppen 
+space.suit.information.2=& die gewonnene Strahlungsrate zu verlangsamen 
+space.suit.information.extra=Die Stufe jedes Teils der Raumanzüge zählt 
+space.suit.information.extra.2=zur Verringerung der Strahlenbelastung 
+space.suit.information.extra.3=Je höher die Stufe des Raumanzugs, 
+space.suit.information.extra.4=desto langsamer wird man verstrahlt 
+space.suit.power.info=Unterstützt die folgenden Stromversorgungssysteme, 
+space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 
 
-item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
-item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
+item_desc.spacesuit.shift.name=Drücke %s für Informationen zu Druck und Strahlung 
+item_desc.spacesuit.module.shift.name=Drücke %s für installierte Module 
 
 item.tier3_thermal_helm.name=Stufe 3 Thermalpolsterhelm
 item.tier3_thermal_chestplate.name=Stufe 3 Thermalpolsterbrustpanzer
@@ -1165,61 +1165,61 @@ item.tier4_un_prepared_space_suit_legings.name=Stufe 4 Unvollständiger Raumanzu
 item.tier4_un_prepared_space_suit_boots.name=Stufe 4 Unvollständiger Raumanzug-Stiefel
 
 #Module Items
-item.module_items.no_fall_boots.name=No Fall Damage Module ##NEEDS TRANSLATE##
-item.module_items.oxygen_controller.name=Oxygen Controller ##NEEDS TRANSLATE##
-item.module_items.space_gear_controller.name=Space Gear Controller ##NEEDS TRANSLATE##
+item.module_items.no_fall_boots.name=Kein Fallschaden-Modul 
+item.module_items.oxygen_controller.name=Sauerstoffregler 
+item.module_items.space_gear_controller.name=Raumanzugregler 
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Sehr großer Sauerstofftank
 item.oxygen_tank_extremely_heavy_full.name=Extrem großer Sauerstofftank
 
-item.oxygen_tank_light_full_black.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_red.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_green.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_brown.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_blue.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_purple.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_cyan.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_light_gray.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_gray.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_pink.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_yellow.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_light_blue.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_magenta.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_orange.name=Light Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_light_full_white.name=Light Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_light_full_black.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_red.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_green.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_brown.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_blue.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_purple.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_cyan.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_light_gray.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_gray.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_pink.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_yellow.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_light_blue.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_magenta.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_orange.name=Kleiner Sauerstofftank 
+item.oxygen_tank_light_full_white.name=Kleiner Sauerstofftank 
 
-item.oxygen_tank_med_full_black.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_red.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_green.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_brown.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_purple.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_cyan.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_light_gray.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_gray.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_pink.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_yellow.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_light_blue.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_magenta.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_lime.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_med_full_white.name=Medium Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_med_full_black.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_red.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_green.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_brown.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_blue.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_purple.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_cyan.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_light_gray.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_gray.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_pink.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_yellow.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_light_blue.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_magenta.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_lime.name=Mittlerer Sauerstofftank 
+item.oxygen_tank_med_full_white.name=Mittlerer Sauerstofftank 
 
-item.oxygen_tank_heavy_full_black.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_lime.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_green.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_brown.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_blue.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_purple.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_cyan.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_light_gray.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_gray.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_pink.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_yellow.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_light_blue.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_magenta.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_orange.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
-item.oxygen_tank_heavy_full_white.name=Heavy Oxygen Tank ##NEEDS TRANSLATE##
+item.oxygen_tank_heavy_full_black.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_lime.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_green.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_brown.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_blue.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_purple.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_cyan.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_light_gray.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_gray.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_pink.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_yellow.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_light_blue.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_magenta.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_orange.name=Großer Sauerstofftank 
+item.oxygen_tank_heavy_full_white.name=Großer Sauerstofftank 
 
 #Radiation Items
 item.iodide_salt.name=Iodsalz
@@ -1227,7 +1227,7 @@ item.potassium_iodide.name=Kaliumiodid
 item.potassium.name=Kalium
 item.potash_shards.name=Potaschenstück
 item.anti_radiation.name=Anti-Verstrahlt
-anti_radiation.desc=Reduces Radiation Level by {{PERCENT}} of the current amount ##NEEDS TRANSLATE##
+anti_radiation.desc=Reduziert den Strahlungspegel um {{PERCENT}} der aktuellen Menge ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=Stufe 1 komplettes Set
@@ -1298,15 +1298,15 @@ item.geiger_counter.name=Geigerzähler
 item.white_sugar_cane_item.name=Weißer Zuckerrohr
 geiger.counter.desc=Rechtsklick um die Schwere deiner Verstrahlung zu sehen!
 geiger.counter.location.desc=Kann in einem Merkurverließ erziehlt werden!
-item.chocolate_bar.name=Chocolate Bar ##NEEDS TRANSLATE##
-item.caramel_bar.name=Caramel Bar ##NEEDS TRANSLATE##
+item.chocolate_bar.name=Schokoladenriegel 
+item.caramel_bar.name=Karamellriegel 
 
 #Canned Food
 item.canned_food.dehydrated_porkchop.name=Getrocknetes Schweinefleisch
 item.canned_food.dehydrated_fish.name=Getrockneter Fisch
 item.canned_food.dehydrated_salmon.name=Getrockneter Lachs
 item.canned_food.dehydrated_chicken.name=Getrocknetes Hühnerfleisch
-item.canned_food.dehydrated_beef.name=Dehydrated Beef ##NEEDS TRANSLATE##
+item.canned_food.dehydrated_beef.name=Dehydriertes Rindfleisch 
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=Stufe 1 Batterie
@@ -1442,10 +1442,10 @@ fluid.liquid_chocolate_fluid=Flüssige Schokolade
 fluid.liquid_caramel_fluid=Flüssiges Karamel
 
 #Gui/Damage Sources
-gui.warning.high.pressure=High Environment Pressure ##NEEDS TRANSLATE##
-gui.warning.high.radiation=Warning High Radiation Consumed ##NEEDS TRANSLATE##
-gui.warning.med.radiation=Medium Radiation Consumed ##NEEDS TRANSLATE##
-gui.warning.low.radiation=Very Low Radiation Consumed ##NEEDS TRANSLATE##
+gui.warning.high.pressure=Hoher Umgebungsdruck 
+gui.warning.high.radiation=Warnung Hohe Strahlenbelastung 
+gui.warning.med.radiation=mittlere Strahlenbelastung 
+gui.warning.low.radiation=sehr geringe Strahlenbelastung 
 death.attack.radiation=%1$s hatte Strahlungsabschirmung vergessen.
 death.attack.pressure=%1$s hatte Druckschutz vergessen.
 death.attack.hypothermia=%1$s starb an Unterkühlung.
@@ -1458,7 +1458,7 @@ checklist.tier_3_thermal_padding.key=Ziehe einen Stufe 3 Thermalpolsteranzug an
 checklist.tier_4_thermal_padding.key=Ziehe einen Stufe 4 Thermalpolsteranzug an
 checklist.tier_5_thermal_padding.key=Ziehe einen Stufe 5 Thermalpolsteranzug an
 
-checklist.space_suit.key=Any Tier of Space Suit ##NEEDS TRANSLATE##
+checklist.space_suit.key=irgendeine Stufe eines Raumanzugs 
 
 satellite.space_station.mercury=Merkur Raumstation
 satellite.space_station.venus=Venus Raumstation
@@ -1551,8 +1551,8 @@ planet.Venus=Venus
 
 #Other Blocks
 tile.slime_block.name=Schleimblock
-tile.deimos.ore_lead.name=Deimos Lead Ore ##NEEDS TRANSLATE##
-tile.phobos.ore_lead.name=Phobos Lead Ore ##NEEDS TRANSLATE##
+tile.deimos.ore_lead.name=Deimos Bleierz 
+tile.phobos.ore_lead.name=Phobos Bleierz 
 
 #Other Items
 item.tier4_items.ash_shard.name=Aschenstück
@@ -1565,16 +1565,16 @@ item.tier4_items.grinding_wheel.name=Schleifscheibe
 item.thermal_cloth.tier2_thermal_cloth.name=Stufe 2 Thermalpolster
 
 #MorePlanetsCompactBlocks&Items
-tile.treasure_chest_t4_saturn.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
-tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest ##NEEDS TRANSLATE##
-tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest ##NEEDS TRANSLATE##
-tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest ##NEEDS TRANSLATE##
+tile.treasure_chest_t4_saturn.name=Stufe 4 Schatztruhe 
+tile.treasure_chest_t4_uranus.name=Stufe 4 Schatztruhe 
+tile.treasure_chest_t5_neptune.name=Stufe 5 Schatztruhe 
+tile.treasure_chest_t6_eris.name=Stufe 6 Schatztruhe 
 
 #Keys
-item.key.T4_saturn.name=Schlüssel für Stufe 4 Verließkiste
-item.key.T4_uranus.name=Schlüssel für Stufe 4 Verließkiste
-item.key.T5_neptune.name=Schlüssel für Stufe 5 Verließkiste
-item.key.T6_eris.name=Schlüssel für Stufe 6 Verließkiste
+item.key.T4_saturn.name=Schlüssel für Stufe 4 Schatztruhe
+item.key.T4_uranus.name=Schlüssel für Stufe 4 Schatztruhe
+item.key.T5_neptune.name=Schlüssel für Stufe 5 Schatztruhe
+item.key.T6_eris.name=Schlüssel für Stufe 6 Schatztruhe
 
 #Thermal Paddings
 item.tier2_thermal_helm.name=Stufe 2 Thermopolsterhelm
