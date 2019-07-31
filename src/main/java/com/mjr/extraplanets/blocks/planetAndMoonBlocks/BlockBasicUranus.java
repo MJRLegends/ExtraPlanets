@@ -85,8 +85,7 @@ public class BlockBasicUranus extends Block implements IDetectableResource, IPla
 	}
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
-		IBlockState state = world.getBlockState(pos);
+	public float getBlockHardness(IBlockState state, World world, BlockPos pos) {
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE || state.getValue(BASIC_TYPE) == EnumBlockBasic.SUB_SURFACE)
 			return 0.5F;
 		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_CRYISTAL || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_BLUE_GEM)

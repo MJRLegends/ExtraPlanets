@@ -83,8 +83,7 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	}
 
 	@Override
-	public float getBlockHardness(IBlockState blockState, World world, BlockPos pos) {
-		IBlockState state = world.getBlockState(pos);
+	public float getBlockHardness(IBlockState state, World world, BlockPos pos) {
 		if (state.getValue(BASIC_TYPE) == EnumBlockBasic.DIRT)
 			return 0.5F;
 		else if (state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_COPPER || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_IRON || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_TIN || state.getValue(BASIC_TYPE) == EnumBlockBasic.ORE_DENSE_COAL
