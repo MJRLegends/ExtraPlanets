@@ -121,6 +121,6 @@ public class BlockDecorativeBlocks2 extends Block implements IDetectableResource
 
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {
-		return EnumSortCategoryBlock.GENERAL;
+		return EnumSortCategoryBlock.DECORATION;
 	}
 }

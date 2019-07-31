@@ -124,6 +124,6 @@ public class BlockCandyBlocksHorizontal extends Block implements IDetectableReso
 
 	@Override
 	public EnumSortCategoryBlock getCategory(int meta) {
-		return EnumSortCategoryBlock.GENERAL;
+		return EnumSortCategoryBlock.DECORATION;
 	}
 }
