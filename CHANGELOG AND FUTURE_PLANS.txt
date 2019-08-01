@@ -5,6 +5,16 @@
 
 
 ===========================================Released Updates===========================================
+v0.9.2
+*Updated ko_KR.lang (Thanks to mindy15963)
+*Updated de_DE.lang (Thanks to Rumspringa90)
+*Fix possible init issues due to network packets delay with Custom Celestial Selection screen
+*Use block state already provided in planet/moon blocks getBlockHardness
+*Fixed sensor glasses picking up wrong/missing out valuable blocks on planets/moons
+*Added Volcanic Rock, Frozen Nitrogen, Lead ore, Potash to be detected by sensor glasses
+*Fixed issue #423
+*Fixed Saturn Slime Ore Explosion Resistance, Block Hardness being incorrect
+
 v0.9.1
 *Improvements to output messages for mod compact not working, Fixed #440
 *Improvement towards #439
