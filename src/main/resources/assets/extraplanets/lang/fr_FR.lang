@@ -538,6 +538,7 @@ gui.radiation.type.message=Radiation
 gui.status.waiting.on.player.name=Aucun joueur dans la machine
 gui.message.finding.block=Peut être trouvé sur
 gui.message.finding.volcanic.rock=Jupiter & Io
+gui.message.finding.potash=Ceres, deep underground ##NEEDS TRANSLATE##
 gui.message.decontamination.unit=Réduit le niveau de rayonnement de 10%
 gui.battery_slot.desc.custom=Recommandé d'utiliser une batterie massive
 gui.radiation.cancel.message=Vous pouvez utiliser des scellants d'oxygène avec une mise à niveau du contrôleur thermique ambiant pour une protection totale contre le rayonnement et la pression.

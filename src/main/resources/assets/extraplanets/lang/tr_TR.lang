@@ -538,6 +538,7 @@ gui.radiation.type.message=Radrasyon
 gui.status.waiting.on.player.name=Makinede oyuncu yok
 gui.message.finding.block=Bunu bulabilirsin
 gui.message.finding.volcanic.rock=Jüpiter & Io
+gui.message.finding.potash=Ceres, deep underground ##NEEDS TRANSLATE##
 gui.message.decontamination.unit=Radrasyon seviyeni 10% düşürür
 gui.battery_slot.desc.custom=Büyük batarya kullanman önerilir
 gui.radiation.cancel.message=Radrasyon ve Basınçtan korunmak için oksijen aletleri kullanabilirsin

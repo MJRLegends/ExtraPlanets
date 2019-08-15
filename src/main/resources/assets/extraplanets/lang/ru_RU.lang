@@ -538,6 +538,7 @@ gui.radiation.type.message=Радиация
 gui.status.waiting.on.player.name=Нет игроков в машине
 gui.message.finding.block=Можно найти на
 gui.message.finding.volcanic.rock=Юпитер и Ио
+gui.message.finding.potash=Ceres, deep underground ##NEEDS TRANSLATE##
 gui.message.decontamination.unit=Снижает уровень радиации на 10%
 gui.battery_slot.desc.custom=Рекомендуется использовать в Массивном аккумуляторе
 gui.radiation.cancel.message=Вы можете использовать кислородные уплотнители с улучшением температурного контроллера для полной защиты от излучения и давления
