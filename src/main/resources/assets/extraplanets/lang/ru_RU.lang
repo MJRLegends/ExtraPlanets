@@ -105,6 +105,7 @@ moon.ioEP=Ио 2.0
 moon.deimosEP=Феймос 2.0
 moon.phobosEP=Фобос 2.0
 moon.oberonEP=Оберон 2.0
+moon.titanEP=Titan 2.0 ##NEEDS TRANSLATE##
 
 #Planet Blocks
 tile.mercury.surface.name=Поверхность Меркурия
