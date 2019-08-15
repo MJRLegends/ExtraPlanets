@@ -5,6 +5,15 @@
 
 
 ===========================================Released Updates===========================================
+v0.5.6
+*Fixed missing lang for titan moon when galaxyspace compact is enabled
+*Added support for ExtraPlanets Celestial Map to support PlanetProgressions research system
+*Set minimum version for an optional dependency of PlanetProgression, so things dont break if older version of PlanetProgression is used
+*Added PlanetProgression API jar to build.gradle
+*Fixed issue with names sometimes going weird on the Galaxy/Celestial Map
+*Added tooltip to Potash to help players find its location
+*Fixed Purifier, Crystallizer and Densifier not working with multiple Capabilities, Fixes issue #466
+
 v0.5.5
 *Fixed decontamination unit inventory null pointer error, Fixed issue #458
 *Updated ko_KR.lang (Thanks to mindy15963)
