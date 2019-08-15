@@ -174,7 +174,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						if (Loader.isModLoaded("planetprogression")) {
 							for (Moon moon : moons) {
 								if (PlanetProgressionCompatibility.isReasearched(Minecraft.getMinecraft().thePlayer, moon)) {
-									bodyList.add(planet);
+									bodyList.add(moon);
 								}
 							}
 						} else {
