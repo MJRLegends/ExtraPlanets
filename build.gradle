@@ -3,6 +3,7 @@ def jei_version="4.8.5.147"
 def version_minetweaker="4.0.8.277"
 def version_rf="1.12-2.1.0.6"
 def version_mjrlegendslib="1.12.2-1.1.8"
+def version_planetprogression="1.12.2-0.3.8"
 def version_galacticraft="1.12.2-4.0.2.212"
 def version_mekanism="1.12.2-9.4.13.349"
 def version_ic2="2.8.99-ex112"
@@ -71,6 +72,7 @@ dependencies {
 	deobfCompile "cofh:RedstoneFlux:${version_rf}:deobf"
 	compile "net.industrial-craft:industrialcraft-2:${version_ic2}:api"
 	deobfCompile "com.mjr.mjrlegendslib:MJRLegendsLib:${version_mjrlegendslib}:dev"
+	compile "com.mjr.planetprogression:PlanetProgression:${version_planetprogression}:api"
 	compile files (
 		"Galacticraft-API-${version_galacticraft}.jar",
 		"GalacticraftCore-Dev-${version_galacticraft}.jar",
