@@ -105,6 +105,7 @@ moon.ioEP=Io 2.0
 moon.deimosEP=Deimos 2.0
 moon.phobosEP=Phobos 2.0
 moon.oberonEP=Oberon 2.0
+moon.titanEP=Titan 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=Mercury Surface Rock

@@ -105,6 +105,7 @@ moon.ioEP=木衛一 2.0
 moon.deimosEP=火衛二 2.0
 moon.phobosEP=火衛一 2.0
 moon.oberonEP=天衛四 2.0
+moon.titanEP=Titan 2.0 ##NEEDS TRANSLATE##
 
 #Planet Blocks
 tile.mercury.surface.name=水星地表岩石

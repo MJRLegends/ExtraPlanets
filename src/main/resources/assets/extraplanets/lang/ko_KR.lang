@@ -105,6 +105,7 @@ moon.ioEP=제2이오
 moon.deimosEP=제2데이모스
 moon.phobosEP=제2포모스
 moon.oberonEP=제2오베론
+moon.titanEP=Titan 2.0 ##NEEDS TRANSLATE##
 
 #Planet Blocks
 tile.mercury.surface.name=수성 표면석
