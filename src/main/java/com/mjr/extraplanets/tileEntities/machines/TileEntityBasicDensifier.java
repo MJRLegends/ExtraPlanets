@@ -55,7 +55,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 
 	@Override
 	public boolean hasCapability(Capability<?> capability, EnumFacing facing) {
-		return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY;
+        return capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY || super.hasCapability(capability, facing);
 	}
 
 	@SuppressWarnings("unchecked")
@@ -64,7 +64,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		if (capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY) {
 			return (T) new FluidHandlerWrapper(this, facing);
 		}
-		return null;
+        return super.getCapability(capability, facing);
 	}
 
 	@Override
