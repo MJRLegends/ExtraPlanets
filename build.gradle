@@ -110,7 +110,10 @@ task deobfJar(type: Jar) {
 }
 
 task apiJar(type: Jar) {
-    from(sourceSets.main.java) {
+    from(sourceSets.main.output) {
+        include "com/mjr/extraplanets/api/**"
+    }
+	from(sourceSets.main.java) {
         include "com/mjr/extraplanets/api/**"
     }
     classifier = 'api'
