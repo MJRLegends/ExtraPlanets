@@ -538,6 +538,7 @@ gui.radiation.type.message=輻射
 gui.status.waiting.on.player.name=沒有玩家在機器中
 gui.message.finding.block=可以在
 gui.message.finding.volcanic.rock=木星和木衛一找到
+gui.message.finding.potash=Ceres, deep underground ##NEEDS TRANSLATE##
 gui.message.decontamination.unit=將輻射水平降低10%
 gui.battery_slot.desc.custom=建議使用大容量電池
 gui.radiation.cancel.message=你可以使用氧氣封口機進行環境溫度控制器升級，以充分保護輻射和壓力

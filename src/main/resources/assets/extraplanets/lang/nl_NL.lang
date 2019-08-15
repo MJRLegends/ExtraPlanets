@@ -538,6 +538,7 @@ gui.radiation.type.message=Radioactiviteit
 gui.status.waiting.on.player.name=Geen speler in het apparaat
 gui.message.finding.block=Kan gevonden worden op
 gui.message.finding.volcanic.rock=Jupiter & Io
+gui.message.finding.potash=Ceres, deep underground ##NEEDS TRANSLATE##
 gui.message.decontamination.unit=Verminderd Radioactiviteit met 10%
 gui.battery_slot.desc.custom=Gigantische Batterij wordt aangeraden te gebruiken
 gui.radiation.cancel.message=Je kan Zuurstofafdichter met Omgevingswarmte Bestuurder upgrade gebruiken voor volledige bescherming tegen Radioactiviteit en druk

@@ -391,6 +391,9 @@ public class MainHandlerClient {
 				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.volcanic.rock"));
 			} else if (stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT))) {
 				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.decontamination.unit"));
+			} else if (stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))) {
+				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.block"));
+				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.potash"));
 			}
 		}
 	}
