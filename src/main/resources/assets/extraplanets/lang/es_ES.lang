@@ -105,6 +105,7 @@ moon.ioEP=Ío 2.0
 moon.deimosEP=Deimos 2.0
 moon.phobosEP=Fobos 2.0
 moon.oberonEP=Oberón 2.0
+moon.titanEP=Titan 2.0 ##NEEDS TRANSLATE##
 
 #Planet Blocks
 tile.mercury.surface.name=Roca Mercuriana Superficial
