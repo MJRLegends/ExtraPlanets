@@ -1147,6 +1147,24 @@ tier2_armor_layer.desc=압축기 조합법: 티타늄괴 4개
 tier3_armor_layer.desc=압축기 조합법: 팔라듐괴 4개
 tier4_armor_layer.desc=압축기 조합법: 아연괴 4개
 
+module.pressure_module_1.name=Tier 1 Pressure Module ##NEEDS TRANSLATE##
+module.pressure_module_1.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.pressure_module_2.name=Tier 2 Pressure Module ##NEEDS TRANSLATE##
+module.pressure_module_2.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.pressure_module_3.name=Tier 3 Pressure Module ##NEEDS TRANSLATE##
+module.pressure_module_3.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.pressure_module_4.name=Tier 4 Pressure Module ##NEEDS TRANSLATE##
+module.pressure_module_4.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+
+module.radiation_module_1.name=Tier 1 Radiation Module ##NEEDS TRANSLATE##
+module.radiation_module_1.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.radiation_module_2.name=Tier 2 Radiation Module ##NEEDS TRANSLATE##
+module.radiation_module_2.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.radiation_module_3.name=Tier 3 Radiation Module ##NEEDS TRANSLATE##
+module.radiation_module_3.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.radiation_module_4.name=Tier 4 Radiation Module ##NEEDS TRANSLATE##
+module.radiation_module_4.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+
 #UnPrepared Space Suits
 item.tier1_un_prepared_space_suit_helmet.name=1티어 준비안된 우주복 투구
 item.tier1_un_prepared_space_suit_chest.name=1티어 준비안된 우주복 흉갑

@@ -1143,6 +1143,24 @@ tier2_armor_layer.desc=Compressor Recipe: 4 Titanium Ingots
 tier3_armor_layer.desc=Compressor Recipe: 4 Palladium Ingots
 tier4_armor_layer.desc=Compressor Recipe: 4 Zinc Ingots
 
+module.pressure_module_1.name=Tier 1 Pressure Module
+module.pressure_module_1.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations
+module.pressure_module_2.name=Tier 2 Pressure Module
+module.pressure_module_2.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations
+module.pressure_module_3.name=Tier 3 Pressure Module
+module.pressure_module_3.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations
+module.pressure_module_4.name=Tier 4 Pressure Module
+module.pressure_module_4.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations
+
+module.radiation_module_1.name=Tier 1 Radiation Module
+module.radiation_module_1.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations
+module.radiation_module_2.name=Tier 2 Radiation Module
+module.radiation_module_2.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations
+module.radiation_module_3.name=Tier 3 Radiation Module
+module.radiation_module_3.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations
+module.radiation_module_4.name=Tier 4 Radiation Module
+module.radiation_module_4.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations
+
 #UnPrepared Space Suits
 item.tier1_un_prepared_space_suit_helmet.name=Tier 1 Un-Prepared Space Suit Helmet
 item.tier1_un_prepared_space_suit_chest.name=Tier 1 Un-Prepared Space Suit Chestplate
