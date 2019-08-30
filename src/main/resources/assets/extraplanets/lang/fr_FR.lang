@@ -1146,6 +1146,24 @@ tier2_armor_layer.desc=Compressor Recipe: 4 Lingots de titane
 tier3_armor_layer.desc=Compressor Recipe: 4 Lingots de palladium
 tier4_armor_layer.desc=Compressor Recipe: 4 Lingots de zinc
 
+module.pressure_module_1.name=Tier 1 Pressure Module ##NEEDS TRANSLATE##
+module.pressure_module_1.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.pressure_module_2.name=Tier 2 Pressure Module ##NEEDS TRANSLATE##
+module.pressure_module_2.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.pressure_module_3.name=Tier 3 Pressure Module ##NEEDS TRANSLATE##
+module.pressure_module_3.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.pressure_module_4.name=Tier 4 Pressure Module ##NEEDS TRANSLATE##
+module.pressure_module_4.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+
+module.radiation_module_1.name=Tier 1 Radiation Module ##NEEDS TRANSLATE##
+module.radiation_module_1.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.radiation_module_2.name=Tier 2 Radiation Module ##NEEDS TRANSLATE##
+module.radiation_module_2.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.radiation_module_3.name=Tier 3 Radiation Module ##NEEDS TRANSLATE##
+module.radiation_module_3.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.radiation_module_4.name=Tier 4 Radiation Module ##NEEDS TRANSLATE##
+module.radiation_module_4.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+
 #UnPrepared Space Suitse
 item.tier1_un_prepared_space_suit_helmet.name=Casque de combinaison spatiale non preparé Niveau 1
 item.tier1_un_prepared_space_suit_chest.name=Plastron de combinaison spatiale non preparé Niveau 1

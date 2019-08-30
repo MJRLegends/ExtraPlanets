@@ -101,6 +101,7 @@ import com.mjr.extraplanets.client.render.tile.TileEntityT6TreasureChestRenderer
 import com.mjr.extraplanets.client.render.tile.TileEntityT7TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT8TreasureChestRenderer;
 import com.mjr.extraplanets.client.render.tile.TileEntityT9TreasureChestRenderer;
+import com.mjr.extraplanets.compatibility.MMPowersuitsModules.ModuleIcons;
 import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
@@ -177,10 +178,12 @@ import com.mjr.extraplanets.tileEntities.treasureChests.TileEntityT9TreasureChes
 import com.mjr.mjrlegendslib.util.ClientUtilities;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
@@ -1387,6 +1390,18 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_white");
 		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_yellow");
 		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "solar_panel");
+
+		if (event.getMap().equals(Minecraft.getMinecraft().getTextureMapBlocks())) {
+			ModuleIcons.pressureModule1 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier1_pressure_layer"));
+			ModuleIcons.pressureModule2 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier2_pressure_layer"));
+			ModuleIcons.pressureModule3 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier3_pressure_layer"));
+			ModuleIcons.pressureModule4 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier4_pressure_layer"));
+			
+			ModuleIcons.radiationModule1 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier1_radiation_layer"));
+			ModuleIcons.radiationModule2 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier2_radiation_layer"));
+			ModuleIcons.radiationModule3 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier3_radiation_layer"));
+			ModuleIcons.radiationModule4 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier4_radiation_layer"));
+		}
 	}
 
 	@Override

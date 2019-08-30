@@ -4,6 +4,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.logging.log4j.core.util.Loader;
+
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
@@ -11,6 +13,7 @@ import com.mjr.extraplanets.client.gui.GuiHandler;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
 import com.mjr.extraplanets.compatibility.ExtremeReactorsCompatibility;
 import com.mjr.extraplanets.compatibility.MCMultiPartCompatibility;
+import com.mjr.extraplanets.compatibility.MachineMusePowersuitsCompatibility;
 import com.mjr.extraplanets.compatibility.MorePlanetsCompatibility;
 import com.mjr.extraplanets.entities.EntityFireBombPrimed;
 import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
@@ -277,6 +280,9 @@ public class ExtraPlanets {
 		ExtraPlanets_Planets.init();
 		ExtraPlanets_Moons.init();
 		ExtraPlanets_SpaceStations.init();
+		
+		if(Loader.isClassAvailable("net.machinemuse.numina.module.IPowerModule"))
+			MachineMusePowersuitsCompatibility.init();
 
 		// Register RegistrationHandler
 		RegisterUtilities.registerEventHandler(new RegistrationHandler());

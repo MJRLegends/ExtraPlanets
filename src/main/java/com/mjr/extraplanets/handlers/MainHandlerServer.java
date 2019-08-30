@@ -16,6 +16,7 @@ import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.fluid.FluidBlockEP;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityProviderStatsClient;
 import com.mjr.extraplanets.client.handlers.capabilities.CapabilityStatsClientHandler;
+import com.mjr.extraplanets.compatibility.MachineMusePowersuitsCompatibility;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityProviderStats;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
@@ -63,6 +64,7 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerWakeUpEvent;
 import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fluids.BlockFluidBase;
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent;
@@ -316,7 +318,27 @@ public class MainHandlerServer {
 		}
 	}
 
-	public boolean isValidSpaceSuit(ItemStack helmet, ItemStack chest, ItemStack leggins, ItemStack boots, List<String> list) {
+	public boolean isValidSpaceSuit(ItemStack helmet, ItemStack chest, ItemStack leggins, ItemStack boots, List<String> list, boolean pressure) {
+		if(Loader.isModLoaded("powersuits")) {
+			boolean hasHelmet = false;
+			boolean hasChest = false;
+			boolean hasLeggins = false;
+			boolean hasBoots = false;
+			if(pressure) {
+				hasHelmet = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(helmet);
+				hasChest = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(chest);
+				hasLeggins = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(leggins);
+				hasBoots = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(boots);
+			}
+			else {
+				hasHelmet = MachineMusePowersuitsCompatibility.isRadiationModuleInstalled(helmet);
+				hasChest = MachineMusePowersuitsCompatibility.isRadiationModuleInstalled(chest);
+				hasLeggins = MachineMusePowersuitsCompatibility.isRadiationModuleInstalled(leggins);
+				hasBoots = MachineMusePowersuitsCompatibility.isRadiationModuleInstalled(boots);
+			}
+			if(hasHelmet && hasChest && hasLeggins && hasBoots)
+				return true;
+		}
 		boolean valid = false;
 		if (list.size() == 0)
 			list.add("test:test:0");
@@ -381,6 +403,9 @@ public class MainHandlerServer {
 	}
 
 	public int getTier(ItemStack testItem, List<String> list) {
+		if(Loader.isModLoaded("powersuits")) {
+			return MachineMusePowersuitsCompatibility.getHighestRadiationTierModuleInstalled(testItem);
+		}
 		if (testItem.getItem() instanceof IRadiationSuit)
 			return ((IRadiationSuit) testItem.getItem()).getArmorTier();
 
@@ -402,7 +427,7 @@ public class MainHandlerServer {
 			ItemStack leggins = playerMP.inventory.armorInventory.get(1);
 			ItemStack boots = playerMP.inventory.armorInventory.get(0);
 
-			if (!isValidSpaceSuit(helmet, chest, leggins, boots, list)) {
+			if (!isValidSpaceSuit(helmet, chest, leggins, boots, list, true)) {
 				float tempLevel = amount;
 				tempLevel = (tempLevel / 100) * 8;
 				if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE)
@@ -432,7 +457,7 @@ public class MainHandlerServer {
 		ItemStack chest = playerMP.inventory.armorInventory.get(2);
 		ItemStack leggins = playerMP.inventory.armorInventory.get(1);
 		ItemStack boots = playerMP.inventory.armorInventory.get(0);
-		if (!isValidSpaceSuit(helmet, chest, leggins, boots, list)) {
+		if (!isValidSpaceSuit(helmet, chest, leggins, boots, list, false)) {
 			damageModifer = 0.1;
 			doDamage = true;
 		} else {
