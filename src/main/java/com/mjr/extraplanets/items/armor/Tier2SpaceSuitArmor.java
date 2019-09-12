@@ -63,7 +63,7 @@ public class Tier2SpaceSuitArmor extends ElectricArmorBase implements IPressureS
 	public int gravityOverrideIfLow(EntityPlayer p) {
 		for (int i = 0; i < 4; i++)
 			if (p.inventory.armorInventory[i] != null)
-				if (p.inventory.armorInventory[i].getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS)
+				if (p.inventory.armorInventory[i].getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_GRAVITY_BOOTS)
 					return 55;
 		return 0;
 	}
@@ -72,7 +72,7 @@ public class Tier2SpaceSuitArmor extends ElectricArmorBase implements IPressureS
 	public int gravityOverrideIfHigh(EntityPlayer p) {
 		for (int i = 0; i < 4; i++)
 			if (p.inventory.armorInventory[i] != null)
-				if (p.inventory.armorInventory[i].getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_BOOTS)
+				if (p.inventory.armorInventory[i].getItem() == ExtraPlanets_Armor.TIER_2_SPACE_SUIT_GRAVITY_BOOTS)
 					return 75;
 		return 0;
 	}
