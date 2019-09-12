@@ -41,9 +41,9 @@ public class ItemBasicBattery extends ItemElectricBase implements IItemElectric 
 
 	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
-		if (tab == this.getCreativeTab()) {
-			list.add(new ItemStack(this, 1, 0));
-		}
+		if (!this.isInCreativeTab(tab))
+			return;
+		list.add(new ItemStack(this, 1, 0));
 	}
 
 	@Override

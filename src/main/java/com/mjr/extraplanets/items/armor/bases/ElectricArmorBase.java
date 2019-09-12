@@ -55,6 +55,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	public ElectricArmorBase(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(materialIn, renderIndexIn, equipmentSlotIn);
 		this.setMaxStackSize(1);
+		this.setHasSubtypes(true);
 		this.setMaxDamage(DAMAGE_RANGE);
 		this.setNoRepair();
 
@@ -202,10 +203,10 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 
 	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> list) {
-		if (tab == this.getCreativeTab()) {
-			list.add(ElectricItemHelper.getUncharged(new ItemStack(this)));
-			list.add(ElectricItemHelper.getWithCharge(new ItemStack(this), this.getMaxElectricityStored(new ItemStack(this))));
-		}
+		if (!this.isInCreativeTab(tab))
+			return;
+		list.add(ElectricItemHelper.getUncharged(new ItemStack(this)));
+		list.add(ElectricItemHelper.getWithCharge(new ItemStack(this), this.getMaxElectricityStored(new ItemStack(this))));
 	}
 
 	@Override
