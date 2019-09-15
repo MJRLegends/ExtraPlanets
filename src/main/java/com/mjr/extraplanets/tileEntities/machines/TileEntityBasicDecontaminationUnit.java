@@ -17,7 +17,6 @@ import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
 import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
 import micdoodle8.mods.galacticraft.core.blocks.BlockMulti.EnumBlockMultiType;
-import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
 import micdoodle8.mods.miccore.Annotations.NetworkedField;
@@ -233,17 +232,17 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 
 	@Override
 	public boolean isItemValidForSlot(int slotID, ItemStack itemStack) {
-		return slotID == 0 && ItemElectricBase.isElectricItem(itemStack.getItem());
+		return false;
 	}
 
 	@Override
 	public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction) {
-		return index == 0;
+		return false;
 	}
 
 	@Override
 	public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction) {
-		return this.isItemValidForSlot(index, itemStackIn);
+		return false;
 	}
 
 	@Override
