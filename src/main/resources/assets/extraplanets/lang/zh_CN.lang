@@ -388,20 +388,20 @@ tile.gold_grit.name=金细沙
 tile.emerald_grit.name=绿宝石细沙
 
 #Treasure Chests
-tile.treasure_chest_t4.name=4 阶宝箱
-tile.treasure_chest_t5.name=5 阶宝箱
-tile.treasure_chest_t6.name=6 阶宝箱
-tile.treasure_chest_t7.name=7 阶宝箱
-tile.treasure_chest_t8.name=8 阶宝箱
-tile.treasure_chest_t9.name=9 阶宝箱
-tile.treasure_chest_t10.name=10 阶宝箱
-tile.treasure_chest_t4.description=4 阶宝箱会在水星地牢形成。当你击败了水星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
-tile.treasure_chest_t5.description=5 阶宝箱会在木星地牢形成。当你击败了木星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
-tile.treasure_chest_t6.description=6 阶宝箱会在土星地牢形成。当你击败了土星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
-tile.treasure_chest_t7.description=7 阶宝箱会在天王星地牢形成。当你击败了天王星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
-tile.treasure_chest_t8.description=8 阶宝箱会在海王星地牢形成。当你击败了海王星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
-tile.treasure_chest_t9.description=9 阶宝箱会在冥王星地牢形成。当你击败了冥王星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
-tile.treasure_chest_t10.description=10 阶宝箱会在阋神星地牢形成。当你击败了阋神星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
+tile.treasure_chest_t4.name=四阶宝箱
+tile.treasure_chest_t5.name=五阶宝箱
+tile.treasure_chest_t6.name=六阶宝箱
+tile.treasure_chest_t7.name=七阶宝箱
+tile.treasure_chest_t8.name=八阶宝箱
+tile.treasure_chest_t9.name=九阶宝箱
+tile.treasure_chest_t10.name=十阶宝箱
+tile.treasure_chest_t4.description=四阶宝箱会在水星地牢形成。当你击败了水星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
+tile.treasure_chest_t5.description=五阶宝箱会在木星地牢形成。当你击败了木星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
+tile.treasure_chest_t6.description=六阶宝箱会在土星地牢形成。当你击败了土星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
+tile.treasure_chest_t7.description=七阶宝箱会在天王星地牢形成。当你击败了天王星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
+tile.treasure_chest_t8.description=八阶宝箱会在海王星地牢形成。当你击败了海王星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
+tile.treasure_chest_t9.description=九阶宝箱会在冥王星地牢形成。当你击败了冥王星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
+tile.treasure_chest_t10.description=十阶宝箱会在阋神星地牢形成。当你击败了阋神星地牢 BOSS 后，就能拿到钥匙来打开宝箱。
 
 #Machines
 tile.advanced_refinery.name=高级燃油精炼机
@@ -419,15 +419,15 @@ tile.basic_crystallizer.name=基础结晶器
 tile.basic_smasher.name=基础粉碎机
 tile.basic_chemical_injector.name=基础化学注入器
 tile.basic_solar_evaporation_chamber.name=基础太阳能蒸发室
-tile.advanced_launch_pad.tier2LandingPad.name=2阶火箭发射平台
-tile.advanced_launch_pad.tier3LandingPad.name=3阶火箭发射平台
+tile.advanced_launch_pad.tier2LandingPad.name=二阶火箭发射平台
+tile.advanced_launch_pad.tier3LandingPad.name=三阶火箭发射平台
 tile.advanced_launch_pad.poweredChargingPad.name=漫游车充能平台
 tile.advanced_launch_pad.rocketPoweredChargingPad.name=电力火箭发射平台
-tile.advanced_launch_pad_full.name=2/3 阶发射平台
-tile.advanced_launch_pad.tier2.desc=将其摆成 5x5 的形状，用以发射 4-8 阶火箭。
-tile.advanced_launch_pad.tier3.desc=将其摆成 5x5 的形状，用以发射 9-10 阶火箭。
+tile.advanced_launch_pad_full.name=二/三阶发射平台
+tile.advanced_launch_pad.tier2.desc=将其摆成 5x5 的形状，用以发射四-八阶火箭。
+tile.advanced_launch_pad.tier3.desc=将其摆成 5x5 的形状，用以发射九-十阶火箭。
 tile.advanced_launch_pad.powered.desc=将其摆成 5x5 的形状，来为火星漫游车和金星漫游车充能。
-tile.advanced_launch_pad.powered.rocket.desc=将其摆成 5x5 的形状，用以发射 10 阶电力火箭。
+tile.advanced_launch_pad.powered.rocket.desc=将其摆成 5x5 的形状，用以发射十阶电力火箭。
 tile.advanced_fuel_loader.name=高级燃料装载机
 tile.ultimate_fuel_loader.name=终极燃料装载机
 tile.vehicle_charger.name=漫游车充能器
@@ -578,52 +578,52 @@ gui.celestial_body_has_dungeon.name=有无地牢
 
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=打开电力漫游车物品栏
-keybind.module.manager.name=Open Module Manager ##NEEDS TRANSLATE##
-keybind.module.pre.launch.name=Open Pre Launch Checklist GUI ##NEEDS TRANSLATE##
-keybind.module.nasa.workbench.name=Open Portable NASA Workbench GUI ##NEEDS TRANSLATE##
+keybind.module.manager.name=打开模块管理器
+keybind.module.pre.launch.name=打开发射检查表 GUI
+keybind.module.nasa.workbench.name=打开便携式 NASA 工作台 GUI
 
 #GUI Module Manager
-gui.module_manager.name=Module Manager ##NEEDS TRANSLATE##
-gui.modules_helmet.name=Helmet Modules ##NEEDS TRANSLATE##
-gui.modules_chest.name=Chest Modules ##NEEDS TRANSLATE##
-gui.modules_leggings.name=Leggings Modules ##NEEDS TRANSLATE##
-gui.modules_boots.name=Boots Modules ##NEEDS TRANSLATE##
-gui.module_list.name=Modules List ##NEEDS TRANSLATE##
-gui.button.install.name=Install ##NEEDS TRANSLATE##
-gui.button.uninstall.name=Uninstall ##NEEDS TRANSLATE##
-gui.button.disable_module.name=Enable ##NEEDS TRANSLATE##
-gui.button.enable_module.name=Disable ##NEEDS TRANSLATE##
-gui.module_cost.name=Cost ##NEEDS TRANSLATE##
-gui.module.installed.name=Module Installed! ##NEEDS TRANSLATE##
-gui.module.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
-gui.module.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
-gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
-gui.module.description.name=Module Description ##NEEDS TRANSLATE##
-gui.module.name.name=Module Name ##NEEDS TRANSLATE##
-gui.module.type.name=Module Type ##NEEDS TRANSLATE##
-gui.module.type.helmet.name=Helmet ##NEEDS TRANSLATE##
-gui.module.type.chest.name=Chestplate ##NEEDS TRANSLATE##
-gui.module.type.leggings.name=Leggings ##NEEDS TRANSLATE##
-gui.module.type.boots.name=Boots ##NEEDS TRANSLATE##
-gui.module.power.name=Module Power ##NEEDS TRANSLATE##
+gui.module_manager.name=模块管理器
+gui.modules_helmet.name=头盔模块
+gui.modules_chest.name=胸甲模块
+gui.modules_leggings.name=护腿模块
+gui.modules_boots.name=靴子模块
+gui.module_list.name=模块列表
+gui.button.install.name=安装
+gui.button.uninstall.name=卸载
+gui.button.disable_module.name=启用
+gui.button.enable_module.name=禁用
+gui.module_cost.name=消耗
+gui.module.installed.name=已安装模块！
+gui.module.missing_requirements.name=对不起，你不符合安装此模块的要求！
+gui.module.already_installed.name=你已经安装了此模块！
+gui.module.missing_armour.name=由于太空服装甲部件缺失，无法安装！
+gui.module.description.name=模块描述
+gui.module.name.name=模块名称
+gui.module.type.name=模块类型
+gui.module.type.helmet.name=头盔
+gui.module.type.chest.name=胸甲
+gui.module.type.leggings.name=护腿
+gui.module.type.boots.name=靴子
+gui.module.power.name=模块能量
 
-gui.module.sensor_glasses.name=Sensor Glasses ##NEEDS TRANSLATE##
-gui.module.no_fall_damage.name=No Fall Damage ##NEEDS TRANSLATE##
-gui.module.geiger_counter.name=Geiger Counter ##NEEDS TRANSLATE##
-gui.module.test.name=Test Module ##NEEDS TRANSLATE##
-gui.module.pre_launch_checklist.name=Pre Launch Checklist ##NEEDS TRANSLATE##
-gui.module.nasa_workbench.name=Portable NASA Workbench ##NEEDS TRANSLATE##
-gui.module.oxygen_tank_switch.name=Oxygen Tank Auto Swapper ##NEEDS TRANSLATE##
-gui.module.auto_space_gear_equip.name=Space Gear Auto Equip ##NEEDS TRANSLATE##
+gui.module.sensor_glasses.name=探测目镜
+gui.module.no_fall_damage.name=无摔落伤害
+gui.module.geiger_counter.name=盖氏计量器
+gui.module.test.name=测试模块
+gui.module.pre_launch_checklist.name=发射检查表
+gui.module.nasa_workbench.name=便携式 NASA 工作台
+gui.module.oxygen_tank_switch.name=氧气罐自动交换器
+gui.module.auto_space_gear_equip.name=太空齿轮自动装备
 
-gui.module.sensor_glasses.desc=Functions the same as the Galacticraft Sensor Glasses ##NEEDS TRANSLATE##
-gui.module.no_fall_damage.desc=Removes fall damage from the player ##NEEDS TRANSLATE##
-gui.module.geiger_counter.desc=Displays your current amount of Radiation on your HUD/Screen ##NEEDS TRANSLATE##
-gui.module.test.desc=Test Module ##NEEDS TRANSLATE##
-gui.module.pre_launch_checklist.desc=Allows easy access to the Pre Launch Checklist from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
-gui.module.nasa_workbench.desc=Allows portable access to a NASA Workbench from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
-gui.module.oxygen_tank_switch.desc=Swappers out equipped empty tanks with any available non empty oxygen tank in your inventory ##NEEDS TRANSLATE##
-gui.module.auto_space_gear_equip.desc=Automatically equip any space related gear in your inventory ##NEEDS TRANSLATE##
+gui.module.sensor_glasses.desc=功能与星系的探测目镜相同
+gui.module.no_fall_damage.desc=移除玩家的摔落伤害
+gui.module.geiger_counter.desc=在HUD/屏幕上显示当前的辐射量
+gui.module.test.desc=测试模块
+gui.module.pre_launch_checklist.desc=允许轻松访问星系的发射检查表，请参见控制按键以打开它
+gui.module.nasa_workbench.desc=允许便携地访问星系的 NASA 工作台，请参见控制按键以打开它
+gui.module.oxygen_tank_switch.desc=将装备好的空罐与物品栏中任何可用的非空氧气罐互换
+gui.module.auto_space_gear_equip.desc=在你的物品栏中自动装备任何与太空相关的装备
 
 #Other Blocks
 tile.nuclear_bomb.name=核弹
@@ -740,16 +740,16 @@ tile.eris_stairs_stone.name=阋神星石头楼梯
 tile.eris_stairs_stone_bricks.name=阋神星石砖楼梯
 
 #Rocket Items
-item.item_tier4_rocket.t4Rocket.name=4 阶火箭
-item.item_tier5_rocket.t5Rocket.name=5 阶火箭
-item.item_tier6_rocket.t6Rocket.name=6 阶火箭
-item.item_tier7_rocket.t7Rocket.name=7 阶火箭
-item.item_tier8_rocket.t8Rocket.name=8 阶火箭
-item.item_tier9_rocket.t9Rocket.name=9 阶火箭
-item.item_tier10_rocket.t10Rocket.name=10 阶火箭
-item.item_tier10_electric_rocket.t10Rocket.name=10 阶电力火箭
-rocket_pad.tier2.desc=需要在 2 阶火箭发射平台上面发射
-rocket_pad.tier3.desc=需要在 3 阶火箭发射平台上面发射
+item.item_tier4_rocket.t4Rocket.name=四阶火箭
+item.item_tier5_rocket.t5Rocket.name=五阶火箭
+item.item_tier6_rocket.t6Rocket.name=六阶火箭
+item.item_tier7_rocket.t7Rocket.name=七阶火箭
+item.item_tier8_rocket.t8Rocket.name=八阶火箭
+item.item_tier9_rocket.t9Rocket.name=九阶火箭
+item.item_tier10_rocket.t10Rocket.name=十阶火箭
+item.item_tier10_electric_rocket.t10Rocket.name=十阶电力火箭
+rocket_pad.tier2.desc=需要在二阶火箭发射平台上面发射
+rocket_pad.tier3.desc=需要在三阶火箭发射平台上面发射
 rocket_pad.electric.desc=需要在电力火箭发射平台上面发射
 
 #Vehicles
@@ -757,37 +757,37 @@ item.mars_rover.name=火星漫游车
 item.venus_rover.name=金星漫游车
 
 #Rocket Tiered Items
-item.nose_cone_tier4.name=4 阶鼻锥
-item.nose_cone_tier5.name=5 阶鼻锥
-item.nose_cone_tier6.name=6 阶鼻锥
-item.nose_cone_tier7.name=7 阶鼻锥
-item.nose_cone_tier8.name=8 阶鼻锥
-item.nose_cone_tier9.name=9 阶鼻锥
-item.nose_cone_tier10.name=10 阶鼻锥
+item.nose_cone_tier4.name=四阶鼻锥
+item.nose_cone_tier5.name=五阶鼻锥
+item.nose_cone_tier6.name=六阶鼻锥
+item.nose_cone_tier7.name=七阶鼻锥
+item.nose_cone_tier8.name=八阶鼻锥
+item.nose_cone_tier9.name=九阶鼻锥
+item.nose_cone_tier10.name=十阶鼻锥
 
-item.tier4_items.tier4fin.name=4 阶火箭尾翼
-item.tier5_items.tier5fin.name=5 阶火箭尾翼
-item.tier6_items.tier6fin.name=6 阶火箭尾翼
-item.tier7_items.tier7fin.name=7 阶火箭尾翼
-item.tier8_items.tier8fin.name=8 阶火箭尾翼
-item.tier9_items.tier9fin.name=9 阶火箭尾翼
-item.tier10_items.tier10fin.name=10 阶火箭尾翼
+item.tier4_items.tier4fin.name=四阶火箭尾翼
+item.tier5_items.tier5fin.name=五阶火箭尾翼
+item.tier6_items.tier6fin.name=六阶火箭尾翼
+item.tier7_items.tier7fin.name=七阶火箭尾翼
+item.tier8_items.tier8fin.name=八阶火箭尾翼
+item.tier9_items.tier9fin.name=九阶火箭尾翼
+item.tier10_items.tier10fin.name=十阶火箭尾翼
 
-item.tier4_items.tier4engine.name=4 阶火箭引擎
-item.tier5_items.tier5engine.name=5 阶火箭引擎
-item.tier6_items.tier6engine.name=6 阶火箭引擎
-item.tier7_items.tier7engine.name=7 阶火箭引擎
-item.tier8_items.tier8engine.name=8 阶火箭引擎
-item.tier9_items.tier9engine.name=9 阶火箭引擎
-item.tier10_items.tier10engine.name=10 阶火箭引擎
+item.tier4_items.tier4engine.name=四阶火箭引擎
+item.tier5_items.tier5engine.name=五阶火箭引擎
+item.tier6_items.tier6engine.name=六阶火箭引擎
+item.tier7_items.tier7engine.name=七阶火箭引擎
+item.tier8_items.tier8engine.name=八阶火箭引擎
+item.tier9_items.tier9engine.name=九阶火箭引擎
+item.tier10_items.tier10engine.name=十阶火箭引擎
 
-item.tier4_items.tier4booster.name=4 阶助推器
-item.tier5_items.tier5booster.name=5 阶助推器
-item.tier6_items.tier6booster.name=6 阶助推器
-item.tier7_items.tier7booster.name=7 阶助推器
-item.tier8_items.tier8booster.name=8 阶助推器
-item.tier9_items.tier9booster.name=9 阶助推器
-item.tier10_items.tier10booster.name=10 阶助推器
+item.tier4_items.tier4booster.name=四阶助推器
+item.tier5_items.tier5booster.name=五阶助推器
+item.tier6_items.tier6booster.name=六阶助推器
+item.tier7_items.tier7booster.name=七阶助推器
+item.tier8_items.tier8booster.name=八阶助推器
+item.tier9_items.tier9booster.name=九阶助推器
+item.tier10_items.tier10booster.name=十阶助推器
 
 item.tier4_items.tier4heavy_duty_plate.name=重装防护板
 item.tier5_items.tier5heavy_duty_plate.name=重装防护板
@@ -797,13 +797,13 @@ item.tier8_items.tier8heavy_duty_plate.name=重装防护板
 item.tier9_items.tier9heavy_duty_plate.name=重装防护板
 item.tier10_items.tier10heavy_duty_plate.name=重装防护板
 
-tier4.heavy_duty_plate.name=4 阶
-tier5.heavy_duty_plate.name=5 阶
-tier6.heavy_duty_plate.name=6 阶
-tier7.heavy_duty_plate.name=7 阶
-tier8.heavy_duty_plate.name=8 阶
-tier9.heavy_duty_plate.name=9 阶
-tier10.heavy_duty_plate.name=10 阶
+tier4.heavy_duty_plate.name=四阶
+tier5.heavy_duty_plate.name=五阶
+tier6.heavy_duty_plate.name=六阶
+tier7.heavy_duty_plate.name=七阶
+tier8.heavy_duty_plate.name=八阶
+tier9.heavy_duty_plate.name=九阶
+tier10.heavy_duty_plate.name=十阶
 
 #Compressed Items
 item.tier4_items.compressed_carbon.name=致密碳板
@@ -857,7 +857,7 @@ item.wafer.blue_gem_wafer.name=蓝宝石晶圆
 item.wafer.white_gem_wafer.name=白宝石晶圆
 
 #Buckets
-item.bucket_glowstone.name=萤石水桶
+item.bucket_glowstone.name=荧石水桶
 item.bucket_salt.name=结晶水桶
 item.bucket_magma.name=岩浆水桶
 item.bucket_frozen_water.name=冰水桶
@@ -872,13 +872,13 @@ item.bucket_liquid_caramel.name=液态焦糖桶
 item.bucket_liquid_chocolate.name=液态巧克力桶
 
 #Keys
-item.T4key.name=4 阶宝箱钥匙
-item.T5key.name=5 阶宝箱钥匙
-item.T6key.name=6 阶宝箱钥匙
-item.T7key.name=7 阶宝箱钥匙
-item.T8key.name=8 阶宝箱钥匙
-item.T9key.name=9 阶宝箱钥匙
-item.T10key.name=10 阶宝箱钥匙
+item.T4key.name=四阶宝箱钥匙
+item.T5key.name=五阶宝箱钥匙
+item.T6key.name=六阶宝箱钥匙
+item.T7key.name=七阶宝箱钥匙
+item.T8key.name=八阶宝箱钥匙
+item.T9key.name=九阶宝箱钥匙
+item.T10key.name=十阶宝箱钥匙
 
 #Tools
 item.carbon_pickaxe.name=碳镐
@@ -978,22 +978,22 @@ item.schematic_tier10_electric_rocket.name=NASA 工程图
 schematic.mars.rover.name=火星漫游车
 schematic.venus.rover.name=金星漫游车
 
-schematic.tier4.rocket.name=4 阶火箭
-schematic.tier5.rocket.name=5 阶火箭
-schematic.tier6.rocket.name=6 阶火箭
-schematic.tier7.rocket.name=7 阶火箭
-schematic.tier8.rocket.name=8 阶火箭
-schematic.tier9.rocket.name=9 阶火箭
-schematic.tier10.rocket.name=10 阶火箭
-schematic.tier10.electric.rocket.name=10 阶电力火箭
+schematic.tier4.rocket.name=四阶火箭
+schematic.tier5.rocket.name=五阶火箭
+schematic.tier6.rocket.name=六阶火箭
+schematic.tier7.rocket.name=七阶火箭
+schematic.tier8.rocket.name=八阶火箭
+schematic.tier9.rocket.name=九阶火箭
+schematic.tier10.rocket.name=十阶火箭
+schematic.tier10.electric.rocket.name=十阶电力火箭
 
-schematic.rocket.t4.name=4 阶火箭
-schematic.rocket.t5.name=5 阶火箭
-schematic.rocket.t6.name=6 阶火箭
-schematic.rocket.t7.name=7 阶火箭
-schematic.rocket.t8.name=8 阶火箭
-schematic.rocket.t9.name=9 阶火箭
-schematic.rocket.t10.name=10 阶火箭
+schematic.rocket.t4.name=四阶火箭
+schematic.rocket.t5.name=五阶火箭
+schematic.rocket.t6.name=六阶火箭
+schematic.rocket.t7.name=七阶火箭
+schematic.rocket.t8.name=八阶火箭
+schematic.rocket.t9.name=九阶火箭
+schematic.rocket.t10.name=十阶火箭
 schematic.rocket.electric.t10.name=电力火箭
 
 #Batteries
@@ -1070,124 +1070,124 @@ item.green_diamond_chest.name=绿色钻石胸甲
 item.green_diamond_legings.name=绿色钻石护腿
 item.green_diamond_boots.name=绿色钻石靴子
 
-item.tier1_space_suit_helmet.name=1 阶太空服头盔
-item.tier1_space_suit_chest.name=1 阶太空服胸甲
-item.tier1_space_suit_jetpack_chest.name=Tier 1 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
-item.tier1_space_suit_legings.name=1 阶太空服护腿
-item.tier1_space_suit_boots.name=1 阶太空服靴子
-item.tier1_space_suit_gravity_boots.name=1 阶太空服重力靴子
-item.tier2_space_suit_helmet.name=2 阶太空服头盔
-item.tier2_space_suit_chest.name=2 阶太空服胸甲
-item.tier2_space_suit_jetpack_chest.name=Tier 2 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
-item.tier2_space_suit_legings.name=2 阶太空服护腿
-item.tier2_space_suit_boots.name=2 阶太空服靴子
-item.tier2_space_suit_gravity_boots.name=2 阶太空服重力靴子
-item.tier3_space_suit_helmet.name=3 阶太空服头盔
-item.tier3_space_suit_chest.name=3 阶太空服胸甲
-item.tier3_space_suit_jetpack_chest.name=Tier 3 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
-item.tier3_space_suit_legings.name=3 阶太空服护腿
-item.tier3_space_suit_boots.name=3 阶太空服靴子
-item.tier3_space_suit_gravity_boots.name=3 阶太空服重力靴子
-item.tier4_space_suit_helmet.name=4 阶太空服头盔
-item.tier4_space_suit_chest.name=4 阶太空服胸甲
-item.tier4_space_suit_jetpack_chest.name=Tier 4 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
-item.tier4_space_suit_legings.name=4 阶太空服护腿
-item.tier4_space_suit_boots.name=4 阶太空服靴子
-item.tier4_space_suit_gravity_boots.name=4 阶太空服重力靴子
+item.tier1_space_suit_helmet.name=一阶太空服头盔
+item.tier1_space_suit_chest.name=一阶太空服胸甲
+item.tier1_space_suit_jetpack_chest.name=一阶太空服喷气背包胸甲
+item.tier1_space_suit_legings.name=一阶太空服护腿
+item.tier1_space_suit_boots.name=一阶太空服靴子
+item.tier1_space_suit_gravity_boots.name=一阶太空服重力靴子
+item.tier2_space_suit_helmet.name=二阶太空服头盔
+item.tier2_space_suit_chest.name=二阶太空服胸甲
+item.tier2_space_suit_jetpack_chest.name=二阶太空服喷气背包胸甲
+item.tier2_space_suit_legings.name=二阶太空服护腿
+item.tier2_space_suit_boots.name=二阶太空服靴子
+item.tier2_space_suit_gravity_boots.name=二阶太空服重力靴子
+item.tier3_space_suit_helmet.name=三阶太空服头盔
+item.tier3_space_suit_chest.name=三阶太空服胸甲
+item.tier3_space_suit_jetpack_chest.name=三阶太空服喷气背包胸甲
+item.tier3_space_suit_legings.name=三阶太空服护腿
+item.tier3_space_suit_boots.name=三阶太空服靴子
+item.tier3_space_suit_gravity_boots.name=三阶太空服重力靴子
+item.tier4_space_suit_helmet.name=四阶太空服头盔
+item.tier4_space_suit_chest.name=四阶太空服胸甲
+item.tier4_space_suit_jetpack_chest.name=四阶太空服喷气背包胸甲
+item.tier4_space_suit_legings.name=四阶太空服护腿
+item.tier4_space_suit_boots.name=四阶太空服靴子
+item.tier4_space_suit_gravity_boots.name=四阶太空服重力靴子
 
-space.suit.information=Used to fully stop pressure damage ##NEEDS TRANSLATE##
-space.suit.information.2=& to slow down the rate of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra=The tier of each part of the Space Suits counts ##NEEDS TRANSLATE##
-space.suit.information.extra.2=towards reducing the amount of radiation gained ##NEEDS TRANSLATE##
-space.suit.information.extra.3=The higher the Space Suit tier the ##NEEDS TRANSLATE##
-space.suit.information.extra.4=slower radiation will be gained ##NEEDS TRANSLATE##
-space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
-space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE##
+space.suit.information=用于完全阻止压强伤害
+space.suit.information.2=和减缓获得辐射的速度
+space.suit.information.extra=太空服每个等级的部件
+space.suit.information.extra.2=都有助于减少所获得的辐射量
+space.suit.information.extra.3=太空服等级越高，
+space.suit.information.extra.4=获得辐射的速度就越慢
+space.suit.power.info=支持下列能量系统：
+space.suit.power.info.2=RF、通用机械的 Mekanism Joules、星系的 GC Joules、IC2 的 EU
 
-item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
-item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
+item_desc.spacesuit.shift.name=按下 %s 键获取压强和辐射信息
+item_desc.spacesuit.module.shift.name=按下 %s 键查看已安装的模块
 
-item.tier3_thermal_helm.name=3 阶热防护头盔
-item.tier3_thermal_chestplate.name=3 阶热防护胸甲
-item.tier3_thermal_leggings.name=3 阶热防护护腿
-item.tier3_thermal_boots.name=3 阶热防护靴子
-item.tier4_thermal_helm.name=4 阶热防护头盔
-item.tier4_thermal_chestplate.name=4 阶热防护胸甲
-item.tier4_thermal_leggings.name=4 阶热防护护腿
-item.tier4_thermal_boots.name=4 阶热防护靴子
-item.tier5_thermal_helm.name=5 阶热防护头盔
-item.tier5_thermal_chestplate.name=5 阶热防护胸甲
-item.tier5_thermal_leggings.name=5 阶热防护护腿
-item.tier5_thermal_boots.name=5 阶热防护靴子
+item.tier3_thermal_helm.name=三阶热防护头盔
+item.tier3_thermal_chestplate.name=三阶热防护胸甲
+item.tier3_thermal_leggings.name=三阶热防护护腿
+item.tier3_thermal_boots.name=三阶热防护靴子
+item.tier4_thermal_helm.name=四阶热防护头盔
+item.tier4_thermal_chestplate.name=四阶热防护胸甲
+item.tier4_thermal_leggings.name=四阶热防护护腿
+item.tier4_thermal_boots.name=四阶热防护靴子
+item.tier5_thermal_helm.name=五阶热防护头盔
+item.tier5_thermal_chestplate.name=五阶热防护胸甲
+item.tier5_thermal_leggings.name=五阶热防护护腿
+item.tier5_thermal_boots.name=五阶热防护靴子
 
 tier3.thermal.padding.information=适用于水星
 tier4.thermal.padding.information=适用于木星、土星及它们的卫星
 tier5.thermal.padding.information=适用于天王星、海王星、冥王星、阋神星及它们的卫星
 
 #Space Suit Layers
-item.tier1_pressure_layer.name=1 阶抗压层
-item.tier2_pressure_layer.name=2 阶抗压层
-item.tier3_pressure_layer.name=3 阶抗压层
-item.tier4_pressure_layer.name=4 阶抗压层
+item.tier1_pressure_layer.name=一阶抗压层
+item.tier2_pressure_layer.name=二阶抗压层
+item.tier3_pressure_layer.name=三阶抗压层
+item.tier4_pressure_layer.name=四阶抗压层
 
-item.tier1_radiation_layer.name=1 阶防辐射层
-item.tier2_radiation_layer.name=2 阶防辐射层
-item.tier3_radiation_layer.name=3 阶防辐射层
-item.tier4_radiation_layer.name=4 阶防辐射层
+item.tier1_radiation_layer.name=一阶防辐射层
+item.tier2_radiation_layer.name=二阶防辐射层
+item.tier3_radiation_layer.name=三阶防辐射层
+item.tier4_radiation_layer.name=四阶防辐射层
 
-item.tier1_armor_layer.name=1 阶装甲层
-item.tier2_armor_layer.name=2 阶装甲层
-item.tier3_armor_layer.name=3 阶装甲层
-item.tier4_armor_layer.name=4 阶装甲层
+item.tier1_armor_layer.name=一阶装甲层
+item.tier2_armor_layer.name=二阶装甲层
+item.tier3_armor_layer.name=三阶装甲层
+item.tier4_armor_layer.name=四阶装甲层
 
 tier1_armor_layer.desc=压缩机配方：4 个铝锭
 tier2_armor_layer.desc=压缩机配方：4 个钛锭
 tier3_armor_layer.desc=压缩机配方：4 个钯锭
 tier4_armor_layer.desc=压缩机配方：4 个锌锭
 
-module.pressure_module_1.name=Tier 1 Pressure Module ##NEEDS TRANSLATE##
-module.pressure_module_1.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.pressure_module_2.name=Tier 2 Pressure Module ##NEEDS TRANSLATE##
-module.pressure_module_2.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.pressure_module_3.name=Tier 3 Pressure Module ##NEEDS TRANSLATE##
-module.pressure_module_3.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.pressure_module_4.name=Tier 4 Pressure Module ##NEEDS TRANSLATE##
-module.pressure_module_4.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.pressure_module_1.name=一阶压强模块
+module.pressure_module_1.desc=保护你免受额外行星或星系的星球/月球/空间站的压力
+module.pressure_module_2.name=二阶压强模块
+module.pressure_module_2.desc=保护你免受额外行星或星系的星球/月球/空间站的压力
+module.pressure_module_3.name=三阶压强模块
+module.pressure_module_3.desc=保护你免受额外行星或星系的星球/月球/空间站的压力
+module.pressure_module_4.name=四阶压强模块
+module.pressure_module_4.desc=保护你免受额外行星或星系的星球/月球/空间站的压力
 
-module.radiation_module_1.name=Tier 1 Radiation Module ##NEEDS TRANSLATE##
-module.radiation_module_1.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.radiation_module_2.name=Tier 2 Radiation Module ##NEEDS TRANSLATE##
-module.radiation_module_2.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.radiation_module_3.name=Tier 3 Radiation Module ##NEEDS TRANSLATE##
-module.radiation_module_3.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.radiation_module_4.name=Tier 4 Radiation Module ##NEEDS TRANSLATE##
-module.radiation_module_4.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.radiation_module_1.name=一阶辐射模块
+module.radiation_module_1.desc=保护你免受额外行星或星系的星球/月球/空间站的辐射
+module.radiation_module_2.name=二阶辐射模块
+module.radiation_module_2.desc=保护你免受额外行星或星系的星球/月球/空间站的辐射
+module.radiation_module_3.name=三阶辐射模块
+module.radiation_module_3.desc=保护你免受额外行星或星系的星球/月球/空间站的辐射
+module.radiation_module_4.name=四阶辐射模块
+module.radiation_module_4.desc=保护你免受额外行星或星系的星球/月球/空间站的辐射
 
 #UnPrepared Space Suits
-item.tier1_un_prepared_space_suit_helmet.name=1 阶未完成太空服头盔
-item.tier1_un_prepared_space_suit_chest.name=1 阶未完成太空服胸甲
-item.tier1_un_prepared_space_suit_legings.name=1 阶未完成太空服护腿
-item.tier1_un_prepared_space_suit_boots.name=1 阶未完成太空服靴子
+item.tier1_un_prepared_space_suit_helmet.name=一阶未完成太空服头盔
+item.tier1_un_prepared_space_suit_chest.name=一阶未完成太空服胸甲
+item.tier1_un_prepared_space_suit_legings.name=一阶未完成太空服护腿
+item.tier1_un_prepared_space_suit_boots.name=一阶未完成太空服靴子
 
-item.tier2_un_prepared_space_suit_helmet.name=2 阶未完成太空服头盔
-item.tier2_un_prepared_space_suit_chest.name=2 阶未完成太空服胸甲
-item.tier2_un_prepared_space_suit_legings.name=2 阶未完成太空服护腿
-item.tier2_un_prepared_space_suit_boots.name=2 阶未完成太空服靴子
+item.tier2_un_prepared_space_suit_helmet.name=二阶未完成太空服头盔
+item.tier2_un_prepared_space_suit_chest.name=二阶未完成太空服胸甲
+item.tier2_un_prepared_space_suit_legings.name=二阶未完成太空服护腿
+item.tier2_un_prepared_space_suit_boots.name=二阶未完成太空服靴子
 
-item.tier3_un_prepared_space_suit_helmet.name=3 阶未完成太空服头盔
-item.tier3_un_prepared_space_suit_chest.name=3 阶未完成太空服胸甲
-item.tier3_un_prepared_space_suit_legings.name=3 阶未完成太空服护腿
-item.tier3_un_prepared_space_suit_boots.name=3 阶未完成太空服靴子
+item.tier3_un_prepared_space_suit_helmet.name=三阶未完成太空服头盔
+item.tier3_un_prepared_space_suit_chest.name=三阶未完成太空服胸甲
+item.tier3_un_prepared_space_suit_legings.name=三阶未完成太空服护腿
+item.tier3_un_prepared_space_suit_boots.name=三阶未完成太空服靴子
 
-item.tier4_un_prepared_space_suit_helmet.name=4 阶未完成太空服头盔
-item.tier4_un_prepared_space_suit_chest.name=4 阶未完成太空服胸甲
-item.tier4_un_prepared_space_suit_legings.name=4 阶未完成太空服护腿
-item.tier4_un_prepared_space_suit_boots.name=4 阶未完成太空服靴子
+item.tier4_un_prepared_space_suit_helmet.name=四阶未完成太空服头盔
+item.tier4_un_prepared_space_suit_chest.name=四阶未完成太空服胸甲
+item.tier4_un_prepared_space_suit_legings.name=四阶未完成太空服护腿
+item.tier4_un_prepared_space_suit_boots.name=四阶未完成太空服靴子
 
 #Module Items
-item.module_items.no_fall_boots.name=No Fall Damage Module ##NEEDS TRANSLATE##
-item.module_items.oxygen_controller.name=Oxygen Controller ##NEEDS TRANSLATE##
-item.module_items.space_gear_controller.name=Space Gear Controller ##NEEDS TRANSLATE##
+item.module_items.no_fall_boots.name=无摔落伤害模块
+item.module_items.oxygen_controller.name=氧气控制器
+item.module_items.space_gear_controller.name=太空齿轮控制器
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=超重型氧气罐
@@ -1247,43 +1247,43 @@ item.potassium_iodide.name=碘化钾
 item.potassium.name=钾
 item.potash_shards.name=草木灰碎片
 item.anti_radiation.name=防辐射药剂
-anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount ##NEEDS TRANSLATE##
+anti_radiation.desc=将辐射等级降低当前量的 {PERCENT}
 
 #Kits
-item.tier1_kit.full.name=1 阶全套工具箱
-item.tier1_kit.basic_setup.name=1 阶基础工具箱
-item.tier1_kit.without_oxygen_setup.name=1 阶全套工具箱（无氧气设备）
-item.tier1_kit.without_thermal_padding.name=1 阶全套工具箱（无热防护套装）
-item.tier1_kit.just_oxygen_setup.name=1 阶氧气设备工具箱
-item.tier1_kit.just_protection.name=1 阶热防护套装工具箱
+item.tier1_kit.full.name=一阶全套工具箱
+item.tier1_kit.basic_setup.name=一阶基础工具箱
+item.tier1_kit.without_oxygen_setup.name=一阶全套工具箱（无氧气设备）
+item.tier1_kit.without_thermal_padding.name=一阶全套工具箱（无热防护套装）
+item.tier1_kit.just_oxygen_setup.name=一阶氧气设备工具箱
+item.tier1_kit.just_protection.name=一阶热防护套装工具箱
 
-item.tier2_kit.full.name=2 阶全套工具箱
-item.tier2_kit.basic_setup.name=2 阶基础工具箱
-item.tier2_kit.without_oxygen_setup.name=2 阶全套工具箱（无氧气设备）
-item.tier2_kit.without_thermal_padding.name=2 阶全套工具箱（无热防护套装）
-item.tier2_kit.just_oxygen_setup.name=2 阶氧气设备工具箱
-item.tier2_kit.just_protection.name=2 阶热防护套装工具箱
+item.tier2_kit.full.name=二阶全套工具箱
+item.tier2_kit.basic_setup.name=二阶基础工具箱
+item.tier2_kit.without_oxygen_setup.name=二阶全套工具箱（无氧气设备）
+item.tier2_kit.without_thermal_padding.name=二阶全套工具箱（无热防护套装）
+item.tier2_kit.just_oxygen_setup.name=二阶氧气设备工具箱
+item.tier2_kit.just_protection.name=二阶热防护套装工具箱
 
-item.tier3_kit.full.name=3 阶全套工具箱
-item.tier3_kit.basic_setup.name=3 阶基础工具箱
-item.tier3_kit.without_oxygen_setup.name=3 阶全套工具箱（无氧气设备）
-item.tier3_kit.without_thermal_padding.name=3 阶全套工具箱（无热防护套装）
-item.tier3_kit.just_oxygen_setup.name=3 阶氧气设备工具箱
-item.tier3_kit.just_protection.name=3 阶热防护套装工具箱
+item.tier3_kit.full.name=三阶全套工具箱
+item.tier3_kit.basic_setup.name=三阶基础工具箱
+item.tier3_kit.without_oxygen_setup.name=三阶全套工具箱（无氧气设备）
+item.tier3_kit.without_thermal_padding.name=三阶全套工具箱（无热防护套装）
+item.tier3_kit.just_oxygen_setup.name=三阶氧气设备工具箱
+item.tier3_kit.just_protection.name=三阶热防护套装工具箱
 
-item.tier4_kit.full.name=4 阶全套工具箱
-item.tier4_kit.basic_setup.name=4 阶基础工具箱
-item.tier4_kit.without_oxygen_setup.name=4 阶全套工具箱（无氧气设备）
-item.tier4_kit.without_thermal_padding.name=4 阶全套工具箱（无热防护套装）
-item.tier4_kit.just_oxygen_setup.name=4 阶氧气设备工具箱
-item.tier4_kit.just_protection.name=4 阶热防护套装工具箱
+item.tier4_kit.full.name=四阶全套工具箱
+item.tier4_kit.basic_setup.name=四阶基础工具箱
+item.tier4_kit.without_oxygen_setup.name=四阶全套工具箱（无氧气设备）
+item.tier4_kit.without_thermal_padding.name=四阶全套工具箱（无热防护套装）
+item.tier4_kit.just_oxygen_setup.name=四阶氧气设备工具箱
+item.tier4_kit.just_protection.name=四阶热防护套装工具箱
 
-item.tier5_kit.full.name=5 阶全套工具箱
-item.tier5_kit.basic_setup.name=5 阶基础工具箱
-item.tier5_kit.without_oxygen_setup.name=5 阶全套工具箱（无氧气设备）
-item.tier5_kit.without_thermal_padding.name=5 阶全套工具箱（无热防护套装）
-item.tier5_kit.just_oxygen_setup.name=5 阶氧气设备工具箱
-item.tier5_kit.just_protection.name=5 阶热防护套装工具箱
+item.tier5_kit.full.name=五阶全套工具箱
+item.tier5_kit.basic_setup.name=五阶基础工具箱
+item.tier5_kit.without_oxygen_setup.name=五阶全套工具箱（无氧气设备）
+item.tier5_kit.without_thermal_padding.name=五阶全套工具箱（无热防护套装）
+item.tier5_kit.just_oxygen_setup.name=五阶氧气设备工具箱
+item.tier5_kit.just_protection.name=五阶热防护套装工具箱
 
 item.kit.information.desc=用于太空设备的压缩存储
 item.kit.information.use=右键以装备工具
@@ -1310,9 +1310,9 @@ item.bodyparts.arm.name=手
 item.bodyparts.leg.name=脚
 item.cloth.name=羊毛布料
 item.gravity_controller.name=重力控制器
-item.thermal_cloth.tier3_thermal_cloth.name=3 阶热防护布料
-item.thermal_cloth.tier4_thermal_cloth.name=4 阶热防护布料
-item.thermal_cloth.tier5_thermal_cloth.name=5 阶热防护布料
+item.thermal_cloth.tier3_thermal_cloth.name=三阶热防护布料
+item.thermal_cloth.tier4_thermal_cloth.name=四阶热防护布料
+item.thermal_cloth.tier5_thermal_cloth.name=五阶热防护布料
 item.tier5_items.ash.name=粉尘
 item.geiger_counter.name=盖氏计量器
 item.white_sugar_cane_item.name=白色甘蔗
@@ -1326,26 +1326,26 @@ item.canned_food.dehydrated_porkchop.name=脱水猪排
 item.canned_food.dehydrated_fish.name=脱水鱼
 item.canned_food.dehydrated_salmon.name=脱水鲑鱼
 item.canned_food.dehydrated_chicken.name=脱水鸡肉
-item.canned_food.dehydrated_beef.name=Dehydrated Beef ##NEEDS TRANSLATE##
+item.canned_food.dehydrated_beef.name=脱水牛肉
 
 #Electric Parts
-item.electric_parts.battery_tier1.name=1 阶电池
-item.electric_parts.battery_tier2.name=2 阶电池
+item.electric_parts.battery_tier1.name=一阶电池
+item.electric_parts.battery_tier2.name=二阶电池
 item.electric_parts.spark_plug.name=火花塞
-item.electric_parts.electric_wheels_tier1.name=1 阶轮子
-item.electric_parts.electric_wheels_tier2.name=2 阶轮子
+item.electric_parts.electric_wheels_tier1.name=一阶轮子
+item.electric_parts.electric_wheels_tier2.name=二阶轮子
 
 #Entities
 entity.ProjectileTNT.name=飞行的 TNT
 
-entity.extraplanets.EntityTier4Rocket.name=4 阶火箭
-entity.extraplanets.EntityTier5Rocket.name=5 阶火箭
-entity.extraplanets.EntityTier6Rocket.name=6 阶火箭
-entity.extraplanets.EntityTier7Rocket.name=7 阶火箭
-entity.extraplanets.EntityTier8Rocket.name=8 阶火箭
-entity.extraplanets.EntityTier9Rocket.name=9 阶火箭
-entity.extraplanets.EntityTier10Rocket.name=10 阶火箭
-entity.extraplanets.EntityTier10ElectricRocket.name=10 阶电力火箭
+entity.extraplanets.EntityTier4Rocket.name=四阶火箭
+entity.extraplanets.EntityTier5Rocket.name=五阶火箭
+entity.extraplanets.EntityTier6Rocket.name=六阶火箭
+entity.extraplanets.EntityTier7Rocket.name=七阶火箭
+entity.extraplanets.EntityTier8Rocket.name=八阶火箭
+entity.extraplanets.EntityTier9Rocket.name=九阶火箭
+entity.extraplanets.EntityTier10Rocket.name=十阶火箭
+entity.extraplanets.EntityTier10ElectricRocket.name=十阶电力火箭
 
 entity.extraplanets.EntityMarsRover.name=火星漫游车
 entity.extraplanets.EntityVenusRover.name=金星漫游车
@@ -1388,15 +1388,15 @@ achievement.pluto_planet=登陆冥王星！
 achievement.eris_planet=登陆阋神星！
 achievement.kepler22b_planet=登陆开普勒-22b！
 
-achievement.mercury_planet.desc=乘坐 3 阶火箭到水星
-achievement.ceres_planet.desc=乘坐 4 阶火箭到谷神星
-achievement.jupiter_planet.desc=乘坐 4 阶火箭到木星
-achievement.saturn_planet.desc=乘坐 5 阶火箭到土星
-achievement.uranus_planet.desc=乘坐 6 阶火箭到天王星
-achievement.neptune_planet.desc=乘坐 7 阶火箭到海王星
-achievement.pluto_planet.desc=乘坐 8 阶火箭到冥王星
-achievement.eris_planet.desc=乘坐 9 阶火箭到阋神星
-achievement.kepler22b_planet.desc=乘坐 10 阶火箭到开普勒-22b
+achievement.mercury_planet.desc=乘坐三阶火箭到水星
+achievement.ceres_planet.desc=乘坐四阶火箭到谷神星
+achievement.jupiter_planet.desc=乘坐四阶火箭到木星
+achievement.saturn_planet.desc=乘坐五阶火箭到土星
+achievement.uranus_planet.desc=乘坐六阶火箭到天王星
+achievement.neptune_planet.desc=乘坐七阶火箭到海王星
+achievement.pluto_planet.desc=乘坐八阶火箭到冥王星
+achievement.eris_planet.desc=乘坐九阶火箭到阋神星
+achievement.kepler22b_planet.desc=乘坐十阶火箭到开普勒-22b
 
 achievement.mercury_boss=击败水星地牢 Boss！
 achievement.jupiter_boss=击败木星地牢 BOSS！
@@ -1414,26 +1414,26 @@ achievement.neptune_boss.desc=击杀海王星地牢 BOSS 并开启宝箱！
 achievement.pluto_boss.desc=击杀冥王星地牢 BOSS 并开启宝箱！
 achievement.eris_boss.desc=击杀阋神星地牢 BOSS 并开启宝箱！
 
-achievement.craft_rocket_3=3 阶火箭！
-achievement.craft_rocket_4=4 阶火箭！
-achievement.craft_rocket_5=5 阶火箭！
-achievement.craft_rocket_6=6 阶火箭！
-achievement.craft_rocket_7=7 阶火箭！
-achievement.craft_rocket_8=8 阶火箭！
-achievement.craft_rocket_9=9 阶火箭！
-achievement.craft_rocket_10=10 阶火箭！
+achievement.craft_rocket_3=三阶火箭！
+achievement.craft_rocket_4=四阶火箭！
+achievement.craft_rocket_5=五阶火箭！
+achievement.craft_rocket_6=六阶火箭！
+achievement.craft_rocket_7=七阶火箭！
+achievement.craft_rocket_8=八阶火箭！
+achievement.craft_rocket_9=九阶火箭！
+achievement.craft_rocket_10=十阶火箭！
 
-achievement.craft_rocket_3.desc=制作 3 阶火箭
-achievement.craft_rocket_4.desc=制作 4 阶火箭
-achievement.craft_rocket_5.desc=制作 5 阶火箭
-achievement.craft_rocket_6.desc=制作 6 阶火箭
-achievement.craft_rocket_7.desc=制作 7 阶火箭
-achievement.craft_rocket_8.desc=制作 8 阶火箭
-achievement.craft_rocket_9.desc=制作 9 阶火箭
-achievement.craft_rocket_10.desc=制作 10 阶火箭
+achievement.craft_rocket_3.desc=制作三阶火箭
+achievement.craft_rocket_4.desc=制作四阶火箭
+achievement.craft_rocket_5.desc=制作五阶火箭
+achievement.craft_rocket_6.desc=制作六阶火箭
+achievement.craft_rocket_7.desc=制作七阶火箭
+achievement.craft_rocket_8.desc=制作八阶火箭
+achievement.craft_rocket_9.desc=制作九阶火箭
+achievement.craft_rocket_10.desc=制作十阶火箭
 
 #Liquids/Fluid
-tile.glowstone.name=萤石水
+tile.glowstone.name=荧石水
 tile.magma.name=岩浆水
 tile.nitrogen.name=液氮
 tile.frozen_water.name=冰水
@@ -1447,7 +1447,7 @@ tile.liquid_hydrocarbon.name=液态烃
 tile.liquid_chocolate.name=液态巧克力
 tile.liquid_caramel.name=液态焦糖
 
-fluid.glowstone_fluid=萤石水
+fluid.glowstone_fluid=荧石水
 fluid.magma_fluid=岩浆水
 fluid.nitrogen_fluid=液氮
 fluid.frozen_water_fluid=冰水
@@ -1462,10 +1462,10 @@ fluid.liquid_chocolate_fluid=液态巧克力
 fluid.liquid_caramel_fluid=液态焦糖
 
 #Gui/Damage Sources
-gui.warning.high.pressure=High Environment Pressure ##NEEDS TRANSLATE##
-gui.warning.high.radiation=Warning High Radiation Consumed ##NEEDS TRANSLATE##
-gui.warning.med.radiation=Medium Radiation Consumed ##NEEDS TRANSLATE##
-gui.warning.low.radiation=Very Low Radiation Consumed ##NEEDS TRANSLATE##
+gui.warning.high.pressure=高环境压强
+gui.warning.high.radiation=警告：受到高辐射
+gui.warning.med.radiation=受到中等辐射
+gui.warning.low.radiation=受到极低辐射
 death.attack.radiation=%1$s 忘记了防辐射措施
 death.attack.pressure=%1$s 忘记了压强防护措施
 death.attack.hypothermia=%1$s 死于体温过低
@@ -1474,11 +1474,11 @@ death.attack.radiationLiquid=%1$s 忘记了辐射会致命
 death.attack.infection=%1$s 被感染了
 
 #CheckList GUI Messages
-checklist.tier_3_thermal_padding.key=需要 3 阶热防护服
-checklist.tier_4_thermal_padding.key=需要 4 阶热防护服
-checklist.tier_5_thermal_padding.key=需要 5 阶热防护服
+checklist.tier_3_thermal_padding.key=需要三阶热防护服
+checklist.tier_4_thermal_padding.key=需要四阶热防护服
+checklist.tier_5_thermal_padding.key=需要五阶热防护服
 
-checklist.space_suit.key=Any Tier of Space Suit ##NEEDS TRANSLATE##
+checklist.space_suit.key=任意阶太空服
 
 satellite.space_station.mercury=水星空间站
 satellite.space_station.venus=金星空间站
@@ -1507,7 +1507,7 @@ tile.venus.titanium_block.name=金星锡块
 tile.veuns.dungeon_brick.name=金星地牢砖
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=液态萤石
+tile.glowstone_fluid.name=液态荧石
 tile.magma_fluid.name=岩浆水
 tile.nitrogen_fluid.name=液氮
 tile.frozen_water_fluid.name=冰
@@ -1585,22 +1585,22 @@ item.tier4_items.grinding_wheel.name=砂轮
 item.thermal_cloth.tier2_thermal_cloth.name=二阶热防护布料
 
 #MorePlanetsCompactBlocks&Items
-tile.treasure_chest_t4_saturn.name=4 阶土星宝箱
-tile.treasure_chest_t4_uranus.name=4 阶天王星宝箱
-tile.treasure_chest_t5_neptune.name=5 阶海王星宝箱
-tile.treasure_chest_t6_eris.name=6 阶阋神星宝箱
+tile.treasure_chest_t4_saturn.name=四阶土星宝箱
+tile.treasure_chest_t4_uranus.name=四阶天王星宝箱
+tile.treasure_chest_t5_neptune.name=五阶海王星宝箱
+tile.treasure_chest_t6_eris.name=六阶阋神星宝箱
 
 #Keys
-item.key.T4_saturn.name=4 阶土星地牢钥匙
-item.key.T4_uranus.name=4 阶天王星地牢钥匙
-item.key.T5_neptune.name=5 阶海王星钥匙
-item.key.T6_eris.name=6 阶阋神星地牢钥匙
+item.key.T4_saturn.name=四阶土星地牢钥匙
+item.key.T4_uranus.name=四阶天王星地牢钥匙
+item.key.T5_neptune.name=五阶海王星钥匙
+item.key.T6_eris.name=六阶阋神星地牢钥匙
 
 #Thermal Paddings
-item.tier2_thermal_helm.name=2 阶热防护头盔
-item.tier2_thermal_chestplate.name=2 阶热防护胸甲
-item.tier2_thermal_leggings.name=2 阶热防护护腿
-item.tier2_thermal_boots.name=2 阶热防护靴子
+item.tier2_thermal_helm.name=二阶热防护头盔
+item.tier2_thermal_chestplate.name=二阶热防护胸甲
+item.tier2_thermal_leggings.name=二阶热防护护腿
+item.tier2_thermal_boots.name=二阶热防护靴子
 
 #Messages
 tier2.information=适用于水星与金星！
@@ -1608,10 +1608,10 @@ tier3.information=适用于土星木星以及它们的卫星！
 tier4.information=适用于天王星、海王星、冥王星、阋神星以及他们的卫星！
 
 #------------------1.11.2 & 1.12.2 Only Section------------------
-item.t4key.name=4 阶宝箱钥匙
-item.t5key.name=5 阶宝箱钥匙
-item.t6key.name=6 阶宝箱钥匙
-item.t7key.name=7 阶宝箱钥匙
-item.t8key.name=8 阶宝箱钥匙
-item.t9key.name=9 阶宝箱钥匙
-item.t10key.name=10 阶宝箱钥匙
+item.t4key.name=四阶宝箱钥匙
+item.t5key.name=五阶宝箱钥匙
+item.t6key.name=六阶宝箱钥匙
+item.t7key.name=七阶宝箱钥匙
+item.t8key.name=八阶宝箱钥匙
+item.t9key.name=九阶宝箱钥匙
+item.t10key.name=十阶宝箱钥匙
