@@ -4,6 +4,7 @@ import java.util.Random;
 
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.entities.landers.EntityJupiterLander;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
@@ -51,12 +52,17 @@ public class TeleportTypeJupiter implements ITeleportType {
 					player.capabilities.isFlying = false;
 				}
 
+				EntityJupiterLander lander = new EntityJupiterLander(player);
+				lander.setPosition(player.posX, player.posY, player.posZ);
+
 				if (!newWorld.isRemote) {
-					EntityJupiterLander entryPod = new EntityJupiterLander(player);
-					CompatibilityManager.forceLoadChunks((WorldServer) newWorld);
-					entryPod.forceSpawn = true;
-					newWorld.spawnEntity(entryPod);
+					lander.forceSpawn = true;
+					newWorld.spawnEntity(lander);
+					lander.setWorld(newWorld);
+					newWorld.updateEntityWithOptionalForce(lander, true);
+					player.startRiding(lander);
 					CompatibilityManager.forceLoadChunksEnd((WorldServer) newWorld);
+					MessageUtilities.debugMessageToLog(Constants.modName, "Entering lander at : " + player.posX + "," + player.posZ + " lander spawn at: " + lander.posX + "," + lander.posZ);
 				}
 
 				stats.setTeleportCooldown(10);
