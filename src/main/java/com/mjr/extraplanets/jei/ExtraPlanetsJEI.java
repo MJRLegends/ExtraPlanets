@@ -123,13 +123,14 @@ public class ExtraPlanetsJEI implements IModPlugin {
 
 	@Override
 	public void registerCategories(IRecipeCategoryRegistration registry) {
-		IGuiHelper guiHelper = registry.getJeiHelpers().getGuiHelper();
-		registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper), new Tier8RocketRecipeCategory(guiHelper),
-				new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper));
+		if (Config.JEI_SUPPORT) {
+			IGuiHelper guiHelper = registry.getJeiHelpers().getGuiHelper();
+			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper), new Tier8RocketRecipeCategory(guiHelper),
+					new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper));
 
-		if (Config.RADIATION)
-			registry.addRecipeCategories(new BlockSmasherRecipeCategory(guiHelper), new SolarEvaporationChamberRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(guiHelper),
-					new PurifierRecipeCategory(guiHelper), new DensifierRecipeCategory(guiHelper));
-
+			if (Config.RADIATION)
+				registry.addRecipeCategories(new BlockSmasherRecipeCategory(guiHelper), new SolarEvaporationChamberRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(guiHelper),
+						new PurifierRecipeCategory(guiHelper), new DensifierRecipeCategory(guiHelper));
+		}
 	}
 }
