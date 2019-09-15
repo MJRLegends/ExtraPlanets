@@ -64,12 +64,16 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 		if (Config.JEI_SUPPORT) {
 			IGuiHelper guiHelper = registry.getJeiHelpers().getGuiHelper();
 			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper), new Tier8RocketRecipeCategory(guiHelper),
-					new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper), new BlockSmasherRecipeCategory(guiHelper),
-					new SolarEvaporationChamberRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(guiHelper),
-					new PurifierRecipeCategory(guiHelper), new DensifierRecipeCategory(guiHelper));
+					new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper));
+			if (Config.RADIATION)
+				registry.addRecipeCategories(new BlockSmasherRecipeCategory(guiHelper), new SolarEvaporationChamberRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(guiHelper),
+						new PurifierRecipeCategory(guiHelper), new DensifierRecipeCategory(guiHelper));
+
 			registry.addRecipeHandlers(new Tier4RocketRecipeHandler(), new Tier5RocketRecipeHandler(), new Tier6RocketRecipeHandler(), new Tier7RocketRecipeHandler(), new Tier8RocketRecipeHandler(), new Tier9RocketRecipeHandler(),
-					new Tier10RocketRecipeHandler(), new MarsRoverRecipeHandler(), new VenusRoverRecipeHandler(), new BlockSmasherRecipeHandler(), new SolarEvaporationChamberRecipeHandler(), new Tier10ElectricRocketRecipeHandler(),
-					new ChemicalInjectorRecipeHandler(), new CrystallizerRecipeHandler(), new PurifierRecipeHandler(), new DensifierRecipeHandler());
+					new Tier10RocketRecipeHandler(), new MarsRoverRecipeHandler(), new VenusRoverRecipeHandler(), new Tier10ElectricRocketRecipeHandler());
+
+			if (Config.RADIATION)
+				registry.addRecipeHandlers(new BlockSmasherRecipeHandler(), new SolarEvaporationChamberRecipeHandler(), new ChemicalInjectorRecipeHandler(), new CrystallizerRecipeHandler(), new PurifierRecipeHandler(), new DensifierRecipeHandler());
 			registry.addRecipes(Tier4RocketRecipeMaker.getRecipesList());
 			registry.addRecipes(Tier5RocketRecipeMaker.getRecipesList());
 			registry.addRecipes(Tier6RocketRecipeMaker.getRecipesList());
@@ -80,12 +84,14 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.addRecipes(Tier10ElectricRocketRecipeMaker.getRecipesList());
 			registry.addRecipes(MarsRoverRecipeMaker.getRecipesList());
 			registry.addRecipes(VenusRoverRecipeMaker.getRecipesList());
-			registry.addRecipes(BlockSmasherRecipeMaker.getRecipesList());
-			registry.addRecipes(SolarEvaporationChamberRecipeMaker.getRecipesList());
-			registry.addRecipes(ChemicalInjectorRecipeMaker.getRecipesList());
-			registry.addRecipes(CrystallizerRecipeMaker.getRecipesList());
-			registry.addRecipes(PurifierRecipeMaker.getRecipesList());
-			registry.addRecipes(DensifierRecipeMaker.getRecipesList());
+			if (Config.RADIATION) {
+				registry.addRecipes(BlockSmasherRecipeMaker.getRecipesList());
+				registry.addRecipes(SolarEvaporationChamberRecipeMaker.getRecipesList());
+				registry.addRecipes(ChemicalInjectorRecipeMaker.getRecipesList());
+				registry.addRecipes(CrystallizerRecipeMaker.getRecipesList());
+				registry.addRecipes(PurifierRecipeMaker.getRecipesList());
+				registry.addRecipes(DensifierRecipeMaker.getRecipesList());
+			}
 		}
 	}
 }
