@@ -51,6 +51,7 @@ public class TeleportTypeJupiter implements ITeleportType {
 				}
 
 				EntityJupiterLander lander = new EntityJupiterLander(player);
+	            lander.setPosition(player.posX, player.posY, player.posZ);
 
 				if (!newWorld.isRemote) {
 					lander.forceSpawn = true;

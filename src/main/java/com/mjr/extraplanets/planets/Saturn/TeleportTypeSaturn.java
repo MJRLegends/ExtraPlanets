@@ -51,6 +51,7 @@ public class TeleportTypeSaturn implements ITeleportType {
 				}
 
 				EntitySaturnLander lander = new EntitySaturnLander(player);
+	            lander.setPosition(player.posX, player.posY, player.posZ);
 
 				if (!newWorld.isRemote) {
 					lander.forceSpawn = true;

@@ -51,6 +51,7 @@ public class TeleportTypeUranus implements ITeleportType {
 				}
 
 				EntityUranusLander lander = new EntityUranusLander(player);
+	            lander.setPosition(player.posX, player.posY, player.posZ);
 
 				if (!newWorld.isRemote) {
 					lander.forceSpawn = true;

@@ -51,6 +51,7 @@ public class TeleportTypeMercury implements ITeleportType {
 				}
 
 				EntityMercuryLander lander = new EntityMercuryLander(player);
+	            lander.setPosition(player.posX, player.posY, player.posZ);
 
 				if (!newWorld.isRemote) {
 					lander.forceSpawn = true;
