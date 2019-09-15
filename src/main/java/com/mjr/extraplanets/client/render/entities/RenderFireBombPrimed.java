@@ -27,8 +27,8 @@ public class RenderFireBombPrimed extends Render<EntityFireBombPrimed> {
 		GlStateManager.pushMatrix();
 		GlStateManager.translate((float) x, (float) y + 0.5F, (float) z);
 
-		if (entity.fuse - partialTicks + 1.0F < 10.0F) {
-			float f = 1.0F - (entity.fuse - partialTicks + 1.0F) / 10.0F;
+		if (entity.getFuse() - partialTicks + 1.0F < 10.0F) {
+			float f = 1.0F - (entity.getFuse() - partialTicks + 1.0F) / 10.0F;
 			f = MathHelper.clamp(f, 0.0F, 1.0F);
 			f = f * f;
 			f = f * f;
@@ -36,13 +36,13 @@ public class RenderFireBombPrimed extends Render<EntityFireBombPrimed> {
 			GlStateManager.scale(f1, f1, f1);
 		}
 
-		float f2 = (1.0F - (entity.fuse - partialTicks + 1.0F) / 100.0F) * 0.8F;
+		float f2 = (1.0F - (entity.getFuse() - partialTicks + 1.0F) / 100.0F) * 0.8F;
 		this.bindEntityTexture(entity);
 		GlStateManager.translate(-0.5F, -0.5F, 0.5F);
 		blockrendererdispatcher.renderBlockBrightness(ExtraPlanets_Blocks.FIRE_BOMB.getDefaultState(), entity.getBrightness(partialTicks));
 		GlStateManager.translate(0.0F, 0.0F, 1.0F);
 
-		if (entity.fuse / 5 % 2 == 0) {
+		if (entity.getFuse() / 5 % 2 == 0) {
 			GlStateManager.disableTexture2D();
 			GlStateManager.disableLighting();
 			GlStateManager.enableBlend();

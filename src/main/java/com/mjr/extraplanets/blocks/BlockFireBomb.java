@@ -22,7 +22,7 @@ public class BlockFireBomb extends BlockBasicExplosion {
 	public void onBlockDestroyedByExplosion(World world, BlockPos pos, Explosion explosion) {
 		if (!world.isRemote) {
 			EntityFireBombPrimed EntityFireBombPrimed = new EntityFireBombPrimed(world, pos.getX() + 0.5F, pos.getY(), pos.getZ() + 0.5F, explosion.getExplosivePlacedBy());
-			EntityFireBombPrimed.fuse = world.rand.nextInt(EntityFireBombPrimed.fuse / 4) + EntityFireBombPrimed.fuse / 8;
+			EntityFireBombPrimed.setFuse(world.rand.nextInt(EntityFireBombPrimed.getFuse() / 4) + EntityFireBombPrimed.getFuse() / 8);
 			world.spawnEntity(EntityFireBombPrimed);
 		}
 	}
