@@ -79,13 +79,14 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.handleRecipes(INasaWorkbenchRecipe.class, MarsRoverRecipeWrapper::new, RecipeCategories.MARS_ROVER_ID);
 			registry.handleRecipes(INasaWorkbenchRecipe.class, VenusRoverRecipeWrapper::new, RecipeCategories.VENUS_ROVER_ID);
 
-			registry.handleRecipes(BlockSmasherRecipeWrapper.class, recipe -> recipe, RecipeCategories.BLOCK_SMASHER_ID);
-			registry.handleRecipes(SolarEvaporationChamberRecipeWrapper.class, recipe -> recipe, RecipeCategories.SOLAR_EVAPORTATION_CHAMBER_ID);
-			registry.handleRecipes(ChemicalInjectorRecipeWrapper.class, recipe -> recipe, RecipeCategories.CHEMAICAL_INJECTOR_ID);
-			registry.handleRecipes(CrystallizerRecipeWrapper.class, recipe -> recipe, RecipeCategories.CRYSTALLIZER_ID);
-			registry.handleRecipes(PurifierRecipeWrapper.class, recipe -> recipe, RecipeCategories.PURIFIER_ID);
-			registry.handleRecipes(DensifierRecipeWrapper.class, recipe -> recipe, RecipeCategories.DENSIFIER_ID);
-
+			if (Config.RADIATION) {
+				registry.handleRecipes(BlockSmasherRecipeWrapper.class, recipe -> recipe, RecipeCategories.BLOCK_SMASHER_ID);
+				registry.handleRecipes(SolarEvaporationChamberRecipeWrapper.class, recipe -> recipe, RecipeCategories.SOLAR_EVAPORTATION_CHAMBER_ID);
+				registry.handleRecipes(ChemicalInjectorRecipeWrapper.class, recipe -> recipe, RecipeCategories.CHEMAICAL_INJECTOR_ID);
+				registry.handleRecipes(CrystallizerRecipeWrapper.class, recipe -> recipe, RecipeCategories.CRYSTALLIZER_ID);
+				registry.handleRecipes(PurifierRecipeWrapper.class, recipe -> recipe, RecipeCategories.PURIFIER_ID);
+				registry.handleRecipes(DensifierRecipeWrapper.class, recipe -> recipe, RecipeCategories.DENSIFIER_ID);
+			}
 			registry.addRecipes(Tier4RocketRecipeMaker.getRecipesList(), RecipeCategories.ROCKET_T4_ID);
 			registry.addRecipes(Tier5RocketRecipeMaker.getRecipesList(), RecipeCategories.ROCKET_T5_ID);
 			registry.addRecipes(Tier6RocketRecipeMaker.getRecipesList(), RecipeCategories.ROCKET_T6_ID);
@@ -96,21 +97,25 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 			registry.addRecipes(Tier10ElectricRocketRecipeMaker.getRecipesList(), RecipeCategories.ROCKET_T10_ELECTRIC_ID);
 			registry.addRecipes(MarsRoverRecipeMaker.getRecipesList(), RecipeCategories.MARS_ROVER_ID);
 			registry.addRecipes(VenusRoverRecipeMaker.getRecipesList(), RecipeCategories.VENUS_ROVER_ID);
-			registry.addRecipes(BlockSmasherRecipeMaker.getRecipesList(), RecipeCategories.BLOCK_SMASHER_ID);
-			registry.addRecipes(SolarEvaporationChamberRecipeMaker.getRecipesList(), RecipeCategories.SOLAR_EVAPORTATION_CHAMBER_ID);
-			registry.addRecipes(ChemicalInjectorRecipeMaker.getRecipesList(), RecipeCategories.CHEMAICAL_INJECTOR_ID);
-			registry.addRecipes(CrystallizerRecipeMaker.getRecipesList(), RecipeCategories.CRYSTALLIZER_ID);
-			registry.addRecipes(PurifierRecipeMaker.getRecipesList(), RecipeCategories.PURIFIER_ID);
-			registry.addRecipes(DensifierRecipeMaker.getRecipesList(), RecipeCategories.DENSIFIER_ID);
+			if (Config.RADIATION) {
+				registry.addRecipes(BlockSmasherRecipeMaker.getRecipesList(), RecipeCategories.BLOCK_SMASHER_ID);
+				registry.addRecipes(SolarEvaporationChamberRecipeMaker.getRecipesList(), RecipeCategories.SOLAR_EVAPORTATION_CHAMBER_ID);
+				registry.addRecipes(ChemicalInjectorRecipeMaker.getRecipesList(), RecipeCategories.CHEMAICAL_INJECTOR_ID);
+				registry.addRecipes(CrystallizerRecipeMaker.getRecipesList(), RecipeCategories.CRYSTALLIZER_ID);
+				registry.addRecipes(PurifierRecipeMaker.getRecipesList(), RecipeCategories.PURIFIER_ID);
+				registry.addRecipes(DensifierRecipeMaker.getRecipesList(), RecipeCategories.DENSIFIER_ID);
+			}
 
 			registry.addRecipeCatalyst(new ItemStack(GCBlocks.nasaWorkbench), RecipeCategories.ROCKET_T4_ID, RecipeCategories.ROCKET_T5_ID, RecipeCategories.ROCKET_T6_ID, RecipeCategories.ROCKET_T7_ID, RecipeCategories.ROCKET_T8_ID,
 					RecipeCategories.ROCKET_T9_ID, RecipeCategories.ROCKET_T10_ID, RecipeCategories.ROCKET_T10_ELECTRIC_ID, RecipeCategories.MARS_ROVER_ID, RecipeCategories.VENUS_ROVER_ID);
-			registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_CHEMICAL_INJECTOR), RecipeCategories.CHEMAICAL_INJECTOR_ID);
-			registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_CRYSALLIZER), RecipeCategories.CRYSTALLIZER_ID);
-			registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_DENSIFIER), RecipeCategories.DENSIFIER_ID);
-			registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_PURIFIER), RecipeCategories.PURIFIER_ID);
-			registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_SMASHER), RecipeCategories.BLOCK_SMASHER_ID);
-			registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_SOLAR_EVAPORTATION_CHAMBER), RecipeCategories.SOLAR_EVAPORTATION_CHAMBER_ID);
+			if (Config.RADIATION) {
+				registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_CHEMICAL_INJECTOR), RecipeCategories.CHEMAICAL_INJECTOR_ID);
+				registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_CRYSALLIZER), RecipeCategories.CRYSTALLIZER_ID);
+				registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_DENSIFIER), RecipeCategories.DENSIFIER_ID);
+				registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_PURIFIER), RecipeCategories.PURIFIER_ID);
+				registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_SMASHER), RecipeCategories.BLOCK_SMASHER_ID);
+				registry.addRecipeCatalyst(new ItemStack(ExtraPlanets_Machines.BASIC_SOLAR_EVAPORTATION_CHAMBER), RecipeCategories.SOLAR_EVAPORTATION_CHAMBER_ID);
+			}
 		}
 	}
 
@@ -119,9 +124,11 @@ public class ExtraPlanetsJEI extends BlankModPlugin {
 		if (Config.JEI_SUPPORT) {
 			IGuiHelper guiHelper = registry.getJeiHelpers().getGuiHelper();
 			registry.addRecipeCategories(new Tier4RocketRecipeCategory(guiHelper), new Tier5RocketRecipeCategory(guiHelper), new Tier6RocketRecipeCategory(guiHelper), new Tier7RocketRecipeCategory(guiHelper), new Tier8RocketRecipeCategory(guiHelper),
-					new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper), new BlockSmasherRecipeCategory(guiHelper),
-					new SolarEvaporationChamberRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(guiHelper),
-					new PurifierRecipeCategory(guiHelper), new DensifierRecipeCategory(guiHelper));
+					new Tier9RocketRecipeCategory(guiHelper), new Tier10RocketRecipeCategory(guiHelper), new MarsRoverRecipeCategory(guiHelper), new VenusRoverRecipeCategory(guiHelper), new Tier10ElectricRocketRecipeCategory(guiHelper));
+
+			if (Config.RADIATION)
+				registry.addRecipeCategories(new BlockSmasherRecipeCategory(guiHelper), new SolarEvaporationChamberRecipeCategory(guiHelper), new ChemicalInjectorRecipeCategory(guiHelper), new CrystallizerRecipeCategory(guiHelper),
+						new PurifierRecipeCategory(guiHelper), new DensifierRecipeCategory(guiHelper));
 		}
 	}
 }
