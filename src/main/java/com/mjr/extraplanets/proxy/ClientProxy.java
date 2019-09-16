@@ -1381,6 +1381,7 @@ public class ClientProxy extends CommonProxy {
 		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket");
 		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_black");
 		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_blue_textured");
+		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_blue");
 		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_dark_grey");
 		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_dark_red");
 		ClientUtilities.registerTexture(Constants.TEXTURE_PREFIX, event, "blank_rocket_grey");

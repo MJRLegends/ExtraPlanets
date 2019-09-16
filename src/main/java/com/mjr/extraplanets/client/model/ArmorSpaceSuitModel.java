@@ -136,7 +136,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 			ModelUtilities.drawBakedModel(armourModelBody);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
 			ModelUtilities.drawBakedModel(armourModelPipes);
-			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/solar_panel.png"));
+			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_blue.png"));
 			ModelUtilities.drawBakedModel(armourModelBodyTank1);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_red.png"));
 			ModelUtilities.drawBakedModel(armourModelBodyTank2);
