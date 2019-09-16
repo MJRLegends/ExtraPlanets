@@ -47,6 +47,8 @@ public class GUIModuleManager extends GuiContainerGC {
 
 	public GUIModuleManager(IInventory par1IInventory) {
 		super(new ContainerModuleManager(par1IInventory, MCUtilities.getClient().thePlayer));
+		this.xSize = 275;
+		this.ySize = 167;
 	}
 
 	@Override
