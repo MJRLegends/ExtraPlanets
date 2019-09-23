@@ -5,6 +5,20 @@
 
 
 ===========================================Released Updates===========================================
+v1.2.9
+*Updated es_ES.Lang (Thanks to Yataro-Ibuza)
+*Updated lang files to match MC 1.12.2
+*Fixed issue #475
+*Fixed possible crash issue on redstone activation for Nuclear Bomb/Fire Bomb
+*Updated zh_CN.lang (Thanks to mcBegins2Snow)
+*Should hopefully fix issue #476
+*Changes to make robust spawning of landers on servers
+*Fixed issue #467
+*Fixed issue with jei overlapping module manager screen, fixes issue #402
+*Clean up of GUI Module Manager code
+*Fixed space suit having the wrong texture on one of the bottles on the back
+*Set minimum version of MJRLegendsLib requirement to v1.1.6
+
 v1.2.8
 *Fixed missing lang for titan moon when galaxyspace compact is enabled
 *Added support for ExtraPlanets Celestial Map to support PlanetProgressions research system
