@@ -5,6 +5,24 @@
 
 
 ===========================================Released Updates===========================================
+v0.5.7
+*Added Pressure/Radiation modules for MachineMusePowersuits (Mod Compatibility)
+*Updated es_ES.Lang (Thanks to Yataro-Ibuza)
+*Fixed issue #475
+*Fixed batteries and Tier 1 - 4 Space Suit items not showing in Creative Tab when searching, Fixes half of issue #472
+*Fixed possible crash issue on redstone activation for Nuclear Bomb/Fire Bomb
+*Updated zh_CN.lang (Thanks to mcBegins2Snow)
+*Should hopefully fix issue #476
+*Small fix for disabling jei support via config
+*Fixed api change with Galacticraft
+*Changes to make robust spawning of landers on servers
+*Fixed issue #467
+*Fixed issue with jei overlapping module manager screen, fixes issue #402
+*Clean up of GUI Module Manager code
+*Fixed space suit having the wrong texture on one of the bottles on the back
+*Set minimum version of MJRLegendsLib requirement to v1.1.9
+*Set required GC version requirement to Build 237
+
 v0.5.6
 *Fixed missing lang for titan moon when galaxyspace compact is enabled
 *Added support for ExtraPlanets Celestial Map to support PlanetProgressions research system
