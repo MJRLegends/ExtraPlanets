@@ -5,6 +5,9 @@
 
 
 ===========================================Released Updates===========================================
+v0.5.8
+*Fixed issue #479
+
 v0.5.7
 *Added Pressure/Radiation modules for MachineMusePowersuits (Mod Compatibility)
 *Updated es_ES.Lang (Thanks to Yataro-Ibuza)
