@@ -55,7 +55,6 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	public ElectricArmorBase(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(materialIn, renderIndexIn, equipmentSlotIn);
 		this.setMaxStackSize(1);
-		this.setHasSubtypes(true);
 		this.setMaxDamage(DAMAGE_RANGE);
 		this.setNoRepair();
 
