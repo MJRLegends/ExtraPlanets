@@ -528,8 +528,8 @@ gui.message.general.tank.name=液体水箱
 gui.message.general.tank.fluid.name=液体
 gui.status.densifier.name=浓缩中
 gui.bucket.message.extreme.reactors.compact=这种液体有 Extreme Reactors 相关兼容
-gui.radiation.reduced.message=你的辐射等级比你最初/现在的等级降低了
-gui.radiation.reduced.message.2= 
+gui.radiation.reduced.message=你的辐射等级从你最初/当前的等级中降低了
+gui.radiation.reduced.message.2=。
 gui.radiation.current.message=你当前的辐射等级是
 gui.radiation.subject.message=你现在受制于
 gui.radiation.reverse.message=你可以使用以下方法来帮助你减少所受的伤害：睡觉、辐射消除装置、防辐射药剂
@@ -698,7 +698,7 @@ tile.decorative_blocks2.green_block.name=绿色方块
 
 #Stairs
 tile.mercury_stairs_surface.name=水星地表岩石楼梯
-tile.mercury_stairs_sub_surface.name=汞地底岩石楼梯
+tile.mercury_stairs_sub_surface.name=水星地底岩石楼梯
 tile.mercury_stairs_stone.name=水星石头楼梯
 tile.mercury_stairs_stone_bricks.name=水星石砖楼梯
 
@@ -1405,7 +1405,7 @@ achievement.pluto_boss=击败冥王星地牢 BOSS！
 achievement.eris_boss=击杀阋神星地牢 BOSS！
 
 achievement.mercury_boss.desc=击杀水星地牢 BOSS 并开启宝箱！
-achievement.jupiter_boss.desc=击杀木星地牢 BOS S并开启宝箱！
+achievement.jupiter_boss.desc=击杀木星地牢 BOSS 并开启宝箱！
 achievement.saturn_boss.desc=击杀土星地牢 BOSS 并开启宝箱！
 achievement.uranus_boss.desc=击杀天王星地牢 BOSS 并开启宝箱！
 achievement.neptune_boss.desc=击杀海王星地牢 BOSS 并开启宝箱！
