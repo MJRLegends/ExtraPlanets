@@ -123,7 +123,7 @@ public class KeyHandlerClient extends KeyHandler {
 			if (playerBase == null) {
 				return;
 			}
-			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
+			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode()) {
 				if (playerBase.inventory.armorItemInSlot(2) != null && playerBase.inventory.armorItemInSlot(2).getItem() instanceof IJetpackArmour) {
 					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.theWorld.provider.getDimension(), new Object[] { 0 }));
 				}
