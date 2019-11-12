@@ -48,6 +48,8 @@ planet.haumea=Haumea
 planet.MercuryEP=Mercurio 2.0
 planet.CeresEP=Ceres 2.0
 planet.JupiterEP=Júpiter 2.0
+planet.SaturnEP=Saturno 2.0
+planet.UranusEP=Urano 2.0
 planet.NeptuneEP=Neptuno 2.0
 planet.PlutoEP=Pluto 2.0
 
@@ -105,6 +107,9 @@ moon.ioEP=Ío 2.0
 moon.deimosEP=Deimos 2.0
 moon.phobosEP=Fobos 2.0
 moon.oberonEP=Oberón 2.0
+moon.rheaEP=Rea 2.0
+moon.iapetusEP=Jápeto 2.0
+moon.titaniaEP=Titania 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=Roca Mercuriana Superficial

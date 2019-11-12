@@ -166,7 +166,7 @@ public class ExtraPlanets_Planets {
 			JUPITER.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.SATURN) {
-			SATURN = new Planet("Saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			SATURN = new Planet(Config.GALAXY_SPACE_COMPATIBILITY ? "SaturnEP" : "Saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			SATURN.setTierRequired(5);
 			SATURN.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			SATURN.setPhaseShift(5.45F);
@@ -185,7 +185,7 @@ public class ExtraPlanets_Planets {
 			SATURN.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.URANUS) {
-			URANUS = new Planet("Uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			URANUS = new Planet(Config.GALAXY_SPACE_COMPATIBILITY ? "UranusEP" : "Uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			URANUS.setTierRequired(6);
 			URANUS.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			URANUS.setPhaseShift(1.38F);

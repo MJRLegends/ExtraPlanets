@@ -48,6 +48,8 @@ planet.haumea=하우메아
 planet.MercuryEP=제2수성
 planet.CeresEP=제2세레스
 planet.JupiterEP=제2목성
+planet.SaturnEP=Saturn 2.0 ##NEEDS TRANSLATE##
+planet.UranusEP=Uranus 2.0 ##NEEDS TRANSLATE##
 planet.NeptuneEP=제2해왕성
 planet.PlutoEP=제2명왕성
 
@@ -106,6 +108,9 @@ moon.deimosEP=제2데이모스
 moon.phobosEP=제2포모스
 moon.oberonEP=제2오베론
 moon.titanEP=Titan 2.0 ##NEEDS TRANSLATE##
+moon.rheaEP=Rhea 2.0 ##NEEDS TRANSLATE##
+moon.iapetusEP=Iapetus 2.0 ##NEEDS TRANSLATE##
+moon.titaniaEP=Titania 2.0 ##NEEDS TRANSLATE##
 
 #Planet Blocks
 tile.mercury.surface.name=수성 표면석

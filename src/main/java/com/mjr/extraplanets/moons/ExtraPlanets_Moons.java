@@ -253,7 +253,7 @@ public class ExtraPlanets_Moons {
 			CALLISTO.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.RHEA) {
-			RHEA = new Moon("rhea").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.SATURN, "Saturn"));
+			RHEA = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "rheaEP" : "rhea").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.SATURN, "Saturn"));
 			RHEA.setPhaseShift(1.45F);
 			RHEA.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			RHEA.setRelativeOrbitTime(42.74914745741246F);
@@ -291,7 +291,7 @@ public class ExtraPlanets_Moons {
 			TITAN.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.IAPETUS) {
-			IAPETUS = new Moon("iapetus").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.SATURN, "Saturn"));
+			IAPETUS = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "iapetusEP" : "iapetus").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.SATURN, "Saturn"));
 			IAPETUS.setPhaseShift(1.45F);
 			IAPETUS.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F));
 			IAPETUS.setRelativeOrbitTime(68.5411941552618F);
@@ -329,7 +329,7 @@ public class ExtraPlanets_Moons {
 			OBERON.addMobInfo(new SpawnListEntry(EntityEvolvedEnderman.class, 10, 1, 4));
 		}
 		if (Config.TITANIA) {
-			TITANIA = new Moon("titania").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.URANUS, "Uranus"));
+			TITANIA = new Moon(Config.GALAXY_SPACE_COMPATIBILITY ? "titaniaEP" : "titania").setParentPlanet(getParentPlanet(ExtraPlanets_Planets.URANUS, "Uranus"));
 			TITANIA.setPhaseShift(1.45F);
 			TITANIA.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			TITANIA.setRelativeOrbitTime(68.5411941552618F);
