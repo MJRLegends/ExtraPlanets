@@ -152,12 +152,12 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		}
 
 		float electricityStored = Math.max(Math.min(joules, this.getMaxElectricityStored(itemStack)), 0);
-		if (joules > 0F || itemStack.getTagCompound().hasKey("electricity")) {
-			itemStack.getTagCompound().setFloat("electricity", electricityStored);
+		if (itemStack.getTagCompound().hasKey("electricity")) {
+			itemStack.getTagCompound().setFloat("electricity", joules);
 		}
 
 		/** Sets the damage as a percentage to render the bar properly. */
-		itemStack.setItemDamage(DAMAGE_RANGE - (int) (electricityStored / this.getMaxElectricityStored(itemStack) * DAMAGE_RANGE));
+		itemStack.setItemDamage(DAMAGE_RANGE - (int) (joules / this.getMaxElectricityStored(itemStack) * DAMAGE_RANGE));
 	}
 
 	@Override
