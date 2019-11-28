@@ -1,0 +1,1617 @@
+#Creative Tabs
+itemGroup.SpaceItemsTab=Extra Planetsのアイテム
+itemGroup.SpaceBlocksTab=Extra Planetsのブロック
+itemGroup.SpaceToolsTab=Extra Planetsの道具
+itemGroup.SpaceArmorTab=Extra Planetsの防具
+
+#Galaxies
+galaxy.whirlpool=子持ち銀河
+galaxy.andromeda=アンドロメダ銀河
+galaxy.black_eye=黒眼銀河
+galaxy.proxima_centauri=プロキシマ・ケンタウリ
+
+#Solar Systems
+solarsystem.kepler22=ケプラー22系
+solarsystem.kepler47=ケプラー47系
+solarsystem.kepler62=ケプラー62系
+solarsystem.kepler69=ケプラー69系
+
+solarsystem.xenos157=ゼノス157
+solarsystem.deltiri10=デルティリ10
+solarsystem.vendrizi161=ヴェンドリージ161
+solarsystem.epsilonSolaria=イプシロンソラリア
+
+#Stars
+star.kepler22=ケプラー22
+star.kepler47=ケプラー47
+star.kepler62=ケプラー62
+star.kepler69=ケプラー69
+
+star.xenos157=ゼノス157
+star.deltiri10=デルティリ10
+star.vendrizi161=ヴェンドリージ161
+star.epsilonSolaria=イプシロンソラリア
+
+#Planets
+planet.Mercury=水星
+planet.Ceres=ケレス
+planet.Jupiter=木星
+planet.Saturn=土星
+planet.Uranus=天王星
+planet.Neptune=海王星
+planet.Pluto=冥王星
+planet.Eris=エリス
+planet.kuiperBelt=カイパーベルト
+planet.makemake=マケマケ
+planet.haumea=ハウメア
+
+planet.MercuryEP=水星 2.0
+planet.CeresEP=ケレス 2.0
+planet.JupiterEP=木星 2.0
+planet.NeptuneEP=海王星 2.0
+planet.PlutoEP=冥王星 2.0
+
+planet.kepler62b=ケプラー62b
+planet.kepler62c=ケプラー62c
+planet.kepler62d=ケプラー62d
+planet.kepler62e=ケプラー62e
+planet.kepler62f=ケプラー62f
+planet.kepler22b=ケプラー22b
+planet.kepler47b=ケプラー47b
+planet.kepler47c=ケプラー47c
+planet.kepler69b=ケプラー69b
+planet.kepler69c=ケプラー69c
+
+planet.tatooine=タトゥイーン
+planet.crait=クレイト
+planet.hoth=ホス
+planet.aqua=アクア
+
+planet.qustroithea=カストロイセア
+planet.jetraruta=ジェットラルタ
+planet.moswion=モシオン
+planet.ketherth=ケザース
+planet.xovis=ゾビス
+
+planet.oarilia=オアリリア
+planet.struronides=ストルロニド
+planet.brajutov=ブラジュトフ
+planet.speshani16=スペシャニ16
+planet.trars9=トラーズ9
+
+#Moons
+moon.triton=トリトン
+moon.callisto=カリスト
+moon.europa=エウロパ
+moon.ganymede=ガニメデ
+moon.io=イオ
+moon.deimos=ダイモス
+moon.phobos=フォボス
+moon.iapetus=イアペトゥス
+moon.rhea=レア
+moon.titan=タイタン
+moon.oberon=オベロン
+moon.titania=チタニア
+moon.charon=Charon
+moon.nix=Nix
+moon.hydra=Hydra
+moon.dysnomia=Dysnomia
+
+moon.tritonEP=トリトン 2.0
+moon.callistoEP=カリスト 2.0
+moon.europaEP=エウロパ 2.0
+moon.ganymedeEP=ガニメデ 2.0
+moon.ioEP=イオ 2.0
+moon.deimosEP=ダイモス 2.0
+moon.phobosEP=フォボス 2.0
+moon.oberonEP=オベロン 2.0
+moon.titanEP=タイタン 2.0
+
+#Planet Blocks
+tile.mercury.surface.name=水星地表の岩
+tile.mercury.sub_surface.name=水星地中の岩
+tile.mercury.stone.name=水星の石
+tile.mercury.ore_iron.name=水星の鉄鉱石
+tile.mercury.ore_tin.name=水星のスズ鉱石
+tile.mercury.ore_copper.name=水星の銅鉱石
+tile.mercury.ore_mercury.name=水星鉱石
+tile.mercury.stone_bricks.name=水星の石レンガ
+tile.mercury.mercury_block.name=固体水銀ブロック
+tile.mercury.ore_carbon.name=カーボン鉱石
+tile.mercury.carbon_block.name=カーボンブロック
+tile.mercury.dungeon_brick.name=水星ダンジョンのレンガ
+
+tile.ceres.surface.name=ケレス地表の岩
+tile.ceres.sub_surface.name=ケレス地中の岩
+tile.ceres.stone.name=ケレスの石
+tile.ceres.ore_iron.name=ケレスの鉄鉱石
+tile.ceres.ore_tin.name=ケレスのスズ鉱石
+tile.ceres.ore_copper.name=ケレスの銅鉱石
+tile.ceres.ore_uranium.name=ケレスのウラン鉱石
+tile.ceres.stone_bricks.name=ケレスの石レンガ
+tile.ceres.uranium_block.name=ウランブロック
+
+tile.jupiter.surface.name=木星地表の岩
+tile.jupiter.sub_surface.name=木星地中の岩
+tile.jupiter.stone.name=木星の石
+tile.jupiter.ore_iron.name=木星の鉄鉱石
+tile.jupiter.ore_tin.name=木星のスズ鉱石
+tile.jupiter.ore_copper.name=木星の銅鉱石
+tile.jupiter.ore_palladium.name=木星のパラジウム鉱石
+tile.jupiter.ore_nickel.name=木星のニッケル鉱石
+tile.jupiter.ore_red_gem.name=木星の赤色鉱石
+tile.jupiter.stone_bricks.name=木星の石レンガ
+tile.jupiter.palladium_block.name=パラジウムブロック
+tile.jupiter.red_gem_block.name=赤色宝石ブロック
+tile.jupiter.dungeon_brick.name=木星ダンジョンのレンガ
+tile.jupiter.nickel_block.name=ニッケルブロック
+
+tile.saturn.surface.name=土星地表の岩
+tile.saturn.sub_surface.name=土星地中の岩
+tile.saturn.stone.name=土星の石
+tile.saturn.ore_iron.name=土星の鉄鉱石
+tile.saturn.ore_tin.name=土星のスズ鉱石
+tile.saturn.ore_copper.name=土星の銅鉱石
+tile.saturn.ore_magnesium.name=土星のマグネシウム鉱石
+tile.saturn.stone_bricks.name=土星の石レンガ
+tile.saturn.magnesium_block.name=マグネシウムブロック
+tile.saturn.dungeon_brick.name=土星ダンジョンのレンガ
+tile.saturn.broken_infected_stone.name=土星の砕けて汚染された石
+tile.saturn.infected_stone.name=土星の汚染された石
+tile.saturn.ore_slime.name=土星のスライム鉱石
+
+tile.uranus.surface.name=天王星地表の岩
+tile.uranus.sub_surface.name=天王星地中の岩
+tile.uranus.stone.name=天王星の石
+tile.uranus.ore_crystal.name=天王星のクォーツ鉱石
+tile.uranus.ore_white_gem.name=天王星の白色鉱石
+tile.uranus.stone_bricks.name=天王星の石レンガ
+tile.uranus.crystal_block.name=水晶ブロック
+tile.uranus.white_gem_block.name=白色宝石ブロック
+tile.uranus.dungeon_brick.name=天王星ダンジョンのレンガ
+
+tile.neptune.surface.name=海王星地表の岩
+tile.neptune.sub_surface.name=海王星地中の岩
+tile.neptune.stone.name=海王星の石
+tile.neptune.ore_iron.name=海王星の鉄鉱石
+tile.neptune.ore_tin.name=海王星のスズ鉱石
+tile.neptune.ore_copper.name=海王星の銅鉱石
+tile.neptune.ore_zinc.name=海王星の亜鉛鉱石
+tile.neptune.ore_blue_gem.name=海王星の青色鉱石
+tile.neptune.stone_bricks.name=海王星の石レンガ
+tile.neptune.zinc_block.name=亜鉛ブロック
+tile.neptune.blue_gem_block.name=青色宝石ブロック
+tile.neptune.dungeon_brick.name=海王星ダンジョンのレンガ
+
+tile.pluto.surface.name=冥王星地表の岩
+tile.pluto.sub_surface.name=冥王星地中の岩
+tile.pluto.stone.name=冥王星の石
+tile.pluto.ore_iron.name=冥王星の鉄鉱石
+tile.pluto.ore_tin.name=冥王星のスズ鉱石
+tile.pluto.ore_copper.name=冥王星の銅鉱石
+tile.pluto.ore_tungsten.name=冥王星のタングステン鉱石
+tile.pluto.stone_bricks.name=冥王星の石レンガ
+tile.pluto.tungsten_block.name=タングステンブロック
+tile.pluto.dungeon_brick.name=冥王星ダンジョンのレンガ
+
+tile.eris.surface.name=エリス地表の岩
+tile.eris.sub_surface.name=エリス地中の岩
+tile.eris.stone.name=エリスの石
+tile.eris.ore_iron.name=エリスの鉄鉱石
+tile.eris.ore_tin.name=エリスのスズ鉱石
+tile.eris.ore_copper.name=エリスの銅鉱石
+tile.eris.stone_bricks.name=エリスの石レンガ
+tile.eris.dungeon_brick.name=エリスダンジョンのレンガ
+tile.eris.ore_dark_iron.name=エリスの黒鉄鉱石
+tile.eris.dark_iron_block.name=黒鉄ブロック
+
+tile.kepler22b.dirt.name=ケプラー22bの土
+tile.kepler22b.stone.name=ケプラー22bの石
+tile.kepler22b_grass.name=ケプラー22bの草
+tile.kepler22b_blue_grass.name=ケプラー22bの青色の草
+tile.kepler22b_purple_grass.name=ケプラー22bの紫色の草
+tile.kepler22b_red_grass.name=ケプラー22bの赤色の草
+tile.kepler22b_yellow_grass.name=ケプラー22bの黄色の草
+tile.kepler22b_infected_grass.name=ケプラー22bの汚染された草
+tile.kepler22b.ore_iron.name=ケプラー22bの鉄鉱石
+tile.kepler22b.ore_tin.name=ケプラー22bのスズ鉱石
+tile.kepler22b.ore_copper.name=ケプラー22bの銅鉱石
+tile.kepler22b.ore_dense_coal.name=ケプラー22bの高密度石炭鉱石
+tile.kepler22b.ore_blue_diamonds.name=ケプラー22bのブルーダイヤモンド鉱石
+tile.kepler22b.ore_red_diamonds.name=ケプラー22bのレッドダイヤモンド鉱石
+tile.kepler22b.ore_purple_diamonds.name=ケプラー22bのパープルダイヤモンド鉱石
+tile.kepler22b.ore_yellow_diamonds.name=ケプラー22bのイエローダイヤモンド鉱石
+tile.kepler22b.ore_green_diamonds.name=ケプラー22bのグリーンダイヤモンド鉱石
+tile.kepler22b_planks.plank_maple_blue.name=ケプラー22bの青色の木材
+tile.kepler22b_planks.plank_maple_red.name=ケプラー22bの赤色の木材
+tile.kepler22b_planks.plank_maple_purple.name=ケプラー22bの紫色の木材
+tile.kepler22b_planks.plank_maple_yellow.name=ケプラー22bの黄色の木材
+tile.kepler22b_planks.plank_maple_green.name=ケプラー22bの緑色の木材
+tile.kepler22b_planks.plank_maple_brown.name=ケプラー22bの茶色の木材
+tile.kepler22b.stone_bricks.name=Kepler 22bの石レンガ
+tile.kepler22b_maple_logs.maple_blue_log.name=ケプラー22bの青色メープルの原木
+tile.kepler22b_maple_logs.maple_red_log.name=ケプラー22bの赤色メープルの原木
+tile.kepler22b_maple_logs.maple_purple_log.name=ケプラー22bの紫色メープルの原木
+tile.kepler22b_maple_logs.maple_yellow_log.name=ケプラー22bの黄色メープルの原木
+tile.kepler22b_maple_logs2.maple_green_log.name=ケプラー22bの緑色メープルの原木
+tile.kepler22b_maple_logs2.maple_brown_log.name=ケプラー22bの茶色メープルの原木
+tile.kepler22b_maple_saplings.blue_maple_sapling.name=ケプラー22bの青色メープルの苗木
+tile.kepler22b_maple_saplings.red_maple_sapling.name=ケプラー22bの赤色メープルの苗木
+tile.kepler22b_maple_saplings.purple_maple_sapling.name=ケプラー22bの紫色メープルの苗木
+tile.kepler22b_maple_saplings.yellow_maple_sapling.name=ケプラー22bの黄色メープルの苗木
+tile.kepler22b_maple_saplings.green_maple_sapling.name=ケプラー22bの緑色メープルの苗木
+tile.kepler22b_maple_saplings.brown_maple_sapling.name=ケプラー22bの茶色メープルの苗木
+tile.kepler22b_new_maple_leaves.blue_maple_leaf.name=ケプラー22bの青色メープルの葉
+tile.kepler22b_new_maple_leaves.red_maple_leaf.name=ケプラー22bの赤色メープルの葉
+tile.kepler22b_new_maple_leaves.purple_maple_leaf.name=ケプラー22bの紫色メープルの葉
+tile.kepler22b_new_maple_leaves.yellow_maple_leaf.name=ケプラー22bの黄色メープルの葉
+tile.kepler22b_new_maple_leaves_2.green_maple_leaf.name=ケプラー22bの緑色メープルの葉
+tile.kepler22b_new_maple_leaves_2.brown_maple_leaf.name=ケプラー22bの茶色メープルの葉
+tile.kepler22b_flowers.blue_maple_short_grass.name=ケプラー22bの青色の低い草
+tile.kepler22b_flowers.blue_maple_med_grass.name=ケプラー22bの青色のやや高い草
+tile.kepler22b_flowers.blue_maple_tall_grass.name=ケプラー22bの青色の高い草
+tile.kepler22b_flowers.red_maple_short_grass.name=ケプラー22bの赤色の低い草
+tile.kepler22b_flowers.red_maple_med_grass.name=ケプラー22bの赤色のやや高い草
+tile.kepler22b_flowers.red_maple_tall_grass.name=ケプラー22bの赤色の高い草
+tile.kepler22b_flowers.yellow_maple_short_grass.name=ケプラー22bの黄色の低い草
+tile.kepler22b_flowers.yellow_maple_med_grass.name=ケプラー22bの黄色のやや高い草
+tile.kepler22b_flowers.yellow_maple_tall_grass.name=ケプラー22bの黄色の高い草
+tile.kepler22b_flowers.purple_maple_short_grass.name=ケプラー22bの紫色の低い草
+tile.kepler22b_flowers.purple_maple_med_grass.name=ケプラー22bの紫色のやや高い草
+tile.kepler22b_flowers.purple_maple_tall_grass.name=ケプラー22bの紫色の高い草
+tile.kepler22b_flowers.green_maple_short_grass.name=ケプラー22bの緑色の低い草
+tile.kepler22b_flowers.green_maple_med_grass.name=ケプラー22bの緑色のやや高い草
+tile.kepler22b_flowers.green_maple_tall_grass.name=ケプラー22bの緑色の高い草
+tile.kepler22b.cobblestone.name=ケプラー22bの丸石
+tile.kepler22b.ore_platinum.name=ケプラー22bのプラチナ鉱石
+tile.kepler22b.platinum_block.name=プラチナブロック
+
+#Moon Blocks
+tile.callisto.surface.name=カリスト地表の岩
+tile.callisto.sub_surface.name=カリスト地中の岩
+tile.callisto.stone.name=カリストの石
+tile.callisto.ore_iron.name=カリストの鉄鉱石
+tile.callisto.ore_tin.name=カリストのスズ鉱石
+tile.callisto.ore_copper.name=カリストの銅鉱石
+tile.callisto.dried_oil.name=カリストの乾いた油
+tile.callisto.shale_oil.name=カリストのシェールオイル
+
+tile.deimos.surface.name=ダイモス地表の岩
+tile.deimos.sub_surface.name=ダイモス地中の岩
+tile.deimos.stone.name=ダイモスの石
+tile.deimos.ore_iron.name=ダイモスの鉄鉱石
+tile.deimos.ore_tin.name=ダイモスのスズ鉱石
+tile.deimos.ore_copper.name=ダイモスの銅鉱石
+
+tile.europa.surface.name=エウロパ地表の岩
+tile.europa.sub_surface.name=エウロパ地中の岩
+tile.europa.stone.name=エウロパの石
+tile.europa.ore_iron.name=エウロパの鉄鉱石
+tile.europa.ore_tin.name=エウロパのスズ鉱石
+tile.europa.ore_copper.name=エウロパの銅鉱石
+
+tile.io.surface.name=イオ地表の岩
+tile.io.sub_surface.name=イオ地中の岩
+tile.io.stone.name=イオの石
+tile.io.ore_iron.name=イオの鉄鉱石
+tile.io.ore_tin.name=イオのスズ鉱石
+tile.io.ore_copper.name=イオの銅鉱石
+
+tile.phobos.surface.name=フォボス地表の岩
+tile.phobos.sub_surface.name=フォボス地中の岩
+tile.phobos.stone.name=フォボスの石
+tile.phobos.ore_iron.name=フォボスの鉄鉱石
+tile.phobos.ore_tin.name=フォボスのスズ鉱石
+tile.phobos.ore_copper.name=フォボスの銅鉱石
+
+tile.triton.surface.name=トリトン地表の岩
+tile.triton.sub_surface.name=トリトン地中の岩
+tile.triton.stone.name=トリトンの石
+tile.triton.ore_iron.name=トリトンの鉄鉱石
+tile.triton.ore_tin.name=トリトンのスズ鉱石
+tile.triton.ore_copper.name=トリトンの銅鉱石
+
+tile.ganymede.surface.name=ガニメデ地表の岩
+tile.ganymede.sub_surface.name=ガニメデ地中の岩
+tile.ganymede.stone.name=ガニメデの石
+tile.ganymede.ore_iron.name=ガニメデの鉄鉱石
+tile.ganymede.ore_tin.name=ガニメデのスズ鉱石
+tile.ganymede.ore_copper.name=ガニメデの銅鉱石
+
+tile.rhea.surface.name=レア地表の岩
+tile.rhea.sub_surface.name=レア地中の岩
+tile.rhea.stone.name=レアの石
+tile.rhea.ore_iron.name=レアの鉄鉱石
+tile.rhea.ore_tin.name=レアのスズ鉱石
+tile.rhea.ore_copper.name=レアの銅鉱石
+
+tile.titan.surface.name=タイタン地表の岩
+tile.titan.sub_surface.name=タイタン地中の岩
+tile.titan.stone.name=タイタンの石
+tile.titan.ore_iron.name=タイタンの鉄鉱石
+tile.titan.ore_tin.name=タイタンのスズ鉱石
+tile.titan.ore_copper.name=タイタンの銅鉱石
+tile.titan.titan_methane_surface.name=タイタン地表のメタン
+tile.titan.titan_methane_sub_surface.name=タイタン地中のメタン
+tile.titan.titan_rocks.name=タイタンの岩石
+
+tile.oberon.surface.name=オベロン地表の岩
+tile.oberon.sub_surface.name=オベロン地中の岩
+tile.oberon.stone.name=オベロンの石
+tile.oberon.ore_iron.name=オベロンの鉄鉱石
+tile.oberon.ore_tin.name=オベロンのスズ鉱石
+tile.oberon.ore_copper.name=オベロンの銅鉱石
+
+tile.titania.surface.name=チタニア地表の岩
+tile.titania.sub_surface.name=チタニア地中の岩
+tile.titania.stone.name=チタニアの石
+tile.titania.ore_iron.name=チタニアの鉄鉱石
+tile.titania.ore_tin.name=チタニアのスズ鉱石
+tile.titania.ore_copper.name=チタニアの銅鉱石
+
+tile.iapetus.surface.name=イアペトゥス地表の岩
+tile.iapetus.sub_surface.name=イアペトゥス地中の岩
+tile.iapetus.stone.name=イアペトゥスの石
+tile.iapetus.ore_iron.name=イアペトゥスの鉄鉱石
+tile.iapetus.ore_tin.name=イアペトゥスのスズ鉱石
+tile.iapetus.ore_copper.name=イアペトゥスの銅鉱石
+tile.iapetus.ice.name=イアペトゥスの氷
+
+#Planet/Moon Gravel Blocks
+tile.mercury_gravel.name=水星の砂利
+tile.ceres_gravel.name=ケレスの砂利
+tile.pluto_gravel.name=冥王星の砂利
+tile.eris_gravel.name=エリスの砂利
+tile.io_gravel.name=イオの砂利
+tile.europa_gravel.name=エウロパの砂利
+tile.deimos_gravel.name=ダイモスの砂利
+tile.phobos_gravel.name=フォボスの砂利
+tile.triton_gravel.name=トリトンの砂利
+tile.callisto_gravel.name=カリストの砂利
+tile.ganymede_gravel.name=ガニメデの砂利
+tile.rhea_gravel.name=レアの砂利
+tile.titan_gravel.name=タイタンの砂利
+tile.oberon_gravel.name=オベロンの砂利
+tile.titania_gravel.name=チタニアの砂利
+tile.iapetus_gravel.name=イアペトゥスの砂利
+tile.venus_gravel.name=金星の砂利
+tile.jupiter_gravel.name=木星の砂利
+tile.saturn_gravel.name=土星の砂利
+tile.uranus_gravel.name=天王星の砂利
+tile.neptune_gravel.name=海王星の砂利
+
+#Girt Blocks
+tile.diamond_grit.name=砂状のダイアモンド
+tile.coal_grit.name=砂状の石炭
+tile.iron_grit.name=砂状の鉄
+tile.gold_grit.name=砂状の金
+tile.emerald_grit.name=砂状のエメラルド
+
+#Treasure Chests
+tile.treasure_chest_t4.name=レベル4 宝箱
+tile.treasure_chest_t5.name=レベル5 宝箱
+tile.treasure_chest_t6.name=レベル6 宝箱
+tile.treasure_chest_t7.name=レベル7 宝箱
+tile.treasure_chest_t8.name=レベル8 宝箱
+tile.treasure_chest_t9.name=レベル9 宝箱
+tile.treasure_chest_t10.name=レベル10 宝箱
+tile.treasure_chest_t4.description=水星のダンジョンで生成される. 最終ボスを倒した後に解錠できる.
+tile.treasure_chest_t5.description=木星のダンジョンで生成される. 最終ボスを倒した後に解錠できる.
+tile.treasure_chest_t6.description=土星のダンジョンで生成される. 最終ボスを倒した後に解錠できる.
+tile.treasure_chest_t7.description=天王星のダンジョンで生成される. 最終ボスを倒した後に解錠できる.
+tile.treasure_chest_t8.description=海王星のダンジョンで生成される. 最終ボスを倒した後に解錠できる.
+tile.treasure_chest_t9.description=冥王星のダンジョンで生成される. 最終ボスを倒した後に解錠できる.
+tile.treasure_chest_t10.description=エリスのダンジョンで生成される. 最終ボスを倒した後に解錠できる.
+
+#Machines
+tile.advanced_refinery.name=高性能 石油精製機
+tile.ultimate_refinery.name=究極型 石油精製機
+tile.solar.hybrid_solar.name=ハイブリッドソーラー発電機
+tile.solar.ultimate_solar.name=究極型 ソーラー発電機
+tile.solar_hybrid.description=昼夜を問わず発電できる
+tile.solar_ultimate.description=昼夜を問わず発電できる
+tile.advanced_oxygen_compressor.0.name=高性能 酸素圧縮機
+tile.advanced_oxygen_compressor.1.name=高性能 酸素減圧装置
+tile.ultimate_oxygen_compressor.0.name=究極型 酸素圧縮機
+tile.ultimate_oxygen_compressor.1.name=究極型 酸素減圧装置
+tile.basic_decrystallizer.name=結晶分解装置
+tile.basic_crystallizer.name=結晶化装置
+tile.basic_smasher.name=ブロック粉砕機
+tile.basic_chemical_injector.name=化学注入器
+tile.basic_solar_evaporation_chamber.name=天日蒸発チェンバー
+tile.advanced_launch_pad.tier2LandingPad.name=レベル2 発射台
+tile.advanced_launch_pad.tier3LandingPad.name=レベル3 発射台
+tile.advanced_launch_pad.poweredChargingPad.name=車両充電パッド
+tile.advanced_launch_pad.rocketPoweredChargingPad.name=強化発射台
+tile.advanced_launch_pad_full.name=レベル2・3の発射台
+tile.advanced_launch_pad.tier2.desc=レベル4-8のロケットに使用する. 5x5に設置する
+tile.advanced_launch_pad.tier3.desc=レベル9-10のロケットに使用する. 5x5に設置する
+tile.advanced_launch_pad.powered.desc=火星探査車と金星探査車の充電に利用する. 5x5に設置する
+tile.advanced_launch_pad.powered.rocket.desc=レベル10のエレクトリックロケットに使用する. 5x5に設置する
+tile.advanced_fuel_loader.name=高性能 燃料給油機
+tile.ultimate_fuel_loader.name=究極型 燃料給油機
+tile.vehicle_charger.name=車両充電器
+tile.basic_purifier.name=浄化装置
+tile.basic_densifier.name=流体凝固装置
+tile.basic_decontamination_unit.name=除染ユニット
+tile.basic_decontamination_unit_fake_block.name=除染ユニット
+
+tile.advanced_fuel_loader.description=発射台に接続すると,ロケットや 車両に燃料を補給することができる.
+tile.ultimate_fuel_loader.description=発射台に接続すると,ロケットや 車両に燃料を補給することができる.
+tile.advanced_refinery.description=エネルギーを消費して原油を精製し, ロケットや車両の燃料を生産する.
+tile.ultimate_refinery.description=エネルギーを消費して原油を精製し, ロケットや車両の燃料を生産する.
+tile.basic_decrystallizer.description=ヨウ素添加塩を塩水に変換する
+tile.basic_crystallizer.description=塩水をヨウ素添加塩に変換する
+tile.basic_smasher.description=ブロックの粉砕に使用する
+tile.basic_chemical_injector.description=ブロックやアイテムを化学物質と結合する
+tile.basic_solar_evaporation_chamber.description=入力アイテムを蒸発させる
+tile.basic_purifier.description=汚染/放射能汚染された水を浄化する
+tile.basic_densifier.description=流体を高密度に圧縮する
+tile.vehicle_charger.description=車両充電パッド/強化発射台の隣に設置することで充電が可能となる
+
+#Machine Containers
+container.solarhybrid.name=ハイブリッドソーラー発電機
+container.solarultimate.name=究極型 ソーラー発電機
+container.advanced.refinery.name=高性能 石油精製機
+container.ultimate.refinery.name=究極型 石油精製機
+container.advancedoxygencompressor.name=高性能 酸素圧縮機
+container.advancedoxygendecompressor.name=高性能 酸素減圧装置
+container.ultimateoxygencompressor.name=究極型 酸素圧縮機
+container.ultimateoxygendecompressor.name=究極型 酸素減圧装置
+container.basic.decrystallizer.name=結晶分解装置
+container.basic.crystallizer.name=結晶化装置
+container.basic.smasher.name=ブロック粉砕機
+container.basic.chemical_injector.name=化学注入器
+container.advanced.fuelloader.name=高性能 燃料給油機
+container.ultimate.fuelloader.name=究極型 燃料給油機
+container.basic.solar.evaporation.chamber.name=天日蒸発チェンバー
+container.vehicle.charger.name=車両充電器
+container.basic.purifier.name=浄化装置
+container.basic.densifier.name=流体凝固装置
+container.basic.decontamination.unit.name=除染ユニット
+
+#GUI Components/Messages
+gui.salt_water_tank.desc.4=塩水タンク
+gui.message.salt_water.name=塩水
+gui.salt_water_input.desc.0=塩水入りバケツを
+gui.salt_water_input.desc.1=配置してタンクに移す.
+gui.salt_water_input.desc.2=バケツ1杯 = 1000mB
+gui.salt_water_output.desc.0=空のバケツを配置して
+gui.salt_water_output.desc.1=タンクの中身を入れる
+gui.status.injecting.name=注入中
+gui.status.smasher.name=粉砕中
+gui.status.crystallizing.name=結晶化中
+gui.status.decrystallizing.name=結晶分解中
+gui.status.solarEvaporationChamber.name=蒸発中
+gui.message.power.name=動力付き車両
+gui.message.power.rocket.name=エレクトリックロケット
+gui.message.power.message.name=エネルギー
+gui.button.loadpower.name=エネルギー充填
+gui.powered.inv.name=インベントリ / エネルギー
+gui.status.purifiering.name=浄化中
+gui.radioactive_water_tank.desc.4=放射能汚染水タンク
+gui.message.radioactive_water.name=放射能汚染水
+gui.infected_water_tank.desc.4=汚染水タンク
+gui.message.infected_water.name=汚染水
+gui.clean_water_tank.desc.4=浄水タンク
+gui.message.clean_water.name=浄水
+gui.radioactive_water_input.desc.0=放射能汚染水入りバケツを
+gui.radioactive_water_input.desc.1=配置してタンクに移す.
+gui.radioactive_water_input.desc.2=バケツ1杯 = 1000mB
+gui.infected_water_input.desc.0=汚染水入りバケツを
+gui.infected_water_input.desc.1=配置してタンクに移す.
+gui.infected_water_input.desc.2=バケツ1杯 = 1000mB
+gui.clean_water_output.desc.0=空のバケツを配置して
+gui.clean_water_output.desc.1=タンクの中身を入れる
+gui.bucket.message.finding=次の場所で入手できる：
+gui.bucket.message.finding.2.infected_water_fluid=水星
+gui.bucket.message.finding.2.radioactive_water_fluid=ケレス & エウロパ
+gui.bucket.message.finding.2.nitrogen_fluid=海王星
+gui.bucket.message.finding.2.glowstone_fluid=土星
+gui.bucket.message.finding.2.magma_fluid=木星 & イオ
+gui.bucket.message.finding.2.liquid_caramel_fluid=ケプラー22b
+gui.bucket.message.finding.2.liquid_chocolate_fluid=ケプラー22b
+gui.bucket.message.finding.2.liquid_hydrocarbon_fluid=土星
+gui.bucket.message.finding.2.salt_fluid=ケレス & エウロパ
+gui.bucket.message.finding.2.methane_fluid=タイタン
+gui.bucket.message.finding.2.frozen_water_fluid=天王星 & トリトン
+gui.bucket.message.finding.2.nitrogen_ice_fluid=トリトン
+gui.bucket.message.crafting=Rキーで入手方法を確認する
+gui.status.missing.inputs.name=インプットが不足
+gui.status.missing.power.name=エネルギーが不足
+gui.densifier_input.desc.0=このスロットに次の
+gui.densifier_input.desc.1=バケツを配置できる:
+gui.densifier_input.desc.2=液体キャラメル
+gui.densifier_input.desc.3=液体チョコレート
+gui.densifier_input.desc.4=液体窒素など
+gui.densifier_input.desc.5=バケツ1杯 = 1000mb
+gui.message.general.tank.name=流体タンク
+gui.message.general.tank.fluid.name=流体
+gui.status.densifier.name=高密度化中
+gui.bucket.message.extreme.reactors.compact=Extreme Reactors (MOD)との互換性あり
+gui.radiation.reduced.message=放射線レベルが減少しました。減少量:
+gui.radiation.reduced.message.2=(初期/現在の数値から)
+gui.radiation.current.message=あなたの現在の放射線レベルは
+gui.radiation.subject.message=あなたは現在
+gui.radiation.reverse.message=放射線レベルを下げる手段: 睡眠をとる / 除染ユニットの使用 / Anti-Radを飲む 
+gui.radiation.type.message=の放射線にさらされています
+gui.status.waiting.on.player.name=プレイヤーが入っていません
+gui.message.finding.block=次の場所で発見できる：
+gui.message.finding.volcanic.rock=木星 & イオ
+gui.message.finding.potash=ケレスの地下深く
+gui.message.decontamination.unit=放射線レベルを10%減少させる
+gui.battery_slot.desc.custom=大容量電池の使用を推奨
+gui.radiation.cancel.message=酸素密封機を周囲温度コントローラーでアップグレードすると、放射線と圧力から完全に身体を保護できます
+currently.unused.name=今は使われていない!
+wafter.uses.information=宇宙ステーションのレシピに使用
+gui.rover.information=1.車両充電パッドに車両充電器を取り付ける.
+gui.rover.information.2=2.パッドの上に探査車を置いて充電する.
+
+#Celestial Selection Screen GUI Components
+gui.celestial_details.name=天体の詳細
+gui.general_features_details.name=一般的特徴の詳細
+gui.atmosphere_details.name=大気の詳細
+gui.general_details.name=一般情報の詳細
+gui.parent_solar_system_details.name=惑星系の詳細
+gui.new_galaxies.name=新しい銀河
+gui.type_planet.name=惑星
+gui.type_moon.name=衛星
+gui.type_satellite.name=衛星
+gui.type_unknown.name=不詳
+gui.type_days.name=日
+gui.type_hours.name=時間
+
+gui.celestial_body_type.name=タイプ
+gui.celestial_body_amount_of_moons.name=衛星の数
+gui.celestial_body_orbit_time.name=公転周期
+gui.celestial_body_gravity.name=重力
+gui.celestial_body_day_lengh.name=1日の長さ
+gui.celestial_body_meteor_frequency.name=隕石の頻度
+gui.celestial_body_wind_level.name=風力レベル
+gui.celestial_body_temperature.name=温度
+gui.celestial_body_breathable.name=呼吸可能
+gui.celestial_body_corrosive_atmosphere.name=大気腐食
+gui.celestial_body_radiation_level.name=放射線レベル
+gui.celestial_body_pressure_level.name=圧力レベル
+gui.celestial_body_amount_of_planets.name=惑星の数
+gui.celestial_body_has_dungeon.name=ダンジョン
+
+#GUI Controls/Keybinds
+keybind.vehicle_inv.name=車両インベントリを開く
+keybind.module.manager.name=モジュールマネージャーを開く
+keybind.module.pre.launch.name=発射前チェックリストを確認する
+keybind.module.nasa.workbench.name=ポータブルNASA作業台を使う
+
+#GUI Module Manager
+gui.module_manager.name=モジュールマネージャー
+gui.modules_helmet.name=ヘルメットモジュール
+gui.modules_chest.name=チェストプレートモジュール
+gui.modules_leggings.name=レギンスモジュール
+gui.modules_boots.name=ブーツモジュール
+gui.module_list.name=モジュール一覧
+gui.button.install.name=取り付け
+gui.button.uninstall.name=取り外し
+gui.button.disable_module.name=有効
+gui.button.enable_module.name=無効
+gui.module_cost.name=コスト
+gui.module.installed.name=モジュールを取り付けた!
+gui.module.missing_requirements.name=このモジュールを取り付けるための要件を満たしていません!
+gui.module.already_installed.name=既にこのモジュールは取り付け済みです!
+gui.module.missing_armour.name=スペーススーツの一部が欠落しているため取り付けできません!
+gui.module.description.name=モジュール説明
+gui.module.name.name=モジュール名
+gui.module.type.name=モジュールタイプ
+gui.module.type.helmet.name=ヘルメット
+gui.module.type.chest.name=チェストプレート
+gui.module.type.leggings.name=レギンス
+gui.module.type.boots.name=ブーツ
+gui.module.power.name=Module Power
+
+gui.module.sensor_glasses.name=センサーゴーグル
+gui.module.no_fall_damage.name=落下ダメージ無効
+gui.module.geiger_counter.name=ガイガーカウンター
+gui.module.test.name=Test Module
+gui.module.pre_launch_checklist.name=発射前チェックリスト
+gui.module.nasa_workbench.name=ポータブルNASA作業台
+gui.module.oxygen_tank_switch.name=酸素タンク自動交換
+gui.module.auto_space_gear_equip.name=スペースギア自動装備
+
+gui.module.sensor_glasses.desc=Galacticraftのセンサーゴーグルと同等の機能
+gui.module.no_fall_damage.desc=落下ダメージを無効化する
+gui.module.geiger_counter.desc=画面に現在の放射線レベルを表示する
+gui.module.test.desc=Test Module
+gui.module.pre_launch_checklist.desc=Galacticraftの発射前チェックリストへアクセスする. キー設定を参照.
+gui.module.nasa_workbench.desc=GalacticraftのNASA作業台へ遠隔アクセスできる. キー設定を参照.
+gui.module.oxygen_tank_switch.desc=装着した酸素タンクが空になったら、インベントリのタンクと交換する
+gui.module.auto_space_gear_equip.desc=インベントリにあるスペースギアを自動的に装着する
+
+#Other Blocks
+tile.nuclear_bomb.name=核爆弾
+tile.fire_bomb.name=焼夷爆弾
+tile.volcanic_rock.name=火山岩
+tile.ash_rock.name=灰ブロック
+tile.frozen_nitrogen.name=凍結した窒素
+tile.dense_ice.name=高密度の氷
+tile.fossil.name=化石ブロック
+tile.ore_lead.name=鉛鉱石
+tile.potash.name=カリウム鉱石
+tile.red_sand.name=赤色の砂
+tile.red_sandstone.name=赤色の砂岩
+tile.orange_sand.name=橙色の砂
+tile.orange_sandstone.name=橙色の砂岩
+
+#CandyCane/Cake/Icing Blocks
+tile.candy_blocks.candy_cane_red.name=赤色のキャンディケイン
+tile.candy_blocks.candy_cane_green.name=緑色のキャンディケイン
+tile.candy_blocks.candy_cane_blue.name=青色のキャンディケイン
+tile.candy_blocks.candy_cane_orange.name=橙色のキャンディケイン
+tile.candy_blocks.candy_cane_magenta.name=赤紫色のキャンディケイン
+tile.candy_blocks.candy_cane_pink.name=桃色のキャンディケイン
+tile.candy_blocks.candy_cane_lime.name=黄緑色のキャンディケイン
+tile.candy_blocks.candy_cane_purple.name=紫色のキャンディケイン
+tile.candy_blocks.candy_cane_brown.name=茶色のキャンディケイン
+tile.candy_blocks.candy_cane_black.name=黒色のキャンディケイン
+
+tile.candy_blocks_horizontal.candy_cane_red_horizontal.name=赤色のキャンディケイン (横向き)
+tile.candy_blocks_horizontal.candy_cane_green_horizontal.name=緑色のキャンディケイン (横向き)
+tile.candy_blocks_horizontal.candy_cane_blue_horizontal.name=青色のキャンディケイン (横向き)
+tile.candy_blocks_horizontal.candy_cane_orange_horizontal.name=橙色のキャンディケイン (横向き)
+tile.candy_blocks_horizontal.candy_cane_magenta_horizontal.name=赤紫色のキャンディケイン (横向き)
+tile.candy_blocks_horizontal.candy_cane_pink_horizontal.name=桃色のキャンディケイン (横向き)
+tile.candy_blocks_horizontal.candy_cane_lime_horizontal.name=黄緑色のキャンディケイン (横向き)
+tile.candy_blocks_horizontal.candy_cane_purple_horizontal.name=紫色のキャンディケイン (横向き)
+tile.candy_blocks_horizontal.candy_cane_brown_horizontal.name=茶色のキャンディケイン (横向き)
+tile.candy_blocks_horizontal.candy_cane_black_horizontal.name=黒色のキャンディケイン (横向き)
+
+tile.cake_blocks.cake_block.name=ケーキブロック
+tile.cake_blocks.cake_block_red_velvet.name=レッドヴェルヴェットケーキ ブロック
+tile.cake_blocks.cake_block_chocolate.name=チョコレートケーキ ブロック
+tile.cake_blocks.white_icing_red_dots.name=赤色の水玉模様のアイシング
+tile.cake_blocks.white_icing_green_dots.name=緑色の水玉模様のアイシング
+tile.cake_blocks.white_icing_pink_dots.name=桃色の水玉模様のアイシング
+tile.cake_blocks.white_icing_orange_dots.name=橙色の水玉模様のアイシング
+tile.cake_blocks.cookie_rocks.name=クッキーの岩
+
+tile.white_sugar_cane.name=白サトウキビブロック
+
+#Decorative Blocks
+tile.decorative_blocks.marble.name=大理石
+tile.decorative_blocks.marble_bricks.name=大理石レンガ
+tile.decorative_blocks.snow_bricks.name=雪レンガ
+tile.decorative_blocks.ice_bricks.name=氷レンガ
+tile.decorative_blocks.fire_bricks.name=炎レンガ
+tile.decorative_blocks.black_white_floor.name=黒/白タイルの床
+tile.decorative_blocks.marble_titled_floor.name=大理石タイルの床
+tile.decorative_blocks.marble_broken_titled_floor.name=削れた大理石タイルの床
+tile.decorative_blocks.metal_mesh.name=メタルメッシュの床
+tile.decorative_blocks.frozen_nitrogen_bricks.name=凍結した窒素のレンガ
+tile.decorative_blocks.volcanic_rock_bricks.name=火山岩のレンガ
+tile.decorative_blocks.carbon_titled_floor.name=カーボンタイルの床
+tile.decorative_blocks.carbon_broken_titled_floor.name=削れたカーボンタイルの床
+tile.decorative_blocks.magnesium_titled_floor.name=マグネシウムタイルの床
+tile.decorative_blocks.magnesium_broken_titled_floor.name=削れたマグネシウムタイルの床
+tile.decorative_blocks.ash_bricks.name=灰レンガ
+tile.decorative_blocks2.white_block.name=白色ブロック
+tile.decorative_blocks2.red_block.name=赤色ブロック
+tile.decorative_blocks2.blue_block.name=青色ブロック
+tile.decorative_blocks2.light_blue_block.name=空色ブロック
+tile.decorative_blocks2.yellow_block.name=黄色ブロック
+tile.decorative_blocks2.green_block.name=緑色ブロック
+
+#Stairs
+tile.mercury_stairs_surface.name=水星地表の岩の階段
+tile.mercury_stairs_sub_surface.name=水星地中の岩の階段
+tile.mercury_stairs_stone.name=水星の石の階段
+tile.mercury_stairs_stone_bricks.name=水星の石レンガの階段
+
+tile.ceres_stairs_surface.name=ケレス地表の岩の階段
+tile.ceres_stairs_sub_surface.name=ケレス地中の岩の階段
+tile.ceres_stairs_stone.name=ケレスの石の階段
+tile.ceres_stairs_stone_bricks.name=ケレスの石レンガの階段
+
+tile.jupiter_stairs_surface.name=木星地表の岩の階段
+tile.jupiter_stairs_sub_surface.name=木星地中の岩の階段
+tile.jupiter_stairs_stone.name=木星の石の階段
+tile.jupiter_stairs_stone_bricks.name=木星の石レンガの階段
+
+tile.saturn_stairs_surface.name=土星地表の岩の階段
+tile.saturn_stairs_sub_surface.name=土星地中の岩の階段
+tile.saturn_stairs_stone.name=土星の石の階段
+tile.saturn_stairs_stone_bricks.name=土星の石レンガの階段
+
+tile.uranus_stairs_surface.name=天王星地表の岩の階段
+tile.uranus_stairs_sub_surface.name=天王星地中の岩の階段
+tile.uranus_stairs_stone.name=天王星の石の階段
+tile.uranus_stairs_stone_bricks.name=天王星の石レンガの階段
+
+tile.neptune_stairs_surface.name=海王星地表の岩の階段
+tile.neptune_stairs_sub_surface.name=海王星地中の岩の階段
+tile.neptune_stairs_stone.name=海王星の石の階段
+tile.neptune_stairs_stone_bricks.name=海王星の石レンガの階段
+
+tile.pluto_stairs_surface.name=冥王星地表の岩の階段
+tile.pluto_stairs_sub_surface.name=冥王星地中の岩の階段
+tile.pluto_stairs_stone.name=冥王星の石の階段
+tile.pluto_stairs_stone_bricks.name=冥王星の石レンガの階段
+
+tile.eris_stairs_surface.name=エリス地表の岩の階段
+tile.eris_stairs_sub_surface.name=エリス地中の岩の階段
+tile.eris_stairs_stone.name=エリスの石の階段
+tile.eris_stairs_stone_bricks.name=エリスの石レンガの階段
+
+#Rocket Items
+item.item_tier4_rocket.t4Rocket.name=レベル4 ロケット
+item.item_tier5_rocket.t5Rocket.name=レベル5 ロケット
+item.item_tier6_rocket.t6Rocket.name=レベル6 ロケット
+item.item_tier7_rocket.t7Rocket.name=レベル7 ロケット
+item.item_tier8_rocket.t8Rocket.name=レベル8 ロケット
+item.item_tier9_rocket.t9Rocket.name=レベル9 ロケット
+item.item_tier10_rocket.t10Rocket.name=レベル10 ロケット
+item.item_tier10_electric_rocket.t10Rocket.name=レベル10 エレクトリックロケット
+rocket_pad.tier2.desc=レベル2発射台に設置する必要がある
+rocket_pad.tier3.desc=レベル3発射台に設置する必要がある
+rocket_pad.electric.desc=強化発射台に設置する必要がある
+
+#Vehicles
+item.mars_rover.name=火星探査車
+item.venus_rover.name=金星探査車
+
+#Rocket Tiered Items
+item.nose_cone_tier4.name=レベル4 ノーズコーン
+item.nose_cone_tier5.name=レベル5 ノーズコーン
+item.nose_cone_tier6.name=レベル6 ノーズコーン
+item.nose_cone_tier7.name=レベル7 ノーズコーン
+item.nose_cone_tier8.name=レベル8 ノーズコーン
+item.nose_cone_tier9.name=レベル9 ノーズコーン
+item.nose_cone_tier10.name=レベル10 ノーズコーン
+
+item.tier4_items.tier4fin.name=レベル4 ロケットフィン
+item.tier5_items.tier5fin.name=レベル5 ロケットフィン
+item.tier6_items.tier6fin.name=レベル6 ロケットフィン
+item.tier7_items.tier7fin.name=レベル7 ロケットフィン
+item.tier8_items.tier8fin.name=レベル8 ロケットフィン
+item.tier9_items.tier9fin.name=レベル9 ロケットフィン
+item.tier10_items.tier10fin.name=レベル10 ロケットフィン
+
+item.tier4_items.tier4engine.name=レベル4 ロケットエンジン
+item.tier5_items.tier5engine.name=レベル5 ロケットエンジン
+item.tier6_items.tier6engine.name=レベル6 ロケットエンジン
+item.tier7_items.tier7engine.name=レベル7 ロケットエンジン
+item.tier8_items.tier8engine.name=レベル8 ロケットエンジン
+item.tier9_items.tier9engine.name=レベル9 ロケットエンジン
+item.tier10_items.tier10engine.name=レベル10 ロケットエンジン
+
+item.tier4_items.tier4booster.name=レベル4 ブースター
+item.tier5_items.tier5booster.name=レベル5 ブースター
+item.tier6_items.tier6booster.name=レベル6 ブースター
+item.tier7_items.tier7booster.name=レベル7 ブースター
+item.tier8_items.tier8booster.name=レベル8 ブースター
+item.tier9_items.tier9booster.name=レベル9 ブースター
+item.tier10_items.tier10booster.name=レベル10 ブースター
+
+item.tier4_items.tier4heavy_duty_plate.name=ヘビーデューティープレート
+item.tier5_items.tier5heavy_duty_plate.name=ヘビーデューティープレート
+item.tier6_items.tier6heavy_duty_plate.name=ヘビーデューティープレート
+item.tier7_items.tier7heavy_duty_plate.name=ヘビーデューティープレート
+item.tier8_items.tier8heavy_duty_plate.name=ヘビーデューティープレート
+item.tier9_items.tier9heavy_duty_plate.name=ヘビーデューティープレート
+item.tier10_items.tier10heavy_duty_plate.name=ヘビーデューティープレート
+
+tier4.heavy_duty_plate.name=レベル4
+tier5.heavy_duty_plate.name=レベル5
+tier6.heavy_duty_plate.name=レベル6
+tier7.heavy_duty_plate.name=レベル7
+tier8.heavy_duty_plate.name=レベル8
+tier9.heavy_duty_plate.name=レベル9
+tier10.heavy_duty_plate.name=レベル10
+
+#Compressed Items
+item.tier4_items.compressed_carbon.name=圧縮されたカーボン
+item.tier5_items.compressed_palladium.name=圧縮されたパラジウム
+item.tier6_items.compressed_magnesium.name=圧縮されたマグネシウム
+item.tier7_items.compressed_reinforced_crystal.name=圧縮された強化水晶
+item.tier7_items.compressed_crystal.name=圧縮された水晶
+item.tier8_items.compressed_zinc.name=圧縮された亜鉛
+item.tier5_items.compressed_nickel.name=圧縮されたニッケル
+item.compressed_mercury.name=圧縮された水銀
+item.tier9_items.compressed_tungsten.name=圧縮されたタングステン
+item.tier10_items.compressed_dark_iron.name=圧縮された黒鉄
+item.tier11_items.compressed_platinum.name=圧縮されたプラチナ
+
+#Ingots
+item.tier4_items.ingot_carbon.name=カーボンインゴット
+item.tier5_items.ingot_palladium.name=パラジウムインゴット
+item.tier6_items.ingot_magnesium.name=マグネシウムインゴット
+item.tier7_items.ingot_crystal.name=水晶インゴット
+item.tier8_items.ingot_zinc.name=亜鉛インゴット
+item.tier5_items.ingot_nickel.name=ニッケルインゴット
+item.ingot_mercury.name=水銀インゴット
+item.ingot_uranium.name=ウランインゴット
+item.tier9_items.ingot_tungsten.name=タングステンインゴット
+item.tier10_items.ingot_dark_iron.name=黒鉄インゴット
+item.ingot_lead.name=鉛インゴット
+item.tier5_items.ingot_volcanic.name=火山岩インゴット
+item.tier11_items.ingot_platinum.name=プラチナインゴット
+
+#Shards
+item.tier5_items.volcanic_shard.name=火山岩の破片
+item.tier5_items.ash_shard.name=灰の破片
+item.tier4_items.diamond_shard.name=ダイヤモンドの破片
+
+#Gems
+item.tier5_items.red_gem.name=赤色宝石
+item.tier8_items.blue_gem.name=青色宝石
+item.tier7_items.white_gem.name=白色宝石
+item.tier11_items.blue_diamond.name=ブルーダイヤモンド
+item.tier11_items.red_diamond.name=レッドダイヤモンド
+item.tier11_items.yellow_diamond.name=イエローダイヤモンド
+item.tier11_items.purple_diamond.name=パープルダイヤモンド
+item.tier11_items.green_diamond.name=グリーンダイヤモンド
+
+#Wafers
+item.wafer.diamond_wafer.name=ダイヤモンドウェファー
+item.wafer.carbon_wafer.name=カーボンウェファー
+item.wafer.titanium_wafer.name=チタンウェファー
+item.wafer.red_gem_wafer.name=赤色宝石のウェファー
+item.wafer.blue_gem_wafer.name=青色宝石のウェファー
+item.wafer.white_gem_wafer.name=白色宝石のウェファー
+
+#Buckets
+item.bucket_glowstone.name=グロウストーン入りバケツ
+item.bucket_.name=塩水入りバケツ
+item.bucket_magma.name=マグマ入りバケツ
+item.bucket_frozen_water.name=凍りかけの水入りバケツ
+item.bucket_nitrogen.name=液体窒素入りバケツ
+item.bucket_clean_water.name=浄水入りバケツ
+item.bucket_infected_water.name=汚染水入りバケツ
+item.bucket_radioactive_water.name=放射能汚染水入りバケツ
+item.bucket_methane.name=液体メタン入りバケツ
+item.bucket_nitrogen_ice.name=凍りかけの液体窒素入りバケツ
+item.bucket_liquid_hydrocarbon.name=液体炭化水素入りバケツ
+item.bucket_liquid_caramel.name=液体キャラメル入りバケツ
+item.bucket_liquid_chocolate.name=液体チョコレート入りバケツ
+
+#Keys
+item.T4key.name=レベル4 ダンジョンの鍵
+item.T5key.name=レベル5 ダンジョンの鍵
+item.T6key.name=レベル6 ダンジョンの鍵
+item.T7key.name=レベル7 ダンジョンの鍵
+item.T8key.name=レベル8 ダンジョンの鍵
+item.T9key.name=レベル9 ダンジョンの鍵
+item.T10key.name=レベル10 ダンジョンの鍵
+
+#Tools
+item.carbon_pickaxe.name=カーボンのツルハシ
+item.carbon_axe.name=カーボンの斧
+item.carbon_sword.name=カーボンの剣
+item.carbon_hoe.name=カーボンのクワ
+item.carbon_shovel.name=カーボンのシャベル
+item.palladium_pickaxe.name=パラジウムのツルハシ
+item.palladium_axe.name=パラジウムの斧
+item.palladium_sword.name=パラジウムの剣
+item.palladium_hoe.name=パラジウムのクワ
+item.palladium_shovel.name=パラジウムのシャベル
+item.magnesium_pickaxe.name=マグネシウムのツルハシ
+item.magnesium_axe.name=マグネシウムの斧
+item.magnesium_sword.name=マグネシウムの剣
+item.magnesium_hoe.name=マグネシウムのクワ
+item.magnesium_shovel.name=マグネシウムのシャベル
+item.crystal_pickaxe.name=水晶のツルハシ
+item.crystal_axe.name=水晶の斧
+item.crystal_sword.name=水晶の剣
+item.crystal_hoe.name=水晶のクワ
+item.crystal_shovel.name=水晶のシャベル
+item.tungsten_pickaxe.name=タングステンのツルハシ
+item.tungsten_axe.name=タングステンの斧
+item.tungsten_sword.name=タングステンの剣
+item.tungsten_hoe.name=タングステンのクワ
+item.tungsten_shovel.name=タングステンのシャベル
+item.red_gem_pickaxe.name=赤色宝石のツルハシ
+item.red_gem_axe.name=赤色宝石の斧
+item.red_gem_sword.name=赤色宝石の剣
+item.red_gem_hoe.name=赤色宝石のクワ
+item.red_gem_shovel.name=赤色宝石のシャベル
+item.blue_gem_pickaxe.name=青色宝石のツルハシ
+item.blue_gem_axe.name=青色宝石の斧
+item.blue_gem_sword.name=青色宝石の剣
+item.blue_gem_hoe.name=青色宝石のクワ
+item.blue_gem_shovel.name=青色宝石のシャベル
+item.white_gem_pickaxe.name=白色宝石のツルハシ
+item.white_gem_axe.name=白色宝石の斧
+item.white_gem_sword.name=白色宝石の剣
+item.white_gem_hoe.name=白色宝石のクワ
+item.white_gem_shovel.name=白色宝石のシャベル
+item.mercury_pickaxe.name=水銀のツルハシ
+item.mercury_axe.name=水銀の斧
+item.mercury_sword.name=水銀の剣
+item.mercury_hoe.name=水銀のクワ
+item.mercury_shovel.name=水銀のシャベル
+item.zinc_pickaxe.name=亜鉛のツルハシ
+item.zinc_axe.name=亜鉛の斧
+item.zinc_sword.name=亜鉛の剣
+item.zinc_hoe.name=亜鉛のクワ
+item.zinc_shovel.name=亜鉛のシャベル
+item.uranium_pickaxe.name=ウランのツルハシ
+item.uranium_axe.name=ウランの斧
+item.uranium_sword.name=ウランの剣
+item.uranium_hoe.name=ウランのクワ
+item.uranium_shovel.name=ウランのシャベル
+item.blue_diamond_pickaxe.name=ブルーダイヤのツルハシ
+item.blue_diamond_axe.name=ブルーダイヤの斧
+item.blue_diamond_sword.name=ブルーダイヤの剣
+item.blue_diamond_hoe.name=ブルーダイヤのクワ
+item.blue_diamond_shovel.name=ブルーダイヤのシャベル
+item.red_diamond_pickaxe.name=レッドダイヤのツルハシ
+item.red_diamond_axe.name=レッドダイヤの斧
+item.red_diamond_sword.name=レッドダイヤの剣
+item.red_diamond_hoe.name=レッドダイヤのクワ
+item.red_diamond_shovel.name=レッドダイヤのシャベル
+item.purple_diamond_pickaxe.name=パープルダイヤのツルハシ
+item.purple_diamond_axe.name=パープルダイヤの斧
+item.purple_diamond_sword.name=パープルダイヤの剣
+item.purple_diamond_hoe.name=パープルダイヤのクワ
+item.purple_diamond_shovel.name=パープルダイヤのシャベル
+item.yellow_diamond_pickaxe.name=イエローダイヤのツルハシ
+item.yellow_diamond_axe.name=イエローダイヤの斧
+item.yellow_diamond_sword.name=イエローダイヤの剣
+item.yellow_diamond_hoe.name=イエローダイヤのクワ
+item.yellow_diamond_shovel.name=イエローダイヤのシャベル
+item.green_diamond_pickaxe.name=グリーンダイヤのツルハシ
+item.green_diamond_axe.name=グリーンダイヤの斧
+item.green_diamond_sword.name=グリーンダイヤの剣
+item.green_diamond_hoe.name=グリーンダイヤのクワ
+item.green_diamond_shovel.name=グリーンダイヤのシャベル
+
+#Schematics
+item.schematic_mars_rover.name=NASA作業台 設計図
+item.schematic_venus_rover.name=NASA作業台 設計図
+
+item.schematic_tier4.name=NASA作業台 設計図
+item.schematic_tier5.name=NASA作業台 設計図
+item.schematic_tier6.name=NASA作業台 設計図
+item.schematic_tier7.name=NASA作業台 設計図
+item.schematic_tier8.name=NASA作業台 設計図
+item.schematic_tier9.name=NASA作業台 設計図
+item.schematic_tier10.name=NASA作業台 設計図
+item.schematic_tier10_electric_rocket.name=NASA作業台 設計図
+
+schematic.mars.rover.name=火星探査車
+schematic.venus.rover.name=金星探査車
+
+schematic.tier4.rocket.name=レベル4 ロケット
+schematic.tier5.rocket.name=レベル5 ロケット
+schematic.tier6.rocket.name=レベル6 ロケット
+schematic.tier7.rocket.name=レベル7 ロケット
+schematic.tier8.rocket.name=レベル8 ロケット
+schematic.tier9.rocket.name=レベル9 ロケット
+schematic.tier10.rocket.name=レベル10 ロケット
+schematic.tier10.electric.rocket.name=レベル10 エレクトリックロケット
+
+schematic.rocket.t4.name=レベル4 ロケット
+schematic.rocket.t5.name=レベル5 ロケット
+schematic.rocket.t6.name=レベル6 ロケット
+schematic.rocket.t7.name=レベル7 ロケット
+schematic.rocket.t8.name=レベル8 ロケット
+schematic.rocket.t9.name=レベル9 ロケット
+schematic.rocket.t10.name=レベル10 ロケット
+schematic.rocket.electric.t10.name=レベル10 エレクトリックロケット
+
+#Batteries
+item.mercury_battery.name=水銀電池
+item.nickel_battery.name=ニッケル電池
+item.zinc_battery.name=亜鉛電池
+item.advanced_battery.name=高性能電池
+item.ultimate_battery.name=究極型電池
+item.massive_battery.name=大容量電池
+
+#Armor
+item.carbon_helmet.name=カーボンのヘルメット
+item.carbon_chest.name=カーボンのチェストプレート
+item.carbon_legings.name=カーボンのレギンス
+item.carbon_boots.name=カーボンのブーツ
+item.palladium_helmet.name=パラジウムのヘルメット
+item.palladium_chest.name=パラジウムのチェストプレート
+item.palladium_legings.name=パラジウムのレギンス
+item.palladium_boots.name=パラジウムのブーツ
+item.magnesium_helmet.name=マグネシウムのヘルメット
+item.magnesium_chest.name=マグネシウムのチェストプレート
+item.magnesium_legings.name=マグネシウムのレギンス
+item.magnesium_boots.name=マグネシウムのブーツ
+item.crystal_helmet.name=水晶のヘルメット
+item.crystal_chest.name=水晶のチェストプレート
+item.crystal_legings.name=水晶のレギンス
+item.crystal_boots.name=水晶のブーツ
+item.red_gem_helmet.name=赤色宝石のヘルメット
+item.red_gem_chest.name=赤色宝石のチェストプレート
+item.red_gem_legings.name=赤色宝石のレギンス
+item.red_gem_boots.name=赤色宝石のブーツ
+item.blue_gem_helmet.name=青色宝石のヘルメット
+item.blue_gem_chest.name=青色宝石のチェストプレート
+item.blue_gem_legings.name=青色宝石のレギンス
+item.blue_gem_boots.name=青色宝石のブーツ
+item.white_gem_helmet.name=白色宝石のヘルメット
+item.white_gem_chest.name=白色宝石のチェストプレート
+item.white_gem_legings.name=白色宝石のレギンス
+item.white_gem_boots.name=白色宝石のブーツ
+item.mercury_helmet.name=水銀のヘルメット
+item.mercury_chest.name=水銀のチェストプレート
+item.mercury_legings.name=水銀のレギンス
+item.mercury_boots.name=水銀のブーツ
+item.uranium_helmet.name=ウランのヘルメット
+item.uranium_chest.name=ウランのチェストプレート
+item.uranium_legings.name=ウランのレギンス
+item.uranium_boots.name=ウランのブーツ
+item.zinc_helmet.name=亜鉛のヘルメット
+item.zinc_chest.name=亜鉛のチェストプレート
+item.zinc_legings.name=亜鉛のレギンス
+item.zinc_boots.name=亜鉛のブーツ
+item.tungsten_helmet.name=タングステンのヘルメット
+item.tungsten_chest.name=タングステンのチェストプレート
+item.tungsten_legings.name=タングステンのレギンス
+item.tungsten_boots.name=タングステンのブーツ
+item.blue_diamond_helmet.name=ブルーダイヤのヘルメット
+item.blue_diamond_chest.name=ブルーダイヤのチェストプレート
+item.blue_diamond_legings.name=ブルーダイヤのレギンス
+item.blue_diamond_boots.name=ブルーダイヤのブーツ
+item.red_diamond_helmet.name=レッドダイヤのヘルメット
+item.red_diamond_chest.name=レッドダイヤのチェストプレート
+item.red_diamond_legings.name=レッドダイヤのレギンス
+item.red_diamond_boots.name=レッドダイヤのブーツ
+item.purple_diamond_helmet.name=パープルダイヤのヘルメット
+item.purple_diamond_chest.name=パープルダイヤのチェストプレート
+item.purple_diamond_legings.name=パープルダイヤのレギンス
+item.purple_diamond_boots.name=パープルダイヤのブーツ
+item.yellow_diamond_helmet.name=イエローダイヤのヘルメット
+item.yellow_diamond_chest.name=イエローダイヤのチェストプレート
+item.yellow_diamond_legings.name=イエローダイヤのレギンス
+item.yellow_diamond_boots.name=イエローダイヤのブーツ
+item.green_diamond_helmet.name=グリーンダイヤのヘルメット
+item.green_diamond_chest.name=グリーンダイヤのチェストプレート
+item.green_diamond_legings.name=グリーンダイヤのレギンス
+item.green_diamond_boots.name=グリーンダイヤのブーツ
+
+item.tier1_space_suit_helmet.name=レベル1 宇宙服 ヘルメット
+item.tier1_space_suit_chest.name=レベル1 宇宙服 チェストプレート
+item.tier1_space_suit_jetpack_chest.name=レベル1 宇宙服 ジェットパックチェストプレート
+item.tier1_space_suit_legings.name=レベル1 宇宙服 レギンス
+item.tier1_space_suit_boots.name=レベル1 宇宙服 ブーツ
+item.tier1_space_suit_gravity_boots.name=レベル1 宇宙服 重力ブーツ
+item.tier2_space_suit_helmet.name=レベル2 宇宙服 ヘルメット
+item.tier2_space_suit_chest.name=レベル2 宇宙服 チェストプレート
+item.tier2_space_suit_jetpack_chest.name=レベル2 宇宙服 ジェットパックチェストプレート
+item.tier2_space_suit_legings.name=レベル2 宇宙服 レギンス
+item.tier2_space_suit_boots.name=レベル2 宇宙服 ブーツ
+item.tier2_space_suit_gravity_boots.name=レベル2 宇宙服 重力ブーツ
+item.tier3_space_suit_helmet.name=レベル3 宇宙服ヘルメット
+item.tier3_space_suit_chest.name=レベル3 宇宙服チェストプレート
+item.tier3_space_suit_jetpack_chest.name=レベル3 宇宙服ジェットパックチェストプレート
+item.tier3_space_suit_legings.name=レベル3 宇宙服 レギンス
+item.tier3_space_suit_boots.name=レベル3 宇宙服 ブーツ
+item.tier3_space_suit_gravity_boots.name=レベル3 宇宙服 重力ブーツ
+item.tier4_space_suit_helmet.name=レベル4 宇宙服 ヘルメット
+item.tier4_space_suit_chest.name=レベル4 宇宙服 チェストプレート
+item.tier4_space_suit_jetpack_chest.name=レベル4 宇宙服 ジェットパックチェストプレート
+item.tier4_space_suit_legings.name=レベル4 宇宙服 レギンス
+item.tier4_space_suit_boots.name=レベル4 宇宙服 ブーツ
+item.tier4_space_suit_gravity_boots.name=レベル4 宇宙服 重力ブーツ
+
+space.suit.information=圧力によるダメージを完全に止め、
+space.suit.information.2=身体が浴びる放射線量を削減する.
+space.suit.information.extra=削減の度合いは、宇宙服の
+space.suit.information.extra.2=各部位のレベルに依存する.
+space.suit.information.extra.3=レベルが高いほどより削減される.
+space.suit.information.extra.4=
+space.suit.power.info=以下の電源システムと互換性あり:
+space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2
+
+item_desc.spacesuit.shift.name= %s キーで効果を確認
+item_desc.spacesuit.module.shift.name= %s キーで取り付け済みモジュールを確認
+
+item.tier3_thermal_helm.name=レベル3 熱保護のヘルメット
+item.tier3_thermal_chestplate.name=レベル3 熱保護のチェストプレート
+item.tier3_thermal_leggings.name=レベル3 熱保護のレギンス
+item.tier3_thermal_boots.name=レベル3 熱保護のブーツ
+item.tier4_thermal_helm.name=レベル4 熱保護のヘルメット
+item.tier4_thermal_chestplate.name=レベル4 熱保護のチェストプレート
+item.tier4_thermal_leggings.name=レベル4 熱保護のレギンス
+item.tier4_thermal_boots.name=レベル4 熱保護のブーツ
+item.tier5_thermal_helm.name=レベル5 熱保護のヘルメット
+item.tier5_thermal_chestplate.name=レベル5 熱保護のチェストプレート
+item.tier5_thermal_leggings.name=レベル5 熱保護のレギンス
+item.tier5_thermal_boots.name=レベル5 熱保護のブーツ
+
+tier3.thermal.padding.information=装備必須：水星
+tier4.thermal.padding.information=装備必須：木星, 土星(それぞれの衛星含む)
+tier5.thermal.padding.information=装備必須：天王星, 海王星, 冥王星, エリス(それぞれの衛星含む)
+
+#Space Suit Layers
+item.tier1_pressure_layer.name=レベル1 耐圧レイヤ
+item.tier2_pressure_layer.name=レベル2 耐圧レイヤ
+item.tier3_pressure_layer.name=レベル3 耐圧レイヤ
+item.tier4_pressure_layer.name=レベル4 耐圧レイヤ
+
+item.tier1_radiation_layer.name=レベル1 耐放射線レイヤ
+item.tier2_radiation_layer.name=レベル2 耐放射線レイヤ
+item.tier3_radiation_layer.name=レベル3 耐放射線レイヤ
+item.tier4_radiation_layer.name=レベル4 耐放射線レイヤ
+
+item.tier1_armor_layer.name=レベル1 防具レイヤ
+item.tier2_armor_layer.name=レベル2 防具レイヤ
+item.tier3_armor_layer.name=レベル3 防具レイヤ
+item.tier4_armor_layer.name=レベル4 防具レイヤ
+
+tier1_armor_layer.desc=圧縮機でのレシピ: アルミインゴットx4
+tier2_armor_layer.desc=圧縮機でのレシピ: チタンインゴットx4
+tier3_armor_layer.desc=圧縮機でのレシピ: パラジウムインゴットx4
+tier4_armor_layer.desc=圧縮機でのレシピ: 亜鉛インゴットx4
+
+module.pressure_module_1.name=レベル1 圧力モジュール
+module.pressure_module_1.desc=惑星/衛星/宇宙ステーションでの圧力から身体を保護する(ExtraPlanets or Galacticraft)
+module.pressure_module_2.name=レベル2 圧力モジュール
+module.pressure_module_2.desc=惑星/衛星/宇宙ステーションでの圧力から身体を保護する(ExtraPlanets or Galacticraft)
+module.pressure_module_3.name=レベル3 圧力モジュール
+module.pressure_module_3.desc=惑星/衛星/宇宙ステーションでの圧力から身体を保護する(ExtraPlanets or Galacticraft)
+module.pressure_module_4.name=レベル4 圧力モジュール
+module.pressure_module_4.desc=惑星/衛星/宇宙ステーションでの圧力から身体を保護する(ExtraPlanets or Galacticraft)
+
+module.radiation_module_1.name=レベル1 放射線モジュール
+module.radiation_module_1.desc=惑星/衛星/宇宙ステーションで放射線から身体を保護する(ExtraPlanets or Galacticraft)
+module.radiation_module_2.name=レベル2 放射線モジュール
+module.radiation_module_2.desc=惑星/衛星/宇宙ステーションで放射線から身体を保護する(ExtraPlanets or Galacticraft)
+module.radiation_module_3.name=レベル3 放射線モジュール
+module.radiation_module_3.desc=惑星/衛星/宇宙ステーションで放射線から身体を保護する(ExtraPlanets or Galacticraft)
+module.radiation_module_4.name=レベル4 放射線モジュール
+module.radiation_module_4.desc=惑星/衛星/宇宙ステーションで放射線から身体を保護する(ExtraPlanets or Galacticraft)
+
+#UnPrepared Space Suits
+item.tier1_un_prepared_space_suit_helmet.name=レベル1 未整備の宇宙服 ヘルメット
+item.tier1_un_prepared_space_suit_chest.name=レベル1 未整備の宇宙服 チェストプレート
+item.tier1_un_prepared_space_suit_legings.name=レベル1 未整備の宇宙服 レギンス
+item.tier1_un_prepared_space_suit_boots.name=レベル1 未整備の宇宙服 ブーツ
+
+item.tier2_un_prepared_space_suit_helmet.name=レベル2 未整備の宇宙服 ヘルメット
+item.tier2_un_prepared_space_suit_chest.name=レベル2 未整備の宇宙服 チェストプレート
+item.tier2_un_prepared_space_suit_legings.name=レベル2 未整備の宇宙服 レギンス
+item.tier2_un_prepared_space_suit_boots.name=レベル2 未整備の宇宙服 ブーツ
+
+item.tier3_un_prepared_space_suit_helmet.name=レベル3 未整備の宇宙服 ヘルメット
+item.tier3_un_prepared_space_suit_chest.name=レベル3 未整備の宇宙服 チェストプレート
+item.tier3_un_prepared_space_suit_legings.name=レベル3 未整備の宇宙服 レギンス
+item.tier3_un_prepared_space_suit_boots.name=レベル3 未整備の宇宙服 ブーツ
+
+item.tier4_un_prepared_space_suit_helmet.name=レベル4 未整備の宇宙服 ヘルメット
+item.tier4_un_prepared_space_suit_chest.name=レベル4 未整備の宇宙服 チェストプレート
+item.tier4_un_prepared_space_suit_legings.name=レベル4 未整備の宇宙服 レギンス
+item.tier4_un_prepared_space_suit_boots.name=レベル4 未整備の宇宙服 ブーツ
+
+#Module Items
+item.module_items.no_fall_boots.name=落下ダメージ無効化モジュール
+item.module_items.oxygen_controller.name=酸素コントローラ
+item.module_items.space_gear_controller.name=スペースギアコントローラ
+
+#Oxygen Tanks
+item.oxygen_tank_very_heavy_full.name=巨大酸素タンク
+item.oxygen_tank_extremely_heavy_full.name=超巨大酸素タンク
+
+item.oxygen_tank_light_full_black.name=小型酸素タンク
+item.oxygen_tank_light_full_red.name=小型酸素タンク
+item.oxygen_tank_light_full_green.name=小型酸素タンク
+item.oxygen_tank_light_full_brown.name=小型酸素タンク
+item.oxygen_tank_light_full_blue.name=小型酸素タンク
+item.oxygen_tank_light_full_purple.name=小型酸素タンク
+item.oxygen_tank_light_full_cyan.name=小型酸素タンク
+item.oxygen_tank_light_full_light_gray.name=小型酸素タンク
+item.oxygen_tank_light_full_gray.name=小型酸素タンク
+item.oxygen_tank_light_full_pink.name=小型酸素タンク
+item.oxygen_tank_light_full_yellow.name=小型酸素タンク
+item.oxygen_tank_light_full_light_blue.name=小型酸素タンク
+item.oxygen_tank_light_full_magenta.name=小型酸素タンク
+item.oxygen_tank_light_full_orange.name=小型酸素タンク
+item.oxygen_tank_light_full_white.name=小型酸素タンク
+
+item.oxygen_tank_med_full_black.name=中型酸素タンク
+item.oxygen_tank_med_full_red.name=中型酸素タンク
+item.oxygen_tank_med_full_green.name=中型酸素タンク
+item.oxygen_tank_med_full_brown.name=中型酸素タンク
+item.oxygen_tank_med_full_blue.name=中型酸素タンク
+item.oxygen_tank_med_full_purple.name=中型酸素タンク
+item.oxygen_tank_med_full_cyan.name=中型酸素タンク
+item.oxygen_tank_med_full_light_gray.name=中型酸素タンク
+item.oxygen_tank_med_full_gray.name=中型酸素タンク
+item.oxygen_tank_med_full_pink.name=中型酸素タンク
+item.oxygen_tank_med_full_yellow.name=中型酸素タンク
+item.oxygen_tank_med_full_light_blue.name=中型酸素タンク
+item.oxygen_tank_med_full_magenta.name=中型酸素タンク
+item.oxygen_tank_med_full_lime.name=中型酸素タンク
+item.oxygen_tank_med_full_white.name=中型酸素タンク
+
+item.oxygen_tank_heavy_full_black.name=大型酸素タンク
+item.oxygen_tank_heavy_full_lime.name=大型酸素タンク
+item.oxygen_tank_heavy_full_green.name=大型酸素タンク
+item.oxygen_tank_heavy_full_brown.name=大型酸素タンク
+item.oxygen_tank_heavy_full_blue.name=大型酸素タンク
+item.oxygen_tank_heavy_full_purple.name=大型酸素タンク
+item.oxygen_tank_heavy_full_cyan.name=大型酸素タンク
+item.oxygen_tank_heavy_full_light_gray.name=大型酸素タンク
+item.oxygen_tank_heavy_full_gray.name=大型酸素タンク
+item.oxygen_tank_heavy_full_pink.name=大型酸素タンク
+item.oxygen_tank_heavy_full_yellow.name=大型酸素タンク
+item.oxygen_tank_heavy_full_light_blue.name=大型酸素タンク
+item.oxygen_tank_heavy_full_magenta.name=大型酸素タンク
+item.oxygen_tank_heavy_full_orange.name=大型酸素タンク
+item.oxygen_tank_heavy_full_white.name=大型酸素タンク
+
+#Radiation Items
+item.iodide_salt.name=ヨウ素添加塩
+item.potassium_iodide.name=ヨウ化カリウム
+item.potassium.name=カリウム
+item.potash_shards.name=カリウム鉱石の破片
+item.anti_radiation.name=Anti-Rad
+anti_radiation.desc=現在値から {PERCENT} 放射線レベルを下げる
+
+#Kits
+item.tier1_kit.full.name=レベル1 フルキット
+item.tier1_kit.basic_setup.name=レベル1 基本準備キット
+item.tier1_kit.without_oxygen_setup.name=レベル1 フルキット(酸素無し)
+item.tier1_kit.without_thermal_padding.name=レベル1 フルキット(熱保護なし)
+item.tier1_kit.just_oxygen_setup.name=レベル1 酸素キット
+item.tier1_kit.just_protection.name=レベル1 保護キット
+
+item.tier2_kit.full.name=レベル2 フルキット
+item.tier2_kit.basic_setup.name=レベル2 基本準備キット
+item.tier2_kit.without_oxygen_setup.name=レベル2 フルキット(酸素なし)
+item.tier2_kit.without_thermal_padding.name=レベル2 フルキット(熱保護なし)
+item.tier2_kit.just_oxygen_setup.name=レベル2 酸素キット
+item.tier2_kit.just_protection.name=レベル2 保護キット
+
+item.tier3_kit.full.name=レベル3 フルキット
+item.tier3_kit.basic_setup.name=レベル3 基本準備キット
+item.tier3_kit.without_oxygen_setup.name=レベル3 フルキット(酸素なし)
+item.tier3_kit.without_thermal_padding.name=レベル3 フルキット(熱保護なし)
+item.tier3_kit.just_oxygen_setup.name=レベル3 酸素キット
+item.tier3_kit.just_protection.name=レベル3 保護キット
+
+item.tier4_kit.full.name=レベル4 フルキット
+item.tier4_kit.basic_setup.name=レベル4 基本準備キット
+item.tier4_kit.without_oxygen_setup.name=レベル4 フルキット(酸素なし)
+item.tier4_kit.without_thermal_padding.name=レベル4 フルキット(熱保護なし)
+item.tier4_kit.just_oxygen_setup.name=レベル4 酸素キット
+item.tier4_kit.just_protection.name=レベル4 保護キット
+
+item.tier5_kit.full.name=レベル5 フルキット
+item.tier5_kit.basic_setup.name=レベル5 基本準備キット
+item.tier5_kit.without_oxygen_setup.name=レベル5 フルキット(酸素なし)
+item.tier5_kit.without_thermal_padding.name=レベル5 フルキット(熱保護なし)
+item.tier5_kit.just_oxygen_setup.name=レベル5 酸素キット
+item.tier5_kit.just_protection.name=レベル5 保護キット
+
+item.kit.information.desc=宇宙用の装備を収納した小さな箱
+item.kit.information.use=右クリックでキットの中身を装備する
+
+#Sticks
+item.tier11_items.blue_sticks.name=青色の棒
+item.tier11_items.red_sticks.name=赤色の棒
+item.tier11_items.yellow_sticks.name=黄色の棒
+item.tier11_items.purple_sticks.name=紫色の棒
+item.tier11_items.green_sticks.name=緑色の棒
+item.tier11_items.brown_sticks.name=茶色の棒
+
+#Tools
+item.tools.sledge_hammer.name=スレッジハンマー
+item.tools.grinding_wheel.name=研削ホイール
+item.tools.mesh.name=糸のメッシュ
+item.tools.filter.name=フィルター
+
+#Other Items
+item.apple_diamond.name=ダイヤのリンゴ
+item.apple_iron.name=鉄のリンゴ
+item.canned_food.canned_food.name=缶詰食品
+item.bodyparts.arm.name=腕
+item.bodyparts.leg.name=脚
+item.cloth.name=羊毛の布
+item.gravity_controller.name=重力コントローラ
+item.thermal_cloth.tier3_thermal_cloth.name=レベル3 熱保護の布
+item.thermal_cloth.tier4_thermal_cloth.name=レベル4 熱保護の布
+item.thermal_cloth.tier5_thermal_cloth.name=レベル5 熱保護の布
+item.tier5_items.ash.name=灰の粉末
+item.geiger_counter.name=ガイガーカウンター
+item.white_sugar_cane_item.name=白サトウキビ
+geiger.counter.desc=右クリックで現在の放射線レベルを確認できる!
+geiger.counter.location.desc=水星のダンジョンで入手可能!
+item.chocolate_bar.name=チョコレートバー
+item.caramel_bar.name=キャラメルバー
+
+#Canned Food
+item.canned_food.dehydrated_porkchop.name=乾燥ポークチョップ
+item.canned_food.dehydrated_fish.name=乾燥魚
+item.canned_food.dehydrated_salmon.name=乾燥サーモン
+item.canned_food.dehydrated_chicken.name=乾燥チキン
+item.canned_food.dehydrated_beef.name=乾燥ビーフ
+
+#Electric Parts
+item.electric_parts.battery_tier1.name=レベル1 電池
+item.electric_parts.battery_tier2.name=レベル2 電池
+item.electric_parts.spark_plug.name=点火プラグ
+item.electric_parts.electric_wheels_tier1.name=レベル1 ホイール
+item.electric_parts.electric_wheels_tier2.name=レベル2 ホイール
+
+#Entities
+entity.ProjectileTNT.name=TNT弾
+
+entity.extraplanets.EntityTier4Rocket.name=レベル4 ロケット
+entity.extraplanets.EntityTier5Rocket.name=レベル5 ロケット
+entity.extraplanets.EntityTier6Rocket.name=レベル6 ロケット
+entity.extraplanets.EntityTier7Rocket.name=レベル7 ロケット
+entity.extraplanets.EntityTier8Rocket.name=レベル8 ロケット
+entity.extraplanets.EntityTier9Rocket.name=レベル9 ロケット
+entity.extraplanets.EntityTier10Rocket.name=レベル10 ロケット
+entity.extraplanets.EntityTier10ElectricRocket.name=レベル10 エレクトリックロケット
+
+entity.extraplanets.EntityMarsRover.name=火星探査車
+entity.extraplanets.EntityVenusRover.name=金星探査車
+
+entity.extraplanets.CreeperBossMercury.name=水星のクリーパーキング
+entity.extraplanets.CreeperBossJupiter.name=木星のクリーパーキング
+entity.extraplanets.CreeperBossSaturn.name=土星のクリーパーキング
+entity.extraplanets.CreeperBossUranus.name=天王星のクリーパーキング
+entity.extraplanets.CreeperBossNeptune.name=海王星のクリーパーキング
+entity.extraplanets.CreeperBossPluto.name=冥王星のクリーパーキング
+entity.extraplanets.CreeperBossEris.name=エリスのクリーパーキング
+
+entity.extraplanets.EvolvedMagmaCubeBoss.name=宇宙のマグマキューブキング
+entity.extraplanets.EvolvedIceSlimeBoss.name=宇宙のアイススライムキング
+entity.extraplanets.EvolvedGhastBoss.name=宇宙のガストキング
+entity.extraplanets.EvolvedSnowmanBoss.name=宇宙のスノウゴーレムキング
+entity.extraplanets.EvolvedFireBatBoss.name=宇宙のファイヤーバットキング
+entity.extraplanets.EvolvedGiantZombieBoss.name=宇宙のジャイアントゾンビキング
+entity.extraplanets.EvolvedSpaceManBoss.name=キングスペースマン
+
+entity.extraplanets.EvolvedWitch.name=宇宙のウィッチ
+entity.extraplanets.EvolvedMagmaCube.name=宇宙のマグマキューブ
+entity.extraplanets.EvolvedIceSlime.name=宇宙のアイススライム
+entity.extraplanets.EvolvedEnderman.name=宇宙のエンダーマン
+entity.extraplanets.EvolvedBlaze.name=宇宙のブレイズ
+entity.extraplanets.EvolvedBlueCreeper.name=宇宙のブルークリーパー
+entity.extraplanets.EvolvedRedCreeper.name=宇宙のレッドクリーパー
+entity.extraplanets.EvolvedPowerSkeleton.name=宇宙のパワースケルトン
+entity.extraplanets.EvolvedGiantSpider.name=宇宙の巨大グモ
+entity.extraplanets.EvolvedMiniEnderman.name=宇宙のミニエンダーマン
+
+#Achievements
+achievement.mercury_planet=水星に着陸!
+achievement.ceres_planet=ケレスに着陸!
+achievement.jupiter_planet=木星に着陸!
+achievement.saturn_planet=土星に着陸!
+achievement.uranus_planet=天王星に着陸!
+achievement.neptune_planet=海王星に着陸!
+achievement.pluto_planet=冥王星に着陸!
+achievement.eris_planet=エリスに着陸!
+achievement.kepler22b_planet=ケプラー22bに着陸!
+
+achievement.mercury_planet.desc=レベル3ロケットで水星に行った
+achievement.ceres_planet.desc=レベル4ロケットでケレスに行った
+achievement.jupiter_planet.desc=レベル4ロケットで木星に行った
+achievement.saturn_planet.desc=レベル5ロケットで土星に行った
+achievement.uranus_planet.desc=レベル6ロケットで天王星に行った
+achievement.neptune_planet.desc=レベル7ロケットで海王星に行った
+achievement.pluto_planet.desc=レベル8ロケットで冥王星に行った
+achievement.eris_planet.desc=レベル9ロケットでエリスに行った
+achievement.kepler22b_planet.desc=レベル10ロケットでケプラー22bに行った
+
+achievement.mercury_boss=レベル4のボスを倒した!
+achievement.jupiter_boss=レベル5のボスを倒した!
+achievement.saturn_boss=レベル6のボスを倒した!
+achievement.uranus_boss=レベル7のボスを倒した!
+achievement.neptune_boss=レベル8のボスを倒した!
+achievement.pluto_boss=レベル9のボスを倒した!
+achievement.eris_boss=レベル10のボスを倒した!
+
+achievement.mercury_boss.desc=水星ダンジョンのボスを倒し、宝箱を開けた
+achievement.jupiter_boss.desc=木星ダンジョンのボスを倒し、宝箱を開けた
+achievement.saturn_boss.desc=土星ダンジョンのボスを倒し、宝箱を開けた
+achievement.uranus_boss.desc=天王星ダンジョンのボスを倒し、宝箱を開けた
+achievement.neptune_boss.desc=海王星ダンジョンのボスを倒し、宝箱を開けた
+achievement.pluto_boss.desc=冥王星ダンジョンのボスを倒し、宝箱を開けた
+achievement.eris_boss.desc=エリスダンジョンのボスを倒し、宝箱を開けた
+
+achievement.craft_rocket_3=レベル3 ロケット!
+achievement.craft_rocket_4=レベル4 ロケット!
+achievement.craft_rocket_5=レベル5 ロケット!
+achievement.craft_rocket_6=レベル6 ロケット!
+achievement.craft_rocket_7=レベル7 ロケット!
+achievement.craft_rocket_8=レベル8 ロケット!
+achievement.craft_rocket_9=レベル9 ロケット!
+achievement.craft_rocket_10=レベル10 ロケット!
+
+achievement.craft_rocket_3.desc=レベル3 ロケットを作成した
+achievement.craft_rocket_4.desc=レベル4 ロケットを作成した
+achievement.craft_rocket_5.desc=レベル5 ロケットを作成した
+achievement.craft_rocket_6.desc=レベル6 ロケットを作成した
+achievement.craft_rocket_7.desc=レベル7 ロケットを作成した
+achievement.craft_rocket_8.desc=レベル8 ロケットを作成した
+achievement.craft_rocket_9.desc=レベル9 ロケットを作成した
+achievement.craft_rocket_10.desc=レベル10 ロケットを作成した
+
+#Liquids/Fluid
+tile.glowstone.name=液体グロウストーン
+tile.magma.name=マグマ
+tile.nitrogen.name=液体窒素
+tile.frozen_water.name=凍りかけの水
+tile.salt.name=塩水
+tile.radioactive_water.name=放射能汚染水
+tile.clean_water.name=浄水
+tile.infected_water.name=汚染水
+tile.methane.name=液体メタン
+tile.nitrogen_ice.name=凍りかけの液体窒素
+tile.liquid_hydrocarbon.name=液体炭化水素
+tile.liquid_chocolate.name=液体チョコレート
+tile.liquid_caramel.name=液体キャラメル
+
+fluid.glowstone_fluid=液体グロウストーン
+fluid.magma_fluid=マグマ
+fluid.nitrogen_fluid=液体窒素
+fluid.frozen_water_fluid=凍りかけの水
+fluid.salt_fluid=塩水
+fluid.radioactive_water_fluid=放射能汚染水
+fluid.clean_water_fluid=浄水
+fluid.infected_water_fluid=汚染水
+fluid.methane_fluid=液体メタン
+fluid.nitrogen_ice_fluid=凍りかけの液体窒素
+fluid.liquid_hydrocarbon_fluid=液体炭化水素
+fluid.liquid_chocolate_fluid=液体チョコレート
+fluid.liquid_caramel_fluid=液体キャラメル
+
+#Gui/Damage Sources
+gui.warning.high.pressure=高圧環境
+gui.warning.high.radiation=<警告>放射線レベル:高
+gui.warning.med.radiation=放射線レベル:中
+gui.warning.low.radiation=放射線レベル:低
+death.attack.radiation=%1$s は放射線への対策を忘れていた
+death.attack.pressure=%1$s は圧力への対策を忘れていた
+death.attack.hypothermia=%1$s は凍え死んだ
+death.attack.magma=%1$s はマグマで焼け死んだ
+death.attack.radiationLiquid=%1$s は放射線が死をもたらすことを忘れていた
+death.attack.infection=%1$s は体内に汚染が広がって死んだ
+
+#CheckList GUI Messages
+checklist.tier_3_thermal_padding.key=レベル3の熱保護服
+checklist.tier_4_thermal_padding.key=レベル4の熱保護服
+checklist.tier_5_thermal_padding.key=レベル5の熱保護服
+
+checklist.space_suit.key=任意レベルの宇宙服
+
+satellite.space_station.mercury=水星 宇宙ステーション
+satellite.space_station.venus=金星 宇宙ステーション
+satellite.space_station.ceres=ケレス 宇宙ステーション
+satellite.space_station.mars=火星 宇宙ステーション
+satellite.space_station.jupiter=木星 宇宙ステーション
+satellite.space_station.saturn=土星 宇宙ステーション
+satellite.space_station.uranus=天王星 宇宙ステーション
+satellite.space_station.neptune=海王星 宇宙ステーション
+satellite.space_station.pluto=冥王星 宇宙ステーション
+satellite.space_station.eris=エリス 宇宙ステーション
+satellite.space_station.kepler22b=ケプラー22b 宇宙ステーション
+
+#------------------1.7.10 Only Section------------------
+#Venus Blocks
+tile.venus.surface.name=金星地表の岩
+tile.venus.sub_surface.name=金星地中の岩
+tile.venus.stone.name=金星の石
+tile.venus.ore_iron.name=金星の鉄鉱石
+tile.venus.ore_tin.name=金星のスズ鉱石
+tile.venus.ore_copper.name=金星の銅鉱石
+tile.venus.ore_carbon.name=カーボン鉱石
+tile.venus.stone_bricks.name=金星の石レンガ
+tile.venus.carbon_block.name=カーボンブロック
+tile.venus.titanium_block.name=チタンブロック
+tile.veuns.dungeon_brick.name=金星ダンジョンのレンガ
+
+#Liquids/Fluid
+tile.glowstone_fluid.name=液体グロウストーン
+tile.magma_fluid.name=マグマ
+tile.nitrogen_fluid.name=液体窒素
+tile.frozen_water_fluid.name=凍りかけの水
+tile.salt_fluid.name=塩水
+tile.radioactive_water_fluid.name=放射能汚染水
+tile.infected_water_fluid.name=汚染水
+tile.methane_fluid.name=液体メタン
+tile.nitrogen_ice_fluid.name=凍りかけの液体窒素
+tile.liquid_hydrocarbon_fluid.name=液体炭化水素
+tile.liquid_chocolate_fluid.name=液体チョコレート
+tile.liquid_caramel_fluid.name=液体キャラメル
+
+#Planet Blocks Slabs
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=水星の石のハーフブロック
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=金星の石のハーフブロック
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=ケレスの石のハーフブロック
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=木星の石のハーフブロック
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=土星の石のハーフブロック
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=天王星の石のハーフブロック
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=海王星の石のハーフブロック
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=冥王星の石のハーフブロック
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=エリスの石のハーフブロック
+
+#Planet Blocks Stairs
+tile.mercuryStoneStairs.name=水星の石の階段
+tile.venusStoneStairs.name=金星の石の階段
+tile.ceresStoneStairs.name=ケレスの石の階段
+tile.jupiterStoneStairs.name=木星の石の階段
+tile.saturnStoneStairs.name=土星の石の階段
+tile.uranusStoneStairs.name=天王星の石の階段
+tile.neptuneStoneStairs.name=海王星の石の階段
+tile.plutoStoneStairs.name=冥王星の石の階段
+tile.erisStoneStairs.name=エリスの石の階段
+
+tile.mercuryStoneBrickStairs.name=水星の石レンガの階段
+tile.venusStoneBrickStairs.name=金星の石レンガの階段
+tile.ceresStoneBrickStairs.name=ケレスの石レンガの階段
+tile.jupiterStoneBrickStairs.name=木星の石レンガの階段
+tile.saturnStoneBrickStairs.name=土星の石レンガの階段
+tile.uranusStoneBrickStairs.name=天王星の石レンガの階段
+tile.neptuneStoneBrickStairs.name=海王星の石レンガの階段
+tile.plutoStoneBrickStairs.name=冥王星の石レンガの階段
+tile.erisStoneBrickStairs.name=エリスの石レンガの階段
+
+#Dungeon Bricks Slabs
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=金星ダンジョンレンガのハーフブロック
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=木星ダンジョンレンガのハーフブロック
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=土星ダンジョンレンガのハーフブロック
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=天王星ダンジョンレンガのハーフブロック
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=海王星ダンジョンレンガのハーフブロック
+
+#Dungeon Bricks Stairs
+tile.venusDungeonBrickStoneStairs.name=金星ダンジョンレンガの階段
+tile.jupiterDungeonBrickStoneStairs.name=木星ダンジョンレンガの階段
+tile.saturnDungeonBrickStoneStairs.name=土星ダンジョンレンガの階段
+tile.uranusDungeonBrickStoneStairs.name=天王星ダンジョンレンガの階段
+tile.neptuneDungeonBrickStoneStairs.name=海王星ダンジョンレンガの階段
+
+#Planets
+planet.Venus=金星
+
+#Other Blocks
+tile.slime_block.name=スライムブロック
+tile.deimos.ore_lead.name=ダイモスの鉛鉱石
+tile.phobos.ore_lead.name=フォボスの鉛鉱石
+
+#Other Items
+item.tier4_items.ash_shard.name=灰の破片
+item.tier4_items.volcanic_shard.name=火山岩の破片
+item.tier4_items.ingot_volcanic.name=火山岩インゴット
+item.tier6_items.magnesium_shard.name=マグネシウムの破片
+item.tier4_items.ash.name=灰
+item.tier4_items.sledge_hammer.name=スレッジハンマー
+item.tier4_items.grinding_wheel.name=研削ホイール
+item.thermal_cloth.tier2_thermal_cloth.name=レベル2 熱保護の布
+
+#MorePlanetsCompactBlocks&Items
+tile.treasure_chest_t4_saturn.name=レベル4 宝箱
+tile.treasure_chest_t4_uranus.name=レベル4 宝箱
+tile.treasure_chest_t5_neptune.name=レベル5 宝箱
+tile.treasure_chest_t6_eris.name=レベル6 宝箱
+
+#Keys
+item.key.T4_saturn.name=レベル4 ダンジョンの鍵
+item.key.T4_uranus.name=レベル4 ダンジョンの鍵
+item.key.T5_neptune.name=レベル5 ダンジョンの鍵
+item.key.T6_eris.name=レベル6 ダンジョンの鍵
+
+#Thermal Paddings
+item.tier2_thermal_helm.name=レベル2 熱保護のヘルメット
+item.tier2_thermal_chestplate.name=レベル2 熱保護のチェストプレート
+item.tier2_thermal_leggings.name=レベル2 熱保護のレギンス
+item.tier2_thermal_boots.name=レベル2 熱保護のブーツ
+
+#Messages
+tier2.information=装備必須：金星, 水星(それぞれの衛星を含む)
+tier3.information=装備必須：木星, 土星(それぞれの衛星を含む)
+tier4.information=装備必須：天王星, 海王星, 冥王星, エリス(それぞれの衛星を含む)
+
+#------------------1.11.2 & 1.12.2 Only Section------------------
+item.t4key.name=レベル4 ダンジョンの鍵
+item.t5key.name=レベル5 ダンジョンの鍵
+item.t6key.name=レベル6 ダンジョンの鍵
+item.t7key.name=レベル7 ダンジョンの鍵
+item.t8key.name=レベル8 ダンジョンの鍵
+item.t9key.name=レベル9 ダンジョンの鍵
+item.t10key.name=レベル10 ダンジョンの鍵
