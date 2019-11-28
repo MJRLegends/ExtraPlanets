@@ -48,6 +48,8 @@ planet.haumea=Haumea ##NEEDS TRANSLATE##
 planet.MercuryEP=Mercury 2.0 ##NEEDS TRANSLATE##
 planet.CeresEP=Ceres 2.0 ##NEEDS TRANSLATE##
 planet.JupiterEP=Jupiter 2.0 ##NEEDS TRANSLATE##
+planet.SaturnEP=Saturn 2.0 ##NEEDS TRANSLATE##
+planet.UranusEP=Uranus 2.0 ##NEEDS TRANSLATE##
 planet.NeptuneEP=Neptune 2.0 ##NEEDS TRANSLATE##
 planet.PlutoEP=Pluto 2.0 ##NEEDS TRANSLATE##
 
@@ -106,6 +108,9 @@ moon.deimosEP=Deimos 2.0 ##NEEDS TRANSLATE##
 moon.phobosEP=Phobos 2.0 ##NEEDS TRANSLATE##
 moon.oberonEP=Oberon 2.0 ##NEEDS TRANSLATE##
 moon.titanEP=Titan 2.0 ##NEEDS TRANSLATE##
+moon.rheaEP=Rhea 2.0 ##NEEDS TRANSLATE##
+moon.iapetusEP=Iapetus 2.0 ##NEEDS TRANSLATE##
+moon.titaniaEP=Titania 2.0 ##NEEDS TRANSLATE##
 
 #Planet Blocks
 tile.mercury.surface.name=Merkur Surface Rock
