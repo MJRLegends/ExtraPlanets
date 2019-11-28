@@ -5,6 +5,9 @@
 
 
 ===========================================Released Updates===========================================
+v1.3.0
+*Fixed issue #493
+
 v1.2.9
 *Updated es_ES.Lang (Thanks to Yataro-Ibuza)
 *Updated lang files to match MC 1.12.2
