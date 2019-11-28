@@ -11,7 +11,7 @@ public class Constants {
 
 	public static final String MCVERSION = "[1.8.9]";
 	public static final String DEPENDENCIES_FORGE = "required-after:Forge@[11.15.1.1764,);";
-	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib@[1.8.9-1.1.2,); required-after:GalacticraftCore@[4.0.1.178,); required-after:GalacticraftPlanets@[4.0.1.178,);";
+	public static final String DEPENDENCIES_MODS = "required-after:mjrlegendslib@[1.8.9-1.1.2,); required-after:GalacticraftCore@[4.0.1.178,); required-after:GalacticraftPlanets@[4.0.1.178,); before:planetprogression@[1.8.9-0.2.7,];";
 
 	public static final String GUIFACTORY = "com.mjr.extraplanets.client.gui.screen.ConfigGuiFactory";
 	public static final String CERTIFICATEFINGERPRINT = "b02331787272ec3515ebe63ecdeea0d746653468";
