@@ -48,6 +48,8 @@ planet.haumea=Хаумеа
 planet.MercuryEP=Меркурий 2.0
 planet.CeresEP=Церера 2.0
 planet.JupiterEP=Юпитер 2.0
+planet.SaturnEP=Сатурн 2.0
+planet.UranusEP=Уран 2.0
 planet.NeptuneEP=Нептун 2.0
 planet.PlutoEP=Плутон 2.0
 
@@ -105,6 +107,10 @@ moon.ioEP=Ио 2.0
 moon.deimosEP=Феймос 2.0
 moon.phobosEP=Фобос 2.0
 moon.oberonEP=Оберон 2.0
+moon.titanEP=Титан 2.0
+moon.rheaEP=Рея 2.0
+moon.iapetusEP=Япет 2.0
+moon.titaniaEP=Титания 2.0 ##NEEDS TRANSLATE##
 
 #Planet Blocks
 tile.mercury.surface.name=Поверхность Меркурия
@@ -537,6 +543,7 @@ gui.radiation.type.message=Радиация
 gui.status.waiting.on.player.name=Нет игроков в машине
 gui.message.finding.block=Можно найти на
 gui.message.finding.volcanic.rock=Юпитер и Ио
+gui.message.finding.potash=Ceres, deep underground ##NEEDS TRANSLATE##
 gui.message.decontamination.unit=Снижает уровень радиации на 10%
 gui.battery_slot.desc.custom=Рекомендуется использовать в Массивном аккумуляторе
 gui.radiation.cancel.message=Вы можете использовать кислородные уплотнители с улучшением температурного контроллера для полной защиты от излучения и давления
