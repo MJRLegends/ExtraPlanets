@@ -1148,23 +1148,23 @@ tier2_armor_layer.desc=Comprimir: : 4 Lingotes de Titanio
 tier3_armor_layer.desc=Comprimir: : 4 Lingotes de Paladio
 tier4_armor_layer.desc=Comprimir: : 4 Lingotes de Zinc
 
-module.pressure_module_1.name=Tier 1 Pressure Module ##NEEDS TRANSLATE##
-module.pressure_module_1.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.pressure_module_2.name=Tier 2 Pressure Module ##NEEDS TRANSLATE##
-module.pressure_module_2.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.pressure_module_3.name=Tier 3 Pressure Module ##NEEDS TRANSLATE##
-module.pressure_module_3.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.pressure_module_4.name=Tier 4 Pressure Module ##NEEDS TRANSLATE##
-module.pressure_module_4.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.pressure_module_1.name=Módulo de Presión Nivel 1
+module.pressure_module_1.desc=Te protege de la Presión en ExtraPlanets o en los Planetas/Lunas/Estaciones de Galacticraft 
+module.pressure_module_2.name=Módulo de Presión Nivel 2
+module.pressure_module_2.desc=Te protege de la Presión en ExtraPlanets o en los Planetas/Lunas/Estaciones de Galacticraft 
+module.pressure_module_3.name=Módulo de Presión Nivel 3
+module.pressure_module_3.desc=Te protege de la Presión en ExtraPlanets o en los Planetas/Lunas/Estaciones de Galacticraft 
+module.pressure_module_4.name=Módulo de Presión Nivel 4
+module.pressure_module_4.desc=Te protege de la Presión en ExtraPlanets o en los Planetas/Lunas/Estaciones de Galacticraft 
 
-module.radiation_module_1.name=Tier 1 Radiation Module ##NEEDS TRANSLATE##
-module.radiation_module_1.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.radiation_module_2.name=Tier 2 Radiation Module ##NEEDS TRANSLATE##
-module.radiation_module_2.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.radiation_module_3.name=Tier 3 Radiation Module ##NEEDS TRANSLATE##
-module.radiation_module_3.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.radiation_module_4.name=Tier 4 Radiation Module ##NEEDS TRANSLATE##
-module.radiation_module_4.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.radiation_module_1.name=Módulo de Radiaciónn Nivel 1
+module.radiation_module_1.desc=Te protege de la Radiación en ExtraPlanets o en los Planetas/Lunas/Estaciones de Galacticraft
+module.radiation_module_2.name=Módulo de Radiaciónn Nivel 2
+module.radiation_module_2.desc=Te protege de la Radiación en ExtraPlanets o en los Planetas/Lunas/Estaciones de Galacticraft
+module.radiation_module_3.name=Módulo de Radiaciónn Nivel 3
+module.radiation_module_3.desc=Te protege de la Radiación en ExtraPlanets o en los Planetas/Lunas/Estaciones de Galacticraft
+module.radiation_module_4.name=Módulo de Radiaciónn Nivel 4
+module.radiation_module_4.desc=Te protege de la Radiación en ExtraPlanets o en los Planetas/Lunas/Estaciones de Galacticraft
 
 #UnPrepared Space Suits
 item.tier1_un_prepared_space_suit_helmet.name=Molde de Casco del Traje Espacial Nivel 1
