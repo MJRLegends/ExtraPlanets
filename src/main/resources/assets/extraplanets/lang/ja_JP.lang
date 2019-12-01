@@ -48,6 +48,8 @@ planet.haumea=ハウメア
 planet.MercuryEP=水星 2.0
 planet.CeresEP=ケレス 2.0
 planet.JupiterEP=木星 2.0
+planet.SaturnEP=土星 2.0
+planet.UranusEP=天王星 2.0
 planet.NeptuneEP=海王星 2.0
 planet.PlutoEP=冥王星 2.0
 
@@ -92,10 +94,10 @@ moon.rhea=レア
 moon.titan=タイタン
 moon.oberon=オベロン
 moon.titania=チタニア
-moon.charon=Charon
-moon.nix=Nix
-moon.hydra=Hydra
-moon.dysnomia=Dysnomia
+moon.charon=カロン
+moon.nix=ニクス
+moon.hydra=ヒドラ
+moon.dysnomia=ディスノミア
 
 moon.tritonEP=トリトン 2.0
 moon.callistoEP=カリスト 2.0
@@ -106,6 +108,9 @@ moon.deimosEP=ダイモス 2.0
 moon.phobosEP=フォボス 2.0
 moon.oberonEP=オベロン 2.0
 moon.titanEP=タイタン 2.0
+moon.rheaEP=レア 2.0
+moon.iapetusEP=イアペトゥス 2.0
+moon.titaniaEP=チタニア 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=水星地表の岩
