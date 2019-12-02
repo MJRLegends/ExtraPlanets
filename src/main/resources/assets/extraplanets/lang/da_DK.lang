@@ -1439,7 +1439,7 @@ achievement.craft_rocket_10.desc=Craft Tier 10 Rocket ##NEEDS TRANSLATE##
 
 #Liquids/Fluid
 tile.glowstone.name=Flydende Glowstone ##NEEDS TRANSLATE##
-tile.magma.name=Flydende Magma ##NEEDS TRANSLATE##
+tile.magma_block.name=Flydende Magma ##NEEDS TRANSLATE##
 tile.nitrogen.name=Flydende Nitrogen ##NEEDS TRANSLATE##
 tile.frozen_water.name=Frozen Water ##NEEDS TRANSLATE##
 tile.salt.name=Flydende Crystallized Water ##NEEDS TRANSLATE##

@@ -1439,7 +1439,7 @@ achievement.craft_rocket_10.desc=Craft Tier 10 Rocket ##NEEDS TRANSLATE##
 
 #Liquids/Fluid
 tile.glowstone.name=Liquid Glowstone ##NEEDS TRANSLATE##
-tile.magma.name=Liquid Magma ##NEEDS TRANSLATE##
+tile.magma_block.name=Liquid Magma ##NEEDS TRANSLATE##
 tile.nitrogen.name=Liquid Nitrogen ##NEEDS TRANSLATE##
 tile.frozen_water.name=Frozen Water ##NEEDS TRANSLATE##
 tile.salt.name=Liquid Crystallized Water ##NEEDS TRANSLATE##

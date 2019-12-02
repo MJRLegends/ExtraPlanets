@@ -1438,7 +1438,7 @@ achievement.craft_rocket_10.desc=Construire une fusée Niveau 10.
 
 #Liquids/Fluid
 tile.glowstone.name=Pierre lumineuse liquide
-tile.magma.name=Magma liquide
+tile.magma_block.name=Magma liquide
 tile.nitrogen.name=Azote liguide
 tile.frozen_water.name=Eau congelée
 tile.salt.name=Eau cristallisée liquide

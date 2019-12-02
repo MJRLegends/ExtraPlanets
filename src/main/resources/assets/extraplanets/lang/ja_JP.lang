@@ -1434,7 +1434,7 @@ achievement.craft_rocket_10.desc=レベル10 ロケットを作成した
 
 #Liquids/Fluid
 tile.glowstone.name=液体グロウストーン
-tile.magma.name=マグマ
+tile.magma_block.name=マグマ
 tile.nitrogen.name=液体窒素
 tile.frozen_water.name=凍りかけの水
 tile.salt.name=塩水

@@ -1439,7 +1439,7 @@ achievement.craft_rocket_10.desc=Stelle eine Stufe 10 Rakete her
 
 #Liquids/Fluid
 tile.glowstone.name=Füssiger Glowstone
-tile.magma.name=Flüssiges Magma
+tile.magma_block.name=Flüssiges Magma
 tile.nitrogen.name=Flüssiger Stickstoff
 tile.frozen_water.name=Eingefrorenes Wasser
 tile.salt.name=Flüssgies Kristallisiertes Wasser

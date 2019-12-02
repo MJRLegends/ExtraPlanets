@@ -1439,7 +1439,7 @@ achievement.craft_rocket_9.desc=Seviye 10 Roket İnşa Et
 
 #Liquids/Fluid
 tile.glowstone.name=Işıktaşı Yakıtı
-tile.magma.name=Mağma Yakıtı
+tile.magma_block.name=Mağma Yakıtı
 tile.nitrogen.name=Nitrojen Yakıtı
 tile.frozen_water.name=Soğumuş Su
 tile.salt.name=Sıvı Kristalize Su

@@ -1439,7 +1439,7 @@ achievement.craft_rocket_10.desc=10티어 로켓 제작
 
 #Liquids/Fluid
 tile.glowstone.name=액체 발광석
-tile.magma.name=액체 마그마
+tile.magma_block.name=액체 마그마
 tile.nitrogen.name=액체 질소
 tile.frozen_water.name=얼은 물
 tile.salt.name=액체 수정 물

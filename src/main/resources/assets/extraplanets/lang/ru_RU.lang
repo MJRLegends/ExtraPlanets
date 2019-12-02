@@ -1439,7 +1439,7 @@ achievement.craft_rocket_10.desc=Создать ракету 10-го уровн�
 
 #Liquids/Fluid
 tile.glowstone.name=Жидкая светящиеся пыль
-tile.magma.name=Жидкая магма
+tile.magma_block.name=Жидкая магма
 tile.nitrogen.name=Жидкий азот
 tile.frozen_water.name=Замерзшая вода
 tile.salt.name=Жидкая кристаллическая вода
