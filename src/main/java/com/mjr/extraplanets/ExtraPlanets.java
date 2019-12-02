@@ -281,7 +281,7 @@ public class ExtraPlanets {
 		ExtraPlanets_Moons.init();
 		ExtraPlanets_SpaceStations.init();
 		
-		if(Loader.isClassAvailable("net.machinemuse.numina.module.IPowerModule"))
+		if(Loader.isClassAvailable("net.machinemuse.numina.module.IPowerModule") && Loader.isClassAvailable("net.machinemuse.powersuits.common.ModuleManager"))
 			MachineMusePowersuitsCompatibility.init();
 
 		// Register RegistrationHandler
