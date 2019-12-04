@@ -35,7 +35,7 @@ repositories {
     }
 	maven {
         name 'CB Maven FS'
-        url "https://modmaven.k-4u.nl/codechicken/"
+        url "https://modmaven.k-4u.nl/"
     }
 	maven {
 	    name 'Redstone Flux'
