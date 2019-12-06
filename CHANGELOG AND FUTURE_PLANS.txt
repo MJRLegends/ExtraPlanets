@@ -5,9 +5,15 @@
 
 
 ===========================================Released Updates===========================================
+v0.6.0
+*Fixed issue #499
+*Fixed issue #487
+
 v0.5.9
 *Fixed issue #493
 *Fixed issue #492
+*Updated zh_CN.lang (Thanks to mcBegins2Snow)
+*Added ja_JP.lang (Thanks to ShinoShino-pavlichenko)
 
 v0.5.8
 *Fixed issue #479
