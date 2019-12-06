@@ -48,6 +48,8 @@ planet.haumea=Haumea
 planet.MercuryEP=Merkür 2.0
 planet.CeresEP=Ceres 2.0
 planet.JupiterEP=Jüpiter 2.0
+planet.SaturnEP=Uranüs 2.0
+planet.UranusEP=Neptün 2.0
 planet.NeptuneEP=Neptün 2.0
 planet.PlutoEP=Pluto 2.0
 
@@ -105,6 +107,10 @@ moon.ioEP=Io 2.0
 moon.deimosEP=Deimos 2.0
 moon.phobosEP=Rezzan 2.0
 moon.oberonEP=Oberon 2.0
+moon.titanEP=Titan 2.0
+moon.rheaEP=Rhea 2.0
+moon.iapetusEP=Iapetus 2.0
+moon.titaniaEP=Titanya 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=Merkür Yüzey Kayası
@@ -537,6 +543,7 @@ gui.radiation.type.message=Radrasyon
 gui.status.waiting.on.player.name=Makinede oyuncu yok
 gui.message.finding.block=Bunu bulabilirsin
 gui.message.finding.volcanic.rock=Jüpiter & Io
+gui.message.finding.potash=Ceres, deep underground ##NEEDS TRANSLATE##
 gui.message.decontamination.unit=Radrasyon seviyeni 10% düşürür
 gui.battery_slot.desc.custom=Büyük batarya kullanman önerilir
 gui.radiation.cancel.message=Radrasyon ve Basınçtan korunmak için oksijen aletleri kullanabilirsin

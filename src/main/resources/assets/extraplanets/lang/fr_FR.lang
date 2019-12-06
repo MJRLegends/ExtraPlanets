@@ -48,6 +48,8 @@ planet.haumea=Haumea
 planet.MercuryEP=Mercure 2.0
 planet.CeresEP=Ceres 2.0
 planet.JupiterEP=Jupiter 2.0
+planet.SaturnEP=Saturne 2.0
+planet.UranusEP=Uranus 2.0
 planet.NeptuneEP=Neptuno 2.0
 planet.PlutoEP=Pluton 2.0
 
@@ -105,6 +107,10 @@ moon.ioEP=Io 2.0
 moon.deimosEP=Deimos 2.0
 moon.phobosEP=Phobos 2.0
 moon.oberonEP=Oberon 2.0
+moon.titanEP=Titan 2.0
+moon.rheaEP=Rhea 2.0
+moon.iapetusEP=Iapetus 2.0
+moon.titaniaEP=Titania 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=Roche de surface de Mercure
@@ -537,6 +543,7 @@ gui.radiation.type.message=Radiation
 gui.status.waiting.on.player.name=Aucun joueur dans la machine
 gui.message.finding.block=Peut être trouvé sur
 gui.message.finding.volcanic.rock=Jupiter & Io
+gui.message.finding.potash=Ceres, deep underground ##NEEDS TRANSLATE##
 gui.message.decontamination.unit=Réduit le niveau de rayonnement de 10%
 gui.battery_slot.desc.custom=Recommandé d'utiliser une batterie massive
 gui.radiation.cancel.message=Vous pouvez utiliser des scellants d'oxygène avec une mise à niveau du contrôleur thermique ambiant pour une protection totale contre le rayonnement et la pression.
