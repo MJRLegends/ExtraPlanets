@@ -110,7 +110,7 @@ moon.oberonEP=Оберон 2.0
 moon.titanEP=Титан 2.0
 moon.rheaEP=Рея 2.0
 moon.iapetusEP=Япет 2.0
-moon.titaniaEP=Титания 2.0 ##NEEDS TRANSLATE##
+moon.titaniaEP=Титания 2.0
 
 #Planet Blocks
 tile.mercury.surface.name=Поверхность Меркурия
@@ -535,7 +535,7 @@ gui.message.general.tank.fluid.name=Жидкость
 gui.status.densifier.name=Уплотнение
 gui.bucket.message.extreme.reactors.compact=Эта жидкость совместима с Экстремальными реакторами
 gui.radiation.reduced.message=Ваш уровень радиации был уменьшен на
-gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
+gui.radiation.reduced.message.2=от вашего первоначального/текущего количества
 gui.radiation.current.message=Ваш текущий уровень радиации
 gui.radiation.subject.message=Вы теперь подвержены
 gui.radiation.reverse.message=Вы можете использовать следующие способы: сон, блок дезактивации, антирадиационные напитки, чтобы помочь обратить вспять ущерб
@@ -543,7 +543,7 @@ gui.radiation.type.message=Радиация
 gui.status.waiting.on.player.name=Нет игроков в машине
 gui.message.finding.block=Можно найти на
 gui.message.finding.volcanic.rock=Юпитер и Ио
-gui.message.finding.potash=Ceres, deep underground ##NEEDS TRANSLATE##
+gui.message.finding.potash=Церера, глубоко под землей
 gui.message.decontamination.unit=Снижает уровень радиации на 10%
 gui.battery_slot.desc.custom=Рекомендуется использовать в Массивном аккумуляторе
 gui.radiation.cancel.message=Вы можете использовать кислородные уплотнители с улучшением температурного контроллера для полной защиты от излучения и давления
@@ -602,7 +602,7 @@ gui.module_cost.name=Стоимость
 gui.module.installed.name=Модуль установлен!
 gui.module.missing_requirements.name=Извините, вы не отвечаете требованиям для установки этого модуля!
 gui.module.already_installed.name=У вас уже установлен этот модуль!
-gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
+gui.module.missing_armour.name=Невозможно установить из-за отсутствия части брони скафандра!
 gui.module.description.name=Описание модуля
 gui.module.name.name=Имя модуля
 gui.module.type.name=Тип модуля
@@ -1106,8 +1106,8 @@ space.suit.information.extra=Уровень каждой части скафан
 space.suit.information.extra.2=к уменьшению количества полученной радиации
 space.suit.information.extra.3=Чем выше уровень скафандра, тем
 space.suit.information.extra.4=более медленная радиация будет получена
-space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
-space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE##
+space.suit.power.info=Поддерживает следующие системы энергии,
+space.suit.power.info.2=RF, Mekanism джоули, GC джоули, IC2
 
 item_desc.spacesuit.shift.name=Нажмите %s для информации о давлении и радиации
 item_desc.spacesuit.module.shift.name=Нажмите %s для установленных модулей
@@ -1150,23 +1150,23 @@ tier2_armor_layer.desc=Рецепт Компрессора: 4 Титановых
 tier3_armor_layer.desc=Рецепт Компрессора: 4 Палладиевых слитка
 tier4_armor_layer.desc=Рецепт Компрессора: 4 Цинковых слитка
 
-module.pressure_module_1.name=Tier 1 Pressure Module ##NEEDS TRANSLATE##
-module.pressure_module_1.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.pressure_module_2.name=Tier 2 Pressure Module ##NEEDS TRANSLATE##
-module.pressure_module_2.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.pressure_module_3.name=Tier 3 Pressure Module ##NEEDS TRANSLATE##
-module.pressure_module_3.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.pressure_module_4.name=Tier 4 Pressure Module ##NEEDS TRANSLATE##
-module.pressure_module_4.desc=Protects you from pressure on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.pressure_module_1.name=Модуль давления 1-го уровня
+module.pressure_module_1.desc=Защищает от давления на ExtraPlanets или Galacticraft планетах/лунах/станциях
+module.pressure_module_2.name=Модуль давления 2-го уровня
+module.pressure_module_2.desc=Защищает от давления на ExtraPlanets или Galacticraft планетах/лунах/станциях
+module.pressure_module_3.name=Модуль давления 3-го уровня
+module.pressure_module_3.desc=Защищает от давления на ExtraPlanets или Galacticraft планетах/лунах/станциях
+module.pressure_module_4.name=Модуль давления 4-го уровня
+module.pressure_module_4.desc=Защищает от давления на ExtraPlanets или Galacticraft планетах/лунах/станциях
 
-module.radiation_module_1.name=Tier 1 Radiation Module ##NEEDS TRANSLATE##
-module.radiation_module_1.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.radiation_module_2.name=Tier 2 Radiation Module ##NEEDS TRANSLATE##
-module.radiation_module_2.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.radiation_module_3.name=Tier 3 Radiation Module ##NEEDS TRANSLATE##
-module.radiation_module_3.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
-module.radiation_module_4.name=Tier 4 Radiation Module ##NEEDS TRANSLATE##
-module.radiation_module_4.desc=Protects you from radiation on ExtraPlanets or Galacticraft Planets/Moons/Stations ##NEEDS TRANSLATE##
+module.radiation_module_1.name=Радиационный модуль 1-го уровня
+module.radiation_module_1.desc=Защищает от радиации на ExtraPlanets или Galacticraft планетах/лунах/станциях
+module.radiation_module_2.name=Радиационный модуль 2-го уровня
+module.radiation_module_2.desc=Защищает от радиации на ExtraPlanets или Galacticraft планетах/лунах/станциях
+module.radiation_module_3.name=Радиационный модуль 3-го уровня
+module.radiation_module_3.desc=Защищает от радиации на ExtraPlanets или Galacticraft планетах/лунах/станциях
+module.radiation_module_4.name=Радиационный модуль 4-го уровня
+module.radiation_module_4.desc=Защищает от радиации на ExtraPlanets или Galacticraft планетах/лунах/станциях
 
 #UnPrepared Space Suits
 item.tier1_un_prepared_space_suit_helmet.name=Шлем неподготовленного космического скафандра 1-го уровня
@@ -1252,7 +1252,7 @@ item.potassium_iodide.name=Иодид калия
 item.potassium.name=Калий
 item.potash_shards.name=Осколок калия
 item.anti_radiation.name=Анти-рад
-anti_radiation.desc=Reduces Radiation Level by {PERCENT} of the current amount ##NEEDS TRANSLATE##
+anti_radiation.desc=Уменьшает уровень радиации на {PERCENT} от текущей суммы 
 
 #Kits
 item.tier1_kit.full.name=Полный комплект 1-го уровня
@@ -1331,7 +1331,7 @@ item.canned_food.dehydrated_porkchop.name=Дегидратированная ж�
 item.canned_food.dehydrated_fish.name=Дегидратированная рыба
 item.canned_food.dehydrated_salmon.name=Дегидратированный лосось
 item.canned_food.dehydrated_chicken.name=Дегидратированная жареная курица
-item.canned_food.dehydrated_beef.name=Dehydrated Beef ##NEEDS TRANSLATE##
+item.canned_food.dehydrated_beef.name=Дегидратированная говядина
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=Аккумулятор 1-го уровня
