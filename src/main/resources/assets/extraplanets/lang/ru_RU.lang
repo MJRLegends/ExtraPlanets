@@ -1314,7 +1314,7 @@ item.canned_food.canned_food.name=Консервированная еда
 item.bodyparts.arm.name=Рука
 item.bodyparts.leg.name=Нога
 item.cloth.name=Шерстяная ткань
-item.gravity_controller.name=Котроллер гравитации
+item.gravity_controller.name=Контроллер гравитации
 item.thermal_cloth.tier3_thermal_cloth.name=Теплоустойчивая ткань 3-го уровня
 item.thermal_cloth.tier4_thermal_cloth.name=Теплоустойчивая ткань 4-го уровня
 item.thermal_cloth.tier5_thermal_cloth.name=Теплоустойчивая ткань 5-го уровня
@@ -1468,9 +1468,9 @@ fluid.liquid_caramel_fluid=Жидкая карамель
 
 #Gui/Damage Sources
 gui.warning.high.pressure=Высокое давление окружающей среды
-gui.warning.high.radiation=Предупреждение о высоком потреблении радиации
-gui.warning.med.radiation=Среднее давление окружающей среды
-gui.warning.low.radiation=Очень низкое давление окружающей среды
+gui.warning.high.radiation=Внимание! Высокий уровень потребляемой радиации
+gui.warning.med.radiation=Средний уровень потребляемой радиации
+gui.warning.low.radiation=Низкий уровень потребляемой радиации
 death.attack.radiation=%1$s забыл радиационную защиту
 death.attack.pressure=%1$s забыл защиту от давления
 death.attack.hypothermia=%1$s умер от гипотермии
