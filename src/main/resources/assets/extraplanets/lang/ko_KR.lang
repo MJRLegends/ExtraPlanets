@@ -52,6 +52,7 @@ planet.SaturnEP=Saturn 2.0 ##NEEDS TRANSLATE##
 planet.UranusEP=Uranus 2.0 ##NEEDS TRANSLATE##
 planet.NeptuneEP=해왕성 2.0
 planet.PlutoEP=명왕성 2.0
+planet.ErisEP=Eris 2.0 ##NEEDS TRANSLATE##
 
 planet.kepler62b=케플러 62b
 planet.kepler62c=케플러 62c
