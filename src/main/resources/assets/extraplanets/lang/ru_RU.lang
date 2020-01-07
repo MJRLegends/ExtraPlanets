@@ -1574,7 +1574,7 @@ tile.neptuneDungeonBrickStoneStairs.name=Ступеньки из кирпича 
 #Planets
 planet.Venus=Венера
 
-planet.VenusEP=Venus 2.0 ##NEEDS TRANSLATE##
+planet.VenusEP=Венера 2.0
 
 #Other Blocks
 tile.slime_block.name=Слизневый блок
