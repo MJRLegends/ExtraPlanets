@@ -7,6 +7,6 @@
         "north": "extraplanets:blocks/machine_ultimate_fuelloader",
         "east": "galacticraftcore:blocks/machine_input",
         "south": "extraplanets:blocks/machine_ultimate_fuelloader",
-        "west": "galacticraftcore:blocks/machine_oil_input"
+        "west": "galacticraftcore:blocks/machine_fuel_input"
     }
 }
