@@ -319,91 +319,92 @@ public class MainHandlerServer {
 	}
 
 	public boolean isValidSpaceSuit(ItemStack helmet, ItemStack chest, ItemStack leggins, ItemStack boots, List<String> list, boolean pressure) {
-		if(Loader.isModLoaded("powersuits")) {
-			boolean hasHelmet = false;
-			boolean hasChest = false;
-			boolean hasLeggins = false;
-			boolean hasBoots = false;
-			if(pressure) {
-				hasHelmet = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(helmet);
-				hasChest = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(chest);
-				hasLeggins = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(leggins);
-				hasBoots = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(boots);
-			}
-			else {
-				hasHelmet = MachineMusePowersuitsCompatibility.isRadiationModuleInstalled(helmet);
-				hasChest = MachineMusePowersuitsCompatibility.isRadiationModuleInstalled(chest);
-				hasLeggins = MachineMusePowersuitsCompatibility.isRadiationModuleInstalled(leggins);
-				hasBoots = MachineMusePowersuitsCompatibility.isRadiationModuleInstalled(boots);
-			}
-			if(hasHelmet && hasChest && hasLeggins && hasBoots)
-				return true;
-		}
-		boolean valid = false;
-		if (list.size() == 0)
-			list.add("test:test:0");
-		for (String temp : list) {
-			temp = temp.substring(0, temp.lastIndexOf(':'));
-			if (helmet == ItemStack.EMPTY)
-				return false;
-			if ((helmet.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(helmet.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-				valid = true;
-			if ((helmet.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(helmet.getItem() instanceof IRadiationSuit) && temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(helmet.getItem() instanceof IPressureSuit) && !(helmet.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-				return false;
-
-			if (chest == ItemStack.EMPTY)
-				return false;
-			if ((chest.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(chest.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-				valid = true;
-			if ((chest.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(chest.getItem() instanceof IRadiationSuit) && temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(chest.getItem() instanceof IPressureSuit) && !(chest.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-				return false;
-
-			if (leggins == ItemStack.EMPTY)
-				return false;
-			if ((leggins.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(leggins.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-				valid = true;
-			if ((leggins.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(leggins.getItem() instanceof IRadiationSuit) && temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(leggins.getItem() instanceof IPressureSuit) && !(leggins.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-				return false;
-
-			if (boots == ItemStack.EMPTY)
-				return false;
-			if ((boots.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(boots.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
-				valid = true;
-			if ((boots.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(boots.getItem() instanceof IRadiationSuit) && temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(boots.getItem() instanceof IPressureSuit) && !(boots.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
-				return false;
-		}
-		if (valid)
-			return true;
-		else
+		// Check for slot filled
+		if (helmet == ItemStack.EMPTY)
 			return false;
+		if (chest == ItemStack.EMPTY)
+			return false;
+		if (leggins == ItemStack.EMPTY)
+			return false;
+		if (boots == ItemStack.EMPTY)
+			return false;
+
+		boolean validHelmet = false;
+		boolean validChest = false;
+		boolean validLeggings = false;
+		boolean validBoots = false;
+
+		// ExtraPlanets Space Suit/Interface compact
+		if (pressure) {
+			if (helmet.getItem() instanceof IPressureSuit)
+				validHelmet = true;
+			if (chest.getItem() instanceof IPressureSuit)
+				validChest = true;
+			if (leggins.getItem() instanceof IPressureSuit)
+				validLeggings = true;
+			if (boots.getItem() instanceof IPressureSuit)
+				validBoots = true;
+		} else {
+			if (helmet.getItem() instanceof IRadiationSuit)
+				validHelmet = true;
+			if (chest.getItem() instanceof IRadiationSuit)
+				validChest = true;
+			if (leggins.getItem() instanceof IRadiationSuit)
+				validLeggings = true;
+			if (boots.getItem() instanceof IRadiationSuit)
+				validBoots = true;
+		}
+		if (validHelmet && validChest && validLeggings && validBoots)
+			return true;
+		else {
+			// Mod Compact
+			if (Loader.isModLoaded("powersuits")) {
+				if (pressure) {
+					if(!validHelmet)validHelmet = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(helmet);
+					if(!validChest)validChest = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(chest);
+					if(!validLeggings)validLeggings = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(leggins);
+					if(!validBoots)validBoots = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(boots);
+				} else {
+					if(!validHelmet)validHelmet = MachineMusePowersuitsCompatibility.isRadiationModuleInstalled(helmet);
+					if(!validChest)validChest = MachineMusePowersuitsCompatibility.isRadiationModuleInstalled(chest);
+					if(!validLeggings)validLeggings = MachineMusePowersuitsCompatibility.isRadiationModuleInstalled(leggins);
+					if(!validBoots)validBoots = MachineMusePowersuitsCompatibility.isRadiationModuleInstalled(boots);
+				}
+				if (validHelmet && validChest && validLeggings && validBoots)
+					return true;
+			}
+
+			// Config List of armour items to be considered as a space suit compact
+			for (String temp : list) {
+				temp = temp.substring(0, temp.lastIndexOf(':'));
+				if (temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
+					validHelmet = true;
+			}
+			for (String temp : list) {
+				temp = temp.substring(0, temp.lastIndexOf(':'));
+				if (temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
+					validChest = true;
+			}
+			for (String temp : list) {
+				temp = temp.substring(0, temp.lastIndexOf(':'));
+				if (temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
+					validLeggings = true;
+			}
+			for (String temp : list) {
+				temp = temp.substring(0, temp.lastIndexOf(':'));
+				if (temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
+					validBoots = true;
+			}
+
+			if (validHelmet && validChest && validLeggings && validBoots)
+				return true;
+			else
+				return false;
+		}
 	}
 
 	public int getTier(ItemStack testItem, List<String> list) {
-		if(Loader.isModLoaded("powersuits")) {
+		if (Loader.isModLoaded("powersuits")) {
 			return MachineMusePowersuitsCompatibility.getHighestRadiationTierModuleInstalled(testItem);
 		}
 		if (testItem.getItem() instanceof IRadiationSuit)
@@ -537,8 +538,10 @@ public class MainHandlerServer {
 				stats.setRadiationLevel(0);
 			else {
 				stats.setRadiationLevel(stats.getRadiationLevel() - level);
-				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " " + Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "% "+ TranslateUtilities.translate("gui.radiation.reduced.message.2"));
-				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
+				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
+						+ Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "% " + TranslateUtilities.translate("gui.radiation.reduced.message.2"));
+				PlayerUtilties.sendMessage(player,
+						"" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
 			}
 		}
 	}
