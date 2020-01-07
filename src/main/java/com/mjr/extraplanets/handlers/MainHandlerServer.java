@@ -316,68 +316,72 @@ public class MainHandlerServer {
 		}
 	}
 
-	public boolean isValidSpaceSuit(ItemStack helmet, ItemStack chest, ItemStack leggins, ItemStack boots, List<String> list) {
-		boolean valid = false;
-		if (list.size() == 0)
-			list.add("test:test:0");
-		for (String temp : list) {
-			temp = temp.substring(0, temp.lastIndexOf(':'));
-			if (helmet == null)
-				return false;
-			if ((helmet.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(helmet.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-				valid = true;
-			if ((helmet.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(helmet.getItem() instanceof IRadiationSuit) && temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(helmet.getItem() instanceof IPressureSuit) && !(helmet.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
-				return false;
+	public boolean isValidSpaceSuit(ItemStack helmet, ItemStack chest, ItemStack leggins, ItemStack boots, List<String> list, boolean pressure) {
+		// Check for slot filled
+		if (helmet == null)
+			return false;
+		if (chest == null)
+			return false;
+		if (leggins == null)
+			return false;
+		if (boots == null)
+			return false;
 
-			if (chest == null)
-				return false;
-			if ((chest.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(chest.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-				valid = true;
-			if ((chest.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(chest.getItem() instanceof IRadiationSuit) && temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(chest.getItem() instanceof IPressureSuit) && !(chest.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
-				return false;
+		boolean validHelmet = false;
+		boolean validChest = false;
+		boolean validLeggings = false;
+		boolean validBoots = false;
 
-			if (leggins == null)
-				return false;
-			if ((leggins.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(leggins.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-				valid = true;
-			if ((leggins.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(leggins.getItem() instanceof IRadiationSuit) && temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(leggins.getItem() instanceof IPressureSuit) && !(leggins.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
-				return false;
+		// ExtraPlanets Space Suit/Interface compact
+		if (pressure) {
+			if (helmet.getItem() instanceof IPressureSuit)
+				validHelmet = true;
+			if (chest.getItem() instanceof IPressureSuit)
+				validChest = true;
+			if (leggins.getItem() instanceof IPressureSuit)
+				validLeggings = true;
+			if (boots.getItem() instanceof IPressureSuit)
+				validBoots = true;
+		} else {
+			if (helmet.getItem() instanceof IRadiationSuit)
+				validHelmet = true;
+			if (chest.getItem() instanceof IRadiationSuit)
+				validChest = true;
+			if (leggins.getItem() instanceof IRadiationSuit)
+				validLeggings = true;
+			if (boots.getItem() instanceof IRadiationSuit)
+				validBoots = true;
+		}
+		if (validHelmet && validChest && validLeggings && validBoots)
+			return true;
+		else {
+			// Config List of armour items to be considered as a space suit compact
+			for (String temp : list) {
+				temp = temp.substring(0, temp.lastIndexOf(':'));
+				if (temp.equalsIgnoreCase(helmet.getItem().getRegistryName().toString()))
+					validHelmet = true;
+			}
+			for (String temp : list) {
+				temp = temp.substring(0, temp.lastIndexOf(':'));
+				if (temp.equalsIgnoreCase(chest.getItem().getRegistryName().toString()))
+					validChest = true;
+			}
+			for (String temp : list) {
+				temp = temp.substring(0, temp.lastIndexOf(':'));
+				if (temp.equalsIgnoreCase(leggins.getItem().getRegistryName().toString()))
+					validLeggings = true;
+			}
+			for (String temp : list) {
+				temp = temp.substring(0, temp.lastIndexOf(':'));
+				if (temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
+					validBoots = true;
+			}
 
-			if (boots == null)
-				return false;
-			if ((boots.getItem() instanceof IPressureSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(boots.getItem() instanceof IPressureSuit) && temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
-				valid = true;
-			if ((boots.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(boots.getItem() instanceof IRadiationSuit) && temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
-				valid = true;
-			if (!(boots.getItem() instanceof IPressureSuit) && !(boots.getItem() instanceof IRadiationSuit) && !temp.equalsIgnoreCase(boots.getItem().getRegistryName().toString()))
+			if (validHelmet && validChest && validLeggings && validBoots)
+				return true;
+			else
 				return false;
 		}
-		if (valid)
-			return true;
-		else
-			return false;
 	}
 
 	public int getTier(ItemStack testItem, List<String> list) {
@@ -404,7 +408,7 @@ public class MainHandlerServer {
 			ItemStack leggins = playerMP.inventory.armorInventory[1];
 			ItemStack boots = playerMP.inventory.armorInventory[0];
 
-			if (!isValidSpaceSuit(helmet, chest, leggins, boots, list)) {
+			if (!isValidSpaceSuit(helmet, chest, leggins, boots, list, true)) {
 				float tempLevel = amount;
 				tempLevel = (tempLevel / 100) * 8;
 				if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE)
@@ -434,7 +438,8 @@ public class MainHandlerServer {
 		ItemStack chest = playerMP.inventory.armorInventory[2];
 		ItemStack leggins = playerMP.inventory.armorInventory[1];
 		ItemStack boots = playerMP.inventory.armorInventory[0];
-		if (!isValidSpaceSuit(helmet, chest, leggins, boots, list)) {
+
+		if (!isValidSpaceSuit(helmet, chest, leggins, boots, list, false)) {
 			damageModifer = 0.1;
 			doDamage = true;
 		} else {
@@ -514,8 +519,10 @@ public class MainHandlerServer {
 				stats.setRadiationLevel(0);
 			else {
 				stats.setRadiationLevel(stats.getRadiationLevel() - level);
-				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " " + Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "% "+ TranslateUtilities.translate("gui.radiation.reduced.message.2"));
-				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
+				PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
+						+ Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "% " + TranslateUtilities.translate("gui.radiation.reduced.message.2"));
+				PlayerUtilties.sendMessage(player,
+						"" + TextFormatting.AQUA + TextFormatting.BOLD + playerMP.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
 			}
 		}
 	}
