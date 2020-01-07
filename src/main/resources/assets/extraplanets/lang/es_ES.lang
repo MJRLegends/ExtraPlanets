@@ -1572,6 +1572,8 @@ tile.neptuneDungeonBrickStoneStairs.name=Escaleras de Ladrillos de Mazmorra de N
 #Planets
 planet.Venus=Venus
 
+planet.VenusEP=Venus 2.0 ##NEEDS TRANSLATE##
+
 #Other Blocks
 tile.slime_block.name=Bloque de Slime
 tile.deimos.ore_lead.name=Mena de Plomo de Deimos
