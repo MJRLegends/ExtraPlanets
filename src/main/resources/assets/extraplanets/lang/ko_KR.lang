@@ -1574,6 +1574,8 @@ tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs
 #Planets
 planet.Venus=Venus
 
+planet.VenusEP=Venus 2.0 ##NEEDS TRANSLATE##
+
 #Other Blocks
 tile.slime_block.name=Slime Block
 tile.deimos.ore_lead.name=Deimos Lead Ore

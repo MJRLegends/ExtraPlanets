@@ -1569,6 +1569,8 @@ tile.neptuneDungeonBrickStoneStairs.name=海王星ダンジョンレンガの階
 #Planets
 planet.Venus=金星
 
+planet.VenusEP=Venus 2.0 ##NEEDS TRANSLATE##
+
 #Other Blocks
 tile.slime_block.name=スライムブロック
 tile.deimos.ore_lead.name=ダイモスの鉛鉱石
