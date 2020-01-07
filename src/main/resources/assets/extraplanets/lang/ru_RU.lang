@@ -52,6 +52,7 @@ planet.SaturnEP=Сатурн 2.0
 planet.UranusEP=Уран 2.0
 planet.NeptuneEP=Нептун 2.0
 planet.PlutoEP=Плутон 2.0
+planet.ErisEP=Eris 2.0 ##NEEDS TRANSLATE##
 
 planet.kepler62b=Кеплер-62 b
 planet.kepler62c=Кеплер-62 c
