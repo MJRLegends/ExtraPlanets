@@ -586,11 +586,14 @@ public class Config {
 		evolvedGiantSpider = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Giant Spider", true, "").getBoolean(true);
 		evolvedMiniEnderman = config.get(Constants.CONFIG_CATEGORY_ENTITIES, "Enable spawning of Evolved Mini Enderman", true, "").getBoolean(true);
 
+		// config.renameProperty(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Progression Fixes for More Planets Compatibility (Only needed for v1.4.3 & below!)", "Enable Progression Fixes for More Planets Compatibility");
+		// morePlanetsCompatibilityAdv143 = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Progression Fixes for More Planets Compatibility", false,
+		// "This option will fix the progression between ExtraPlanets & MorePlanets").getBoolean(false);
+		morePlanetsCompatibilityAdv143 = false;
+
 		morePlanetsCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable More Planets Compatibility", false,
-				"This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings, FOR v1.4.4 & ABOVE YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!")
+				"This option will disable & remove conflicting Planets/Moons/SpaceStations/Thermal Paddings")
 				.getBoolean(false);
-		morePlanetsCompatibilityAdv143 = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Progression Fixes for More Planets Compatibility (Only needed for v1.4.3 & below!)", false,
-				"This option will do the same as the basic one but will also fix the progression between ExtraPlanets & MorePlanets").getBoolean(false);
 		amunRaCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable AmunRa Compatibility", false,
 				"This option will disable & remove the Custom Celestial Selection screen & Change Conflicting Dimension Ids, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Ceres, Eris, Kepler22b, Rhea TO -66 ,-67 -68, -69").getBoolean(false);
 		galaxySpaceCompatibility = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Galaxy Space Compatibility (v1.2.3 and above)", false,
