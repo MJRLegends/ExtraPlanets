@@ -150,7 +150,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 			ModelUtilities.drawBakedModel(armourModelBodyTank2);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_blue_textured.png"));
 			ModelUtilities.drawBakedModel(armourModelBodyTank3);
-			if (Minecraft.getMinecraft().thePlayer.inventory.armorItemInSlot(2) != null && Minecraft.getMinecraft().thePlayer.inventory.armorItemInSlot(2).getItem() instanceof JetpackArmorBase) {
+			if (Minecraft.getMinecraft().thePlayer.inventory.armorItemInSlot(1) != null && Minecraft.getMinecraft().thePlayer.inventory.armorItemInSlot(1).getItem() instanceof JetpackArmorBase) {
 				MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_grey.png"));
 				GL11.glScalef(0.9F, 0.9F, 0.9F);
 				GL11.glTranslatef(0.01F, 0.9F, 0.45F);
