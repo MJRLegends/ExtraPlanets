@@ -5,6 +5,20 @@
 
 
 ===========================================Released Updates===========================================
+v1.6.2
+*Fixed issue #516 - List of Armour to be considered config not working when more than one entry made
+*Updated lang files to match MC 1.7.10
+*Added missing Eris 2.0 language localization
+*Fixed Advanced & Ultimate Fuel Loaders having the wrong texture for fuel input
+*Updated ru_RU.lang (Thanks to Smollet777)
+*Updated ru_RU.lang (Thanks to Romz24)
+*Updated zh_CN.lang (Thanks to mcBegins2Snow)
+*Fixed issue #510
+*Added back durability bar on Space Suit & made Space Suit Corrosion Resistant (For GC's Venus)
+*Added a model for the Jetpack on the Space Suit
+*Added Flame particles for the Jetpack on the Space Suit
+*Set required GC version requirement to Build 184
+
 v1.6.1
 *Fixed issue #493
 *Updated zh_CN.lang (Thanks to mcBegins2Snow)
