@@ -2,6 +2,9 @@ package com.mjr.extraplanets;
 
 import java.io.File;
 
+import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
+
 import net.minecraftforge.common.config.Configuration;
 
 public class Config {
@@ -11,7 +14,6 @@ public class Config {
 
 	public static int mercuryRocketTier;
 	public static int ceresRocketTier;
-	public static int erisRocketTier;
 
 	public static boolean genVenusVolcanos;
 	public static boolean genUranusIgloos;
@@ -252,6 +254,11 @@ public class Config {
 	public static boolean extendedPlanetsCompatibility13Alpha;
 	public static boolean extendedPlanetsCompatibility14Alpha;
 
+	public static boolean morePlanetsCompatibilityNew;
+	public static boolean galaxySpaceCompatibilityNew;
+	public static boolean extendedPlanetsCompatibility13AlphaNew;
+	public static boolean extendedPlanetsCompatibility14AlphaNew;
+
 	public static float kepler22SystemYawOffset;
 	public static float kepler22SystemPitchOffset;
 	public static float kepler47SystemYawOffset;
@@ -369,20 +376,21 @@ public class Config {
 		mercuryRocketTier = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mercury Rocket required", 4, "Changing this will change the Tier required to go to Mercury").getInt();
 		ceresRocketTier = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Ceres Rocket required", 4, "Changing this will change the Tier required to go to Ceres").getInt();
 
-
 		genVenusVolcanos = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanos on Venus", true, "Setting this option to false will disable & remove Volcanos from generating on Venus").getBoolean(true);
 		genUranusIgloos = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Setting this option to false will disable & remove Igloos from generating on Uranus").getBoolean(true);
 		genUranusIceSpikes = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Ice Spikes on Uranus", true, "Setting this option to false will disable & remove Ice Spikes from generating on Uranus").getBoolean(true);
 		genJupiterSkyFeature = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Sky Feature on Jupiter", true, "Setting this option to false will disable & remove the Sky Feature on Jupiter").getBoolean(true);
 		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Lighting & Lighting Effects on Jupiter", "Enable Client Fake Lighting Effects & Thunder sounds on Jupiter");
-		jupiterLightingClient = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Client Fake Lighting Effects & Thunder sounds on Jupiter", true, "Setting this option to false will disable & remove Fake Lighting Effects & Thunder sounds on Jupiter (CLIENT SIDE)").getBoolean(true);
-		jupiterLightingServer = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Server Real Lighting Bolts on Jupiter", true, "Setting this option to false will disable & remove Real Lighting Bolts on Jupiter (SERVER SIDE)").getBoolean(true);
-		
+		jupiterLightingClient = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Client Fake Lighting Effects & Thunder sounds on Jupiter", true,
+				"Setting this option to false will disable & remove Fake Lighting Effects & Thunder sounds on Jupiter (CLIENT SIDE)").getBoolean(true);
+		jupiterLightingServer = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Server Real Lighting Bolts on Jupiter", true, "Setting this option to false will disable & remove Real Lighting Bolts on Jupiter (SERVER SIDE)")
+				.getBoolean(true);
+
 		jupiterClouds = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Clouds on Jupiter", true, "Setting this option to false will disable & remove Clouds on Jupiter").getBoolean(true);
 		jupiterCloudsSpeed = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Clouds Speed on Jupiter", 3, "[range: 1 ~ 10, default: 3]").getInt();
-		if(jupiterCloudsSpeed > 5)
+		if (jupiterCloudsSpeed > 5)
 			jupiterCloudsSpeed = 5;
-		else if(jupiterCloudsSpeed < 1)
+		else if (jupiterCloudsSpeed < 1)
 			jupiterCloudsSpeed = 1;
 
 		customFog = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Custom Fog Effect on Jupiter, Uranus, Saturn, Neptune", true, "Setting this option to false will disable & remove Fog Effects on Jupiter, Uranus, Saturn, Neptune")
@@ -408,7 +416,8 @@ public class Config {
 		makemake = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Makemake", true, "Setting this option to false will remove Makemake").getBoolean(true);
 		kuiperBelt = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kuiper Belt", true, "Setting this option to false will remove Kuiper Belt").getBoolean(true);
 		keplerSolarSystems = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler SolarSystems", true, "Setting this option to false will remove all Kepler Solar Systems and their Planets/Moons!").getBoolean(true);
-		generateUnreachableMoons = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Unreachable moons on the Celestaial Selection Screen", true, "Setting this option to false will remove all unreachable moons added by ExtraPlanets, from showing on the Celestaial Selection Screen!").getBoolean(true);
+		generateUnreachableMoons = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Unreachable moons on the Celestaial Selection Screen", true,
+				"Setting this option to false will remove all unreachable moons added by ExtraPlanets, from showing on the Celestaial Selection Screen!").getBoolean(true);
 
 		kepler22b = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler 22b", true, "Setting this option to false will remove Kepler 22b & all the related items/block/tools/armour/space stations!").getBoolean(true);
 
@@ -604,6 +613,22 @@ public class Config {
 		extendedPlanetsCompatibility14Alpha = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable Basic Extended Planets Compatibility (v1.4 Alpha)", false,
 				"This option will disable & remove conflicting Planets/Moons/SpaceStations FOR THIS TO WORK PLEASE ENABLE THE 'enableExtraPlanetsCompatibility' in the ExtendedPlanets/base.cfg config file").getBoolean(false);
 
+		morePlanetsCompatibilityNew = config
+				.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable New More Planets Compatibility", false,
+						"Will tweak ExtraPlanets Planets/Moons, to allow them to work along side More Planets version of the same planets/moons! Will rename ExtraPlanets versions of doubled Planets/Moons to have 2.0 on the end. Example: Jupiter 2.0!")
+				.getBoolean(false);
+		galaxySpaceCompatibilityNew = config.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable New Galaxy Space Compatibility (v1.2.3 and above)", false,
+				"Will tweak ExtraPlanets Planets/Moons, to allow them to work along side GalaxySpace version of the same planets/moons! Will rename ExtraPlanets versions of doubled Planets/Moons to have 2.0 on the end. Example: Jupiter 2.0 & disable Custom Celestial Selection screen, NOTE: WILL CHANGE THE FOLLOWING DIMENSION IDS Iapetus & Titania TO -44 & -45")
+				.getBoolean(false);
+		extendedPlanetsCompatibility13AlphaNew = config
+				.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable New Extended Planets Compatibility (v1.3.1 Alpha)", false,
+						"Will tweak ExtraPlanets Planets/Moons, to allow them to work along side Extended Planets version of the same planets/moons! Will rename ExtraPlanets versions of doubled Planets/Moons to have 2.0 on the end. Example: Jupiter 2.0")
+				.getBoolean(false);
+		extendedPlanetsCompatibility14AlphaNew = config
+				.get(Constants.CONFIG_CATEGORY_MOD_COMPATIBILITY, "Enable New Extended Planets Compatibility (v1.4 Alpha)", false,
+						"Will tweak ExtraPlanets Planets/Moons, to allow them to work along side Extended Planets version of the same planets/moons! Will rename ExtraPlanets versions of doubled Planets/Moons to have 2.0 on the end. Example: Jupiter 2.0")
+				.getBoolean(false);
+
 		kepler22SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		kepler22SystemPitchOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler22 Planet Map Pitch Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
 		kepler47SystemYawOffset = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Kepler47 Planet Map Yaw Offset", 0.0, "[range: -1000 ~ 1000, default: 0]").getDouble();
@@ -674,8 +699,7 @@ public class Config {
 			jupiterSpaceStation = false;
 			plutoSpaceStation = false;
 			thermalPaddings = false;
-		} else if (morePlanetsCompatibilityAdv143)
-			morePlanetsCompatibilityAdv143 = false;
+		}
 
 		if (galaxySpaceCompatibility) {
 			pluto = false;
@@ -723,6 +747,56 @@ public class Config {
 			kepler22bID = -68;
 			rheaID = -69;
 			useCustomCelestialSelection = false;
+		}
+
+		if (morePlanetsCompatibilityNew) {
+			ExtraPlanets_Planets.plutoOverride = true;
+			ExtraPlanets_Planets.mercuryOverride = true;
+			ExtraPlanets_Planets.venusOverride = true;
+			ExtraPlanets_Planets.jupiterOverride = true;
+
+			ExtraPlanets_Moons.deimosOverride = true;
+			ExtraPlanets_Moons.phobosOverride = true;
+		}
+
+		if (galaxySpaceCompatibilityNew) {
+			ExtraPlanets_Planets.plutoOverride = true;
+			ExtraPlanets_Planets.mercuryOverride = true;
+			ExtraPlanets_Planets.venusOverride = true;
+			ExtraPlanets_Planets.ceresOverride = true;
+			ExtraPlanets_Planets.jupiterOverride = true;
+
+			ExtraPlanets_Moons.titanOverride = true;
+			ExtraPlanets_Moons.callistoOverride = true;
+			ExtraPlanets_Moons.ioOverride = true;
+			ExtraPlanets_Moons.europaOverride = true;
+			ExtraPlanets_Moons.phobosOverride = true;
+			ExtraPlanets_Moons.ganymedeOverride = true;
+
+			kuiperBelt = false;
+			if (kepler47SystemYawOffset == 0)
+				kepler47SystemYawOffset = 40.0F;
+			iapetusID = -44;
+			titaniaID = -45;
+			useCustomCelestialSelection = false;
+		}
+
+		if (extendedPlanetsCompatibility13AlphaNew) {
+			ExtraPlanets_Planets.neptuneOverride = true;
+			ExtraPlanets_Planets.uranusOverride = true;
+			ExtraPlanets_Planets.plutoOverride = true;
+			ExtraPlanets_Planets.ceresOverride = true;
+			ExtraPlanets_Planets.jupiterOverride = true;
+			ExtraPlanets_Planets.saturnOverride = true;
+
+			ExtraPlanets_Moons.ioOverride = true;
+			ExtraPlanets_Moons.titaniaOverride = true;
+			ExtraPlanets_Moons.titanOverride = true;
+		}
+
+		if (extendedPlanetsCompatibility14AlphaNew) {
+			ExtraPlanets_Planets.plutoOverride = true;
+			ExtraPlanets_Planets.ceresOverride = true;
 		}
 	}
 

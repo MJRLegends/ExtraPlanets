@@ -61,6 +61,18 @@ public class ExtraPlanets_Planets {
 	public static Planet kepler69b;
 	public static Planet kepler69c;
 
+	public static boolean mercuryOverride;
+	public static boolean venusOverride;
+	public static boolean ceresOverride;
+	public static boolean jupiterOverride;
+	public static boolean saturnOverride;
+	public static boolean uranusOverride;
+	public static boolean neptuneOverride;
+	public static boolean plutoOverride;
+	public static boolean erisOverrides;
+
+	public static boolean kepler22bOverride;
+
 	public static void init() {
 		initializePlanets();
 		registerPlanets();
@@ -69,7 +81,7 @@ public class ExtraPlanets_Planets {
 
 	private static void initializePlanets() {
 		if (Config.mercury) {
-			mercury = new Planet("Mercury").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			mercury = new Planet(mercuryOverride ? "MercuryEP" : "Mercury").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			mercury.setTierRequired(Config.mercuryRocketTier);
 			mercury.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			mercury.setPhaseShift(1.45F);
@@ -80,7 +92,7 @@ public class ExtraPlanets_Planets {
 			mercury.setDimensionInfo(Config.mercuryID, WorldProviderMercury.class);
 		}
 		if (Config.venus) {
-			venus = new Planet("Venus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			venus = new Planet(venusOverride ? "VenusEP" : "Venus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			venus.setTierRequired(3);
 			venus.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			venus.setPhaseShift(2.0F);
@@ -91,7 +103,7 @@ public class ExtraPlanets_Planets {
 			venus.setDimensionInfo(Config.venusID, WorldProviderVenus.class);
 		}
 		if (Config.ceres) {
-			ceres = new Planet("Ceres").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			ceres = new Planet(ceresOverride ? "CeresEp" : "Ceres").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			ceres.setTierRequired(Config.ceresRocketTier);
 			ceres.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			ceres.setPhaseShift(Constants.floatPI);
@@ -102,7 +114,7 @@ public class ExtraPlanets_Planets {
 			ceres.setDimensionInfo(Config.ceresID, WorldProviderCeres.class);
 		}
 		if (Config.jupiter) {
-			jupiter = new Planet("Jupiter").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			jupiter = new Planet(jupiterOverride ? "JupiterEP" : "Jupiter").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			jupiter.setTierRequired(4);
 			jupiter.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			jupiter.setPhaseShift(Constants.floatPI);
@@ -113,7 +125,7 @@ public class ExtraPlanets_Planets {
 			jupiter.setDimensionInfo(Config.jupiterID, WorldProviderJupiter.class);
 		}
 		if (Config.saturn) {
-			saturn = new Planet("Saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			saturn = new Planet(saturnOverride ? "SaturnEP" : "Saturn").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			if (Config.morePlanetsCompatibilityAdv143)
 				saturn.setTierRequired(4);
 			else
@@ -127,7 +139,7 @@ public class ExtraPlanets_Planets {
 			saturn.setDimensionInfo(Config.saturnID, WorldProviderSaturn.class);
 		}
 		if (Config.uranus) {
-			uranus = new Planet("Uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			uranus = new Planet(uranusOverride ? "UranusEP" : "Uranus").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			if (Config.morePlanetsCompatibilityAdv143)
 				uranus.setTierRequired(4);
 			else
@@ -141,7 +153,7 @@ public class ExtraPlanets_Planets {
 			uranus.setDimensionInfo(Config.uranusID, WorldProviderUranus.class);
 		}
 		if (Config.neptune) {
-			neptune = new Planet("Neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			neptune = new Planet(neptuneOverride ? "NeptuneEP" : "Neptune").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			if (Config.morePlanetsCompatibilityAdv143)
 				neptune.setTierRequired(5);
 			else
@@ -155,7 +167,7 @@ public class ExtraPlanets_Planets {
 			neptune.setDimensionInfo(Config.neptuneID, WorldProviderNeptune.class);
 		}
 		if (Config.pluto) {
-			pluto = new Planet("Pluto").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			pluto = new Planet(plutoOverride ? "PlutoEP" : "Pluto").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			pluto.setTierRequired(8);
 			pluto.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			pluto.setPhaseShift(2.0F);
@@ -166,7 +178,7 @@ public class ExtraPlanets_Planets {
 			pluto.setDimensionInfo(Config.plutoID, WorldProviderPluto.class);
 		}
 		if (Config.eris) {
-			eris = new Planet("Eris").setParentSolarSystem(GalacticraftCore.solarSystemSol);
+			eris = new Planet(erisOverrides ? "ErisEP" : "Eris").setParentSolarSystem(GalacticraftCore.solarSystemSol);
 			if (Config.morePlanetsCompatibilityAdv143)
 				eris.setTierRequired(6);
 			else

@@ -1569,8 +1569,11 @@ tile.jupiterDungeonBrickStoneStairs.name=Escalier en mur de donjon de Jupiter
 tile.saturnDungeonBrickStoneStairs.name=Escalier en mur de donjon de Saturne
 tile.uranusDungeonBrickStoneStairs.name=Escalier en mur de donjon d'Uranus
 tile.neptuneDungeonBrickStoneStairs.name=Escalier en mur de donjon de Neptune
+
 #Planets
 planet.Venus=Vénus
+
+planet.VenusEP=Venus 2.0 ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.slime_block.name=Bloc de slime

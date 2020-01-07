@@ -55,6 +55,19 @@ public class ExtraPlanets_Moons {
 	public static Moon nix;
 	public static Moon hydra;
 	public static Moon dysnomia;
+	
+	public static boolean tritonOverride;
+	public static boolean callistoOverride;
+	public static boolean europaOverride;
+	public static boolean ganymedeOverride;
+	public static boolean ioOverride;
+	public static boolean deimosOverride;
+	public static boolean phobosOverride;
+	public static boolean iapetusOverride;
+	public static boolean rheaOverride;
+	public static boolean titanOverride;
+	public static boolean oberonOverride;
+	public static boolean titaniaOverride;
 
 	public static void init() {
 		initializeMoons();
@@ -89,7 +102,7 @@ public class ExtraPlanets_Moons {
 
 	private static void initializeMoons() {
 		if (Config.triton) {
-			triton = new Moon("triton").setParentPlanet(ExtraPlanets_Planets.neptune);
+			triton = new Moon(tritonOverride ? "tritonEP" : "triton").setParentPlanet(ExtraPlanets_Planets.neptune);
 			triton.setPhaseShift(2.436F);
 			triton.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			triton.setRelativeOrbitTime(75.0F);
@@ -100,7 +113,7 @@ public class ExtraPlanets_Moons {
 			triton.setDimensionInfo(Config.tritonID, WorldProviderTriton.class);
 		}
 		if (Config.phobos) {
-			phobos = new Moon("phobos").setParentPlanet(MarsModule.planetMars);
+			phobos = new Moon(phobosOverride ? "phobosEP" : "phobos").setParentPlanet(MarsModule.planetMars);
 			phobos.setPhaseShift(2.436F);
 			phobos.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			phobos.setRelativeOrbitTime(25.5785754286855436F);
@@ -111,7 +124,7 @@ public class ExtraPlanets_Moons {
 			phobos.setDimensionInfo(Config.phobosID, WorldProviderPhobos.class);
 		}
 		if (Config.deimos) {
-			deimos = new Moon("deimos").setParentPlanet(MarsModule.planetMars);
+			deimos = new Moon(deimosOverride ? "deimosEP" : "deimos").setParentPlanet(MarsModule.planetMars);
 			deimos.setPhaseShift(2.436F);
 			deimos.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
 			deimos.setRelativeOrbitTime(57.415456589452485548F);
@@ -122,7 +135,7 @@ public class ExtraPlanets_Moons {
 			deimos.setDimensionInfo(Config.deimosID, WorldProviderDeimos.class);
 		}
 		if (Config.io) {
-			io = new Moon("io").setParentPlanet(ExtraPlanets_Planets.jupiter);
+			io = new Moon(ioOverride ? "ioEP" : "io").setParentPlanet(ExtraPlanets_Planets.jupiter);
 			io.setPhaseShift(2.436F);
 			io.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			io.setRelativeOrbitTime(43.59976842345364536F);
@@ -133,7 +146,7 @@ public class ExtraPlanets_Moons {
 			io.setDimensionInfo(Config.ioID, WorldProviderIo.class);
 		}
 		if (Config.europa) {
-			europa = new Moon("europa").setParentPlanet(ExtraPlanets_Planets.jupiter);
+			europa = new Moon(europaOverride ? "europaEP" : "europa").setParentPlanet(ExtraPlanets_Planets.jupiter);
 			europa.setPhaseShift(2.436F);
 			europa.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
 			europa.setRelativeOrbitTime(87.55354354345685345F);
@@ -145,7 +158,7 @@ public class ExtraPlanets_Moons {
 		}
 
 		if (Config.ganymede) {
-			ganymede = new Moon("ganymede").setParentPlanet(ExtraPlanets_Planets.jupiter);
+			ganymede = new Moon(ganymedeOverride ? "ganymedeEP" : "ganymede").setParentPlanet(ExtraPlanets_Planets.jupiter);
 			ganymede.setPhaseShift(2.436F);
 			ganymede.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F));
 			ganymede.setRelativeOrbitTime(123.252594612756974F);
@@ -156,7 +169,7 @@ public class ExtraPlanets_Moons {
 			ganymede.setDimensionInfo(Config.ganymedeID, WorldProviderGanymede.class);
 		}
 		if (Config.callisto) {
-			callisto = new Moon("callisto").setParentPlanet(ExtraPlanets_Planets.jupiter);
+			callisto = new Moon(callistoOverride ? "callistoEP" : "callisto").setParentPlanet(ExtraPlanets_Planets.jupiter);
 			callisto.setPhaseShift(2.436F);
 			callisto.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(36F, 36F));
 			callisto.setRelativeOrbitTime(157.84524858485412315F);
@@ -167,7 +180,7 @@ public class ExtraPlanets_Moons {
 			callisto.setDimensionInfo(Config.callistoID, WorldProviderCallisto.class);
 		}
 		if (Config.rhea) {
-			rhea = new Moon("rhea").setParentPlanet(ExtraPlanets_Planets.saturn);
+			rhea = new Moon(rheaOverride ? "rheaEP" : "rhea").setParentPlanet(ExtraPlanets_Planets.saturn);
 			rhea.setPhaseShift(1.45F);
 			rhea.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			rhea.setRelativeOrbitTime(42.74914745741246F);
@@ -178,7 +191,7 @@ public class ExtraPlanets_Moons {
 			rhea.setDimensionInfo(Config.rheaID, WorldProviderRhea.class);
 		}
 		if (Config.titan) {
-			titan = new Moon("titan").setParentPlanet(ExtraPlanets_Planets.saturn);
+			titan = new Moon(titanOverride ? "titanEP" : "titan").setParentPlanet(ExtraPlanets_Planets.saturn);
 			titan.setPhaseShift(1.45F);
 			titan.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
 			titan.setRelativeOrbitTime(71.452415154621642F);
@@ -189,7 +202,7 @@ public class ExtraPlanets_Moons {
 			titan.setDimensionInfo(Config.titanID, WorldProviderTitan.class);
 		}
 		if (Config.oberon) {
-			oberon = new Moon("oberon").setParentPlanet(ExtraPlanets_Planets.uranus);
+			oberon = new Moon(oberonOverride ? "oberonEP" : "oberon").setParentPlanet(ExtraPlanets_Planets.uranus);
 			oberon.setPhaseShift(1.45F);
 			oberon.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
 			oberon.setRelativeOrbitTime(68.5411941552618F);
@@ -200,7 +213,7 @@ public class ExtraPlanets_Moons {
 			oberon.setDimensionInfo(Config.oberonID, WorldProviderOberon.class);
 		}
 		if (Config.titania) {
-			titania = new Moon("titania").setParentPlanet(ExtraPlanets_Planets.uranus);
+			titania = new Moon(titaniaOverride ? "titaniaEP" : "titania").setParentPlanet(ExtraPlanets_Planets.uranus);
 			titania.setPhaseShift(1.45F);
 			titania.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F));
 			titania.setRelativeOrbitTime(68.5411941552618F);
@@ -211,7 +224,7 @@ public class ExtraPlanets_Moons {
 			titania.setDimensionInfo(Config.titaniaID, WorldProviderTitania.class);
 		}
 		if (Config.iapetus) {
-			iapetus = new Moon("iapetus").setParentPlanet(ExtraPlanets_Planets.saturn);
+			iapetus = new Moon(iapetusOverride ? "iapetusEP" : "iapetus").setParentPlanet(ExtraPlanets_Planets.saturn);
 			iapetus.setPhaseShift(1.45F);
 			iapetus.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F));
 			iapetus.setRelativeOrbitTime(68.5411941552618F);

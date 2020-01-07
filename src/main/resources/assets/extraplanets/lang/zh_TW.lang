@@ -1574,6 +1574,8 @@ tile.neptuneDungeonBrickStoneStairs.name=海王星地牢磚階梯
 #Planets
 planet.Venus=金星
 
+planet.VenusEP=Venus 2.0 ##NEEDS TRANSLATE##
+
 #Other Blocks
 tile.slime_block.name=史萊姆方塊
 tile.deimos.ore_lead.name=火衛二鉛礦

@@ -1574,6 +1574,8 @@ tile.neptuneVerließBrickStoneStairs.name=Neptun Verließziegeltreppen
 #Planets
 planet.Venus=Venus
 
+planet.VenusEP=Venus 2.0 ##NEEDS TRANSLATE##
+
 #Other Blocks
 tile.slime_block.name=Schleimblock
 tile.deimos.ore_lead.name=Deimos Bleierz 
