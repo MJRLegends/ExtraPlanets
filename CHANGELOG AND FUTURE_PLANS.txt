@@ -5,6 +5,15 @@
 
 
 ===========================================Released Updates===========================================
+v0.6.1
+*Updated ru_RU.lang (Thanks to Smollet777)
+*Updated ru_RU.lang (Thanks to Romz24)
+*Updated zh_CN.lang (Thanks to mcBegins2Snow)
+*Fixed issue #510
+*Added back durability bar on Space Suit & made Space Suit Corrosion Resistant (For GC's Venus)
+*Added a model for the Jetpack on the Space Suit
+*Fdded Flame particles for the Jetpack on the Space Suit
+
 v0.6.0
 *Fixed issue #499
 *Fixed issue #487
