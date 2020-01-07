@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v0.9.7
+*Fixed issue #516 - List of Armour to be considered config not working when more than one entry made
+*Updated ru_RU.lang (Thanks to Smollet777)
+*Updated lang files to match MC 1.7.10
+*Added missing Eris 2.0 language localization
+*Fixed Advanced & Ultimate Fuel Loaders having the wrong texture for fuel input
+
 v0.9.6
 *Fixed issue #487
 *Updated ru_RU.lang (Thanks to Smollet777)
