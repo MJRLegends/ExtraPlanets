@@ -15,7 +15,7 @@ public abstract class JetpackArmorBase extends ElectricArmorBase implements IJet
 
 	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
-		if (stack.hasTagCompound() && stack.getTagCompound().getBoolean("active") && this.getElectricityStored(stack) > 1000 && this.getElectricityStored(stack) >= this.powerPerTick()) {
+		if (stack.hasTagCompound() && stack.getTagCompound().getBoolean("active") && this.getElectricityStored(stack) >= this.powerPerTick()) {
 			useJetPack(player);
 			if (player instanceof EntityPlayerMP && !((EntityPlayerMP) player).capabilities.isCreativeMode)
 				if ((player.ticksExisted - 1) % 20 == 0)

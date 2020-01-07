@@ -8,6 +8,7 @@ import ic2.api.item.IElectricItem;
 import ic2.api.item.IElectricItemManager;
 import ic2.api.item.ISpecialElectricItem;
 import micdoodle8.mods.galacticraft.api.item.ElectricItemHelper;
+import micdoodle8.mods.galacticraft.api.item.IArmorCorrosionResistant;
 import micdoodle8.mods.galacticraft.api.item.IItemElectric;
 import micdoodle8.mods.galacticraft.api.item.IItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.EnergyConfigHandler;
@@ -31,7 +32,7 @@ import net.minecraftforge.fml.common.Optional;
 import net.minecraftforge.fml.common.Optional.InterfaceList;
 
 @InterfaceList({ @Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem"), @Optional.Interface(modid = "ic2", iface = "ic2.api.item.ISpecialElectricItem") })
-public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor, IElectricItem, ISpecialElectricItem {
+public abstract class ElectricArmorBase extends ItemArmor implements IItemElectricBase, IItemElectric, ISpecialArmor, IElectricItem, ISpecialElectricItem, IArmorCorrosionResistant {
 
 	private static Object itemManagerIC2;
 	public float transferMax = 200;
@@ -49,12 +50,6 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	}
 
 	@Override
-	public void setDamage(ItemStack stack, int damage) {
-		if (damage != stack.getMaxDamage() - 1)
-			super.setDamage(stack, damage);
-	}
-
-	@Override
 	public boolean isItemTool(ItemStack stack) {
 		return false;
 	}
@@ -66,7 +61,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 
 	@Override
 	public boolean showDurabilityBar(ItemStack stack) {
-		return false;
+		return true;
 	}
 
 	@Override
@@ -141,12 +136,12 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		}
 
 		float electricityStored = Math.max(Math.min(joules, this.getMaxElectricityStored(itemStack)), 0);
-		if (itemStack.getTagCompound().hasKey("electricity")) {
+		if (joules > 0F || itemStack.getTagCompound().hasKey("electricity")) {
 			itemStack.getTagCompound().setFloat("electricity", joules);
 		}
 
 		/** Sets the damage as a percentage to render the bar properly. */
-		itemStack.setItemDamage(DAMAGE_RANGE - (int) (joules / this.getMaxElectricityStored(itemStack) * DAMAGE_RANGE));
+		itemStack.setItemDamage(DAMAGE_RANGE - (int) (electricityStored / this.getMaxElectricityStored(itemStack) * DAMAGE_RANGE));
 	}
 
 	@Override
