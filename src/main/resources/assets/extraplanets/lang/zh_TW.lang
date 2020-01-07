@@ -1439,7 +1439,7 @@ achievement.craft_rocket_10.desc=製作十階火箭
 
 #Liquids/Fluid
 tile.glowstone.name=熒石水
-tile.magma.name=岩漿水
+tile.magma_block.name=岩漿水
 tile.nitrogen.name=液態氮
 tile.frozen_water.name=冰凍水
 tile.salt.name=液態結晶水

@@ -1439,7 +1439,7 @@ achievement.craft_rocket_10.desc=Craft Tier 10 Rocket ##NEEDS TRANSLATE##
 
 #Liquids/Fluid
 tile.glowstone.name=Tekutý světlit
-tile.magma.name=Tekutá magma
+tile.magma_block.name=Tekutá magma
 tile.nitrogen.name=Tekutý dusík
 tile.frozen_water.name=Zmrzlá voda
 tile.salt.name=Zmrzlá sůl
