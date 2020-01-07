@@ -119,7 +119,7 @@ public class WorldProviderEris extends WorldProviderSpace implements IGalacticra
 
 	@Override
 	public boolean canSpaceshipTierPass(int tier) {
-		return tier >= 9;
+		return tier >= (Config.morePlanetsCompatibility ? 8 : 9);
 	}
 
 	@Override

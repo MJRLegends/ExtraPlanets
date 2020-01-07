@@ -170,7 +170,7 @@ public class ExtraPlanets_Planets {
 			if (Config.morePlanetsCompatibilityAdv143)
 				eris.setTierRequired(6);
 			else
-				eris.setTierRequired(9);
+				eris.setTierRequired(Config.morePlanetsCompatibility ? 8 : 9);
 			eris.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			eris.setPhaseShift(1.0F);
 			eris.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.50F + Config.erisDistanceOffset, 3.50F + Config.erisDistanceOffset));
@@ -184,7 +184,7 @@ public class ExtraPlanets_Planets {
 			if (Config.morePlanetsCompatibilityAdv143)
 				kepler22b.setTierRequired(7);
 			else
-				kepler22b.setTierRequired(10);
+				kepler22b.setTierRequired(Config.morePlanetsCompatibility ? 8 : 10);
 			kepler22b.setRingColorRGB(0.1F, 0.9F, 0.6F);
 			kepler22b.setPhaseShift(1.45F);
 			kepler22b.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(0.5F, 0.5F));
@@ -194,6 +194,7 @@ public class ExtraPlanets_Planets {
 			kepler22b.setDimensionInfo(Config.kepler22bID, WorldProviderKepler22b.class);
 		}
 	}
+
 	public static void initializeUnReachablePlanets() {
 		if (Config.kuiperBelt) {
 			kuiperBelt = RegisterHelper.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
