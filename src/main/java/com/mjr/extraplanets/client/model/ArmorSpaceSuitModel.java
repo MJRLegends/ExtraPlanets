@@ -6,9 +6,11 @@ import com.google.common.base.Function;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.items.armor.bases.JetpackArmorBase;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.ModelUtilities;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
@@ -39,6 +41,8 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 	public static OBJModel.OBJBakedModel armourModelRightBoot;
 	public static OBJModel.OBJBakedModel armourModelLeftLegPipes;
 	public static OBJModel.OBJBakedModel armourModelRightLegPipes;
+	public static OBJModel.OBJBakedModel armourModelJetpackPart1;
+	public static OBJModel.OBJBakedModel armourModelJetpackPart2;
 
 	private final int partType;
 
@@ -100,6 +104,10 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 				armourModelLeftBoot = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("left_boot"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
 				armourModelRightBoot = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("right_boot"), false), DefaultVertexFormats.ITEM, spriteFunction);
+				
+				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "jetpack.obj"));
+				armourModelJetpackPart1 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("frame", ""), false), DefaultVertexFormats.ITEM, spriteFunction);
+				armourModelJetpackPart2 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("engine_skirt_left","engine_skirt_right", "engine_shirt_left", "tank_left_1", "tank_left_2", "tank_right_1", "tank_right_2"), false), DefaultVertexFormats.ITEM, spriteFunction);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -141,6 +149,14 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 			ModelUtilities.drawBakedModel(armourModelBodyTank2);
 			MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_blue_textured.png"));
 			ModelUtilities.drawBakedModel(armourModelBodyTank3);
+			if (Minecraft.getMinecraft().player.inventory.armorInventory.get(2).getItem() instanceof JetpackArmorBase) {
+				MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_dark_grey.png"));
+				GL11.glScalef(0.9F, 0.9F, 0.9F);
+				GL11.glTranslatef(0.01F, 0.9F, 0.45F);
+				ModelUtilities.drawBakedModel(armourModelJetpackPart1);
+				MCUtilities.getMinecraft().renderEngine.bindTexture(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/model/blank_rocket_textured.png"));
+				ModelUtilities.drawBakedModel(armourModelJetpackPart2);
+			}
 		}
 	}
 

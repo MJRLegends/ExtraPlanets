@@ -1,6 +1,7 @@
 package com.mjr.extraplanets.items.armor.bases;
 
 import com.mjr.extraplanets.api.item.IJetpackArmour;
+import com.mjr.extraplanets.client.model.SpaceSuitJetPackFlame;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -20,6 +21,9 @@ public abstract class JetpackArmorBase extends ElectricArmorBase implements IJet
 			if (player instanceof EntityPlayerMP && !((EntityPlayerMP) player).capabilities.isCreativeMode)
 				if ((player.ticksExisted - 1) % 20 == 0)
 					this.discharge(stack, this.powerPerTick(), true);
+			} else if (world.isRemote) {
+				SpaceSuitJetPackFlame.spawnFlames(world, player, stack);
+			}
 		}
 	}
 
