@@ -1575,6 +1575,8 @@ tile.neptuneDungeonBrickStoneStairs.name=Ступеньки из кирпича 
 #Planets
 planet.Venus=Венера
 
+planet.VenusEP=Венера 2.0
+
 #Other Blocks
 tile.slime_block.name=Слизневый блок
 tile.deimos.ore_lead.name=Свинцовая руда Деймоса
