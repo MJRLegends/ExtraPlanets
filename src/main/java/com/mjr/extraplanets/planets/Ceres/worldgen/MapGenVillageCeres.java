@@ -6,15 +6,7 @@ import java.util.Random;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillageField;
-import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillageField2;
-import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillageHouse;
-import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillagePathGen;
-import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillageRoadPiece;
-import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillageStartPiece;
-import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillageTorch;
-import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureComponentVillageWoodHut;
-import com.mjr.extraplanets.planets.Ceres.worldgen.village.StructureVillageStartCeres;
+import com.mjr.extraplanets.planets.Ceres.worldgen.village.*;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 import net.minecraft.util.math.BlockPos;
