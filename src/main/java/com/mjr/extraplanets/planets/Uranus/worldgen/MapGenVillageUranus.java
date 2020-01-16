@@ -7,15 +7,7 @@ import java.util.Random;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.planets.Uranus.worldgen.biomes.BiomeGenUranus;
-import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageField;
-import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageField2;
-import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageHouse;
-import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillagePathGen;
-import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageRoadPiece;
-import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageStartPiece;
-import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageTorch;
-import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureComponentVillageWoodHut;
-import com.mjr.extraplanets.planets.Uranus.worldgen.village.StructureVillageStartUranus;
+import com.mjr.extraplanets.planets.Uranus.worldgen.village.*;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 import net.minecraft.world.biome.Biome;
