@@ -3,11 +3,7 @@ package com.mjr.extraplanets.items.tools;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.mjrlegendslib.item.BasicAxe;
-import com.mjr.mjrlegendslib.item.BasicHoe;
-import com.mjr.mjrlegendslib.item.BasicPickaxe;
-import com.mjr.mjrlegendslib.item.BasicShovel;
-import com.mjr.mjrlegendslib.item.BasicSword;
+import com.mjr.mjrlegendslib.item.*;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;

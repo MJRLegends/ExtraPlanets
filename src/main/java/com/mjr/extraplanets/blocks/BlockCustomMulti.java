@@ -229,15 +229,7 @@ public class BlockCustomMulti extends BlockAdvanced implements IPartialSealableB
 
 	@Override
 	public IBlockState getActualState(IBlockState state, IBlockAccess world, BlockPos pos) {
-		EnumBlockMultiType type = state.getValue(MULTI_TYPE);
-		int renderType = 0;
-
-		switch (type) {
-		default:
-			break;
-		}
-
-		return state.withProperty(RENDER_TYPE, renderType);
+		return state.withProperty(RENDER_TYPE, 0);
 	}
 
 	@Override

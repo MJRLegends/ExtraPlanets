@@ -7,24 +7,7 @@ import com.mjr.extraplanets.itemBlocks.machines.ItemBlockAdvancedOxygenCompresso
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockBasicDecontaminationUnit;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockSolar;
 import com.mjr.extraplanets.itemBlocks.machines.ItemBlockUltimateOxygenCompressor;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedFuelLoader;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedOxygenCompressor;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedOxygenDecompressor;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityAdvancedRefinery;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicChemicalInjector;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicCrystallizer;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecontaminationUnit;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDecrystallizer;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicDensifier;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicPurifier;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicSmasher;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityBasicSolarEvaporationChamber;
-import com.mjr.extraplanets.tileEntities.machines.TileEntitySolar;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateFuelLoader;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenCompressor;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateOxygenDecompressor;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityUltimateRefinery;
-import com.mjr.extraplanets.tileEntities.machines.TileEntityVehicleChanger;
+import com.mjr.extraplanets.tileEntities.machines.*;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 import micdoodle8.mods.galacticraft.core.items.ItemBlockDesc;

@@ -6,15 +6,7 @@ import java.util.Random;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageField;
-import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageField2;
-import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageHouse;
-import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillagePathGen;
-import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageRoadPiece;
-import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageStartPiece;
-import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageTorch;
-import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureComponentVillageWoodHut;
-import com.mjr.extraplanets.planets.Pluto.worldgen.village.StructureVillageStartPluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.village.*;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 import net.minecraft.util.math.BlockPos;

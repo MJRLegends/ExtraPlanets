@@ -3,13 +3,7 @@ package com.mjr.extraplanets.compatibility.crafttweaker;
 import java.util.HashMap;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
-import com.mjr.extraplanets.recipes.Tier10RocketRecipes;
-import com.mjr.extraplanets.recipes.Tier4RocketRecipes;
-import com.mjr.extraplanets.recipes.Tier5RocketRecipes;
-import com.mjr.extraplanets.recipes.Tier6RocketRecipes;
-import com.mjr.extraplanets.recipes.Tier7RocketRecipes;
-import com.mjr.extraplanets.recipes.Tier8RocketRecipes;
-import com.mjr.extraplanets.recipes.Tier9RocketRecipes;
+import com.mjr.extraplanets.recipes.*;
 
 import crafttweaker.CraftTweakerAPI;
 import crafttweaker.IAction;

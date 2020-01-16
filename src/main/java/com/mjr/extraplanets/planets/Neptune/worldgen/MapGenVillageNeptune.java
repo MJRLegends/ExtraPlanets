@@ -7,15 +7,7 @@ import java.util.Random;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.planets.Neptune.worldgen.biomes.BiomeGenNeptune;
-import com.mjr.extraplanets.planets.Neptune.worldgen.village.StructureComponentVillageField;
-import com.mjr.extraplanets.planets.Neptune.worldgen.village.StructureComponentVillageField2;
-import com.mjr.extraplanets.planets.Neptune.worldgen.village.StructureComponentVillageHouse;
-import com.mjr.extraplanets.planets.Neptune.worldgen.village.StructureComponentVillagePathGen;
-import com.mjr.extraplanets.planets.Neptune.worldgen.village.StructureComponentVillageRoadPiece;
-import com.mjr.extraplanets.planets.Neptune.worldgen.village.StructureComponentVillageStartPiece;
-import com.mjr.extraplanets.planets.Neptune.worldgen.village.StructureComponentVillageTorch;
-import com.mjr.extraplanets.planets.Neptune.worldgen.village.StructureComponentVillageWoodHut;
-import com.mjr.extraplanets.planets.Neptune.worldgen.village.StructureVillageStartNeptune;
+import com.mjr.extraplanets.planets.Neptune.worldgen.village.*;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 import net.minecraft.util.math.BlockPos;

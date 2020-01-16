@@ -10,22 +10,7 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKeple
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bDungeons;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bFlowers;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
-import com.mjr.extraplanets.world.features.WorldGenBigBlueTree;
-import com.mjr.extraplanets.world.features.WorldGenBigPurpleTree;
-import com.mjr.extraplanets.world.features.WorldGenBigRedTree;
-import com.mjr.extraplanets.world.features.WorldGenBlueHut;
-import com.mjr.extraplanets.world.features.WorldGenBlueTower;
-import com.mjr.extraplanets.world.features.WorldGenBrownHut;
-import com.mjr.extraplanets.world.features.WorldGenCandyCaneType1;
-import com.mjr.extraplanets.world.features.WorldGenCandyCaneType2;
-import com.mjr.extraplanets.world.features.WorldGenCandyCaneType3;
-import com.mjr.extraplanets.world.features.WorldGenCookieRocksType1;
-import com.mjr.extraplanets.world.features.WorldGenGreenHut;
-import com.mjr.extraplanets.world.features.WorldGenLogTree;
-import com.mjr.extraplanets.world.features.WorldGenPurpleHut;
-import com.mjr.extraplanets.world.features.WorldGenRedHut;
-import com.mjr.extraplanets.world.features.WorldGenWhiteSugerCane;
-import com.mjr.extraplanets.world.features.WorldGenYellowHut;
+import com.mjr.extraplanets.world.features.*;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 import com.mjr.mjrlegendslib.world.features.WorldGenSphere;
 
