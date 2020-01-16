@@ -2,13 +2,7 @@ package com.mjr.extraplanets.handlers;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.ExtraPlanets_Achievements;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedFireBatBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedGhastBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedGiantZombieBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedIceSlimeBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedMagmaCubeBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedSnowmanBoss;
-import com.mjr.extraplanets.entities.bosses.EntityEvolvedSpacemanBoss;
+import com.mjr.extraplanets.entities.bosses.*;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;

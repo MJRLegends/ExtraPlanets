@@ -7,15 +7,7 @@ import java.util.Random;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.planets.Saturn.worldgen.biomes.BiomeGenSaturn;
-import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillageField;
-import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillageField2;
-import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillageHouse;
-import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillagePathGen;
-import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillageRoadPiece;
-import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillageStartPiece;
-import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillageTorch;
-import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureComponentVillageWoodHut;
-import com.mjr.extraplanets.planets.Saturn.worldgen.village.StructureVillageStartSaturn;
+import com.mjr.extraplanets.planets.Saturn.worldgen.village.*;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 import net.minecraft.world.biome.BiomeGenBase;

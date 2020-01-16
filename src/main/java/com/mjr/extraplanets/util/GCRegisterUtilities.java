@@ -4,11 +4,7 @@ import java.util.ArrayList;
 
 import com.mjr.extraplanets.Constants;
 
-import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
-import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
-import micdoodle8.mods.galacticraft.api.galaxies.Moon;
-import micdoodle8.mods.galacticraft.api.galaxies.Planet;
-import micdoodle8.mods.galacticraft.api.galaxies.SolarSystem;
+import micdoodle8.mods.galacticraft.api.galaxies.*;
 import net.minecraft.util.ResourceLocation;
 
 public class GCRegisterUtilities {

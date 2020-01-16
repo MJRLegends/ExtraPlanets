@@ -6,15 +6,7 @@ import java.util.Random;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
-import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillageField;
-import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillageField2;
-import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillageHouse;
-import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillagePathGen;
-import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillageRoadPiece;
-import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillageStartPiece;
-import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillageTorch;
-import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureComponentVillageWoodHut;
-import com.mjr.extraplanets.planets.Eris.worldgen.village.StructureVillageStartEris;
+import com.mjr.extraplanets.planets.Eris.worldgen.village.*;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 import net.minecraft.world.biome.BiomeGenBase;
