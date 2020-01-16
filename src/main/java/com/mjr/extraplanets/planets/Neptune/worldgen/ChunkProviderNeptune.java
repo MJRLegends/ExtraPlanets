@@ -7,12 +7,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.MapGenDungeon;
-import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.RoomBossNeptune;
-import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.RoomChestsNeptune;
-import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.RoomEmptyNeptune;
-import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.RoomSpawnerNeptune;
-import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.RoomTreasureNeptune;
+import com.mjr.extraplanets.planets.Neptune.worldgen.dungeon.*;
 import com.mjr.extraplanets.planets.Neptune.worldgen.village.MapGenVillageNeptune;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 

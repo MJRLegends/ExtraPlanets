@@ -8,17 +8,7 @@ import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bFlowers;
 import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22bTree;
 import com.mjr.extraplanets.util.WorldGenHelper;
-import com.mjr.extraplanets.world.features.WorldGenBigBlueTree;
-import com.mjr.extraplanets.world.features.WorldGenBigPurpleTree;
-import com.mjr.extraplanets.world.features.WorldGenBigRedTree;
-import com.mjr.extraplanets.world.features.WorldGenBlueHut;
-import com.mjr.extraplanets.world.features.WorldGenBlueTower;
-import com.mjr.extraplanets.world.features.WorldGenBrownHut;
-import com.mjr.extraplanets.world.features.WorldGenGreenHut;
-import com.mjr.extraplanets.world.features.WorldGenLogTree;
-import com.mjr.extraplanets.world.features.WorldGenPurpleHut;
-import com.mjr.extraplanets.world.features.WorldGenRedHut;
-import com.mjr.extraplanets.world.features.WorldGenYellowHut;
+import com.mjr.extraplanets.world.features.*;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;

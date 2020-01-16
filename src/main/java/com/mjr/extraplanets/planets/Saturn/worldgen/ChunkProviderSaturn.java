@@ -7,12 +7,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.MapGenDungeon;
-import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.RoomBossSaturn;
-import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.RoomChestsSaturn;
-import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.RoomEmptySaturn;
-import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.RoomSpawnerSaturn;
-import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.RoomTreasureSaturn;
+import com.mjr.extraplanets.planets.Saturn.worldgen.dungeon.*;
 import com.mjr.extraplanets.planets.Saturn.worldgen.village.MapGenVillageSaturn;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 

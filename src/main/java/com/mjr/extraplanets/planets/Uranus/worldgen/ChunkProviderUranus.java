@@ -7,12 +7,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.MapGenDungeon;
-import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.RoomBossUranus;
-import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.RoomChestsUranus;
-import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.RoomEmptyUranus;
-import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.RoomSpawnerUranus;
-import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.RoomTreasureUranus;
+import com.mjr.extraplanets.planets.Uranus.worldgen.dungeon.*;
 import com.mjr.extraplanets.planets.Uranus.worldgen.village.MapGenVillageUranus;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 

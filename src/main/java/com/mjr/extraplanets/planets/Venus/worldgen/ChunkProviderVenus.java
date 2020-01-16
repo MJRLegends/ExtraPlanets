@@ -9,12 +9,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedBlaze;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedMagmaCube;
-import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.MapGenDungeon;
-import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.RoomBossVenus;
-import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.RoomChestsVenus;
-import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.RoomEmptyVenus;
-import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.RoomSpawnerVenus;
-import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.RoomTreasureVenus;
+import com.mjr.extraplanets.planets.Venus.worldgen.dungeon.*;
 import com.mjr.extraplanets.planets.Venus.worldgen.village.MapGenVillageVenus;
 
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;

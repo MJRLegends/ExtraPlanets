@@ -9,12 +9,7 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedPowerSkeleton;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.MapGenDungeon;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomBossPluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomChestsPluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomEmptyPluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomSpawnerPluto;
-import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.RoomTreasurePluto;
+import com.mjr.extraplanets.planets.Pluto.worldgen.dungeon.*;
 import com.mjr.extraplanets.planets.Pluto.worldgen.village.MapGenVillagePluto;
 
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;

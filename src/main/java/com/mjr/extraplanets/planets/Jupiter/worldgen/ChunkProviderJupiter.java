@@ -7,12 +7,7 @@ import com.google.common.collect.Lists;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.MapGenDungeon;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.RoomBossJupiter;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.RoomChestsJupiter;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.RoomEmptyJupiter;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.RoomSpawnerJupiter;
-import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.RoomTreasureJupiter;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.*;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.village.MapGenVillageJupiter;
 import com.mjr.extraplanets.world.prefabs.ChunkProviderCustomSpace;
 

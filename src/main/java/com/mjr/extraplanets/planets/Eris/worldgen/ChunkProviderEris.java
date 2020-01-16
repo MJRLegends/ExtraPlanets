@@ -10,12 +10,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedEnderman;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedPowerSkeleton;
 import com.mjr.extraplanets.entities.monsters.EntityEvolvedWitch;
-import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.MapGenDungeon;
-import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.RoomBossEris;
-import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.RoomChestsEris;
-import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.RoomEmptyEris;
-import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.RoomSpawnerEris;
-import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.RoomTreasureEris;
+import com.mjr.extraplanets.planets.Eris.worldgen.dungeon.*;
 import com.mjr.extraplanets.planets.Eris.worldgen.village.MapGenVillageEris;
 
 import micdoodle8.mods.galacticraft.api.prefab.core.BlockMetaPair;
