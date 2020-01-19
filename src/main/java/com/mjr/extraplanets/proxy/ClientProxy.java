@@ -1269,7 +1269,7 @@ public class ClientProxy extends CommonProxy {
 			ModuleIcons.pressureModule2 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier2_pressure_layer"));
 			ModuleIcons.pressureModule3 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier3_pressure_layer"));
 			ModuleIcons.pressureModule4 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier4_pressure_layer"));
-			
+
 			ModuleIcons.radiationModule1 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier1_radiation_layer"));
 			ModuleIcons.radiationModule2 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier2_radiation_layer"));
 			ModuleIcons.radiationModule3 = event.getMap().registerSprite(new ResourceLocation(Constants.modID, "items/tier3_radiation_layer"));

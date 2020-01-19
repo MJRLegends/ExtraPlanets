@@ -223,7 +223,7 @@ public class ExtraPlanets {
 		ExtraPlanets_Planets.init();
 		ExtraPlanets_Moons.init();
 		ExtraPlanets_SpaceStations.init();
-		
+
 		if(Loader.isClassAvailable("net.machinemuse.numina.module.IPowerModule") && Loader.isClassAvailable("net.machinemuse.powersuits.common.ModuleManager"))
 			MachineMusePowersuitsCompatibility.init();
 
@@ -248,7 +248,7 @@ public class ExtraPlanets {
 
 		packetPipeline = ExtraPlanetsChannelHandler.init();
 		// packetPipeline = NetworkManager.registerNetworkChannel(PacketSimpleEP.class, Constants.modID);
-		
+
 		ExtraPlanets_Recipes.initOther();
 
 		// Proxy Init Method

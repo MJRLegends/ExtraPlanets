@@ -28,7 +28,7 @@ public class ExtraPlanets_Recipes {
 		registerCircuitFabricatorRecipes();
 		registerExtraPlanetMachineRecipes();
 	}
-	
+
 	public static void initOther() {
 		registerSatellitesRecipes();
 	}
