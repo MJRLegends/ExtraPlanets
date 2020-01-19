@@ -84,22 +84,22 @@ public class ExtraPlanets_Moons {
 			CHARON = GCRegisterUtilities.registerUnreachableMoon("charon", ExtraPlanets_Planets.PLUTO);
 			if (CHARON != null)
 				CHARON.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(25.5785754286855436F);
-	
+
 			NIX = GCRegisterUtilities.registerUnreachableMoon("nix", ExtraPlanets_Planets.PLUTO);
 			if (NIX != null)
 				NIX.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F)).setRelativeOrbitTime(57.415456589452485548F);
-	
+
 			HYDRA = GCRegisterUtilities.registerUnreachableMoon("hydra", ExtraPlanets_Planets.PLUTO);
 			if (HYDRA != null)
 				HYDRA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F)).setRelativeOrbitTime(123.252594612756974F);
-	
+
 			// Eris Moons
 			DYSNOMIA = GCRegisterUtilities.registerUnreachableMoon("dysnomia", ExtraPlanets_Planets.ERIS);
 			if (DYSNOMIA != null)
 				DYSNOMIA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(9F, 9F)).setRelativeOrbitTime(25.5785754286855436F);
 		}
 	}
-	
+
 	private static Planet getParentPlanet(Planet possiablePlanet, String possiablePlanetName) {
 		if(possiablePlanet != null)
 			return possiablePlanet;

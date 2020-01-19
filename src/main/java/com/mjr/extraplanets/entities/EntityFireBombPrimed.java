@@ -17,6 +17,7 @@ public class EntityFireBombPrimed extends EntityTNTPrimedBase {
 		super(worldIn, x, y, z, igniter);
 	}
 
+	@Override
 	protected void explode() {
 		float f = 5.0F;
 		this.worldObj.createExplosion(this, this.posX, this.posY + this.height / 16.0F, this.posZ, f, true);
@@ -33,7 +34,7 @@ public class EntityFireBombPrimed extends EntityTNTPrimedBase {
 			}
 		}
 		for (int i = 0; i < 9; i++) {
-			for (int j = 0; j < 9; j++) {	
+			for (int j = 0; j < 9; j++) {
 				if (this.rand.nextInt(3) == 1)
 					this.worldObj.setBlockState(new BlockPos((int) this.posX + i, this.worldObj.getTopSolidOrLiquidBlock(new BlockPos((int) this.posX + i, 0, (int) this.posZ + j)).getY(), (int) this.posZ - j), Blocks.fire.getDefaultState());
 			}
