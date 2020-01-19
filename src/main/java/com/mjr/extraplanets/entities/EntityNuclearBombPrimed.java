@@ -15,6 +15,7 @@ public class EntityNuclearBombPrimed extends EntityTNTPrimedBase {
 		super(worldIn, x, y, z, igniter);
 	}
 
+	@Override
 	protected void explode() {
 		float f = 25.0F;
 		this.worldObj.createExplosion(this, this.posX, this.posY + this.height / 16.0F, this.posZ, f, true);
