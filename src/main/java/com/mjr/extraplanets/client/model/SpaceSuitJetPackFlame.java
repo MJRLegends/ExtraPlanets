@@ -26,7 +26,7 @@ public class SpaceSuitJetPackFlame {
 
 		Vector3 right = new Vector3(-0.48, -0.12, -0.30);
 		right = rotateYaw(player.renderYawOffset, right);
-		
+
 		Vector3 left = new Vector3(0.48, -0.12, 0.30);
 		left = rotateYaw(player.renderYawOffset, left);
 

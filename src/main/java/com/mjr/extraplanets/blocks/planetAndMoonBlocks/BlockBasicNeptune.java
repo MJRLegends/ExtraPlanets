@@ -141,7 +141,7 @@ public class BlockBasicNeptune extends Block implements IDetectableResource, IPl
 		case 4:
 		case 5:
 		case 6:
-		case 10:	
+		case 10:
 		case 7:
 		case 11:
 			return true;

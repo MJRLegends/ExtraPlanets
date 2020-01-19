@@ -9,7 +9,7 @@ import net.minecraft.block.state.IBlockState;
 public class BlockBasicValuable extends BlockBasic implements IDetectableResource {
 
 	private boolean valuableResource;
-	
+
 	public BlockBasicValuable(Material material) {
 		super(material);
 		this.valuableResource = true;

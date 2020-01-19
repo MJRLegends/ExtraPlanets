@@ -105,7 +105,7 @@ public class ArmorSpaceSuitModel extends ArmorCustomModel {
 				armourModelLeftBoot = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("left_boot"), false), DefaultVertexFormats.ITEM, spriteFunction);
 
 				armourModelRightBoot = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("right_boot"), false), DefaultVertexFormats.ITEM, spriteFunction);
-				
+
 				model = (OBJModel) ModelLoaderRegistry.getModel(new ResourceLocation(Constants.ASSET_PREFIX, "jetpack.obj"));
 				armourModelJetpackPart1 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("frame", ""), false), DefaultVertexFormats.ITEM, spriteFunction);
 				armourModelJetpackPart2 = (OBJModel.OBJBakedModel) model.bake(new OBJModel.OBJState(ImmutableList.of("engine_skirt_left","engine_skirt_right", "engine_shirt_left", "tank_left_1", "tank_left_2", "tank_right_1", "tank_right_2"), false), DefaultVertexFormats.ITEM, spriteFunction);
