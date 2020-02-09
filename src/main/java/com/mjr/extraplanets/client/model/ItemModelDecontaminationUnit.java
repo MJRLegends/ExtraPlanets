@@ -107,13 +107,13 @@ public class ItemModelDecontaminationUnit extends ModelTransformWrapper {
 			ret.setIdentity();
 			Matrix4f mul = new Matrix4f();
 			mul.setIdentity();
-			mul.setScale(0.025F);
+			mul.setScale(0.035F);
 			ret.mul(mul);
 			mul.setIdentity();
-			mul.rotY(1.575F);
+			mul.rotY(3.13F);
 			ret.mul(mul);
 			mul.setIdentity();
-			mul.setTranslation(new Vector3f(0.1F, -0.1F, 0.05F));
+			mul.setTranslation(new Vector3f(1.1F, -10F, 7F));
 			ret.mul(mul);
 			return ret;
 		}
