@@ -99,13 +99,13 @@ public class ItemModelVenusRover extends ModelTransformWrapper {
 			ret.setIdentity();
 			Matrix4f mul = new Matrix4f();
 			mul.setIdentity();
-			mul.setScale(0.225F);
+			mul.setScale(0.125F);
 			ret.mul(mul);
 			mul.setIdentity();
-			mul.rotY(1.6F);
+			mul.rotY(1.56F);
 			ret.mul(mul);
 			mul.setIdentity();
-			mul.setTranslation(new Vector3f(0.3F, -0.5F, -0.15F));
+			mul.setTranslation(new Vector3f(0.3F, -0.5F, 1.4F));
 			ret.mul(mul);
 			return ret;
 		}
