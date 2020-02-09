@@ -145,6 +145,27 @@ public class ItemModelRocketT9 extends ModelTransformWrapper {
 			ret.mul(mul);
 			return ret;
 		}
+		
+		if (cameraTransformType == TransformType.FIXED) {
+			if (Minecraft.isAmbientOcclusionEnabled()) {
+				GlStateManager.shadeModel(GL11.GL_SMOOTH);
+			} else {
+				GlStateManager.shadeModel(GL11.GL_FLAT);
+			}
+			Matrix4f ret = new Matrix4f();
+			ret.setIdentity();
+			Matrix4f mul = new Matrix4f();
+			mul.setIdentity();
+			mul.setScale(0.095F);
+			ret.mul(mul);
+			mul.setIdentity();
+			mul.rotZ(7F);
+			ret.mul(mul);
+			mul.setIdentity();
+			mul.setTranslation(new Vector3f(0.1F, -5.5F, 0.05F));
+			ret.mul(mul);
+			return ret;
+		}
 
 		return null;
 	}
