@@ -1,0 +1,451 @@
+{
+    "biomes": [
+        {
+            "conditions": "biome.name == 'mercury'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'ceres'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'jupiter'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:wind",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'jupiterMagmaSea'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:wind",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'jupiterSands'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:wind",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:dust",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'saturn'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:wind",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'saturnHydroCarbonSea'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:wind",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'saturnNuclearLand'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:wind",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'uranus'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:wind",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'uranusFrozenWater'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:wind",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'uranusSnowLands'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:wind",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:ice",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'neptune'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:wind",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'neptuneRadioActiveWaterSea'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:wind",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'neptuneLayeredHills'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:wind",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'pluto'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'eris'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'Kepler22b Plains'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:bees",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:insectcrawl",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:insectbuzz",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:gnatt",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'Kepler22b Blue Maple Forest'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:bees",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:insectcrawl",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:insectbuzz",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:gnatt",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'Kepler22b Purple Maple Forest'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:bees",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:insectcrawl",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:insectbuzz",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:gnatt",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'Kepler22b Red Maple Forest'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:bees",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:insectcrawl",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:insectbuzz",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:gnatt",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'Kepler22b Yellow Maple Forest'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:bees",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:insectcrawl",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:insectbuzz",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:gnatt",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'Kepler22b Red Desert'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:rattlesnake",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:dust",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'Kepler22b WasteLands'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:hiss",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                },
+                {
+                    "sound": "dsurround:crocodile",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'Kepler22b Candy Land'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'callisto'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'deimos'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'europa'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'ganymede'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'iapetus'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'io'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'ioAshLands'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'ioBurningPlains'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'oberon'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'oberonLargeIceMountain'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:ice",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'oberonValleys'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'phobos'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'rhea'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'titan'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'titanMethaneSea'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'titanMethaneHills'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'titania'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'triton'",
+            "soundReset": true,
+            "sounds": []
+        },
+        {
+            "conditions": "biome.name == 'tritonIceLands'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:ice",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        },
+        {
+            "conditions": "biome.name == 'tritonIceSea'",
+            "soundReset": true,
+            "sounds": [
+                {
+                    "sound": "dsurround:ice",
+                    "volume": 0.8,
+                    "repeatDelayRandom": 60
+                }
+            ]
+        }
+    ]
+}
