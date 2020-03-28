@@ -60,19 +60,21 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 					if (player != null) {
 						stats = (player.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null));
 					}
-					double temp = stats.getRadiationLevel();
-					double level = (temp * Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT) / 100;
-					if (level <= 0) {
-						stats.setRadiationLevel(0);
-						if (this.ticks % 40 == 0)
-							PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", You currently have no radiation damage to take!");
-					} else {
-						this.storage.setEnergyStored(0);
-						stats.setRadiationLevel(stats.getRadiationLevel() - level);
-						PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
-								+ Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT + "%");
-						PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
-								+ (int) stats.getRadiationLevel() + "%");
+					if (Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT != 0) {
+						double temp = stats.getRadiationLevel();
+						double level = (temp * Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT) / 100;
+						if (level <= 0) {
+							stats.setRadiationLevel(0);
+							if (this.ticks % 40 == 0)
+								PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", You currently have no radiation damage to take!");
+						} else {
+							this.storage.setEnergyStored(0);
+							stats.setRadiationLevel(stats.getRadiationLevel() - level);
+							PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
+									+ Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT + "%");
+							PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
+									+ (int) stats.getRadiationLevel() + "%");
+						}
 					}
 				} else if (this.ticks % 40 == 0)
 					PlayerUtilties.sendMessage(player,
