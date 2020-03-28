@@ -11,7 +11,6 @@ import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
 import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import micdoodle8.mods.galacticraft.core.util.EnumColor;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -26,6 +25,8 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.core.util.EnumColor;
 
 public class ItemBasicItem extends Item {
 	public ItemBasicItem(String name) {
@@ -49,7 +50,7 @@ public class ItemBasicItem extends Item {
 			list.add(EnumColor.YELLOW + TranslateUtilities.translate("tier4_armor_layer.desc"));
 		else if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION) {
 			String text = TranslateUtilities.translate("anti_radiation.desc");
-			if(text.contains("{PERCENT}"))
+			if (text.contains("{PERCENT}"))
 				text.replace("{PERCENT}", Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%");
 			list.add(EnumColor.YELLOW + text);
 		}
@@ -91,14 +92,18 @@ public class ItemBasicItem extends Item {
 				if (entityLiving != null) {
 					stats = entityLiving.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 				}
-				double temp = stats.getRadiationLevel();
-				double level = (temp * Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT) / 100;
-				if (level < 0)
-					stats.setRadiationLevel(0);
-				else
-					stats.setRadiationLevel(level);
-				PlayerUtilties.sendMessage(entityplayer, "" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " " + Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "% "+ TranslateUtilities.translate("gui.radiation.reduced.message.2"));
-				PlayerUtilties.sendMessage(entityplayer, "" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
+				if (Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT != 0) {
+					double temp = stats.getRadiationLevel();
+					double level = (temp * Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT) / 100;
+					if (level < 0)
+						stats.setRadiationLevel(0);
+					else
+						stats.setRadiationLevel(level);
+					PlayerUtilties.sendMessage(entityplayer, "" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
+							+ Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "% " + TranslateUtilities.translate("gui.radiation.reduced.message.2"));
+					PlayerUtilties.sendMessage(entityplayer,
+							"" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
+				}
 			}
 
 			if (entityplayer == null || !entityplayer.capabilities.isCreativeMode) {
