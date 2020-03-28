@@ -13,13 +13,6 @@ import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
 import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
-import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
-import micdoodle8.mods.galacticraft.core.Constants;
-import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
-import micdoodle8.mods.galacticraft.core.blocks.BlockMulti.EnumBlockMultiType;
-import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
-import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
-import micdoodle8.mods.miccore.Annotations.NetworkedField;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -35,6 +28,14 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+
+import micdoodle8.mods.galacticraft.api.transmission.NetworkType;
+import micdoodle8.mods.galacticraft.core.Constants;
+import micdoodle8.mods.galacticraft.core.blocks.BlockMulti;
+import micdoodle8.mods.galacticraft.core.blocks.BlockMulti.EnumBlockMultiType;
+import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
+import micdoodle8.mods.galacticraft.core.tile.IMultiBlock;
+import micdoodle8.mods.miccore.Annotations.NetworkedField;
 
 public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWithInventory implements IMultiBlock, ISidedInventory {
 	private ItemStack[] containingItems = new ItemStack[1];
@@ -59,19 +60,21 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 					if (player != null) {
 						stats = (player.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null));
 					}
-					double temp = stats.getRadiationLevel();
-					double level = (temp * Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT) / 100;
-					if (level <= 0) {
-						stats.setRadiationLevel(0);
-						if (this.ticks % 40 == 0)
-							PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You currently have no radiation damage to take!");
-					} else {
-						this.storage.setEnergyStored(0);
-						stats.setRadiationLevel(stats.getRadiationLevel() - level);
-						PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
-								+ Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT + "%");
-						PlayerUtilties.sendMessage(player,
-								"" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
+					if (Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT != 0) {
+						double temp = stats.getRadiationLevel();
+						double level = (temp * Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT) / 100;
+						if (level <= 0) {
+							stats.setRadiationLevel(0);
+							if (this.ticks % 40 == 0)
+								PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You currently have no radiation damage to take!");
+						} else {
+							this.storage.setEnergyStored(0);
+							stats.setRadiationLevel(stats.getRadiationLevel() - level);
+							PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
+									+ Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT + "%");
+							PlayerUtilties.sendMessage(player,
+									"" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
+						}
 					}
 				} else if (this.ticks % 40 == 0)
 					PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", You need to add more power to use this! The machine needs 1,000,000 gJ or 625,000 RF per use!");
