@@ -1003,8 +1003,8 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			this.zoomTooltipPos = 0;
 		}
 		if (Loader.isModLoaded("planetprogression")) {
-			CustomCelestialSelection.drawRect(LHS + 1,  height - 19, LHS + 500,  height - 35, ColorUtil.to32BitColor(255, 0, 0, 0));
-			this.fontRenderer.drawString("Important: Want to unlock/see more celestial bodies? Research them via PlanetProgressions Mod", LHS + 5, height - 30, RED);
+			CustomCelestialSelection.drawRect(LHS + 1, (height - LHS) - 5, LHS + 500, (height - LHS)- 20, ColorUtil.to32BitColor(255, 0, 0, 0));
+			this.fontRenderer.drawString("Important: Want to unlock/see more celestial bodies? Research them via PlanetProgressions Mod", LHS + 5, (height - LHS) - 15, RED);
 		}
 	}
 
