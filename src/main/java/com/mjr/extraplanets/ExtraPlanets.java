@@ -594,43 +594,45 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void onStartAboutToStartEvent(FMLServerAboutToStartEvent event) {
-		File folder = new File(FMLCommonHandler.instance().getSavesDirectory() + "/" + event.getServer().getFolderName());
-		String[] idsOld = new String[12];
-		idsOld[0] = "" + Config.IO_ID_LEGACY;
-		idsOld[1] = "" + Config.EUROPA_ID_LEGACY;
-		idsOld[2] = "" + Config.PHOBOS_ID_LEGACY;
-		idsOld[3] = "" + Config.DEIMOS_ID_LEGACY;
-		idsOld[4] = "" + Config.TRITON_ID_LEGACY;
-		idsOld[5] = "" + Config.CALLISTO_ID_LEGACY;
-		idsOld[6] = "" + Config.GANYMEDE_ID_LEGACY;
-		idsOld[7] = "" + Config.RHEA_ID_LEGACY;
-		idsOld[8] = "" + Config.TITAN_ID_LEGACY;
-		idsOld[9] = "" + Config.OBERON_ID_LEGACY;
-		idsOld[10] = "" + Config.TITANIA_ID_LEGACY;
-		idsOld[11] = "" + Config.IAPETUS_ID_LEGACY;
-		String[] idsNew = new String[12];
-		idsNew[0] = "" + Config.IO_ID;
-		idsNew[1] = "" + Config.EUROPA_ID;
-		idsNew[2] = "" + Config.PHOBOS_ID;
-		idsNew[3] = "" + Config.DEIMOS_ID;
-		idsNew[4] = "" + Config.TRITON_ID;
-		idsNew[5] = "" + Config.CALLISTO_ID;
-		idsNew[6] = "" + Config.GANYMEDE_ID;
-		idsNew[7] = "" + Config.RHEA_ID;
-		idsOld[8] = "" + Config.TITAN_ID;
-		idsOld[9] = "" + Config.OBERON_ID;
-		idsOld[10] = "" + Config.TITANIA;
-		idsOld[11] = "" + Config.IAPETUS;
-		if (folder.exists()) {
-			for (int i = 0; i < idsOld.length; i++) {
-				File tempFolder = new File(folder.getPath() + "/" + "DIM" + idsOld[i]);
-				File newFolder = new File(folder.getPath() + "/" + "DIM" + idsNew[i]);
-				if (tempFolder.exists()) {
-					if (newFolder.exists() == false) {
-						MessageUtilities.infoMessageToLog(Constants.modID, "Mirgrated Dimension Folder " + idsOld[i] + " to new name of " + idsNew[i]);
-						tempFolder.renameTo(newFolder);
-					} else
-						MessageUtilities.infoMessageToLog(Constants.modID, "Unable to Mrigrate Folder " + idsOld[i] + " to new name of " + idsNew[i] + " Due to this folder already exists");
+		if (Config.MOVE_ID_DIMENSION_LEGACY) {
+			File folder = new File(FMLCommonHandler.instance().getSavesDirectory() + "/" + event.getServer().getFolderName());
+			String[] idsOld = new String[12];
+			idsOld[0] = "" + Config.IO_ID_LEGACY;
+			idsOld[1] = "" + Config.EUROPA_ID_LEGACY;
+			idsOld[2] = "" + Config.PHOBOS_ID_LEGACY;
+			idsOld[3] = "" + Config.DEIMOS_ID_LEGACY;
+			idsOld[4] = "" + Config.TRITON_ID_LEGACY;
+			idsOld[5] = "" + Config.CALLISTO_ID_LEGACY;
+			idsOld[6] = "" + Config.GANYMEDE_ID_LEGACY;
+			idsOld[7] = "" + Config.RHEA_ID_LEGACY;
+			idsOld[8] = "" + Config.TITAN_ID_LEGACY;
+			idsOld[9] = "" + Config.OBERON_ID_LEGACY;
+			idsOld[10] = "" + Config.TITANIA_ID_LEGACY;
+			idsOld[11] = "" + Config.IAPETUS_ID_LEGACY;
+			String[] idsNew = new String[12];
+			idsNew[0] = "" + Config.IO_ID;
+			idsNew[1] = "" + Config.EUROPA_ID;
+			idsNew[2] = "" + Config.PHOBOS_ID;
+			idsNew[3] = "" + Config.DEIMOS_ID;
+			idsNew[4] = "" + Config.TRITON_ID;
+			idsNew[5] = "" + Config.CALLISTO_ID;
+			idsNew[6] = "" + Config.GANYMEDE_ID;
+			idsNew[7] = "" + Config.RHEA_ID;
+			idsOld[8] = "" + Config.TITAN_ID;
+			idsOld[9] = "" + Config.OBERON_ID;
+			idsOld[10] = "" + Config.TITANIA;
+			idsOld[11] = "" + Config.IAPETUS;
+			if (folder.exists()) {
+				for (int i = 0; i < idsOld.length; i++) {
+					File tempFolder = new File(folder.getPath() + "/" + "DIM" + idsOld[i]);
+					File newFolder = new File(folder.getPath() + "/" + "DIM" + idsNew[i]);
+					if (tempFolder.exists()) {
+						if (newFolder.exists() == false) {
+							MessageUtilities.infoMessageToLog(Constants.modID, "Mirgrated Dimension Folder " + idsOld[i] + " to new name of " + idsNew[i]);
+							tempFolder.renameTo(newFolder);
+						} else
+							MessageUtilities.infoMessageToLog(Constants.modID, "Unable to Mrigrate Folder " + idsOld[i] + " to new name of " + idsNew[i] + " Due to this folder already exists");
+					}
 				}
 			}
 		}

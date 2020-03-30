@@ -172,6 +172,7 @@ public class Config {
 	public static int OBERON_ID_LEGACY;
 	public static int TITANIA_ID_LEGACY;
 	public static int IAPETUS_ID_LEGACY;
+	public static boolean MOVE_ID_DIMENSION_LEGACY;
 
 	public static int TRITON_ID;
 	public static int EUROPA_ID;
@@ -607,6 +608,9 @@ public class Config {
 		OBERON_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Oberon Dimension ID Legacy (DONT TOUCH)", -41, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
 		TITANIA_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Titania Dimension ID Legacy (DONT TOUCH)", -42, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
 		IAPETUS_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Iapetus Dimension ID Legacy (DONT TOUCH)", -43, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		
+		MOVE_ID_DIMENSION_LEGACY = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Enable Legacy Dimension ID Migration", false, "Setting this option to true will move Legacy Dimensions with old ID's to new ID! Use if moon dimensions are stil using above Legacy (DONT TOUCH) ID's")
+				.getBoolean(false);
 		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		// End
 		// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
