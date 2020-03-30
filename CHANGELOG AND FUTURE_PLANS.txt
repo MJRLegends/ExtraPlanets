@@ -5,6 +5,18 @@
 
 
 ===========================================Released Updates===========================================
+v1.6.3
+*Small amount of code cleanup
+*Fixed All rocket models when rendering in item frames
+*Fixed Mars/Venus rovers & Decontamination Unit rendering in item frames
+*Fixed issue #535 (Spelling error in EP Settings/Config under Items section)
+*Fixed issue #534 (Unable to set radiation reducing methods to 0 affect in config file)
+*Added Important message to Custom Celestial Selection screen for Planet Progressions
+*Small improvement to important message to Custom Celestial Selection screen for Planet Progressions
+*Added config option to disable Legacy Dimension ID Migration by default
+*Updated ru_RU.lang (Thanks to Smollet777)
+*Updated ko_KR.lang (Thanks to mindy15963)
+
 v1.6.2
 *Fixed issue #516 - List of Armour to be considered config not working when more than one entry made
 *Updated lang files to match MC 1.7.10
