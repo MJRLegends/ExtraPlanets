@@ -17,6 +17,7 @@ v0.6.3
 *Small improvement to important message to Custom Celestial Selection screen for Planet Progressions
 *Added config option to disable Legacy Dimension ID Migration by default
 *Updated ru_RU.lang (Thanks to Smollet777)
+*Updated ko_KR.lang (Thanks to mindy15963)
 
 v0.6.2
 *Fixed issue #516 - List of Armour to be considered config not working when more than one entry made
