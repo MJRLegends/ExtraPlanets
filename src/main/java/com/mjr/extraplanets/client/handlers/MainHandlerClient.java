@@ -65,6 +65,7 @@ import net.minecraftforge.event.world.WorldEvent;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.UniversalBucket;
+import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
@@ -232,7 +233,7 @@ public class MainHandlerClient {
 		}
 
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI) {
-			OverlayRocket.renderSpaceshipOverlay(((EntityElectricRocketBase) player.getRidingEntity()).getSpaceshipGui());
+			OverlayRocket.renderSpaceshipOverlay(FMLClientHandler.instance().getClient(),((EntityElectricRocketBase) player.getRidingEntity()).getSpaceshipGui());
 		}
 
 		if (minecraft.currentScreen == null && player.getRidingEntity() instanceof EntityElectricRocketBase && minecraft.gameSettings.thirdPersonView != 0 && !minecraft.gameSettings.hideGUI
