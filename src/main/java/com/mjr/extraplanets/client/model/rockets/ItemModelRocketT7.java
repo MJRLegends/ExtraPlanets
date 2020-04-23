@@ -55,7 +55,7 @@ public class ItemModelRocketT7 extends ModelTransformWrapper {
 			mul.setTranslation(trans);
 			ret.mul(mul);
 			mul.setIdentity();
-			mul.rotY(ClientUtil.getMilliseconds() / 1000.0F);
+			mul.rotY(ClientUtil.getClientTimeTotal() / 1000.0F);
 			ret.mul(mul);
 			mul.setIdentity();
 			trans.scale(-1.0F);
