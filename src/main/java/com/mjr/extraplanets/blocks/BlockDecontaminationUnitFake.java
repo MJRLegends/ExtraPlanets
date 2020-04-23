@@ -6,8 +6,8 @@ import com.mjr.extraplanets.tileEntities.blocks.TileEntityBasicDecontaminationUn
 
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
+
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.properties.PropertyBool;
@@ -15,7 +15,6 @@ import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.particle.ParticleManager;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
@@ -61,7 +60,6 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 		((TileEntityBasicDecontaminationUnitFake) world.getTileEntity(pos)).setMainBlock(mainBlock);
 	}
 
-	@SuppressWarnings("deprecation")
 	@Override
 	public float getBlockHardness(IBlockState state, World world, BlockPos pos) {
 		TileEntity tileEntity = world.getTileEntity(pos);
@@ -70,7 +68,7 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 			BlockPos mainBlockPosition = ((TileEntityBasicDecontaminationUnitFake) tileEntity).mainBlockPosition;
 
 			if (mainBlockPosition != null) {
-				return world.getBlockState(mainBlockPosition).getBlock().getBlockHardness(world.getBlockState(mainBlockPosition), world, mainBlockPosition);
+				return world.getBlockState(mainBlockPosition).getBlock().getBlockHardness(state, world, pos);
 			}
 		}
 
@@ -115,10 +113,6 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 	}
 
 	@Override
-	public void randomDisplayTick(IBlockState state, World world, BlockPos pos, Random rand) {
-	}
-
-	@Override
 	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
 		TileEntity tileEntity = world.getTileEntity(pos);
 		BlockPos mainBlockPosition = ((TileEntityBasicDecontaminationUnitFake) tileEntity).mainBlockPosition;
@@ -132,45 +126,6 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 		}
 
 		return ItemStack.EMPTY;
-	}
-
-	@SuppressWarnings("deprecation")
-	@Override
-	public EnumFacing getBedDirection(IBlockState state, IBlockAccess world, BlockPos pos) {
-		TileEntity tileEntity = world.getTileEntity(pos);
-		if (tileEntity instanceof TileEntityBasicDecontaminationUnitFake) {
-			BlockPos mainBlockPosition = ((TileEntityBasicDecontaminationUnitFake) tileEntity).mainBlockPosition;
-
-			if (mainBlockPosition != null) {
-				return world.getBlockState(pos).getBlock().getBedDirection(world.getBlockState(mainBlockPosition), world, mainBlockPosition);
-			}
-		}
-		return getActualState(world.getBlockState(pos), world, pos).getValue(BlockDirectional.FACING);
-	}
-
-	@Override
-	public boolean isBed(IBlockState state, IBlockAccess world, BlockPos pos, Entity player) {
-		TileEntity tileEntity = world.getTileEntity(pos);
-		if (tileEntity instanceof TileEntityBasicDecontaminationUnitFake) {
-			BlockPos mainBlockPosition = ((TileEntityBasicDecontaminationUnitFake) tileEntity).mainBlockPosition;
-
-			if (mainBlockPosition != null) {
-				return world.getBlockState(pos).getBlock().isBed(world.getBlockState(mainBlockPosition), world, mainBlockPosition, player);
-			}
-		}
-		return super.isBed(state, world, pos, player);
-	}
-
-	@Override
-	public void setBedOccupied(IBlockAccess world, BlockPos pos, EntityPlayer player, boolean occupied) {
-		TileEntity tileEntity = world.getTileEntity(pos);
-		BlockPos mainBlockPosition = ((TileEntityBasicDecontaminationUnitFake) tileEntity).mainBlockPosition;
-
-		if (mainBlockPosition != null) {
-			world.getBlockState(pos).getBlock().setBedOccupied(world, mainBlockPosition, player, occupied);
-		} else {
-			super.setBedOccupied(world, pos, player, occupied);
-		}
 	}
 
 	@Override
