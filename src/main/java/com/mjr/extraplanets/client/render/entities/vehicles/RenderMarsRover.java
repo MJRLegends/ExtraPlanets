@@ -37,7 +37,6 @@ public class RenderMarsRover extends Render<EntityMarsRover> {
 		this.shadowSize = 0.0F;
 	}
 
-	@SuppressWarnings("deprecation")
 	private void updateModels() {
 		if (modelRover == null) {
 			try {

@@ -28,7 +28,6 @@ public class RenderUranusLander extends Render<EntityUranusLander> {
 		this.shadowSize = 3F;
 	}
 
-	@SuppressWarnings("deprecation")
 	private void updateModels() {
 		if (landerModel == null) {
 			try {

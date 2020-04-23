@@ -28,7 +28,6 @@ public class RenderGeneralLander extends Render<EntityGeneralLander> {
 		this.shadowSize = 3F;
 	}
 
-	@SuppressWarnings("deprecation")
 	private void updateModels() {
 		if (landerModel == null) {
 			try {

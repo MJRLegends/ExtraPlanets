@@ -28,7 +28,6 @@ public class RenderMercuryLander extends Render<EntityMercuryLander> {
 		this.shadowSize = 4F;
 	}
 
-	@SuppressWarnings("deprecation")
 	private void updateModels() {
 		if (landerModel == null) {
 			try {

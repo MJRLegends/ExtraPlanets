@@ -37,6 +37,7 @@ public class ItemBasicBattery extends ItemElectricBase implements IItemElectric 
 		return tier;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public int getItemStackLimit(ItemStack stack) {
 		if (stack.getItemDamage() < 100 || stack.hasTagCompound() && stack.getTagCompound().hasKey("electricity")) {

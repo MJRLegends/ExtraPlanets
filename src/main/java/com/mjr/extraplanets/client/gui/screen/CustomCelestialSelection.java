@@ -248,9 +248,6 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		try {
 			if (this.viewState != EnumView.PROFILE) {
 				final int LHS = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE;
-				final int RHS = width - LHS;
-				final int TOP = LHS;
-				final int BOT = height - LHS;
 				if (this.selectedBody != null) {
 					GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
 					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain1);

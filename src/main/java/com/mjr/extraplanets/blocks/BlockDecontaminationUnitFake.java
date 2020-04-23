@@ -59,6 +59,7 @@ public class BlockDecontaminationUnitFake extends BlockAdvancedTile implements I
 		((TileEntityBasicDecontaminationUnitFake) world.getTileEntity(pos)).setMainBlock(mainBlock);
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public float getBlockHardness(IBlockState state, World world, BlockPos pos) {
 		TileEntity tileEntity = world.getTileEntity(pos);
