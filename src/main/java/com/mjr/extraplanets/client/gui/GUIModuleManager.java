@@ -26,7 +26,6 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
-@SuppressWarnings("unused")
 public class GUIModuleManager extends GuiContainerGC {
 	private static final ResourceLocation guiTexture = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/module_manager.png");
 	private static final ResourceLocation guiTextureSideLeft = new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/module_manager_side_left.png");
@@ -44,7 +43,9 @@ public class GUIModuleManager extends GuiContainerGC {
 	public Module selectedInstallModule;
 
 	private GuiButton buttonActiveState;
-	private GuiButton buttonInstall;
+	@SuppressWarnings("unused")
+	private GuiButton buttonInstall;	
+	@SuppressWarnings("unused")
 	private GuiButton buttonUninstall;
 
 	public GUIModuleManager(IInventory IInventory) {
@@ -187,7 +188,6 @@ public class GUIModuleManager extends GuiContainerGC {
 		if (module != null) {
 			String text = TranslateUtilities.translate("gui.module." + module.getName() + ".name");
 			List<String> renderText = this.fontRendererObj.listFormattedStringToWidth(text, 115);
-			String textTemp = "";
 			int lineNum = 1;
 			for (String line : renderText) {
 				this.fontRendererObj.drawString(line, x, yName + ((lineNum - 1) * 10), this.sideColour);
@@ -195,10 +195,8 @@ public class GUIModuleManager extends GuiContainerGC {
 			}
 
 			text = TranslateUtilities.translate("gui.module." + module.getDescription());
-			int charsPerLine = 20;
 
 			renderText = this.fontRendererObj.listFormattedStringToWidth(text, 115);
-			textTemp = "";
 			lineNum = 1;
 			for (String line : renderText) {
 				this.fontRendererObj.drawString(line, x, Ydescription + ((lineNum - 1) * 10), this.sideColour);
@@ -224,8 +222,6 @@ public class GUIModuleManager extends GuiContainerGC {
 	@Override
 	protected void mouseClicked(int mouseX, int mouseY, int mouseButton) throws IOException {
 		super.mouseClicked(mouseX, mouseY, mouseButton);
-		int startX = 0;
-		int startY = 0;
 		// Check Inputs for Installed Modules
 		this.checkInputInstalled(this.guiLeft + 8, this.guiTop + 29, mouseX, mouseY);
 

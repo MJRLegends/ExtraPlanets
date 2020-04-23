@@ -75,8 +75,6 @@ public class PacketSimpleEP extends PacketSimpleBase {
 
 	private EnumSimplePacket type;
 	private List<Object> data;
-	@SuppressWarnings("unused")
-	static private String spamCheckString;
 
 	public PacketSimpleEP() {
 		super();
