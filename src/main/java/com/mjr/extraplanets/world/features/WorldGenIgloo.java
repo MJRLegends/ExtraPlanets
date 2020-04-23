@@ -8,9 +8,12 @@ import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
 import micdoodle8.mods.galacticraft.core.GCBlocks;
+import micdoodle8.mods.galacticraft.core.blocks.BlockGlowstoneTorch;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -188,7 +191,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 6, y + 3, z + 1), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 3, z + 1), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 3, z + 2), Blocks.snow.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 3, z + 2), GCBlocks.glowstoneTorch.getStateFromMeta(3), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 3, z + 2), GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockGlowstoneTorch.FACING, EnumFacing.SOUTH), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 3, z + 2), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 3, z + 3), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 3, z + 3), Blocks.snow.getDefaultState(), 3);
@@ -440,9 +443,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 3, z + 10), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 3, z + 10), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 3, z + 10), Blocks.snow.getDefaultState(), 3);
-
 		world.setBlockState(new BlockPos(x + 4, y + 4, z + 1), Blocks.snow.getDefaultState(), 3);
-
 		world.setBlockState(new BlockPos(x + 8, y + 4, z + 1), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 4, z + 2), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 4, z + 2), Blocks.snow.getDefaultState(), 3);
@@ -470,7 +471,7 @@ public class WorldGenIgloo extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 6, y + 5, z + 1), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 5, z + 1), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 5, z + 2), Blocks.snow.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 5, z + 2), GCBlocks.glowstoneTorch.getStateFromMeta(3), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 5, z + 2), GCBlocks.glowstoneTorch.getDefaultState().withProperty(BlockGlowstoneTorch.FACING, EnumFacing.SOUTH), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 5, z + 2), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 3, y + 5, z + 3), Blocks.snow.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 5, z + 3), Blocks.snow.getDefaultState(), 3);
