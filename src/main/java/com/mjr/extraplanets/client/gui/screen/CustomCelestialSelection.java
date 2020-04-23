@@ -10,7 +10,6 @@ import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector2f;
-import org.lwjgl.util.vector.Vector3f;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -36,6 +35,7 @@ import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.dimension.WorldProviderAsteroids;
 import micdoodle8.mods.galacticraft.planets.mars.dimension.WorldProviderMars;
 import micdoodle8.mods.galacticraft.planets.venus.dimension.WorldProviderVenus;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
@@ -125,15 +125,6 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 		GuiCelestialSelection.BORDER_SIZE = this.width / 65;
 		GuiCelestialSelection.BORDER_EDGE_SIZE = GuiCelestialSelection.BORDER_SIZE / 4;
-	}
-
-	/*
-	 * Overriding for the purpose of to fix possible init issues due to network packets delay
-	 */
-	@Override
-	protected Vector3f getCelestialBodyPosition(CelestialBody cBody) {
-		this.initGui();
-		return super.getCelestialBodyPosition(cBody);
 	}
 
 	/*
@@ -239,9 +230,6 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 		try {
 			if (this.viewState != EnumView.PROFILE) {
 				final int LHS = GuiCelestialSelection.BORDER_SIZE + GuiCelestialSelection.BORDER_EDGE_SIZE;
-				final int RHS = width - LHS;
-				final int TOP = LHS;
-				final int BOT = height - LHS;
 				if (this.selectedBody != null) {
 					GL11.glColor4f(0.0F, 0.6F, 1.0F, 1);
 					this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain1);
@@ -496,7 +484,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 				this.drawTexturedModalRect(LHS, BOT - 13, 88, 13, 0, 392, 148, 22, false, true);
 				this.drawTexturedModalRect(RHS - 88, BOT - 13, 88, 13, 0, 392, 148, 22, true, true);
 				int menuTopLeft = TOP - 115 + height / 2 - 4;
-                int posX = LHS + Math.min((int)this.ticksSinceSelectionF * 10, 133) - 134;
+				int posX = LHS + Math.min((int) this.ticksSinceSelectionF * 10, 133) - 134;
 				int posX2 = (int) (LHS + Math.min(this.ticksSinceMenuOpenF * 1.25F, 15) - 15);
 				int fontPosY = menuTopLeft + GuiCelestialSelection.BORDER_EDGE_SIZE + this.fontRenderer.FONT_HEIGHT / 2 - 2;
 				this.drawTexturedModalRect(posX, menuTopLeft + 12, 133, 196, 0, 0, 266, 392, false, false);
@@ -564,7 +552,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 			this.fontRenderer.drawString(str, LHS + 40 - fontRenderer.getStringWidth(str) / 2, TOP + 1, WHITE);
 
-			int scale = (int) Math.min(95, this.ticksSinceMenuOpen * 12.0F);
+			int scale = (int) Math.min(95, this.ticksSinceMenuOpenF * 12.0F);
 			boolean planetZoomedNotMoon = this.isZoomed() && !(this.selectedParent instanceof Planet);
 
 			// Parent frame:
@@ -759,7 +747,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 								Iterator<ItemStack> it = items.iterator();
 								int count = 0;
-                                int toRenderIndex = ((int)this.ticksSinceMenuOpenF / 20) % items.size();
+								int toRenderIndex = ((int) this.ticksSinceMenuOpenF / 20) % items.size();
 								ItemStack toRender = null;
 								while (it.hasNext()) {
 									ItemStack stack = it.next();
@@ -843,7 +831,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 						this.drawTexturedModalRect(RHS - 95, TOP + 182 + canCreateOffset, 93, 12, 0, 174, 93, 12, false, false);
 
-                        int color = (int) ((Math.sin(this.ticksSinceMenuOpenF / 5.0) * 0.5 + 0.5) * 255);
+						int color = (int) ((Math.sin(this.ticksSinceMenuOpenF / 5.0) * 0.5 + 0.5) * 255);
 						this.drawSplitString(TranslateUtilities.translate("gui.message.can_create_space_station.name"), RHS - 48, TOP + 137, 91, ColorUtil.to32BitColor(255, color, 255, color), true, false);
 
 						if (!mapMode) {
@@ -856,7 +844,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 				// Catalog overlay
 				this.mc.renderEngine.bindTexture(GuiCelestialSelection.guiMain0);
-                GL11.glColor4f(1.0F, 1.0F, 1.0F, 0.3F - Math.min(0.3F, this.ticksSinceSelectionF / 50.0F));
+				GL11.glColor4f(1.0F, 1.0F, 1.0F, 0.3F - Math.min(0.3F, this.ticksSinceSelectionF / 50.0F));
 				this.drawTexturedModalRect(LHS, TOP, 74, 11, 0, 392, 148, 22, false, false);
 				str = TranslateUtilities.translate("gui.message.catalog.name").toUpperCase();
 				this.fontRenderer.drawString(str, LHS + 40 - fontRenderer.getStringWidth(str) / 2, TOP + 1, WHITE);
@@ -921,7 +909,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 
 					int sliderPos = this.zoomTooltipPos;
 					if (zoomTooltipPos != 38) {
-                        sliderPos = Math.min((int)this.ticksSinceSelectionF * 2, 38);
+						sliderPos = Math.min((int) this.ticksSinceSelectionF * 2, 38);
 						this.zoomTooltipPos = sliderPos;
 					}
 
@@ -978,7 +966,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					str = this.renamingString;
 					String str0 = this.renamingString;
 
-                    if ((this.ticksSinceMenuOpenF / 10) % 2 == 0) {
+					if ((this.ticksSinceMenuOpenF / 10) % 2 == 0) {
 						str0 += "_";
 					}
 
@@ -994,7 +982,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 			this.zoomTooltipPos = 0;
 		}
 		if (Loader.isModLoaded("planetprogression")) {
-			CustomCelestialSelection.drawRect(LHS + 1, (height - LHS) - 5, LHS + 500, (height - LHS)- 20, ColorUtil.to32BitColor(255, 0, 0, 0));
+			CustomCelestialSelection.drawRect(LHS + 1, (height - LHS) - 5, LHS + 500, (height - LHS) - 20, ColorUtil.to32BitColor(255, 0, 0, 0));
 			this.fontRenderer.drawString("Important: Want to unlock/see more celestial bodies? Research them via PlanetProgressions Mod", LHS + 5, (height - LHS) - 15, RED);
 		}
 	}
