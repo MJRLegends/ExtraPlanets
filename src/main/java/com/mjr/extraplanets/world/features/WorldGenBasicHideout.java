@@ -9,9 +9,13 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.WorldGenUtilities;
 
+import net.minecraft.block.BlockFurnace;
+import net.minecraft.block.BlockLever;
+import net.minecraft.block.BlockLever.EnumOrientation;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntityChest;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -232,7 +236,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 3, y + 1, z + 5), Blocks.STONE_SLAB.getStateFromMeta(7), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 1, z + 5), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 1, z + 5), Blocks.AIR.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 1, z + 5), Blocks.FURNACE.getStateFromMeta(4), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 1, z + 5), Blocks.FURNACE.getDefaultState().withProperty(BlockFurnace.FACING, EnumFacing.WEST), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 1, z + 5), ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.RED_BLOCK), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 1, z + 5), Blocks.BED.getStateFromMeta(9), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 1, z + 5), Blocks.BED.getStateFromMeta(1), 3);
@@ -246,7 +250,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 3, y + 1, z + 6), Blocks.STONE_SLAB.getStateFromMeta(7), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 1, z + 6), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 1, z + 6), Blocks.AIR.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 1, z + 6), Blocks.FURNACE.getStateFromMeta(4), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 1, z + 6), Blocks.FURNACE.getDefaultState().withProperty(BlockFurnace.FACING, EnumFacing.WEST), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 1, z + 6), ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.RED_BLOCK), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 1, z + 6), Blocks.BED.getStateFromMeta(9), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 1, z + 6), Blocks.BED.getStateFromMeta(1), 3);
@@ -368,7 +372,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 3, y + 2, z + 5), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 2, z + 5), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 2, z + 5), Blocks.AIR.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 2, z + 5), Blocks.FURNACE.getStateFromMeta(4), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 2, z + 5), Blocks.FURNACE.getDefaultState().withProperty(BlockFurnace.FACING, EnumFacing.WEST), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 2, z + 5), ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.RED_BLOCK), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 2, z + 5), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 2, z + 5), Blocks.AIR.getDefaultState(), 3);
@@ -382,7 +386,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 3, y + 2, z + 6), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 2, z + 6), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 2, z + 6), Blocks.AIR.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 2, z + 6), Blocks.FURNACE.getStateFromMeta(4), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 2, z + 6), Blocks.FURNACE.getDefaultState().withProperty(BlockFurnace.FACING, EnumFacing.WEST), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 2, z + 6), ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.RED_BLOCK), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 2, z + 6), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 2, z + 6), Blocks.AIR.getDefaultState(), 3);
@@ -502,7 +506,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 3, y + 3, z + 5), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 3, z + 5), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 3, z + 5), Blocks.AIR.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 3, z + 5), Blocks.FURNACE.getStateFromMeta(4), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 3, z + 5), Blocks.FURNACE.getDefaultState().withProperty(BlockFurnace.FACING, EnumFacing.WEST), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 3, z + 5), ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.RED_BLOCK), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 3, z + 5), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 3, z + 5), Blocks.AIR.getDefaultState(), 3);
@@ -516,7 +520,7 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 3, y + 3, z + 6), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 4, y + 3, z + 6), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 5, y + 3, z + 6), Blocks.AIR.getDefaultState(), 3);
-		world.setBlockState(new BlockPos(x + 6, y + 3, z + 6), Blocks.FURNACE.getStateFromMeta(4), 3);
+		world.setBlockState(new BlockPos(x + 6, y + 3, z + 6), Blocks.FURNACE.getDefaultState().withProperty(BlockFurnace.FACING, EnumFacing.WEST), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 3, z + 6), ExtraPlanets_Blocks.DECORATIVE_BLOCKS2.getDefaultState().withProperty(BlockDecorativeBlocks2.BASIC_TYPE, BlockDecorativeBlocks2.EnumBlockBasic.RED_BLOCK), 3);
 		world.setBlockState(new BlockPos(x + 8, y + 3, z + 6), Blocks.AIR.getDefaultState(), 3);
 		world.setBlockState(new BlockPos(x + 9, y + 3, z + 6), Blocks.AIR.getDefaultState(), 3);
@@ -674,10 +678,10 @@ public class WorldGenBasicHideout extends WorldGenerator {
 		world.setBlockState(new BlockPos(x + 5, y + 4, z + 10), Blocks.STONE_SLAB.getStateFromMeta(7), 3);
 		world.setBlockState(new BlockPos(x + 6, y + 4, z + 10), Blocks.STONE_SLAB.getStateFromMeta(7), 3);
 		world.setBlockState(new BlockPos(x + 7, y + 4, z + 10), Blocks.STONE_SLAB.getStateFromMeta(7), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 3, z + 4), Blocks.LEVER.getStateFromMeta(0), 3);
-		world.setBlockState(new BlockPos(x + 9, y + 3, z + 4), Blocks.LEVER.getStateFromMeta(0), 3);
-		world.setBlockState(new BlockPos(x + 3, y + 3, z + 7), Blocks.LEVER.getStateFromMeta(0), 3);
-		world.setBlockState(new BlockPos(x + 9, y + 3, z + 7), Blocks.LEVER.getStateFromMeta(0), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 3, z + 4), Blocks.LEVER.getDefaultState().withProperty(BlockLever.FACING, EnumOrientation.DOWN_X), 3);
+		world.setBlockState(new BlockPos(x + 9, y + 3, z + 4), Blocks.LEVER.getDefaultState().withProperty(BlockLever.FACING, EnumOrientation.DOWN_X), 3);
+		world.setBlockState(new BlockPos(x + 3, y + 3, z + 7), Blocks.LEVER.getDefaultState().withProperty(BlockLever.FACING, EnumOrientation.DOWN_X), 3);
+		world.setBlockState(new BlockPos(x + 9, y + 3, z + 7), Blocks.LEVER.getDefaultState().withProperty(BlockLever.FACING, EnumOrientation.DOWN_X), 3);
 		return true;
 
 	}
