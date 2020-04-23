@@ -11,6 +11,7 @@ import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -19,14 +20,12 @@ import net.minecraft.block.state.BlockState;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
-import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -124,10 +123,11 @@ public class BlockBasicOberon extends Block implements IDetectableResource, IPla
 
 	@Override
 	public boolean isValueable(IBlockState state) {
-		switch (this.getMetaFromState(state)) {
-		case 3:
-		case 4:
-		case 5:
+		EnumBlockBasic type = state.getValue(BASIC_TYPE);
+		switch (type) {
+		case ORE_IRON:
+		case ORE_TIN:
+		case ORE_COPPER:
 			return true;
 		default:
 			return false;
@@ -153,11 +153,6 @@ public class BlockBasicOberon extends Block implements IDetectableResource, IPla
 	public boolean isTerraformable(World world, BlockPos pos) {
 		IBlockState state = world.getBlockState(pos);
 		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !world.getBlockState(pos.up()).getBlock().isFullCube();
-	}
-
-	@Override
-	public ItemStack getPickBlock(MovingObjectPosition target, World world, BlockPos pos, EntityPlayer player) {
-		return super.getPickBlock(target, world, pos, player);
 	}
 
 	@Override

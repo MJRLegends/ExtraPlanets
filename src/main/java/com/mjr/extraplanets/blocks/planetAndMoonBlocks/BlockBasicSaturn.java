@@ -14,6 +14,7 @@ import micdoodle8.mods.galacticraft.core.Constants;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
 import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -144,12 +145,14 @@ public class BlockBasicSaturn extends Block implements IDetectableResource, IPla
 
 	@Override
 	public boolean isValueable(IBlockState state) {
-		switch (this.getMetaFromState(state)) {
-		case 3:
-		case 4:
-		case 5:
-		case 6:
-		case 12:
+		EnumBlockBasic type = state.getValue(BASIC_TYPE);
+		switch (type) {
+
+		case ORE_IRON:
+		case ORE_TIN:
+		case ORE_COPPER:
+		case ORE_MAGNESIUM:
+		case ORE_SLIME:
 			return true;
 		default:
 			return false;
