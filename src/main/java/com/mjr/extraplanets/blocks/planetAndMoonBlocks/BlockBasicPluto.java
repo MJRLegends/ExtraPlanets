@@ -14,6 +14,7 @@ import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.client.sounds.GCSounds;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
 import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -22,7 +23,6 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -30,7 +30,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -134,11 +133,12 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
 
 	@Override
 	public boolean isValueable(IBlockState state) {
-		switch (this.getMetaFromState(state)) {
-		case 3:
-		case 4:
-		case 5:
-		case 6:
+		EnumBlockBasic type = state.getValue(BASIC_TYPE);
+		switch (type) {
+		case ORE_IRON:
+		case ORE_TIN:
+		case ORE_COPPER:
+		case ORE_TUNGSTEN:
 			return true;
 		default:
 			return false;
@@ -179,11 +179,6 @@ public class BlockBasicPluto extends Block implements IDetectableResource, IPlan
 		IBlockState state = world.getBlockState(pos);
 		IBlockState stateAbove = world.getBlockState(pos.up());
 		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !stateAbove.isFullCube();
-	}
-
-	@Override
-	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-		return super.getPickBlock(state, target, world, pos, player);
 	}
 
 	@Override

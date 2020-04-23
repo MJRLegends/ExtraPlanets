@@ -14,6 +14,7 @@ import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -32,7 +33,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -131,12 +131,13 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
 
 	@Override
 	public boolean isValueable(IBlockState state) {
-		switch (this.getMetaFromState(state)) {
-		case 3:
-		case 4:
-		case 5:
-		case 6:
-		case 7:
+		EnumBlockBasic type = state.getValue(BASIC_TYPE);
+		switch (type) {
+		case ORE_IRON:
+		case ORE_TIN:
+		case ORE_COPPER:
+		case DRIED_OIL:
+		case SHALE_OIL:
 			return true;
 		default:
 			return false;
@@ -163,11 +164,6 @@ public class BlockBasicCallisto extends Block implements IDetectableResource, IP
 		IBlockState state = world.getBlockState(pos);
 		IBlockState stateAbove = world.getBlockState(pos.up());
 		return state.getValue(BASIC_TYPE) == EnumBlockBasic.SURFACE && !stateAbove.isFullCube();
-	}
-
-	@Override
-	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-		return super.getPickBlock(state, target, world, pos, player);
 	}
 
 	@Override
