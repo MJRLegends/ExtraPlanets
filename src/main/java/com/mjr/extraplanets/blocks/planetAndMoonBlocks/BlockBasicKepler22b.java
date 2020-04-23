@@ -11,6 +11,7 @@ import micdoodle8.mods.galacticraft.api.block.IPlantableBlock;
 import micdoodle8.mods.galacticraft.api.block.ITerraformableBlock;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
@@ -19,7 +20,6 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -27,7 +27,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -130,18 +129,18 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 
 	@Override
 	public boolean isValueable(IBlockState state) {
-		switch (this.getMetaFromState(state)) {
-		case 2:
-		case 3:
-		case 4:
-		case 5:
-		case 6:
-		case 7:
-		case 8:
-		case 9:
-		case 10:
-		case 13:
-		case 14:
+		EnumBlockBasic type = state.getValue(BASIC_TYPE);
+		switch (type) {
+		case ORE_IRON:
+		case ORE_TIN:
+		case ORE_COPPER:
+		case ORE_DENSE_COAL:
+		case ORE_BLUE_DIAMOND:
+		case ORE_RED_DIAMOND:
+		case ORE_PURPLE_DIAMOND:
+		case ORE_YELLOW_DIAMOND:
+		case ORE_GREEN_DIAMOND:
+		case ORE_PLATINUM:
 			return true;
 		default:
 			return false;
@@ -167,11 +166,6 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 	@Override
 	public boolean isTerraformable(World world, BlockPos pos) {
 		return false;
-	}
-
-	@Override
-	public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-		return super.getPickBlock(state, target, world, pos, player);
 	}
 
 	@Override
