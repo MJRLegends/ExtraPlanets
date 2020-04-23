@@ -6,13 +6,13 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
-import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
 import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.tile.IMachineSides;
 import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties;
 import micdoodle8.mods.galacticraft.core.tile.IMachineSidesProperties.MachineSidesModel;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
 import micdoodle8.mods.galacticraft.core.util.WorldUtil;
+
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
@@ -56,21 +56,6 @@ public class VehicleCharger extends BlockAdvancedTile implements IShiftDescripti
 	@Override
 	public boolean onMachineActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
 		entityPlayer.openGui(ExtraPlanets.instance, -1, world, pos.getX(), pos.getY(), pos.getZ());
-		return true;
-	}
-
-	@Override
-	public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-		int metadata = getMetaFromState(world.getBlockState(pos));
-		int change = world.getBlockState(pos).getValue(FACING).rotateY().getHorizontalIndex();
-
-		world.setBlockState(pos, this.getStateFromMeta(metadata - (metadata % 4) + change), 3);
-
-		TileEntity te = world.getTileEntity(pos);
-		if (te instanceof TileBaseUniversalElectrical) {
-			((TileBaseUniversalElectrical) te).updateFacing();
-		}
-
 		return true;
 	}
 

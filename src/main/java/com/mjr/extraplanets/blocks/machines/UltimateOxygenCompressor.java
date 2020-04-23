@@ -7,9 +7,9 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import micdoodle8.mods.galacticraft.core.blocks.BlockAdvancedTile;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
-import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
 import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.PropertyEnum;
@@ -69,21 +69,6 @@ public class UltimateOxygenCompressor extends BlockAdvancedTile implements IShif
 	@Override
 	public CreativeTabs getCreativeTabToDisplayOn() {
 		return ExtraPlanets.BlocksTab;
-	}
-
-	@Override
-	public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-		int metadata = getMetaFromState(world.getBlockState(pos));
-		int change = world.getBlockState(pos).getValue(FACING).rotateY().getHorizontalIndex();
-
-		world.setBlockState(pos, this.getStateFromMeta(metadata - (metadata % 4) + change), 3);
-
-		TileEntity te = world.getTileEntity(pos);
-		if (te instanceof TileBaseUniversalElectrical) {
-			((TileBaseUniversalElectrical) te).updateFacing();
-		}
-
-		return true;
 	}
 
 	@Override

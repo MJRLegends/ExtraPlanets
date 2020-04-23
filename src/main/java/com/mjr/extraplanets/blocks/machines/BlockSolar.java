@@ -7,9 +7,9 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 import micdoodle8.mods.galacticraft.api.block.IPartialSealableBlock;
 import micdoodle8.mods.galacticraft.core.blocks.BlockTileGC;
 import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
-import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseUniversalElectrical;
 import micdoodle8.mods.galacticraft.core.items.IShiftDescription;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
@@ -87,9 +87,9 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 			for (int x = -1; x <= 1; x++) {
 				for (int z = -1; z <= 1; z++) {
 					BlockPos posAt = pos.add(y == 2 ? x : 0, y, y == 2 ? z : 0);
-					Block block = world.getBlockState(posAt).getBlock();
+					IBlockState bs = world.getBlockState(posAt); 
 
-					if (block.getMaterial(world.getBlockState(pos)) != Material.AIR && !block.isReplaceable(world, posAt)) {
+                    if (bs.getMaterial() != Material.AIR && !bs.getBlock().isReplaceable(world, pos)){
 						return false;
 					}
 				}
@@ -139,21 +139,6 @@ public class BlockSolar extends BlockTileGC implements IShiftDescription, IParti
 		}
 
 		super.breakBlock(world, pos, state);
-	}
-
-	@Override
-	public boolean onUseWrench(World world, BlockPos pos, EntityPlayer entityPlayer, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
-		int metadata = getMetaFromState(world.getBlockState(pos));
-		int change = world.getBlockState(pos).getValue(FACING).rotateY().getHorizontalIndex();
-
-		world.setBlockState(pos, this.getStateFromMeta(metadata - (metadata % 4) + change), 3);
-
-		TileEntity te = world.getTileEntity(pos);
-		if (te instanceof TileBaseUniversalElectrical) {
-			((TileBaseUniversalElectrical) te).updateFacing();
-		}
-
-		return true;
 	}
 
 	@Override
