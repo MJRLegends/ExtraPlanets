@@ -12,6 +12,8 @@ v0.6.4
 *Removed onUseWrench for machines since GC no longer requires this as of build 247
 *Bunch of code cleanup and removing not needed code
 *Updated Item Models to use GC new method of getClientTimeTotal and not getMilliseconds
+*Removed some not needed meta uses, removed not needed overriding of getPickBlock method
+*Started removing use of getStateFromMeta in world gen structures
 
 v0.6.3
 *Small amount of code cleanup
