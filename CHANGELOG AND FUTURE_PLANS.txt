@@ -5,6 +5,14 @@
 
 
 ===========================================Released Updates===========================================
+v0.6.4
+*Fixed issue #541
+*Updated custom celestial selection screen with GC changes in build 255
+*Changed Galacticraft minimum version to Build 255
+*Removed onUseWrench for machines since GC no longer requires this as of build 247
+*Bunch of code cleanup and removing not needed code
+*Updated Item Models to use GC new method of getClientTimeTotal and not getMilliseconds
+
 v0.6.3
 *Small amount of code cleanup
 *Fixed All rocket models when rendering in item frames
