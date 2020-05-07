@@ -96,7 +96,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 		}
 		if (Config.GENERATE_KEPLER22B_DUNGEONS) {
 			for (int i = 0; i < 1; i++) {
-				WorldGenUtilities.generateStructureWithRandom(new WorldGenKepler22bDungeons(), world, random, this.chunkPos, 16, 256);
+				WorldGenUtilities.generateStructureWithRandom(new WorldGenKepler22bDungeons(), world, random, this.chunkPos, 8, 256);
 			}
 		}
 		if (Config.GENERATE_KEPLER22B_HUTS) {
@@ -105,22 +105,22 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 					if (random.nextInt(200) == 1) {
 						switch (random.nextInt(7)) {
 						case 1:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueHut(), world, random, this.chunkPos, 16);
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenBlueHut(), world, random, this.chunkPos, 8);
 							break;
 						case 2:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenRedHut(), world, random, this.chunkPos, 16);
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenRedHut(), world, random, this.chunkPos, 8);
 							break;
 						case 3:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenPurpleHut(), world, random, this.chunkPos, 16);
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenPurpleHut(), world, random, this.chunkPos, 8);
 							break;
 						case 4:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenYellowHut(), world, random, this.chunkPos, 16);
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenYellowHut(), world, random, this.chunkPos, 8);
 							break;
 						case 5:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenGreenHut(), world, random, this.chunkPos, 16);
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenGreenHut(), world, random, this.chunkPos, 8);
 							break;
 						case 6:
-							WorldGenUtilities.generateStructureWithRandom(new WorldGenBrownHut(), world, random, this.chunkPos, 16);
+							WorldGenUtilities.generateStructureWithRandom(new WorldGenBrownHut(), world, random, this.chunkPos, 8);
 							break;
 						}
 					}
@@ -133,21 +133,21 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 					switch (random.nextInt(7)) {
 					default:
 					case 1:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType1(), world, random, this.chunkPos, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType1(), world, random, this.chunkPos, 8);
 						break;
 					case 2:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType2(), world, random, this.chunkPos, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType2(), world, random, this.chunkPos, 8);
 						break;
 					case 3:
-						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType3(), world, random, this.chunkPos, 16);
+						WorldGenUtilities.generateStructureWithRandom(new WorldGenCandyCaneType3(), world, random, this.chunkPos, 8);
 						break;
 					}
 				}
 				if (random.nextInt(2) == 1) {
-					world.setBlockState(world.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + (random.nextInt(6)), 0, this.chunkPos.getZ() + (random.nextInt(6)))), Blocks.CAKE.getDefaultState());
+					world.setBlockState(world.getTopSolidOrLiquidBlock(new BlockPos((this.chunkPos.getX() + 8) + (random.nextInt(6)), 0, (this.chunkPos.getZ() + 8) + (random.nextInt(6)))), Blocks.CAKE.getDefaultState());
 				}
 				if (Config.GENERATE_KEPLER22B_COOKIE_ROCKS && random.nextInt(100) == 1) {
-					BlockPos blockpos = world.getTopSolidOrLiquidBlock(new BlockPos(this.chunkPos.getX() + (random.nextInt(6)), 0, this.chunkPos.getZ() + (random.nextInt(6))).down(2));
+					BlockPos blockpos = world.getTopSolidOrLiquidBlock(new BlockPos((this.chunkPos.getX() + 8) + (random.nextInt(6)), 0, (this.chunkPos.getX() + 8) + (random.nextInt(6))).down(2));
 					(new WorldGenCookieRocksType1()).generate(world, random, blockpos);
 				}
 				if (random.nextInt(10) == 0) {
