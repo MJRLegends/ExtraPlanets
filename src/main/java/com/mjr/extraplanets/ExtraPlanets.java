@@ -290,6 +290,8 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		RegisterUtilities.registerEventHandler(new Config());
+		
 		// Register Modules
 		ExtraPlanets_Modules.init();
 
