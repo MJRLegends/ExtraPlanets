@@ -10,10 +10,12 @@ import net.minecraft.item.ItemStack;
 
 public class ExtraPlanets_MachineRecipes {
 	private static HashMap<ItemStack, ItemStack> blockSmasherRecipes = new HashMap<>();
-	public static ArrayList<ItemStack> blockSmasherSlotValidItems = new ArrayList<>(1);
+	public static ArrayList<ItemStack> blockSmasherSlotValidInputItems = new ArrayList<>(1);
+	private static ArrayList<ItemStack> blockSmasherSlotValidOutputItems = new ArrayList<>(1);
 
 	private static HashMap<ItemStack, ItemStack> solarEvaporationChamberRecipes = new HashMap<>();
-	public static ArrayList<ItemStack> solarEvaporationChamberSlotValidItems = new ArrayList<>(1);
+	public static ArrayList<ItemStack> solarEvaporationChamberSlotValidInputItems = new ArrayList<>(1);
+	private static ArrayList<ItemStack> solarEvaporationChamberSlotValidOutputItems = new ArrayList<>(1);
 
 	public static void addBlockSmasherRecipe(ItemStack output, ItemStack input) {
 		ExtraPlanets_MachineRecipes.blockSmasherRecipes.put(input, output);
@@ -23,8 +25,10 @@ public class ExtraPlanets_MachineRecipes {
 			return;
 		}
 
-		if (!ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.contains(inputStack))
-			ExtraPlanets_MachineRecipes.blockSmasherSlotValidItems.add(inputStack);
+		if (!ExtraPlanets_MachineRecipes.blockSmasherSlotValidInputItems.contains(inputStack))
+			ExtraPlanets_MachineRecipes.blockSmasherSlotValidInputItems.add(inputStack);
+		if (!ExtraPlanets_MachineRecipes.blockSmasherSlotValidOutputItems.contains(output))
+			ExtraPlanets_MachineRecipes.blockSmasherSlotValidOutputItems.add(output);
 	}
 
 	public static ItemStack getBlockSmasherOutputForInput(ItemStack input) {
@@ -84,6 +88,14 @@ public class ExtraPlanets_MachineRecipes {
 	public static ImmutableMap<ItemStack, ItemStack> getBlockSmasherRecipes() {
 		return ImmutableMap.copyOf(blockSmasherRecipes);
 	}
+	
+	public static boolean isBlockSmasherOutputKnown(ItemStack output) {
+		for(ItemStack item : blockSmasherSlotValidOutputItems) {
+			if(item.getUnlocalizedName().equalsIgnoreCase(output.getUnlocalizedName()))
+				return true;
+		}
+		return false;
+	}
 
 	public static void addSolarEvaporationChamberRecipe(ItemStack output, ItemStack input) {
 		ExtraPlanets_MachineRecipes.solarEvaporationChamberRecipes.put(input, output);
@@ -93,8 +105,10 @@ public class ExtraPlanets_MachineRecipes {
 			return;
 		}
 
-		if (!ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidItems.contains(inputStack))
-			ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidItems.add(inputStack);
+		if (!ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidInputItems.contains(inputStack))
+			ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidInputItems.add(inputStack);
+		if (!ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidOutputItems.contains(output))
+			ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidInputItems.add(output);
 	}
 
 	public static ItemStack getSolarEvaporationChamberOutputForInput(ItemStack input) {
@@ -153,6 +167,14 @@ public class ExtraPlanets_MachineRecipes {
 
 	public static ImmutableMap<ItemStack, ItemStack> getSolarEvaporationChamberRecipes() {
 		return ImmutableMap.copyOf(solarEvaporationChamberRecipes);
+	}
+	
+	public static boolean isSolarEvaporationChamberOutputKnown(ItemStack output) {
+		for(ItemStack item : solarEvaporationChamberSlotValidOutputItems) {
+			if(item.getUnlocalizedName().equalsIgnoreCase(output.getUnlocalizedName()))
+				return true;
+		}
+		return false;
 	}
 
 }

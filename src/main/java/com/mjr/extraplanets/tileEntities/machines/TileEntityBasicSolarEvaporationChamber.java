@@ -149,7 +149,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 			case 0:
 				return ItemElectricBase.isElectricItemCharged(itemStack);
 			case 1:
-				for (ItemStack test : ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidItems) {
+				for (ItemStack test : ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidInputItems) {
 					if (test.isItemEqual(itemStack)) {
 						return true;
 					}
@@ -168,7 +168,7 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 			case 0:
 				return ItemElectricBase.isElectricItemEmpty(itemStack) || !this.shouldPullEnergy();
 			case 2:
-				return itemStack.getItem() == this.producingStack.getItem();
+				return ExtraPlanets_MachineRecipes.isSolarEvaporationChamberOutputKnown(itemStack);
 			default:
 				return false;
 			}
@@ -182,13 +182,13 @@ public class TileEntityBasicSolarEvaporationChamber extends TileBaseElectricBloc
 		case 0:
 			return itemStack != null && ItemElectricBase.isElectricItem(itemStack.getItem());
 		case 1:
-			for (ItemStack test : ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidItems) {
+			for (ItemStack test : ExtraPlanets_MachineRecipes.solarEvaporationChamberSlotValidInputItems) {
 				if (test.isItemEqual(itemStack)) {
 					return true;
 				}
 			}
 		case 2:
-			return itemStack.getItem() == this.producingStack.getItem();
+			return ExtraPlanets_MachineRecipes.isSolarEvaporationChamberOutputKnown(itemStack);
 		}
 		return false;
 	}
