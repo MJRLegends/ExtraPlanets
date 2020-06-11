@@ -147,7 +147,7 @@ public class BiomeDecoratorKepler22b extends BiomeDecorator {
 					world.setBlockState(world.getTopSolidOrLiquidBlock(new BlockPos((this.chunkPos.getX() + 8) + (random.nextInt(6)), 0, (this.chunkPos.getZ() + 8) + (random.nextInt(6)))), Blocks.CAKE.getDefaultState());
 				}
 				if (Config.GENERATE_KEPLER22B_COOKIE_ROCKS && random.nextInt(100) == 1) {
-					BlockPos blockpos = world.getTopSolidOrLiquidBlock(new BlockPos((this.chunkPos.getX() + 8) + (random.nextInt(6)), 0, (this.chunkPos.getX() + 8) + (random.nextInt(6))).down(2));
+					BlockPos blockpos = world.getTopSolidOrLiquidBlock(new BlockPos((this.chunkPos.getX() + 8) + (random.nextInt(6)), 0, (this.chunkPos.getZ() + 8) + (random.nextInt(6))).down(2));
 					(new WorldGenCookieRocksType1()).generate(world, random, blockpos);
 				}
 				if (rand.nextInt(10) == 0) {
