@@ -6,8 +6,11 @@ import java.util.List;
 
 import net.minecraftforge.common.config.ConfigCategory;
 import net.minecraftforge.common.config.ConfigElement;
+import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.config.IConfigElement;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class Config {
 	public static Configuration config = new Configuration(new File(Constants.CONFIG_FILE));
@@ -877,5 +880,13 @@ public class Config {
 		configCelestialMapSettings.setComment("Celestial Map Settings");
 		list.add(new ConfigElement(configCelestialMapSettings));
 		return list;
+	}
+
+	@SubscribeEvent
+	public static void onConfigChanged(final ConfigChangedEvent.OnConfigChangedEvent event) {
+		if (event.getModID().equals(Constants.modID)) {
+			ConfigManager.sync(Constants.modID, net.minecraftforge.common.config.Config.Type.INSTANCE);
+			Config.config.save();
+		}
 	}
 }
