@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v0.6.5
+*Fixed cascading worldgen lag issue with kepler22b
+*Small fix for Kepler22b Biome decorator 
+*Fixed issue #556
+*Fixed issue #545
+*Fixed issue #548
+
 v0.6.4
 *Fixed issue #541
 *Updated custom celestial selection screen with GC changes in build 255
