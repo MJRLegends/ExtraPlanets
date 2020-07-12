@@ -989,7 +989,7 @@ public class Config {
 	@SubscribeEvent
 	public static void onConfigChanged(final ConfigChangedEvent.OnConfigChangedEvent event) {
 		if (event.getModID().equals(Constants.modID)) {
-			ConfigManager.sync(Constants.modID, net.minecraftforge.common.config.Config.Type.INSTANCE);
+			ConfigManager.load(Constants.modID, net.minecraftforge.common.config.Config.Type.INSTANCE);
 			Config.config.save();
 		}
 	}
