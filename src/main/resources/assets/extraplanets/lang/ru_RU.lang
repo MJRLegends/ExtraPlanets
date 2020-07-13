@@ -186,7 +186,7 @@ tile.neptune.ore_zinc.name=Цинкова руда Нептуна
 tile.neptune.ore_blue_gem.name=Руда синего драгоценного камня Нептуна
 tile.neptune.stone_bricks.name=Каменные кирпичи Нептуна
 tile.neptune.zinc_block.name=Цинковый блок
-tile.neptune.blue_gem_block.name=Блок синего драгоценног окамня Нептуна
+tile.neptune.blue_gem_block.name=Блок синего драгоценного камня Нептуна
 tile.neptune.dungeon_brick.name=Кирпич сокровищницы Нептуна
 
 tile.pluto.surface.name=Поверхность Плутона
@@ -439,15 +439,15 @@ tile.ultimate_fuel_loader.name=Максимальный загрузчик то�
 tile.vehicle_charger.name=Зарядное устройство для транспорта
 tile.basic_purifier.name=Базовый очиститель
 tile.basic_densifier.name=Базовый уплотнитель
-tile.basic_decontamination_unit.name=Базовый оббезараживающий блок
-tile.basic_decontamination_unit_fake_block.name=Базовый оббезараживающий блок
+tile.basic_decontamination_unit.name=Базовый обеззараживающий блок
+tile.basic_decontamination_unit_fake_block.name=Базовый обеззараживающий блок
 
 tile.advanced_fuel_loader.description=После подключения к стартовой площадке Топливный загрузчик позволит топливу проходить в подключенную ракету или другое транспортное средство.
 tile.ultimate_fuel_loader.description=После подключения к стартовой площадке Топливный загрузчик позволит топливу проходить в подключенную ракету или другое транспортное средство.
 tile.advanced_refinery.description=Нефтеперерабатывающий завод будет использовать нефть и энергию, и выведет топливо для ракет и транспортных средств.
 tile.ultimate_refinery.description=Нефтеперерабатывающий завод будет использовать нефть и энергию, и выведет топливо для ракет и транспортных средств.
-tile.basic_decrystallizer.description=Используется для превращения иодированной соли в кристаллизованную воду
-tile.basic_crystallizer.description=Используется для превращения кристаллизированнной воды в иодированную соль
+tile.basic_decrystallizer.description=Используется для превращения йодированной соли в кристаллизованную воду
+tile.basic_crystallizer.description=Используется для превращения кристаллизованной воды в йодированную соль
 tile.basic_smasher.description=Используется для разбивания блоков на куски
 tile.basic_chemical_injector.description=Используется для объединения блоков/предметов химически
 tile.basic_solar_evaporation_chamber.description=Используется для подачи входного ресурса на испарение
@@ -474,7 +474,7 @@ container.basic.solar.evaporation.chamber.name=Базовая солнечная
 container.vehicle.charger.name=Зарядное устройство для транспорта
 container.basic.purifier.name=Очиститель
 container.basic.densifier.name=Базовый уплотнитель
-container.basic.decontamination.unit.name=Базовый оббезараживающий блок
+container.basic.decontamination.unit.name=Базовый обеззараживающий блок
 
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=Бак с жидкой кристаллической водой
@@ -495,7 +495,7 @@ gui.message.power.message.name=Заряд
 gui.button.loadpower.name=Начать зарядку
 gui.powered.inv.name=Инвентарь / Заряд
 gui.status.purifiering.name=Очистка
-gui.radioactive_water_tank.desc.4=Бак с радиоктивной водой
+gui.radioactive_water_tank.desc.4=Бак с радиоактивной водой
 gui.message.radioactive_water.name=Радиоактивная вода
 gui.infected_water_tank.desc.4=Бак с зараженной водой
 gui.message.infected_water.name=Зараженная вода
@@ -620,7 +620,7 @@ gui.module.test.name=Тестовый модуль
 gui.module.pre_launch_checklist.name=Предконтрольный список для запуска
 gui.module.nasa_workbench.name=Портативный верстак NASA
 gui.module.oxygen_tank_switch.name=Автосмена кислородного резервуара
-gui.module.auto_space_gear_equip.name=Автоэкипировка космического снанряжения
+gui.module.auto_space_gear_equip.name=Автоэкипировка космического снаряжения
 
 gui.module.sensor_glasses.desc=Функции такие же, как и сенсорные очки Galacticraft
 gui.module.no_fall_damage.desc=Удаляет урон от падения игрока
@@ -672,10 +672,10 @@ tile.candy_blocks_horizontal.candy_cane_black_horizontal.name=Чёрный ле�
 tile.cake_blocks.cake_block.name=Блок кекса
 tile.cake_blocks.cake_block_red_velvet.name=Красный бархатный блок кекса
 tile.cake_blocks.cake_block_chocolate.name=Шоколадный блок кекса
-tile.cake_blocks.white_icing_red_dots.name=Белое облеленение с красными точками
-tile.cake_blocks.white_icing_green_dots.name=Белое облеленение с зелёными точками
-tile.cake_blocks.white_icing_pink_dots.name=Белое облеленение с розовыми точками
-tile.cake_blocks.white_icing_orange_dots.name=Белое облеленение с оранжевыми точками
+tile.cake_blocks.white_icing_red_dots.name=Белая глазурь с красными точками
+tile.cake_blocks.white_icing_green_dots.name=Белая глазурь с зелёными точками
+tile.cake_blocks.white_icing_pink_dots.name=Белая глазурь с розовыми точками
+tile.cake_blocks.white_icing_orange_dots.name=Белая глазурь с оранжевыми точками
 tile.cake_blocks.cookie_rocks.name=Каменное печенье
 
 tile.white_sugar_cane.name=Блок белого сахарного тростника
@@ -939,7 +939,7 @@ item.zinc_hoe.name=Цинковая мотыга
 item.zinc_shovel.name=Цинковая лопата
 item.uranium_pickaxe.name=Урановая кирка
 item.uranium_axe.name=Урановый топор
-item.uranium_sword.name=Ураноый меч
+item.uranium_sword.name=Урановый меч
 item.uranium_hoe.name=Урановая мотыга
 item.uranium_shovel.name=Урановая лопата
 item.blue_diamond_pickaxe.name=Кирка из синего алмаза
@@ -1197,7 +1197,7 @@ item.module_items.space_gear_controller.name=Контроллер космиче
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Очень большой кислородный баллон
-item.oxygen_tank_extremely_heavy_full.name=Черезвычайно большой кислородный баллон
+item.oxygen_tank_extremely_heavy_full.name=Чрезвычайно большой кислородный баллон
 
 item.oxygen_tank_light_full_black.name=Лёгкий кислородный баллон
 item.oxygen_tank_light_full_red.name=Лёгкий кислородный баллон
@@ -1248,7 +1248,7 @@ item.oxygen_tank_heavy_full_orange.name=Тяжёлый кислородный б
 item.oxygen_tank_heavy_full_white.name=Тяжёлый кислородный баллон
 
 #Radiation Items
-item.iodide_salt.name=Иодированная соль
+item.iodide_salt.name=Йодированная соль
 item.potassium_iodide.name=Иодид калия
 item.potassium.name=Калий
 item.potash_shards.name=Осколок калия
@@ -1516,7 +1516,7 @@ tile.veuns.dungeon_brick.name=Кирпич сокровищницы Венеры
 tile.glowstone_fluid.name=Жидкая светящиеся пыль
 tile.magma_fluid.name=Жидкая магма
 tile.nitrogen_fluid.name=Жидкий азот
-tile.frozen_water_fluid.name=Замёрзшая аожа
+tile.frozen_water_fluid.name=Замёрзшая вожа
 tile.salt_fluid.name=Жидкая кристаллическая вода
 tile.radioactive_water_fluid.name=Радиоактивная вода
 tile.infected_water_fluid.name=Заражённая вода
@@ -1527,15 +1527,15 @@ tile.liquid_chocolate_fluid.name=Жидкий шоколад
 tile.liquid_caramel_fluid.name=Жидкая карамель
 
 #Planet Blocks Slabs
-tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Полублок из камня Меркурия
-tile.ExtraPlanets_venusStoneBlockhalfslab.name=Полублок из камня Венеры
-tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Полублок из камня Цереры
-tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Полублок из камня Юпитера
-tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Полублок из камня Сатурна
-tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Полублок из камня Урана
-tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Полублок из камня Нептуна
-tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Полублок из камня Плутона
-tile.ExtraPlanets_erisStoneBlockhalfslab.name=Полублок из камня Эриды
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Плита из камня Меркурия
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=Плита из камня Венеры
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Плита из камня Цереры
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Плита из камня Юпитера
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Плита из камня Сатурна
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Плита из камня Урана
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Плита из камня Нептуна
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Плита из камня Плутона
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=Плита из камня Эриды
 
 #Planet Blocks Stairs
 tile.mercuryStoneStairs.name=Ступеньки из камня Меркурия
@@ -1559,11 +1559,11 @@ tile.plutoStoneBrickStairs.name=Ступеньки из кирпича сокр�
 tile.erisStoneBrickStairs.name=Ступеньки из кирпича сокровищницы Эриды
 
 #Dungeon Bricks Slabs
-tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Полублок из кирпича сокровищницы Венеры
-tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Полублок из кирпича сокровищницы Юпитера
-tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Полублок из кирпича сокровищницы Сатурна
-tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Полублок из кирпича сокровищницы Урана
-tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Полублок из кирпича сокровищницы Нептуна
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Плита из кирпича сокровищницы Венеры
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Плита из кирпича сокровищницы Юпитера
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Плита из кирпича сокровищницы Сатурна
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Плита из кирпича сокровищницы Урана
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Плита из кирпича сокровищницы Нептуна
 
 #Dungeon Bricks Stairs
 tile.venusDungeonBrickStoneStairs.name=Ступеньки из кирпича сокровищницы Венеры
@@ -1578,7 +1578,7 @@ planet.Venus=Венера
 planet.VenusEP=Венера 2.0
 
 #Other Blocks
-tile.slime_block.name=Слизневый блок
+tile.slime_block.name=Блок слизи
 tile.deimos.ore_lead.name=Свинцовая руда Деймоса
 tile.phobos.ore_lead.name=Свинцовая руда Фобоса
 
@@ -1606,7 +1606,7 @@ item.key.T6_eris.name=Ключ от подземелья 6-го уровня
 
 #Thermal Paddings
 item.tier2_thermal_helm.name=Термозащитный шлем 2-го уровня
-item.tier2_thermal_chestplate.name=Термозащитный нагрудник 2-го кровня
+item.tier2_thermal_chestplate.name=Термозащитный нагрудник 2-го уровня
 item.tier2_thermal_leggings.name=Термозащитные поножи 2-го уровня
 item.tier2_thermal_boots.name=Термозащитные ботинки 2-го уровня
 
