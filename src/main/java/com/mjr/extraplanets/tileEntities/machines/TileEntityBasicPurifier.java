@@ -141,7 +141,7 @@ public class TileEntityBasicPurifier extends TileBaseElectricBlockWithInventory 
 			return false;
 		else if (this.getInventory().get(4).getItem() != ExtraPlanets_Items.IODIDE_SALT)
 			return false;
-		else if (this.getInventory().get(4).getCount() <= 6)
+		else if (this.getInventory().get(4).getCount() < 6)
 			return false;
 		else
 			return true;
