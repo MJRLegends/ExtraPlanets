@@ -49,7 +49,7 @@ public class ItemBasicItem extends Item {
 			else if (itemStack.getItem() == ExtraPlanets_Items.ANTI_RADIATION) {
 				String text = TranslateUtilities.translate("anti_radiation.desc");
 				if(text.contains("{PERCENT}"))
-					text.replace("{PERCENT}", Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%");
+					text = text.replace("{PERCENT}", Config.RADIATION_ANTI_RAD_REDUCE_AMOUNT + "%");
 				list.add(EnumColor.YELLOW + text);
 			}
 		}
