@@ -236,7 +236,7 @@ public class SkyProviderOberon extends IRenderHandler {
 		tessellator1.draw();
 
 		// Render earth
-		f10 = 0.5F;
+		f10 = (sunSize * 1.5F) * 0.25F;
 		GL11.glScalef(0.6F, 0.6F, 0.6F);
 		GL11.glRotatef(40.0F, 0.0F, 0.0F, 1.0F);
 		GL11.glRotatef(200F, 1.0F, 0.0F, 0.0F);
