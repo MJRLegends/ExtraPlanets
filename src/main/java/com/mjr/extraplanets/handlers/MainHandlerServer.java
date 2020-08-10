@@ -37,6 +37,7 @@ import micdoodle8.mods.galacticraft.core.dimension.WorldProviderMoon;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderSpaceStation;
 import micdoodle8.mods.galacticraft.core.entities.EntityLanderBase;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerHandler.ThermalArmorEvent;
+import micdoodle8.mods.galacticraft.core.util.CompatibilityManager;
 import micdoodle8.mods.galacticraft.core.util.OxygenUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.dimension.WorldProviderAsteroids;
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
@@ -318,7 +319,7 @@ public class MainHandlerServer {
 		}
 	}
 
-	public boolean isValidSpaceSuit(ItemStack helmet, ItemStack chest, ItemStack leggins, ItemStack boots, List<String> list, boolean pressure) {
+	public boolean isValidSpaceSuit(EntityPlayer player, ItemStack helmet, ItemStack chest, ItemStack leggins, ItemStack boots, List<String> list, boolean pressure) {
 		// Check for slot filled
 		if (helmet == ItemStack.EMPTY)
 			return false;
@@ -358,6 +359,8 @@ public class MainHandlerServer {
 			return true;
 		else {
 			// Mod Compact
+			if(CompatibilityManager.isAndroid(player))
+				return true;
 			if (Loader.isModLoaded("powersuits")) {
 				if (pressure) {
 					if(!validHelmet)validHelmet = MachineMusePowersuitsCompatibility.isPressureModuleInstalled(helmet);
@@ -428,7 +431,7 @@ public class MainHandlerServer {
 			ItemStack leggins = playerMP.inventory.armorInventory.get(1);
 			ItemStack boots = playerMP.inventory.armorInventory.get(0);
 
-			if (!isValidSpaceSuit(helmet, chest, leggins, boots, list, true)) {
+			if (!isValidSpaceSuit(playerMP, helmet, chest, leggins, boots, list, true)) {
 				float tempLevel = amount;
 				tempLevel = (tempLevel / 100) * 8;
 				if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE)
@@ -458,7 +461,7 @@ public class MainHandlerServer {
 		ItemStack chest = playerMP.inventory.armorInventory.get(2);
 		ItemStack leggins = playerMP.inventory.armorInventory.get(1);
 		ItemStack boots = playerMP.inventory.armorInventory.get(0);
-		if (!isValidSpaceSuit(helmet, chest, leggins, boots, list, false)) {
+		if (!isValidSpaceSuit(playerMP, helmet, chest, leggins, boots, list, false)) {
 			damageModifer = 0.1;
 			doDamage = true;
 		} else {
