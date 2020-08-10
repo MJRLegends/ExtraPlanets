@@ -102,7 +102,7 @@ public class ItemBasicItem extends Item {
 					PlayerUtilties.sendMessage(entityplayer, "" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
 							+ Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "% " + TranslateUtilities.translate("gui.radiation.reduced.message.2"));
 					PlayerUtilties.sendMessage(entityplayer,
-							"" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
+							"" + TextFormatting.AQUA + TextFormatting.BOLD + entityplayer.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "/100");
 				}
 			}
 

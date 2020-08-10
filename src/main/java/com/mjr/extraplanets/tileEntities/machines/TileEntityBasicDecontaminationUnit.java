@@ -72,7 +72,7 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlockWit
 							PlayerUtilties.sendMessage(player, "" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
 									+ Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT + "%");
 							PlayerUtilties.sendMessage(player,
-									"" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "%");
+									"" + TextFormatting.AQUA + TextFormatting.BOLD + player.getName() + TextFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "/100");
 						}
 					}
 				} else if (this.ticks % 40 == 0)
