@@ -5,6 +5,11 @@
 
 
 ===========================================Released Updates===========================================
+v0.6.6
+*Updated ru_RU.lang (Thanks to Romz24)
+*Fixed issue #568
+*Fixed issue #569
+
 v0.6.5
 *Fixed cascading worldgen lag issue with kepler22b
 *Small fix for Kepler22b Biome decorator 
