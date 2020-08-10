@@ -2,6 +2,7 @@ package com.mjr.extraplanets.client.handlers;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.api.prefabs.client.SkyProviderCustomOrbit;
 import com.mjr.extraplanets.moons.Callisto.SkyProviderCallisto;
 import com.mjr.extraplanets.moons.Callisto.WorldProviderCallisto;
 import com.mjr.extraplanets.moons.Deimos.SkyProviderDeimos;
@@ -277,8 +278,8 @@ public class SkyProviderHandler {
 			// Space Stations
 			if (world.provider instanceof WorldProviderMercuryOrbit) {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
-					SkyProviderOrbit sky = new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"), false, true);
-					WorldProviderOverworldOrbit provider = (WorldProviderOverworldOrbit) world.provider;
+					SkyProviderCustomOrbit sky = new SkyProviderCustomOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mercury.png"), false, true, WorldProviderMercuryOrbit.getSunSize());
+					WorldProviderMercuryOrbit provider = (WorldProviderMercuryOrbit) world.provider;
 					provider.setSpinDeltaPerTick(provider.getSpinManager().getSpinRate());
 					world.provider.setSkyRenderer(sky);
 				}
@@ -289,12 +290,8 @@ public class SkyProviderHandler {
 			}
 			if (world.provider instanceof WorldProviderVenusOrbit) {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
-					world.provider.setSkyRenderer(new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/venus.png"), false, true));
-					((SkyProviderOrbit) world.provider.getSkyRenderer()).spinDeltaPerTick = ((WorldProviderOverworldOrbit) world.provider).getSpinManager().getSpinRate();
-					micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStatsClient stats = player.getCapability(micdoodle8.mods.galacticraft.core.entities.player.GCCapabilities.GC_STATS_CLIENT_CAPABILITY, null);
-					stats.setInFreefallFirstCheck(false);
-					SkyProviderOrbit sky = new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/venus.png"), false, true);
-					WorldProviderOverworldOrbit provider = (WorldProviderOverworldOrbit) world.provider;
+					SkyProviderCustomOrbit sky = new SkyProviderCustomOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/venus.png"), false, true, WorldProviderVenusOrbit.getSunSize());
+					WorldProviderOverworldOrbit provider = (WorldProviderVenusOrbit) world.provider;
 					provider.setSpinDeltaPerTick(provider.getSpinManager().getSpinRate());
 					world.provider.setSkyRenderer(sky);
 				}
@@ -305,8 +302,8 @@ public class SkyProviderHandler {
 			}
 			if (world.provider instanceof WorldProviderCeresOrbit) {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
-					SkyProviderOrbit sky = new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"), false, true);
-					WorldProviderOverworldOrbit provider = (WorldProviderOverworldOrbit) world.provider;
+					SkyProviderCustomOrbit sky = new SkyProviderCustomOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/ceres.png"), false, true, WorldProviderCeresOrbit.getSunSize());
+					WorldProviderOverworldOrbit provider = (WorldProviderCeresOrbit) world.provider;
 					provider.setSpinDeltaPerTick(provider.getSpinManager().getSpinRate());
 					world.provider.setSkyRenderer(sky);
 				}
@@ -317,8 +314,8 @@ public class SkyProviderHandler {
 			}
 			if (world.provider instanceof WorldProviderMarsOrbit) {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
-					SkyProviderOrbit sky = new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mars.png"), false, true);
-					WorldProviderOverworldOrbit provider = (WorldProviderOverworldOrbit) world.provider;
+					SkyProviderCustomOrbit sky = new SkyProviderCustomOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mars.png"), false, true, WorldProviderMarsOrbit.getSunSize());
+					WorldProviderOverworldOrbit provider = (WorldProviderMarsOrbit) world.provider;
 					provider.setSpinDeltaPerTick(provider.getSpinManager().getSpinRate());
 					world.provider.setSkyRenderer(sky);
 				}
@@ -329,8 +326,8 @@ public class SkyProviderHandler {
 			}
 			if (world.provider instanceof WorldProviderJupiterOrbit) {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
-					SkyProviderOrbit sky = new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/jupiter.png"), false, true);
-					WorldProviderOverworldOrbit provider = (WorldProviderOverworldOrbit) world.provider;
+					SkyProviderCustomOrbit sky = new SkyProviderCustomOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/jupiter.png"), false, true, WorldProviderJupiterOrbit.getSunSize());
+					WorldProviderOverworldOrbit provider = (WorldProviderJupiterOrbit) world.provider;
 					provider.setSpinDeltaPerTick(provider.getSpinManager().getSpinRate());
 					world.provider.setSkyRenderer(sky);
 				}
@@ -341,8 +338,8 @@ public class SkyProviderHandler {
 			}
 			if (world.provider instanceof WorldProviderSaturnOrbit) {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
-					SkyProviderOrbit sky = new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"), false, true);
-					WorldProviderOverworldOrbit provider = (WorldProviderOverworldOrbit) world.provider;
+					SkyProviderCustomOrbit sky = new SkyProviderCustomOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"), false, true, WorldProviderSaturnOrbit.getSunSize());
+					WorldProviderOverworldOrbit provider = (WorldProviderSaturnOrbit) world.provider;
 					provider.setSpinDeltaPerTick(provider.getSpinManager().getSpinRate());
 					world.provider.setSkyRenderer(sky);
 				}
@@ -353,8 +350,8 @@ public class SkyProviderHandler {
 			}
 			if (world.provider instanceof WorldProviderUranusOrbit) {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
-					SkyProviderOrbit sky = new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"), false, true);
-					WorldProviderOverworldOrbit provider = (WorldProviderOverworldOrbit) world.provider;
+					SkyProviderCustomOrbit sky = new SkyProviderCustomOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"), false, true, WorldProviderUranusOrbit.getSunSize());
+					WorldProviderOverworldOrbit provider = (WorldProviderUranusOrbit) world.provider;
 					provider.setSpinDeltaPerTick(provider.getSpinManager().getSpinRate());
 					world.provider.setSkyRenderer(sky);
 				}
@@ -365,8 +362,8 @@ public class SkyProviderHandler {
 			}
 			if (world.provider instanceof WorldProviderNeptuneOrbit) {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
-					SkyProviderOrbit sky = new SkyProviderOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"), false, true);
-					WorldProviderOverworldOrbit provider = (WorldProviderOverworldOrbit) world.provider;
+					SkyProviderCustomOrbit sky = new SkyProviderCustomOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"), false, true, WorldProviderNeptuneOrbit.getSunSize());
+					WorldProviderOverworldOrbit provider = (WorldProviderNeptuneOrbit) world.provider;
 					provider.setSpinDeltaPerTick(provider.getSpinManager().getSpinRate());
 					world.provider.setSkyRenderer(sky);
 				}
@@ -377,8 +374,8 @@ public class SkyProviderHandler {
 			}
 			if (world.provider instanceof WorldProviderPlutoOrbit) {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
-					SkyProviderOrbit sky = new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"), false, true);
-					WorldProviderOverworldOrbit provider = (WorldProviderOverworldOrbit) world.provider;
+					SkyProviderCustomOrbit sky = new SkyProviderCustomOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/pluto.png"), false, true, WorldProviderPlutoOrbit.getSunSize());
+					WorldProviderOverworldOrbit provider = (WorldProviderPlutoOrbit) world.provider;
 					provider.setSpinDeltaPerTick(provider.getSpinManager().getSpinRate());
 					world.provider.setSkyRenderer(sky);
 				}
@@ -389,8 +386,8 @@ public class SkyProviderHandler {
 			}
 			if (world.provider instanceof WorldProviderErisOrbit) {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
-					SkyProviderOrbit sky = new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"), false, true);
-					WorldProviderOverworldOrbit provider = (WorldProviderOverworldOrbit) world.provider;
+					SkyProviderCustomOrbit sky = new SkyProviderCustomOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/eris.png"), false, true, WorldProviderErisOrbit.getSunSize());
+					WorldProviderOverworldOrbit provider = (WorldProviderErisOrbit) world.provider;
 					provider.setSpinDeltaPerTick(provider.getSpinManager().getSpinRate());
 					world.provider.setSkyRenderer(sky);
 				}
@@ -401,8 +398,8 @@ public class SkyProviderHandler {
 			}
 			if (world.provider instanceof WorldProviderKepler22bOrbit) {
 				if (world.provider.getSkyRenderer() == null || world.provider.getSkyRenderer() instanceof SkyProviderOrbit) {
-					SkyProviderOrbit sky = new SkyProviderOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"), false, true);
-					WorldProviderOverworldOrbit provider = (WorldProviderOverworldOrbit) world.provider;
+					SkyProviderCustomOrbit sky = new SkyProviderCustomOrbit(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/kepler22b.png"), false, true, WorldProviderKepler22bOrbit.getSunSize());
+					WorldProviderOverworldOrbit provider = (WorldProviderKepler22bOrbit) world.provider;
 					provider.setSpinDeltaPerTick(provider.getSpinManager().getSpinRate());
 					world.provider.setSkyRenderer(sky);
 				}
