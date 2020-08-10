@@ -5,6 +5,11 @@
 
 
 ===========================================Released Updates===========================================
+v1.0.0
+*Updated ru_RU.lang (Thanks to Romz24)
+*Fixed issue #568
+*Fixed issue #569
+
 v0.9.9
 *Bunch of code cleanup and removing not needed code
 *Removed some not needed meta uses, removed not needed overriding of getPickBlock method
