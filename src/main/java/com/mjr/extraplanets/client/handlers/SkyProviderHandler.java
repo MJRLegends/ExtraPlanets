@@ -35,6 +35,8 @@ import com.mjr.extraplanets.planets.Jupiter.CloudRenderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.SkyProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.WorldProviderJupiter;
 import com.mjr.extraplanets.planets.Jupiter.spacestation.WorldProviderJupiterOrbit;
+import com.mjr.extraplanets.planets.Kepler22b.SkyProviderKepler22b;
+import com.mjr.extraplanets.planets.Kepler22b.WorldProviderKepler22b;
 import com.mjr.extraplanets.planets.Kepler22b.spacestation.WorldProviderKepler22bOrbit;
 import com.mjr.extraplanets.planets.Mercury.SkyProviderMercury;
 import com.mjr.extraplanets.planets.Mercury.WorldProviderMercury;
@@ -59,6 +61,7 @@ import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.client.CloudRenderer;
 import micdoodle8.mods.galacticraft.core.client.SkyProviderOrbit;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.multiplayer.WorldClient;
@@ -156,15 +159,15 @@ public class SkyProviderHandler {
 					world.provider.setCloudRenderer(new CloudRenderer());
 				}
 			}
-			// if (world.provider instanceof WorldProviderKepler22b) {
-			// if (world.provider.getSkyRenderer() == null) {
-			// world.provider.setSkyRenderer(new SkyProviderKepler22b((IGalacticraftWorldProvider) world.provider));
-			// }
-			//
-			// if (world.provider.getCloudRenderer() == null) {
-			// world.provider.setCloudRenderer(new CloudRenderer());
-			// }
-			// }
+			if (world.provider instanceof WorldProviderKepler22b) {
+				if (world.provider.getSkyRenderer() == null) {
+					world.provider.setSkyRenderer(new SkyProviderKepler22b((IGalacticraftWorldProvider) world.provider));
+				}
+
+//				if (world.provider.getCloudRenderer() == null) {
+//					world.provider.setCloudRenderer(new CloudRenderer());
+//				}
+			}
 			// Moons
 			if (world.provider instanceof WorldProviderCallisto) {
 				if (world.provider.getSkyRenderer() == null) {
