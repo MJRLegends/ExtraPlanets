@@ -5,6 +5,16 @@
 
 
 ===========================================Released Updates===========================================
+v1.3.4
+*Removed some not needed meta uses, removed not needed overriding of getPickBlock method
+*Started removing use of getStateFromMeta in world gen structures
+*Fixed cascading worldgen lag issue with kepler22b
+*Small fix for Kepler22b Biome decorator 
+*Fixed issue #545
+*Updated ru_RU.lang (Thanks to Romz24)
+*Fixed issue #568
+*Fixed issue #569
+
 v1.3.3
 *Small amount of code cleanup
 *Fixed All rocket models when rendering in item frames
