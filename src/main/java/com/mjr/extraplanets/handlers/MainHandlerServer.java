@@ -501,6 +501,28 @@ public class MainHandlerServer {
 			if (tick % 30 == 0) {
 				this.sendSolarRadiationPacket(player, stats);
 			}
+			if (tick % 30 == 0) {
+				if(Config.RADIATION_SLEEPING_REDUCE_AMOUNT != 0) {
+					double temp = stats.getRadiationLevel();
+					double level = (temp * (Config.RADIATION_OVERTIME_REDUCE_AMOUNT * 1.5F)) / 100;
+					if (level <= 0)
+						stats.setRadiationLevel(0);
+					else {
+						stats.setRadiationLevel(stats.getRadiationLevel() - level);
+					}
+				}
+			}
+		}
+		if (tick % 30 == 0) {
+			if(Config.RADIATION_SLEEPING_REDUCE_AMOUNT != 0) {
+				double temp = stats.getRadiationLevel();
+				double level = (temp * Config.RADIATION_OVERTIME_REDUCE_AMOUNT) / 100;
+				if (level <= 0)
+					stats.setRadiationLevel(0);
+				else {
+					stats.setRadiationLevel(stats.getRadiationLevel() - level);
+				}
+			}
 		}
 	}
 

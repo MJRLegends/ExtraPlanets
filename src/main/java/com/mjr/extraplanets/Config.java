@@ -341,6 +341,7 @@ public class Config {
 	public static boolean GC_RADIATION;
 	public static boolean GC_PRESSURE;
 	public static boolean HIDE_RADIATION_PRESSURE_HUD;
+	public static double RADIATION_OVERTIME_REDUCE_AMOUNT;
 	public static int RADIATION_SLEEPING_REDUCE_AMOUNT;
 	public static int RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT;
 	public static int RADIATION_ANTI_RAD_REDUCE_AMOUNT;
@@ -848,6 +849,7 @@ public class Config {
 		HIDE_RADIATION_PRESSURE_HUD = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Hide Pressure & Radiation HUD Bars when not needed", true,
 				"Will hide the Pressure & Radiation HUD Bars for Planets & Moons & Space Stations that have disabled Pressure and Radiation or a value of 0").getBoolean(true);
 
+		RADIATION_OVERTIME_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation weared off over time", 0.025, "[range: -2147483647 ~ 2147483647, default: 0.025]").getDouble();
 		RADIATION_SLEEPING_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Sleeping", 5, "[range: -2147483647 ~ 2147483647, default: 5]").getInt();
 		RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Decontamination Unit", 10, "[range: -2147483647 ~ 2147483647, default: 10]").getInt();
 		RADIATION_ANTI_RAD_REDUCE_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation reduced by Anti Rad Drinks", 50, "[range: -2147483647 ~ 2147483647, default: 50]").getInt();
