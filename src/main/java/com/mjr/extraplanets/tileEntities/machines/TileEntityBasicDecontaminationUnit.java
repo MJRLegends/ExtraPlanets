@@ -72,8 +72,8 @@ public class TileEntityBasicDecontaminationUnit extends TileBaseElectricBlock im
 							stats.setRadiationLevel(stats.getRadiationLevel() - level);
 							PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
 									+ Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT + "%");
-							PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
-									+ (int) stats.getRadiationLevel() + "%");
+							PlayerUtilties.sendMessage(player,
+									"" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "/100");
 						}
 					}
 				} else if (this.ticks % 40 == 0)

@@ -95,8 +95,8 @@ public class ItemBasicItem extends Item {
 						stats.setRadiationLevel(level);
 					PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
 							+ Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "% " + TranslateUtilities.translate("gui.radiation.reduced.message.2"));
-					PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
-							+ (int) stats.getRadiationLevel() + "%");
+					PlayerUtilties.sendMessage(player,
+							"" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "/100");
 				}
 			}
 
