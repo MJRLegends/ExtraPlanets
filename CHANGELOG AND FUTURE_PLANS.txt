@@ -5,6 +5,10 @@
 
 
 ===========================================Released Updates===========================================
+v1.0.2
+*Fixed a bug where if MachineMusePowersuits mod is installed space suit got picked up as 0 tier in radiation calculation
+*Fixed gained radiation going negative in certain instances
+
 v1.0.1
 *Allow MatterOverdrive android to bypass radiation/pressure systems #522
 *Fixed issue #583 - Suns smaller than should be on Moons
