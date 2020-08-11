@@ -20,8 +20,8 @@ public class BiomeDecoratorCallisto extends BiomeDecoratorSpace {
 
 	public BiomeDecoratorCallisto() {
 		if (Config.GENERATE_ORES_CALLISTO) {
-			this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CALLISTO_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.CALLISTO_BLOCKS, 2);
-			this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CALLISTO_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.CALLISTO_BLOCKS, 2);
+			this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CALLISTO_BLOCKS, 10, 5, true, ExtraPlanets_Blocks.CALLISTO_BLOCKS, 2);
+			this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CALLISTO_BLOCKS, 10, 4, true, ExtraPlanets_Blocks.CALLISTO_BLOCKS, 2);
 			this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CALLISTO_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.CALLISTO_BLOCKS, 2);
 		}
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.CALLISTO_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.CALLISTO_BLOCKS, 2);
@@ -43,8 +43,8 @@ public class BiomeDecoratorCallisto extends BiomeDecoratorSpace {
 	@Override
 	protected void decorate() {
 		if (Config.GENERATE_ORES_CALLISTO) {
-			this.generateOre(26, this.copperGen, 0, 60);
-			this.generateOre(23, this.tinGen, 0, 60);
+			this.generateOre(28, this.copperGen, 0, 60);
+			this.generateOre(28, this.tinGen, 0, 60);
 			this.generateOre(20, this.ironGen, 0, 64);
 		}
 		this.generateOre(15, this.gravelGen, 0, 80);
