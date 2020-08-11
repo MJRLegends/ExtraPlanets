@@ -147,7 +147,7 @@ public class MainHandlerClient {
 				}
 			}
 
-			if (Config.USE_CUSTOM_CELESTAIAL_SELECTION && MCUtilities.getClient().currentScreen instanceof CustomCelestialSelection) {
+			if (Config.USE_CUSTOM_CELESTIAL_SELECTION && MCUtilities.getClient().currentScreen instanceof CustomCelestialSelection) {
 				player.motionY = 0;
 			}
 
@@ -385,7 +385,7 @@ public class MainHandlerClient {
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public void onGuiOpenEvent(GuiOpenEvent event) {
-		if (Config.USE_CUSTOM_CELESTAIAL_SELECTION) {
+		if (Config.USE_CUSTOM_CELESTIAL_SELECTION) {
 			if (((event.getGui() instanceof GuiCelestialSelection))) {
 				if (event.getGui().getClass().getName().equalsIgnoreCase("asmodeuscore.core.astronomy.gui.screen.NewGuiCelestialSelection"))
 					MessageUtilities.throwCrashError("Please disable the following option: enableNewGalaxyMap in configs/AsmodeusCore/core.conf");

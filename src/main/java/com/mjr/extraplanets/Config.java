@@ -274,8 +274,8 @@ public class Config {
 	public static boolean MORE_PLANETS_ROCKET_CRUSHER_SUPPORT;
 
 	public static boolean CUSTOM_GALAXIES;
-	public static boolean USE_CUSTOM_CELESTAIAL_SELECTION;
-	public static boolean SHOW_EXINFO_CUSTOM_CELESTAIAL_SELECTION;
+	public static boolean USE_CUSTOM_CELESTIAL_SELECTION;
+	public static boolean SHOW_EXINFO_CUSTOM_CELESTIAL_SELECTION;
 	public static boolean REGISTER_BIOME_TYPES;
 	public static boolean ORE_LEAD_GENERATION;
 	public static int ORE_LEAD_GENERATION_AMOUNT;
@@ -534,7 +534,9 @@ public class Config {
 		MAKEMAKE = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Makemake", true, "Setting this option to false will remove Makemake").getBoolean(true);
 		KUIPER_BELT = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kuiper Belt", true, "Setting this option to false will remove Kuiper Belt").getBoolean(true);
 		KEPLER_SOLAR_SYSTEMS = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler SolarSystems", true, "Setting this option to false will remove all Kepler Solar Systems and their Planets/Moons!").getBoolean(true);
-		GENERATE_UNREACHABLEMOONS = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Unreachable moons on the Celestaial Selection Screen", true, "Setting this option to false will remove all unreachable moons added by ExtraPlanets, from showing on the Celestaial Selection Screen!").getBoolean(true);
+		
+		config.renameProperty(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Unreachable moons on the Celestaial Selection Screen", "Unreachable moons on the Celestial Selection Screen");
+		GENERATE_UNREACHABLEMOONS = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Unreachable moons on the Celestial Selection Screen", true, "Setting this option to false will remove all unreachable moons added by ExtraPlanets, from showing on the Celestial Selection Screen!").getBoolean(true);
 
 		MERCURY_SPACE_STATION = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Mercury SpaceStation", true, "Setting this option to false will disable & remove the Mercury Space Station").getBoolean(true);
 		VENUS_SPACE_STATION = config.get(Constants.CONFIG_CATEGORY_SPACE_STATIONS, "Venus SpaceStation", true, "Setting this option to false will disable & remove the Venus Space Station").getBoolean(true);
@@ -719,16 +721,20 @@ public class Config {
 		ORE_LEAD_GENERATION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable generation of Lead Ore in the Overworld", true, "Setting this option to false will completely remove Lead Ore/Ingot from the world").getBoolean(true);
 		ORE_LEAD_GENERATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Amount of Lead Ore Generation per chunk", 5, "This option is used for changing the Lead Ore Spawn Rate [range: 0 ~ 2147483647, default: 5]").getInt();
 
-		USE_CUSTOM_CELESTAIAL_SELECTION = config
-				.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestaial Selection Screen", true, "Setting this option to false, will change it back to be using the Galacticraft Galaxy Map/Celestaial Selection Screen")
+		config.renameProperty(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestaial Selection Screen", "Use Custom Galaxy Map/Celestial Selection Screen");
+		
+		USE_CUSTOM_CELESTIAL_SELECTION = config
+				.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestial Selection Screen", true, "Setting this option to false, will change it back to be using the Galacticraft Galaxy Map/Celestial Selection Screen")
 				.getBoolean(true);
+		
+		config.renameProperty(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Show Extended info panel on Custom Galaxy Map/Celestaial Selection Screen", "Show Extended info panel on Custom Galaxy Map/Celestial Selection Screen");
 
-		SHOW_EXINFO_CUSTOM_CELESTAIAL_SELECTION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Show Extended info panel on Custom Galaxy Map/Celestaial Selection Screen", true,
-				"Setting this option to false, will change disabled extended info panel on Custom Celestaial Selection Screen").getBoolean(true);
+		SHOW_EXINFO_CUSTOM_CELESTIAL_SELECTION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Show Extended info panel on Custom Galaxy Map/Celestial Selection Screen", true,
+				"Setting this option to false, will change disabled extended info panel on Custom Celestial Selection Screen").getBoolean(true);
 
-		config.renameProperty(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Custom Galaxies on Celestaial Selection Screen", "Enable showing of Custom Galaxies on the Custom Celestaial Selection Screen");
-		CUSTOM_GALAXIES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable showing of Custom Galaxies on the Custom Celestaial Selection Screen", true,
-				"Setting this option to false will disable & remove the Custom Galaxies on Celestaial Selection Screen (Note: Will get disabled by the 'Use Custom Galaxy Map/Celestaial Selection Screen' option)").getBoolean(true);
+		config.renameProperty(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Custom Galaxies on Celestaial Selection Screen", "Enable showing of Custom Galaxies on the Custom Celestial Selection Screen");
+		CUSTOM_GALAXIES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable showing of Custom Galaxies on the Custom Celestial Selection Screen", true,
+				"Setting this option to false will disable & remove the Custom Galaxies on Celestial Selection Screen (Note: Will get disabled by the 'Use Custom Galaxy Map/Celestial Selection Screen' option)").getBoolean(true);
 
 		REGISTER_BIOME_TYPES = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Enable registering of Biomes Types for ExtraPlanets biomes", true, "Setting this option to false, will disable biome types being assigned to ExtraPlanets biomes")
 				.getBoolean(true);
@@ -823,7 +829,7 @@ public class Config {
 			PLUTO_DISTANCE_OFFSET = 0.4f;
 		}
 
-		if (USE_CUSTOM_CELESTAIAL_SELECTION == false)
+		if (USE_CUSTOM_CELESTIAL_SELECTION == false)
 			CUSTOM_GALAXIES = false;
 		config.save();
 	}
