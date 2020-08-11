@@ -5,6 +5,21 @@
 
 
 ===========================================Released Updates===========================================
+v1.6.7
+*Fixed double amount radiation being slowly reduced on planets
+*Fixed sounds for Kepler22b Saplings, Kepler22b Tall Grass, Red/Orange Sand, and all Grass blocks issue #586
+*Increased Copper & Tin ore generation on Ganymede and Callisto
+*Increased Iron Ore generation for Europa 
+*Improved GanyMede ~Surface, Sub Surface, Stone textures to look less grid effect
+*Improved Iapetus Surface, Sub Surface, Stone, Ores textures to look less grid effect
+*Improved Rhea Surface, Sub Surface, Stone, Ores textures to look less grid effect
+*Improved Titan main Surface, Sub Surface, Stone, textures to look less grid effect
+*Improved Titania Surface textures to look less grid effect
+*Improved Neptunes Surface, Sub Surface, Stone, Ores textures to look less grid effect
+*Added materials hover info for all planets and moon to extended info on custom Celestial Galaxy Screen (Only when using ExtraPlanets Celestial Galaxy Screen!)
+*Added an API registry system for the material list feature for Custom Galaxy Map in ExtraPlanets for other devs to use in their addons
+*Changed requirement of MJRLegendsLib to 1.8.9-1.1.3 & above
+
 v1.6.6
 *Fixed gained radiation going negative in certain instances
 
