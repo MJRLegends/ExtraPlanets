@@ -11,9 +11,9 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.*;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
+import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.Vec3;
 import net.minecraftforge.client.IRenderHandler;
 import net.minecraftforge.fml.client.FMLClientHandler;
 
@@ -44,7 +44,7 @@ public class SkyProviderCustomOrbit extends IRenderHandler {
 		GL11.glEndList();
 		GL11.glPopMatrix();
 		final Tessellator tessellator = Tessellator.getInstance();
-		VertexBuffer worldRenderer = tessellator.getBuffer();
+		WorldRenderer worldRenderer = tessellator.getWorldRenderer();
 		this.glSkyList = this.starGLCallList + 1;
 		GL11.glNewList(this.glSkyList, GL11.GL_COMPILE);
 		final byte byte2 = 64;
@@ -94,7 +94,7 @@ public class SkyProviderCustomOrbit extends IRenderHandler {
 
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
 		GlStateManager.disableRescaleNormal();
-		final Vec3d var2 = this.minecraft.theWorld.getSkyColor(this.minecraft.getRenderViewEntity(), partialTicks);
+		final Vec3 var2 = this.minecraft.theWorld.getSkyColor(this.minecraft.getRenderViewEntity(), partialTicks);
 		float var3 = (float) var2.xCoord;
 		float var4 = (float) var2.yCoord;
 		float var5 = (float) var2.zCoord;
@@ -147,7 +147,7 @@ public class SkyProviderCustomOrbit extends IRenderHandler {
 				var10 = var13;
 			}
 
-			VertexBuffer worldRenderer = var23.getBuffer();
+			WorldRenderer worldRenderer = var23.getWorldRenderer();
 			worldRenderer.begin(GL11.GL_TRIANGLE_FAN, DefaultVertexFormats.POSITION_COLOR);
 			worldRenderer.pos(0.0D, 100.0D, 0.0D).color(var8, var9, var10, var24[3]).endVertex();
 			final byte var26 = 16;
@@ -205,7 +205,7 @@ public class SkyProviderCustomOrbit extends IRenderHandler {
 			GL11.glDisable(GL11.GL_TEXTURE_2D);
 			GL11.glColor4f(0.0F, 0.0F, 0.0F, 1.0F);
 			var12 = this.sunSize / 3.5F;
-			VertexBuffer worldRenderer = var23.getBuffer();
+			WorldRenderer worldRenderer = var23.getWorldRenderer();
 			worldRenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION);
 			worldRenderer.pos(-var12, 99.9D, -var12).endVertex();
 			worldRenderer.pos(var12, 99.9D, -var12).endVertex();
@@ -230,7 +230,7 @@ public class SkyProviderCustomOrbit extends IRenderHandler {
 			GL11.glDisable(GL11.GL_TEXTURE_2D);
 			GL11.glColor4f(0.0F, 0.0F, 0.0F, 1.0F);
 			var12 = 11.3F;
-			VertexBuffer worldRenderer = var23.getBuffer();
+			WorldRenderer worldRenderer = var23.getWorldRenderer();
 			worldRenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION);
 			worldRenderer.pos(-var12, -99.9D, var12).endVertex();
 			worldRenderer.pos(var12, -99.9D, var12).endVertex();
@@ -273,7 +273,7 @@ public class SkyProviderCustomOrbit extends IRenderHandler {
 			var10 = 1.0F;
 			final float alpha = 0.5F;
 			GL11.glColor4f(Math.min(alpha, 1.0F), Math.min(alpha, 1.0F), Math.min(alpha, 1.0F), Math.min(alpha, 1.0F));
-			VertexBuffer worldRenderer = var23.getBuffer();
+			WorldRenderer worldRenderer = var23.getWorldRenderer();
 			worldRenderer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
 			worldRenderer.pos(-var10, 0, var10).tex(0D, 1.0).endVertex();
 			worldRenderer.pos(var10, 0, var10).tex(1.0, 1.0).endVertex();
@@ -317,7 +317,7 @@ public class SkyProviderCustomOrbit extends IRenderHandler {
 	private void renderStars() {
 		final Random var1 = new Random(10842L);
 		final Tessellator var2 = Tessellator.getInstance();
-		var2.getBuffer().begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION);
+		var2.getWorldRenderer().begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION);
 
 		for (int var3 = 0; var3 < (ConfigManagerCore.moreStars ? 20000 : 6000); ++var3) {
 			double var4 = var1.nextFloat() * 2.0F - 1.0F;
@@ -354,7 +354,7 @@ public class SkyProviderCustomOrbit extends IRenderHandler {
 					final double var55 = var39 * var28 - var47 * var30;
 					final double var57 = var55 * var22 - var49 * var24;
 					final double var61 = var49 * var22 + var55 * var24;
-					var2.getBuffer().pos(var14 + var57, var16 + var53, var18 + var61).endVertex();
+					var2.getWorldRenderer().pos(var14 + var57, var16 + var53, var18 + var61).endVertex();
 				}
 			}
 		}
