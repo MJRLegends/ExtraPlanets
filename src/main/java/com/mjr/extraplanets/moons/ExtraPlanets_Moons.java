@@ -79,7 +79,7 @@ public class ExtraPlanets_Moons {
 	}
 
 	public static void initializeUnReachableMoons() {
-		if(Config.GENERATE_UNREACHABLEMOONS) {
+		if (Config.GENERATE_UNREACHABLEMOONS) {
 			// Pluto Moons
 			CHARON = GCRegisterUtilities.registerUnreachableMoon("charon", ExtraPlanets_Planets.PLUTO);
 			if (CHARON != null)
@@ -101,7 +101,7 @@ public class ExtraPlanets_Moons {
 	}
 
 	private static Planet getParentPlanet(Planet possiablePlanet, String possiablePlanetName) {
-		if(possiablePlanet != null)
+		if (possiablePlanet != null)
 			return possiablePlanet;
 		else {
 			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
@@ -317,7 +317,7 @@ public class ExtraPlanets_Moons {
 			OBERON.setDimensionInfo(Config.OBERON_ID, WorldProviderOberon.class);
 			OBERON.setAtmosphere(new AtmosphereInfo(false, false, false, Config.THERMAL_PADDINGS ? -120.0F : 5.0F, 4.0F, 0.1F));
 			OBERON.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute");
-			OBERON.setBiomeInfo(OberonBiomes.oberon);
+			OBERON.setBiomeInfo(OberonBiomes.oberon, OberonBiomes.oberonLargeMountain, OberonBiomes.oberonValleys);
 			OBERON.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
 			OBERON.addMobInfo(new SpawnListEntry(EntityEvolvedSpider.class, 8, 2, 3));
 			OBERON.addMobInfo(new SpawnListEntry(EntityEvolvedSkeleton.class, 8, 2, 3));
