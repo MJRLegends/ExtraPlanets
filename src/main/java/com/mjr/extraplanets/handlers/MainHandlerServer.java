@@ -474,8 +474,6 @@ public class MainHandlerServer {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE)
-				MessageUtilities.debugMessageToLog(Constants.modID, "Player Current Radiation Amount: " + stats.getRadiationLevel());
 			if (stats.getRadiationLevel() >= 100) {
 				if ((playerMP.ticksExisted - 1) % 50 == 0)
 					playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
@@ -496,6 +494,8 @@ public class MainHandlerServer {
 				stats.setRadiationLevel(stats.getRadiationLevel() + tempLevel);
 			} else
 				stats.setRadiationLevel(0);
+			if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE)
+				MessageUtilities.debugMessageToLog(Constants.modID, "Player Current Radiation Amount: " + stats.getRadiationLevel());
 		}
 	}
 
@@ -507,20 +507,20 @@ public class MainHandlerServer {
 		if ((isInGCDimension || player.worldObj.provider instanceof WorldProviderSpaceStation) && Config.RADIATION) {
 			if (tick % 30 == 0) {
 				this.sendSolarRadiationPacket(player, stats);
-			}
-			if (tick % 30 == 0) {
-				if(Config.RADIATION_SLEEPING_REDUCE_AMOUNT != 0) {
+				if(Config.RADIATION_OVERTIME_REDUCE_AMOUNT != 0) {
 					double temp = stats.getRadiationLevel();
 					double level = (temp * (Config.RADIATION_OVERTIME_REDUCE_AMOUNT * 1.5F)) / 100;
 					if (level <= 0)
 						stats.setRadiationLevel(0);
 					else {
+						if(tick % 100 == 0 && Config.DEBUG_MODE)
+							MessageUtilities.debugMessageToLog(Constants.modID, "Auto Reduced Radiation Amount: " + level);
 						stats.setRadiationLevel(stats.getRadiationLevel() - level);
 					}
 				}
 			}
 		}
-		if (tick % 30 == 0) {
+		else if (tick % 30 == 0) {
 			if(Config.RADIATION_SLEEPING_REDUCE_AMOUNT != 0) {
 				double temp = stats.getRadiationLevel();
 				double level = (temp * Config.RADIATION_OVERTIME_REDUCE_AMOUNT) / 100;
