@@ -55,6 +55,7 @@ import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
@@ -578,10 +579,12 @@ public class MainHandlerServer {
 					amount = Config.VENUS_RADIATION_AMOUNT;
 				if (player.worldObj.provider instanceof WorldProviderSpaceStation)
 					amount = Config.SPACE_STATION_RADIATION_AMOUNT;
-				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " " + amount + "/100% "
+				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.GOLD + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " " + amount + "/100% "
 						+ TranslateUtilities.translate("gui.radiation.type.message") + "");
-				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_GREEN + ", " + TranslateUtilities.translate("gui.radiation.reverse.message") + "!");
-				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.cancel.message") + "!");
+				PlayerUtilties.sendMessage(player, EnumChatFormatting.DARK_GREEN + TranslateUtilities.translate("gui.radiation.reverse.message") + "!");
+				PlayerUtilties.sendMessage(player, EnumChatFormatting.GOLD + TranslateUtilities.translate("gui.radiation.cancel.message") + "!");
+				PlayerUtilties.sendMessage(player, EnumChatFormatting.DARK_AQUA + "Radiation Calculator:");
+				player.sendMessage(ForgeHooks.newChatWithLinks("https://www.mjrlegends.com/extraplanetsradiation.php"));
 			}
 		}
 	}
