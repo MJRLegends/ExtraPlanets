@@ -1,5 +1,8 @@
 package com.mjr.extraplanets.planets;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets_SolarSystems;
@@ -485,5 +488,99 @@ public class ExtraPlanets_Planets {
 			GalacticraftRegistry.registerTeleportType(WorldProviderKepler22b.class, new TeleportTypeKepler22b());
 			GalacticraftRegistry.registerRocketGui(WorldProviderKepler22b.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/kepler22b_rocket_gui.png"));
 		}
+	}
+	
+	public static boolean isExtraPlanetsPlanet(CelestialBody body) {
+		if(body == MERCURY|| body == CERES|| body == JUPITER|| body == SATURN|| body == URANUS|| body == NEPTUNE|| body == PLUTO|| body == ERIS|| body == KEPLER22B)
+			return true;
+		else return false;
+		
+	}
+	
+	public static List<String> getMaterialsListForPlanet(CelestialBody body) {
+		List<String> mats = new ArrayList<String>();
+		if(body == MERCURY) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+			mats.add("Mercury: Medium");
+			mats.add("Carbon: Medium");
+			mats.add("Desh: Medium");
+			mats.add("Meteoric Iron: Medium");
+			mats.add("Potash: Low");
+			mats.add("Infected Water: Medium");
+		}
+		else if(body == CERES) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+			mats.add("Uranium: Low");
+			mats.add("Crystallized Water: High");
+			mats.add("Radio Active Water: Low");
+		}
+		else if(body == JUPITER) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+			mats.add("Palladium: Medium");
+			mats.add("Nickel: Medium");
+			mats.add("Red Gem: Medium");
+			mats.add("Ash Rock: Low");
+			mats.add("Volcanic Rock: Low");
+			mats.add("Magma: Very High");
+		}
+		else if(body == SATURN) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+			mats.add("Ice: Very Low");
+			mats.add("Magnesium: Medium");
+			mats.add("Slime: Low");
+			mats.add("Liquid Glowstone: Very High");
+			mats.add("Liquid Methance: Very High");
+			mats.add("Liquid Hydro Carbon: Very High");
+		}
+		else if(body == URANUS) {
+			mats.add("Ice: High");
+			mats.add("Crystal: Medium");
+			mats.add("Dense Ice: Medium");
+			mats.add("White Gem: Low");
+			mats.add("Frozen Water: Very High");
+		}
+		else if(body == NEPTUNE) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+			mats.add("Zinc: Medium");
+			mats.add("Frozen Nitrogen: Medium");
+			mats.add("Liquid Nitrogen: Very High");
+		}
+		else if(body == PLUTO) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+			mats.add("Tungsten: Medium");
+		}
+		else if(body == ERIS) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+			mats.add("Dark Iron: Low");
+		}
+		else if(body == KEPLER22B) {
+			mats.add("Wood: Very High");
+			if (Config.GENERATE_KEPLER22B_SPHERES || Config.GENERATE_KEPLER22B_MATERIAL_TREES) {
+				mats.add("Iron: Very High");
+				mats.add("Coal: Very High");
+				mats.add("Diamond: Very High");
+				mats.add("Gold: Very High");
+				mats.add("Emerald: Very High");
+			}
+			mats.add("Infected Water: Very High");
+			mats.add("Liquid Chocolate: Very High");
+			mats.add("Liquid Caramel: Very High");
+			mats.add("Candy: High");
+		}
+		return mats;
 	}
 }
