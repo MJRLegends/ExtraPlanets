@@ -584,7 +584,7 @@ public class MainHandlerServer {
 				PlayerUtilties.sendMessage(player, TextFormatting.DARK_GREEN + TranslateUtilities.translate("gui.radiation.reverse.message") + "!");
 				PlayerUtilties.sendMessage(player, TextFormatting.GOLD + TranslateUtilities.translate("gui.radiation.cancel.message") + "!");
 				PlayerUtilties.sendMessage(player, TextFormatting.DARK_AQUA + "Radiation Calculator:");
-				player.sendMessage(ForgeHooks.newChatWithLinks("https://www.mjrlegends.com/extraplanetsradiation.php"));
+				player.addChatMessage(ForgeHooks.newChatWithLinks("https://www.mjrlegends.com/extraplanetsradiation.php"));
 			}
 		}
 	}

@@ -241,7 +241,7 @@ public class SkyProviderKepler22b extends IRenderHandler {
 		GL11.glPopMatrix();
 		GL11.glDisable(GL11.GL_TEXTURE_2D);
 		GL11.glColor3f(0.0F, 0.0F, 0.0F);
-		double d0 = mc.player.getPosition().getY() - world.getHorizon();
+		double d0 = mc.thePlayer.getPosition().getY() - world.getHorizon();
 
 		if (d0 < 0.0D) {
 			GL11.glPushMatrix();
@@ -344,7 +344,7 @@ public class SkyProviderKepler22b extends IRenderHandler {
 	}
 
 	public float getSkyBrightness(float par1) {
-		final float var2 = MCUtilities.getClient().world.getCelestialAngle(par1);
+		final float var2 = MCUtilities.getClient().theWorld.getCelestialAngle(par1);
 		float var3 = 1.0F - (MathHelper.sin(var2 * com.mjr.extraplanets.Constants.twoPI) * 2.0F + 0.25F);
 
 		if (var3 < 0.0F) {
