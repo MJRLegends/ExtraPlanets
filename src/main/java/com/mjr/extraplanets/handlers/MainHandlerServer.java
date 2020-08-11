@@ -439,7 +439,8 @@ public class MainHandlerServer {
 		boolean doArmorCheck = false;
 		double damageToTake = 0;
 		double damageModifer = 0;
-
+		int tierValue = 0;
+		
 		ItemStack helmet = playerMP.inventory.armorInventory.get(3);
 		ItemStack chest = playerMP.inventory.armorInventory.get(2);
 		ItemStack leggins = playerMP.inventory.armorInventory.get(1);
@@ -464,7 +465,7 @@ public class MainHandlerServer {
 				MessageUtilities.debugMessageToLog(Constants.modID, "Boots Tier: " + bootsTier);
 			}
 
-			int tierValue = (helmetTier + chestTier + legginsTier + bootsTier) / 2;
+			tierValue = (helmetTier + chestTier + legginsTier + bootsTier) / 2;
 			damageToTake = 0.005 * tierValue;
 			doDamage = true;
 		}
@@ -486,6 +487,8 @@ public class MainHandlerServer {
 				}
 				else {
 					damageModifer = 0.001875 - (damageToTake / 2) / 10;
+					if(damageModifer < 0)
+						damageModifer = 0.000225;
 					tempLevel = damageModifer * (amount / 10) / 6;
 				}
 				if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE)
