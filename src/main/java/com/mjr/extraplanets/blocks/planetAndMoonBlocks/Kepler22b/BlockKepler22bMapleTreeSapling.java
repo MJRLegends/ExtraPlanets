@@ -9,6 +9,7 @@ import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22
 
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -96,6 +97,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 		float f = 0.4F;
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
+		this.setSoundType(SoundType.PLANT);
 	}
 
 	/**

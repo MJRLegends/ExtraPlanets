@@ -8,6 +8,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -36,6 +37,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 		float f = 0.4F;
 		this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.8F, 0.5F + f);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
+		this.setSoundType(SoundType.PLANT);
 	}
 
 	@Override
