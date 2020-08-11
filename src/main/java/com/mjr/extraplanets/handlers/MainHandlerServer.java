@@ -392,10 +392,12 @@ public class MainHandlerServer {
 	public int getTier(ItemStack testItem, List<String> list) {
 		if (testItem.getItem() instanceof IRadiationSuit)
 			return ((IRadiationSuit) testItem.getItem()).getArmorTier();
-
 		for (String line : list) {
 			if (line.substring(0, line.lastIndexOf(':')).equalsIgnoreCase(testItem.getItem().getRegistryName().toString()))
 				return Integer.parseInt(line.substring(line.lastIndexOf(':') + 1));
+		}
+		if (Loader.isModLoaded("powersuits")) {
+			return MachineMusePowersuitsCompatibility.getHighestRadiationTierModuleInstalled(testItem);
 		}
 		return -1;
 	}
