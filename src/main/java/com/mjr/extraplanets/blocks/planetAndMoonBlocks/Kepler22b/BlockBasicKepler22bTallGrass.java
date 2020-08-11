@@ -8,6 +8,7 @@ import com.mjr.extraplanets.ExtraPlanets;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -35,6 +36,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 		super(Material.VINE);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, BlockBasicKepler22bTallGrass.EnumType.MAPLE_BLUE_SHORT));
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
+		this.setSoundType(SoundType.PLANT);
 	}
 
 	@Override
