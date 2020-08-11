@@ -38,12 +38,13 @@ import micdoodle8.mods.galacticraft.core.util.WorldUtil;
 import micdoodle8.mods.galacticraft.planets.asteroids.dimension.WorldProviderAsteroids;
 import micdoodle8.mods.galacticraft.planets.mars.dimension.WorldProviderMars;
 import micdoodle8.mods.galacticraft.planets.venus.dimension.WorldProviderVenus;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.FMLClientHandler;
@@ -295,7 +296,7 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						this.drawString(this.fontRendererObj, TranslateUtilities.translate("gui.celestial_body_type.name") + ": " + type, xOffset + 10, yOffset + 23, 14737632);
 						if ((this.selectedBody instanceof Planet))
 							this.drawString(this.fontRendererObj, TranslateUtilities.translate("gui.celestial_body_amount_of_moons.name") + ": " + this.getChildren(this.selectedBody).size(), xOffset + 10, yOffset + 33, 14737632);
-						this.drawString(this.fontRendererObj, "Materials: " + TextFormatting.GOLD + "Hover to Show", xOffset + 10, yOffset + 43, 14737632);
+						this.drawString(this.fontRendererObj, "Materials: " + EnumChatFormatting.GOLD + "Hover to Show", xOffset + 10, yOffset + 43, 14737632);
 						if(mousePosX >= xOffset + 60 && mousePosY >= yOffset + 41)	{
 							if(mousePosX <= xOffset + 140 && mousePosY <= yOffset + 50) {
 								showHoveredMats = true;

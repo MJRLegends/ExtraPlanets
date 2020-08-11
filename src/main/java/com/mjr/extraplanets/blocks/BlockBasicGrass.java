@@ -7,7 +7,6 @@ import com.mjr.extraplanets.blocks.planetAndMoonBlocks.Kepler22b.BlockBasicKeple
 
 import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;
-import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
@@ -25,7 +24,7 @@ public class BlockBasicGrass extends Block implements IGrowable {
 		super(Material.grass);
 		this.setTickRandomly(true);
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
-		this.setSoundType(SoundType.PLANT);
+		this.stepSound = soundTypeGrass;
 		this.blockHardness = 0.6F;
 	}
 
