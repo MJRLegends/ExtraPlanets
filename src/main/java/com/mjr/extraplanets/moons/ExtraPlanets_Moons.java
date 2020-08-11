@@ -1,5 +1,8 @@
 package com.mjr.extraplanets.moons;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.moons.Callisto.TeleportTypeCallisto;
@@ -406,5 +409,98 @@ public class ExtraPlanets_Moons {
 			GalacticraftRegistry.registerTeleportType(WorldProviderIapetus.class, new TeleportTypeIapetus());
 			GalacticraftRegistry.registerRocketGui(WorldProviderIapetus.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/iapetus_rocket_gui.png"));
 		}
+	}
+	
+	public static boolean isExtraPlanetsMoon(CelestialBody body) {
+		if (body == TRITON || body == CALLISTO || body == EUROPA || body == GANYMEDE || body == IO || body == DEIMOS || body == PHOBOS || body == IAPETUS || body == RHEA || body == TITAN || body == OBERON || body == TITANIA)
+			return true;
+		else
+			return false;
+
+	}
+
+	public static List<String> getMaterialsListForMoon(CelestialBody body) {
+		List<String> mats = new ArrayList<String>();
+		if (body == TRITON) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+			mats.add("Liquid Nitrongen Ice: Medium");
+			mats.add("Frozen Nitrogen: Very High");
+			mats.add("Ice: Very High");
+			mats.add("Snow: Medium");
+		} 
+		else if (body == CALLISTO) {
+			mats.add("Copper: High");
+			mats.add("Tin: High");
+			mats.add("Iron: Medium");
+			mats.add("Crystallized Water: Very High");
+		}
+		else if (body == EUROPA) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: High");
+			mats.add("Ice: Very High");
+			mats.add("Dense Ice: High");
+			mats.add("Crystallized Water: Very High");
+			mats.add("Radio Active Water: Low");
+		}
+		else if (body == GANYMEDE) {
+			mats.add("Copper: High");
+			mats.add("Tin: High");
+			mats.add("Iron: Medium");
+			mats.add("Ice: Very High");
+			mats.add("Infected Water: Low");
+		}
+		else if (body == IO) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+			mats.add("Magma: Very High");
+			mats.add("Ash: Very High");
+			mats.add("Volcanic Rock: Very High");
+		}
+		else if (body == DEIMOS) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+		}
+		else if (body == PHOBOS) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+		}
+		else if (body == IAPETUS) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+			mats.add("Iapetus Ice: Very High");
+		}
+		else if (body == RHEA) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+		}
+		else if (body == TITAN) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+			mats.add("Liquid Methane: Very High");
+			mats.add("Titan Rocks: High");
+		}
+		else if (body == OBERON) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+			mats.add("Ice: Very High");
+			mats.add("Dense Ice: Very High");
+			mats.add("Lava: Medium");
+		}
+		else if (body == TITANIA) {
+			mats.add("Copper: Medium");
+			mats.add("Tin: Medium");
+			mats.add("Iron: Medium");
+		}
+		return mats;
 	}
 }
