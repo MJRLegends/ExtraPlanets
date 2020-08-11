@@ -17,6 +17,8 @@ import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
 import com.mjr.extraplanets.compatibility.PlanetProgressionCompatibility;
+import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
+import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
@@ -41,6 +43,7 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.WorldProvider;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Loader;
@@ -237,12 +240,15 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 					int yOffset = 27;
 					int widthSizeOffset = 75;
 					int xOffset = (this.width - 270) - LHS;
+					boolean showHoveredMats = false;
+					int showHoveredMatsX = 0;
+					int showHoveredMatsY = 0;
 					this.drawTexturedModalRect(xOffset, yOffset, 93 + widthSizeOffset, 4, 159, 102, 93, 4, false, false);
 					for (int barY = 0; barY < 25; ++barY) {
-						this.drawTexturedModalRect(xOffset, yOffset + barY * this.fontRenderer.FONT_HEIGHT + 4, 93 + widthSizeOffset, this.fontRenderer.FONT_HEIGHT, 159, 106, 93, this.fontRenderer.FONT_HEIGHT, false, false);
+						this.drawTexturedModalRect(xOffset, yOffset + barY * this.fontRenderer.FONT_HEIGHT + 4, 93 + widthSizeOffset, this.fontRenderer.FONT_HEIGHT + 10, 159, 106, 93, this.fontRenderer.FONT_HEIGHT, false, false);
 					}
 					for (int barx = 0; barx < 1; ++barx) {
-						this.drawTexturedModalRect(xOffset + barx, yOffset * this.fontRenderer.FONT_HEIGHT + 10, 93 + widthSizeOffset, this.fontRenderer.FONT_HEIGHT / 2, 159, 106, 1, this.fontRenderer.FONT_HEIGHT, false, false);
+						this.drawTexturedModalRect(xOffset + barx, yOffset * this.fontRenderer.FONT_HEIGHT + 20, 93 + widthSizeOffset, this.fontRenderer.FONT_HEIGHT / 2, 159, 106, 1, this.fontRenderer.FONT_HEIGHT, false, false);
 					}
 					if (!(this.selectedBody instanceof Star)) {
 						WorldProvider temp = null;
@@ -267,7 +273,15 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_type.name") + ": " + type, xOffset + 10, yOffset + 23, 14737632);
 						if ((this.selectedBody instanceof Planet))
 							this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_amount_of_moons.name") + ": " + this.getChildren(this.selectedBody).size(), xOffset + 10, yOffset + 33, 14737632);
-						yOffset = yOffset + 45;
+						this.drawString(this.fontRenderer, "Materials: " + TextFormatting.GOLD + "Hover to Show", xOffset + 10, yOffset + 43, 14737632);
+						if(mousePosX >= xOffset + 60 && mousePosY >= yOffset + 41)	{
+							if(mousePosX <= xOffset + 140 && mousePosY <= yOffset + 50) {
+								showHoveredMats = true;
+								showHoveredMatsX = xOffset + 10;
+								showHoveredMatsY =  yOffset + 43;
+							}
+						}
+						yOffset = yOffset + 50;
 						this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, BLUE);
 						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_details.name") + ": ", xOffset + 10, yOffset + 8, BLUE);
 						this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, BLUE);
@@ -377,6 +391,15 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						this.drawString(this.fontRenderer,
 								TranslateUtilities.translate("gui.celestial_body_pressure_level.name") + ": " + (this.selectedBody.getReachable() ? pressureLevel + "%" : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10,
 								yOffset + 110, 14737632);
+
+						if (showHoveredMats) {
+							if (ExtraPlanets_Planets.isExtraPlanetsPlanet(selectedBody))
+								this.drawHoveringText(ExtraPlanets_Planets.getMaterialsListForPlanet(selectedBody), showHoveredMatsX, showHoveredMatsY);
+							else if (ExtraPlanets_Moons.isExtraPlanetsMoon(selectedBody))
+								this.drawHoveringText(ExtraPlanets_Moons.getMaterialsListForMoon(selectedBody), showHoveredMatsX, showHoveredMatsY);
+							else
+								this.drawHoveringText("Unknown Materials", showHoveredMatsX, showHoveredMatsY);
+						}
 					} else if (this.selectedBody instanceof Star) {
 						this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, BLUE);
 						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.general_details.name") + ": ", xOffset + 10, yOffset + 8, BLUE);
