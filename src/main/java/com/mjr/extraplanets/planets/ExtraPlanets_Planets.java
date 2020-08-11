@@ -6,6 +6,9 @@ import java.util.List;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanets_SolarSystems;
+import com.mjr.extraplanets.api.celestialBody.CelestialBodyMaterialRegistry;
+import com.mjr.extraplanets.api.celestialBody.CelestialBodyMaterialRegistry.AmountType;
+import com.mjr.extraplanets.api.celestialBody.CelestialBodyMaterialRegistry.MaterialData;
 import com.mjr.extraplanets.planets.Ceres.TeleportTypeCeres;
 import com.mjr.extraplanets.planets.Ceres.WorldProviderCeres;
 import com.mjr.extraplanets.planets.Ceres.worldgen.CeresBiomes;
@@ -43,6 +46,7 @@ import micdoodle8.mods.galacticraft.api.world.AtmosphereInfo;
 import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.*;
+
 import net.minecraft.entity.monster.*;
 import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.entity.passive.EntityCow;
@@ -98,6 +102,7 @@ public class ExtraPlanets_Planets {
 	public static void init() {
 		initializePlanets();
 		registerPlanets();
+		registerMaterialsForPlanets();
 		initializeUnReachablePlanets();
 	}
 
@@ -281,6 +286,7 @@ public class ExtraPlanets_Planets {
 			KEPLER22B.addMobInfo(new SpawnListEntry(EntityCow.class, 8, 4, 4));
 		}
 	}
+
 	public static void initializeUnReachablePlanets() {
 		if (Config.KUIPER_BELT) {
 			KUIPER_BELT = GCRegisterUtilities.registerUnreachablePlanet("kuiperBelt", GalacticraftCore.solarSystemSol);
@@ -489,98 +495,105 @@ public class ExtraPlanets_Planets {
 			GalacticraftRegistry.registerRocketGui(WorldProviderKepler22b.class, new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/kepler22b_rocket_gui.png"));
 		}
 	}
-	
+
 	public static boolean isExtraPlanetsPlanet(CelestialBody body) {
-		if(body == MERCURY|| body == CERES|| body == JUPITER|| body == SATURN|| body == URANUS|| body == NEPTUNE|| body == PLUTO|| body == ERIS|| body == KEPLER22B)
+		if (body == MERCURY || body == CERES || body == JUPITER || body == SATURN || body == URANUS || body == NEPTUNE || body == PLUTO || body == ERIS || body == KEPLER22B)
 			return true;
-		else return false;
-		
+		else
+			return false;
+
 	}
-	
-	public static List<String> getMaterialsListForPlanet(CelestialBody body) {
-		List<String> mats = new ArrayList<String>();
-		if(body == MERCURY) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-			mats.add("Mercury: Medium");
-			mats.add("Carbon: Medium");
-			mats.add("Desh: Medium");
-			mats.add("Meteoric Iron: Medium");
-			mats.add("Potash: Low");
-			mats.add("Infected Water: Medium");
+
+	public static void registerMaterialsForPlanets() {
+		List<MaterialData> mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Mercury", AmountType.MEDIUM));
+		mats.add(new MaterialData("Carbon", AmountType.MEDIUM));
+		mats.add(new MaterialData("Desh", AmountType.MEDIUM));
+		mats.add(new MaterialData("Meteoric Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Potash", AmountType.LOW));
+		mats.add(new MaterialData("Infected Water", AmountType.MEDIUM));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(MERCURY, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Uranium", AmountType.LOW));
+		mats.add(new MaterialData("Crystallized Water", AmountType.HIGH));
+		mats.add(new MaterialData("Radio Active Water", AmountType.LOW));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(CERES, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Palladium", AmountType.MEDIUM));
+		mats.add(new MaterialData("Nickel", AmountType.MEDIUM));
+		mats.add(new MaterialData("Red Gem", AmountType.MEDIUM));
+		mats.add(new MaterialData("Ash Rock", AmountType.LOW));
+		mats.add(new MaterialData("Volcanic Rock", AmountType.LOW));
+		mats.add(new MaterialData("Magma", AmountType.VERY_HIGH));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(JUPITER, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Ice", AmountType.VERY_LOW));
+		mats.add(new MaterialData("Magnesium", AmountType.MEDIUM));
+		mats.add(new MaterialData("Slime", AmountType.LOW));
+		mats.add(new MaterialData("Liquid Glowstone", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Liquid Methance", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Liquid Hydro Carbon", AmountType.VERY_HIGH));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(SATURN, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Ice", AmountType.HIGH));
+		mats.add(new MaterialData("Crystal", AmountType.MEDIUM));
+		mats.add(new MaterialData("Dense Ice", AmountType.MEDIUM));
+		mats.add(new MaterialData("White Gem", AmountType.LOW));
+		mats.add(new MaterialData("Frozen Water", AmountType.VERY_HIGH));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(URANUS, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Zinc", AmountType.MEDIUM));
+		mats.add(new MaterialData("Frozen Nitrogen", AmountType.MEDIUM));
+		mats.add(new MaterialData("Liquid Nitrogen", AmountType.VERY_HIGH));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(NEPTUNE, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tungsten", AmountType.MEDIUM));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(PLUTO, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Dark Iron", AmountType.LOW));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(ERIS, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Wood", AmountType.VERY_HIGH));
+		if (Config.GENERATE_KEPLER22B_SPHERES || Config.GENERATE_KEPLER22B_MATERIAL_TREES) {
+			mats.add(new MaterialData("Iron", AmountType.VERY_HIGH));
+			mats.add(new MaterialData("Coal", AmountType.VERY_HIGH));
+			mats.add(new MaterialData("Diamond", AmountType.VERY_HIGH));
+			mats.add(new MaterialData("Gold", AmountType.VERY_HIGH));
+			mats.add(new MaterialData("Emerald", AmountType.VERY_HIGH));
 		}
-		else if(body == CERES) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-			mats.add("Uranium: Low");
-			mats.add("Crystallized Water: High");
-			mats.add("Radio Active Water: Low");
-		}
-		else if(body == JUPITER) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-			mats.add("Palladium: Medium");
-			mats.add("Nickel: Medium");
-			mats.add("Red Gem: Medium");
-			mats.add("Ash Rock: Low");
-			mats.add("Volcanic Rock: Low");
-			mats.add("Magma: Very High");
-		}
-		else if(body == SATURN) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-			mats.add("Ice: Very Low");
-			mats.add("Magnesium: Medium");
-			mats.add("Slime: Low");
-			mats.add("Liquid Glowstone: Very High");
-			mats.add("Liquid Methance: Very High");
-			mats.add("Liquid Hydro Carbon: Very High");
-		}
-		else if(body == URANUS) {
-			mats.add("Ice: High");
-			mats.add("Crystal: Medium");
-			mats.add("Dense Ice: Medium");
-			mats.add("White Gem: Low");
-			mats.add("Frozen Water: Very High");
-		}
-		else if(body == NEPTUNE) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-			mats.add("Zinc: Medium");
-			mats.add("Frozen Nitrogen: Medium");
-			mats.add("Liquid Nitrogen: Very High");
-		}
-		else if(body == PLUTO) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-			mats.add("Tungsten: Medium");
-		}
-		else if(body == ERIS) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-			mats.add("Dark Iron: Low");
-		}
-		else if(body == KEPLER22B) {
-			mats.add("Wood: Very High");
-			if (Config.GENERATE_KEPLER22B_SPHERES || Config.GENERATE_KEPLER22B_MATERIAL_TREES) {
-				mats.add("Iron: Very High");
-				mats.add("Coal: Very High");
-				mats.add("Diamond: Very High");
-				mats.add("Gold: Very High");
-				mats.add("Emerald: Very High");
-			}
-			mats.add("Infected Water: Very High");
-			mats.add("Liquid Chocolate: Very High");
-			mats.add("Liquid Caramel: Very High");
-			mats.add("Candy: High");
-		}
-		return mats;
+		mats.add(new MaterialData("Infected Water", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Liquid Chocolate", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Liquid Caramel", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Candy", AmountType.HIGH));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(KEPLER22B, mats);
 	}
 }
