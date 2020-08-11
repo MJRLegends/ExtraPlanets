@@ -1,15 +1,19 @@
 package com.mjr.extraplanets.planets.mars.spacestation;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.api.prefabs.client.SkyProviderCustomOrbit;
 import com.mjr.extraplanets.planets.ExtraPlanets_SpaceStations;
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
+import micdoodle8.mods.galacticraft.core.client.CloudRenderer;
 import micdoodle8.mods.galacticraft.core.dimension.WorldProviderOverworldOrbit;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.world.gen.ChunkProviderOrbit;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
+
 import net.minecraft.util.MathHelper;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -171,5 +175,34 @@ public class WorldProviderMarsOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	public float getWindLevel() {
 		return 0.1F;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void setSpinDeltaPerTick(float angle) {
+		SkyProviderCustomOrbit skyProvider = ((SkyProviderCustomOrbit) this.getSkyRenderer());
+		if (skyProvider != null)
+			skyProvider.spinDeltaPerTick = angle;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public float getSkyRotation() {
+		SkyProviderCustomOrbit skyProvider = ((SkyProviderCustomOrbit) this.getSkyRenderer());
+		return skyProvider.spinAngle;
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void createSkyProvider() {
+		this.setSkyRenderer(new SkyProviderCustomOrbit(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/mars.png"), false, true, getSunSize()));
+		this.setSpinDeltaPerTick(this.getSpinManager().getSpinRate());
+
+		if (this.getCloudRenderer() == null)
+			this.setCloudRenderer(new CloudRenderer());
+	}
+
+	public static float getSunSize() {
+		return 17.5F * (1.0F / MarsModule.planetMars.getRelativeDistanceFromCenter().unScaledDistance);
 	}
 }
