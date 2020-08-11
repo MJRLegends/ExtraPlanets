@@ -5,6 +5,9 @@ import java.util.List;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.api.celestialBody.CelestialBodyMaterialRegistry;
+import com.mjr.extraplanets.api.celestialBody.CelestialBodyMaterialRegistry.AmountType;
+import com.mjr.extraplanets.api.celestialBody.CelestialBodyMaterialRegistry.MaterialData;
 import com.mjr.extraplanets.moons.Callisto.TeleportTypeCallisto;
 import com.mjr.extraplanets.moons.Callisto.WorldProviderCallisto;
 import com.mjr.extraplanets.moons.Callisto.worldgen.CallistoBiomes;
@@ -79,6 +82,7 @@ public class ExtraPlanets_Moons {
 	public static void init() {
 		initializeMoons();
 		registerMoons();
+		registerMaterialsForMoons();
 		initializeUnReachableMoons();
 	}
 
@@ -420,88 +424,97 @@ public class ExtraPlanets_Moons {
 
 	}
 
-	public static List<String> getMaterialsListForMoon(CelestialBody body) {
-		List<String> mats = new ArrayList<String>();
-		if (body == TRITON) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-			mats.add("Liquid Nitrongen Ice: Medium");
-			mats.add("Frozen Nitrogen: Very High");
-			mats.add("Ice: Very High");
-			mats.add("Snow: Medium");
-		} 
-		else if (body == CALLISTO) {
-			mats.add("Copper: High");
-			mats.add("Tin: High");
-			mats.add("Iron: Medium");
-			mats.add("Crystallized Water: Very High");
-		}
-		else if (body == EUROPA) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: High");
-			mats.add("Ice: Very High");
-			mats.add("Dense Ice: High");
-			mats.add("Crystallized Water: Very High");
-			mats.add("Radio Active Water: Low");
-		}
-		else if (body == GANYMEDE) {
-			mats.add("Copper: High");
-			mats.add("Tin: High");
-			mats.add("Iron: Medium");
-			mats.add("Ice: Very High");
-			mats.add("Infected Water: Low");
-		}
-		else if (body == IO) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-			mats.add("Magma: Very High");
-			mats.add("Ash: Very High");
-			mats.add("Volcanic Rock: Very High");
-		}
-		else if (body == DEIMOS) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-		}
-		else if (body == PHOBOS) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-		}
-		else if (body == IAPETUS) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-			mats.add("Iapetus Ice: Very High");
-		}
-		else if (body == RHEA) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-		}
-		else if (body == TITAN) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-			mats.add("Liquid Methane: Very High");
-			mats.add("Titan Rocks: High");
-		}
-		else if (body == OBERON) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-			mats.add("Ice: Very High");
-			mats.add("Dense Ice: Very High");
-			mats.add("Lava: Medium");
-		}
-		else if (body == TITANIA) {
-			mats.add("Copper: Medium");
-			mats.add("Tin: Medium");
-			mats.add("Iron: Medium");
-		}
-		return mats;
+	public static void registerMaterialsForMoons() {
+		List<MaterialData> mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Liquid Nitrongen Ice", AmountType.MEDIUM));
+		mats.add(new MaterialData("Frozen Nitrogen", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Ice", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Snow", AmountType.MEDIUM));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(TRITON, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.HIGH));
+		mats.add(new MaterialData("Tin", AmountType.HIGH));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Crystallized Water", AmountType.VERY_HIGH));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(CALLISTO, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.HIGH));
+		mats.add(new MaterialData("Ice", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Dense Ice", AmountType.HIGH));
+		mats.add(new MaterialData("Crystallized Water", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Radio Active Water", AmountType.LOW));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(EUROPA, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.HIGH));
+		mats.add(new MaterialData("Tin", AmountType.HIGH));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Ice", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Infected Water", AmountType.LOW));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(GANYMEDE, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Magma", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Ash", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Volcanic Rock", AmountType.VERY_HIGH));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(IO, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(DEIMOS, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(PHOBOS, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iapetus Ice", AmountType.VERY_HIGH));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(IAPETUS, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(RHEA, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Liquid Methane", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Titan Rocks", AmountType.HIGH));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(TITAN, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		mats.add(new MaterialData("Ice", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Dense Ice", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Lava", AmountType.MEDIUM));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(OBERON, mats);
+
+		mats = new ArrayList<MaterialData>();
+		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(TITANIA, mats);
 	}
 }

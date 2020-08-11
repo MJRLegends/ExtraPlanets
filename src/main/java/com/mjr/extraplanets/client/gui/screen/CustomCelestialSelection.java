@@ -16,10 +16,9 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.api.celestialBody.CelestialBodyMaterialRegistry;
 import com.mjr.extraplanets.api.prefabs.world.WorldProviderRealisticSpace;
 import com.mjr.extraplanets.compatibility.PlanetProgressionCompatibility;
-import com.mjr.extraplanets.moons.ExtraPlanets_Moons;
-import com.mjr.extraplanets.planets.ExtraPlanets_Planets;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
@@ -297,11 +296,11 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 						if ((this.selectedBody instanceof Planet))
 							this.drawString(this.fontRendererObj, TranslateUtilities.translate("gui.celestial_body_amount_of_moons.name") + ": " + this.getChildren(this.selectedBody).size(), xOffset + 10, yOffset + 33, 14737632);
 						this.drawString(this.fontRendererObj, "Materials: " + EnumChatFormatting.GOLD + "Hover to Show", xOffset + 10, yOffset + 43, 14737632);
-						if(mousePosX >= xOffset + 60 && mousePosY >= yOffset + 41)	{
-							if(mousePosX <= xOffset + 140 && mousePosY <= yOffset + 50) {
+						if (mousePosX >= xOffset + 60 && mousePosY >= yOffset + 41) {
+							if (mousePosX <= xOffset + 140 && mousePosY <= yOffset + 50) {
 								showHoveredMats = true;
 								showHoveredMatsX = xOffset + 10;
-								showHoveredMatsY =  yOffset + 43;
+								showHoveredMatsY = yOffset + 43;
 							}
 						}
 						yOffset = yOffset + 50;
@@ -417,10 +416,9 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 								yOffset + 110, 14737632);
 
 						if (showHoveredMats) {
-							if (ExtraPlanets_Planets.isExtraPlanetsPlanet(selectedBody))
-								this.drawHoveringText(ExtraPlanets_Planets.getMaterialsListForPlanet(selectedBody), showHoveredMatsX, showHoveredMatsY);
-							else if (ExtraPlanets_Moons.isExtraPlanetsMoon(selectedBody))
-								this.drawHoveringText(ExtraPlanets_Moons.getMaterialsListForMoon(selectedBody), showHoveredMatsX, showHoveredMatsY);
+							List<String> materials = CelestialBodyMaterialRegistry.getTextOutputByCelestialBody(selectedBody);
+							if (materials.size() != 0)
+								this.drawHoveringText(materials, showHoveredMatsX, showHoveredMatsY);
 							else
 								this.drawCreativeTabHoveringText("Unknown Materials", showHoveredMatsX, showHoveredMatsY);
 						}
