@@ -6,7 +6,6 @@
 
 ===========================================Released Updates===========================================
 v1.0.2
-*Fixed a bug where if MachineMusePowersuits mod is installed space suit got picked up as 0 tier in radiation calculation
 *Fixed gained radiation going negative in certain instances
 
 v1.0.1
