@@ -63,7 +63,7 @@ public class BiomeDecoratorEuropa extends BiomeDecoratorSpace {
 		if (Config.GENERATE_ORES_EUROPA) {
 			this.generateOre(26, this.copperGen, 0, 60);
 			this.generateOre(23, this.tinGen, 0, 60);
-			this.generateOre(20, this.ironGen, 0, 64);
+			this.generateOre(25, this.ironGen, 0, 64);
 		}
 		this.generateOre(15, this.gravelGen, 0, 80);
 		this.generateOre(10, this.fossilsGen, 0, 256);
