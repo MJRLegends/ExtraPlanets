@@ -436,6 +436,7 @@ public class MainHandlerServer {
 			MessageUtilities.debugMessageToLog(Constants.modID, "Environment Radiation Amount: " + amount);
 		boolean doDamage = false;
 		boolean doArmorCheck = false;
+		double damageToTake = 0;
 		double damageModifer = 0;
 
 		ItemStack helmet = playerMP.inventory.armorInventory[3];
@@ -464,8 +465,7 @@ public class MainHandlerServer {
 			}
 
 			int tierValue = (helmetTier + chestTier + legginsTier + bootsTier) / 2;
-			double damageToTake = 0.005 * tierValue;
-			damageModifer = 0.0075 - (damageToTake / 2) / 10;
+			damageToTake = 0.005 * tierValue;
 			doDamage = true;
 		}
 		if (doDamage) {
@@ -480,10 +480,14 @@ public class MainHandlerServer {
 					playerMP.attackEntityFrom(DamageSourceEP.radiation, 3F);
 			} else if (stats.getRadiationLevel() >= 0) {
 				double tempLevel = 0.0;
-				if (amount < 10)
+				if (amount < 10) {
+					damageModifer = 0.005625 - (damageToTake / 2) / 10;
 					tempLevel = (damageModifer * amount) / 100;
-				else
+				}
+				else {
+					damageModifer = 0.001875 - (damageToTake / 2) / 10;
 					tempLevel = damageModifer * (amount / 10) / 6;
+				}
 				if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE)
 					MessageUtilities.debugMessageToLog(Constants.modID, "Gained amount of Radiation: " + tempLevel);
 				stats.setRadiationLevel(stats.getRadiationLevel() + tempLevel);
