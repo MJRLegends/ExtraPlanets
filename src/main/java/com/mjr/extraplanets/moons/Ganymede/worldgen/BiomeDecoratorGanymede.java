@@ -32,8 +32,8 @@ public class BiomeDecoratorGanymede extends BiomeDecoratorSpace {
 
 	public BiomeDecoratorGanymede() {
 		if (Config.GENERATE_ORES_GANYMEDE) {
-			this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 4, 5, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
-			this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 4, 4, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
+			this.copperGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 10, 5, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
+			this.tinGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 10, 4, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
 			this.ironGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 8, 3, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
 		}
 		this.gravelGen = new WorldGenMinableMeta(ExtraPlanets_Blocks.GANYMEDE_GRAVEL, 12, 0, true, ExtraPlanets_Blocks.GANYMEDE_BLOCKS, 2);
@@ -60,8 +60,8 @@ public class BiomeDecoratorGanymede extends BiomeDecoratorSpace {
 			return;
 		isDecorating = true;
 		if (Config.GENERATE_ORES_GANYMEDE) {
-			this.generateOre(26, this.copperGen, 0, 60);
-			this.generateOre(23, this.tinGen, 0, 60);
+			this.generateOre(28, this.copperGen, 0, 60);
+			this.generateOre(28, this.tinGen, 0, 60);
 			this.generateOre(20, this.ironGen, 0, 64);
 		}
 		this.generateOre(15, this.gravelGen, 0, 80);
