@@ -143,7 +143,7 @@ public class MainHandlerClient {
 				}
 			}
 
-			if (Config.USE_CUSTOM_CELESTAIAL_SELECTION && MCUtilities.getClient().currentScreen instanceof CustomCelestialSelection) {
+			if (Config.USE_CUSTOM_CELESTIAL_SELECTION && MCUtilities.getClient().currentScreen instanceof CustomCelestialSelection) {
 				player.motionY = 0;
 			}
 
@@ -381,7 +381,7 @@ public class MainHandlerClient {
 	@SubscribeEvent
 	@SideOnly(Side.CLIENT)
 	public void onGuiOpenEvent(GuiOpenEvent event) {
-		if (Config.USE_CUSTOM_CELESTAIAL_SELECTION) {
+		if (Config.USE_CUSTOM_CELESTIAL_SELECTION) {
 			if (((event.gui instanceof GuiCelestialSelection))) {
 				if (GameSettings.isKeyDown(micdoodle8.mods.galacticraft.core.tick.KeyHandlerClient.galaxyMap)) {
 					event.gui = new CustomCelestialSelection(true, ((GuiCelestialSelection) event.gui).possibleBodies);
