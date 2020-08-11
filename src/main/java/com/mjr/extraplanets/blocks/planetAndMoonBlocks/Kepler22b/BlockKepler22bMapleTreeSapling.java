@@ -8,6 +8,7 @@ import com.mjr.extraplanets.planets.Kepler22b.worldgen.features.WorldGenKepler22
 
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.IGrowable;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MapColor;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyEnum;
@@ -87,6 +88,7 @@ public class BlockKepler22bMapleTreeSapling extends BlockBush implements IGrowab
 	public BlockKepler22bMapleTreeSapling() {
 		this.setDefaultState(this.blockState.getBaseState().withProperty(VARIANT, BlockKepler22bMapleTreeSapling.EnumType.MAPLE_BLUE).withProperty(STAGE, Integer.valueOf(0)));
 		this.setCreativeTab(ExtraPlanets.BlocksTab);
+		this.setSoundType(SoundType.PLANT);
 	}
 
 	@Override
