@@ -5,6 +5,9 @@
 
 
 ===========================================Released Updates===========================================
+v1.6.6
+*Fixed gained radiation going negative in certain instances
+
 v1.6.5
 *Allow MatterOverdrive android to bypass radiation/pressure systems #522
 *Fixed issue #583 - Suns smaller than should be on Moons
