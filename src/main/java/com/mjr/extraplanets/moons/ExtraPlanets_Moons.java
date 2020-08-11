@@ -50,6 +50,7 @@ import micdoodle8.mods.galacticraft.api.world.AtmosphereInfo;
 import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
 import micdoodle8.mods.galacticraft.core.entities.*;
 import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
+
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
 
