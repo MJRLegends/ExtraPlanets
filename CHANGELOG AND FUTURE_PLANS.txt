@@ -5,6 +5,19 @@
 
 
 ===========================================Released Updates===========================================
+v1.3.5
+*Allow MatterOverdrive android to bypass radiation/pressure systems #522
+*Fixed issue #583 - Suns smaller than should be on Moons
+*Added custom sun sizes/scales for all space stations (Suggestion from #448)
+*Fixed parent planets not scaling correctly on moon dimensions (Suggestion from #448)
+*Added a custom Sky Provider for Kepler22b  (Suggestion from #448)
+*Changed chat message for showing current amount of radiation to show in the format AMOUNT / 100 rather than a % which caused confusion
+*Renamed "Custom Galaxies on Celestaial Selection Screen" config option to "Enable showing of Custom Galaxies on the Custom Celestial Selection Screen" due to confusion when reading the config
+*Added natural slowly reducing of players radiation levels (with 1.5x speed on Planets/Moons)
+*Improved the planet/moon/station arrival message to be more clear
+*Lowered the amount of radiation gained on planets/moons (Radiation for dimensions with below 10/100% radiation is lowered by 25% and dimensions with 10+/100% radiation is lowered by 75%)
+*Fixed a bunch of Celestial word typos in config options
+
 v1.3.4
 *Removed some not needed meta uses, removed not needed overriding of getPickBlock method
 *Started removing use of getStateFromMeta in world gen structures
