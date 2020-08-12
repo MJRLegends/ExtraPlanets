@@ -46,6 +46,13 @@ import micdoodle8.mods.galacticraft.api.world.AtmosphereInfo;
 import micdoodle8.mods.galacticraft.api.world.EnumAtmosphericGas;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.*;
+import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
+import micdoodle8.mods.galacticraft.planets.asteroids.AsteroidsModule;
+import micdoodle8.mods.galacticraft.planets.asteroids.ConfigManagerAsteroids;
+import micdoodle8.mods.galacticraft.planets.mars.ConfigManagerMars;
+import micdoodle8.mods.galacticraft.planets.mars.MarsModule;
+import micdoodle8.mods.galacticraft.planets.venus.ConfigManagerVenus;
+import micdoodle8.mods.galacticraft.planets.venus.VenusModule;
 
 import net.minecraft.entity.monster.*;
 import net.minecraft.entity.passive.EntityChicken;
@@ -595,5 +602,67 @@ public class ExtraPlanets_Planets {
 		mats.add(new MaterialData("Liquid Caramel", AmountType.VERY_HIGH));
 		mats.add(new MaterialData("Candy", AmountType.HIGH));
 		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(KEPLER22B, mats);
+	}
+
+	public static void registerMaterialsForGCPlanets() {
+		List<MaterialData> mats = new ArrayList<MaterialData>();
+		if (!ConfigManagerCore.disableCopperMoon)
+			mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		if (!ConfigManagerCore.disableTinMoon)
+			mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		if (!ConfigManagerCore.disableCheeseMoon)
+			mats.add(new MaterialData("Cheese", AmountType.LOW));
+		if (!ConfigManagerCore.disableSapphireMoon)
+			mats.add(new MaterialData("Sapphire", AmountType.LOW));
+		mats.add(new MaterialData("Dirt", AmountType.HIGH));
+		mats.add(new MaterialData("Meteoric Iron", AmountType.LOW));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(GalacticraftCore.moonMoon, mats);
+
+		mats = new ArrayList<MaterialData>();
+		if (!ConfigManagerMars.disableCopperGen)
+			mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		if (!ConfigManagerMars.disableTinGen)
+			mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		if (!ConfigManagerMars.disableIronGen)
+			mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+		if (!ConfigManagerMars.disableDeshGen)
+			mats.add(new MaterialData("Desh", AmountType.LOW));
+		mats.add(new MaterialData("Dirt", AmountType.HIGH));
+		mats.add(new MaterialData("Ice", AmountType.VERY_LOW));
+		mats.add(new MaterialData("Meteoric Iron", AmountType.MEDIUM));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(MarsModule.planetMars, mats);
+
+		mats = new ArrayList<MaterialData>();
+		if (!ConfigManagerAsteroids.disableIlmeniteGen)
+			mats.add(new MaterialData("Ilmenite", AmountType.LOW));
+		if (!ConfigManagerAsteroids.disableAluminumGen)
+			mats.add(new MaterialData("Aluminum", AmountType.LOW));
+		if (!ConfigManagerAsteroids.disableIronGen)
+			mats.add(new MaterialData("Iron", AmountType.LOW));
+		mats.add(new MaterialData("Silicon", AmountType.VERY_LOW));
+		mats.add(new MaterialData("Diamond", AmountType.VERY_LOW));
+		mats.add(new MaterialData("Solid Meteoric Iron", AmountType.VERY_LOW));
+		mats.add(new MaterialData("Ice", AmountType.LOW));
+		mats.add(new MaterialData("Meteoric Iron", AmountType.LOW));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(AsteroidsModule.planetAsteroids, mats);
+
+		mats = new ArrayList<MaterialData>();
+		if (!ConfigManagerVenus.disableCopperGen)
+			mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+		if (!ConfigManagerVenus.disableTinGen)
+			mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+		if (!ConfigManagerVenus.disableAluminumGen)
+			mats.add(new MaterialData("Aluminum", AmountType.MEDIUM));
+		if (!ConfigManagerVenus.disableGalenaGen)
+			mats.add(new MaterialData("Galena", AmountType.MEDIUM));
+		if (!ConfigManagerVenus.disableQuartzGen)
+			mats.add(new MaterialData("Quartz", AmountType.MEDIUM));
+		if (!ConfigManagerVenus.disableSiliconGen)
+			mats.add(new MaterialData("Silicon", AmountType.VERY_LOW));
+		if (!ConfigManagerVenus.disableSolarGen)
+			mats.add(new MaterialData("Solar", AmountType.LOW));
+		mats.add(new MaterialData("Silicon", AmountType.VERY_LOW));
+		mats.add(new MaterialData("Meteoric Iron", AmountType.MEDIUM));
+		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(VenusModule.planetVenus, mats);
 	}
 }
