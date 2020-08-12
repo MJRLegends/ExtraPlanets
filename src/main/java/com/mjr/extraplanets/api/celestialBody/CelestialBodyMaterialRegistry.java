@@ -55,8 +55,10 @@ public class CelestialBodyMaterialRegistry {
 	public static List<String> getTextOutputByCelestialBody(CelestialBody celestialBody) {
 		List<MaterialData> materials = bodies.get(celestialBody);
 		List<String> output = new ArrayList<String>();
-		for(MaterialData material : materials) {
-			output.add(material.getMaterialName() + ": " + material.getAmountType().getName());
+		if(materials != null) {
+			for(MaterialData material : materials) {
+				output.add(material.getMaterialName() + ": " + material.getAmountType().getName());
+			}
 		}
 		return output;
 	}
