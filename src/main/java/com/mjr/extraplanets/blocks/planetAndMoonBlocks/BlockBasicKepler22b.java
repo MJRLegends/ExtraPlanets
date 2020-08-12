@@ -2,6 +2,8 @@ package com.mjr.extraplanets.blocks.planetAndMoonBlocks;
 
 import java.util.Random;
 
+import javax.annotation.Nullable;
+
 import com.google.common.base.Predicate;
 import com.mjr.extraplanets.ExtraPlanets;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
@@ -13,6 +15,7 @@ import micdoodle8.mods.galacticraft.core.blocks.ISortableBlock;
 import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryBlock;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
@@ -201,5 +204,9 @@ public class BlockBasicKepler22b extends Block implements IDetectableResource, I
 			return EnumSortCategoryBlock.BRICKS;
 		}
 		return EnumSortCategoryBlock.GENERAL;
+	}
+
+	public SoundType getSoundType(IBlockState state, World world, BlockPos pos, @Nullable Entity entity) {
+		return state.getValue(BASIC_TYPE) == EnumBlockBasic.DIRT ? SoundType.PLANT : super.getSoundType(state, world, pos, entity);
 	}
 }
