@@ -288,109 +288,112 @@ public class CustomCelestialSelection extends GuiCelestialSelection {
 								xOffset + 10, yOffset + 23, 14737632);
 						float gravity = 0;
 						long dayLength = 0;
-						if (this.selectedBody.getReachable() && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld")) {
-							gravity = ((WorldProviderSpace) temp).getGravity();
-							dayLength = ((WorldProviderSpace) temp).getDayLength() / 1000;
-						} else if (this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld")) {
-							gravity = 1;
-							dayLength = 24;
-						}
-						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_gravity.name") + ": " + (this.selectedBody.getReachable() ? gravity : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10,
-								yOffset + 33, 14737632);
-						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_day_lengh.name") + ": "
-								+ (this.selectedBody.getReachable() ? dayLength + " " + TranslateUtilities.translate("gui.type_hours.name") : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10, yOffset + 43, 14737632);
-						yOffset = yOffset + 55;
-						this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, BLUE);
-						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.general_features_details.name") + ": ", xOffset + 10, yOffset + 8, BLUE);
-						this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, BLUE);
-						double meteorFrequency = 0;
-						if (temp != null && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().contains("overworld")) {
-							double number = ((WorldProviderSpace) temp).getMeteorFrequency();
-							BigDecimal bd = new BigDecimal(number).setScale(7, RoundingMode.DOWN);
-							meteorFrequency = bd.doubleValue();
-						} else {
-							meteorFrequency = 0;
-						}
-						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_meteor_frequency.name") + ": " + (this.selectedBody.getReachable() ? meteorFrequency : TranslateUtilities.translate("gui.type_unknown.name")),
-								xOffset + 10, yOffset + 23, 14737632);
-
-						String name = this.selectedBody.getUnlocalizedName().toLowerCase();
-						String hasDungeon = TranslateUtilities.translate("gui.type_unknown.name");
-						if (name.contains("moon") || name.contains("venus") || name.contains("mars") || name.contains("mercury") || name.contains("jupiter") || name.contains("saturn") || name.contains("uranus") || name.contains("neptune")
-								|| name.contains("pluto") || name.contains("eris"))
-							hasDungeon = "true";
-						if (name.contains("overworld") || name.contains("ceres") || name.contains("kepler22b") || name.contains("asteroids") || name.contains("phobos") || name.contains("deimos") || name.contains("io") || name.contains("europa")
-								|| name.contains("ganymede") || name.contains("callisto") || name.contains("rhea") || name.contains("titan") || name.contains("iapetus") || name.contains("titania") || name.contains("oberon")
-								|| name.contains("triton"))
-							hasDungeon = "false";
-						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_has_dungeon.name") + ": " + hasDungeon, xOffset + 10, yOffset + 32, 14737632);
-						yOffset = yOffset + 5;
-						this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 39, BLUE);
-						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.atmosphere_details.name") + ": ", xOffset + 10, yOffset + 45, BLUE);
-						this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 51, BLUE);
-						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_wind_level.name") + ": "
-								+ (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.windLevel() * 10 + "%" : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10, yOffset + 60, 14737632);
-						float temperature = 0;
-						if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") && !(this.selectedBody instanceof Satellite))
-							try {
-								temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
-							} catch (Exception e) {
+						if (temp instanceof WorldProviderSpace) {
+							if (this.selectedBody.getReachable() && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld")) {
+								gravity = ((WorldProviderSpace) temp).getGravity();
+								dayLength = ((WorldProviderSpace) temp).getDayLength() / 1000;
+							} else if (this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld")) {
+								gravity = 1;
+								dayLength = 24;
 							}
-						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_temperature.name") + ": " + (this.selectedBody.getReachable() ? temperature + "C" : TranslateUtilities.translate("gui.type_unknown.name")),
-								xOffset + 10, yOffset + 70, 14737632);
-						boolean breathable = false;
-						if (temp != null && !(this.selectedBody instanceof Satellite))
-							breathable = ((WorldProviderSpace) temp).hasBreathableAtmosphere();
-						if (this.selectedBody.getUnlocalizedName().contains("overworld"))
-							breathable = true;
-						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_breathable.name") + ": " + (this.selectedBody.getReachable() ? breathable : TranslateUtilities.translate("gui.type_unknown.name")),
-								xOffset + 10, yOffset + 80, 14737632);
-						this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_corrosive_atmosphere.name") + ": "
-								+ (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isCorrosive() : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10, yOffset + 90, 14737632);
-						int radiationLevel = 0;
-						int pressureLevel = 0;
-						try {
-							radiationLevel = ((WorldProviderRealisticSpace) temp).getSolarRadiationLevel();
-							pressureLevel = ((WorldProviderRealisticSpace) temp).getPressureLevel();
-						} catch (Exception ex) {
-							if (temp instanceof WorldProviderMoon) {
-								if (Config.GC_PRESSURE)
-									pressureLevel = 80;
-								if (Config.GC_RADIATION)
-									radiationLevel = Config.MOON_RADIATION_AMOUNT;
-							} else if (temp instanceof WorldProviderMars) {
-								if (Config.GC_PRESSURE)
-									pressureLevel = 90;
-								if (Config.GC_RADIATION)
-									radiationLevel = Config.MARS_RADIATION_AMOUNT;
-							} else if (temp instanceof WorldProviderVenus) {
-								if (Config.GC_PRESSURE)
-									pressureLevel = 100;
-								if (Config.GC_RADIATION)
-									radiationLevel = Config.VENUS_RADIATION_AMOUNT;
-							} else if (temp instanceof WorldProviderAsteroids) {
-								if (Config.GC_PRESSURE)
-									pressureLevel = 100;
-								if (Config.GC_RADIATION)
-									radiationLevel = Config.ASTEROIDS_RADIATION_AMOUNT;
-							} else if (temp instanceof WorldProviderSpaceStation || this.selectedBody instanceof Satellite) {
-								if (Config.GC_PRESSURE || Config.PRESSURE)
-									pressureLevel = 100;
-								if (Config.GC_RADIATION || Config.RADIATION)
-									radiationLevel = Config.SPACE_STATION_RADIATION_AMOUNT;
+							this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_gravity.name") + ": " + (this.selectedBody.getReachable() ? gravity : TranslateUtilities.translate("gui.type_unknown.name")),
+									xOffset + 10, yOffset + 33, 14737632);
+							this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_day_lengh.name") + ": "
+									+ (this.selectedBody.getReachable() ? dayLength + " " + TranslateUtilities.translate("gui.type_hours.name") : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10, yOffset + 43, 14737632);
+							yOffset = yOffset + 55;
+							this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 2, BLUE);
+							this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.general_features_details.name") + ": ", xOffset + 10, yOffset + 8, BLUE);
+							this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 14, BLUE);
+							double meteorFrequency = 0;
+							if (temp != null && !(this.selectedBody instanceof Satellite) && !this.selectedBody.getUnlocalizedName().contains("overworld")) {
+								double number = ((WorldProviderSpace) temp).getMeteorFrequency();
+								BigDecimal bd = new BigDecimal(number).setScale(7, RoundingMode.DOWN);
+								meteorFrequency = bd.doubleValue();
 							} else {
-								radiationLevel = 0;
-								pressureLevel = 0;
+								meteorFrequency = 0;
 							}
+							this.drawString(this.fontRenderer,
+									TranslateUtilities.translate("gui.celestial_body_meteor_frequency.name") + ": " + (this.selectedBody.getReachable() ? meteorFrequency : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10,
+									yOffset + 23, 14737632);
+
+							String name = this.selectedBody.getUnlocalizedName().toLowerCase();
+							String hasDungeon = TranslateUtilities.translate("gui.type_unknown.name");
+							if (name.contains("moon") || name.contains("venus") || name.contains("mars") || name.contains("mercury") || name.contains("jupiter") || name.contains("saturn") || name.contains("uranus") || name.contains("neptune")
+									|| name.contains("pluto") || name.contains("eris"))
+								hasDungeon = "true";
+							if (name.contains("overworld") || name.contains("ceres") || name.contains("kepler22b") || name.contains("asteroids") || name.contains("phobos") || name.contains("deimos") || name.contains("io") || name.contains("europa")
+									|| name.contains("ganymede") || name.contains("callisto") || name.contains("rhea") || name.contains("titan") || name.contains("iapetus") || name.contains("titania") || name.contains("oberon")
+									|| name.contains("triton"))
+								hasDungeon = "false";
+							this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_has_dungeon.name") + ": " + hasDungeon, xOffset + 10, yOffset + 32, 14737632);
+							yOffset = yOffset + 5;
+							this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 39, BLUE);
+							this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.atmosphere_details.name") + ": ", xOffset + 10, yOffset + 45, BLUE);
+							this.drawString(this.fontRenderer, "------------------------", xOffset + 10, yOffset + 51, BLUE);
+							this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_wind_level.name") + ": "
+									+ (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.windLevel() * 10 + "%" : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10, yOffset + 60, 14737632);
+							float temperature = 0;
+							if (this.selectedBody.getReachable() && !this.selectedBody.getUnlocalizedName().toLowerCase().contains("overworld") && !(this.selectedBody instanceof Satellite))
+								try {
+									temperature = ((WorldProviderSpace) temp).getThermalLevelModifier();
+								} catch (Exception e) {
+								}
+							this.drawString(this.fontRenderer,
+									TranslateUtilities.translate("gui.celestial_body_temperature.name") + ": " + (this.selectedBody.getReachable() ? temperature + "C" : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10,
+									yOffset + 70, 14737632);
+							boolean breathable = false;
+							if (temp != null && !(this.selectedBody instanceof Satellite))
+								breathable = ((WorldProviderSpace) temp).hasBreathableAtmosphere();
+							if (this.selectedBody.getUnlocalizedName().contains("overworld"))
+								breathable = true;
+							this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_breathable.name") + ": " + (this.selectedBody.getReachable() ? breathable : TranslateUtilities.translate("gui.type_unknown.name")),
+									xOffset + 10, yOffset + 80, 14737632);
+							this.drawString(this.fontRenderer, TranslateUtilities.translate("gui.celestial_body_corrosive_atmosphere.name") + ": "
+									+ (this.selectedBody.getReachable() ? this.selectedBody.atmosphere.isCorrosive() : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10, yOffset + 90, 14737632);
+							int radiationLevel = 0;
+							int pressureLevel = 0;
+							try {
+								radiationLevel = ((WorldProviderRealisticSpace) temp).getSolarRadiationLevel();
+								pressureLevel = ((WorldProviderRealisticSpace) temp).getPressureLevel();
+							} catch (Exception ex) {
+								if (temp instanceof WorldProviderMoon) {
+									if (Config.GC_PRESSURE)
+										pressureLevel = 80;
+									if (Config.GC_RADIATION)
+										radiationLevel = Config.MOON_RADIATION_AMOUNT;
+								} else if (temp instanceof WorldProviderMars) {
+									if (Config.GC_PRESSURE)
+										pressureLevel = 90;
+									if (Config.GC_RADIATION)
+										radiationLevel = Config.MARS_RADIATION_AMOUNT;
+								} else if (temp instanceof WorldProviderVenus) {
+									if (Config.GC_PRESSURE)
+										pressureLevel = 100;
+									if (Config.GC_RADIATION)
+										radiationLevel = Config.VENUS_RADIATION_AMOUNT;
+								} else if (temp instanceof WorldProviderAsteroids) {
+									if (Config.GC_PRESSURE)
+										pressureLevel = 100;
+									if (Config.GC_RADIATION)
+										radiationLevel = Config.ASTEROIDS_RADIATION_AMOUNT;
+								} else if (temp instanceof WorldProviderSpaceStation || this.selectedBody instanceof Satellite) {
+									if (Config.GC_PRESSURE || Config.PRESSURE)
+										pressureLevel = 100;
+									if (Config.GC_RADIATION || Config.RADIATION)
+										radiationLevel = Config.SPACE_STATION_RADIATION_AMOUNT;
+								} else {
+									radiationLevel = 0;
+									pressureLevel = 0;
+								}
+							}
+
+							this.drawString(this.fontRenderer,
+									TranslateUtilities.translate("gui.celestial_body_radiation_level.name") + ": " + (this.selectedBody.getReachable() ? radiationLevel + "%" : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10,
+									yOffset + 100, 14737632);
+							this.drawString(this.fontRenderer,
+									TranslateUtilities.translate("gui.celestial_body_pressure_level.name") + ": " + (this.selectedBody.getReachable() ? pressureLevel + "%" : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10,
+									yOffset + 110, 14737632);
 						}
-
-						this.drawString(this.fontRenderer,
-								TranslateUtilities.translate("gui.celestial_body_radiation_level.name") + ": " + (this.selectedBody.getReachable() ? radiationLevel + "%" : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10,
-								yOffset + 100, 14737632);
-						this.drawString(this.fontRenderer,
-								TranslateUtilities.translate("gui.celestial_body_pressure_level.name") + ": " + (this.selectedBody.getReachable() ? pressureLevel + "%" : TranslateUtilities.translate("gui.type_unknown.name")), xOffset + 10,
-								yOffset + 110, 14737632);
-
 						if (showHoveredMats) {
 							List<String> materials = CelestialBodyMaterialRegistry.getTextOutputByCelestialBody(selectedBody);
 							if (materials.size() != 0)
