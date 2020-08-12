@@ -27,7 +27,9 @@ import com.mjr.mjrlegendslib.util.PlayerUtilties;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import io.netty.buffer.ByteBuf;
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
+import micdoodle8.mods.galacticraft.core.entities.EntityLanderBase;
 import micdoodle8.mods.galacticraft.core.entities.player.GCPlayerStats;
 import micdoodle8.mods.galacticraft.core.items.ItemParaChute;
 import micdoodle8.mods.galacticraft.core.network.NetworkUtil;
@@ -229,8 +231,13 @@ public class PacketSimpleEP extends PacketSimpleBase {
 			if ((int) this.data.get(0) == 1) {
 				ItemStack jetpack = playerBase.inventory.armorInventory.get(2);
 				NBTTagCompound tag = new NBTTagCompound();
-				tag.setBoolean("active", true);
-				jetpack.setTagCompound(tag);
+				if (playerBase.getRidingEntity() instanceof EntityLanderBase || playerBase.getRidingEntity() instanceof EntityElectricRocketBase || playerBase.getRidingEntity() instanceof EntitySpaceshipBase) {
+					tag.setBoolean("active", false);
+					jetpack.setTagCompound(tag);
+				} else {
+					tag.setBoolean("active", true);
+					jetpack.setTagCompound(tag);
+				}
 			} else if ((int) this.data.get(0) == 0) {
 				ItemStack jetpack = playerBase.inventory.armorInventory.get(2);
 				NBTTagCompound tag = new NBTTagCompound();
