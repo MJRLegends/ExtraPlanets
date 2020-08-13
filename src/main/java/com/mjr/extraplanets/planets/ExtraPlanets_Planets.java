@@ -513,79 +513,106 @@ public class ExtraPlanets_Planets {
 
 	public static void registerMaterialsForPlanets() {
 		List<MaterialData> mats = new ArrayList<MaterialData>();
-		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
-		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
-		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
-		mats.add(new MaterialData("Mercury", AmountType.MEDIUM));
-		mats.add(new MaterialData("Carbon", AmountType.MEDIUM));
-		mats.add(new MaterialData("Desh", AmountType.MEDIUM));
-		mats.add(new MaterialData("Meteoric Iron", AmountType.MEDIUM));
-		mats.add(new MaterialData("Potash", AmountType.LOW));
+		if (Config.GENERATE_ORES_MERCURY) {
+			mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+			mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+			mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+			mats.add(new MaterialData("Mercury", AmountType.MEDIUM));
+			mats.add(new MaterialData("Carbon", AmountType.MEDIUM));
+		}
+		if (Config.GENERATE_MERCURY_METEORS) {
+			mats.add(new MaterialData("Desh", AmountType.MEDIUM));
+			mats.add(new MaterialData("Meteoric Iron", AmountType.MEDIUM));
+		}
+		if (Config.RADIATION)
+			mats.add(new MaterialData("Potash", AmountType.LOW));
 		mats.add(new MaterialData("Infected Water", AmountType.MEDIUM));
 		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(MERCURY, mats);
 
 		mats = new ArrayList<MaterialData>();
-		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
-		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
-		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
-		mats.add(new MaterialData("Uranium", AmountType.LOW));
+		if (Config.GENERATE_ORES_CERES) {
+			mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+			mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+			mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+			mats.add(new MaterialData("Uranium", AmountType.LOW));
+		}
 		mats.add(new MaterialData("Crystallized Water", AmountType.HIGH));
 		mats.add(new MaterialData("Radio Active Water", AmountType.LOW));
 		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(CERES, mats);
 
 		mats = new ArrayList<MaterialData>();
-		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
-		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
-		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
-		mats.add(new MaterialData("Palladium", AmountType.MEDIUM));
-		mats.add(new MaterialData("Nickel", AmountType.MEDIUM));
-		mats.add(new MaterialData("Red Gem", AmountType.MEDIUM));
+		if (Config.GENERATE_ORES_JUPITER) {
+			mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+			mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+			mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+			mats.add(new MaterialData("Palladium", AmountType.MEDIUM));
+			mats.add(new MaterialData("Nickel", AmountType.MEDIUM));
+			mats.add(new MaterialData("Red Gem", AmountType.MEDIUM));
+		}
 		mats.add(new MaterialData("Ash Rock", AmountType.LOW));
 		mats.add(new MaterialData("Volcanic Rock", AmountType.LOW));
 		mats.add(new MaterialData("Magma", AmountType.VERY_HIGH));
 		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(JUPITER, mats);
 
 		mats = new ArrayList<MaterialData>();
-		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
-		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
-		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
-		mats.add(new MaterialData("Ice", AmountType.VERY_LOW));
-		mats.add(new MaterialData("Magnesium", AmountType.MEDIUM));
-		mats.add(new MaterialData("Slime", AmountType.LOW));
+		if (Config.GENERATE_ORES_SATURN) {
+			mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+			mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+			mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+			mats.add(new MaterialData("Ice", AmountType.VERY_LOW));
+			mats.add(new MaterialData("Magnesium", AmountType.MEDIUM));
+			mats.add(new MaterialData("Slime", AmountType.LOW));
+		}
 		mats.add(new MaterialData("Liquid Glowstone", AmountType.VERY_HIGH));
 		mats.add(new MaterialData("Liquid Methance", AmountType.VERY_HIGH));
 		mats.add(new MaterialData("Liquid Hydro Carbon", AmountType.VERY_HIGH));
 		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(SATURN, mats);
 
 		mats = new ArrayList<MaterialData>();
-		mats.add(new MaterialData("Ice", AmountType.HIGH));
-		mats.add(new MaterialData("Crystal", AmountType.MEDIUM));
-		mats.add(new MaterialData("Dense Ice", AmountType.MEDIUM));
-		mats.add(new MaterialData("White Gem", AmountType.LOW));
+		if (Config.GENERATE_URANUS_ICE_SPIKES)
+			mats.add(new MaterialData("Ice", AmountType.HIGH));
+		else
+			mats.add(new MaterialData("Ice", AmountType.LOW));
+		if (Config.GENERATE_ORES_URANUS) {
+			mats.add(new MaterialData("Crystal", AmountType.MEDIUM));
+			mats.add(new MaterialData("Dense Ice", AmountType.MEDIUM));
+			mats.add(new MaterialData("White Gem", AmountType.LOW));
+		}
 		mats.add(new MaterialData("Frozen Water", AmountType.VERY_HIGH));
 		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(URANUS, mats);
 
 		mats = new ArrayList<MaterialData>();
-		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
-		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
-		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
-		mats.add(new MaterialData("Zinc", AmountType.MEDIUM));
-		mats.add(new MaterialData("Frozen Nitrogen", AmountType.MEDIUM));
+		if (Config.GENERATE_ORES_NEPTUNE) {
+			mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+			mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+			mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+			mats.add(new MaterialData("Zinc", AmountType.MEDIUM));
+			mats.add(new MaterialData("Blue Gem", AmountType.LOW));
+		}
+		if (Config.GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES)
+			mats.add(new MaterialData("Frozen Nitrogen", AmountType.MEDIUM));
+		else
+			mats.add(new MaterialData("Frozen Nitrogen", AmountType.VERY_LOW));
 		mats.add(new MaterialData("Liquid Nitrogen", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Radio Active Water", AmountType.VERY_HIGH));
 		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(NEPTUNE, mats);
 
 		mats = new ArrayList<MaterialData>();
-		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
-		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
-		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
-		mats.add(new MaterialData("Tungsten", AmountType.MEDIUM));
+		if (Config.GENERATE_ORES_PLUTO) {
+			mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+			mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+			mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+			mats.add(new MaterialData("Tungsten", AmountType.MEDIUM));
+		}
 		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(PLUTO, mats);
 
 		mats = new ArrayList<MaterialData>();
-		mats.add(new MaterialData("Copper", AmountType.MEDIUM));
-		mats.add(new MaterialData("Tin", AmountType.MEDIUM));
-		mats.add(new MaterialData("Iron", AmountType.MEDIUM));
-		mats.add(new MaterialData("Dark Iron", AmountType.LOW));
+		if (Config.GENERATE_ORES_ERIS) {
+			mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+			mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+			mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+			mats.add(new MaterialData("Dark Iron", AmountType.LOW));
+		}
 		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(ERIS, mats);
 
 		mats = new ArrayList<MaterialData>();
@@ -597,6 +624,15 @@ public class ExtraPlanets_Planets {
 			mats.add(new MaterialData("Gold", AmountType.VERY_HIGH));
 			mats.add(new MaterialData("Emerald", AmountType.VERY_HIGH));
 		}
+		if (Config.GENERATE_ORES_KEPLER22B) {
+			mats.add(new MaterialData("Copper", AmountType.MEDIUM));
+			mats.add(new MaterialData("Tin", AmountType.MEDIUM));
+			mats.add(new MaterialData("Iron", AmountType.MEDIUM));
+			mats.add(new MaterialData("Coloured Diamonds", AmountType.VERY_LOW));
+			mats.add(new MaterialData("Platinum", AmountType.VERY_LOW));
+			mats.add(new MaterialData("Dense Coal", AmountType.VERY_LOW));
+		}
+		mats.add(new MaterialData("Marble", AmountType.HIGH));
 		mats.add(new MaterialData("Infected Water", AmountType.VERY_HIGH));
 		mats.add(new MaterialData("Liquid Chocolate", AmountType.VERY_HIGH));
 		mats.add(new MaterialData("Liquid Caramel", AmountType.VERY_HIGH));
