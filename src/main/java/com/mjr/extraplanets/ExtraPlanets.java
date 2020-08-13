@@ -250,6 +250,8 @@ public class ExtraPlanets {
 
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		ExtraPlanets_Planets.registerMaterialsForGCPlanets();
+
 		// Register Modules
 		ExtraPlanets_Modules.init();
 
