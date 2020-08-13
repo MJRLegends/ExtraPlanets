@@ -5,6 +5,22 @@
 
 
 ===========================================Released Updates===========================================
+v1.0.4
+*Fixed NullPointerException error spam when hovering over a non ExtraPlanets body on ExtraPlanets Galaxy Map
+*Fixed cast error with GalaxySpace Planets/Moons that dont override the WorldProviderSpace class for GC API support
+*Added support for Galacticraft Planets/Moons with ExtraPlanets Galaxy Map Material list feature
+*Fixed issue #587 - Space suit Jetpack Bug while landing on the Planets
+*Fixed issue #588 - Wrong sound for kepler 22b dirt
+*Fixed false tool tip on potash about where its found
+*Fixed missing entries in ja_JP & es_ES lang files
+*Fixes for wrong planets/moons tool tips on liquid buckets
+	-Removed false Triton from Frozen Water
+	-Add missing Callisto to Crystalized Water
+	-Add missing Saturn to Methane
+	-Add missing Neptune to Radio Active Water
+*Fixed possible crash with Custom Celestial Galaxy Map when a body doesn't have a icon texture
+*Temp disable checking of disabled solar ore in GC Venus due to unable to obtain higher GC dev build 
+
 v1.0.3
 *Fixed double amount radiation being slowly reduced on planets
 *Fixed sounds for Kepler22b Saplings, Kepler22b Tall Grass, Red/Orange Sand, and all Grass blocks issue #586
