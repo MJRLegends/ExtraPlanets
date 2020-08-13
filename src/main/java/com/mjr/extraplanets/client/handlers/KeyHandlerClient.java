@@ -15,11 +15,14 @@ import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 import com.mjr.mjrlegendslib.util.MCUtilities;
 import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
+import micdoodle8.mods.galacticraft.api.prefab.entity.EntitySpaceshipBase;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.client.KeyHandler;
 import micdoodle8.mods.galacticraft.core.client.gui.GuiIdsCore;
+import micdoodle8.mods.galacticraft.core.entities.EntityLanderBase;
 import micdoodle8.mods.galacticraft.core.util.ConfigManagerCore;
 import micdoodle8.mods.galacticraft.core.util.PlayerUtil;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.settings.KeyBinding;
@@ -86,7 +89,8 @@ public class KeyHandlerClient extends KeyHandler {
 			}
 			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
 				if (playerBase.inventory.armorItemInSlot(2) != null && playerBase.inventory.armorItemInSlot(2).getItem() instanceof IJetpackArmour) {
-					ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.theWorld.provider.getDimension(), new Object[] { 1 }));
+					if (!(playerBase.getRidingEntity() instanceof EntityLanderBase) && !(playerBase.getRidingEntity() instanceof EntityElectricRocketBase) && !(playerBase.getRidingEntity() instanceof EntitySpaceshipBase))
+						ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.theWorld.provider.getDimension(), new Object[] { 1 }));
 				}
 			}
 			if (kb.getKeyCode() == KeyHandlerClient.openModuleManagerGUI.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
