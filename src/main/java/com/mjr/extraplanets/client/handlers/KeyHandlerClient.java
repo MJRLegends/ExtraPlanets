@@ -89,7 +89,7 @@ public class KeyHandlerClient extends KeyHandler {
 			}
 			if (kb.getKeyCode() == KeyHandlerClient.spaceKey.getKeyCode() && KeyHandlerClient.mc.currentScreen == null) {
 				if (playerBase.inventory.armorItemInSlot(1) != null && playerBase.inventory.armorItemInSlot(1).getItem() instanceof IJetpackArmour) {
-					if (!(playerBase.getRidingEntity() instanceof EntityLanderBase) && !(playerBase.getRidingEntity() instanceof EntityElectricRocketBase) && !(playerBase.getRidingEntity() instanceof EntitySpaceshipBase))
+					if (!(playerBase.ridingEntity instanceof EntityLanderBase) && !(playerBase.ridingEntity instanceof EntityElectricRocketBase) && !(playerBase.ridingEntity instanceof EntitySpaceshipBase))
 						ExtraPlanets.packetPipeline.sendToServer(new PacketSimpleEP(EnumSimplePacket.S_UPDATE_JETPACK, mc.theWorld.provider.getDimensionId(), new Object[] { 1 }));
 				}
 			}

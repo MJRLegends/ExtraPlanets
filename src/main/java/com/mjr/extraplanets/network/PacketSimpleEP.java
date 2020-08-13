@@ -234,7 +234,7 @@ public class PacketSimpleEP extends PacketSimpleBase {
 			if ((int) this.data.get(0) == 1) {
 				ItemStack jetpack = playerBase.inventory.armorInventory[1];
 				NBTTagCompound tag = new NBTTagCompound();
-				if (playerBase.getRidingEntity() instanceof EntityLanderBase || playerBase.getRidingEntity() instanceof EntityElectricRocketBase || playerBase.getRidingEntity() instanceof EntitySpaceshipBase) {
+				if (playerBase.ridingEntity instanceof EntityLanderBase || playerBase.ridingEntity instanceof EntityElectricRocketBase || playerBase.ridingEntity instanceof EntitySpaceshipBase) {
 					tag.setBoolean("active", false);
 					jetpack.setTagCompound(tag);
 				} else {
