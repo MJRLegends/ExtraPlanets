@@ -19,7 +19,7 @@ v1.0.4
 	-Add missing Saturn to Methane
 	-Add missing Neptune to Radio Active Water
 *Fixed possible crash with Custom Celestial Galaxy Map when a body doesn't have a icon texture
-*Temp disable checking of disabled solar ore in GC Venus due to unable to obtain higher GC dev build 
+*Temp disable checking of disabled solar ore in GC Venus for material list on custom galaxy map due to unable to obtain higher GC dev build
 
 v1.0.3
 *Fixed double amount radiation being slowly reduced on planets
