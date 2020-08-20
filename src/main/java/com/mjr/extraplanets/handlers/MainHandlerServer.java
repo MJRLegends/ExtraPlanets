@@ -222,6 +222,11 @@ public class MainHandlerServer {
 
 	private void tickTempSpaceSuit(LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP player = (EntityPlayerMP) entityLiving;
+		
+		if (player.capabilities.isCreativeMode)
+			return;
+		if (player.isSpectator())
+			return;
 
 		ItemStack helmet = player.inventory.armorInventory.get(3);
 		ItemStack chest = player.inventory.armorInventory.get(2);
@@ -265,6 +270,9 @@ public class MainHandlerServer {
 	private void tickModules(LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP player = (EntityPlayerMP) entityLiving;
 
+		if (player.isSpectator())
+			return;
+		
 		ItemStack helmet = player.inventory.armorInventory.get(3);
 		ItemStack chest = player.inventory.armorInventory.get(2);
 		ItemStack leggins = player.inventory.armorInventory.get(1);
