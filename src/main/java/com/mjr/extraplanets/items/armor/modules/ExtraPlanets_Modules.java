@@ -14,6 +14,8 @@ public class ExtraPlanets_Modules {
 		modules.add(new ModulePortableNASAWorkBench("nasa_workbench"));
 		modules.add(new ModuleOxygenTankSwitch("oxygen_tank_switch"));
 		modules.add(new ModuleAutoSpaceGearEquip("auto_space_gear_equip"));
+		modules.add(new ModuleSolarPanel("basic_solar_panel", 0));
+		modules.add(new ModuleSolarPanel("advanced_solar_panel", 1));
 		// modules.add(new TestModule("test"));
 	}
 
