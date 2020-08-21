@@ -193,7 +193,7 @@ public class MainHandlerServer {
 
 	@SubscribeEvent
 	public void onCommandEvent(CommandEvent event) {
-		if (event.getCommand().getName().equalsIgnoreCase("gckit")) {
+		if (event.getCommand().getCommandName().equalsIgnoreCase("gckit")) {
 			if (event.getParameters().length == 0) {
 				if (event.getSender() instanceof EntityPlayerMP)
 					ItemHandlerHelper.giveItemToPlayer((EntityPlayerMP) event.getSender(), new ItemStack(ExtraPlanets_Items.ENVIRO_EMERGENCY_KIT), 0);
