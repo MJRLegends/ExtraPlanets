@@ -1076,6 +1076,10 @@ item.green_diamond_chest.name=グリーンダイヤのチェストプレート
 item.green_diamond_legings.name=グリーンダイヤのレギンス
 item.green_diamond_boots.name=グリーンダイヤのブーツ
 
+item.tier0_space_suit_helmet.name=Temporary Space Suit Helmet ##NEEDS TRANSLATE##
+item.tier0_space_suit_chest.name=Temporary Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier0_space_suit_legings.name=Temporary Space Suit Leggings ##NEEDS TRANSLATE##
+item.tier0_space_suit_boots.name=Temporary Space Suit Boots ##NEEDS TRANSLATE##
 item.tier1_space_suit_helmet.name=レベル1 宇宙服 ヘルメット
 item.tier1_space_suit_chest.name=レベル1 宇宙服 チェストプレート
 item.tier1_space_suit_jetpack_chest.name=レベル1 宇宙服 ジェットパックチェストプレート
@@ -1109,6 +1113,8 @@ space.suit.information.extra.3=レベルが高いほどより削減される.
 space.suit.information.extra.4=
 space.suit.power.info=以下の電源システムと互換性あり:
 space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2
+space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
+space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name= %s キーで効果を確認
 item_desc.spacesuit.module.shift.name= %s キーで取り付け済みモジュールを確認
@@ -1194,6 +1200,8 @@ item.tier4_un_prepared_space_suit_boots.name=レベル4 未整備の宇宙服 �
 item.module_items.no_fall_boots.name=落下ダメージ無効化モジュール
 item.module_items.oxygen_controller.name=酸素コントローラ
 item.module_items.space_gear_controller.name=スペースギアコントローラ
+item.enviro_emergency_kit.name=Environment Emergency Kit ##NEEDS TRANSLATE##
+item.enviro_emergency_kit.description=Right click to equip Temporary Space Suit. Warning: One time use! ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=巨大酸素タンク

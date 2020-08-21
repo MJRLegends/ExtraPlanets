@@ -1076,6 +1076,10 @@ item.green_diamond_chest.name=Yeşil Elmas Zırh
 item.green_diamond_legings.name=Yeşil Elmas Pantolon
 item.green_diamond_boots.name=Yeşil Elmas Bot
 
+item.tier0_space_suit_helmet.name=Temporary Space Suit Helmet ##NEEDS TRANSLATE##
+item.tier0_space_suit_chest.name=Temporary Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier0_space_suit_legings.name=Temporary Space Suit Leggings ##NEEDS TRANSLATE##
+item.tier0_space_suit_boots.name=Temporary Space Suit Boots ##NEEDS TRANSLATE##
 item.tier1_space_suit_helmet.name=Seviye 1 Uzay Kıyafeti Kaskı
 item.tier1_space_suit_chest.name=Seviye 1 Uzay Kıyafeti Zırhı
 item.tier1_space_suit_jetpack_chest.name=Seviye 1 Uzay Kıyafeti Jetpack Zırhı
@@ -1109,6 +1113,8 @@ space.suit.information.extra.3=Yüksek seviye uzay giysileri
 space.suit.information.extra.4=radrasyonu daha iyi yavaşlatacaktır
 space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
 space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE##
+space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
+space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=%s tuşuna basarak radrasyon ve basınç seviyeni ölç
 item_desc.spacesuit.module.shift.name=%s tuşuna basarak modülü yükleyebilirsin
@@ -1194,6 +1200,8 @@ item.tier4_un_prepared_space_suit_boots.name=Seviye 4 Hazırlanmamış Uzay Kıy
 item.module_items.no_fall_boots.name=Yere Düşme Hasar Engelleyicisi Modülü
 item.module_items.oxygen_controller.name=Oksijen Kontrolcüsü
 item.module_items.space_gear_controller.name=Uzay OTO giydirici Kontrolcüsü
+item.enviro_emergency_kit.name=Environment Emergency Kit ##NEEDS TRANSLATE##
+item.enviro_emergency_kit.description=Right click to equip Temporary Space Suit. Warning: One time use! ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Çok Ağır Oksijen Tankı

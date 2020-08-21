@@ -1076,6 +1076,10 @@ item.green_diamond_chest.name=Brustpanzer aus grünem Diamant
 item.green_diamond_legings.name=Beinschutz aus grünem Diamant
 item.green_diamond_boots.name=Stiefel aus grünem Diamant
 
+item.tier0_space_suit_helmet.name=Temporary Space Suit Helmet ##NEEDS TRANSLATE##
+item.tier0_space_suit_chest.name=Temporary Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier0_space_suit_legings.name=Temporary Space Suit Leggings ##NEEDS TRANSLATE##
+item.tier0_space_suit_boots.name=Temporary Space Suit Boots ##NEEDS TRANSLATE##
 item.tier1_space_suit_helmet.name=Stufe 1 Raumanzug-Helm
 item.tier1_space_suit_chest.name=Stufe 1 Raumanzug-Brustschutz
 item.tier1_space_suit_jetpack_chest.name=Stufe 1 Jetpack-Raumanzug-Brustschutz 
@@ -1108,7 +1112,9 @@ space.suit.information.extra.2=zur Verringerung der Strahlenbelastung
 space.suit.information.extra.3=Je höher die Stufe des Raumanzugs, 
 space.suit.information.extra.4=desto langsamer wird man verstrahlt 
 space.suit.power.info=Unterstützt die folgenden Stromversorgungssysteme, 
-space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 
+space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2
+space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
+space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=Drücke %s für Informationen zu Druck und Strahlung 
 item_desc.spacesuit.module.shift.name=Drücke %s für installierte Module 
@@ -1194,6 +1200,8 @@ item.tier4_un_prepared_space_suit_boots.name=Stufe 4 Unvollständiger Raumanzug-
 item.module_items.no_fall_boots.name=Kein Fallschaden-Modul 
 item.module_items.oxygen_controller.name=Sauerstoffregler 
 item.module_items.space_gear_controller.name=Raumanzugregler 
+item.enviro_emergency_kit.name=Environment Emergency Kit ##NEEDS TRANSLATE##
+item.enviro_emergency_kit.description=Right click to equip Temporary Space Suit. Warning: One time use! ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Sehr großer Sauerstofftank
