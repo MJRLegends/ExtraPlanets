@@ -52,34 +52,33 @@ public class ItemEnviroEmergencyKit extends ItemDesc implements ISortableItem {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
-		ItemStack itemStack = player.getHeldItem(hand);
+	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStack, World world, EntityPlayer player, EnumHand hand) {
 		if (player instanceof EntityPlayerMP) {
 			for (int i = 0; i < SIZE; i++) {
 				ItemStack newGear = getContents(i);
 				if (newGear.getItem() instanceof ItemArmor) {
 					ItemArmor armor = ((ItemArmor) newGear.getItem());
 					if(armor.getEquipmentSlot() == EntityEquipmentSlot.HEAD) {
-						if(player.inventory.armorItemInSlot(3) == ItemStack.EMPTY) {
-							player.inventory.armorInventory.set(3, newGear);
+						if(player.inventory.armorItemInSlot(3) == null) {
+							player.inventory.armorInventory[3] = newGear;
 							continue;
 						}
 					}
 					else if(armor.getEquipmentSlot() == EntityEquipmentSlot.CHEST) {
-						if(player.inventory.armorItemInSlot(2) == ItemStack.EMPTY) {
-							player.inventory.armorInventory.set(2, newGear);
+						if(player.inventory.armorItemInSlot(2) == null) {
+							player.inventory.armorInventory[2] = newGear;
 							continue;
 						}
 					}
 					else if(armor.getEquipmentSlot() == EntityEquipmentSlot.LEGS) {
-						if(player.inventory.armorItemInSlot(1) == ItemStack.EMPTY) {
-							player.inventory.armorInventory.set(1, newGear);
+						if(player.inventory.armorItemInSlot(1) == null) {
+							player.inventory.armorInventory[1] = newGear;
 							continue;
 						}
 					}
 					else if(armor.getEquipmentSlot() == EntityEquipmentSlot.FEET) {
-						if(player.inventory.armorItemInSlot(0) == ItemStack.EMPTY) {
-							player.inventory.armorInventory.set(0, newGear);
+						if(player.inventory.armorItemInSlot(0) == null) {
+							player.inventory.armorInventory[0] = newGear;
 							continue;
 						}
 					}
@@ -87,7 +86,7 @@ public class ItemEnviroEmergencyKit extends ItemDesc implements ISortableItem {
 				ItemHandlerHelper.giveItemToPlayer(player, newGear, 0);
 			}
 
-			itemStack.setCount(0);
+			itemStack = null;
 			return new ActionResult<>(EnumActionResult.SUCCESS, itemStack);
 		}
 		return new ActionResult<>(EnumActionResult.PASS, itemStack);

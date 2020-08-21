@@ -53,7 +53,7 @@ public class Tier0SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	}
 
 	@Override
-	public boolean isEnchantable(ItemStack stack) {
+	public boolean isItemTool(ItemStack stack) {
 		return false;
 	}
 
@@ -119,30 +119,30 @@ public class Tier0SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void renderHelmetOverlay(ItemStack stack, EntityPlayer player, ScaledResolution resolution, float partialTicks) {
-		ItemStack helmet = player.inventory.armorInventory.get(3);
-		ItemStack chest = player.inventory.armorInventory.get(2);
-		ItemStack leggins = player.inventory.armorInventory.get(1);
-		ItemStack boots = player.inventory.armorInventory.get(0);
+		ItemStack helmet = player.inventory.armorInventory[3];
+		ItemStack chest = player.inventory.armorInventory[2];
+		ItemStack leggins = player.inventory.armorInventory[1];
+		ItemStack boots = player.inventory.armorInventory[0];
 
-		if (helmet.isEmpty() == false && helmet.getItem() instanceof IModularArmor)
+		if (helmet != null && helmet.getItem() instanceof IModularArmor)
 			for (Module hemletModules : ModuleHelper.getModules(helmet)) {
 				if (hemletModules.isActive())
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(hemletModules)))
 						hemletModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
-		if (chest.isEmpty() == false && leggins.getItem() instanceof IModularArmor)
+		if (chest != null && chest.getItem() instanceof IModularArmor)
 			for (Module chestModules : ModuleHelper.getModules(chest)) {
 				if (chestModules.isActive())
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(chestModules)))
 						chestModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
-		if (leggins.isEmpty() == false && leggins.getItem() instanceof IModularArmor)
+		if (leggins != null && leggins.getItem() instanceof IModularArmor)
 			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
 				if (legginsModules.isActive())
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(legginsModules)))
 						legginsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
-		if (boots.isEmpty() == false && boots.getItem() instanceof IModularArmor)
+		if (boots != null && boots.getItem() instanceof IModularArmor)
 			for (Module bootsModules : ModuleHelper.getModules(boots)) {
 				if (bootsModules.isActive())
 					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(bootsModules)))
