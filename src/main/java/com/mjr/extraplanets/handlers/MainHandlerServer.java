@@ -223,6 +223,11 @@ public class MainHandlerServer {
 	private void tickTempSpaceSuit(LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP player = (EntityPlayerMP) entityLiving;
 
+		if (player.capabilities.isCreativeMode)
+			return;
+		if (player.isSpectator())
+			return;
+
 		ItemStack helmet = player.inventory.armorInventory[3];
 		ItemStack chest = player.inventory.armorInventory[2];
 		ItemStack leggins = player.inventory.armorInventory[1];
@@ -231,25 +236,25 @@ public class MainHandlerServer {
 		if (helmet.getItem() instanceof Tier0SpaceSuitArmor) {
 			Tier0SpaceSuitArmor.setTicksLeft(helmet, Tier0SpaceSuitArmor.getTicksLeft(helmet) - 1);
 			if (Tier0SpaceSuitArmor.getTicksLeft(helmet) <= 0) {
-				player.inventory.armorInventory[3]= null;
+				player.inventory.armorInventory[3] = null;
 			}
 		}
 		if (chest.getItem() instanceof Tier0SpaceSuitArmor) {
 			Tier0SpaceSuitArmor.setTicksLeft(chest, Tier0SpaceSuitArmor.getTicksLeft(chest) - 1);
 			if (Tier0SpaceSuitArmor.getTicksLeft(chest) <= 0) {
-				player.inventory.armorInventory[2]= null;
+				player.inventory.armorInventory[2] = null;
 			}
 		}
 		if (leggins.getItem() instanceof Tier0SpaceSuitArmor) {
 			Tier0SpaceSuitArmor.setTicksLeft(leggins, Tier0SpaceSuitArmor.getTicksLeft(leggins) - 1);
 			if (Tier0SpaceSuitArmor.getTicksLeft(leggins) <= 0) {
-				player.inventory.armorInventory[31]= null;
+				player.inventory.armorInventory[31] = null;
 			}
 		}
 		if (boots.getItem() instanceof Tier0SpaceSuitArmor) {
 			Tier0SpaceSuitArmor.setTicksLeft(boots, Tier0SpaceSuitArmor.getTicksLeft(boots) - 1);
 			if (Tier0SpaceSuitArmor.getTicksLeft(boots) <= 0) {
-				player.inventory.armorInventory[0]= null;
+				player.inventory.armorInventory[0] = null;
 			}
 		}
 
@@ -264,6 +269,9 @@ public class MainHandlerServer {
 
 	private void tickModules(LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP player = (EntityPlayerMP) entityLiving;
+		
+		if (player.isSpectator())
+			return;
 
 		ItemStack helmet = player.inventory.armorInventory[0];
 		ItemStack chest = player.inventory.armorInventory[1];
