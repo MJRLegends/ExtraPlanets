@@ -12,13 +12,9 @@ import micdoodle8.mods.galacticraft.core.util.EnumSortCategoryItem;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -52,32 +48,29 @@ public class ItemEnviroEmergencyKit extends ItemDesc implements ISortableItem {
 	}
 
 	@Override
-	public ActionResult<ItemStack> onItemRightClick(ItemStack itemStack, World world, EntityPlayer player, EnumHand hand) {
+	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player) {
 		if (player instanceof EntityPlayerMP) {
 			for (int i = 0; i < SIZE; i++) {
 				ItemStack newGear = getContents(i);
 				if (newGear.getItem() instanceof ItemArmor) {
 					ItemArmor armor = ((ItemArmor) newGear.getItem());
-					if(armor.getEquipmentSlot() == EntityEquipmentSlot.HEAD) {
-						if(player.inventory.armorItemInSlot(3) == null) {
+					if (armor.armorType == 0) {
+						if (player.inventory.armorItemInSlot(3) == null) {
 							player.inventory.armorInventory[3] = newGear;
 							continue;
 						}
-					}
-					else if(armor.getEquipmentSlot() == EntityEquipmentSlot.CHEST) {
-						if(player.inventory.armorItemInSlot(2) == null) {
+					} else if (armor.armorType == 1) {
+						if (player.inventory.armorItemInSlot(2) == null) {
 							player.inventory.armorInventory[2] = newGear;
 							continue;
 						}
-					}
-					else if(armor.getEquipmentSlot() == EntityEquipmentSlot.LEGS) {
-						if(player.inventory.armorItemInSlot(1) == null) {
+					} else if (armor.armorType == 2) {
+						if (player.inventory.armorItemInSlot(1) == null) {
 							player.inventory.armorInventory[1] = newGear;
 							continue;
 						}
-					}
-					else if(armor.getEquipmentSlot() == EntityEquipmentSlot.FEET) {
-						if(player.inventory.armorItemInSlot(0) == null) {
+					} else if (armor.armorType == 3) {
+						if (player.inventory.armorItemInSlot(0) == null) {
 							player.inventory.armorInventory[0] = newGear;
 							continue;
 						}
@@ -87,9 +80,9 @@ public class ItemEnviroEmergencyKit extends ItemDesc implements ISortableItem {
 			}
 
 			itemStack = null;
-			return new ActionResult<>(EnumActionResult.SUCCESS, itemStack);
 		}
-		return new ActionResult<>(EnumActionResult.PASS, itemStack);
+		return itemStack;
+
 	}
 
 	public static ItemStack getContents(int slot) {

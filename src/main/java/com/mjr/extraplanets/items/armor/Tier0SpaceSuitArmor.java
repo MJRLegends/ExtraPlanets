@@ -24,7 +24,6 @@ import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -35,14 +34,14 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class Tier0SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRadiationSuit, IBreathableArmor {
 	public String name;
 
-	public Tier0SpaceSuitArmor(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
+	public Tier0SpaceSuitArmor(String name, ArmorMaterial material, int placement) {
 		super(material, 1, placement);
 		this.setCreativeTab(ExtraPlanets.ItemsTab);
 		this.name = name;
 	}
 
 	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, EntityEquipmentSlot slot, String type) {
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type) {
 		if (stack.getItem() == ExtraPlanets_Armor.TIER_0_SPACE_SUIT_HELMET || stack.getItem() == ExtraPlanets_Armor.TIER_0_SPACE_SUIT_CHEST || stack.getItem() == ExtraPlanets_Armor.TIER_0_SPACE_SUIT_BOOTS) {
 			return Constants.TEXTURE_PREFIX + "textures/model/armor/tier1_space_suit_main.png";
 		} else if (stack.getItem() == ExtraPlanets_Armor.TIER_0_SPACE_SUIT_LEGINGS) {
@@ -106,7 +105,7 @@ public class Tier0SpaceSuitArmor extends ItemArmor implements IPressureSuit, IRa
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {
+	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, int armorSlot, ModelBiped _default) {
 		ModelBiped armorModel = new ArmorSpaceSuitModel(armorSlot);
 		if (itemStack.getItem() instanceof Tier0SpaceSuitArmor) {
 			armorModel = fillingArmorModel(armorModel, entityLiving);

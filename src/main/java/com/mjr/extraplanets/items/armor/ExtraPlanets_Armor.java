@@ -8,7 +8,6 @@ import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class ExtraPlanets_Armor {
-<<<<<<< HEAD
 	private static ArmorMaterial CARBON_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Carbon_Armor", "Test", 26, new int[] { 3, 8, 6, 3 }, 15);
 	private static ArmorMaterial PALLADIUM_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Palladium_Armor", "Test", 26, new int[] { 3, 8, 6, 3 }, 13);
 	private static ArmorMaterial MAGNESIUM_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Magnesium_Armor", "Test", 30, new int[] { 3, 8, 6, 3 }, 11);

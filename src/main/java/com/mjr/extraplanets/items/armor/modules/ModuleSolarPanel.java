@@ -31,10 +31,10 @@ public class ModuleSolarPanel extends Module {
 	@Override
 	public void tickServer(EntityPlayerMP player) {
 		if (player.getEntityWorld().isDaytime()) {
-			ItemStack helmet = player.inventory.armorInventory[3];
-			ItemStack chest = player.inventory.armorInventory[2];
-			ItemStack leggins = player.inventory.armorInventory[1];
-			ItemStack boots = player.inventory.armorInventory[0];
+			ItemStack helmet = player.inventory.armorInventory[0];
+			ItemStack chest = player.inventory.armorInventory[1];
+			ItemStack leggins = player.inventory.armorInventory[2];
+			ItemStack boots = player.inventory.armorInventory[3];
 
 			float basePowerToAdd = tier == 0 ? 0.005f : 0.01f;
 

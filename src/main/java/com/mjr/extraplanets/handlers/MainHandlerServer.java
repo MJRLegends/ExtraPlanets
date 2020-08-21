@@ -199,14 +199,15 @@ public class MainHandlerServer {
 			this.onAttachCapabilityClient(event);
 		}
 	}
-	
+
 	public void onCommandEvent(CommandEvent event) {
-		if (event.getCommand().getCommandName().equalsIgnoreCase("gckit")) {
-			if (event.getParameters().length == 0) {
-				if (event.getSender() instanceof EntityPlayerMP)
-					ItemHandlerHelper.giveItemToPlayer((EntityPlayerMP) event.getSender(), new ItemStack(ExtraPlanets_Items.ENVIRO_EMERGENCY_KIT), 0);
+		if (event.command.getCommandName().equalsIgnoreCase("gckit")) {
+			if (event.parameters.length == 0) {
+				if (event.sender instanceof EntityPlayerMP)
+					ItemHandlerHelper.giveItemToPlayer((EntityPlayerMP) event.sender, new ItemStack(ExtraPlanets_Items.ENVIRO_EMERGENCY_KIT), 0);
 			} else {
-				ItemHandlerHelper.giveItemToPlayer(event.getSender().getServer().getPlayerList().getPlayerByUsername(event.getParameters()[0]), new ItemStack(ExtraPlanets_Items.ENVIRO_EMERGENCY_KIT), 0);
+
+				ItemHandlerHelper.giveItemToPlayer(PlayerUtilties.getPlayerForUsernameVanilla(((EntityPlayerMP) event.sender).mcServer, event.parameters[0]), new ItemStack(ExtraPlanets_Items.ENVIRO_EMERGENCY_KIT), 0);
 			}
 
 		}
@@ -242,10 +243,10 @@ public class MainHandlerServer {
 		if (player.isSpectator())
 			return;
 
-		ItemStack helmet = player.inventory.armorInventory[3];
-		ItemStack chest = player.inventory.armorInventory[2];
-		ItemStack leggins = player.inventory.armorInventory[1];
-		ItemStack boots = player.inventory.armorInventory[0];
+		ItemStack helmet = player.inventory.armorInventory[0];
+		ItemStack chest = player.inventory.armorInventory[1];
+		ItemStack leggins = player.inventory.armorInventory[2];
+		ItemStack boots = player.inventory.armorInventory[3];
 
 		if (helmet.getItem() instanceof Tier0SpaceSuitArmor) {
 			Tier0SpaceSuitArmor.setTicksLeft(helmet, Tier0SpaceSuitArmor.getTicksLeft(helmet) - 1);
@@ -283,7 +284,7 @@ public class MainHandlerServer {
 
 	private void tickModules(LivingUpdateEvent event, EntityLivingBase entityLiving) {
 		EntityPlayerMP player = (EntityPlayerMP) entityLiving;
-		
+
 		if (player.isSpectator())
 			return;
 
@@ -635,8 +636,8 @@ public class MainHandlerServer {
 					stats.setRadiationLevel(stats.getRadiationLevel() - level);
 					PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.GOLD + ", " + TranslateUtilities.translate("gui.radiation.reduced.message") + " "
 							+ Config.RADIATION_SLEEPING_REDUCE_AMOUNT + "% " + TranslateUtilities.translate("gui.radiation.reduced.message.2"));
-					PlayerUtilties.sendMessage(player,
-							"" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": " + (int) stats.getRadiationLevel() + "/100");
+					PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.AQUA + EnumChatFormatting.BOLD + playerMP.getName() + EnumChatFormatting.DARK_AQUA + ", " + TranslateUtilities.translate("gui.radiation.current.message") + ": "
+							+ (int) stats.getRadiationLevel() + "/100");
 				}
 			}
 		}
@@ -661,8 +662,8 @@ public class MainHandlerServer {
 					amount = Config.VENUS_RADIATION_AMOUNT;
 				if (player.worldObj.provider instanceof WorldProviderSpaceStation)
 					amount = Config.SPACE_STATION_RADIATION_AMOUNT;
-				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.GOLD + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " " + amount + "/100% "
-						+ TranslateUtilities.translate("gui.radiation.type.message") + "");
+				PlayerUtilties.sendMessage(player, "" + EnumChatFormatting.GOLD + EnumChatFormatting.BOLD + player.getName() + EnumChatFormatting.DARK_RED + ", " + TranslateUtilities.translate("gui.radiation.subject.message") + " " + amount
+						+ "/100% " + TranslateUtilities.translate("gui.radiation.type.message") + "");
 				PlayerUtilties.sendMessage(player, EnumChatFormatting.DARK_GREEN + TranslateUtilities.translate("gui.radiation.reverse.message") + "!");
 				PlayerUtilties.sendMessage(player, EnumChatFormatting.GOLD + TranslateUtilities.translate("gui.radiation.cancel.message") + "!");
 				PlayerUtilties.sendMessage(player, EnumChatFormatting.DARK_AQUA + "Radiation Calculator:");
