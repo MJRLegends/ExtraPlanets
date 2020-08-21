@@ -59,6 +59,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldServer;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.event.CommandEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
@@ -74,6 +75,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.WorldTickEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.items.ItemHandlerHelper;
 
 public class MainHandlerServer {
 
@@ -195,6 +197,18 @@ public class MainHandlerServer {
 
 		} else if (event.getEntity() instanceof EntityPlayer && ((EntityPlayer) event.getEntity()).worldObj.isRemote) {
 			this.onAttachCapabilityClient(event);
+		}
+	}
+	
+	public void onCommandEvent(CommandEvent event) {
+		if (event.getCommand().getName().equalsIgnoreCase("gckit")) {
+			if (event.getParameters().length == 0) {
+				if (event.getSender() instanceof EntityPlayerMP)
+					ItemHandlerHelper.giveItemToPlayer((EntityPlayerMP) event.getSender(), new ItemStack(ExtraPlanets_Items.ENVIRO_EMERGENCY_KIT), 0);
+			} else {
+				ItemHandlerHelper.giveItemToPlayer(event.getSender().getServer().getPlayerList().getPlayerByUsername(event.getParameters()[0]), new ItemStack(ExtraPlanets_Items.ENVIRO_EMERGENCY_KIT), 0);
+			}
+
 		}
 	}
 
