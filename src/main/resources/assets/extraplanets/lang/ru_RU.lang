@@ -1076,6 +1076,10 @@ item.green_diamond_chest.name=Нагрудник из зелёного алма�
 item.green_diamond_legings.name=Поножи из зелёного алмаза
 item.green_diamond_boots.name=Ботинки из зелёного алмаза
 
+item.tier0_space_suit_helmet.name=Temporary Space Suit Helmet ##NEEDS TRANSLATE##
+item.tier0_space_suit_chest.name=Temporary Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier0_space_suit_legings.name=Temporary Space Suit Leggings ##NEEDS TRANSLATE##
+item.tier0_space_suit_boots.name=Temporary Space Suit Boots ##NEEDS TRANSLATE##
 item.tier1_space_suit_helmet.name=Шлем космического скафандра 1-го уровня
 item.tier1_space_suit_chest.name=Нагрудник космического скафандра 1-го уровня
 item.tier1_space_suit_jetpack_chest.name=Реактивный нагрудник космического скафандра 1-го уровня
@@ -1109,6 +1113,8 @@ space.suit.information.extra.3=Чем выше уровень скафандра
 space.suit.information.extra.4=более медленная радиация будет получена
 space.suit.power.info=Поддерживает следующие системы энергии,
 space.suit.power.info.2=RF, Mekanism джоули, GC джоули, IC2
+space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
+space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=Нажмите %s для информации о давлении и радиации
 item_desc.spacesuit.module.shift.name=Нажмите %s для установленных модулей
@@ -1194,6 +1200,8 @@ item.tier4_un_prepared_space_suit_boots.name=Ботинки неподготов
 item.module_items.no_fall_boots.name=Модуль отсутствия повреждения при падении
 item.module_items.oxygen_controller.name=Кислородный контроллер
 item.module_items.space_gear_controller.name=Контроллер космического снаряжения
+item.enviro_emergency_kit.name=Environment Emergency Kit ##NEEDS TRANSLATE##
+item.enviro_emergency_kit.description=Right click to equip Temporary Space Suit. Warning: One time use! ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Очень большой кислородный баллон

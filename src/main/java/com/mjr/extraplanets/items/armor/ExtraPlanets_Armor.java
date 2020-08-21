@@ -30,6 +30,7 @@ public class ExtraPlanets_Armor {
 	private static ArmorMaterial YELLOW_DIAMOND_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Yellow_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 	private static ArmorMaterial GREEM_DIAMOND_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Green_Diamond_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 
+	private static ArmorMaterial TIER_0_SPACE_SUIT_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Tier0_SpaceSuit_Armor", "Test", 28, new int[] { 2, 4, 2, 2 }, 0, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 	private static ArmorMaterial TIER_1_SPACE_SUIT_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Tier1_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 0, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 	private static ArmorMaterial TIER_2_SPACE_SUIT_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Tier2_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 0, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
 	private static ArmorMaterial TIER_3_SPACE_SUIT_ARMOR_MATERIAL = EnumHelper.addArmorMaterial("Tier3_SpaceSuit_Armor", "Test", 28, new int[] { 3, 8, 6, 3 }, 0, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
@@ -115,6 +116,11 @@ public class ExtraPlanets_Armor {
 	public static Item GREEN_DIAMOND_LEGINGS;
 	public static Item GREEN_DIAMOND_BOOTS;
 
+	public static Item TIER_0_SPACE_SUIT_HELMET;
+	public static Item TIER_0_SPACE_SUIT_CHEST;
+	public static Item TIER_0_SPACE_SUIT_LEGINGS;
+	public static Item TIER_0_SPACE_SUIT_BOOTS;
+	
 	public static Item TIER_1_SPACE_SUIT_HELMET;
 	public static Item TIER_1_SPACE_SUIT_CHEST;
 	public static Item TIER_1_SPACE_SUIT_JETPACK_CHEST;
@@ -244,6 +250,11 @@ public class ExtraPlanets_Armor {
 			GREEN_DIAMOND_BOOTS = new GreenDiamondArmor("green_diamond", GREEM_DIAMOND_ARMOR_MATERIAL, EntityEquipmentSlot.FEET).setUnlocalizedName("green_diamond_boots");
 		}
 		if (Config.PRESSURE || Config.RADIATION) {
+			TIER_0_SPACE_SUIT_HELMET = new Tier0SpaceSuitArmor("tier0_space_suit", TIER_0_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.HEAD).setUnlocalizedName("tier0_space_suit_helmet");
+			TIER_0_SPACE_SUIT_CHEST = new Tier0SpaceSuitArmor("tier0_space_suit", TIER_0_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier0_space_suit_chest");
+			TIER_0_SPACE_SUIT_LEGINGS = new Tier0SpaceSuitArmor("tier0_space_suit", TIER_0_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.LEGS).setUnlocalizedName("tier0_space_suit_legings");
+			TIER_0_SPACE_SUIT_BOOTS = new Tier0SpaceSuitArmor("tier0_space_suit", TIER_0_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.FEET).setUnlocalizedName("tier0_space_suit_boots");
+			
 			TIER_1_SPACE_SUIT_HELMET = new Tier1SpaceSuitArmor("tier1_space_suit", TIER_1_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.HEAD).setUnlocalizedName("tier1_space_suit_helmet");
 			TIER_1_SPACE_SUIT_CHEST = new Tier1SpaceSuitArmor("tier1_space_suit", TIER_1_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier1_space_suit_chest");
 			TIER_1_SPACE_SUIT_JETPACK_CHEST = new Tier1SpaceSuitArmorJetpack("tier1_space_suit", TIER_1_SPACE_SUIT_ARMOR_MATERIAL, EntityEquipmentSlot.CHEST).setUnlocalizedName("tier1_space_suit_jetpack_chest");
@@ -374,6 +385,11 @@ public class ExtraPlanets_Armor {
 			RegisterUtilities.registerItem(GREEN_DIAMOND_BOOTS, GREEN_DIAMOND_BOOTS.getUnlocalizedName().substring(5));
 		}
 		if (Config.PRESSURE || Config.RADIATION) {
+			RegisterUtilities.registerItem(TIER_0_SPACE_SUIT_HELMET, TIER_0_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_0_SPACE_SUIT_CHEST, TIER_0_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_0_SPACE_SUIT_LEGINGS, TIER_0_SPACE_SUIT_LEGINGS.getUnlocalizedName().substring(5));
+			RegisterUtilities.registerItem(TIER_0_SPACE_SUIT_BOOTS, TIER_0_SPACE_SUIT_BOOTS.getUnlocalizedName().substring(5));
+			
 			RegisterUtilities.registerItem(TIER_1_SPACE_SUIT_HELMET, TIER_1_SPACE_SUIT_HELMET.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_1_SPACE_SUIT_CHEST, TIER_1_SPACE_SUIT_CHEST.getUnlocalizedName().substring(5));
 			RegisterUtilities.registerItem(TIER_1_SPACE_SUIT_JETPACK_CHEST, TIER_1_SPACE_SUIT_JETPACK_CHEST.getUnlocalizedName().substring(5));

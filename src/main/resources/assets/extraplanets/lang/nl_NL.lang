@@ -1076,6 +1076,10 @@ item.green_diamond_chest.name=Green Diamond Chestplate ##NEEDS TRANSLATE##
 item.green_diamond_legings.name=Green Diamond Leggings ##NEEDS TRANSLATE##
 item.green_diamond_boots.name=Green Diamond Boots ##NEEDS TRANSLATE##
 
+item.tier0_space_suit_helmet.name=Temporary Space Suit Helmet ##NEEDS TRANSLATE##
+item.tier0_space_suit_chest.name=Temporary Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier0_space_suit_legings.name=Temporary Space Suit Leggings ##NEEDS TRANSLATE##
+item.tier0_space_suit_boots.name=Temporary Space Suit Boots ##NEEDS TRANSLATE##
 item.tier1_space_suit_helmet.name=Tier 1 Space Suit Helmet ##NEEDS TRANSLATE##
 item.tier1_space_suit_chest.name=Tier 1 Space Suit Chestplate ##NEEDS TRANSLATE##
 item.tier1_space_suit_jetpack_chest.name=Tier 1 Space Suit Jetpack Chestplate ##NEEDS TRANSLATE##
@@ -1109,6 +1113,8 @@ space.suit.information.extra.3=The higher the Space Suit tier the ##NEEDS TRANSL
 space.suit.information.extra.4=slower radiation will be gained ##NEEDS TRANSLATE##
 space.suit.power.info=Supports the following power systems, ##NEEDS TRANSLATE##
 space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2 ##NEEDS TRANSLATE###
+space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
+space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=Press %s for Pressure & Radiation info ##NEEDS TRANSLATE##
 item_desc.spacesuit.module.shift.name=Press %s for Installed Modules ##NEEDS TRANSLATE##
@@ -1194,6 +1200,8 @@ item.tier4_un_prepared_space_suit_boots.name=Tier 4 Un-Prepared Space Suit Boots
 item.module_items.no_fall_boots.name=No Fall Damage Module ##NEEDS TRANSLATE##
 item.module_items.oxygen_controller.name=Oxygen Controller ##NEEDS TRANSLATE##
 item.module_items.space_gear_controller.name=Space Gear Controller ##NEEDS TRANSLATE##
+item.enviro_emergency_kit.name=Environment Emergency Kit ##NEEDS TRANSLATE##
+item.enviro_emergency_kit.description=Right click to equip Temporary Space Suit. Warning: One time use! ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Very Heavy Oxygen Tank ##NEEDS TRANSLATE##

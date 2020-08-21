@@ -1075,7 +1075,11 @@ item.yellow_diamond_boots.name=Bottes en diamant jaune
 item.green_diamond_helmet.name=Casque en diamant vert
 item.green_diamond_chest.name=Plastron en diamant vert
 item.green_diamond_legings.name=Jambières en diamant vert
-item.green_diamond_boots.name=Bottes en diamant vert
+
+item.tier0_space_suit_helmet.name=Temporary Space Suit Helmet ##NEEDS TRANSLATE##
+item.tier0_space_suit_chest.name=Temporary Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier0_space_suit_legings.name=Temporary Space Suit Leggings ##NEEDS TRANSLATE##
+item.tier0_space_suit_boots.name=Temporary Space Suit Boots ##NEEDS TRANSLATE##item.green_diamond_boots.name=Bottes en diamant vert
 
 item.tier1_space_suit_helmet.name=Casque de combinaison spatiale Niveau 1
 item.tier1_space_suit_chest.name=Plastron de combinaison spatiale Niveau 1
@@ -1110,6 +1114,8 @@ space.suit.information.extra.3=Plus le niveau de la combinaison spatiale est él
 space.suit.information.extra.4=radiation solaire sera reçu lentement.
 space.suit.power.info=Prend en charge les systèmes d'alimentation suivants:
 space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2.
+space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
+space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=Presser %s pour obtenir des informations sur la pression et la radiation.
 item_desc.spacesuit.module.shift.name=Presser %s pour installer des modules.
@@ -1195,6 +1201,8 @@ item.tier4_un_prepared_space_suit_boots.name=Bottes de combinaison spatiale non 
 item.module_items.no_fall_boots.name=Module Pas de dégâts de chute
 item.module_items.oxygen_controller.name=Contrôleur d'oxygène
 item.module_items.space_gear_controller.name=Contrôleur d'équipement spatiaux
+item.enviro_emergency_kit.name=Environment Emergency Kit ##NEEDS TRANSLATE##
+item.enviro_emergency_kit.description=Right click to equip Temporary Space Suit. Warning: One time use! ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=Très grosse bonbonne d'oxygène
