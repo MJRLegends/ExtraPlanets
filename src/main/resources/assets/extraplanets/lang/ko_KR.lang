@@ -1076,6 +1076,10 @@ item.green_diamond_chest.name=초록색 다이아몬드 흉갑
 item.green_diamond_legings.name=초록색 다이아몬드 각반
 item.green_diamond_boots.name=초록색 다이아몬드 부츠
 
+item.tier0_space_suit_helmet.name=Temporary Space Suit Helmet ##NEEDS TRANSLATE##
+item.tier0_space_suit_chest.name=Temporary Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier0_space_suit_legings.name=Temporary Space Suit Leggings ##NEEDS TRANSLATE##
+item.tier0_space_suit_boots.name=Temporary Space Suit Boots ##NEEDS TRANSLATE##
 item.tier1_space_suit_helmet.name=1티어 우주복 투구
 item.tier1_space_suit_chest.name=1티어 우주복 흉갑
 item.tier1_space_suit_jetpack_chest.name=1티어 우주복 제트팩 흉갑
@@ -1109,6 +1113,8 @@ space.suit.information.extra.3=우주복 티어가 높을수록
 space.suit.information.extra.4=방사능 피폭이 느려집니다
 space.suit.power.info=다음과 같은 전력 체계를 제공합니다.
 space.suit.power.info.2=RF, 메카니즘 쥴스, 갤럭티크래프트 쥴스, 인더스트리얼크래프트 2
+space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
+space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=압력과 방사능 정보는 %s을 누르세요.
 item_desc.spacesuit.module.shift.name=설치된 모듈 확인은 %s을 누르세요.
@@ -1194,6 +1200,8 @@ item.tier4_un_prepared_space_suit_boots.name=4티어 준비안된 우주복 부�
 item.module_items.no_fall_boots.name=모듈에 추락 위험이 없습니다
 item.module_items.oxygen_controller.name=산소 조절기
 item.module_items.space_gear_controller.name=우주 기어 조절기
+item.enviro_emergency_kit.name=Environment Emergency Kit ##NEEDS TRANSLATE##
+item.enviro_emergency_kit.description=Right click to equip Temporary Space Suit. Warning: One time use! ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=초대형 산소 탱크

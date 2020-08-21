@@ -1076,6 +1076,10 @@ item.green_diamond_chest.name=绿色钻石胸甲
 item.green_diamond_legings.name=绿色钻石护腿
 item.green_diamond_boots.name=绿色钻石靴子
 
+item.tier0_space_suit_helmet.name=Temporary Space Suit Helmet ##NEEDS TRANSLATE##
+item.tier0_space_suit_chest.name=Temporary Space Suit Chestplate ##NEEDS TRANSLATE##
+item.tier0_space_suit_legings.name=Temporary Space Suit Leggings ##NEEDS TRANSLATE##
+item.tier0_space_suit_boots.name=Temporary Space Suit Boots ##NEEDS TRANSLATE##
 item.tier1_space_suit_helmet.name=一阶太空服头盔
 item.tier1_space_suit_chest.name=一阶太空服胸甲
 item.tier1_space_suit_jetpack_chest.name=一阶太空服喷气背包胸甲
@@ -1109,6 +1113,8 @@ space.suit.information.extra.3=太空服等级越高，
 space.suit.information.extra.4=获得辐射的速度就越慢
 space.suit.power.info=支持下列能量系统：
 space.suit.power.info.2=RF、通用机械的 Mekanism Joules、星系的 GC Joules、IC2 的 EU
+space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
+space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 
 item_desc.spacesuit.shift.name=按下 %s 键获取压强和辐射信息
 item_desc.spacesuit.module.shift.name=按下 %s 键查看已安装的模块
@@ -1194,6 +1200,8 @@ item.tier4_un_prepared_space_suit_boots.name=四阶未完成太空服靴子
 item.module_items.no_fall_boots.name=无摔落伤害模块
 item.module_items.oxygen_controller.name=氧气控制器
 item.module_items.space_gear_controller.name=太空齿轮控制器
+item.enviro_emergency_kit.name=Environment Emergency Kit ##NEEDS TRANSLATE##
+item.enviro_emergency_kit.description=Right click to equip Temporary Space Suit. Warning: One time use! ##NEEDS TRANSLATE##
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=超重型氧气罐

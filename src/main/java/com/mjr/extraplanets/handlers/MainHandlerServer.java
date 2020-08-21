@@ -20,6 +20,7 @@ import com.mjr.extraplanets.handlers.capabilities.CapabilityProviderStats;
 import com.mjr.extraplanets.handlers.capabilities.CapabilityStatsHandler;
 import com.mjr.extraplanets.handlers.capabilities.IStatsCapability;
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
+import com.mjr.extraplanets.items.armor.Tier0SpaceSuitArmor;
 import com.mjr.extraplanets.items.armor.modules.Module;
 import com.mjr.extraplanets.items.armor.modules.ModuleHelper;
 import com.mjr.extraplanets.network.ExtraPlanetsPacketHandler;
@@ -42,6 +43,7 @@ import micdoodle8.mods.galacticraft.planets.asteroids.dimension.WorldProviderAst
 import micdoodle8.mods.galacticraft.planets.asteroids.items.AsteroidsItems;
 import micdoodle8.mods.galacticraft.planets.mars.dimension.WorldProviderMars;
 import micdoodle8.mods.galacticraft.planets.venus.dimension.WorldProviderVenus;
+
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.entity.Entity;
@@ -206,6 +208,7 @@ public class MainHandlerServer {
 	public void onEntityUpdate(LivingEvent.LivingUpdateEvent event) {
 		final EntityLivingBase entityLiving = event.getEntityLiving();
 		if (entityLiving instanceof EntityPlayerMP) {
+			tickTempSpaceSuit(event, entityLiving);
 			tickModules(event, entityLiving);
 			if (isInGlowstone((EntityPlayerMP) entityLiving))
 				entityLiving.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 500, 0));
@@ -213,6 +216,49 @@ public class MainHandlerServer {
 			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.world, entityLiving.getEntityBoundingBox(), true) == false
 					&& !(entityLiving.world.getBlockState(new BlockPos(entityLiving.posX, entityLiving.posY, entityLiving.posZ)).getBlock() instanceof BlockFluidBase))
 				runChecks(event, entityLiving);
+
+		}
+	}
+
+	private void tickTempSpaceSuit(LivingUpdateEvent event, EntityLivingBase entityLiving) {
+		EntityPlayerMP player = (EntityPlayerMP) entityLiving;
+
+		ItemStack helmet = player.inventory.armorInventory.get(3);
+		ItemStack chest = player.inventory.armorInventory.get(2);
+		ItemStack leggins = player.inventory.armorInventory.get(1);
+		ItemStack boots = player.inventory.armorInventory.get(0);
+
+		if (helmet.getItem() instanceof Tier0SpaceSuitArmor) {
+			Tier0SpaceSuitArmor.setTicksLeft(helmet, Tier0SpaceSuitArmor.getTicksLeft(helmet) - 1);
+			if (Tier0SpaceSuitArmor.getTicksLeft(helmet) <= 0) {
+				player.inventory.armorInventory.set(3, ItemStack.EMPTY);
+			}
+		}
+		if (chest.getItem() instanceof Tier0SpaceSuitArmor) {
+			Tier0SpaceSuitArmor.setTicksLeft(chest, Tier0SpaceSuitArmor.getTicksLeft(chest) - 1);
+			if (Tier0SpaceSuitArmor.getTicksLeft(chest) <= 0) {
+				player.inventory.armorInventory.set(2, ItemStack.EMPTY);
+			}
+		}
+		if (leggins.getItem() instanceof Tier0SpaceSuitArmor) {
+			Tier0SpaceSuitArmor.setTicksLeft(leggins, Tier0SpaceSuitArmor.getTicksLeft(leggins) - 1);
+			if (Tier0SpaceSuitArmor.getTicksLeft(leggins) <= 0) {
+				player.inventory.armorInventory.set(1, ItemStack.EMPTY);
+			}
+		}
+		if (boots.getItem() instanceof Tier0SpaceSuitArmor) {
+			Tier0SpaceSuitArmor.setTicksLeft(boots, Tier0SpaceSuitArmor.getTicksLeft(boots) - 1);
+			if (Tier0SpaceSuitArmor.getTicksLeft(boots) <= 0) {
+				player.inventory.armorInventory.set(0, ItemStack.EMPTY);
+			}
+		}
+
+		if ((player.ticksExisted - 1) % 90 == 0) {
+			for (ItemStack item : player.inventory.mainInventory) {
+				if (item.getItem() instanceof Tier0SpaceSuitArmor) {
+					item.setCount(0);
+				}
+			}
 		}
 	}
 
@@ -358,8 +404,9 @@ public class MainHandlerServer {
 			return true;
 		else {
 			// Mod Compact
-			if(CompatibilityManager.isAndroid(player))
+			if (CompatibilityManager.isAndroid(player))
 				return true;
+			
 			// Config List of armour items to be considered as a space suit compact
 			for (String temp : list) {
 				temp = temp.substring(0, temp.lastIndexOf(':'));
@@ -438,7 +485,7 @@ public class MainHandlerServer {
 		double damageToTake = 0;
 		double damageModifer = 0;
 		int tierValue = 0;
-		
+
 		ItemStack helmet = playerMP.inventory.armorInventory.get(3);
 		ItemStack chest = playerMP.inventory.armorInventory.get(2);
 		ItemStack leggins = playerMP.inventory.armorInventory.get(1);
@@ -451,10 +498,22 @@ public class MainHandlerServer {
 			doDamage = false;
 		}
 		if (doArmorCheck) {
-			int helmetTier = getTier(helmet, list);
-			int chestTier = getTier(chest, list);
-			int legginsTier = getTier(leggins, list);
-			int bootsTier = getTier(boots, list);
+			double helmetTier = getTier(helmet, list);
+			double chestTier = getTier(chest, list);
+			double legginsTier = getTier(leggins, list);
+			double bootsTier = getTier(boots, list);
+
+			if (helmetTier == 0)
+				helmetTier = 0.25;
+
+			if (chestTier == 0)
+				chestTier = 0.25;
+
+			if (legginsTier == 0)
+				legginsTier = 0.25;
+
+			if (bootsTier == 0)
+				bootsTier = 0.25;
 
 			if ((playerMP.ticksExisted - 1) % 100 == 0 && Config.DEBUG_MODE) {
 				MessageUtilities.debugMessageToLog(Constants.modID, "Helmet Tier: " + helmetTier);
@@ -463,7 +522,7 @@ public class MainHandlerServer {
 				MessageUtilities.debugMessageToLog(Constants.modID, "Boots Tier: " + bootsTier);
 			}
 
-			tierValue = (helmetTier + chestTier + legginsTier + bootsTier) / 2;
+			tierValue = (int) ((helmetTier + chestTier + legginsTier + bootsTier) / 2);
 			damageToTake = 0.005 * tierValue;
 			doDamage = true;
 		}
@@ -480,10 +539,9 @@ public class MainHandlerServer {
 				if (amount < 10) {
 					damageModifer = 0.005625 - (damageToTake / 2) / 10;
 					tempLevel = (damageModifer * amount) / 100;
-				}
-				else {
+				} else {
 					damageModifer = 0.001875 - (damageToTake / 2) / 10;
-					if(damageModifer < 0)
+					if (damageModifer < 0)
 						damageModifer = 0.000225;
 					tempLevel = damageModifer * (amount / 10) / 6;
 				}
@@ -505,21 +563,20 @@ public class MainHandlerServer {
 		if ((isInGCDimension || player.world.provider instanceof WorldProviderSpaceStation) && Config.RADIATION) {
 			if (tick % 30 == 0) {
 				this.sendSolarRadiationPacket(player, stats);
-				if(Config.RADIATION_OVERTIME_REDUCE_AMOUNT != 0) {
+				if (Config.RADIATION_OVERTIME_REDUCE_AMOUNT != 0) {
 					double temp = stats.getRadiationLevel();
 					double level = (temp * (Config.RADIATION_OVERTIME_REDUCE_AMOUNT * 1.5F)) / 100;
 					if (level <= 0)
 						stats.setRadiationLevel(0);
 					else {
-						if(tick % 100 == 0 && Config.DEBUG_MODE)
+						if (tick % 100 == 0 && Config.DEBUG_MODE)
 							MessageUtilities.debugMessageToLog(Constants.modID, "Auto Reduced Radiation Amount: " + level);
 						stats.setRadiationLevel(stats.getRadiationLevel() - level);
 					}
 				}
 			}
-		}
-		else if (tick % 30 == 0) {
-			if(Config.RADIATION_SLEEPING_REDUCE_AMOUNT != 0) {
+		} else if (tick % 30 == 0) {
+			if (Config.RADIATION_SLEEPING_REDUCE_AMOUNT != 0) {
 				double temp = stats.getRadiationLevel();
 				double level = (temp * Config.RADIATION_OVERTIME_REDUCE_AMOUNT) / 100;
 				if (level <= 0)
@@ -544,7 +601,7 @@ public class MainHandlerServer {
 			if (playerMP != null) {
 				stats = playerMP.getCapability(CapabilityStatsHandler.EP_STATS_CAPABILITY, null);
 			}
-			if(Config.RADIATION_SLEEPING_REDUCE_AMOUNT != 0) {
+			if (Config.RADIATION_SLEEPING_REDUCE_AMOUNT != 0) {
 				double temp = stats.getRadiationLevel();
 				double level = (temp * Config.RADIATION_SLEEPING_REDUCE_AMOUNT) / 100;
 				if (level <= 0)
