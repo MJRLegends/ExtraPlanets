@@ -121,7 +121,7 @@ public class RoomSpawner3Mercury extends RoomEmptyMercury {
 	private static ResourceLocation getMob(Random rand) {
 		switch (rand.nextInt(2)) {
 		case 0:
-	        return new ResourceLocation(Constants.modID, Constants.modID + "." + "EvolvedMagmaCubeBoss");
+	        return new ResourceLocation(Constants.modID, Constants.modID + "." + "EvolvedMagmaCube");
 		case 1:
 		default:
 			return new ResourceLocation("Minecraft:ghast");

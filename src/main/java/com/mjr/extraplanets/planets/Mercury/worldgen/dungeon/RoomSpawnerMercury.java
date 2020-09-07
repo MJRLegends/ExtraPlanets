@@ -80,6 +80,6 @@ public class RoomSpawnerMercury extends RoomEmptyMercury
 
     private static ResourceLocation getMob(Random rand)
     {
-        return new ResourceLocation(Constants.modID, Constants.modID + "." + "EvolvedMagmaCubeBoss");
+        return new ResourceLocation(Constants.modID, Constants.modID + "." + "EvolvedMagmaCube");
     }
 }
