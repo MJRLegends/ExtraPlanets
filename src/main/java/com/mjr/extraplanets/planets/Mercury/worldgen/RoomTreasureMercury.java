@@ -3,12 +3,12 @@ package com.mjr.extraplanets.planets.Mercury.worldgen;
 import java.util.Random;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Mercury.worldgen.dungeon.RoomTreasureMercuryBase;
 
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
 import micdoodle8.mods.galacticraft.core.tile.TileEntityTreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
@@ -16,7 +16,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
-public class RoomTreasureMercury extends RoomTreasure {
+public class RoomTreasureMercury extends RoomTreasureMercuryBase {
 	public RoomTreasureMercury() {
 	}
 
@@ -69,7 +69,7 @@ public class RoomTreasureMercury extends RoomTreasure {
 							world.setBlockState(blockpos, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_4.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), 2);
 							TileEntityTreasureChest treasureChest = (TileEntityTreasureChest) world.getTileEntity(blockpos);
 							if (treasureChest != null) {
-								ResourceLocation chesttype = RoomTreasure.TABLE_TIER_1_DUNGEON;
+								ResourceLocation chesttype = RoomTreasureMercuryBase.TABLE_TIER_1_DUNGEON;
 								if (world.provider instanceof IGalacticraftWorldProvider) {
 									chesttype = ((IGalacticraftWorldProvider) world.provider).getDungeonChestType();
 								}
