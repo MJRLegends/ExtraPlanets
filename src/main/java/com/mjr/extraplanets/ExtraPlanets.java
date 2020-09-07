@@ -15,6 +15,7 @@ import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.*;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.*;
 import com.mjr.extraplanets.entities.landers.*;
+import com.mjr.extraplanets.entities.mobs.EntityEvolvedAncientMagmaCube;
 import com.mjr.extraplanets.entities.mobs.EntityEvolvedMagmaCube;
 import com.mjr.extraplanets.entities.rockets.*;
 import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
@@ -438,11 +439,13 @@ public class ExtraPlanets {
 			else
 				RegisterUtilities.registerMobEntity(Constants.modID, ExtraPlanets.instance, EntityEvolvedMagmaCubeBoss.class, Constants.modID + "." + "EvolvedMagmaCubeBoss", 3407872, 16579584);
 		}
-		if (Config.JUPITER)
+		if (Config.JUPITER) {
+			RegisterUtilities.registerMobEntity(Constants.modID, ExtraPlanets.instance, EntityEvolvedAncientMagmaCube.class, Constants.modID + "." + "EvolvedAncientMagmaCube", 3407872, 16579584);
 			if (Config.USE_DEFAULT_BOSSES)
 				RegisterUtilities.registerMobEntity(Constants.modID, ExtraPlanets.instance, EntityCreeperBossJupiter.class, Constants.modID + "." + "CreeperBossJupiter", 894731, 0);
 			else
 				RegisterUtilities.registerMobEntity(Constants.modID, ExtraPlanets.instance, EntityEvolvedFireBatBoss.class, Constants.modID + "." + "EvolvedFireBatBoss", 16167425, 0);
+		}
 		if (Config.SATURN)
 
 			if (Config.USE_DEFAULT_BOSSES)
