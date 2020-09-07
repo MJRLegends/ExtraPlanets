@@ -22,7 +22,7 @@ import com.mjr.extraplanets.planets.Mercury.worldgen.RoomBossMercury;
 
 public class RoomTreasureMercuryBase extends SizedPieceMercury
 {
-    public static ResourceLocation MOONCHEST = new ResourceLocation(Constants.ASSET_PREFIX, "dungeon_tier_1");
+    public static ResourceLocation MOONCHEST = new ResourceLocation(Constants.ASSET_PREFIX, "dungeon_mercury");
     public static final ResourceLocation TABLE_TIER_1_DUNGEON = LootTableList.register(MOONCHEST);
 
     public RoomTreasureMercuryBase()
