@@ -20,6 +20,7 @@ import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.*;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.*;
 import com.mjr.extraplanets.entities.landers.*;
+import com.mjr.extraplanets.entities.mobs.EntityEvolvedMagmaCube;
 import com.mjr.extraplanets.entities.rockets.*;
 import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
 import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
@@ -378,6 +379,7 @@ public class ExtraPlanets {
 		GalacticraftCore.proxy.registerFluidTexture(ExtraPlanets_Fluids.SALT_FLUID, new ResourceLocation(Constants.ASSET_PREFIX, "textures/misc/under_salt.png"));
 	}
 
+	@SuppressWarnings("deprecation")
 	private void registerNonMobEntities() {
 		if (Config.CERES && Config.NUCLEAR_BOMB)
 			RegisterUtilities.registerNonMobEntity(Constants.modID, ExtraPlanets.instance, EntityNuclearBombPrimed.class, Constants.modID + "." + "NuclearBombPrimed", 150, 1, true);
@@ -416,13 +418,16 @@ public class ExtraPlanets {
 		RegisterUtilities.registerNonMobEntity(Constants.modID, ExtraPlanets.instance, EntityGeneralLander.class, "EntityGeneralLander", 150, 5, false);
 	}
 
+	@SuppressWarnings("deprecation")
 	private void registerCreatures() {
 		// Dungeon Bosses
-		if (Config.MERCURY)
+		if (Config.MERCURY) {
+			RegisterUtilities.registerMobEntity(Constants.modID, ExtraPlanets.instance, EntityEvolvedMagmaCube.class, Constants.modID + "." + "EvolvedMagmaCube", 3407872, 16579584);
 			if (Config.USE_DEFAULT_BOSSES)
 				RegisterUtilities.registerMobEntity(Constants.modID, ExtraPlanets.instance, EntityCreeperBossMercury.class, Constants.modID + "." + "CreeperBossMercury", 894731, 0);
 			else
 				RegisterUtilities.registerMobEntity(Constants.modID, ExtraPlanets.instance, EntityEvolvedMagmaCubeBoss.class, Constants.modID + "." + "EvolvedMagmaCubeBoss", 3407872, 16579584);
+		}
 		if (Config.JUPITER)
 			if (Config.USE_DEFAULT_BOSSES)
 				RegisterUtilities.registerMobEntity(Constants.modID, ExtraPlanets.instance, EntityCreeperBossJupiter.class, Constants.modID + "." + "CreeperBossJupiter", 894731, 0);
