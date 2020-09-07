@@ -13,6 +13,7 @@ import micdoodle8.mods.galacticraft.core.GalacticraftCore;
 import micdoodle8.mods.galacticraft.core.entities.EntityBossBase;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.IEntityLivingData;
@@ -51,6 +52,7 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 
 	public EntityEvolvedMagmaCubeBoss(World world) {
 		super(world);
+		this.isImmuneToFire = true;
 		this.moveHelper = new EntityEvolvedMagmaCubeBoss.SlimeMoveHelper(this);
 		this.tasks.addTask(1, new EntityEvolvedMagmaCubeBoss.AISlimeFloat(this));
 		this.tasks.addTask(2, new EntityEvolvedMagmaCubeBoss.AISlimeAttack(this));
@@ -233,6 +235,10 @@ public class EntityEvolvedMagmaCubeBoss extends EntityBossBase implements IEntit
 	 */
 	protected boolean canDamagePlayer() {
 		return this.getSlimeSize() > 1;
+	}
+
+	public boolean isBurning() {
+		return false;
 	}
 
 	/**
