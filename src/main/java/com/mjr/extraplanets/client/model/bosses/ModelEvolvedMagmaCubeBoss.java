@@ -10,58 +10,56 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
-public class ModelEvolvedMagmaCubeBoss extends ModelBase { // TODO Clean up
-	ModelRenderer[] field_78109_a = new ModelRenderer[8];
-	ModelRenderer field_78108_b;
+public class ModelEvolvedMagmaCubeBoss extends ModelBase {
+	ModelRenderer[] segments = new ModelRenderer[8];
+	ModelRenderer core;
 
 	public ModelEvolvedMagmaCubeBoss() {
-		for (int i = 0; i < this.field_78109_a.length; ++i) {
-			byte b0 = 0;
-			int j = i;
+		for (int i = 0; i < this.segments.length; ++i) {
+			int j = 0;
+			int k = i;
 
 			if (i == 2) {
-				b0 = 24;
-				j = 10;
+				j = 24;
+				k = 10;
 			} else if (i == 3) {
-				b0 = 24;
-				j = 19;
+				j = 24;
+				k = 19;
 			}
 
-			this.field_78109_a[i] = new ModelRenderer(this, b0, j);
-			this.field_78109_a[i].addBox(-4.0F, 16 + i, -4.0F, 8, 1, 8);
+			this.segments[i] = new ModelRenderer(this, j, k);
+			this.segments[i].addBox(-4.0F, (float) (16 + i), -4.0F, 8, 1, 8);
 		}
 
-		this.field_78108_b = new ModelRenderer(this, 0, 16);
-		this.field_78108_b.addBox(-2.0F, 18.0F, -2.0F, 4, 4, 4);
+		this.core = new ModelRenderer(this, 0, 16);
+		this.core.addBox(-2.0F, 18.0F, -2.0F, 4, 4, 4);
 	}
 
 	/**
 	 * Used for easily adding entity-dependent animations. The second and third float params here are the same second and third as in the setRotationAngles method.
 	 */
-	@Override
-	public void setLivingAnimations(EntityLivingBase p_78086_1_, float p_78086_2_, float p_78086_3_, float p_78086_4_) {
-		EntityEvolvedMagmaCubeBoss entitymagmacube = (EntityEvolvedMagmaCubeBoss) p_78086_1_;
-		float f3 = entitymagmacube.prevSquishFactor + (entitymagmacube.squishFactor - entitymagmacube.prevSquishFactor) * p_78086_4_;
+	public void setLivingAnimations(EntityLivingBase entitylivingbaseIn, float limbSwing, float limbSwingAmount, float partialTickTime) {
+		EntityEvolvedMagmaCubeBoss EntityEvolvedMagmaCube = (EntityEvolvedMagmaCubeBoss) entitylivingbaseIn;
+		float f = EntityEvolvedMagmaCube.prevSquishFactor + (EntityEvolvedMagmaCube.squishFactor - EntityEvolvedMagmaCube.prevSquishFactor) * partialTickTime;
 
-		if (f3 < 0.0F) {
-			f3 = 0.0F;
+		if (f < 0.0F) {
+			f = 0.0F;
 		}
 
-		for (int i = 0; i < this.field_78109_a.length; ++i) {
-			this.field_78109_a[i].rotationPointY = (-(4 - i)) * f3 * 1.7F;
+		for (int i = 0; i < this.segments.length; ++i) {
+			this.segments[i].rotationPointY = (float) (-(4 - i)) * f * 1.7F;
 		}
 	}
 
 	/**
 	 * Sets the models various rotation angles then renders the model.
 	 */
-	@Override
-	public void render(Entity p_78088_1_, float p_78088_2_, float p_78088_3_, float p_78088_4_, float p_78088_5_, float p_78088_6_, float p_78088_7_) {
-		this.setRotationAngles(p_78088_2_, p_78088_3_, p_78088_4_, p_78088_5_, p_78088_6_, p_78088_7_, p_78088_1_);
-		this.field_78108_b.render(p_78088_7_);
+	public void render(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scale) {
+		this.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scale, entityIn);
+		this.core.render(scale);
 
-		for (int i = 0; i < this.field_78109_a.length; ++i) {
-			this.field_78109_a[i].render(p_78088_7_);
+		for (ModelRenderer modelrenderer : this.segments) {
+			modelrenderer.render(scale);
 		}
 	}
 }
