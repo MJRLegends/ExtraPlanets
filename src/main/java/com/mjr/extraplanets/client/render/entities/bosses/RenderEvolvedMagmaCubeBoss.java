@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class RenderEvolvedMagmaCubeBoss extends RenderLiving<EntityEvolvedMagmaCubeBoss> {
-	private static final ResourceLocation slimeTextures = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/slime/magmacube.png");
+	private static final ResourceLocation MAGMA_CUBE_TEXTURES = new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/entity/slime/magmacube.png");
 
 	public RenderEvolvedMagmaCubeBoss(RenderManager renderManager) {
 		super(renderManager, new ModelEvolvedMagmaCubeBoss(), 0.25F);
@@ -21,7 +21,7 @@ public class RenderEvolvedMagmaCubeBoss extends RenderLiving<EntityEvolvedMagmaC
 
 	@Override
 	protected ResourceLocation getEntityTexture(EntityEvolvedMagmaCubeBoss entity) {
-		return slimeTextures;
+		return MAGMA_CUBE_TEXTURES;
 	}
 
 	@Override
