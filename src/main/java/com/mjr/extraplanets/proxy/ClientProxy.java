@@ -20,6 +20,7 @@ import com.mjr.extraplanets.client.render.entities.RenderNuclearBombPrimed;
 import com.mjr.extraplanets.client.render.entities.bosses.*;
 import com.mjr.extraplanets.client.render.entities.bosses.defaultBosses.*;
 import com.mjr.extraplanets.client.render.entities.landers.*;
+import com.mjr.extraplanets.client.render.entities.mobs.RenderEvolvedAncientMagmaCube;
 import com.mjr.extraplanets.client.render.entities.mobs.RenderEvolvedMagmaCube;
 import com.mjr.extraplanets.client.render.entities.projectiles.RenderSmallSnowBall;
 import com.mjr.extraplanets.client.render.entities.rockets.*;
@@ -32,6 +33,7 @@ import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.*;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.*;
 import com.mjr.extraplanets.entities.landers.*;
+import com.mjr.extraplanets.entities.mobs.EntityEvolvedAncientMagmaCube;
 import com.mjr.extraplanets.entities.mobs.EntityEvolvedMagmaCube;
 import com.mjr.extraplanets.entities.projectiles.EntitySmallSnowball;
 import com.mjr.extraplanets.entities.rockets.*;
@@ -241,6 +243,7 @@ public class ClientProxy extends CommonProxy {
 			else
 				ClientUtilities.registerEntityRenderer(EntityEvolvedFireBatBoss.class, (RenderManager manager) -> new RenderEvolvedFireBatBoss(manager));
 			ClientUtilities.registerEntityRenderer(EntityJupiterLander.class, (RenderManager manager) -> new RenderJupiterLander(manager));
+			ClientUtilities.registerEntityRenderer(EntityEvolvedAncientMagmaCube.class, (RenderManager manager) -> new RenderEvolvedAncientMagmaCube(manager));
 		}
 		if (Config.SATURN) {
 			if (Config.USE_DEFAULT_BOSSES)
