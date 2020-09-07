@@ -4,19 +4,20 @@ import java.util.Random;
 
 import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Mercury.worldgen.dungeon.RoomBossMercuryBase;
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerMercury;
 import com.mjr.extraplanets.tileEntities.dungeonSpawners.TileEntityDungeonSpawnerMercuryDefault;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomBoss;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
-public class RoomBossMercury extends RoomBoss {
+public class RoomBossMercury extends RoomBossMercuryBase {
 	public RoomBossMercury() {
 	}
 
@@ -57,7 +58,10 @@ public class RoomBossMercury extends RoomBoss {
 							}
 						}
 						if (placeBlock) {
-							this.setBlockState(world, this.configuration.getBrickBlock(), i, j, k, chunkBox);
+							if(j == 0 && random.nextInt(9) == 1)
+								this.setBlockState(world, Blocks.LAVA.getDefaultState(), i, j, k, chunkBox);
+							else
+								this.setBlockState(world, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						} else {
 							this.setBlockState(world, Blocks.AIR.getDefaultState(), i, j, k, chunkBox);
 						}
@@ -65,7 +69,12 @@ public class RoomBossMercury extends RoomBoss {
 						if ((i <= 2 || k <= 2 || i >= this.sizeX - 2 || k >= this.sizeZ - 2) && random.nextInt(4) == 0) {
 							this.setBlockState(world, Blocks.GLOWSTONE.getDefaultState(), i, j, k, chunkBox);
 						} else {
-							this.setBlockState(world, this.configuration.getBrickBlock(), i, j, k, chunkBox);
+							if(random.nextInt(20) == 1) {
+								this.setBlockState(world, Blocks.FLOWING_LAVA.getDefaultState(), i, j, k, chunkBox);
+								this.setBlockState(world, Blocks.FLOWING_LAVA.getDefaultState(), i, 0, k, chunkBox);
+							}
+							else
+								this.setBlockState(world, this.configuration.getBrickBlock(), i, j, k, chunkBox);
 						}
 					}
 					// else if (j == 1 && (i <= 2 || k <= 2 || i >= this.sizeX - 2 || k >= this.sizeZ - 2) && random.nextInt(6) == 0) {
