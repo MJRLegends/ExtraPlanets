@@ -13,7 +13,6 @@ import com.mjr.extraplanets.planets.Mercury.worldgen.dungeon.RoomTreasureMercury
 
 import micdoodle8.mods.galacticraft.api.galaxies.CelestialBody;
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
 import net.minecraft.block.Block;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.DimensionType;
