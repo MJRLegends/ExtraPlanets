@@ -1125,6 +1125,13 @@ public class ExtraPlanets_Blocks {
 			RegisterUtilities.registerOre("cobblestone", new ItemStack(KEPLER22B_BLOCKS, 1, 12));
 			RegisterUtilities.registerOre("orePlatinum", new ItemStack(KEPLER22B_BLOCKS, 1, 13));
 			RegisterUtilities.registerOre("blockPlatinum", new ItemStack(KEPLER22B_BLOCKS, 1, 14));
+			
+			RegisterUtilities.registerOre("logWood", new ItemStack(KEPLER22B_MAPLE_LOG_2, 1, 1));
+			RegisterUtilities.registerOre("logWood", new ItemStack(KEPLER22B_MAPLE_LOG_2, 1, 0));
+			RegisterUtilities.registerOre("logWood", new ItemStack(KEPLER22B_MAPLE_LOG, 1, 0));
+			RegisterUtilities.registerOre("logWood", new ItemStack(KEPLER22B_MAPLE_LOG, 1, 1));
+			RegisterUtilities.registerOre("logWood", new ItemStack(KEPLER22B_MAPLE_LOG, 1, 2));
+			RegisterUtilities.registerOre("logWood", new ItemStack(KEPLER22B_MAPLE_LOG, 1, 3));
 		}
 		if (Config.ORE_LEAD_GENERATION) {
 			RegisterUtilities.registerOre("oreLead", new ItemStack(ORE_LEAD, 1, 0));
