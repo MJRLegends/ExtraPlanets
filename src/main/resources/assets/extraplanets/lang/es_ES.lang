@@ -1113,6 +1113,7 @@ space.suit.information.extra.3=Mayor sea el nivel del Traje Espacial
 space.suit.information.extra.4=menor sera la Radiación que te afecte
 space.suit.power.info=Soporta los sig. sistemas de Energía:
 space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2
+space.suit.power.info.3=Power is only required for modules ##NEEDS TRANSLATE##
 space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
 space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 
