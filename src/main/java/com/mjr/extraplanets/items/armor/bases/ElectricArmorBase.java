@@ -93,6 +93,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		tooltip.add(color + EnergyDisplayHelper.getEnergyDisplayS(joules) + "/" + EnergyDisplayHelper.getEnergyDisplayS(this.getMaxElectricityStored(itemStack)));
 		tooltip.add(EnumColor.RED + TranslateUtilities.translate("space.suit.power.info"));
 		tooltip.add(EnumColor.RED + TranslateUtilities.translate("space.suit.power.info.2"));
+		tooltip.add(EnumColor.RED + TranslateUtilities.translate("space.suit.power.info.3"));
 	}
 
 	/**

@@ -1113,6 +1113,7 @@ space.suit.information.extra.3=太空服等级越高，
 space.suit.information.extra.4=获得辐射的速度就越慢
 space.suit.power.info=支持下列能量系统：
 space.suit.power.info.2=RF、通用机械的 Mekanism Joules、星系的 GC Joules、IC2 的 EU
+space.suit.power.info.3=Power is only required for modules ##NEEDS TRANSLATE##
 space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
 space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 

@@ -1114,6 +1114,7 @@ space.suit.information.extra.3=Plus le niveau de la combinaison spatiale est él
 space.suit.information.extra.4=radiation solaire sera reçu lentement.
 space.suit.power.info=Prend en charge les systèmes d'alimentation suivants:
 space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2.
+space.suit.power.info.3=Power is only required for modules ##NEEDS TRANSLATE##
 space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
 space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 

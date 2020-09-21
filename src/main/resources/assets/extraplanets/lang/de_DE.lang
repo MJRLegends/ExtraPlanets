@@ -1113,6 +1113,7 @@ space.suit.information.extra.3=Je höher die Stufe des Raumanzugs,
 space.suit.information.extra.4=desto langsamer wird man verstrahlt 
 space.suit.power.info=Unterstützt die folgenden Stromversorgungssysteme, 
 space.suit.power.info.2=RF, Mekanism Joules, GC Joules, IC2
+space.suit.power.info.3=Power is only required for modules ##NEEDS TRANSLATE##
 space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
 space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 
