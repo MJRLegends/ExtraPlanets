@@ -395,7 +395,7 @@ public class MainHandlerClient {
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
 	public void onRenderFogDensity(EntityViewRenderEvent.FogDensity event) {
-		if(event.getEntity().isInLava())
+		if(event.getEntity().isInLava() || event.getEntity().isInWater())
 			return;
 		if (Config.CUSTOM_FOG) {
 			if (event.entity.worldObj.provider.getDimensionId() == Config.JUPITER_ID) {
