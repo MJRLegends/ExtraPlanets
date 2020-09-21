@@ -1113,6 +1113,7 @@ space.suit.information.extra.3=우주복 티어가 높을수록
 space.suit.information.extra.4=방사능 피폭이 느려집니다
 space.suit.power.info=다음과 같은 전력 체계를 제공합니다.
 space.suit.power.info.2=RF, 메카니즘 쥴스, 갤럭티크래프트 쥴스, 인더스트리얼크래프트 2
+space.suit.power.info.3=Power is only required for modules ##NEEDS TRANSLATE##
 space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
 space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
 
