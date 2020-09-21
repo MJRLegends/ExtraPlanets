@@ -221,6 +221,14 @@ public class MainHandlerServer {
 			event.addCapability(CapabilityStatsClientHandler.EP_PLAYER_CLIENT_PROP, new CapabilityProviderStatsClient((EntityPlayerSP) event.getObject()));
 	}
 
+	public boolean isInGlowstone(EntityPlayerMP player) {
+		return player.world.isMaterialInBB(player.getEntityBoundingBox().expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), ExtraPlanets_Fluids.GLOWSTONE_MATERIAL);
+	}
+	
+	public boolean isInMagma(EntityPlayerMP player) {
+		return player.world.isMaterialInBB(player.getEntityBoundingBox().expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), ExtraPlanets_Fluids.MAGMA_MATERIAL);
+	}
+
 	@SubscribeEvent
 	public void onEntityUpdate(LivingEvent.LivingUpdateEvent event) {
 		final EntityLivingBase entityLiving = event.getEntityLiving();
@@ -229,6 +237,9 @@ public class MainHandlerServer {
 			tickModules(event, entityLiving);
 			if (isInGlowstone((EntityPlayerMP) entityLiving))
 				entityLiving.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 500, 0));
+			else if (isInMagma((EntityPlayerMP) entityLiving))
+				if (!entityLiving.isImmuneToFire())
+					entityLiving.setFire(18);
 			onPlayerUpdate((EntityPlayerMP) entityLiving);
 			if (OxygenUtil.isAABBInBreathableAirBlock(entityLiving.world, entityLiving.getEntityBoundingBox(), true) == false
 					&& !(entityLiving.world.getBlockState(new BlockPos(entityLiving.posX, entityLiving.posY, entityLiving.posZ)).getBlock() instanceof BlockFluidBase))
@@ -335,10 +346,6 @@ public class MainHandlerServer {
 						bootsModules.tickServer(player);
 				}
 			}
-	}
-
-	public boolean isInGlowstone(EntityPlayerMP player) {
-		return player.world.isMaterialInBB(player.getEntityBoundingBox().expand(-0.10000000149011612D, -0.4000000059604645D, -0.10000000149011612D), ExtraPlanets_Fluids.GLOWSTONE_MATERIAL);
 	}
 
 	private void runChecks(LivingEvent.LivingUpdateEvent event, EntityLivingBase entityLiving) {
