@@ -401,6 +401,8 @@ public class MainHandlerClient {
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
 	public void onRenderFogDensity(EntityViewRenderEvent.FogDensity event) {
+		if(event.getEntity().isInLava())
+			return;
 		if (Config.CUSTOM_FOG) {
 			if (event.getEntity().world.provider.getDimensionType().getId() == Config.JUPITER_ID) {
 				event.setDensity(0.02f);
