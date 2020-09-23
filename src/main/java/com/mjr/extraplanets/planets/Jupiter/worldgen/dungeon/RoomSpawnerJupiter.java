@@ -10,7 +10,6 @@ import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntityMobSpawner;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
@@ -62,7 +61,7 @@ public class RoomSpawnerJupiter extends RoomEmptyJupiter
 
             if (spawner != null)
             {
-                spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+                spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
             }
 
             blockpos = new BlockPos(this.getXWithOffset(this.sizeX - 2, this.sizeZ - 2), this.getYWithOffset(0), this.getZWithOffset(this.sizeX - 2, this.sizeZ - 2));
@@ -70,7 +69,7 @@ public class RoomSpawnerJupiter extends RoomEmptyJupiter
 
             if (spawner != null)
             {
-                spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+                spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
             }
 
             return true;
@@ -79,8 +78,8 @@ public class RoomSpawnerJupiter extends RoomEmptyJupiter
         return false;
     }
 
-    private static ResourceLocation getMob(Random rand)
+    private static String getMob(Random rand)
     {
-        return new ResourceLocation(Constants.modID, Constants.modID + "." + "EvolvedAncientMagmaCube");
+        return Constants.modID + "." + "EvolvedAncientMagmaCube";
     }
 }

@@ -43,7 +43,7 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
      */
     public boolean getCanSpawnHere()
     {
-        return this.world.getDifficulty() != EnumDifficulty.PEACEFUL;
+        return this.worldObj.getDifficulty() != EnumDifficulty.PEACEFUL;
     }
 
     /**
@@ -51,17 +51,17 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
      */
     public boolean isNotColliding()
     {
-        return this.world.checkNoEntityCollision(this.getEntityBoundingBox(), this) && this.world.getCollisionBoxes(this, this.getEntityBoundingBox()).isEmpty() && !this.world.containsAnyLiquid(this.getEntityBoundingBox());
+        return this.worldObj.checkNoEntityCollision(this.getEntityBoundingBox(), this) && this.worldObj.getCollisionBoxes(this, this.getEntityBoundingBox()).isEmpty() && !this.worldObj.containsAnyLiquid(this.getEntityBoundingBox());
     }
     
-    public void setSlimeSizePublic(int size, boolean resetHealth)
+    public void setSlimeSizePublic(int size, float resetHealth)
     {
-        this.setSlimeSize(size, resetHealth);
+        this.setSize(size, resetHealth);
     }
 
-    protected void setSlimeSize(int size, boolean resetHealth)
+    protected void setSize(int size, float resetHealth)
     {
-        super.setSlimeSize(size, resetHealth);
+        super.setSize(size, resetHealth);
         this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue((double)(size * 3));
     }
 
@@ -86,7 +86,7 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
 
     protected EntitySlime createInstance()
     {
-        return new EntityEvolvedAncientMagmaCube(this.world);
+        return new EntityEvolvedAncientMagmaCube(this.worldObj);
     }
 
     @Nullable

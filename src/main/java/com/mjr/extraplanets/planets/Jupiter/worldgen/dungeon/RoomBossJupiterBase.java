@@ -13,7 +13,6 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
-import net.minecraft.world.gen.structure.template.TemplateManager;
 
 public class RoomBossJupiterBase extends SizedPieceJupiter
 {
@@ -151,9 +150,9 @@ public class RoomBossJupiterBase extends SizedPieceJupiter
     }
 
     @Override
-    protected void readStructureFromNBT(NBTTagCompound nbt, TemplateManager manager)
+    protected void readStructureFromNBT(NBTTagCompound nbt)
     {
-        super.readStructureFromNBT(nbt, manager);
+        super.readStructureFromNBT(nbt);
         this.chestPos = new BlockPos(nbt.getInteger("chestX"), nbt.getInteger("chestY"), nbt.getInteger("chestZ"));
     }
 

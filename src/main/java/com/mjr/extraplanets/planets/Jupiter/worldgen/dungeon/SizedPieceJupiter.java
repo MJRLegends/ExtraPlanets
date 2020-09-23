@@ -4,7 +4,6 @@ import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.world.gen.structure.template.TemplateManager;
 
 public abstract class SizedPieceJupiter extends DirectionalPieceJupiter
 {
@@ -35,9 +34,9 @@ public abstract class SizedPieceJupiter extends DirectionalPieceJupiter
     }
 
     @Override
-    protected void readStructureFromNBT(NBTTagCompound nbt, TemplateManager manager)
+    protected void readStructureFromNBT(NBTTagCompound nbt)
     {
-        super.readStructureFromNBT(nbt, manager);
+        super.readStructureFromNBT(nbt);
 
         this.sizeX = nbt.getInteger("sizeX");
         this.sizeY = nbt.getInteger("sizeY");

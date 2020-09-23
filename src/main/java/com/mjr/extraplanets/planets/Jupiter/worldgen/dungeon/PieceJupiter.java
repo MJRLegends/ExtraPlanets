@@ -1,14 +1,13 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon;
 
+import java.util.Random;
+
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
+
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
-import net.minecraft.world.gen.structure.template.TemplateManager;
-
-import java.util.Random;
-
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
 public abstract class PieceJupiter extends StructureComponent
 {
@@ -30,7 +29,7 @@ public abstract class PieceJupiter extends StructureComponent
     }
 
     @Override
-    protected void readStructureFromNBT(NBTTagCompound tagCompound, TemplateManager manager)
+    protected void readStructureFromNBT(NBTTagCompound tagCompound)
     {
         if (this.configuration == null)
         {

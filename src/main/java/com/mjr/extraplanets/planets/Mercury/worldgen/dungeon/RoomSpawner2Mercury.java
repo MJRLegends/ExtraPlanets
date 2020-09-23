@@ -64,7 +64,7 @@ public class RoomSpawner2Mercury extends RoomEmptyMercury
 
             if (spawner != null)
             {
-                spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+                spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
             }
 
             blockpos = new BlockPos(this.getXWithOffset(this.sizeX - 3, this.sizeZ - 3), this.getYWithOffset(0), this.getZWithOffset(this.sizeX - 3, this.sizeZ - 3));
@@ -72,7 +72,7 @@ public class RoomSpawner2Mercury extends RoomEmptyMercury
 
             if (spawner != null)
             {
-                spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+                spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
             }
             
             blockpos = new BlockPos(this.getXWithOffset(2, 2), this.getYWithOffset(0), this.getZWithOffset(2, 2));
@@ -80,7 +80,7 @@ public class RoomSpawner2Mercury extends RoomEmptyMercury
 
             if (spawner != null)
             {
-                spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+                spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
             }
             
             blockpos = new BlockPos(this.getXWithOffset(this.sizeX - 2, this.sizeZ - 2), this.getYWithOffset(0), this.getZWithOffset(this.sizeX - 2, this.sizeZ - 2));
@@ -88,7 +88,7 @@ public class RoomSpawner2Mercury extends RoomEmptyMercury
 
             if (spawner != null)
             {
-                spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+                spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
             }
 
             return true;
@@ -97,8 +97,8 @@ public class RoomSpawner2Mercury extends RoomEmptyMercury
         return false;
     }
 
-    private static ResourceLocation getMob(Random rand)
+    private static String getMob(Random rand)
     {
-        return new ResourceLocation(Constants.modID, Constants.modID + "." + "EvolvedMagmaCube");
+        return Constants.modID + "." + "EvolvedMagmaCube";
     }
 }

@@ -7,7 +7,6 @@ import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
-import net.minecraft.world.gen.structure.template.TemplateManager;
 
 public abstract class DirectionalPieceMercury extends PieceMercury
 {
@@ -42,9 +41,9 @@ public abstract class DirectionalPieceMercury extends PieceMercury
     }
 
     @Override
-    protected void readStructureFromNBT(NBTTagCompound nbt, TemplateManager manager)
+    protected void readStructureFromNBT(NBTTagCompound nbt)
     {
-        super.readStructureFromNBT(nbt, manager);
+        super.readStructureFromNBT(nbt);
 
         if (nbt.hasKey("direction"))
         {
