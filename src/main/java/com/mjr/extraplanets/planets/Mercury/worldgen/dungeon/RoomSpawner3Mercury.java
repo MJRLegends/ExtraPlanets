@@ -60,56 +60,56 @@ public class RoomSpawner3Mercury extends RoomEmptyMercury {
 			TileEntityMobSpawner spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 
 			if (spawner != null) {
-				spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+				spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
 			}
 
 			blockpos = new BlockPos(this.getXWithOffset(this.sizeX - 5, this.sizeZ - 5), this.getYWithOffset(0), this.getZWithOffset(this.sizeX - 5, this.sizeZ - 5));
 			spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 
 			if (spawner != null) {
-				spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+				spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
 			}
 
 			blockpos = new BlockPos(this.getXWithOffset(2, 2), this.getYWithOffset(0), this.getZWithOffset(2, 2));
 			spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 
 			if (spawner != null) {
-				spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+				spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
 			}
 
 			blockpos = new BlockPos(this.getXWithOffset(this.sizeX - 2, this.sizeZ - 2), this.getYWithOffset(0), this.getZWithOffset(this.sizeX - 2, this.sizeZ - 2));
 			spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 
 			if (spawner != null) {
-				spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+				spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
 			}
 			
 			blockpos = new BlockPos(this.getXWithOffset(3, 3), this.getYWithOffset(0), this.getZWithOffset(3, 3));
 			spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 
 			if (spawner != null) {
-				spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+				spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
 			}
 
 			blockpos = new BlockPos(this.getXWithOffset(this.sizeX - 3, this.sizeZ - 3), this.getYWithOffset(0), this.getZWithOffset(this.sizeX - 3, this.sizeZ - 3));
 			spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 
 			if (spawner != null) {
-				spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+				spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
 			}
 			
 			blockpos = new BlockPos(this.getXWithOffset(4, 4), this.getYWithOffset(0), this.getZWithOffset(4, 4));
 			spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 
 			if (spawner != null) {
-				spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+				spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
 			}
 
 			blockpos = new BlockPos(this.getXWithOffset(this.sizeX - 4, this.sizeZ - 4), this.getYWithOffset(0), this.getZWithOffset(this.sizeX - 4, this.sizeZ - 4));
 			spawner = (TileEntityMobSpawner) worldIn.getTileEntity(blockpos);
 
 			if (spawner != null) {
-				spawner.getSpawnerBaseLogic().setEntityId(getMob(random));
+				spawner.getSpawnerBaseLogic().setEntityName(getMob(random));
 			}
 
 			return true;
@@ -118,13 +118,13 @@ public class RoomSpawner3Mercury extends RoomEmptyMercury {
 		return false;
 	}
 
-	private static ResourceLocation getMob(Random rand) {
+	private static String getMob(Random rand) {
 		switch (rand.nextInt(2)) {
 		case 0:
-	        return new ResourceLocation(Constants.modID, Constants.modID + "." + "EvolvedMagmaCube");
+	        return Constants.modID + "." + "EvolvedMagmaCube";
 		case 1:
 		default:
-			return new ResourceLocation("Minecraft:ghast");
+			return "Minecraft.ghast";
 		}
 	}
 }

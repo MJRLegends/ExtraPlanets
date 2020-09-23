@@ -4,7 +4,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
-import net.minecraft.world.gen.structure.template.TemplateManager;
 
 import java.util.Random;
 
@@ -30,7 +29,7 @@ public abstract class PieceMercury extends StructureComponent
     }
 
     @Override
-    protected void readStructureFromNBT(NBTTagCompound tagCompound, TemplateManager manager)
+    protected void readStructureFromNBT(NBTTagCompound tagCompound)
     {
         if (this.configuration == null)
         {

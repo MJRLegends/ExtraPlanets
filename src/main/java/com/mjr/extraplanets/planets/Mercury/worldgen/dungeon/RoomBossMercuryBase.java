@@ -151,9 +151,9 @@ public class RoomBossMercuryBase extends SizedPieceMercury
     }
 
     @Override
-    protected void readStructureFromNBT(NBTTagCompound nbt, TemplateManager manager)
+    protected void readStructureFromNBT(NBTTagCompound nbt)
     {
-        super.readStructureFromNBT(nbt, manager);
+        super.readStructureFromNBT(nbt);
         this.chestPos = new BlockPos(nbt.getInteger("chestX"), nbt.getInteger("chestY"), nbt.getInteger("chestZ"));
     }
 

@@ -1,11 +1,9 @@
 package com.mjr.extraplanets.planets.Mercury.worldgen.dungeon;
 
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DirectionalPiece;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.world.gen.structure.template.TemplateManager;
 
 public abstract class SizedPieceMercury extends DirectionalPieceMercury
 {
@@ -36,9 +34,9 @@ public abstract class SizedPieceMercury extends DirectionalPieceMercury
     }
 
     @Override
-    protected void readStructureFromNBT(NBTTagCompound nbt, TemplateManager manager)
+    protected void readStructureFromNBT(NBTTagCompound nbt)
     {
-        super.readStructureFromNBT(nbt, manager);
+        super.readStructureFromNBT(nbt);
 
         this.sizeX = nbt.getInteger("sizeX");
         this.sizeY = nbt.getInteger("sizeY");

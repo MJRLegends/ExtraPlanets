@@ -342,17 +342,19 @@ public class ExtraPlanets {
 	private void registerCreatures() {
 		// Dungeon Bosses
 		if (Config.MERCURY) {
-			RegisterUtilities.registerMobEntity(Constants.modID, ExtraPlanets.instance, EntityEvolvedMagmaCube.class, Constants.modID + "." + "EvolvedMagmaCube", 3407872, 16579584);
+			RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedMagmaCube.class, Constants.modID + "." + "EvolvedMagmaCube", 3407872, 16579584);
 			if (Config.USE_DEFAULT_BOSSES)
 				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossMercury.class, "CreeperBossMercury", 894731, 0);
 			else
 				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedMagmaCubeBoss.class, "EvolvedMagmaCubeBoss", 3407872, 16579584);
+		}
 		if (Config.JUPITER) {
-			RegisterUtilities.registerMobEntity(Constants.modID, ExtraPlanets.instance, EntityEvolvedAncientMagmaCube.class, Constants.modID + "." + "EvolvedAncientMagmaCube", 3407872, 16579584);
+			RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedAncientMagmaCube.class, Constants.modID + "." + "EvolvedAncientMagmaCube", 3407872, 16579584);
 			if (Config.USE_DEFAULT_BOSSES)
 				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossJupiter.class, "CreeperBossJupiter", 894731, 0);
 			else
 				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityEvolvedFireBatBoss.class, "EvolvedFireBatBoss", 16167425, 0);
+		}
 		if (Config.SATURN)
 
 			if (Config.USE_DEFAULT_BOSSES)
