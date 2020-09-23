@@ -22,13 +22,19 @@ public class WorldProviderPluto extends WorldProviderRealisticSpace {
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(182f / 255F * f, 182f / 255F * f, 182f / 255F * f);
+		if(Config.USE_REALISTIC_ATMOS)
+			return new Vector3(0 / 255.0F * f, 0 / 255.0F * f, 0 / 255.0F * f);
+		else
+			return new Vector3(182f / 255F * f, 182f / 255F * f, 182f / 255F * f);
 	}
 
 	@Override
 	public Vector3 getSkyColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(156f / 255.0F * f, 156f / 255.0F * f, 156f / 255.0F * f);
+		if(Config.USE_REALISTIC_ATMOS)
+			return new Vector3(0 / 255.0F * f, 0 / 255.0F * f, 0 / 255.0F * f);
+		else
+			return new Vector3(156f / 255.0F * f, 156f / 255.0F * f, 156f / 255.0F * f);
 	}
 
 	@Override

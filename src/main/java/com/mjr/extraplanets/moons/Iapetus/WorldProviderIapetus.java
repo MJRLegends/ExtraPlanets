@@ -27,13 +27,19 @@ public class WorldProviderIapetus extends WorldProviderRealisticMoon {
 	@Override
 	public Vector3 getFogColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(50F / 255F * f, 30F / 255F * f, 30F / 255F * f);
+		if(Config.USE_REALISTIC_ATMOS)
+			return new Vector3(0 / 255.0F * f, 0 / 255.0F * f, 0 / 255.0F * f);
+		else
+			return new Vector3(50F / 255F * f, 30F / 255F * f, 30F / 255F * f);
 	}
 
 	@Override
 	public Vector3 getSkyColor() {
 		float f = 1.0F - this.getStarBrightness(1.0F);
-		return new Vector3(60 / 255.0F * f, 40 / 255.0F * f, 40 / 255.0F * f);
+		if(Config.USE_REALISTIC_ATMOS)
+			return new Vector3(0 / 255.0F * f, 0 / 255.0F * f, 0 / 255.0F * f);
+		else
+			return new Vector3(60 / 255.0F * f, 40 / 255.0F * f, 40 / 255.0F * f);
 	}
 
 	@Override

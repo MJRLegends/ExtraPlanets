@@ -487,7 +487,7 @@ public class Config {
 		MOB_SUFFOCATION = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mob Suffocation", true, "Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
 		USE_DEFAULT_BOSSES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Setting this option to true will disable & remove all custom bosses and will replace them with Creeper Bosses!")
 				.getBoolean(false);
-		USE_REALISTIC_ATMOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use Realistic Atmosphere Sky Colous for Planets/Moons", true, "Setting this option to true will disable Custom Atmospheres Sky Colous for phobos, deimos, callisto, ganymede, titania, ceres and oberon!")
+		USE_REALISTIC_ATMOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use Realistic Atmosphere Sky Colous for Planets/Moons", true, "Setting this option to true will disable Custom Atmospheres Sky Colous for Phobos, Deimos, Ceres, Io, Europa, Ganymede, Callisto, Rhea, Iapetus, Titania, Oberon, Triton, Ceres, Pluto, Eris!")
 				.getBoolean(true);
 
 		GENERATE_KEPLER22B_DUNGEONS = config
