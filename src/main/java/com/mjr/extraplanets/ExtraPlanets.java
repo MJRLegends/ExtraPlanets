@@ -13,6 +13,7 @@ import com.mjr.extraplanets.entities.EntityNuclearBombPrimed;
 import com.mjr.extraplanets.entities.bosses.*;
 import com.mjr.extraplanets.entities.bosses.defaultBosses.*;
 import com.mjr.extraplanets.entities.landers.*;
+import com.mjr.extraplanets.entities.mobs.EntityEvolvedMagmaCube;
 import com.mjr.extraplanets.entities.rockets.*;
 import com.mjr.extraplanets.entities.vehicles.EntityMarsRover;
 import com.mjr.extraplanets.entities.vehicles.EntityVenusRover;
@@ -339,7 +340,8 @@ public class ExtraPlanets {
 
 	private void registerCreatures() {
 		// Dungeon Bosses
-		if (Config.MERCURY)
+		if (Config.MERCURY) {
+			RegisterUtilities.registerMobEntity(Constants.modID, ExtraPlanets.instance, EntityEvolvedMagmaCube.class, Constants.modID + "." + "EvolvedMagmaCube", 3407872, 16579584);
 			if (Config.USE_DEFAULT_BOSSES)
 				RegisterUtilities.registerMobEntity(ExtraPlanets.instance, EntityCreeperBossMercury.class, "CreeperBossMercury", 894731, 0);
 			else
