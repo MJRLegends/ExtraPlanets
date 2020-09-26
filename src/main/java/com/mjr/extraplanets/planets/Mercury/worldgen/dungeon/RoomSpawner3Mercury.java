@@ -124,7 +124,7 @@ public class RoomSpawner3Mercury extends RoomEmptyMercury {
 	        return Constants.modID + "." + "EvolvedMagmaCube";
 		case 1:
 		default:
-			return "Minecraft.ghast";
+			return "Ghast";
 		}
 	}
 }

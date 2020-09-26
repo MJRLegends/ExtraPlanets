@@ -29,7 +29,7 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
 
     public static void registerFixesMagmaCube(DataFixer fixer)
     {
-        EntityLiving.registerFixesMob(fixer, EntityEvolvedAncientMagmaCube.class);
+        EntityLiving.registerFixesMob(fixer, "EvolvedAncientMagmaCube");
     }
 
     protected void applyEntityAttributes()

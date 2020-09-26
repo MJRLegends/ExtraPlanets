@@ -29,7 +29,7 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
 
     public static void registerFixesMagmaCube(DataFixer fixer)
     {
-        EntityLiving.registerFixesMob(fixer, EntityEvolvedMagmaCube.class);
+        EntityLiving.registerFixesMob(fixer, "EvolvedMagmaCube");
     }
 
     protected void applyEntityAttributes()
