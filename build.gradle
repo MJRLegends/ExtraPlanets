@@ -6,10 +6,13 @@ def fmp_version="1.1.2.334"
 
 buildscript {
     repositories {
-        mavenCentral()
+		maven {
+			name = "central"
+			url = "https://repo1.maven.org/"
+		}
         maven {
             name = "forge"
-            url = "http://files.minecraftforge.net/maven"
+            url = "https://files.minecraftforge.net/maven"
         }
         maven {
             name = "sonatype"
@@ -28,7 +31,7 @@ buildscript {
 repositories {
     maven {
         name 'CB Maven FS'
-        url "http://chickenbones.net/maven/"
+        url "https://chickenbones.net/maven/"
     }
 }
 
