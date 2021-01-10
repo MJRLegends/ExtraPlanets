@@ -23,7 +23,7 @@ v0.7.1
 *Added tooltip to Space suits regarding power being only needed for space suits
 *Fixed issue #595 - Kepler22b Planks > Vanilla Pressure Plates Crafting issue
 *Fixed All Axes, Hoes, Shovels, Swords, Pickaxes tools holding and inventory displays for MC 1.10.2+ (Fixes issue #596)
-*Added a config (on by default) of "Use Realistic Atmosphere Sky Colous for Planets/Moons" which will disable colour sky/fog for phobos, deimos, callisto, ganymede, titania, ceres and oberon (#585)
+*Added a config (on by default) of "Use Realistic Atmosphere Sky Colous for Planets/Moons" which will disable colour sky/fog for phobos, deimos, callisto, ganymede, titania, ceres and oberon & more (#585)
 *Added fire affect to when a player is in magma (Currently doesnt work fully but looks better than no fire)
 *Fixed lava effect overlay, when in lava not rendering due to fog rendering, (Issue #500)
 *Fixed issue #604 - Crafttweaker Rocket Recipes adds recipes for rocket parts
