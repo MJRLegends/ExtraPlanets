@@ -5,6 +5,27 @@
 
 
 ===========================================Released Updates===========================================
+v1.0.5
+*Added a Environment Emergency Kit with a temporary Space Suit
+*Fixed Geiger Counter output being old style of radiation display output
+*Changed Temp Space Suit ticks & Modules Tick for Space Suits to not run during certain gamemodes
+*Added support for /gckit command to give Environment Emergency Kit item aswell
+*Added Basic/Advanced Solar Panel modules for space suit
+*Improved the Evolved Magma Cube Boss Texture
+*Changed Evolved Magma Cube Boss to be immune from fire
+*Bit of code clean up for Evolved Magma Cube Boss rendering
+*Added a Evolved Magma Cube Mob for use in Mercury Dungeons
+*Improved/Added more content to the Mercury Dungeons
+*Added Evolved Ancient Magma Cubes for use in Jupiter Dungeons 
+*Improved/Added more content to the Jupiter Dungeons
+*Added logWood ore dict for all Kepler22b Log Blocks
+*Added plankWood ore dict for all Kepler22b Plank Blocks
+*Added tooltip to Space suits regarding power being only needed for space suits
+*Fixed All Axes, Hoes, Shovels, Swords, Pickaxes tools holding and inventory displays for MC 1.10.2+ (Fixes issue #596)
+*Added a config (on by default) of "Use Realistic Atmosphere Sky Colous for Planets/Moons" which will disable colour sky/fog for phobos, deimos, callisto, ganymede, titania, ceres and oberon & more (#585)
+*Added fire affect to when a player is in magma (Currently doesnt work fully but looks better than no fire)
+*Fixed lava effect overlay, when in lava not rendering due to fog rendering, (Issue #500)
+
 v1.0.4
 *Fixed NullPointerException error spam when hovering over a non ExtraPlanets body on ExtraPlanets Galaxy Map
 *Fixed cast error with GalaxySpace Planets/Moons that dont override the WorldProviderSpace class for GC API support
