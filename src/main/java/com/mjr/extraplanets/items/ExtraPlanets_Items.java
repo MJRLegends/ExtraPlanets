@@ -157,6 +157,7 @@ public class ExtraPlanets_Items {
 	public static Item TIER_5_EQUIPMENT_KIT;
 
 	public static Item GEIGER_COUNTER;
+	public static Item DEBUG_WORLD_FILE_GEN_ITEM;
 
 	public static Item WHITE_SUGAR_CANE;
 
@@ -384,6 +385,7 @@ public class ExtraPlanets_Items {
 		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			TIER_10_ELECTRIC_ROCKET = new ElectricRocket("item_tier10_electric_rocket");
 		GEIGER_COUNTER = new ItemGeigerCounter("geiger_counter");
+		DEBUG_WORLD_FILE_GEN_ITEM = new ItemDebugFileGenerator("debugworldfilegen");
 		WHITE_SUGAR_CANE = new ItemBlockSpecial(ExtraPlanets_Blocks.WHITE_SUGAR_CANE).setUnlocalizedName("white_sugar_cane_item").setCreativeTab(ExtraPlanets.ItemsTab);
 
 		CHOCOLATE_BAR = new ItemFood(1, 0.3F, false).setCreativeTab(ExtraPlanets.ItemsTab).setUnlocalizedName("chocolate_bar");
@@ -598,6 +600,7 @@ public class ExtraPlanets_Items {
 		if (Config.ERIS && Config.KEPLER22B && Config.ELECTRIC_ROCKET)
 			registerItem(TIER_10_ELECTRIC_ROCKET, TIER_10_ELECTRIC_ROCKET.getUnlocalizedName().substring(5));
 		registerItem(GEIGER_COUNTER, GEIGER_COUNTER.getUnlocalizedName().substring(5));
+		//registerItem(DEBUG_WORLD_FILE_GEN_ITEM, DEBUG_WORLD_FILE_GEN_ITEM.getUnlocalizedName().substring(5));
 		registerItem(WHITE_SUGAR_CANE, WHITE_SUGAR_CANE.getUnlocalizedName().substring(5));
 		registerItem(CHOCOLATE_BAR, CHOCOLATE_BAR.getUnlocalizedName().substring(5));
 		registerItem(CARAMEL_BAR, CARAMEL_BAR.getUnlocalizedName().substring(5));
