@@ -1,21 +1,15 @@
 package com.mjr.extraplanets.entities.mobs;
 
-import javax.annotation.Nullable;
-
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntitySlime;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.util.DamageSource;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.datafix.DataFixer;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
-import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -27,15 +21,10 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
         this.isImmuneToFire = true;
     }
 
-    public static void registerFixesMagmaCube(DataFixer fixer)
-    {
-        EntityLiving.registerFixesMob(fixer, "EvolvedMagmaCube");
-    }
-
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.20000000298023224D);
+        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.20000000298023224D);
     }
 
     /**
@@ -51,7 +40,7 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
      */
     public boolean isNotColliding()
     {
-        return this.worldObj.checkNoEntityCollision(this.getEntityBoundingBox(), this) && this.worldObj.getCollisionBoxes(this, this.getEntityBoundingBox()).isEmpty() && !this.worldObj.containsAnyLiquid(this.getEntityBoundingBox());
+        return this.worldObj.checkNoEntityCollision(this.getEntityBoundingBox(), this) && this.worldObj.getCollidingBoundingBoxes(this, this.getEntityBoundingBox()).isEmpty() && !this.worldObj.isAnyLiquid(this.getEntityBoundingBox());
     }
     
     public void setSlimeSizePublic(int size, float resetHealth)
@@ -89,10 +78,9 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
         return new EntityEvolvedMagmaCube(this.worldObj);
     }
 
-    @Nullable
-    protected ResourceLocation getLootTable()
+    protected Item getDropItem()
     {
-        return this.isSmallSlime() ? LootTableList.EMPTY : LootTableList.ENTITIES_MAGMA_CUBE;
+        return Items.magma_cream;
     }
 
     /**
@@ -160,24 +148,9 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
         return super.getAttackStrength() + 4;
     }
 
-    protected SoundEvent getHurtSound(DamageSource damageSourceIn)
+    protected String getJumpSound()
     {
-        return this.isSmallSlime() ? SoundEvents.ENTITY_SMALL_MAGMACUBE_HURT : SoundEvents.ENTITY_MAGMACUBE_HURT;
-    }
-
-    protected SoundEvent getDeathSound()
-    {
-        return this.isSmallSlime() ? SoundEvents.ENTITY_SMALL_MAGMACUBE_DEATH : SoundEvents.ENTITY_MAGMACUBE_DEATH;
-    }
-
-    protected SoundEvent getSquishSound()
-    {
-        return this.isSmallSlime() ? SoundEvents.ENTITY_SMALL_MAGMACUBE_SQUISH : SoundEvents.ENTITY_MAGMACUBE_SQUISH;
-    }
-
-    protected SoundEvent getJumpSound()
-    {
-        return SoundEvents.ENTITY_MAGMACUBE_JUMP;
+        return this.getSlimeSize() > 1 ? "mob.magmacube.big" : "mob.magmacube.small";
     }
 
 	@Override

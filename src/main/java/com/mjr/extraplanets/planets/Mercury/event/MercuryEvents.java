@@ -16,7 +16,7 @@ public class MercuryEvents {
 			if (event.entity instanceof EntityPlayer) {
 				event.setCanceled(false);
 			} else {
-				if (event.getEntity() instanceof EntityGhast) {
+				if (event.entity instanceof EntityGhast) {
 					event.setCanceled(true);
 					return;
 				}
