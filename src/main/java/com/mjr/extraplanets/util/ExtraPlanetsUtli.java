@@ -8,6 +8,7 @@ import com.mjr.extraplanets.network.PacketSimpleEP;
 import com.mjr.extraplanets.network.PacketSimpleEP.EnumSimplePacket;
 
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.IInventory;
 
@@ -40,5 +41,12 @@ public class ExtraPlanetsUtli {
 		player.openContainer = new ContainerModuleManager(player.inventory, player);
 		player.openContainer.windowId = id;
 		player.openContainer.onCraftGuiOpened(player);
+	}
+
+	public static int getRandom(int min, int max) {
+		if (min > max) {
+			throw new IllegalArgumentException("Min " + min + " greater than max " + max);
+		}
+		return (int) (min + Math.random() * ((long) max - min + 1));
 	}
 }

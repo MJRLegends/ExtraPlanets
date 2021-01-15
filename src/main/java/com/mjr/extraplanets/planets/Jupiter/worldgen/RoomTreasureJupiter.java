@@ -3,16 +3,17 @@ package com.mjr.extraplanets.planets.Jupiter.worldgen;
 import java.util.Random;
 
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon.RoomTreasureJupiterBase;
 
 import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomTreasure;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 
-public class RoomTreasureJupiter extends RoomTreasure {
+public class RoomTreasureJupiter extends RoomTreasureJupiterBase {
 	public RoomTreasureJupiter() {
 	}
 
@@ -60,7 +61,18 @@ public class RoomTreasureJupiter extends RoomTreasure {
 					} else if ((i == 1 && k == 1) || (i == 1 && k == this.sizeZ - 1) || (i == this.sizeX - 1 && k == 1) || (i == this.sizeX - 1 && k == this.sizeZ - 1)) {
 						this.setBlockState(world, Blocks.glowstone.getDefaultState(), i, j, k, boundingBox);
 					} else if (i == this.sizeX / 2 && j == 1 && k == this.sizeZ / 2) {
-						this.setBlockState(world, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_5.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
+						BlockPos blockpos = new BlockPos(this.getXWithOffset(i, k), this.getYWithOffset(j), this.getZWithOffset(i, k));
+						if (boundingBox.isVecInside(blockpos)) {
+							this.setBlockState(world, ExtraPlanets_Blocks.TREASURE_CHEST_TIER_5.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
+							TileEntityTreasureChest treasureChest = (TileEntityTreasureChest) world.getTileEntity(blockpos);
+							if (treasureChest != null) {
+								ResourceLocation chesttype = RoomTreasureJupiterBase.TABLE_TIER_1_DUNGEON;
+								if (world.provider instanceof IGalacticraftWorldProvider) {
+									chesttype = ((IGalacticraftWorldProvider) world.provider).getDungeonChestType();
+								}
+								treasureChest.setLootTable(chesttype, random.nextLong());
+							}
+						}
 					} else {
 						this.setBlockState(world, Blocks.air.getDefaultState(), i, j, k, boundingBox);
 					}
