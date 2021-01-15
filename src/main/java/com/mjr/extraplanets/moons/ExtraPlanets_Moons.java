@@ -299,7 +299,7 @@ public class ExtraPlanets_Moons {
 			IAPETUS.setPhaseShift(1.45F);
 			IAPETUS.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(27F, 27F));
 			IAPETUS.setRelativeOrbitTime(68.5411941552618F);
-			IAPETUS.setTierRequired(6);
+			IAPETUS.setTierRequired(5);
 			IAPETUS.setRelativeSize(0.3867F);
 			IAPETUS.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			IAPETUS.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/iapetus.png"));
