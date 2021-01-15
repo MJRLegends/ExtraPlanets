@@ -2,7 +2,6 @@ package com.mjr.extraplanets.entities.mobs;
 
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.init.Items;
@@ -51,7 +50,7 @@ public class EntityEvolvedMagmaCube extends EntitySlime implements IEntityBreath
     protected void setSize(int size, float resetHealth)
     {
         super.setSize(size, resetHealth);
-        this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue((double)(size * 3));
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue((double)(size * 3));
     }
 
     @SideOnly(Side.CLIENT)

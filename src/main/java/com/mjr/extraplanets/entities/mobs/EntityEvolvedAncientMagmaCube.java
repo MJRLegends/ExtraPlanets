@@ -1,17 +1,12 @@
 package com.mjr.extraplanets.entities.mobs;
 
-import javax.annotation.Nullable;
-
 import micdoodle8.mods.galacticraft.api.entity.IEntityBreathable;
 
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -55,7 +50,7 @@ public class EntityEvolvedAncientMagmaCube extends EntitySlime implements IEntit
     protected void setSize(int size, float resetHealth)
     {
         super.setSize(size, resetHealth);
-        this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue((double)(size * 3));
+        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue((double)(size * 3));
     }
 
     @SideOnly(Side.CLIENT)

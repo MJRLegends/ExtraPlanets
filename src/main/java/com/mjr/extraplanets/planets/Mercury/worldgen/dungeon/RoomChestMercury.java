@@ -5,14 +5,16 @@ import java.util.Random;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntityChest;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
+import net.minecraftforge.common.ChestGenHooks;
 
 public class RoomChestMercury extends RoomEmptyMercury
 {
@@ -33,19 +35,27 @@ public class RoomChestMercury extends RoomEmptyMercury
             int chestX = this.sizeX / 2;
             int chestY = 1;
             int chestZ = this.sizeZ / 2;
-            this.setBlockState(worldIn, Blocks.CHEST.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), chestX, chestY, chestZ, boundingBox);
+            this.setBlockState(worldIn, Blocks.chest.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), chestX, chestY, chestZ, boundingBox);
 
             BlockPos blockpos = new BlockPos(this.getXWithOffset(chestX, chestZ), this.getYWithOffset(chestY), this.getZWithOffset(chestX, chestZ));
             TileEntityChest chest = (TileEntityChest) worldIn.getTileEntity(blockpos);
 
             if (chest != null)
             {
-                ResourceLocation chesttype = RoomTreasureMercuryBase.MOONCHEST;
+                for (int i = 0; i < chest.getSizeInventory(); ++i)
+                {
+                    // Clear contents
+                    chest.setInventorySlotContents(i, null);
+                }
+
+                String chesttype = RoomChest.MOONCHEST;
                 if (worldIn.provider instanceof IGalacticraftWorldProvider)
                 {
                     chesttype = ((IGalacticraftWorldProvider)worldIn.provider).getDungeonChestType();
                 }
-                chest.setLootTable(chesttype, rand.nextLong());
+                ChestGenHooks info = ChestGenHooks.getInfo(chesttype);
+
+                WeightedRandomChestContent.generateChestContents(rand, info.getItems(rand), chest, info.getCount(rand));
             }
 
             return true;

@@ -18,7 +18,7 @@ public class RoomEntranceMercury extends SizedPieceMercury
     public RoomEntranceMercury(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ)
     {
         super(configuration, rand.nextInt(4) + 6, 12, rand.nextInt(4) + 6, EnumFacing.Plane.HORIZONTAL.random(rand));
-        this.setCoordBaseMode(EnumFacing.SOUTH);
+        this.coordBaseMode = EnumFacing.SOUTH;
         int sX = this.sizeX / 2;
         int sZ = this.sizeZ / 2;
 
@@ -41,9 +41,9 @@ public class RoomEntranceMercury extends SizedPieceMercury
                     else
                     {
                     	if(randomIn.nextInt(3) == 1)
-                    		this.setBlockState(worldIn, Blocks.WEB.getDefaultState(), i, j, k, boundingBox);
+                    		this.setBlockState(worldIn, Blocks.web.getDefaultState(), i, j, k, boundingBox);
                     	else
-                    		this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
+                    		this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
                     }
                 }
             }

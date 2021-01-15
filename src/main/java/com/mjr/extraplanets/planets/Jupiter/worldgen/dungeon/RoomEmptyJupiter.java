@@ -19,7 +19,7 @@ public class RoomEmptyJupiter extends SizedPieceJupiter {
 
 	public RoomEmptyJupiter(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, int sizeX, int sizeY, int sizeZ, EnumFacing entranceDir, int chanceOfMagmaBlocks) {
 		super(configuration, sizeX, sizeY, sizeZ, entranceDir.getOpposite());
-		this.setCoordBaseMode(EnumFacing.SOUTH);
+        this.coordBaseMode = EnumFacing.SOUTH;
 		this.sizeX = sizeX;
 		this.sizeY = sizeY;
 		this.sizeZ = sizeZ;
@@ -67,10 +67,10 @@ public class RoomEmptyJupiter extends SizedPieceJupiter {
 
 								this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, boundingBox);
 						} else {
-							this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
+							this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
 						}
 					} else {
-						this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, boundingBox);
+						this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, boundingBox);
 					}
 				}
 			}

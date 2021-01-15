@@ -1,29 +1,22 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon;
 
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
-import micdoodle8.mods.galacticraft.core.Constants;
-import micdoodle8.mods.galacticraft.core.GCBlocks;
-import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
-import micdoodle8.mods.galacticraft.core.tile.TileEntityTreasureChest;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-
-import net.minecraft.init.Blocks;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.world.World;
-import net.minecraft.world.gen.structure.StructureBoundingBox;
-import net.minecraft.world.gen.structure.StructureComponent;
-import net.minecraft.world.storage.loot.LootTableList;
-
 import java.util.Random;
 
 import com.mjr.extraplanets.planets.Jupiter.worldgen.RoomBossJupiter;
 
+import micdoodle8.mods.galacticraft.core.GCBlocks;
+import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
+import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.util.BlockPos;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.world.World;
+import net.minecraft.world.gen.structure.StructureBoundingBox;
+import net.minecraft.world.gen.structure.StructureComponent;
+
 public class RoomTreasureJupiterBase extends SizedPieceJupiter
 {
-    public static ResourceLocation MOONCHEST = new ResourceLocation(Constants.ASSET_PREFIX, "dungeon_Jupiter");
-    public static final ResourceLocation TABLE_TIER_1_DUNGEON = LootTableList.register(MOONCHEST);
 
     public RoomTreasureJupiterBase()
     {
@@ -37,7 +30,7 @@ public class RoomTreasureJupiterBase extends SizedPieceJupiter
     public RoomTreasureJupiterBase(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, int sizeX, int sizeY, int sizeZ, EnumFacing entranceDir)
     {
         super(configuration, sizeX, sizeY, sizeZ, entranceDir.getOpposite());
-        this.setCoordBaseMode(EnumFacing.SOUTH);
+        this.coordBaseMode = EnumFacing.SOUTH;
         int yPos = configuration.getYPosition();
 
         this.boundingBox = new StructureBoundingBox(blockPosX, yPos, blockPosZ, blockPosX + this.sizeX, yPos + this.sizeY, blockPosZ + this.sizeZ);
@@ -93,34 +86,20 @@ public class RoomTreasureJupiterBase extends SizedPieceJupiter
                         }
                         else
                         {
-                            this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, chunkBox);
+                            this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, chunkBox);
                         }
                     }
                     else if ((i == 1 && k == 1) || (i == 1 && k == this.sizeZ - 1) || (i == this.sizeX - 1 && k == 1) || (i == this.sizeX - 1 && k == this.sizeZ - 1))
                     {
-                        this.setBlockState(worldIn, Blocks.GLOWSTONE.getDefaultState(), i, j, k, chunkBox);
+                        this.setBlockState(worldIn, Blocks.glowstone.getDefaultState(), i, j, k, chunkBox);
                     }
                     else if (i == this.sizeX / 2 && j == 1 && k == this.sizeZ / 2)
                     {
-                        BlockPos blockpos = new BlockPos(this.getXWithOffset(i, k), this.getYWithOffset(j), this.getZWithOffset(i, k));
-                        if (chunkBox.isVecInside(blockpos))
-                        {
-                            worldIn.setBlockState(blockpos, GCBlocks.treasureChestTier1.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), 2);
-                            TileEntityTreasureChest treasureChest = (TileEntityTreasureChest) worldIn.getTileEntity(blockpos);
-                            if (treasureChest != null)
-                            {
-                                ResourceLocation chesttype = TABLE_TIER_1_DUNGEON;
-                                if (worldIn.provider instanceof IGalacticraftWorldProvider)
-                                {
-                                    chesttype = ((IGalacticraftWorldProvider)worldIn.provider).getDungeonChestType();
-                                }
-                                treasureChest.setLootTable(chesttype, random.nextLong());
-                            }
-                        }
+                        this.setBlockState(worldIn, GCBlocks.treasureChestTier1.getDefaultState().withProperty(BlockTier1TreasureChest.FACING, this.getDirection().getOpposite()), i, j, k, boundingBox);
                     }
                     else
                     {
-                        this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, chunkBox);
+                        this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, chunkBox);
                     }
                 }
             }

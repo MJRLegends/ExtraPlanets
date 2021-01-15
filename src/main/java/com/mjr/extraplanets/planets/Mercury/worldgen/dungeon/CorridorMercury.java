@@ -23,7 +23,7 @@ public class CorridorMercury extends SizedPieceMercury
     public CorridorMercury(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ, int sizeX, int sizeY, int sizeZ, EnumFacing direction)
     {
         super(configuration, sizeX, sizeY, sizeZ, direction);
-        this.setCoordBaseMode(EnumFacing.SOUTH);
+        this.coordBaseMode = EnumFacing.SOUTH;
         this.boundingBox = new StructureBoundingBox(blockPosX, configuration.getYPosition(), blockPosZ, blockPosX + sizeX, configuration.getYPosition() + sizeY, blockPosZ + sizeZ);
     }
 
@@ -40,9 +40,9 @@ public class CorridorMercury extends SizedPieceMercury
                             j == 0 || j == this.boundingBox.getYSize() - 1 ||
                             (this.getDirection().getAxis() == EnumFacing.Axis.X && (k == 0 || k == this.boundingBox.getZSize() - 1)))
                     {
-                    	if(randomIn.nextInt(20) == 1)
-                            this.setBlockState(worldIn, Blocks.MAGMA.getDefaultState(), i, j, k, this.boundingBox);
-                    	else
+                    	/*if(randomIn.nextInt(20) == 1)
+                        this.setBlockState(worldIn, Blocks.MAGMA.getDefaultState(), i, j, k, this.boundingBox); // TODO Find a magma type block for MC 1.8.9? add one?
+                	else*/
                     		this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, this.boundingBox);
                     }
                     else
@@ -65,9 +65,9 @@ public class CorridorMercury extends SizedPieceMercury
                         	this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, this.boundingBox);
                         else {
                         	if(randomIn.nextInt(10) == 1)
-                        		this.setBlockState(worldIn, Blocks.WEB.getDefaultState(), i, j, k, this.boundingBox);
+                        		this.setBlockState(worldIn, Blocks.web.getDefaultState(), i, j, k, this.boundingBox);
                         	else
-                        		this.setBlockState(worldIn, Blocks.AIR.getDefaultState(), i, j, k, this.boundingBox);
+                        		this.setBlockState(worldIn, Blocks.air.getDefaultState(), i, j, k, this.boundingBox);
                         }
                     }
                 }
