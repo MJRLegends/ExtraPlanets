@@ -189,7 +189,7 @@ public class MainHandlerClient {
 				if (Config.RADIATION)
 					showRadiation = true;
 			}
-			if (player.world.provider instanceof WorldProviderMoon) {
+			else if (player.world.provider instanceof WorldProviderMoon) {
 				if (Config.GC_PRESSURE && Config.PRESSURE) {
 					pressureLevel = 80;
 					showPressure = true;
@@ -224,6 +224,8 @@ public class MainHandlerClient {
 				}
 				if (Config.GC_RADIATION && Config.RADIATION)
 					showRadiation = true;
+			} else if(Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.containsKey(((IGalacticraftWorldProvider)player.world.provider).getCelestialBody().getUnlocalizedName())) {
+				showRadiation = true;
 			}
 			if ((pressureLevel != 0 || Config.HIDE_RADIATION_PRESSURE_HUD == false) && showPressure)
 				showPressureHUD(pressureLevel);
