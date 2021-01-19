@@ -894,7 +894,7 @@ public class Config {
 
 		SPACE_STATION_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Space Stations (in %)", 4, "[0 = Disabled. range: 0 ~ 100, default: 4]").getInt();
 		
-		OTHER_ADDON_PLANET_MOON_RAD_VALUES = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Other Addon Planets/Moons Radiation Values", OTHER_ADDON_PLANET_MOON_RAD_VALUES, "Format: 'bodyName:radiationValue' (radiationValue = 0 = Disabled. range: 0 ~ 100, default: 10) | example: planet.atheon:12")
+		OTHER_ADDON_PLANET_MOON_RAD_VALUES = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Other Addon Planets/Moons Radiation Values", OTHER_ADDON_PLANET_MOON_RAD_VALUES, "Format: 'bodyName:radiationValue' (radiationValue = 0 = Disabled. range: 0 ~ 100, default: 5) | example: planet.atheon:12")
 				.getStringList();
 
 		MERCURY_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Mercury (in %)", 25, "[0 = Disabled. range: 0 ~ 100, default: 25]").getInt();
