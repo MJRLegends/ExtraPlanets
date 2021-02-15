@@ -143,7 +143,7 @@ public class ModuleHelper {
 			return;
 		removeModule(item, module);
 		for (int i = 0; i < module.getRequirements().size(); i++) {
-			player.inventory.setInventorySlotContents(player.inventory.getFirstEmptyStack(), module.getRequirements().get(i));
+			player.inventory.setInventorySlotContents(player.inventory.getFirstEmptyStack(), module.getRequirements().get(i).copy());
 		}
 	}
 
