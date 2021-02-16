@@ -25,9 +25,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagDouble;
@@ -42,7 +40,6 @@ import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.energy.EnergyStorage;
 import net.minecraftforge.fml.common.Optional;
-
 @Optional.Interface(modid = "redstoneflux", iface = "cofh.redstoneflux.api.IEnergyContainerItem")
 @Optional.Interface(modid = "mekanism", iface = "mekanism.api.energy.IEnergizedItem")
 @Optional.Interface(modid = "ic2", iface = "ic2.api.item.IElectricItem")
@@ -58,7 +55,6 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		this.setMaxStackSize(1);
 		this.setMaxDamage(DAMAGE_RANGE);
 		this.setNoRepair();
-
 		if (EnergyConfigHandler.isIndustrialCraft2Loaded()) {
 			itemManagerIC2 = new ElectricItemManagerIC2();
 		}
@@ -133,6 +129,8 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		float energyToTransfer = Math.min(Math.min(thisEnergy, energy), this.transferMax);
 
 		if (doTransfer) {
+			if(!itemStack.getTagCompound().hasKey("Unbreakable"))
+				itemStack.getTagCompound().setBoolean("Unbreakable", true);
 			this.setElectricity(itemStack, thisEnergy - energyToTransfer);
 		}
 
@@ -164,7 +162,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	public float getTransfer(ItemStack itemStack) {
 		return Math.min(this.transferMax, this.getMaxElectricityStored(itemStack) - this.getElectricityStored(itemStack));
 	}
-
+	
 	/**
 	 * Gets the energy stored in the item. Energy is stored using item NBT
 	 */
@@ -189,7 +187,6 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 			energyStored = this.getMaxElectricityStored(itemStack) * (DAMAGE_RANGE - itemStack.getItemDamage()) / DAMAGE_RANGE;
 			itemStack.getTagCompound().setFloat("electricity", energyStored);
 		}
-
 		/** Sets the damage as a percentage to render the bar properly. */
 		itemStack.setItemDamage(DAMAGE_RANGE - (int) (energyStored / this.getMaxElectricityStored(itemStack) * DAMAGE_RANGE));
 		return energyStored;
