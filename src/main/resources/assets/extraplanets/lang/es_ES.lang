@@ -604,6 +604,7 @@ gui.module.installed.name=¡Modulo Instalado!
 gui.module.missing_requirements.name=Perdon, ¡Pero no tienes lo necesario para instalar este Modulo!
 gui.module.already_installed.name=¡Ya tienes este Modulo instalado!
 gui.module.missing_armour.name=¡No se pudo instalar ya que faltan partes del Traje Espacial!
+gui.module.inventory_full.name=Unable to uninstall this module due to your inventory! ##NEEDS TRANSLATE##
 gui.module.description.name=Descripción del Modulo
 gui.module.name.name=Nombre del Modulo
 gui.module.type.name=Tipo de Modulo
