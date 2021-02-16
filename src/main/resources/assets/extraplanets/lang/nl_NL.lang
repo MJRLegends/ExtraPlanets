@@ -604,6 +604,7 @@ gui.module.installed.name=Module Installed! ##NEEDS TRANSLATE##
 gui.module.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
 gui.module.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
 gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
+gui.module.inventory_full.name=Unable to uninstall this module due to your inventory! ##NEEDS TRANSLATE##
 gui.module.description.name=Module Description ##NEEDS TRANSLATE##
 gui.module.name.name=Module Name ##NEEDS TRANSLATE##
 gui.module.type.name=Module Type ##NEEDS TRANSLATE##

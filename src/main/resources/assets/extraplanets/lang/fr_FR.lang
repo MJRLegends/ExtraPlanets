@@ -605,6 +605,7 @@ gui.module.installed.name=Module installée !
 gui.module.missing_requirements.name=Désolé, vous ne remplissez pas les conditions pour installer ce module !
 gui.module.already_installed.name=Vous avez déjà installé ce module !
 gui.module.missing_armour.name=Impossible d'installer en raison d'une partie manquante de la combinaison spatiale !
+gui.module.inventory_full.name=Unable to uninstall this module due to your inventory! ##NEEDS TRANSLATE##
 gui.module.description.name=Description du module
 gui.module.name.name=Nom du module
 gui.module.type.name=Type du module
