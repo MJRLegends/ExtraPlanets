@@ -604,6 +604,7 @@ gui.module.installed.name=Modul installiert!
 gui.module.missing_requirements.name=Entschuldigung, Sie erfüllen nicht die Voraussetzungen, um dieses Modul zu installieren! 
 gui.module.already_installed.name=Sie haben dieses Modul bereits installiert! 
 gui.module.missing_armour.name=Installation nicht möglich, da ein Teil der Raumanzug-Rüstung fehlt! 
+gui.module.inventory_full.name=Unable to uninstall this module due to your inventory! ##NEEDS TRANSLATE##
 gui.module.description.name=Modulbeschreibung 
 gui.module.name.name=Modulname 
 gui.module.type.name=Modultyp 

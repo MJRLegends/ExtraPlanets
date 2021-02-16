@@ -5,6 +5,8 @@ import java.util.List;
 
 import com.mjr.extraplanets.api.item.IModularArmor;
 import com.mjr.extraplanets.items.armor.bases.ElectricArmorBase;
+import com.mjr.mjrlegendslib.util.PlayerUtilties;
+import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
@@ -141,9 +143,19 @@ public class ModuleHelper {
 	public static void uninstallModule(ItemStack item, Module module, EntityPlayer player) {
 		if (item == null || !(item.getItem() instanceof IModularArmor))
 			return;
+		int slot = player.inventory.getFirstEmptyStack();
+		if(slot == -1) {
+			PlayerUtilties.sendMessage(player, TranslateUtilities.translate("gui.module.inventory_full.name"));
+			return;
+		}
 		removeModule(item, module);
 		for (int i = 0; i < module.getRequirements().size(); i++) {
-			player.inventory.setInventorySlotContents(player.inventory.getFirstEmptyStack(), module.getRequirements().get(i).copy());
+			ItemStack itemStack = module.getRequirements().get(i).copy();
+			if(slot == -1) {
+				player.entityDropItem(itemStack, 0f);
+				return;
+			}
+			player.inventory.setInventorySlotContents(slot, itemStack);
 		}
 	}
 
