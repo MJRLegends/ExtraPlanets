@@ -604,6 +604,7 @@ gui.module.installed.name=モジュールを取り付けた!
 gui.module.missing_requirements.name=このモジュールを取り付けるための要件を満たしていません!
 gui.module.already_installed.name=既にこのモジュールは取り付け済みです!
 gui.module.missing_armour.name=スペーススーツの一部が欠落しているため取り付けできません!
+gui.module.inventory_full.name=Unable to uninstall this module due to your inventory! ##NEEDS TRANSLATE##
 gui.module.description.name=モジュール説明
 gui.module.name.name=モジュール名
 gui.module.type.name=モジュールタイプ

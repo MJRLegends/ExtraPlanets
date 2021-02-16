@@ -604,6 +604,7 @@ gui.module.installed.name=已安装模块！
 gui.module.missing_requirements.name=对不起，你不符合安装此模块的要求！
 gui.module.already_installed.name=你已经安装了此模块！
 gui.module.missing_armour.name=由于太空服装甲部件缺失，无法安装！
+gui.module.inventory_full.name=Unable to uninstall this module due to your inventory! ##NEEDS TRANSLATE##
 gui.module.description.name=模块描述
 gui.module.name.name=模块名称
 gui.module.type.name=模块类型

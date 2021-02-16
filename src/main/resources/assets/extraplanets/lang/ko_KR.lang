@@ -604,6 +604,7 @@ gui.module.installed.name=모듈이 설치되었습니다!
 gui.module.missing_requirements.name=모듈 설치에 불필요한 아이템이 있습니다!
 gui.module.already_installed.name=모듈이 이미 설치되었습니다!
 gui.module.missing_armour.name=우주복의 일부가 없어서 설치할 수 없습니다!
+gui.module.inventory_full.name=Unable to uninstall this module due to your inventory! ##NEEDS TRANSLATE##
 gui.module.description.name=모듈 형태
 gui.module.name.name=모듈명
 gui.module.type.name=모듈 유형
