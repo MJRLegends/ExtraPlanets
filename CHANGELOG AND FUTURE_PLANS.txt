@@ -5,6 +5,13 @@
 
 
 ===========================================Released Updates===========================================
+v2.1.4
+*Updated ru_RU.lang (Thanks to Smollet777)
+*Updated lang files to match MC 1.8+
+*Added missing Eris 2.0 language localization
+*Refactoring on imports (Changed my eclipse cleanup template)
+*Fixed issue #621 - Iapetus has tier 6, but Saturn and its other moons have 5
+
 v2.1.3
 *Added new More Planets/Galaxy Space/Extended Planets compact options (That will allow for all items and blocks and all planets/moons/space stations to be added from all mods)
 *Fully Removed Old More Planets fix Progressions config option in favour of these new options as the More Planets fix Progressions config option was broken anyways
