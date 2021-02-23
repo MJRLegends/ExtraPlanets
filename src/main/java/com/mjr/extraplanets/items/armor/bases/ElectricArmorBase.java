@@ -43,7 +43,6 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		this.setMaxStackSize(1);
 		this.setMaxDamage(DAMAGE_RANGE);
 		this.setNoRepair();
-
 		if (EnergyConfigHandler.isIndustrialCraft2Loaded()) {
 			itemManagerIC2 = new ElectricItemManagerIC2();
 		}
@@ -118,6 +117,8 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 		float energyToTransfer = Math.min(Math.min(thisEnergy, energy), this.transferMax);
 
 		if (doTransfer) {
+			if(!itemStack.getTagCompound().hasKey("Unbreakable"))
+				itemStack.getTagCompound().setBoolean("Unbreakable", true);
 			this.setElectricity(itemStack, thisEnergy - energyToTransfer);
 		}
 
@@ -149,7 +150,7 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 	public float getTransfer(ItemStack itemStack) {
 		return Math.min(this.transferMax, this.getMaxElectricityStored(itemStack) - this.getElectricityStored(itemStack));
 	}
-
+	
 	/**
 	 * Gets the energy stored in the item. Energy is stored using item NBT
 	 */
@@ -174,7 +175,6 @@ public abstract class ElectricArmorBase extends ItemArmor implements IItemElectr
 			energyStored = this.getMaxElectricityStored(itemStack) * (DAMAGE_RANGE - itemStack.getItemDamage()) / DAMAGE_RANGE;
 			itemStack.getTagCompound().setFloat("electricity", energyStored);
 		}
-
 		/** Sets the damage as a percentage to render the bar properly. */
 		itemStack.setItemDamage(DAMAGE_RANGE - (int) (energyStored / this.getMaxElectricityStored(itemStack) * DAMAGE_RANGE));
 		return energyStored;
