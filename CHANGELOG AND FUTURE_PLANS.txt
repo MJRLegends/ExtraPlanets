@@ -5,6 +5,9 @@
 
 
 ===========================================Released Updates===========================================
+v1.4.1
+*Fixed another null pointer temp space suit
+
 v1.4.0
 *Fixed null pointer with Temp Space Suit 
 *Updated comments on some config sections to outline the importance of there usage
