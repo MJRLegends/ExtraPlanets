@@ -259,25 +259,25 @@ public class MainHandlerServer {
 		ItemStack leggins = player.inventory.armorInventory[1];
 		ItemStack boots = player.inventory.armorInventory[0];
 
-		if (helmet.getItem() instanceof Tier0SpaceSuitArmor) {
+		if (helmet != null && helmet.getItem() instanceof Tier0SpaceSuitArmor) {
 			Tier0SpaceSuitArmor.setTicksLeft(helmet, Tier0SpaceSuitArmor.getTicksLeft(helmet) - 1);
 			if (Tier0SpaceSuitArmor.getTicksLeft(helmet) <= 0) {
 				player.inventory.armorInventory[3] = null;
 			}
 		}
-		if (chest.getItem() instanceof Tier0SpaceSuitArmor) {
+		if (chest != null && chest.getItem() instanceof Tier0SpaceSuitArmor) {
 			Tier0SpaceSuitArmor.setTicksLeft(chest, Tier0SpaceSuitArmor.getTicksLeft(chest) - 1);
 			if (Tier0SpaceSuitArmor.getTicksLeft(chest) <= 0) {
 				player.inventory.armorInventory[2] = null;
 			}
 		}
-		if (leggins.getItem() instanceof Tier0SpaceSuitArmor) {
+		if (leggins != null && leggins.getItem() instanceof Tier0SpaceSuitArmor) {
 			Tier0SpaceSuitArmor.setTicksLeft(leggins, Tier0SpaceSuitArmor.getTicksLeft(leggins) - 1);
 			if (Tier0SpaceSuitArmor.getTicksLeft(leggins) <= 0) {
 				player.inventory.armorInventory[31] = null;
 			}
 		}
-		if (boots.getItem() instanceof Tier0SpaceSuitArmor) {
+		if (boots != null && boots.getItem() instanceof Tier0SpaceSuitArmor) {
 			Tier0SpaceSuitArmor.setTicksLeft(boots, Tier0SpaceSuitArmor.getTicksLeft(boots) - 1);
 			if (Tier0SpaceSuitArmor.getTicksLeft(boots) <= 0) {
 				player.inventory.armorInventory[0] = null;
