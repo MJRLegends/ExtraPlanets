@@ -206,7 +206,7 @@ public class ExtraPlanets_Moons {
 			oberon.setPhaseShift(1.45F);
 			oberon.setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(18F, 18F));
 			oberon.setRelativeOrbitTime(68.5411941552618F);
-			oberon.setTierRequired(6);
+			oberon.setTierRequired(5);
 			oberon.setRelativeSize(0.3867F);
 			oberon.atmosphereComponent(IAtmosphericGas.HYDROGEN).atmosphereComponent(IAtmosphericGas.HELIUM).atmosphereComponent(IAtmosphericGas.METHANE);
 			oberon.setBodyIcon(new ResourceLocation(Constants.ASSET_PREFIX, "textures/gui/celestialbodies/oberon.png"));
