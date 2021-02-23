@@ -390,8 +390,8 @@ public class MainHandlerServer {
 					checkPressure(event, player, 100, list);
 				if (Config.GC_RADIATION && Config.RADIATION)
 					checkRadiation(event, player, Config.SPACE_STATION_RADIATION_AMOUNT, list);
-			} else if(Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.containsKey(((IGalacticraftWorldProvider)player.world.provider).getCelestialBody().getUnlocalizedName())) {
-				checkRadiation(event, player, Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.get(((IGalacticraftWorldProvider)player.world.provider).getCelestialBody().getUnlocalizedName()), list);
+			} else if(Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.containsKey(((IGalacticraftWorldProvider)player.worldObj.provider).getCelestialBody().getUnlocalizedName())) {
+				checkRadiation(event, player, Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.get(((IGalacticraftWorldProvider)player.worldObj.provider).getCelestialBody().getUnlocalizedName()), list);
 			}
 
 		}
