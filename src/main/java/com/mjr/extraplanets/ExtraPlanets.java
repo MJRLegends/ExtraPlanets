@@ -61,6 +61,9 @@ import com.mjr.mjrlegendslib.util.NetworkUtilities;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
 
 import micdoodle8.mods.galacticraft.api.GalacticraftRegistry;
+import micdoodle8.mods.galacticraft.api.galaxies.GalaxyRegistry;
+import micdoodle8.mods.galacticraft.api.galaxies.Moon;
+import micdoodle8.mods.galacticraft.api.galaxies.Planet;
 import micdoodle8.mods.galacticraft.api.recipe.SchematicRegistry;
 import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.GalacticraftCore;
@@ -295,6 +298,31 @@ public class ExtraPlanets {
 			GalacticraftCore.moonMoon.addChecklistKeys("space_suit");
 			VenusModule.planetVenus.addChecklistKeys("space_suit");
 			AsteroidsModule.planetAsteroids.addChecklistKeys("space_suit");
+		}
+
+		if (Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES != null) {
+			List<String> entries = new ArrayList<>();
+			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
+				if(planet.getUnlocalizedName().contains("overworld") || planet.atmosphere.isBreathable())
+					continue;
+				if (planet.getWorldProvider() != null && !planet.getWorldProvider().getName().contains("com.mjr.extraplanets") && !planet.getWorldProvider().getName().contains("micdoodle8.mods.galacticraft")) {
+					entries.add(planet.getUnlocalizedName() + ":10");
+				}
+			}
+
+			for (Moon planet : GalaxyRegistry.getRegisteredMoons().values()) {
+				if(planet.atmosphere.isBreathable())
+					continue;
+				if (planet.getWorldProvider() != null && !planet.getWorldProvider().getName().contains("com.mjr.extraplanets") && !planet.getWorldProvider().getName().contains("micdoodle8.mods.galacticraft")) {
+					entries.add(planet.getUnlocalizedName() + ":10");
+				}
+			}
+
+			Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES = entries.stream().toArray(String[]::new);
+			Config.config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Other Addon Planets/Moons Radiation Values", new String[] {},
+					"Format: 'bodyName:radiationValue' (radiationValue = 0 = Disabled. range: 0 ~ 100, default: 10) | example: planet.atheon:12").set(Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES);
+			Config.config.save();
+			Config.updateOtherModRadiationValues();
 		}
 
 		// Proxy PostInit Method

@@ -2,6 +2,7 @@ package com.mjr.extraplanets;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import net.minecraftforge.common.config.ConfigCategory;
@@ -347,7 +348,9 @@ public class Config {
 	public static int RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT;
 	public static int RADIATION_ANTI_RAD_REDUCE_AMOUNT;
 	public static String[] SPACE_SUIT_SUPPORTED_ARMOUR;
-
+	public static String[] OTHER_ADDON_PLANET_MOON_RAD_VALUES = new String[0];
+	public static HashMap<String, Integer> OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST = new HashMap<>();
+	
 	public static int SPACE_STATION_RADIATION_AMOUNT;
 
 	public static int MERCURY_RADIATION_AMOUNT;
@@ -881,6 +884,9 @@ public class Config {
 				.getStringList();
 
 		SPACE_STATION_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Space Stations (in %)", 4, "[0 = Disabled. range: 0 ~ 100, default: 4]").getInt();
+		
+		OTHER_ADDON_PLANET_MOON_RAD_VALUES = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Other Addon Planets/Moons Radiation Values", OTHER_ADDON_PLANET_MOON_RAD_VALUES, "Format: 'bodyName:radiationValue' (radiationValue = 0 = Disabled. range: 0 ~ 100, default: 10) | example: planet.atheon:12")
+				.getStringList();
 
 		MERCURY_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Mercury (in %)", 25, "[0 = Disabled. range: 0 ~ 100, default: 25]").getInt();
 		VENUS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Venus (in %)", 5, "[0 = Disabled. range: 0 ~ 100, default: 5]").getInt();
@@ -940,6 +946,7 @@ public class Config {
 		if (USE_CUSTOM_CELESTIAL_SELECTION == false)
 			CUSTOM_GALAXIES = false;
 		config.save();
+		updateOtherModRadiationValues();
 	}
 
 	public static List<IConfigElement> getConfigElements() {
@@ -1001,5 +1008,14 @@ public class Config {
 		configCelestialMapSettings.setComment("Celestial Map Settings");
 		list.add(new ConfigElement(configCelestialMapSettings));
 		return list;
+	}
+	
+	public static void updateOtherModRadiationValues() {
+		OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.clear();
+		for(String line : OTHER_ADDON_PLANET_MOON_RAD_VALUES) {
+			String[] parts = line.split(":");
+			if(Integer.parseInt(parts[1]) != 0)
+				OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.put(parts[0], Integer.parseInt(parts[1]));
+		}
 	}
 }
