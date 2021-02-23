@@ -286,7 +286,7 @@ public class MainHandlerServer {
 
 		if ((player.ticksExisted - 1) % 90 == 0) {
 			for (ItemStack item : player.inventory.mainInventory) {
-				if (item.getItem() instanceof Tier0SpaceSuitArmor) {
+				if (item != null && item.getItem() instanceof Tier0SpaceSuitArmor) {
 					item = null;
 				}
 			}
