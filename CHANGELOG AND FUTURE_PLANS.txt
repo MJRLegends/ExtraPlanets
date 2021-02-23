@@ -5,6 +5,18 @@
 
 
 ===========================================Released Updates===========================================
+v0.7.2
+*Fixed a crash with the BasicDensifier when restarting world during a machine operating
+*Updated comments on some config sections to outline the importance of there usage
+*Added IC2 nano armour and Galaxy Space Space suit to be default entered for "List of armour items to be considered as a space suit" in config (Will only work for new generated configs)
+*Added IC2 quantum armour to be default entered for "List of armour items to be considered as a space suit" in config (Will only work for new generated configs) & tweaked nano armour values
+*Added support to use ExtraPlanets Radiation System on other addon planets/moons
+*Fixed issue #302 - Unable to Install Module, After Uninstalling with requirement items already in inventory
+*Fixed inventory being full when uninstalling a module causing a crash
+*Fixed issue #597 - Space Suit Breaking at 0 Power
+*Fixed issue #621 - Iapetus has tier 6, but Saturn and its other moons have 5
+*Updated ru_RU.lang(Thanks to Romz24)
+
 v0.7.1
 *Added a Environment Emergency Kit with a temporary Space Suit
 *Fixed Geiger Counter output being old style of radiation display output
