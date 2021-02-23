@@ -160,6 +160,8 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 	}
 
 	public void updateOutput() {
+		if (this.inputTank.getFluid() == null)
+			return;
 		if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CARAMEL_FLUID, 0)))
 			this.producingStack = new ItemStack(ExtraPlanets_Items.CARAMEL_BAR, 6);
 		else if (this.inputTank.getFluid().equals(new FluidStack(ExtraPlanets_Fluids.LIQUID_CHOCOLATE_FLUID, 0)))
@@ -269,6 +271,10 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		super.readFromNBT(nbt);
 		this.processTicks = nbt.getInteger("smeltingTicks");
 		this.stacks = this.readStandardItemsFromNBT(nbt);
+		if(this.producingStack == null && nbt.hasKey("producingStack")) {
+	        final ItemStack itemStack = new ItemStack((NBTTagCompound) nbt.getTag("producingStack"));
+	        this.producingStack = itemStack;
+		}
 
 		if (nbt.hasKey("inputTank")) {
 			this.inputTank.readFromNBT(nbt.getCompoundTag("inputTank"));
@@ -280,10 +286,12 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		super.writeToNBT(nbt);
 		nbt.setInteger("smeltingTicks", this.processTicks);
 		this.writeStandardItemsToNBT(nbt, this.stacks);
+		nbt.setTag("producingStack", this.producingStack.serializeNBT());
 
 		if (this.inputTank.getFluid() != null) {
 			nbt.setTag("inputTank", this.inputTank.writeToNBT(new NBTTagCompound()));
 		}
+		producingStack.serializeNBT();
 		return nbt;
 	}
 
