@@ -132,14 +132,8 @@ public class WorldProviderJupiterOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.Jupiter";
+		return "planet.jupiter";
 	}
-	
-	@Override
-	public int getPlanetIdToOrbit() {
-		return Config.JUPITER_ID;
-	}
-
 
 	@Override
 	public int getYCoordToTeleportToPlanet() {

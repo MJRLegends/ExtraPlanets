@@ -132,14 +132,8 @@ public class WorldProviderErisOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.Eris";
+		return "planet.eris";
 	}
-	
-	@Override
-	public int getPlanetIdToOrbit() {
-		return Config.ERIS_ID;
-	}
-
 
 	@Override
 	public int getYCoordToTeleportToPlanet() {

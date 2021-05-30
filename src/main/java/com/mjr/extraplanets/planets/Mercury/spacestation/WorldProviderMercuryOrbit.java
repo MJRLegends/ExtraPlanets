@@ -132,12 +132,7 @@ public class WorldProviderMercuryOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.Mercury";
-	}
-	
-	@Override
-	public int getPlanetIdToOrbit() {
-		return Config.MERCURY_ID;
+		return "planet.mercury";
 	}
 
 	@Override

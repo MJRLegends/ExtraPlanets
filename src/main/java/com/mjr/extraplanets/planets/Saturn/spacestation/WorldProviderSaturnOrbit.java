@@ -132,14 +132,8 @@ public class WorldProviderSaturnOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.Saturn";
+		return "planet.saturn";
 	}
-	
-	@Override
-	public int getPlanetIdToOrbit() {
-		return Config.SATURN_ID;
-	}
-
 
 	@Override
 	public int getYCoordToTeleportToPlanet() {

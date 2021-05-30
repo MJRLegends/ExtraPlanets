@@ -132,14 +132,8 @@ public class WorldProviderNeptuneOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.Neptune";
+		return "planet.neptune";
 	}
-
-	@Override
-	public int getPlanetIdToOrbit() {
-		return Config.NEPTUNE_ID;
-	}
-
 
 	@Override
 	public int getYCoordToTeleportToPlanet() {
