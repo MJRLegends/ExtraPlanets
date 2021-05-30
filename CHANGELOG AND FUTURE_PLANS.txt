@@ -1,4 +1,12 @@
 ﻿========================================Not Released Updates==========================================
+v0.7.3
+*Added Polish Language file (Thanks toKruczyslaw)
+*Fixed issue #647 - Densifier not outputting to hopper
+*Fixed issue #658 - Densifier NBT Saving Crashing Server
+*Updated Pluto Celestial Map texture to match latest NASA images (Suggestion #598 )
+*Fixed Ceres, Jupiter, Neptune, Saturn, Uranus having incorrect liquid at the bottom of Ravines sometimes (Issue #640  - Lava spawning underground on Uranus)
+*Fixed issue #637 - Space stations always dump the player in the overworld
+*Fixed MatterOverdrive android exclusion from pressure & radiation checks not working if not wearing any suit of armour (Issue #522 - MatterOverdrive android support not working after adding)
 
 ======================================================================================================
 
