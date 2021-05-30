@@ -25,7 +25,7 @@ public class ChunkProviderNeptune extends ChunkProviderMultiBiomeSpace {
 
 	private final BiomeDecoratorNeptune neptuneBiomeDecorator = new BiomeDecoratorNeptune();
 	// private final BiomeDecoratorNeptuneOther neptuneBiomeDecorator2 = new BiomeDecoratorNeptuneOther();
-	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
+	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen(ExtraPlanets_Fluids.RADIO_ACTIVE_WATER);
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.NEPTUNE_BLOCKS, 0, 1, 2);
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonNeptune(
