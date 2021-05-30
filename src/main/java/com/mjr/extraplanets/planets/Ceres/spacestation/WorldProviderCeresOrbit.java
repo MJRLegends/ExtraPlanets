@@ -132,14 +132,8 @@ public class WorldProviderCeresOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.Ceres";
+		return "planet.ceres";
 	}
-	
-	@Override
-	public int getPlanetIdToOrbit() {
-		return Config.CERES_ID;
-	}
-
 
 	@Override
 	public int getYCoordToTeleportToPlanet() {

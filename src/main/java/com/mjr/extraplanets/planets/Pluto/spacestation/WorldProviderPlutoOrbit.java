@@ -132,14 +132,8 @@ public class WorldProviderPlutoOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.Pluto";
+		return "planet.pluto";
 	}
-	
-	@Override
-	public int getPlanetIdToOrbit() {
-		return Config.PLUTO_ID;
-	}
-
 
 	@Override
 	public int getYCoordToTeleportToPlanet() {
