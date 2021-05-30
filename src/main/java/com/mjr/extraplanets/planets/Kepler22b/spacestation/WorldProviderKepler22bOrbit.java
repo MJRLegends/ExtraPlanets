@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.planets.Kepler22b.spacestation;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.prefabs.client.SkyProviderCustomOrbit;
@@ -133,6 +134,12 @@ public class WorldProviderKepler22bOrbit extends WorldProviderOverworldOrbit {
 	public String getPlanetToOrbit() {
 		return "planet.Kepler22b";
 	}
+	
+	@Override
+	public int getPlanetIdToOrbit() {
+		return Config.KEPLER22B_ID;
+	}
+
 
 	@Override
 	public int getYCoordToTeleportToPlanet() {

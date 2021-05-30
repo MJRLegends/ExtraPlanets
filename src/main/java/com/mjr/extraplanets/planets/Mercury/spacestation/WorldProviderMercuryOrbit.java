@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.planets.Mercury.spacestation;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.prefabs.client.SkyProviderCustomOrbit;
@@ -132,6 +133,11 @@ public class WorldProviderMercuryOrbit extends WorldProviderOverworldOrbit {
 	@Override
 	public String getPlanetToOrbit() {
 		return "planet.Mercury";
+	}
+	
+	@Override
+	public int getPlanetIdToOrbit() {
+		return Config.MERCURY_ID;
 	}
 
 	@Override
