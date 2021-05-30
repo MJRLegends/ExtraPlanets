@@ -254,7 +254,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 		this.processTicks = nbt.getInteger("smeltingTicks");
 		this.containingItems = this.readStandardItemsFromNBT(nbt);
 		if(this.producingStack == null && nbt.hasKey("producingStack")) {
-	        final ItemStack itemStack = new ItemStack((NBTTagCompound) nbt.getTag("producingStack"));
+	        final ItemStack itemStack = ItemStack.loadItemStackFromNBT((NBTTagCompound) nbt.getTag("producingStack"));
 	        this.producingStack = itemStack;
 		}
 
