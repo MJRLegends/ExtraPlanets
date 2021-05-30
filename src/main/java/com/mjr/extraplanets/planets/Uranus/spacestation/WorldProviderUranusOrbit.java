@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.planets.Uranus.spacestation;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.prefabs.client.SkyProviderCustomOrbit;
@@ -133,6 +134,12 @@ public class WorldProviderUranusOrbit extends WorldProviderOverworldOrbit {
 	public String getPlanetToOrbit() {
 		return "planet.Uranus";
 	}
+	
+	@Override
+	public int getPlanetIdToOrbit() {
+		return Config.URANUS_ID;
+	}
+
 
 	@Override
 	public int getYCoordToTeleportToPlanet() {

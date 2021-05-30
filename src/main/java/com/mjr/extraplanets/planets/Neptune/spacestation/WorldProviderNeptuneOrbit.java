@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.planets.Neptune.spacestation;
 
+import com.mjr.extraplanets.Config;
 import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.ExtraPlanetsDimensions;
 import com.mjr.extraplanets.api.prefabs.client.SkyProviderCustomOrbit;
@@ -133,6 +134,12 @@ public class WorldProviderNeptuneOrbit extends WorldProviderOverworldOrbit {
 	public String getPlanetToOrbit() {
 		return "planet.Neptune";
 	}
+
+	@Override
+	public int getPlanetIdToOrbit() {
+		return Config.NEPTUNE_ID;
+	}
+
 
 	@Override
 	public int getYCoordToTeleportToPlanet() {
