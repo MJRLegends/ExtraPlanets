@@ -398,6 +398,9 @@ public class MainHandlerServer {
 	}
 
 	public boolean isValidSpaceSuit(EntityPlayer player, ItemStack helmet, ItemStack chest, ItemStack leggins, ItemStack boots, List<String> list, boolean pressure) {
+		// MatterOverdrive Mod Compact
+		if (CompatibilityManager.isAndroid(player))
+			return true;
 		// Check for slot filled
 		if (helmet == ItemStack.EMPTY)
 			return false;
@@ -436,10 +439,6 @@ public class MainHandlerServer {
 		if (validHelmet && validChest && validLeggings && validBoots)
 			return true;
 		else {
-			// Mod Compact
-			if (CompatibilityManager.isAndroid(player))
-				return true;
-			
 			// Config List of armour items to be considered as a space suit compact
 			for (String temp : list) {
 				temp = temp.substring(0, temp.lastIndexOf(':'));
