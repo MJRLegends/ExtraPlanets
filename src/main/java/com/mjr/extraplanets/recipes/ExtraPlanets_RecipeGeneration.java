@@ -864,18 +864,10 @@ public class ExtraPlanets_RecipeGeneration {
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "kepler22b", new ItemStack(ExtraPlanets_Blocks.ADVANCED_LAUCHPAD, 5, 3),
 				new Object[] { "   ", "BBB", "III", 'I', new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 5), 'B', new ItemStack(ExtraPlanets_Items.TIER_11_ITEMS, 1, 6) });
 
-		List<ItemStack> items2 = OreDictionary.getOres("ingotLead");
-		int count2 = items2.size();
-		for (int k = 0; k <= count2; k++) {
-			ItemStack item2;
-			if (k == 0)
-				item2 = new ItemStack(ExtraPlanets_Items.INGOT_LEAD);
-			else
-				item2 = items2.get(k - 1);
-			RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "rovers", new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 0),
-					new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', item2 });
-			RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "rovers", new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', "ingotDesh", 'X', item2 });
-		}
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "rovers", new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 0),
+				new Object[] { "XWX", "WXW", "XWX", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', "ingotLead" });
+		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "rovers", new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 1), new Object[] { "XWX", "WXW", "XWX", 'W', "ingotDesh", 'X', "ingotLead" });
+
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "rovers", new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 2),
 				new Object[] { " W ", "WXW", " W ", 'W', new ItemStack(MarsItems.marsItemBasic, 1, 3), 'X', new ItemStack(GCItems.partBuggy, 1, 0) });
 		RecipeDumper.addShapedRecipeWithCondition(Constants.modID, "recipe_enabled", "rovers", new ItemStack(ExtraPlanets_Items.ELECTRIC_PARTS, 1, 3),

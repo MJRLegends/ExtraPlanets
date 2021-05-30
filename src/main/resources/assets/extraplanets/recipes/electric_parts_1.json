@@ -20,8 +20,7 @@
       "item": "#INGOTDESH"
     },
     "X": {
-      "item": "extraplanets:ingot_lead",
-      "data": 0
+      "item": "#INGOTLEAD"
     }
   }
 }
