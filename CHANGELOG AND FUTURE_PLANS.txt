@@ -1,4 +1,10 @@
 ﻿========================================Not Released Updates==========================================
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
 v1.4.2
 *Added Polish Language file (Thanks toKruczyslaw)
 *Fixed issue #647 - Densifier not outputting to hopper
@@ -9,11 +15,6 @@ v1.4.2
 *Fixed MatterOverdrive android exclusion from pressure & radiation checks not working if not wearing any suit of armour (Issue #522 - MatterOverdrive android support not working after adding)
 *Fixed a crash with the BasicDensifier when restarting world during a machine operating
 
-======================================================================================================
-
-
-
-===========================================Released Updates===========================================
 v1.4.1
 *Fixed another null pointer temp space suit
 
