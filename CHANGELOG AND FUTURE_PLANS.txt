@@ -1,4 +1,10 @@
 ﻿========================================Not Released Updates==========================================
+
+======================================================================================================
+
+
+
+===========================================Released Updates===========================================
 v1.0.7
 *Added Polish Language file (Thanks toKruczyslaw)
 *Fixed issue #647 - Densifier not outputting to hopper
@@ -7,12 +13,8 @@ v1.0.7
 *Fixed Ceres, Jupiter, Neptune, Saturn, Uranus having incorrect liquid at the bottom of Ravines sometimes (Issue #640  - Lava spawning underground on Uranus)
 *Fixed issue #637 - Space stations always dump the player in the overworld
 *Fixed MatterOverdrive android exclusion from pressure & radiation checks not working if not wearing any suit of armour (Issue #522 - MatterOverdrive android support not working after adding)
+*Changed requirement of MJRLegendsLib to 1.11.2-1.1.8 & above
 
-======================================================================================================
-
-
-
-===========================================Released Updates===========================================
 v1.0.6
 *Fixed a crash with the BasicDensifier when restarting world during a machine operating
 *Updated comments on some config sections to outline the importance of there usage
