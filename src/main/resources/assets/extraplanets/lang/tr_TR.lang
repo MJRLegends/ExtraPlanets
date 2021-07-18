@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=Merkür Bakır Cevheri
 tile.mercury.ore_mercury.name=Civa Cevheri
 tile.mercury.stone_bricks.name=Merkür Taşı Tuğla
 tile.mercury.mercury_block.name=Merkür Bloğu
-tile.mercury.ore_carbon.name=Karbon Cevheri
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=Karbon Bloğu
 tile.mercury.dungeon_brick.name=Merkür Zindan Tuğlası
 
