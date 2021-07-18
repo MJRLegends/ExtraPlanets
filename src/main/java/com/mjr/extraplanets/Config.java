@@ -470,7 +470,7 @@ public class Config {
 		VENUS_ROVER = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Venus Rover & Its Parts", true, "Setting this option to false will remove the Venus Rover Entity & Schematic & Parts needed to Craft it").getBoolean(true);
 		ELECTRIC_ROCKET = config.get(Constants.CONFIG_CATEGORY_ITEMS, "Enable Electric Rocket", true, "Setting this option to false will remove the Electric Rocket Entity & Schematic").getBoolean(true);
 
-		SOLAR_PANELS = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Hybrid/Ultimate Solar Panel", true, "This option will disable & remove the Hybrid/Ulimate Solar Panels").getBoolean(true);
+		SOLAR_PANELS = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Hybrid/Ultimate Solar Panel", true, "This option will disable & remove the Hybrid/Ultimate Solar Panels").getBoolean(true);
 		REFINERY_ADVANCED = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Refinery", true, "This option will disable & remove the Advanced Refinery").getBoolean(true);
 		REFINERY_ULTIMATE = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Ultimate Refinery", true, "This option will disable & remove the Ultimate Refinery").getBoolean(true);
 		FUEL_LOADER_ADVANCED = config.get(Constants.CONFIG_CATEGORY_BLOCKS, "Advanced Fuel Loader", true, "This option will disable & remove the Advanced Fuel Loader").getBoolean(true);
@@ -495,7 +495,9 @@ public class Config {
 		MOB_SUFFOCATION = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Mob Suffocation", true, "Setting this to false will make mobs not suffocate on planets but the player will!").getBoolean(true);
 		USE_DEFAULT_BOSSES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use default bosses for all planets", false, "Setting this option to true will disable & remove all custom bosses and will replace them with Creeper Bosses!")
 				.getBoolean(false);
-		USE_REALISTIC_ATMOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use Realistic Atmosphere Sky Colous for Planets/Moons", true, "Setting this option to true will disable Custom Atmospheres Sky Colous for Phobos, Deimos, Ceres, Io, Europa, Ganymede, Callisto, Rhea, Iapetus, Titania, Oberon, Triton, Ceres, Pluto, Eris!")
+		
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use Realistic Atmosphere Sky Colous for Planets/Moons", "Use Realistic Atmosphere Sky Colours for Planets/Moons");
+		USE_REALISTIC_ATMOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Use Realistic Atmosphere Sky Colours for Planets/Moons", true, "Setting this option to true will disable Custom Atmospheres Sky Colours for Phobos, Deimos, Ceres, Io, Europa, Ganymede, Callisto, Rhea, Iapetus, Titania, Oberon, Triton, Ceres, Pluto, Eris!")
 				.getBoolean(true);
 
 		GENERATE_KEPLER22B_DUNGEONS = config
@@ -520,9 +522,12 @@ public class Config {
 		GENERATE_JUPITER_BASIC_HIDEOUTS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Basic Hideouts on Jupiter", true, "Setting this option to false will disable & remove Basic Hideouts from generating on Jupiter")
 				.getBoolean(true);
 		GENERATE_JUPITER_SPACE_SHIP = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Space Ship on Jupiter", true, "Setting this option to false will disable & remove Space Ship from generating on Jupiter").getBoolean(true);
-		GENERATE_IO_VOLCANOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanos on Io", true, "Setting this option to false will disable & remove Volcanos from generating on Io").getBoolean(true);
-		GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES = config
-				.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Frozen Nitrongen Piles on Neptune", true, "Setting this option to false will disable & remove Frozen Nitrongen Piles from generating on Neptune").getBoolean(true);
+		
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanos on Io", "Generate Volcanoes on Io");
+		GENERATE_IO_VOLCANOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Volcanoes on Io", true, "Setting this option to false will disable & remove Volcanoes from generating on Io").getBoolean(true);
+		
+		config.renameProperty(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Frozen Nitrongen Piles on Neptune", "Generate Frozen Nitrogen Piles on Neptune");
+		GENERATE_NEPTUNE_FROZEN_NITROGEN_PILES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Frozen Nitrogen Piles on Neptune", true, "Setting this option to false will disable & remove Frozen Nitrogen Piles from generating on Neptune").getBoolean(true);
 		GENERATE_SATURN_NUCLEAR_PILES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Nuclear Piles on Saturn", true, "Setting this option to false will disable & remove Nuclear Piles from generating on Saturn").getBoolean(true);
 		GENERATE_SATURN_SLIME_TREES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Slime Trees on Saturn", true, "Setting this option to false will disable & remove Slime Trees from generating on Saturn").getBoolean(true);
 		GENERATE_URANUS_IGLOOS = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Generate Igloos on Uranus", true, "Setting this option to false will disable & remove Igloos from generating on Uranus").getBoolean(true);
