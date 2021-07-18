@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=水星铜矿石
 tile.mercury.ore_mercury.name=水星汞矿石
 tile.mercury.stone_bricks.name=水星石砖
 tile.mercury.mercury_block.name=汞块
-tile.mercury.ore_carbon.name=碳矿石
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=碳块
 tile.mercury.dungeon_brick.name=水星地牢砖
 

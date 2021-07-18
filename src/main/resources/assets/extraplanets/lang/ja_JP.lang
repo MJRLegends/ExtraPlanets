@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=水星の銅鉱石
 tile.mercury.ore_mercury.name=水星鉱石
 tile.mercury.stone_bricks.name=水星の石レンガ
 tile.mercury.mercury_block.name=固体水銀ブロック
-tile.mercury.ore_carbon.name=カーボン鉱石
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=カーボンブロック
 tile.mercury.dungeon_brick.name=水星ダンジョンのレンガ
 

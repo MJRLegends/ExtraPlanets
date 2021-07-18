@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=수성 구리 광석
 tile.mercury.ore_mercury.name=수은 광석
 tile.mercury.stone_bricks.name=수성 석재 벽돌
 tile.mercury.mercury_block.name=수은 블록
-tile.mercury.ore_carbon.name=탄소 광석
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=탄소 블록
 tile.mercury.dungeon_brick.name=수성 던전 벽돌
 

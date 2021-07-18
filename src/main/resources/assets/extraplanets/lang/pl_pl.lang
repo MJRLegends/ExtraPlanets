@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=Merkurowa Ruda Miedzi
 tile.mercury.ore_mercury.name=Ruda Merkurego
 tile.mercury.stone_bricks.name=Merkurowe Kamienne Cegły
 tile.mercury.mercury_block.name=Blok Merkurego
-tile.mercury.ore_carbon.name=Ruda Karbonu
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=Blok Karbonu
 tile.mercury.dungeon_brick.name=Cegły Merkurowego Lochu
 
