@@ -684,8 +684,8 @@ public class Config {
 		IO_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Io Dimension ID (Moon)", -1500, "[range: -2147483647 ~ 2147483647, default: -1500]").getInt();
 		EUROPA_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Europa Dimension ID (Moon)", -1501, "[range: -2147483647 ~ 2147483647, default: -1501]").getInt();
 		PHOBOS_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Phobos Dimension ID (Moon)", -1502, "[range: -2147483647 ~ 2147483647, default: -1502]").getInt();
-		DEIMOS_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Deimos Dimension ID (Moon)", -1503, "[range: -2147483647 ~ 2147483647, default: -1504]").getInt();
-		TRITON_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Triton Dimension ID (Moon)", -1504, "[range: -2147483647 ~ 2147483647, default: -1505]").getInt();
+		DEIMOS_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Deimos Dimension ID (Moon)", -1503, "[range: -2147483647 ~ 2147483647, default: -1503]").getInt();
+		TRITON_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Triton Dimension ID (Moon)", -1504, "[range: -2147483647 ~ 2147483647, default: -1504]").getInt();
 		CALLISTO_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Callisto Dimension ID (Moon)", -1505, "[range: -2147483647 ~ 2147483647, default: -1505]").getInt();
 		GANYMEDE_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Ganymede Dimension ID (Moon)", -1506, "[range: -2147483647 ~ 2147483647, default: -1506]").getInt();
 		RHEA_ID = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Rhea Dimension ID (Moon)", -1507, "[range: -2147483647 ~ 2147483647, default: -1507]").getInt();
