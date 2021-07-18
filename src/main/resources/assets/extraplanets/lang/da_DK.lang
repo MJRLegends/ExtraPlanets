@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=Merkur Kobber
 tile.mercury.ore_mercury.name=Merkur Ore
 tile.mercury.stone_bricks.name=Merkur Stone Bricks
 tile.mercury.mercury_block.name=Block of Mercury ##NEEDS TRANSLATE##
-tile.mercury.ore_carbon.name=Carbon Ore ##NEEDS TRANSLATE##
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=Block of Carbon ##NEEDS TRANSLATE##
 tile.mercury.dungeon_brick.name=Merkur Dungeon Brick ##NEEDS TRANSLATE##
 

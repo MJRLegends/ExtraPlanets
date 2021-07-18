@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=Медная руда Меркурия
 tile.mercury.ore_mercury.name=Ртутная руда Меркурия
 tile.mercury.stone_bricks.name=Каменные кирпичи Меркурия
 tile.mercury.mercury_block.name=Ртутный блок
-tile.mercury.ore_carbon.name=Углеродная руда Меркурия
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=Углеродный блок
 tile.mercury.dungeon_brick.name=Кирпич сокровищницы Меркурия
 
