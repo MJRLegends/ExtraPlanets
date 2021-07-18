@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=Merkur Kupfererz
 tile.mercury.ore_mercury.name=Quecksilbererz
 tile.mercury.stone_bricks.name=Quecksilber Steinziegel
 tile.mercury.mercury_block.name=Quecksilberblock
-tile.mercury.ore_carbon.name=Kohlenstofferz
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=Kohlenstoffblock
 tile.mercury.dungeon_brick.name=Merkur Verließziegel
 

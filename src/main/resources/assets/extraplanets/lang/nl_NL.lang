@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=Mercurus Kopererts
 tile.mercury.ore_mercury.name=Mercuruserts
 tile.mercury.stone_bricks.name=Mercurus Blokstenen
 tile.mercury.mercury_block.name=Mercuriusblok
-tile.mercury.ore_carbon.name=Koolstoferts
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=Koolstofblok
 tile.mercury.dungeon_brick.name=Mercurus Kerkerstenen
 
