@@ -36,6 +36,7 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 	private final Gradient noiseGen7;
 
 	protected final World world;
+	protected final boolean enableCratersAfterBiomeReplace;
 
 	private Biome[] biomesForGeneration = this.getBiomesForGeneration();
 
@@ -55,10 +56,15 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 	private static final double SMALL_FEATURE_FILTER_MOD = 8;
 
 	private List<MapGenBaseMeta> worldGenerators;
-
+	
 	public ChunkProviderSingleBiomeSpace(World par1World, long seed, boolean mapFeaturesEnabled) {
+		this(par1World, seed, mapFeaturesEnabled, false);
+	}
+
+	public ChunkProviderSingleBiomeSpace(World par1World, long seed, boolean mapFeaturesEnabled, boolean enableCratersAfterBiomeReplace) {
 		super();
 		this.world = par1World;
+		this.enableCratersAfterBiomeReplace = enableCratersAfterBiomeReplace;
 		this.rand = new Random(seed);
 
 		this.noiseGen1 = new Gradient(this.rand.nextLong(), 4, 0.25F);
@@ -201,9 +207,12 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 		// final Block[] ids = new Block[32768 * 2];
 		// final byte[] meta = new byte[32768 * 2];
 		this.generateTerrain(chunkX, chunkZ, primer);
-		this.createCraters(chunkX, chunkZ, primer);
+		if(!this.enableCratersAfterBiomeReplace)
+			this.createCraters(chunkX, chunkZ, primer);
 		this.biomesForGeneration = this.world.getBiomeProvider().getBiomes(this.biomesForGeneration, chunkX * 16, chunkZ * 16, 16, 16);
 		this.replaceBiomeBlocks(chunkX, chunkZ, primer, this.biomesForGeneration);
+		if(this.enableCratersAfterBiomeReplace)
+			this.createCraters(chunkX, chunkZ, primer);
 
 		if (this.worldGenerators == null) {
 			this.worldGenerators = this.getWorldGenerators();
@@ -256,7 +265,7 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 					double yDev = sqrtY * sqrtY * 6;
 					yDev = 5 - yDev;
 					int helper = 0;
-					for (int y = 127; y > 0; y--) {
+					for (int y = 256; y > 0; y--) {
 						if (Blocks.AIR != primer.getBlockState(x, y, z).getBlock() && helper <= yDev) {
 							primer.setBlockState(x, y, z, Blocks.AIR.getDefaultState());
 							// chunkArray[this.getIndex(x, y, z)] = Blocks.AIR;
