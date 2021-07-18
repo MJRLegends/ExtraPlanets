@@ -8,14 +8,14 @@ assignees: MJRLegends
 ---
 
 ### ---Issue Report---
-**(PLEASE DONT DELETE THIS TEMPLATE, YOUR ISSUE WILL BE IGNORED AND CLOSED IF YOU DO.)**
+**(PLEASE DONT DELETE THIS TEMPLATE, YOUR ISSUE WILL BE IGNORED AND CLOSED IF YOU DO. | Required)**
 
-**Have you checked Closed Issues (if applicable & PLEASE CHECK BEFORE POSTING):** [Yes or No]
+**Have you checked Closed Issues (if applicable & PLEASE CHECK BEFORE POSTING | Required):** [Yes or No]
 
-### Description of Issue
+### Description of Issue(Required)
 [Description of the issue]
 
-### Steps to Reproduce Issue
+### Steps to Reproduce Issue(Required)
 1. [First step]
 2. [Second step]
 
@@ -24,9 +24,11 @@ assignees: MJRLegends
 
 **Screenshots (if applicable):** 
 
-**Version of Mod using (PLEASE DONT USE 'Latest' OR 'Newest'):** [VERSION]
+**Mod List (Required):** 
 
-**Where did this bug happen:** [Single Player or Server]
+**Version of Mod using (PLEASE DONT USE 'Latest' OR 'Newest' | Required):** [VERSION]
+
+**Where did this bug happen(Required):** [Single Player or Server]
 
 ### Additional Information
 [Any other information that may be able to help me with the problem]
