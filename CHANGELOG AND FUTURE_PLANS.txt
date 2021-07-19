@@ -1,10 +1,58 @@
 ﻿========================================Not Released Updates==========================================
-
+v1.6.9
+*Added a Environment Emergency Kit with a temporary Space Suit
+*Fixed Geiger Counter output being old style of radiation display output
+*Changed Temp Space Suit ticks & Modules Tick for Space Suits to not run during certain gamemodes
+*Added support for /gckit command to give Environment Emergency Kit item aswell
+*Added Basic/Advanced Solar Panel modules for space suit
+*Improved the Evolved Magma Cube Boss Texture
+*Changed Evolved Magma Cube Boss to be immune from fire
+*Bit of code clean up for Evolved Magma Cube Boss rendering
+*Added a Evolved Magma Cube Mob for use in Mercury Dungeons
+*Improved/Added more content to the Mercury Dungeons
+*Added Evolved Ancient Magma Cubes for use in Jupiter Dungeons
+*Improved/Added more content to the Jupiter Dungeons
+*Added logWood ore dict for all Kepler22b Log Blocks
+*Added plankWood ore dict for all Kepler22b Plank Blocks
+*Added tooltip to Space suits regarding power being only needed for space suits
+*Added a config (on by default) of "Use Realistic Atmosphere Sky Colous for Planets/Moons" which will disable colour sky/fog for phobos, deimos, callisto, ganymede, titania, ceres and oberon & more (#585)
+*Added fire affect to when a player is in magma (Currently doesnt work fully but looks better than no fire)
+*Fixed lava effect overlay, when in lava not rendering due to fog rendering, (Issue #500)
+*Added more dimensions to the "Use Realistic Atmosphere Sky Colous for Planets/Moons" config option
+*Updated ru_RU.lang(Thanks to Romz24)
+*Fixed issue #621 - Iapetus has tier 6, but Saturn and its other moons have 5
+*Fixed multiple issues with an null pointer crash with Temp Space Suit
+*Updated comments on some config sections to outline the importance of there usage
+*Added IC2 nano armour and Galaxy Space Space suit to be default entered for "List of armour items to be considered as a space suit" in config (Will only work for new generated configs)
+*Added IC2 quantum armour to be default entered for "List of armour items to be considered as a space suit" in config (Will only work for new generated configs) & tweaked nano armour values
+*Added support to use ExtraPlanets Radiation System on other addon planets/moons
+*Changed Other Addon Planets/Moons Radiation default value to 5 from 10
+*Fixed issue #302 - Unable to Install Module, After Uninstalling with requirement items already in inventory
+*Fixed inventory being full when uninstalling a module causing a crash
+*Fixed issue #597 - Space Suit Breaking at 0 Power
+*Fixed a crash with the BasicDensifier when restarting world during a machine operating
+*Added Polish Language file (Thanks toKruczyslaw)
+*Fixed issue #647 - Densifier not outputting to hopper
+*Fixed issue #658 - Densifier NBT Saving Crashing Server
+*Updated Pluto Celestial Map texture to match latest NASA images (Suggestion #598 )
+*Fixed Ceres, Jupiter, Neptune, Saturn, Uranus having incorrect liquid at the bottom of Ravines sometimes (Issue #640  - Lava spawning underground on Uranus)
+*Fixed MatterOverdrive android exclusion from pressure & radiation checks not working if not wearing any suit of armour (Issue #522 - MatterOverdrive android support not working after adding)
+*Fixed issue #637 for MC 1.11.2 & below - Space stations always dump the player in the overworld
+*Fixed issue #668 (Crash when disabling certain Tools/Items config options but not others.)
+*Fixed Default DIM ID comments typo (Thanks to ROMVoid95)
+*Fixed weird issue with single biome dimensions mainly Mercury having weird cut outs/floating land due to Craters generation, also added a way to generate the craters after Biome replace for broken terrain affect (Not yet used)
+*Added furnace smelting xp for all ores (Suggestion #673)
+*Fixed a few grammar/typos in config file
+*Fixed Mercury Carbon Ore not having the 'Mercury' Prefix on its name, to match other dimension ores
+*Fixed a few rare possible world gen issues with Ganymede & Europa
+*Fixed issue #633 - Missing Language Localizations for Solar Panels Modules for Space Suits
 ======================================================================================================
 
 
 
 ===========================================Released Updates===========================================
+
+
 v1.6.8
 *Fixed NullPointerException error spam when hovering over a non ExtraPlanets body on ExtraPlanets Galaxy Map
 *Fixed cast error with GalaxySpace Planets/Moons that dont override the WorldProviderSpace class for GC API support
