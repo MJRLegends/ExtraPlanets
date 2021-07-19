@@ -153,17 +153,19 @@ public class ExtraPlanets_Armor {
 	}
 
 	private static void initializeArmor() {
-		if (Config.ITEMS_MERCURY && Config.MERCURY) {
-			MERCURY_HELMET = new MercuryArmor("mercury", MERCURY_ARMOR_MATERIAL, 0).setUnlocalizedName("mercury_helmet");
-			MERCURY_CHEST = new MercuryArmor("mercury", MERCURY_ARMOR_MATERIAL, 1).setUnlocalizedName("mercury_chest");
-			MERCURY_LEGINGS = new MercuryArmor("mercury", MERCURY_ARMOR_MATERIAL, 2).setUnlocalizedName("mercury_legings");
-			MERCURY_BOOTS = new MercuryArmor("mercury", MERCURY_ARMOR_MATERIAL, 3).setUnlocalizedName("mercury_boots");
-		}
-		if (Config.ITEMS_CARBON && Config.MERCURY) {
-			CARBON_HELMET = new CarbonArmor("carbon", CARBON_ARMOR_MATERIAL, 0).setUnlocalizedName("carbon_helmet");
-			CARBON_CHEST = new CarbonArmor("carbon", CARBON_ARMOR_MATERIAL, 1).setUnlocalizedName("carbon_chest");
-			CARBON_LEGINGS = new CarbonArmor("carbon", CARBON_ARMOR_MATERIAL, 2).setUnlocalizedName("carbon_legings");
-			CARBON_BOOTS = new CarbonArmor("carbon", CARBON_ARMOR_MATERIAL, 3).setUnlocalizedName("carbon_boots");
+		if(Config.MERCURY) {
+			if (Config.ITEMS_MERCURY) {
+				MERCURY_HELMET = new MercuryArmor("mercury", MERCURY_ARMOR_MATERIAL, 0).setUnlocalizedName("mercury_helmet");
+				MERCURY_CHEST = new MercuryArmor("mercury", MERCURY_ARMOR_MATERIAL, 1).setUnlocalizedName("mercury_chest");
+				MERCURY_LEGINGS = new MercuryArmor("mercury", MERCURY_ARMOR_MATERIAL, 2).setUnlocalizedName("mercury_legings");
+				MERCURY_BOOTS = new MercuryArmor("mercury", MERCURY_ARMOR_MATERIAL, 3).setUnlocalizedName("mercury_boots");
+			}
+			if (Config.ITEMS_CARBON) {
+				CARBON_HELMET = new CarbonArmor("carbon", CARBON_ARMOR_MATERIAL, 0).setUnlocalizedName("carbon_helmet");
+				CARBON_CHEST = new CarbonArmor("carbon", CARBON_ARMOR_MATERIAL, 1).setUnlocalizedName("carbon_chest");
+				CARBON_LEGINGS = new CarbonArmor("carbon", CARBON_ARMOR_MATERIAL, 2).setUnlocalizedName("carbon_legings");
+				CARBON_BOOTS = new CarbonArmor("carbon", CARBON_ARMOR_MATERIAL, 3).setUnlocalizedName("carbon_boots");
+			}
 		}
 		if (Config.ITEMS_URANIUM && Config.CERES) {
 			URANIUM_HELMET = new UraniumArmor("uranium", URANIUM_ARMOR_MATERIAL, 0).setUnlocalizedName("uranium_helmet");
@@ -191,11 +193,13 @@ public class ExtraPlanets_Armor {
 			MAGNESIUM_LEGINGS = new MagnesiumArmor("magnesium", MAGNESIUM_ARMOR_MATERIAL, 2).setUnlocalizedName("magnesium_legings");
 			MAGNESIUM_BOOTS = new MagnesiumArmor("magnesium", MAGNESIUM_ARMOR_MATERIAL, 3).setUnlocalizedName("magnesium_boots");
 		}
-		if (Config.ITEMS_CRYSTAL && Config.URANUS) {
-			CRYSTAL_HELMET = new CrystalArmor("crystal", CRYSTAL_ARMOR_MATERIAL, 0).setUnlocalizedName("crystal_helmet");
-			CRYSTAL_CHEST = new CrystalArmor("crystal", CRYSTAL_ARMOR_MATERIAL, 1).setUnlocalizedName("crystal_chest");
-			CRYSTAL_LEGINGS = new CrystalArmor("crystal", CRYSTAL_ARMOR_MATERIAL, 2).setUnlocalizedName("crystal_legings");
-			CRYSTAL_BOOTS = new CrystalArmor("crystal", CRYSTAL_ARMOR_MATERIAL, 3).setUnlocalizedName("crystal_boots");
+		if(Config.URANUS) {
+			if (Config.ITEMS_CRYSTAL) {
+				CRYSTAL_HELMET = new CrystalArmor("crystal", CRYSTAL_ARMOR_MATERIAL, 0).setUnlocalizedName("crystal_helmet");
+				CRYSTAL_CHEST = new CrystalArmor("crystal", CRYSTAL_ARMOR_MATERIAL, 1).setUnlocalizedName("crystal_chest");
+				CRYSTAL_LEGINGS = new CrystalArmor("crystal", CRYSTAL_ARMOR_MATERIAL, 2).setUnlocalizedName("crystal_legings");
+				CRYSTAL_BOOTS = new CrystalArmor("crystal", CRYSTAL_ARMOR_MATERIAL, 3).setUnlocalizedName("crystal_boots");
+			}
 			if (Config.ITEMS_GEM_WHITE) {
 				WHITE_GEM_HELMET = new WhiteGemArmor("white_gem", WHITE_GEM_ARMOR_MATERIAL, 0).setUnlocalizedName("white_gem_helmet");
 				WHITE_GEM_CHEST = new WhiteGemArmor("white_gem", WHITE_GEM_ARMOR_MATERIAL, 1).setUnlocalizedName("white_gem_chest");
@@ -203,11 +207,13 @@ public class ExtraPlanets_Armor {
 				WHITE_GEM_BOOTS = new WhiteGemArmor("white_gem", WHITE_GEM_ARMOR_MATERIAL, 3).setUnlocalizedName("white_gem_boots");
 			}
 		}
-		if (Config.ITEMS_ZINC && Config.NEPTUNE) {
-			ZINC_HELMET = new ZincArmor("zinc", ZINC_ARMOR_MATERIAL, 0).setUnlocalizedName("zinc_helmet");
-			ZINC_CHEST = new ZincArmor("zinc", ZINC_ARMOR_MATERIAL, 1).setUnlocalizedName("zinc_chest");
-			ZINC_LEGINGS = new ZincArmor("zinc", ZINC_ARMOR_MATERIAL, 2).setUnlocalizedName("zinc_legings");
-			ZINC_BOOTS = new ZincArmor("zinc", ZINC_ARMOR_MATERIAL, 3).setUnlocalizedName("zinc_boots");
+		if (Config.NEPTUNE) {
+			if(Config.ITEMS_ZINC) {
+				ZINC_HELMET = new ZincArmor("zinc", ZINC_ARMOR_MATERIAL, 0).setUnlocalizedName("zinc_helmet");
+				ZINC_CHEST = new ZincArmor("zinc", ZINC_ARMOR_MATERIAL, 1).setUnlocalizedName("zinc_chest");
+				ZINC_LEGINGS = new ZincArmor("zinc", ZINC_ARMOR_MATERIAL, 2).setUnlocalizedName("zinc_legings");
+				ZINC_BOOTS = new ZincArmor("zinc", ZINC_ARMOR_MATERIAL, 3).setUnlocalizedName("zinc_boots");
+			}
 			if (Config.ITEMS_GEM_BLUE) {
 				BLUE_GEM_HELMET = new BlueGemArmor("blue_gem", BLUE_GEM_ARMOR_MATERIAL, 0).setUnlocalizedName("blue_gem_helmet");
 				BLUE_GEM_CHEST = new BlueGemArmor("blue_gem", BLUE_GEM_ARMOR_MATERIAL, 1).setUnlocalizedName("blue_gem_chest");
@@ -284,17 +290,19 @@ public class ExtraPlanets_Armor {
 	}
 
 	private static void registerArmor() {
-		if (Config.ITEMS_MERCURY && Config.MERCURY) {
-			RegisterUtilities.registerItem(MERCURY_HELMET, MERCURY_HELMET.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerItem(MERCURY_CHEST, MERCURY_CHEST.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerItem(MERCURY_LEGINGS, MERCURY_LEGINGS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerItem(MERCURY_BOOTS, MERCURY_BOOTS.getUnlocalizedName().substring(5));
-		}
-		if (Config.ITEMS_CARBON && Config.MERCURY) {
-			RegisterUtilities.registerItem(CARBON_HELMET, CARBON_HELMET.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerItem(CARBON_CHEST, CARBON_CHEST.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerItem(CARBON_LEGINGS, CARBON_LEGINGS.getUnlocalizedName().substring(5));
-			RegisterUtilities.registerItem(CARBON_BOOTS, CARBON_BOOTS.getUnlocalizedName().substring(5));
+		if(Config.MERCURY) {
+			if (Config.ITEMS_MERCURY) {
+				RegisterUtilities.registerItem(MERCURY_HELMET, MERCURY_HELMET.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(MERCURY_CHEST, MERCURY_CHEST.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(MERCURY_LEGINGS, MERCURY_LEGINGS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(MERCURY_BOOTS, MERCURY_BOOTS.getUnlocalizedName().substring(5));
+			}
+			if (Config.ITEMS_CARBON) {
+				RegisterUtilities.registerItem(CARBON_HELMET, CARBON_HELMET.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(CARBON_CHEST, CARBON_CHEST.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(CARBON_LEGINGS, CARBON_LEGINGS.getUnlocalizedName().substring(5));
+				RegisterUtilities.registerItem(CARBON_BOOTS, CARBON_BOOTS.getUnlocalizedName().substring(5));
+			}
 		}
 		if (Config.ITEMS_URANIUM && Config.CERES) {
 			RegisterUtilities.registerItem(URANIUM_HELMET, URANIUM_HELMET.getUnlocalizedName().substring(5));
