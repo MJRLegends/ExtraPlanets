@@ -622,6 +622,8 @@ gui.module.pre_launch_checklist.name=発射前チェックリスト
 gui.module.nasa_workbench.name=ポータブルNASA作業台
 gui.module.oxygen_tank_switch.name=酸素タンク自動交換
 gui.module.auto_space_gear_equip.name=スペースギア自動装備
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Galacticraftのセンサーゴーグルと同等の機能
 gui.module.no_fall_damage.desc=落下ダメージを無効化する
@@ -631,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Galacticraftの発射前チェックリス�
 gui.module.nasa_workbench.desc=GalacticraftのNASA作業台へ遠隔アクセスできる. キー設定を参照.
 gui.module.oxygen_tank_switch.desc=装着した酸素タンクが空になったら、インベントリのタンクと交換する
 gui.module.auto_space_gear_equip.desc=インベントリにあるスペースギアを自動的に装着する
+gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=核爆弾

@@ -622,6 +622,8 @@ gui.module.pre_launch_checklist.name=발사전 체크리스트
 gui.module.nasa_workbench.name=휴대용 KARI 워크벤치
 gui.module.oxygen_tank_switch.name=산소 탱크 자동 교체
 gui.module.auto_space_gear_equip.name=우주 기어 자동 설치
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=기능은 갤럭티크래프트의 감지경과 비슷합니다.
 gui.module.no_fall_damage.desc=플레이어로부터의 추락 위험을 제거합니다.
@@ -631,6 +633,8 @@ gui.module.pre_launch_checklist.desc=갤럭티크래프트에서 발사전 체�
 gui.module.nasa_workbench.desc=갤럭티크래프트에서 KARI 워크벤치로 이동할 수 있습니다. 키를 열려면 컨트롤을 참조하세요.
 gui.module.oxygen_tank_switch.desc=인벤토리에서 빈 탱크를 안 빈 산소 탱크로 교체하여 장착하세요.
 gui.module.auto_space_gear_equip.desc=인벤토리에 우주 관련 장비를 자동으로 장착합니다.
+gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=핵폭탄

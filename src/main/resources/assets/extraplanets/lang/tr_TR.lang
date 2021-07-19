@@ -622,6 +622,8 @@ gui.module.pre_launch_checklist.name=Ön Kalkış Kontrol Listesi
 gui.module.nasa_workbench.name=Taşınabilir NASA Çalışma Masası
 gui.module.oxygen_tank_switch.name=Oksijen Tankı OTO Doldurucu
 gui.module.auto_space_gear_equip.name=Uzay Aracı OTO Donatıcısı
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Galacticraft Sensörlü Gözlüklerle hemen hemen aynı görevi görür
 gui.module.no_fall_damage.desc=Oyuncudan düşme hasarını kaldırır
@@ -631,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Galacticraft ön kalkış işlemini kolayla
 gui.module.nasa_workbench.desc=Galacticraft NASA çalışma masasını taşımanızı sağlar
 gui.module.oxygen_tank_switch.desc=Boş tankınızı otomatik eşitler
 gui.module.auto_space_gear_equip.desc=Gerekli aletleri otomatik envanterinize verir
+gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Nükleer Bomba

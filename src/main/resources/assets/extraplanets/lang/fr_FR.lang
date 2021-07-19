@@ -623,6 +623,8 @@ gui.module.pre_launch_checklist.name=Liste de vérification avant le lancement
 gui.module.nasa_workbench.name=Table de travail portable
 gui.module.oxygen_tank_switch.name=Réservoir d'oxygène automatique
 gui.module.auto_space_gear_equip.name=Equipement spatiaux automatique
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Fonctionne de la même manière que les lunettes sensorielles de Galacticraft
 gui.module.no_fall_damage.desc=Supprime les dégâts de chute du joueur
@@ -632,6 +634,8 @@ gui.module.pre_launch_checklist.desc=Permet un accès facile à la liste de cont
 gui.module.nasa_workbench.desc=Permet l’accès portable à la table de travail de Galacticraft.
 gui.module.oxygen_tank_switch.desc=Remplacez les réservoirs vides équipés par un réservoir d'oxygène non vide disponible dans votre inventaire.
 gui.module.auto_space_gear_equip.desc=Équipez automatiquement tout équipement lié à l'espace dans votre inventaire.
+gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Bombe nucléaire
