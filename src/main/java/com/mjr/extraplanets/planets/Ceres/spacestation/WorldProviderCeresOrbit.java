@@ -129,7 +129,7 @@ public class WorldProviderCeresOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.Ceres";
+		return "planet.ceres";
 	}
 
 	@Override

@@ -129,7 +129,7 @@ public class WorldProviderPlutoOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.Pluto";
+		return "planet.pluto";
 	}
 
 	@Override

@@ -129,7 +129,7 @@ public class WorldProviderKepler22bOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.Kepler22b";
+		return "planet.kepler22b";
 	}
 
 	@Override
