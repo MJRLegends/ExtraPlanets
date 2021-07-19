@@ -323,7 +323,7 @@ public class TileEntityBasicDensifier extends TileBaseElectricBlockWithInventory
 			case 0:
 				return ItemElectricBase.isElectricItemEmpty(itemStack) || !this.shouldPullEnergy();
 			case 1:
-				return itemStack.getItem() == ExtraPlanets_Items.IODIDE_SALT;
+				return true;
 			case 2:
 				return itemStack == new ItemStack(Items.bucket);
 			default:
