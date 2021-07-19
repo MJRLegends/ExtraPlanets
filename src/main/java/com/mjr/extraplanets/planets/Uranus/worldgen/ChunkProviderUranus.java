@@ -24,7 +24,7 @@ public class ChunkProviderUranus extends ChunkProviderMultiBiomeSpace {
 	private final MapGenVillageUranus villageGenerator = new MapGenVillageUranus();
 
 	private final BiomeDecoratorUranus uranusBiomeDecorator = new BiomeDecoratorUranus();
-	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
+	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen(ExtraPlanets_Fluids.FROZEN_WATER);
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.URANUS_BLOCKS, 0, 1, 2);
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonUranus(

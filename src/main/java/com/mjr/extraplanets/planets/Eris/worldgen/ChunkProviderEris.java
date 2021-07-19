@@ -16,6 +16,7 @@ import micdoodle8.mods.galacticraft.api.prefab.world.gen.BiomeDecoratorSpace;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.MapGenDungeon;
 import net.minecraft.world.ChunkCoordIntPair;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
@@ -26,7 +27,7 @@ public class ChunkProviderEris extends ChunkProviderSingleBiomeSpace {
 	private final MapGenVillageEris villageGenerator = new MapGenVillageEris();
 
 	private final BiomeDecoratorEris erisBiomeDecorator = new BiomeDecoratorEris();
-	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen();
+	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen(Blocks.LAVA);
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.ERIS_BLOCKS, 0, 1, 2);
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonEris(
