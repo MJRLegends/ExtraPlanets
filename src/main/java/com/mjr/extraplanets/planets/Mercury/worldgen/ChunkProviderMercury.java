@@ -27,7 +27,7 @@ public class ChunkProviderMercury extends ChunkProviderSingleBiomeSpace {
 	private final MapGenVillageMercury villageGenerator = new MapGenVillageMercury();
 
 	private final BiomeDecoratorMercury mercuryBiomeDecorator = new BiomeDecoratorMercury();
-	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen(Blocks.LAVA);
+	private final MapGenRavineGen ravineGenerator = new MapGenRavineGen(Blocks.lava);
 	private final MapGenCaveGen caveGenerator = new MapGenCaveGen(ExtraPlanets_Blocks.MERCURY_BLOCKS, 0, 1, 2);
 
 	private final MapGenDungeon dungeonGenerator = new MapGenDungeonMercury(
