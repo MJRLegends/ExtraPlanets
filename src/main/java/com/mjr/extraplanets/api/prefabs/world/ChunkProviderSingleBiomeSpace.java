@@ -37,6 +37,7 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 	private final Gradient noiseGen7;
 
 	protected final World worldObj;
+	protected final boolean enableCratersAfterBiomeReplace;
 
 	private BiomeGenBase[] biomesForGeneration = this.getBiomesForGeneration();
 
@@ -56,10 +57,15 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 	private static final double SMALL_FEATURE_FILTER_MOD = 8;
 
 	private List<MapGenBaseMeta> worldGenerators;
-
+	
 	public ChunkProviderSingleBiomeSpace(World par1World, long seed, boolean mapFeaturesEnabled) {
+		this(par1World, seed, mapFeaturesEnabled, false);
+	}
+
+	public ChunkProviderSingleBiomeSpace(World par1World, long seed, boolean mapFeaturesEnabled, boolean enableCratersAfterBiomeReplace) {
 		super();
 		this.worldObj = par1World;
+		this.enableCratersAfterBiomeReplace = enableCratersAfterBiomeReplace;
 		this.rand = new Random(seed);
 
 		this.noiseGen1 = new Gradient(this.rand.nextLong(), 4, 0.25F);
@@ -197,27 +203,29 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 	}
 
 	@Override
-	public Chunk provideChunk(int par1, int par2) {
+	public Chunk provideChunk(int x, int z) {
 		ChunkPrimer primer = new ChunkPrimer();
-		this.rand.setSeed(par1 * 341873128712L + par2 * 132897987541L);
+		this.rand.setSeed(x * 341873128712L + z * 132897987541L);
 		// final Block[] ids = new Block[32768 * 2];
 		// final byte[] meta = new byte[32768 * 2];
-		this.generateTerrain(par1, par2, primer);
-		this.createCraters(par1, par2, primer);
-		this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
-		this.replaceBlocksForBiome(par1, par2, primer, this.biomesForGeneration);
-
+		this.generateTerrain(x, z, primer);
+		if(!this.enableCratersAfterBiomeReplace)
+			this.createCraters(x, z, primer);
+		this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, x * 16, z * 16, 16, 16);
+		this.replaceBlocksForBiome(x, z, primer, this.biomesForGeneration);
+		if(this.enableCratersAfterBiomeReplace)
+			this.createCraters(x, z, primer);
 		if (this.worldGenerators == null) {
 			this.worldGenerators = this.getWorldGenerators();
 		}
 
 		for (MapGenBaseMeta generator : this.worldGenerators) {
-			generator.generate(this, this.worldObj, par1, par2, primer);
+			generator.generate(this, this.worldObj, x, z, primer);
 		}
 
-		this.onChunkProvide(par1, par2, primer);
+		this.onChunkProvide(x, z, primer);
 
-		final Chunk var4 = new Chunk(this.worldObj, primer, par1, par2);
+		final Chunk var4 = new Chunk(this.worldObj, primer, x, z);
 		final byte[] var5 = var4.getBiomeArray();
 
 		for (int var6 = 0; var6 < var5.length; ++var6) {
@@ -258,7 +266,7 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 					double yDev = sqrtY * sqrtY * 6;
 					yDev = 5 - yDev;
 					int helper = 0;
-					for (int y = 127; y > 0; y--) {
+					for (int y = 256; y > 0; y--) {
 						if (Blocks.air != primer.getBlockState(this.getIndex(x, y, z)).getBlock() && helper <= yDev) {
 							primer.setBlockState(getIndex(x, y, z), Blocks.air.getDefaultState());
 							// chunkArray[this.getIndex(x, y, z)] = Blocks.air;
