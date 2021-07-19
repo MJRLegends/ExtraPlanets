@@ -621,7 +621,9 @@ gui.module.test.name=Testmodul
 gui.module.pre_launch_checklist.name=Vor dem Start - Checkliste 
 gui.module.nasa_workbench.name=Tragbare Raketenwerkbank 
 gui.module.oxygen_tank_switch.name=Auto Sauerstofftank wechsler 
-gui.module.auto_space_gear_equip.name=Auto Raumanzug-Rüstung ausrüster 
+gui.module.auto_space_gear_equip.name=Auto Raumanzug-Rüstung ausrüster
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Funktioniert wie die Galacticraft-Sensorbrille 
 gui.module.no_fall_damage.desc=Entfernt Sturzschäden vom Spieler 
@@ -631,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Ermöglicht den einfachen Zugriff auf die V
 gui.module.nasa_workbench.desc=Ermöglicht den portablen Zugriff auf eine Raketenwerkbank von Galacticraft. Siehe Tastenbelegung! 
 gui.module.oxygen_tank_switch.desc=Tauscht leere Tanks mit einem verfügbaren nicht leeren Sauerstofftank in Ihrem Inventar aus 
 gui.module.auto_space_gear_equip.desc=Rüstet alle Raumanzugsgegenstände in Ihrem Inventar automatisch aus 
+gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Atombombe
