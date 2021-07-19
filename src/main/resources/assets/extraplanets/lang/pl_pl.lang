@@ -621,6 +621,8 @@ gui.module.pre_launch_checklist.name=Lista Kontrolna przed startem
 gui.module.nasa_workbench.name=Przenośny stół NASA
 gui.module.oxygen_tank_switch.name=Automatyczna wymiana zbiornika tlenu
 gui.module.auto_space_gear_equip.name=Automatyczna wymiana sprzętu kosmicznego
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Działa tak samo jak okulary sensoryczne z Galacticraft
 gui.module.no_fall_damage.desc=Usuwa obrażenia od upadku
@@ -630,6 +632,8 @@ gui.module.pre_launch_checklist.desc=Umożliwia łatwy dostęp do listy kontroln
 gui.module.nasa_workbench.desc=Umożliwia przenośny dostęp do stołu NASA z Galacticraft, spójrz do sterowania, aby otworzyć
 gui.module.oxygen_tank_switch.desc=Zamień wyposażone puste zbiorniki na dowolne dostępne, wypełnione zbiorniki tlenu w twoim ekwipunku
 gui.module.auto_space_gear_equip.desc=Automatycznie wyposaża w dowolny sprzęt związany z kosmosem w twoim ekwipunku
+gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Bomba Nuklearna
