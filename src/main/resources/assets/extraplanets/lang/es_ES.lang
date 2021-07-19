@@ -622,6 +622,8 @@ gui.module.pre_launch_checklist.name=Lista Pre-Lanzamie.
 gui.module.nasa_workbench.name=Mesa Portatil de la NASA
 gui.module.oxygen_tank_switch.name=Cambio de Tanques Auto.
 gui.module.auto_space_gear_equip.name=Equipado Auto. de Traje Espacial
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Funciona igual que los Lentes con Sensor del Galacticraft
 gui.module.no_fall_damage.desc=Anula todo daño de caida del Jugador
@@ -631,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Permite tener un acceso rapido de la Lista 
 gui.module.nasa_workbench.desc=Permite tener un acceso rapido a la Mesa de la NASA del Galacticraft. Por defecto usar la tecla"O"
 gui.module.oxygen_tank_switch.desc=Intercambia los Tanques Vacios por unos Llenos dentro de tu inventario de manera automática
 gui.module.auto_space_gear_equip.desc=Automaticamente equipa cualquier traje espacial en tu inventario
+gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Bomba Nuclear

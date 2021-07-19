@@ -622,6 +622,8 @@ gui.module.pre_launch_checklist.name=Предконтрольный список
 gui.module.nasa_workbench.name=Портативный верстак NASA
 gui.module.oxygen_tank_switch.name=Автосмена кислородного резервуара
 gui.module.auto_space_gear_equip.name=Автоэкипировка космического снаряжения
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Функции такие же, как и сенсорные очки Galacticraft
 gui.module.no_fall_damage.desc=Удаляет урон от падения игрока
@@ -631,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Позволяет легко получи�
 gui.module.nasa_workbench.desc=Предоставляет доступ к портативному верстаку NASA Galacticraft, смотри клавиши управления, чтобы открыть
 gui.module.oxygen_tank_switch.desc=Подкачки из оборудованных пустых резервуаров с любым доступным не пустом кислородный баком в вашем инвентаре
 gui.module.auto_space_gear_equip.desc=Автоматически экипировывает любое связанное с космосом снаряжение в вашем инвентаре
+gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Ядерная бомба
