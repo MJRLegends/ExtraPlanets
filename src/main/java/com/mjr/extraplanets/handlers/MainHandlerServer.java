@@ -473,6 +473,8 @@ public class MainHandlerServer {
 			return ((IRadiationSuit) testItem.getItem()).getArmorTier();
 
 		for (String line : list) {
+			if(line.length() == 0 || !line.contains(":"))
+				continue;
 			if (line.substring(0, line.lastIndexOf(':')).equalsIgnoreCase(testItem.getItem().getRegistryName().toString()))
 				return Integer.parseInt(line.substring(line.lastIndexOf(':') + 1));
 		}
