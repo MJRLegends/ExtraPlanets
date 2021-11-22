@@ -189,7 +189,7 @@ public class BlockBasicKepler22bTallGrass extends BlockBush implements IGrowable
 	@Override
 	public List<ItemStack> onSheared(ItemStack item, IBlockAccess world, BlockPos pos, int fortune) {
 		List<ItemStack> ret = new java.util.ArrayList<ItemStack>();
-		ret.add(new ItemStack(Blocks.TALLGRASS, 1, world.getBlockState(pos).getValue(TYPE).getMeta()));
+		ret.add(new ItemStack(this, 1, world.getBlockState(pos).getValue(TYPE).getMeta()));
 		return ret;
 	}
 
