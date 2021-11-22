@@ -374,7 +374,10 @@ public class MainHandlerClient {
 				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.block"));
 				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.volcanic.rock"));
 			} else if (stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT))) {
-				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.decontamination.unit"));
+				String text = TranslateUtilities.translate("gui.message.decontamination.unit");
+				if (text.contains("{PERCENT}"))
+					text = text.replace("{PERCENT}", Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT + "%");
+				event.getToolTip().add(EnumColor.AQUA + text);
 			} else if (stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))) {
 				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.block"));
 				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.potash"));
