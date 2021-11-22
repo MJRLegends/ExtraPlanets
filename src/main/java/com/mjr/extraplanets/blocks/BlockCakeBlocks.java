@@ -80,6 +80,8 @@ public class BlockCakeBlocks extends Block implements IDetectableResource, ISort
 
 	@Override
 	public int damageDropped(IBlockState state) {
+		if (state == this.getDefaultState().withProperty(BASIC_TYPE, EnumBlockBasic.COOKIE_ROCKS))
+			return 0;
 		int meta = state.getBlock().getMetaFromState(state);
 		return meta;
 	}
