@@ -47,7 +47,7 @@ repositories {
     }
 	maven {
 	    name 'MJRLegends'
-	    url = "https://maven.mjrlegends.com/"
+	    url = "https://maven.mjrlegends.com/repository/maven-public/"
     }
 }
 
