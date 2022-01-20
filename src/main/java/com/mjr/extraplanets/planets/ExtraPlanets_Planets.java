@@ -311,7 +311,7 @@ public class ExtraPlanets_Planets {
 				MAKEMAKE.setBodyIcon(new ResourceLocation(Constants.TEXTURE_PREFIX + "textures/gui/celestialbodies/makemake.png"));
 			}
 		}
-		if (Config.HAUMEA) {
+		if (Config.HAUMEA && !Config.GALAXY_SPACE_COMPATIBILITY) {
 			HAUNEA = GCRegisterUtilities.registerUnreachablePlanet("haumea", GalacticraftCore.solarSystemSol);
 			if (HAUNEA != null) {
 				HAUNEA.setRingColorRGB(0.1F, 0.9F, 0.6F).setPhaseShift(1.45F).setRelativeDistanceFromCenter(new CelestialBody.ScalableDistance(3.50F + Config.HAUMEA_DISTANCE_OFFSET, 3.50F + Config.HAUMEA_DISTANCE_OFFSET))
