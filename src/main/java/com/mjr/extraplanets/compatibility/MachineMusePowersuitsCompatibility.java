@@ -25,6 +25,8 @@ public class MachineMusePowersuitsCompatibility {
 			ModuleManager.INSTANCE.addModule(new RadiationModule(2));
 			ModuleManager.INSTANCE.addModule(new RadiationModule(3));
 			ModuleManager.INSTANCE.addModule(new RadiationModule(4));
+			MessageUtilities.debugMessageToLog(Constants.modID, "MachineMusePowersuits Compatibility success!");
+
 		} catch (Exception e) {
 			MessageUtilities.warnErrorMessageToLog(Constants.modID, "An error occurred when setting up MachineMusePowersuits Compatibility, this is most likey intended!");
 		}
