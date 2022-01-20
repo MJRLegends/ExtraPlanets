@@ -4,8 +4,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.logging.log4j.core.util.Loader;
-
 import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.fluid.ExtraPlanets_Fluids;
 import com.mjr.extraplanets.blocks.machines.ExtraPlanets_Machines;
@@ -73,6 +71,7 @@ import com.mjr.extraplanets.planets.venus.spacestation.WorldProviderVenusOrbit;
 import com.mjr.extraplanets.proxy.CommonProxy;
 import com.mjr.extraplanets.recipes.*;
 import com.mjr.extraplanets.schematicPages.*;
+import com.mjr.extraplanets.util.ExtraPlanetsUtli;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 import com.mjr.mjrlegendslib.util.NetworkUtilities;
 import com.mjr.mjrlegendslib.util.RegisterUtilities;
@@ -229,7 +228,7 @@ public class ExtraPlanets {
 		ExtraPlanets_Moons.init();
 		ExtraPlanets_SpaceStations.init();
 
-		if (Loader.isClassAvailable("net.machinemuse.numina.module.IPowerModule") && Loader.isClassAvailable("net.machinemuse.powersuits.common.ModuleManager"))
+		if (ExtraPlanetsUtli.isClassAvailable("net.machinemuse.numina.module.IPowerModule") && ExtraPlanetsUtli.isClassAvailable("net.machinemuse.powersuits.common.ModuleManager"))
 			MachineMusePowersuitsCompatibility.init();
 
 		// Register RegistrationHandler
