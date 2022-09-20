@@ -68,6 +68,7 @@ public class MCMultiPartCompatibility {
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.ERIS_BLOCKS, 1), "tile.eris.sub_surface");
 					registerMethod.invoke(null, clazzbm.getConstructor(Block.class, int.class).newInstance(ExtraPlanets_Blocks.ERIS_BLOCKS, 2), "tile.eris.stone");
 				}
+				MessageUtilities.debugMessageToLog(Constants.modID, "MCMultiPart Compatibility success!");
 			}
 		} catch (Exception e) {
 			MessageUtilities.warnErrorMessageToLog(Constants.modID, "An error occurred when setting up MCMultiPart Compatibility, this is most likey intended!");
