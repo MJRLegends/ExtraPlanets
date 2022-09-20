@@ -31,6 +31,7 @@ public class ExtremeReactorsCompatibility {
 				registerMethod.invoke(null, "radioactive_water_fluid", 0.13f, 0.25f, 1.17f, 0.1f);
 				registerMethod.invoke(null, "clean_water_fluid", 0.33f, 0.5f, 1.33f, 0.1f);
 				registerMethod.invoke(null, "infected_water_fluid", 0.33f, 0.5f, 1.33f, 0.1f);
+				MessageUtilities.debugMessageToLog(Constants.modID, "ExtremeReactors Compatibility success!");
 			}
 		} catch (Exception e) {
 			MessageUtilities.warnErrorMessageToLog(Constants.modID, "An error occurred when setting up ExtremeReactors Compatibility, this is most likey intended!");
