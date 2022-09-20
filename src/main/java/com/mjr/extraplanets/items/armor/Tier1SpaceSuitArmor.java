@@ -154,19 +154,19 @@ public class Tier1SpaceSuitArmor extends ElectricArmorBase implements IPressureS
 		if (chest != null && chest.getItem() instanceof IModularArmor)
 			for (Module chestModules : ModuleHelper.getModules(chest)) {
 				if (chestModules.isActive())
-					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(chestModules)))
+					if (ModuleHelper.hasPower(chest, ModuleHelper.getModuleUseCost(chestModules)))
 						chestModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
 		if (leggins != null && leggins.getItem() instanceof IModularArmor)
 			for (Module legginsModules : ModuleHelper.getModules(leggins)) {
 				if (legginsModules.isActive())
-					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(legginsModules)))
+					if (ModuleHelper.hasPower(leggins, ModuleHelper.getModuleUseCost(legginsModules)))
 						legginsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
 		if (boots != null && boots.getItem() instanceof IModularArmor)
 			for (Module bootsModules : ModuleHelper.getModules(boots)) {
 				if (bootsModules.isActive())
-					if (ModuleHelper.hasPower(helmet, ModuleHelper.getModuleUseCost(bootsModules)))
+					if (ModuleHelper.hasPower(boots, ModuleHelper.getModuleUseCost(bootsModules)))
 						bootsModules.renderHelmetOverlay(stack, player, resolution, partialTicks);
 			}
 	}
