@@ -1,9 +1,6 @@
 eclipse/
 bin/
 .gradle/
-gradle/
-gradlew
-gradlew.bat
 TexturesFolder/
 *.jar
 *.exe
@@ -29,4 +26,3 @@ build/
 *.zip
 .classpath
 .project
-gradle.properties
