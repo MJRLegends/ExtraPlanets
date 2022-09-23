@@ -30,24 +30,35 @@ buildscript {
 
 repositories {
     maven {
+        url = 'https://maven.galacticraft.net/repository/maven-common/'
+    }
+    maven {
         name 'DVS1 Maven FS'
-        url 'http://dvs1.progwml6.com/files/maven'
+        url 'https://dvs1.progwml6.com/files/maven'
     }
     maven {
-	    name 'Blame Jared Maven'
-        url 'http://maven.blamejared.com'
+        name 'Blame Jared Maven'
+        url 'https://maven.blamejared.com'
     }
     maven {
-	    name 'Redstone Flux'
-	    url = "http://maven.covers1624.net"
+        name 'Redstone Flux'
+        url = "https://maven.covers1624.net"
     }
-	maven {
-	    name 'IC2'
-	    url = "http://maven.ic2.player.to"
+    maven {
+        name 'IC2'
+        url = "https://maven.ic2.player.to"
     }
-	maven {
-	    name 'MJRLegends'
-	    url = "https://maven.mjrlegends.com/"
+    maven {
+        name 'MJRLegends'
+        url = "https://maven.mjrlegends.com/"
+    }
+    maven {
+        name 'galacticraft'
+        url = 'https://maven.galacticraft.net/repository/legacy'
+    }
+    maven {
+        name 'CurseMaven'
+        url 'https://www.cursemaven.com'
     }
 }
 
@@ -62,7 +73,7 @@ sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
 minecraft {
-    version = "1.12.2-14.23.5.2838"
+    version = "1.12.2-14.23.5.2847"
     runDir = "run"
     mappings = "snapshot_20171003"
     makeObfSourceJar = true // an Srg named sources jar is made by default. uncomment this to disable.
@@ -75,15 +86,10 @@ dependencies {
 	compile "net.industrial-craft:industrialcraft-2:${version_ic2}:api"
 	deobfCompile "com.mjr.mjrlegendslib:MJRLegendsLib:${version_mjrlegendslib}:dev"
 	compile "com.mjr.planetprogression:PlanetProgression:${version_planetprogression}:api"
-	compile files (
-		"Galacticraft-API-${version_galacticraft}.jar",
-		"GalacticraftCore-Dev-${version_galacticraft}.jar",
-		"Galacticraft-Planets-Dev-${version_galacticraft}.jar",
-		"MicdoodleCore-Dev-${version_galacticraft}.jar",
-		"Mekanism-${version_mekanism}-api.jar",
-		"Numina-${version_numina}.jar",
-		"ModularPowersuits-${version_modularpowersuits}.jar"
-	)
+	deobfCompile "dev.galacticraft:galacticraft-legacy:4.0.4-SNAPSHOT:deobf"
+    deobfCompile "curse.maven:mekanism-api-268560:2572882"
+    deobfCompile "curse.maven:numina-235440:2715198"
+   	deobfCompile "curse.maven:modularpowersuits-235442:2743885"
 	runtime "mezz.jei:jei_${minecraft_version}:${jei_version}"
 }
 
