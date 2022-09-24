@@ -43,6 +43,7 @@ minecraft {
                 // Your Minecraft in-game username, not email
                 args '--username', project.getProperty('mc_username')
             }
+            jvmArg '-Dfml.coreMods.load=micdoodle8.mods.miccore.MicdoodlePlugin'
         }
 
         server {
