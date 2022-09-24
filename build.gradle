@@ -56,12 +56,6 @@ minecraft {
 
 repositories {
     maven {
-        url = 'https://maven.galacticraft.net/repository/maven-common/'
-        content {
-            includeModule "net.minecraftforge", "legacydev"
-        }
-    }
-    maven {
         name 'DVS1 Maven FS'
         url 'https://dvs1.progwml6.com/files/maven'
         content {
