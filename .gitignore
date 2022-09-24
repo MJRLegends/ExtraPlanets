@@ -27,3 +27,4 @@ build/
 .classpath
 .project
 !/gradle/wrapper/gradle-wrapper.jar
+.idea/
