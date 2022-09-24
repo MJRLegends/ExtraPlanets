@@ -34,6 +34,15 @@ minecraft {
             workingDirectory project.file('run/client')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
+
+            if (project.hasProperty('mc_uuid')) {
+                // Your UUID, trimmed / without the dashes
+                args '--uuid', project.getProperty('mc_uuid')
+            }
+            if (project.hasProperty('mc_username')) {
+                // Your Minecraft in-game username, not email
+                args '--username', project.getProperty('mc_username')
+            }
         }
 
         server {
