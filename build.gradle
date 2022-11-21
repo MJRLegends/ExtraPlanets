@@ -149,14 +149,16 @@ publishing {
         mavenJava(MavenPublication) {
             groupId project.group
             artifactId project.archivesBaseName
-            version project.version
 
             artifact deobfJar
             artifact apiJar
+            artifact sourceJar
         }
     }
     repositories {
-        mavenLocal()
+        maven {
+            url "file://${local_maven}"
+        }
     }
 }
 
