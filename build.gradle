@@ -86,11 +86,16 @@ dependencies {
 	compile "net.industrial-craft:industrialcraft-2:${version_ic2}:api"
 	deobfCompile "com.mjr.mjrlegendslib:MJRLegendsLib:${version_mjrlegendslib}:dev"
 	compile "com.mjr.planetprogression:PlanetProgression:${version_planetprogression}:api"
-	deobfCompile "dev.galacticraft:galacticraft-legacy:4.0.2.283"
     deobfCompile "curse.maven:mekanism-api-268560:2572882"
     deobfCompile "curse.maven:numina-235440:2715198"
    	deobfCompile "curse.maven:modularpowersuits-235442:2743885"
 	runtime "mezz.jei:jei_${minecraft_version}:${jei_version}"
+	compile files (
+		"Galacticraft-API-${version_galacticraft}.jar",
+		"GalacticraftCore-Dev-${version_galacticraft}.jar",
+		"Galacticraft-Planets-Dev-${version_galacticraft}.jar",
+		"MicdoodleCore-Dev-${version_galacticraft}.jar"
+	)
 }
 
 processResources
