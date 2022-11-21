@@ -1,0 +1,28 @@
+def resourceTargets = [ 'mcmod.info' ]
+def intoTargets = [ 
+	"$rootDir/out/production/resources/", 
+	"$rootDir/out/production/${project.name}.main/", 
+	"$rootDir/bin/main/" 
+]
+def replaceProperties = [ version: project.version, mcversion: project.mc_version ]
+
+processResources {
+    inputs.properties replaceProperties
+    replaceProperties.put 'project', project
+
+    filesMatching(resourceTargets) {
+        expand replaceProperties
+    }
+
+    intoTargets.each { target ->
+        if (file(target).exists()) {
+            copy {
+                from(sourceSets.main.resources) {
+                    include resourceTargets
+                    expand replaceProperties
+                }
+                into target
+            }
+        }
+    }
+}
