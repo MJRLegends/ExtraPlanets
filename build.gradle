@@ -152,7 +152,7 @@ publishing {
 
             artifact deobfJar
             artifact apiJar
-            artifact sourceJar
+            artifact sourcesJar
         }
     }
     repositories {
