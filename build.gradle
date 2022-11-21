@@ -1,30 +1,52 @@
-def minecraft_version="1.12.2"
-def jei_version="4.8.5.147"
-def version_minetweaker="4.0.8.277"
-def version_rf="1.12-2.1.0.6"
-def version_mjrlegendslib="1.12.2-1.2.1"
-def version_planetprogression="1.12.2-0.3.8"
-def version_galacticraft="1.12.2-4.0.2.255"
-def version_mekanism="1.12.2-9.4.13.349"
-def version_ic2="2.8.99-ex112"
-def version_numina="1.12.2-1.0.38"
-def version_modularpowersuits="1.12.2-1.0.46"
-
-// For those who want the bleeding edge
 buildscript {
     repositories {
-        jcenter()
-        maven {
-            name = "forge"
-            url = "http://files.minecraftforge.net/maven"
-        }
-		maven {
-			url 'https://plugins.gradle.org/m2/'
-		}
+        maven { url = 'https://maven.minecraftforge.net/' }
+        mavenCentral()
+        maven { url 'https://plugins.gradle.org/m2/' }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
-		classpath "gradle.plugin.com.matthewprenger:CurseGradle:1.1.0"
+        classpath 'net.minecraftforge.gradle:ForgeGradle:3.+'
+        classpath "gradle.plugin.com.matthewprenger:CurseGradle:1.1.0"
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle'
+// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+apply plugin: 'com.matthewprenger.cursegradle'
+
+version = "1.12.2-0.7.4"
+group = "com.mjr.extraplanets"
+archivesBaseName = "ExtraPlanets"
+
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
+
+minecraft {
+    mappings channel: mappings_channel, version: mappings_version
+
+    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+            jvmArg '-Dfml.coreMods.load=micdoodle8.mods.miccore.MicdoodlePlugin'
+        }
+
+        server {
+
+            // Recommended logging data for a userdev environment
+            property 'forge.logging.markers', 'SCAN,REGISTRIES,REGISTRYDUMP'
+
+            // Recommended logging level for the console
+            property 'forge.logging.console.level', 'debug'
+        }
     }
 }
 
@@ -62,73 +84,33 @@ repositories {
     }
 }
 
-apply plugin: 'net.minecraftforge.gradle.forge'
-apply plugin: 'com.matthewprenger.cursegradle'
-
-version = "1.12.2-0.7.4"
-group= "com.mjr.extraplanets" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "ExtraPlanets"
-
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
-
-minecraft {
-    version = "1.12.2-14.23.5.2847"
-    runDir = "run"
-    mappings = "snapshot_20171003"
-    makeObfSourceJar = true // an Srg named sources jar is made by default. uncomment this to disable.
-}
-
 dependencies {
-    deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-${version_minetweaker}"
-    compile "mezz.jei:jei_${minecraft_version}:${jei_version}:api"
-	deobfCompile "cofh:RedstoneFlux:${version_rf}:deobf"
-	compile "net.industrial-craft:industrialcraft-2:${version_ic2}:api"
-	deobfCompile "com.mjr.mjrlegendslib:MJRLegendsLib:${version_mjrlegendslib}:dev"
-	compile "com.mjr.planetprogression:PlanetProgression:${version_planetprogression}:api"
-	deobfCompile "dev.galacticraft:galacticraft-legacy:4.0.2.283"
-    deobfCompile "curse.maven:mekanism-api-268560:2572882"
-    deobfCompile "curse.maven:numina-235440:2715198"
-   	deobfCompile "curse.maven:modularpowersuits-235442:2743885"
-	runtime "mezz.jei:jei_${minecraft_version}:${jei_version}"
+    compileOnly fg.deobf("CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-${version_minetweaker}")
+    minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
+    compileOnly("CraftTweaker2:CraftTweaker2-API:${version_minetweaker}")
+    compileOnly fg.deobf("mezz.jei:jei_${mc_version}:${jei_version}:api")
+    compileOnly fg.deobf("cofh:RedstoneFlux:${version_rf}:deobf")
+    compileOnly fg.deobf("net.industrial-craft:industrialcraft-2:${version_ic2}:api")
+    implementation fg.deobf("com.mjr.mjrlegendslib:MJRLegendsLib:${version_mjrlegendslib}:dev")
+    compileOnly fg.deobf("com.mjr.planetprogression:PlanetProgression:${version_planetprogression}:api")
+    compileOnly fg.deobf("curse.maven:mekanism-api-268560:2572882")
+    compileOnly fg.deobf("curse.maven:numina-235440:2715198")
+    compileOnly fg.deobf("curse.maven:modularpowersuits-235442:2743885")
+    compileOnly fg.deobf("curse.maven:buildcraft-61811:3204475")
+    runtimeOnly fg.deobf("mezz.jei:jei_${mc_version}:${jei_version}")
+
+    // If addon is not using mappings stable_39, use this to have mappings match
+    implementation fg.deobf("dev.galacticraft:galacticraft-legacy:4.0.4")
+
+    // if addon IS using stable_39, use this since mappings match already
+    //implementation fg.deobf("dev.galacticraft:galacticraft-legacy:4.0.4-SNAPSHOT:deobf")
 }
 
-processResources
-{
-    inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-		expand 'version':project.version, 'mcversion':project.minecraft.version
-    }
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
-    }
-}
+jar.finalizedBy('reobfJar')
 
-task deobfJar(type: Jar) {
-    from sourceSets.main.output
-    classifier = 'dev'
-	//manifest {
-    //    attributes.put("FMLAT", "extraplanets_at.cfg")
-    //    attributes.put("FMLCorePluginContainsFMLMod", "true")
-    //}
-}
+task signJar(type: net.minecraftforge.gradle.common.task.SignJar) {
+    onlyIf { project.hasProperty('keyStore') }
 
-task apiJar(type: Jar) {
-    from(sourceSets.main.output) {
-        include "com/mjr/extraplanets/api/**"
-    }
-	from(sourceSets.main.java) {
-        include "com/mjr/extraplanets/api/**"
-    }
-    classifier = 'api'
-}
-
-task signJar(type: SignJar, dependsOn: reobfJar) {
-    onlyIf {
-        project.hasProperty('keyStore')
-    }
     keyStore = project.findProperty('keyStore')
     alias = project.findProperty('keyStoreAlias')
     storePass = project.findProperty('keyStorePass')
@@ -137,41 +119,63 @@ task signJar(type: SignJar, dependsOn: reobfJar) {
     outputFile = jar.archivePath
 }
 
-artifacts {
-    archives apiJar, deobfJar
+task apiJar(type: Jar) {
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+    classifier = 'api'
+    include 'com/mjr/extraplanets/api/**'
+    from sourceSets.main.java
+    from sourceSets.main.output
 }
 
-task ("uploadMaven"){
-	apply plugin: 'maven'
-	uploadArchives {
-		repositories {
-			mavenDeployer {
-				if (project.hasProperty("local_maven")) {
-					repository(url: "file://${local_maven}")
-				}
-			}
-		}
-	}
+task sourcesJar(type: Jar) {
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+    classifier = 'sources'
+    from sourceSets.main.java
+    from sourceSets.main.resources
+}
+
+task deobfJar(type: Jar) {
+    duplicatesStrategy(DuplicatesStrategy.EXCLUDE)
+    classifier = 'dev'
+    from sourceSets.main.output
+}
+
+artifacts {
+    archives apiJar, deobfJar, sourcesJar
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId project.group
+            artifactId project.archivesBaseName
+            version project.version
+
+            artifact deobfJar
+            artifact apiJar
+        }
+    }
+    repositories {
+        mavenLocal()
+    }
 }
 
 curseforge {
-    if (project.hasProperty('curseforge_key')){
-		apiKey = project.findProperty("curseforge_key")
-		project {
-			id = "241291"
-			releaseType = "release"
-			addGameVersion "${minecraft_version}"
-			mainArtifact(jar) {
-				relations {
-					requiredLibrary 'mjrlegendslib'
-				}
-			}
-			addArtifact(apiJar)
-			addArtifact(deobfJar)
-		}
-	}
+    if (project.hasProperty('curseforge_key')) {
+        apiKey = project.findProperty("curseforge_key")
+        project {
+            id = "241291"
+            releaseType = "release"
+            addGameVersion "${mc_version}"
+            mainArtifact(jar) {
+                relations {
+                    requiredLibrary 'mjrlegendslib'
+                }
+            }
+            addArtifact(apiJar)
+            addArtifact(deobfJar)
+        }
+    }
 }
 
 build.dependsOn signJar
-tasks.build.dependsOn signJar
-tasks.curseforge.dependsOn build
