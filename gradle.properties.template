@@ -20,7 +20,12 @@ version_modularpowersuits=1.12.2-1.0.46
 
 ## Placed here just for reference,
 ## Use $USER_HOME/.gradle/gradle.properties instead or set as ENV variable
-curseforge_key=12345
+keyStore=
+keyStoreAlias=
+keyStorePass=
+keyStoreKeyPass=
+local_maven=
+curseforge_key=
 
 ##Allows using your skin while testing, This can be with or without hyphens
 ##mc_uuid=
