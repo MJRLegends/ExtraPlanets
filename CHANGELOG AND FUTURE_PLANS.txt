@@ -5,6 +5,24 @@
 
 
 ===========================================Released Updates===========================================
+v1.0.8
+*Fixed issue #668 (Crash when disabling certain Tools/Items config options but not others.)
+*Fixed Default DIM ID comments typo (Thanks to ROMVoid95)
+*Fixed weird issue with single biome dimensions mainly Mercury having weird cut outs/floating land due to Craters generation, also added a way to generate the craters after Biome replace for broken terrain affect (Not yet used)
+*Added furnace smelting xp for all ores (Suggestion #673)
+*Fixed a few typos in config file
+*Fixed Mercury Carbon Ore not having the 'Mercury' Prefix on its name, to match other dimension ores
+*Fixed a few rare possible world gen issues with Ganymede & Europa
+*Fixed issue #633 - Missing Language Localizations for Solar Panels Modules for Space Suits
+*Fixed issue #689 - Kepler 22b Tall Grass and cookies rocks blocks drop invalid items
+*Improved the Cookies Rocks block texture
+*Updated zh_CN.lang(Thanks to G-hostfox)
+*Fixed issue #694 - Basic Decontamination Unit radiation tooltip not reflecting config
+*Fixed an issue with checking space suits power where it would only check helmet for non helmet modules, maybe fixed issue #688 ?
+*Fixed possible crash issue when config has blank lines for supported space suit items config option
+*Temp fixed issue #674 (Empty Chests in Mercury& Jupiter dungeons) by using Venus loot table
+*Added log output messages for when a bunch of compact with other mods have been successfully completed
+
 v1.0.7
 *Added Polish Language file (Thanks toKruczyslaw)
 *Fixed issue #647 - Densifier not outputting to hopper
