@@ -1321,6 +1321,7 @@ item.tools.sledge_hammer.name=大錘
 item.tools.grinding_wheel.name=砂輪
 item.tools.mesh.name=線網
 item.tools.filter.name=過濾器
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=鑽石蘋果

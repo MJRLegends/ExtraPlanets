@@ -541,7 +541,7 @@ public class ExtraPlanets_Recipes {
 					new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0), new ItemStack(ExtraPlanets_Blocks.ORANGE_SAND, 1, 0) });
 
 			// Ash Block to Ash Shards
-			RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 2, 10), new Object[] { new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), new ItemStack(ExtraPlanets_Blocks.ASH_ROCK, 1, 0) });
+			RecipeUtilities.addShapelessRecipe(new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 2, 10), new Object[] { new ItemStack(ExtraPlanets_Items.TOOLS, 1), new ItemStack(ExtraPlanets_Blocks.ASH_ROCK, 1, 0) });
 
 			// Ash Shards to Ash
 			RecipeUtilities.addShapelessRecipe(ASH, new Object[] { ASH_SHARDS, ASH_SHARDS, ASH_SHARDS, ASH_SHARDS });
