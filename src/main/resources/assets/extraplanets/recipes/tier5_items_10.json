@@ -6,7 +6,8 @@
   },
   "ingredients": [
     {
-      "item": "extraplanets:tools"
+      "item": "extraplanets:tools",
+      "data": 0
     },
     {
       "item": "extraplanets:ash_rock"
