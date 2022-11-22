@@ -25,7 +25,7 @@ sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = co
 minecraft {
     mappings channel: mappings_channel, version: mappings_version
 
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     runs {
         client {
@@ -85,8 +85,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly fg.deobf("CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-${version_minetweaker}")
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
+    implementation fg.deobf("CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-${version_minetweaker}:deobf")
     compileOnly("CraftTweaker2:CraftTweaker2-API:${version_minetweaker}")
     compileOnly fg.deobf("mezz.jei:jei_${mc_version}:${jei_version}:api")
     compileOnly fg.deobf("cofh:RedstoneFlux:${version_rf}:deobf")
@@ -97,7 +97,7 @@ dependencies {
     compileOnly fg.deobf("curse.maven:numina-235440:2715198")
     compileOnly fg.deobf("curse.maven:modularpowersuits-235442:2743885")
     compileOnly fg.deobf("curse.maven:buildcraft-61811:3204475")
-    runtimeOnly fg.deobf("mezz.jei:jei_${mc_version}:${jei_version}")
+    //runtimeOnly fg.deobf("mezz.jei:jei_${mc_version}:${jei_version}")
 
     // If addon is not using mappings stable_39, use this to have mappings match
     implementation fg.deobf("dev.galacticraft:galacticraft-legacy:4.0.4")
