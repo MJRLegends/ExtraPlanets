@@ -368,17 +368,17 @@ public class MainHandlerClient {
 						event.toolTip.add(EnumColor.BRIGHT_GREEN + TranslateUtilities.translate("gui.bucket.message.extreme.reactors.compact"));
 					}
 				}
-			} else if (stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Blocks.VOLCANIC_ROCK))) {
-				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.block"));
-				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.volcanic.rock"));
-			} else if (stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT))) {
+			} else if (itemStack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Blocks.VOLCANIC_ROCK))) {
+				event.toolTip.add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.block"));
+				event.toolTip.add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.volcanic.rock"));
+			} else if (itemStack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Machines.BASIC_DECONTAMINATION_UNIT))) {
 				String text = TranslateUtilities.translate("gui.message.decontamination.unit");
 				if (text.contains("{PERCENT}"))
 					text = text.replace("{PERCENT}", Config.RADIATION_DECONTAMINATION_UNIT_REDUCE_AMOUNT + "%");
-				event.getToolTip().add(EnumColor.AQUA + text);
-			} else if (stack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))) {
-				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.block"));
-				event.getToolTip().add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.potash"));
+				event.toolTip.add(EnumColor.AQUA + text);
+			} else if (itemStack.getItem().equals(Item.getItemFromBlock(ExtraPlanets_Blocks.ORE_POTASH))) {
+				event.toolTip.add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.block"));
+				event.toolTip.add(EnumColor.AQUA + TranslateUtilities.translate("gui.message.finding.potash"));
 			}
 		}
 	}
