@@ -23,7 +23,7 @@ buildscript {
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
-		classpath "gradle.plugin.com.matthewprenger:CurseGradle:1.1.0"
+		classpath "gradle.plugin.com.matthewprenger:CurseGradle:1.4.0"
     }
 }
 
@@ -158,6 +158,11 @@ curseforge {
 			mainArtifact(jar) {
 				relations {
 					requiredLibrary 'mjrlegendslib'
+					optionalDependency 'jei'
+					optionalDependency 'more-planets-gc-addon'
+					optionalDependency 'extreme-reactors'
+					optionalDependency 'mcmultipart'
+					optionalDependency 'planet-progression'
 				}
 			}
 			addArtifact(apiJar)
