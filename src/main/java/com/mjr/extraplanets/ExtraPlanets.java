@@ -304,11 +304,16 @@ public class ExtraPlanets {
 
 		if (Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES != null) {
 			List<String> entries = new ArrayList<>();
+			for(String current : Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES) {
+				entries.add(current);
+			}
+			
 			for (Planet planet : GalaxyRegistry.getRegisteredPlanets().values()) {
 				if(planet.getUnlocalizedName().contains("overworld") || planet.atmosphere.isBreathable())
 					continue;
 				if (planet.getWorldProvider() != null && !planet.getWorldProvider().getName().contains("com.mjr.extraplanets") && !planet.getWorldProvider().getName().contains("micdoodle8.mods.galacticraft")) {
-					entries.add(planet.getUnlocalizedName() + ":5");
+					if(!Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.containsKey(planet.getUnlocalizedName()))
+						entries.add(planet.getUnlocalizedName() + ":5");
 				}
 			}
 
@@ -316,7 +321,8 @@ public class ExtraPlanets {
 				if(planet.atmosphere.isBreathable())
 					continue;
 				if (planet.getWorldProvider() != null && !planet.getWorldProvider().getName().contains("com.mjr.extraplanets") && !planet.getWorldProvider().getName().contains("micdoodle8.mods.galacticraft")) {
-					entries.add(planet.getUnlocalizedName() + ":5");
+					if(!Config.OTHER_ADDON_PLANET_MOON_RAD_VALUES_LIST.containsKey(planet.getUnlocalizedName()))
+						entries.add(planet.getUnlocalizedName() + ":5");
 				}
 			}
 
