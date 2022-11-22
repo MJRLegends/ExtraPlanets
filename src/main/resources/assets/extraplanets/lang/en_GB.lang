@@ -1321,6 +1321,7 @@ item.tools.sledge_hammer.name=Sledge Hammer
 item.tools.grinding_wheel.name=Grinding Wheel
 item.tools.mesh.name=String Mesh
 item.tools.filter.name=Filter
+item.tool.usage.name=Remaining Uses
 
 #Other Items
 item.apple_diamond.name=Diamond Apple

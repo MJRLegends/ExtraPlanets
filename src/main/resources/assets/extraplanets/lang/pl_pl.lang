@@ -1316,6 +1316,7 @@ item.tools.sledge_hammer.name=Młot Kowalski
 item.tools.grinding_wheel.name=Koło Szlifierskie
 item.tools.mesh.name=Siatka Sznurkowa
 item.tools.filter.name=Filtr
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=Diamentowe Jabłko

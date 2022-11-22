@@ -1321,6 +1321,7 @@ item.tools.sledge_hammer.name=Sledge Hammer ##NEEDS TRANSLATE##
 item.tools.grinding_wheel.name=Grinding Wheel ##NEEDS TRANSLATE##
 item.tools.mesh.name=String Mesh ##NEEDS TRANSLATE##
 item.tools.filter.name=Filter ##NEEDS TRANSLATE##
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=Diamantové jablko

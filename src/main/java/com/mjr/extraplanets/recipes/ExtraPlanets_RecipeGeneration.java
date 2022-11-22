@@ -223,7 +223,7 @@ public class ExtraPlanets_RecipeGeneration {
 
 		// Ash Block to Ash Shards
 		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "jupiter", new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 2, 10),
-				new Object[] { new ItemStack(ExtraPlanets_Items.TOOLS, 1, 0), new ItemStack(ExtraPlanets_Blocks.ASH_ROCK, 1, 0) });
+				new Object[] { new ItemStack(ExtraPlanets_Items.TOOLS, 1), new ItemStack(ExtraPlanets_Blocks.ASH_ROCK, 1, 0) });
 
 		// Ash Shards to Ash
 		RecipeDumper.addShapelessRecipeWithCondition(Constants.modID, "recipe_enabled", "jupiter", new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 9), new Object[] { new ItemStack(ExtraPlanets_Items.TIER_5_ITEMS, 1, 10),
