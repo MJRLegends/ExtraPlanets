@@ -1322,6 +1322,7 @@ item.tools.sledge_hammer.name=Marteau de forgeron
 item.tools.grinding_wheel.name=Meule
 item.tools.mesh.name=Maille de fil
 item.tools.filter.name=Filtre
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=Pomme de diamant

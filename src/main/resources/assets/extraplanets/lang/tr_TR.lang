@@ -1321,6 +1321,7 @@ item.tools.sledge_hammer.name=Ağır Çekiç
 item.tools.grinding_wheel.name=Öğütme Tekerleği
 item.tools.mesh.name=Dizilmiş Ağ
 item.tools.filter.name=Filtre
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=Elmas Elma

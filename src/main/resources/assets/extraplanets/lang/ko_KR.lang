@@ -1321,6 +1321,7 @@ item.tools.sledge_hammer.name=썰매 망치
 item.tools.grinding_wheel.name=물레방아
 item.tools.mesh.name=끈망
 item.tools.filter.name=여과기
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=다이아몬드 사과

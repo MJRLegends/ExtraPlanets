@@ -1317,6 +1317,7 @@ item.tools.sledge_hammer.name=巨锤
 item.tools.grinding_wheel.name=砂轮
 item.tools.mesh.name=线网
 item.tools.filter.name=过滤器
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=钻石苹果

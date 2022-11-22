@@ -1321,6 +1321,7 @@ item.tools.sledge_hammer.name=スレッジハンマー
 item.tools.grinding_wheel.name=研削ホイール
 item.tools.mesh.name=糸のメッシュ
 item.tools.filter.name=フィルター
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=ダイヤのリンゴ
