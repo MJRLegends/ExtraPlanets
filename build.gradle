@@ -97,7 +97,7 @@ dependencies {
     compileOnly fg.deobf("curse.maven:numina-235440:2715198")
     compileOnly fg.deobf("curse.maven:modularpowersuits-235442:2743885")
     compileOnly fg.deobf("curse.maven:buildcraft-61811:3204475")
-    //runtimeOnly fg.deobf("mezz.jei:jei_${mc_version}:${jei_version}")
+    runtimeOnly fg.deobf("mezz.jei:jei_${mc_version}:${jei_version}")
 
     // If addon is not using mappings stable_39, use this to have mappings match
     implementation fg.deobf("dev.galacticraft:galacticraft-legacy:4.0.4")
