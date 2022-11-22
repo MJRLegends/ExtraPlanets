@@ -43,6 +43,7 @@ public class MorePlanetsCompatibility {
 							new Object[] { "DDD", "PRP", "DDD", 'D', new ItemStack(ExtraPlanets_Items.TIER_10_ITEMS, 1, 4), 'P', new ItemStack(ExtraPlanets_Items.TIER_9_ITEMS, 1, 3), 'R', new ItemStack(ExtraPlanets_Items.TIER_10_ROCKET, 1, i) });
 
 				}
+				MessageUtilities.debugMessageToLog(Constants.modID, "MorePlanets Compatibility success!");
 			}
 		} catch (Exception e) {
 			MessageUtilities.warnErrorMessageToLog(Constants.modID, "An error occurred when setting up MorePlanets Compatibility, this is most likey intended!");
