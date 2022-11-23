@@ -31,7 +31,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Tier1SpaceSuitArmorJetpack extends JetpackArmorBase implements IPressureSuit, IRadiationSuit, IBreathableArmor, IModularArmor {
-	public static HashMap<EntityEquipmentSlot, ArmorSpaceSuitModel> models = new HashMap<EntityEquipmentSlot, ArmorSpaceSuitModel>();
+	public static HashMap<Integer, ArmorSpaceSuitModel> models = new HashMap<Integer, ArmorSpaceSuitModel>();
 	public String name;
 
 	public Tier1SpaceSuitArmorJetpack(String name, ArmorMaterial material, int placement) {

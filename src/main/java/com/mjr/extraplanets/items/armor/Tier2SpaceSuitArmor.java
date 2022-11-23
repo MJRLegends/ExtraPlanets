@@ -33,7 +33,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Tier2SpaceSuitArmor extends ElectricArmorBase implements IPressureSuit, IRadiationSuit, IArmorGravity, IBreathableArmor, IModularArmor, ISensorGlassesArmor {
-	public static HashMap<EntityEquipmentSlot, ArmorSpaceSuitModel> models = new HashMap<EntityEquipmentSlot, ArmorSpaceSuitModel>();
+	public static HashMap<Integer, ArmorSpaceSuitModel> models = new HashMap<Integer, ArmorSpaceSuitModel>();
 	public String name;
 
 	public Tier2SpaceSuitArmor(String name, ArmorMaterial material, int placement) {
