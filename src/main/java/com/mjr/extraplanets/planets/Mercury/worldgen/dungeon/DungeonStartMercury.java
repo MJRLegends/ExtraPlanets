@@ -14,7 +14,7 @@ import net.minecraft.world.gen.structure.StructureComponent;
 import java.util.List;
 import java.util.Random;
 
-public class DungeonStartMercury extends EntranceCraterMercury
+public class DungeonStartMercury extends RoomEntranceMercury
 {
     public List<StructureComponent> attachedComponents = Lists.newArrayList();
     public List<StructureBoundingBox> componentBounds = Lists.newArrayList();

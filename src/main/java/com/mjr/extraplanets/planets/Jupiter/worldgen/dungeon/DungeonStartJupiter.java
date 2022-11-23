@@ -14,7 +14,7 @@ import net.minecraft.world.gen.structure.StructureComponent;
 import java.util.List;
 import java.util.Random;
 
-public class DungeonStartJupiter extends EntranceCraterJupiter
+public class DungeonStartJupiter extends RoomEntranceJupiter
 {
     public List<StructureComponent> attachedComponents = Lists.newArrayList();
     public List<StructureBoundingBox> componentBounds = Lists.newArrayList();

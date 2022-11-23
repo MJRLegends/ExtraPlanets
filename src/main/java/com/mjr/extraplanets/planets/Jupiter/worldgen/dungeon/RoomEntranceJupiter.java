@@ -1,5 +1,7 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
@@ -9,34 +11,65 @@ import java.util.Random;
 
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
 
-public class RoomEntranceJupiter extends SizedPieceJupiter
-{
+public class RoomEntranceJupiter extends SizedPieceJupiter {
+    
+    private final int range = 4;
+
     public RoomEntranceJupiter()
     {
     }
 
-    public RoomEntranceJupiter(DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ)
+    public RoomEntranceJupiter(World world, DungeonConfiguration configuration, Random rand, int blockPosX, int blockPosZ)
     {
-        super(configuration, rand.nextInt(4) + 6, 12, rand.nextInt(4) + 6, EnumFacing.Plane.HORIZONTAL.random(rand));
+        super(configuration, rand.nextInt(4) + 6, rand.nextInt(2) + 5, rand.nextInt(4) + 6, EnumFacing.Plane.HORIZONTAL.random(rand));
         this.coordBaseMode = EnumFacing.SOUTH;
-        int sX = this.sizeX / 2;
-        int sZ = this.sizeZ / 2;
 
-        this.boundingBox = new StructureBoundingBox(blockPosX - sX, configuration.getYPosition(), blockPosZ - sZ, blockPosX - sX + this.sizeX, configuration.getYPosition() + this.sizeY, blockPosZ - sZ + this.sizeZ);
+        this.boundingBox = new StructureBoundingBox(blockPosX - range, configuration.getYPosition(), blockPosZ - range, blockPosX + range, 150, blockPosZ + range);
     }
 
     @Override
     public boolean addComponentParts(World worldIn, Random randomIn, StructureBoundingBox structureBoundingBoxIn)
     {
-        for (int i = 0; i <= this.sizeX; i++)
+        IBlockState block1;
+
+        int maxLevel = 0;
+
+        for (int i = -range; i <= range; i++)
+        {
+            for (int k = -range; k <= range; k++)
+            {
+                int j = this.boundingBox.getYSize();
+
+                while (j >= 0)
+                {
+                    j--;
+
+                    Block block = getBlockStateFromPos(worldIn, i + range, j, k + range, boundingBox).getBlock();
+
+                    if (Blocks.air != block && block != null)
+                    {
+                        break;
+                    }
+                }
+
+                maxLevel = Math.max(maxLevel, j + 3);
+            }
+        }
+
+        int startX = range - this.sizeX / 2;
+        int startZ = range - this.sizeZ / 2;
+        int endX = range + this.sizeX / 2;
+        int endZ = range + this.sizeZ / 2;
+
+        for (int i = startX; i <= endX; i++)
         {
             for (int j = 0; j <= this.sizeY; j++)
             {
-                for (int k = 0; k <= this.sizeZ; k++)
+                for (int k = startZ; k <= endZ; k++)
                 {
-                    if (i == 0 || i == this.sizeX || j == 0 /*|| j == this.sizeY*/ || k == 0 || k == this.sizeZ)
+                    if (i == startX || i == endX || j == 0 || j == this.sizeY || k == startZ || k == endZ)
                     {
-                        this.setBlockState(worldIn, this.configuration.getBrickBlock(), i, j, k, boundingBox);
+                        this.setBlockState(worldIn, j == 0 || j == this.sizeY ? this.configuration.getBrickBlock() : this.configuration.getBrickBlock(), i, j, k, boundingBox);
                     }
                     else
                     {
@@ -49,12 +82,77 @@ public class RoomEntranceJupiter extends SizedPieceJupiter
             }
         }
 
+        for (int i = -range; i < range; i++)
+        {
+            for (int k = -range; k < range; k++)
+            {
+                final double xDev = i / 15D;
+                final double zDev = k / 15D;
+                final double distance = xDev * xDev + zDev * zDev;
+                final int depth = (int) Math.abs(0.5 / (distance + .00001D));
+                int helper = 0;
+                for (int j = maxLevel; j > 1 && helper <= depth; j--)
+                {
+                    block1 = this.getBlockStateFromPos(worldIn, i + range, j, k + range, boundingBox);
+                    if (block1 == this.configuration.getBrickBlock() || j != this.sizeY)
+                    {
+                        this.setBlockState(worldIn, Blocks.air.getDefaultState(), i + range, j, k + range, boundingBox);
+                        helper++;
+                    }
+                }
+            }
+        }
+
         return true;
     }
 
     @Override
     public PieceJupiter getNextPiece(DungeonStartJupiter startPiece, Random rand)
     {
-        return getCorridor(rand, startPiece, 10, false);
+        if (startPiece.attachedComponents.isEmpty())
+        {
+            return getCorridor(rand, startPiece, 10, false);
+        }
+
+        return null;
+    }
+
+    @Override
+    protected StructureBoundingBox getExtension(EnumFacing direction, int length, int width)
+    {
+        int blockX, blockZ, sizeX, sizeZ;
+        int startX = this.boundingBox.minX + range - this.sizeX / 2;
+        int startZ = this.boundingBox.minZ + range - this.sizeZ / 2;
+        int endX = this.boundingBox.minX + range + this.sizeX / 2;
+        int endZ = this.boundingBox.minZ + range + this.sizeZ / 2;
+        switch (direction)
+        {
+        case NORTH:
+            sizeX = width;
+            sizeZ = length;
+            blockX = startX + (endX - startX) / 2 - sizeX / 2;
+            blockZ = startZ - sizeZ;
+            break;
+        case EAST:
+            sizeX = length;
+            sizeZ = width;
+            blockX = endX;
+            blockZ = startZ + (endZ - startZ) / 2 - sizeZ / 2;
+            break;
+        case SOUTH:
+            sizeX = width;
+            sizeZ = length;
+            blockX = startX + (endX - startX) / 2 - sizeX / 2;
+            blockZ = endZ;
+            break;
+        case WEST:
+        default:
+            sizeX = length;
+            sizeZ = width;
+            blockX = startX - sizeX;
+            blockZ = startZ + (endZ - startZ) / 2 - sizeZ / 2;
+            break;
+        }
+        return new StructureBoundingBox(blockX, blockZ, blockX + sizeX, blockZ + sizeZ);
     }
 }

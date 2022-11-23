@@ -5,7 +5,7 @@ import java.util.Random;
 import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
-import micdoodle8.mods.galacticraft.core.world.gen.dungeon.RoomChest;
+import micdoodle8.mods.galacticraft.planets.venus.world.gen.dungeon.RoomChestVenus;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntityChest;
@@ -48,7 +48,7 @@ public class RoomChestJupiter extends RoomEmptyJupiter
                     chest.setInventorySlotContents(i, null);
                 }
 
-                String chesttype = RoomChest.MOONCHEST;
+                String chesttype = RoomChestVenus.VENUSCHEST;
                 if (worldIn.provider instanceof IGalacticraftWorldProvider)
                 {
                     chesttype = ((IGalacticraftWorldProvider)worldIn.provider).getDungeonChestType();

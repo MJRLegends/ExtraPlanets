@@ -60,7 +60,7 @@ public class RoomEmptyJupiter extends SizedPieceJupiter {
 						if (placeBlock) {
 							if (j == 0) {
 								if (chanceOfMagmaBlocks != 0 && random.nextInt(chanceOfMagmaBlocks) == 1)
-									this.setBlockState(worldIn, Blocks.MAGMA.getDefaultState(), i, j, k, boundingBox);
+									this.setBlockState(worldIn, Blocks.obsidian.getDefaultState(), i, j, k, boundingBox);
 								else
 									this.setBlockState(worldIn, ExtraPlanets_Fluids.MAGMA.getDefaultState(), i, j, k, boundingBox);
 							} else

@@ -1,6 +1,5 @@
 package com.mjr.extraplanets.planets.Jupiter.worldgen.dungeon;
 
-import micdoodle8.mods.galacticraft.api.world.IGalacticraftWorldProvider;
 import micdoodle8.mods.galacticraft.core.GCBlocks;
 import micdoodle8.mods.galacticraft.core.blocks.BlockTier1TreasureChest;
 import micdoodle8.mods.galacticraft.core.world.gen.dungeon.DungeonConfiguration;
@@ -14,13 +13,10 @@ import net.minecraft.world.gen.structure.StructureComponent;
 
 import java.util.Random;
 
-import com.mjr.extraplanets.Constants;
 import com.mjr.extraplanets.planets.Jupiter.worldgen.RoomBossJupiter;
 
 public class RoomTreasureJupiterBase extends SizedPieceJupiter
 {
-    public static ResourceLocation MOONCHEST = new ResourceLocation(Constants.ASSET_PREFIX, "dungeon_jupiter");
-    public static final ResourceLocation TABLE_TIER_1_DUNGEON = LootTableList.register(MOONCHEST);
 
     public RoomTreasureJupiterBase()
     {
