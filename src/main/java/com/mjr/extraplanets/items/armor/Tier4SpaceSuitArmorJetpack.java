@@ -1,5 +1,6 @@
 package com.mjr.extraplanets.items.armor;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.lwjgl.input.Keyboard;
@@ -31,6 +32,7 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class Tier4SpaceSuitArmorJetpack extends JetpackArmorBase implements IPressureSuit, IRadiationSuit, IBreathableArmor, IModularArmor {
+	public static HashMap<EntityEquipmentSlot, ArmorSpaceSuitModel> models = new HashMap<EntityEquipmentSlot, ArmorSpaceSuitModel>();
 	public String name;
 
 	public Tier4SpaceSuitArmorJetpack(String name, ArmorMaterial material, EntityEquipmentSlot placement) {
@@ -97,7 +99,9 @@ public class Tier4SpaceSuitArmorJetpack extends JetpackArmorBase implements IPre
 	@Override
 	@SideOnly(Side.CLIENT)
 	public ModelBiped getArmorModel(EntityLivingBase entityLiving, ItemStack itemStack, EntityEquipmentSlot armorSlot, ModelBiped _default) {
-		ModelBiped armorModel = new ArmorSpaceSuitModel(armorSlot);
+		if(models.get(armorSlot) == null)
+			models.put(armorSlot, new ArmorSpaceSuitModel(armorSlot));
+		ModelBiped armorModel = models.get(armorSlot);
 		if (itemStack.getItem() instanceof Tier4SpaceSuitArmorJetpack) {
 			armorModel = fillingArmorModel(armorModel, entityLiving);
 			if (hasColor(itemStack) && armorModel instanceof ArmorCustomModel)
