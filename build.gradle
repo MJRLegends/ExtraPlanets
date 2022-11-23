@@ -108,15 +108,17 @@ task apiJar(type: Jar) {
 }
 
 task signJar(type: SignJar, dependsOn: reobfJar) {
-    onlyIf {
-        project.hasProperty('keyStore')
+	if (project.hasProperty("keyStore")) {
+	    onlyIf {
+	        project.hasProperty('keyStore')
+	    }
+	    keyStore = project.getProperty('keyStore')
+	    alias = project.getProperty('keyStoreAlias')
+	    storePass = project.getProperty('keyStorePass')
+	    keyPass = project.getProperty('keyStoreKeyPass')
+	    inputFile = jar.archivePath
+	    outputFile = jar.archivePath
     }
-    keyStore = project.getProperty('keyStore')
-    alias = project.getProperty('keyStoreAlias')
-    storePass = project.getProperty('keyStorePass')
-    keyPass = project.getProperty('keyStoreKeyPass')
-    inputFile = jar.archivePath
-    outputFile = jar.archivePath
 }
 
 
