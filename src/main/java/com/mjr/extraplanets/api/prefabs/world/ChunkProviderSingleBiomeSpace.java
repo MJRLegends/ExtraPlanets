@@ -267,8 +267,8 @@ public abstract class ChunkProviderSingleBiomeSpace extends ChunkProviderBase {
 					yDev = 5 - yDev;
 					int helper = 0;
 					for (int y = 256; y > 0; y--) {
-						if (Blocks.air != primer.getBlockState(this.getIndex(x, y, z)).getBlock() && helper <= yDev) {
-							primer.setBlockState(getIndex(x, y, z), Blocks.air.getDefaultState());
+						if (Blocks.air != primer.getBlockState(x, y, z).getBlock() && helper <= yDev) {
+							primer.setBlockState(x, y, z, Blocks.air.getDefaultState());
 							// chunkArray[this.getIndex(x, y, z)] = Blocks.air;
 							// metaArray[this.getIndex(x, y, z)] = 0;
 							helper++;
