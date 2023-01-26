@@ -7,7 +7,6 @@ import com.mjr.mjrlegendslib.util.TranslateUtilities;
 
 import micdoodle8.mods.galacticraft.api.tile.ILandingPadAttachable;
 import micdoodle8.mods.galacticraft.api.vector.BlockVec3;
-import micdoodle8.mods.galacticraft.core.GCItems;
 import micdoodle8.mods.galacticraft.core.energy.item.ItemElectricBase;
 import micdoodle8.mods.galacticraft.core.energy.tile.TileBaseElectricBlockWithInventory;
 import micdoodle8.mods.galacticraft.core.tile.IMachineSides;
@@ -104,7 +103,7 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 
 	@Override
 	public int[] getSlotsForFace(EnumFacing side) {
-		return new int[] { 0, 1 };
+		return new int[] { 0 };
 	}
 
 	@Override
@@ -124,7 +123,7 @@ public class TileEntityVehicleChanger extends TileBaseElectricBlockWithInventory
 
 	@Override
 	public boolean isItemValidForSlot(int slotID, ItemStack itemstack) {
-		return (slotID == 1 && itemstack != null && itemstack.getItem() == GCItems.fuelCanister) || (slotID == 0 ? ItemElectricBase.isElectricItem(itemstack.getItem()) : false);
+		return slotID == 0 ? ItemElectricBase.isElectricItem(itemstack.getItem()) : false;
 	}
 
 	@Override
