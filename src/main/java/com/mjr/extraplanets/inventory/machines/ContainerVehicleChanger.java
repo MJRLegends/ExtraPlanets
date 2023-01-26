@@ -64,7 +64,7 @@ public class ContainerVehicleChanger extends Container {
 							return null;
 						}
 					} else if (par2 < 29) {
-						if (!this.mergeItemStack(var5, 29, 38, false)) {
+						if (!this.mergeItemStack(var5, 29, 37, false)) {
 							return null;
 						}
 					} else if (!this.mergeItemStack(var5, 2, 29, false)) {
