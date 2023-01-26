@@ -5,6 +5,12 @@
 
 
 ===========================================Released Updates===========================================
+v1.4.4
+*Fixed issue #708 - Fixed issue with right clicking in VehicleChanger due to slots issues
+*Fixed issue #417 - Sledge Hammer Acts As Item, Not Tool, Used Up In Every Recipe
+*Fixed issue #716 - Other planet/moon radiation values config resets upon loading game
+*Fixed issue #705 & #631 - Extreme Tick Lag with space suits due to model creation issue, that can be highlighted when Electroblob77 Wizardry Mod is present
+
 v1.4.3
 *Fixed issue #668 (Crash when disabling certain Tools/Items config options but not others.)
 *Fixed Default DIM ID comments typo (Thanks to ROMVoid95)
