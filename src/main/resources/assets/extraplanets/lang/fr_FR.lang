@@ -588,7 +588,6 @@ keybind.module.manager.name=Ouvrir le gestionnaire de module
 keybind.module.pre.launch.name=Ouvrir l'interface graphique de la liste de contrôle avant le lancement
 keybind.module.nasa.workbench.name=ouvrir l'interface d'utilisateur graphique portable de la NASA
 
-
 #GUI Module Manager
 gui.module_manager.name=Gestionnaire de modules
 gui.modules_helmet.name=Modules de casque
@@ -1348,6 +1347,7 @@ item.canned_food.dehydrated_porkchop.name=Côtelette de porc déshydratée
 item.canned_food.dehydrated_fish.name=Morue déshydratée
 item.canned_food.dehydrated_salmon.name=Saumon déshydraté
 item.canned_food.dehydrated_chicken.name=Poulet déshydraté
+item.canned_food.dehydrated_beef.name=Dehydrated Beef ##NEEDS TRANSLATE##
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=Batterie Niveau 1
@@ -1418,6 +1418,7 @@ achievement.neptune_planet.desc=Prener une fusée Niveau 7 pour aller sur Neptun
 achievement.pluto_planet.desc=Prener une fusée Niveau 8 pour aller sur Pluton.
 achievement.eris_planet.desc=Prener une fusée Niveau 9 pour aller sur Eris.
 achievement.kepler22b_planet.desc=Prener une fusée Niveau 10 pour aller sur Kepler 22b
+
 achievement.mercury_boss=Boss Niveau 4 Vaincu !
 achievement.jupiter_boss=Boss Niveau 5 Vaincu ! 
 achievement.saturn_boss=Boss Niveau 6 Vaincu ! 
@@ -1585,8 +1586,11 @@ tile.jupiterDungeonBrickStoneStairs.name=Escalier en mur de donjon de Jupiter
 tile.saturnDungeonBrickStoneStairs.name=Escalier en mur de donjon de Saturne
 tile.uranusDungeonBrickStoneStairs.name=Escalier en mur de donjon d'Uranus
 tile.neptuneDungeonBrickStoneStairs.name=Escalier en mur de donjon de Neptune
+
 #Planets
 planet.Venus=Vénus
+
+planet.VenusEP=Vénus 2.0
 
 #Other Blocks
 tile.slime_block.name=Bloc de slime
