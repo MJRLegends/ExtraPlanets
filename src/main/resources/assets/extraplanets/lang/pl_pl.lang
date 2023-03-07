@@ -633,8 +633,8 @@ gui.module.pre_launch_checklist.desc=Umożliwia łatwy dostęp do listy kontroln
 gui.module.nasa_workbench.desc=Umożliwia przenośny dostęp do stołu NASA z Galacticraft, spójrz do sterowania, aby otworzyć
 gui.module.oxygen_tank_switch.desc=Zamień wyposażone puste zbiorniki na dowolne dostępne, wypełnione zbiorniki tlenu w twoim ekwipunku
 gui.module.auto_space_gear_equip.desc=Automatycznie wyposaża w dowolny sprzęt związany z kosmosem w twoim ekwipunku
-gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
-gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Bomba Nuklearna
