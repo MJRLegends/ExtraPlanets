@@ -579,18 +579,18 @@ public class Config {
 		PLUTO_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Pluto Villages", true, "Setting this option to false will disable & remove the Pluto Villages generation").getBoolean(true);
 		ERIS_VILLAGES = config.get(Constants.CONFIG_CATEGORY_DIMENSION_SETTINGS, "Enable Eris Villages", true, "Setting this option to false will disable & remove the Eris Villages generation").getBoolean(true);
 
-		TRITON = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Triton", true, "Setting this option to false will remove Triton & all the related items/block/tools/armour/space stations!").getBoolean(true);
-		EUROPA = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Europa", true, "Setting this option to false will remove Europa & all the related items/block/tools/armour/space stations!").getBoolean(true);
-		IO = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "IO", true, "Setting this option to false will remove IO & all the related items/block/tools/armour/space stations!").getBoolean(true);
-		DEIMOS = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Deimos", true, "Setting this option to false will remove Deimos & all the related items/block/tools/armour/space stations!").getBoolean(true);
-		PHOBOS = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Phobos", true, "Setting this option to false will remove Phobos & all the related items/block/tools/armour/space stations!").getBoolean(true);
-		CALLISTO = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Callisto", true, "Setting this option to false will remove Callisto & all the related items/block/tools/armour/space stations!").getBoolean(true);
-		GANYMEDE = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Ganymede", true, "Setting this option to false will remove Ganymede & all the related items/block/tools/armour/space stations!").getBoolean(true);
-		RHEA = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Rhea", true, "Setting this option to false will remove Rhea & all the related items/block/tools/armour/space stations!").getBoolean(true);
-		TITAN = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Titan", true, "Setting this option to false will remove Titan & all the related items/block/tools/armour/space stations!").getBoolean(true);
-		OBERON = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Oberon", true, "Setting this option to false will remove Oberon & all the related items/block/tools/armour/space stations!").getBoolean(true);
-		TITANIA = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Titania", true, "Setting this option to false will remove Titania & all the related items/block/tools/armour/space stations!").getBoolean(true);
-		IAPETUS = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Iapetus", true, "Setting this option to false will remove Iapetus & all the related items/block/tools/armour/space stations!").getBoolean(true);
+		TRITON = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Triton", true, "Setting this option to false will remove Triton & all the related items/blocks/tools/armour/space stations!").getBoolean(true);
+		EUROPA = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Europa", true, "Setting this option to false will remove Europa & all the related items/blocks/tools/armour/space stations!").getBoolean(true);
+		IO = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "IO", true, "Setting this option to false will remove IO & all the related items/blocks/tools/armour/space stations!").getBoolean(true);
+		DEIMOS = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Deimos", true, "Setting this option to false will remove Deimos & all the related items/blocks/tools/armour/space stations!").getBoolean(true);
+		PHOBOS = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Phobos", true, "Setting this option to false will remove Phobos & all the related items/blocks/tools/armour/space stations!").getBoolean(true);
+		CALLISTO = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Callisto", true, "Setting this option to false will remove Callisto & all the related items/blocks/tools/armour/space stations!").getBoolean(true);
+		GANYMEDE = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Ganymede", true, "Setting this option to false will remove Ganymede & all the related items/blocks/tools/armour/space stations!").getBoolean(true);
+		RHEA = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Rhea", true, "Setting this option to false will remove Rhea & all the related items/blocks/tools/armour/space stations!").getBoolean(true);
+		TITAN = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Titan", true, "Setting this option to false will remove Titan & all the related items/blocks/tools/armour/space stations!").getBoolean(true);
+		OBERON = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Oberon", true, "Setting this option to false will remove Oberon & all the related items/blocks/tools/armour/space stations!").getBoolean(true);
+		TITANIA = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Titania", true, "Setting this option to false will remove Titania & all the related items/blocks/tools/armour/space stations!").getBoolean(true);
+		IAPETUS = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Iapetus", true, "Setting this option to false will remove Iapetus & all the related items/blocks/tools/armour/space stations!").getBoolean(true);
 
 		CERES = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Ceres", true, "Setting this option to false will remove Ceres & all the related items/block/tools/armour/space stations!").getBoolean(true);
 		KEPLER22B = config.get(Constants.CONFIG_CATEGORY_OTHER_DIMENSIONS, "Kepler 22b", true, "Setting this option to false will remove Kepler 22b & all the related items/block/tools/armour/space stations!").getBoolean(true);
@@ -667,18 +667,18 @@ public class Config {
 		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Titania Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
 		config.moveProperty(Constants.CONFIG_CATEGORY_DIMENSION_IDS, "Iapetus Dimension ID Legacy (DONT TOUCH)", Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD);
 
-		IO_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Io Dimension ID Legacy (DONT TOUCH)", -32, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
-		EUROPA_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Europa Dimension ID Legacy (DONT TOUCH)", -34, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
-		PHOBOS_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Phobos Dimension ID Legacy (DONT TOUCH)", -33, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
-		DEIMOS_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Deimos Dimension ID Legacy (DONT TOUCH)", -35, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
-		TRITON_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Triton Dimension ID Legacy (DONT TOUCH)", -36, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
-		CALLISTO_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Callisto Dimension ID Legacy (DONT TOUCH)", -37, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
-		GANYMEDE_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Ganymede Dimension ID Legacy (DONT TOUCH)", -38, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
-		RHEA_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Rhea Dimension ID Legacy (DONT TOUCH)", -39, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
-		TITAN_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Titan Dimension ID Legacy (DONT TOUCH)", -40, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
-		OBERON_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Oberon Dimension ID Legacy (DONT TOUCH)", -41, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
-		TITANIA_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Titania Dimension ID Legacy (DONT TOUCH)", -42, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
-		IAPETUS_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Iapetus Dimension ID Legacy (DONT TOUCH)", -43, "Used for internal mirgration of old Dimension Save folders to new ids").getInt();
+		IO_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Io Dimension ID Legacy (DONT TOUCH)", -32, "Used for internal migration of old Dimension Save folders to new ids").getInt();
+		EUROPA_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Europa Dimension ID Legacy (DONT TOUCH)", -34, "Used for internal migration of old Dimension Save folders to new ids").getInt();
+		PHOBOS_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Phobos Dimension ID Legacy (DONT TOUCH)", -33, "Used for internal migration of old Dimension Save folders to new ids").getInt();
+		DEIMOS_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Deimos Dimension ID Legacy (DONT TOUCH)", -35, "Used for internal migration of old Dimension Save folders to new ids").getInt();
+		TRITON_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Triton Dimension ID Legacy (DONT TOUCH)", -36, "Used for internal migration of old Dimension Save folders to new ids").getInt();
+		CALLISTO_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Callisto Dimension ID Legacy (DONT TOUCH)", -37, "Used for internal migration of old Dimension Save folders to new ids").getInt();
+		GANYMEDE_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Ganymede Dimension ID Legacy (DONT TOUCH)", -38, "Used for internal migration of old Dimension Save folders to new ids").getInt();
+		RHEA_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Rhea Dimension ID Legacy (DONT TOUCH)", -39, "Used for internal migration of old Dimension Save folders to new ids").getInt();
+		TITAN_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Titan Dimension ID Legacy (DONT TOUCH)", -40, "Used for internal migration of old Dimension Save folders to new ids").getInt();
+		OBERON_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Oberon Dimension ID Legacy (DONT TOUCH)", -41, "Used for internal migration of old Dimension Save folders to new ids").getInt();
+		TITANIA_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Titania Dimension ID Legacy (DONT TOUCH)", -42, "Used for internal migration of old Dimension Save folders to new ids").getInt();
+		IAPETUS_ID_LEGACY = config.get(Constants.CONFIG_CATEGORY_DIMENSION_IDS_OLD, "Iapetus Dimension ID Legacy (DONT TOUCH)", -43, "Used for internal migration of old Dimension Save folders to new ids").getInt();
 		
 		MOVE_ID_DIMENSION_LEGACY = config.get(Constants.CONFIG_CATEGORY_MAIN_DIMENSIONS, "Enable Legacy Dimension ID Migration", false, "Setting this option to true will move Legacy Dimensions with old ID's to new ID! Use if moon dimensions are stil using above Legacy (DONT TOUCH) ID's")
 				.getBoolean(false);
@@ -809,8 +809,8 @@ public class Config {
 		SCHEMATIC_MARS_ROVER_PAGE_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Mars Rover Page ID", 6673, "[range: -2147483647 ~ 2147483647, default: 6673]").getInt();
 		SCHEMATIC_VENUS_ROVER_PAGE_ID = config.get(Constants.CONFIG_CATEGORY_SCHEMATIC_GUI_IDS, "Schematic Venus Rover Page ID", 6674, "[range: -2147483647 ~ 2147483647, default: 6674]").getInt();
 
-		NEI_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable NEI Recipe support", true, "Setting this to false will disable & remove the JEI Support for Custom Machines/Rockets/Vehicles").getBoolean(true);
-		JEI_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable JEI Recipe support", true, "Setting this to false will disable & remove the NEI Support for Custom Machines/Rockets/Vehicles").getBoolean(true);
+		NEI_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable NEI Recipe support", true, "Setting this to false will disable & remove the NEI Support for Custom Machines/Rockets/Vehicles").getBoolean(true);
+		JEI_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable JEI Recipe support", true, "Setting this to false will disable & remove the JEI Support for Custom Machines/Rockets/Vehicles").getBoolean(true);
 
 		ORE_DICTIONARY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Adding of All Planet/Moons Ores to the Ore Dictionary", true, "Setting this to false will disable & remove all Ore Dictionary Support for Planet and Moon Ores!")
 				.getBoolean(true);
@@ -821,7 +821,7 @@ public class Config {
 
 		MORE_PLANETS_COMPATIBILITY = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable More Planets Compatibility", false,
 				"FOR THIS TO WORK YOU WILL NEED TO DISABLED ALL CONFIG OPTIONS IN THE MORE PLANETS CONFIG UNDER THE 'config_moreplanets_gc_addon_compat' SECTION!").getBoolean(false);
-		GC_DECONSTRUCTOR_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galacticraft Deconstuctor Machine Compatibility", true, "Setting this to false will disable Galacticraft Deconstuctor Machine Compatibility!")
+		GC_DECONSTRUCTOR_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galacticraft Deconstuctor Machine Compatibility", true, "Setting this to false will disable Galacticraft Deconstructor Machine Compatibility!")
 				.getBoolean(true);
 
 		MORE_PLANETS_ROCKET_CRUSHER_SUPPORT = config
