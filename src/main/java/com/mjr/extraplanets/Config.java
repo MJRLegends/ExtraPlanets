@@ -830,7 +830,8 @@ public class Config {
 		EXTREME_REACTORS_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Extreme Reactors Compatibility", true, "Setting this to false will disable & remove Extreme Reactors Compatibility!").getBoolean(true);
 		MC_MULITPART_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable MC MultiPart Compatibility", true, "Setting this to false will disable & remove MC MultiPart Compatibility!").getBoolean(true);
 
-		GC_DECONSTRUCTOR_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galacticraft Deconstuctor Machine Compatibility", true, "Setting this to false will disable Galacticraft Deconstructor Machine Compatibility!")
+		config.renameProperty(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galacticraft Deconstuctor Machine Compatibility", "Enable Galacticraft Deconstructor Machine Compatibility");
+		GC_DECONSTRUCTOR_SUPPORT = config.get(Constants.CONFIG_CATEGORY_COMPATIBILITY, "Enable Galacticraft Deconstructor Machine Compatibility", true, "Setting this to false will disable Galacticraft Deconstructor Machine Compatibility!")
 				.getBoolean(true);
 
 		MORE_PLANETS_ROCKET_CRUSHER_SUPPORT = config
@@ -842,13 +843,11 @@ public class Config {
 		ORE_LEAD_GENERATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Amount of Lead Ore Generation per chunk", 5, "This option is used for changing the Lead Ore Spawn Rate [range: 0 ~ 2147483647, default: 5]").getInt();
 
 		config.renameProperty(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestaial Selection Screen", "Use Custom Galaxy Map/Celestial Selection Screen");
-		
 		USE_CUSTOM_CELESTIAL_SELECTION = config
 				.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Use Custom Galaxy Map/Celestial Selection Screen", true, "Setting this option to false, will change it back to be using the Galacticraft Galaxy Map/Celestial Selection Screen")
 				.getBoolean(true);
 		
 		config.renameProperty(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Show Extended info panel on Custom Galaxy Map/Celestaial Selection Screen", "Show Extended info panel on Custom Galaxy Map/Celestial Selection Screen");
-
 		SHOW_EXINFO_CUSTOM_CELESTIAL_SELECTION = config.get(Constants.CONFIG_CATEGORY_GENERAL_SETTINGS, "Show Extended info panel on Custom Galaxy Map/Celestial Selection Screen", true,
 				"Setting this option to false, will change disabled extended info panel on Custom Celestial Selection Screen").getBoolean(true);
 
@@ -927,7 +926,8 @@ public class Config {
 		IAPETUS_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Iapetus (in %)", 30, "[0 = Disabled. : 0 ~ 100, default: 30]").getInt();
 		TITANIA_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Titania (in %)", 35, "[0 = Disabled. : 0 ~ 100, default: 35]").getInt();
 		OBERON_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Oberon (in %)", 35, "[0 = Disabled. : 0 ~ 100, default: 35]").getInt();
-		TRITON_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Trition (in %)", 42, "[0 = Disabled. : 0 ~ 100, default: 42]").getInt();
+		config.renameProperty(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Trition (in %)", "Amount of Radiation on Triton (in %)");
+		TRITON_RADIATION_AMOUNT = config.get(Constants.CONFIG_CATEGORY_PRESSURE_RADIATION_SETTINGS, "Amount of Radiation on Triton (in %)", 42, "[0 = Disabled. : 0 ~ 100, default: 42]").getInt();
 
 		MERCURY_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Mercury Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
 		CERES_DISTANCE_OFFSET = (float) config.get(Constants.CONFIG_CATEGORY_CELESTIAL_BODY_MAP_SETTINGS, "Ceres Planet Map Relative Distance From Center Offset", 0.0, "[range: -100 ~ 100, default: 0]").getDouble();
