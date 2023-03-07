@@ -539,7 +539,7 @@ gui.radiation.reduced.message=放射線レベルが減少しました。減少�
 gui.radiation.reduced.message.2=(初期/現在の数値から)
 gui.radiation.current.message=あなたの現在の放射線レベルは
 gui.radiation.subject.message=あなたは現在
-gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit, Anti Rad Drinks ##NEEDS TRANSLATE##
+gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit ,or Anti Rad Drinks ##NEEDS TRANSLATE##
 gui.radiation.type.message=radiation exposure ##NEEDS TRANSLATE##
 gui.status.waiting.on.player.name=プレイヤーが入っていません
 gui.message.finding.block=次の場所で発見できる：
@@ -633,8 +633,8 @@ gui.module.pre_launch_checklist.desc=Galacticraftの発射前チェックリス�
 gui.module.nasa_workbench.desc=GalacticraftのNASA作業台へ遠隔アクセスできる. キー設定を参照.
 gui.module.oxygen_tank_switch.desc=装着した酸素タンクが空になったら、インベントリのタンクと交換する
 gui.module.auto_space_gear_equip.desc=インベントリにあるスペースギアを自動的に装着する
-gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
-gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=核爆弾
