@@ -539,7 +539,7 @@ gui.radiation.reduced.message=Die Schwere deiner Verstrahlung wurde reduziert um
 gui.radiation.reduced.message.2=von Ihrem ursprünglichen / aktuellen Betrag 
 gui.radiation.current.message=So schwer bist du aktuell verstrahlt
 gui.radiation.subject.message=Du gehörst nun
-gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit, Anti Rad Drinks ##NEEDS TRANSLATE##
+gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit ,or Anti Rad Drinks ##NEEDS TRANSLATE##
 gui.radiation.type.message=radiation exposure ##NEEDS TRANSLATE##
 gui.status.waiting.on.player.name=Kein Spieler in Maschine
 gui.message.finding.block=Kann gefunden werden auf
@@ -633,8 +633,8 @@ gui.module.pre_launch_checklist.desc=Ermöglicht den einfachen Zugriff auf die V
 gui.module.nasa_workbench.desc=Ermöglicht den portablen Zugriff auf eine Raketenwerkbank von Galacticraft. Siehe Tastenbelegung! 
 gui.module.oxygen_tank_switch.desc=Tauscht leere Tanks mit einem verfügbaren nicht leeren Sauerstofftank in Ihrem Inventar aus 
 gui.module.auto_space_gear_equip.desc=Rüstet alle Raumanzugsgegenstände in Ihrem Inventar automatisch aus 
-gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
-gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Atombombe
