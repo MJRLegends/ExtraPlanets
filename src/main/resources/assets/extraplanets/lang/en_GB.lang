@@ -585,7 +585,7 @@ gui.celestial_body_has_dungeon.name=Has Dungeon
 #GUI Controls/Keybinds
 keybind.vehicle_inv.name=Open Powered Vehicle Inventory
 keybind.module.manager.name=Open Module Manager
-keybind.module.pre.launch.name=Open Pre Launch Checklist
+keybind.module.pre.launch.name=Open Pre Launch Checklist GUI
 keybind.module.nasa.workbench.name=Open Portable NASA Workbench GUI
 
 #GUI Module Manager
