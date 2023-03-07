@@ -1267,7 +1267,7 @@ item.potassium_iodide.name=Kaliumiodid
 item.potassium.name=Kalium
 item.potash_shards.name=Potaschenstück
 item.anti_radiation.name=Anti-Verstrahlt
-anti_radiation.desc=Reduziert den Strahlungspegel um {{PERCENT}} der aktuellen Menge ##NEEDS TRANSLATE##
+anti_radiation.desc=Reduziert den Strahlungspegel um {PERCENT} der aktuellen Menge ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=Stufe 1 komplettes Set
