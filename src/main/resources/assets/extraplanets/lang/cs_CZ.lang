@@ -1499,10 +1499,7 @@ checklist.tier_3_thermal_padding.key=Equip Tier 3 Thermal Suit ##NEEDS TRANSLATE
 checklist.tier_4_thermal_padding.key=Equip Tier 4 Thermal Suit ##NEEDS TRANSLATE##
 checklist.tier_5_thermal_padding.key=Equip Tier 5 Thermal Suit ##NEEDS TRANSLATE##
 
-checklist.tier_1_space_suit.key=Equip Tier 1 Space Suit ##NEEDS TRANSLATE##
-checklist.tier_2_space_suit.key=Equip Tier 2 Space Suit ##NEEDS TRANSLATE##
-checklist.tier_3_space_suit.key=Equip Tier 3 Space Suit ##NEEDS TRANSLATE##
-checklist.tier_4_space_suit.key=Equip Tier 4 Space Suit ##NEEDS TRANSLATE##
+checklist.space_suit.key=Any Tier of Space Suit ##NEEDS TRANSLATE##
 
 satellite.space_station.mercury=Mercury Space Station ##NEEDS TRANSLATE##
 satellite.space_station.venus=Venus Space Station ##NEEDS TRANSLATE##
