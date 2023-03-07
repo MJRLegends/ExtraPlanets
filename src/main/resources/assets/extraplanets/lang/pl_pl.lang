@@ -454,6 +454,7 @@ tile.basic_solar_evaporation_chamber.description=Służy do poddawania surowca w
 tile.basic_purifier.description=Służy do oczyszczania wody zainfekowanej i radioaktywnej.
 tile.basic_densifier.description=Służy do kompresji płynów w gęstą formę
 tile.vehicle_charger.description=Umieść obok platformy ładującej pojazdu lub platformie startowej, aby zapewnić ładowanie
+
 #Machine Containers
 container.solarhybrid.name=Hybrydowy Panel Słoneczny
 container.solarultimate.name=Najlepszy Panel Słoneczny
@@ -474,6 +475,7 @@ container.vehicle.charger.name=Ładownik Pojazdów
 container.basic.purifier.name=Oczyszczacz
 container.basic.densifier.name=Podstawowy Zagęszczacz
 container.basic.decontamination.unit.name=Podstawowa Jednostka Odkażająca
+
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=Zbiornik na płynną Skrystalizowaną Wodę
 gui.message.salt_water.name=Skrystalizowana Woda
@@ -584,8 +586,7 @@ gui.celestial_body_has_dungeon.name=Ma lochy
 keybind.vehicle_inv.name=Otwórz ekwipunek pojazdów zasilanych
 keybind.module.manager.name=Otwórz Menedżer modułów
 keybind.module.pre.launch.name=Otwórz GUI listy kontrolnej przed startem
-keybind.module.nasa.workbench.name=Otwórz przenośny stół warsztatowy NASA
- GUI ##NEEDS TRANSLATE##
+keybind.module.nasa.workbench.name=Otwórz przenośny stół warsztatowy NASA GUI
 
 #GUI Module Manager
 gui.module_manager.name=Mendżer Modułów
@@ -672,6 +673,7 @@ tile.candy_blocks_horizontal.candy_cane_lime_horizontal.name=Limonkowa Laska Cuk
 tile.candy_blocks_horizontal.candy_cane_purple_horizontal.name=Fioletowa Laska Cukrowa (Pozioma)
 tile.candy_blocks_horizontal.candy_cane_brown_horizontal.name=Brązowa Laska Cukrowa (Pozioma)
 tile.candy_blocks_horizontal.candy_cane_black_horizontal.name=Czarna Laska Cukrowa (Pozioma)
+
 tile.cake_blocks.cake_block.name=Blok Ciasta
 tile.cake_blocks.cake_block_red_velvet.name=Blok Czerwonego Aksamitnego Ciasta
 tile.cake_blocks.cake_block_chocolate.name=Blok Ciasta Czekoladowego
@@ -742,6 +744,7 @@ tile.pluto_stairs_surface.name=Schody Ze Skały Powierzchniowej Plutona
 tile.pluto_stairs_sub_surface.name=Schody Ze Skały Podpowierzchniowej Plutona
 tile.pluto_stairs_stone.name=Schody Z Kamienia Plutonowego
 tile.pluto_stairs_stone_bricks.name=Schody Z Plutonowych Kamiennych Cegieł 
+
 tile.eris_stairs_surface.name=Schody Ze Skały Powierzchniowej Erisa
 tile.eris_stairs_sub_surface.name=Schody Ze Skały Podpowierzchniowej Erisa
 tile.eris_stairs_stone.name=Schody Z Kamienia Erisowego
@@ -759,6 +762,7 @@ item.item_tier10_electric_rocket.t10Rocket.name=Rakieta Elektryczna Poziomu 10
 rocket_pad.tier2.desc=Musi być umieszczony na platformie startowej poziomie 2
 rocket_pad.tier3.desc=Musi być umieszczony na platformie startowej poziomie 3
 rocket_pad.electric.desc=Musi być umieszczony na zasilanej platformie startowej
+
 #Vehicles
 item.mars_rover.name=Marsjański Łazik
 item.venus_rover.name=Wenusjański Łazik
@@ -1158,6 +1162,7 @@ tier1_armor_layer.desc=Receptura w kompresorze: 4 Sztabki Aluminium
 tier2_armor_layer.desc=Receptura w kompresorze: 4 Sztabki Tytanu
 tier3_armor_layer.desc=Receptura w kompresorze: 4 Sztabki Palladium
 tier4_armor_layer.desc=Receptura w kompresorze: 4 Sztabki Cynku
+
 module.pressure_module_1.name=Modół Ciśnieniowy Poziomu 1
 module.pressure_module_1.desc=Chroni cię przed ciśnieniem na Planetach/Księżycach/Stacjach Kosmicznych z ExtraPlanets albo Galacticraft
 module.pressure_module_2.name=Modół Ciśnieniowy Poziomu 2
