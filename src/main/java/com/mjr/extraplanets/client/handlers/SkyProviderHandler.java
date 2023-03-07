@@ -104,12 +104,12 @@ public class SkyProviderHandler {
 				if (world.provider.getSkyRenderer() == null) {
 					world.provider.setSkyRenderer(new SkyProviderJupiter((IGalacticraftWorldProvider) world.provider));
 				}
-				if (Config.JUITPER_CLOUDS) {
+				if (Config.JUPITER_CLOUDS) {
 					if (world.provider.getCloudRenderer() == null) {
 						world.provider.setCloudRenderer(new CloudRenderJupiter());
 					} else {
 						if (!MCUtilities.getClient().isGamePaused()) {
-							CloudRenderJupiter.cloudTickCounter += Config.JUITPER_CLOUDS_SPEED;
+							CloudRenderJupiter.cloudTickCounter += Config.JUPITER_CLOUDS_SPEED;
 						}
 					}
 				}

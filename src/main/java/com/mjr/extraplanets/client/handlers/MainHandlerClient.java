@@ -266,7 +266,7 @@ public class MainHandlerClient {
 	public void renderLightning(ClientProxyCore.EventSpecialRender event) {
 		final Minecraft minecraft = MCUtilities.getClient();
 		final EntityPlayerSP player = minecraft.player;
-		if (player != null && Config.JUITPER_LIGHTING_CLIENT) {
+		if (player != null && Config.JUPITER_LIGHTING_CLIENT) {
 			Iterator<Map.Entry<BlockPos, Integer>> it = lightning.entrySet().iterator();
 			while (it.hasNext()) {
 				Map.Entry<BlockPos, Integer> entry = it.next();
@@ -283,7 +283,7 @@ public class MainHandlerClient {
 		final EntityPlayerSP player = minecraft.player;
 
 		if (player == event.player) {
-			if (Config.JUITPER_LIGHTING_CLIENT) {
+			if (Config.JUPITER_LIGHTING_CLIENT) {
 				Iterator<Map.Entry<BlockPos, Integer>> it = lightning.entrySet().iterator();
 				while (it.hasNext()) {
 					Map.Entry<BlockPos, Integer> entry = it.next();

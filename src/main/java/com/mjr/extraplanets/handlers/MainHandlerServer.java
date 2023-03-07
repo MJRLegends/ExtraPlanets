@@ -148,7 +148,7 @@ public class MainHandlerServer {
 
 	@SubscribeEvent
 	public void onPlayer(PlayerTickEvent event) {
-		if (Config.JUITPER_LIGHTING_SERVER && event.player.world.provider.getDimensionType().getId() == Config.JUPITER_ID) {
+		if (Config.JUPITER_LIGHTING_SERVER && event.player.world.provider.getDimensionType().getId() == Config.JUPITER_ID) {
 			Random rand = new Random();
 			int addX = rand.nextInt(64);
 			int addZ = rand.nextInt(64);
