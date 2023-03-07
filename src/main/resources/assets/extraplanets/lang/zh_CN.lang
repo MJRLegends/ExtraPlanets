@@ -633,8 +633,8 @@ gui.module.pre_launch_checklist.desc=允许轻松访问星系的发射检查表�
 gui.module.nasa_workbench.desc=允许便携地访问星系的 NASA 工作台，请参见控制按键以打开它
 gui.module.oxygen_tank_switch.desc=将装备好的空罐与物品栏中任何可用的非空氧气罐互换
 gui.module.auto_space_gear_equip.desc=在你的物品栏中自动装备任何与太空相关的装备
-gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
-gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=核弹

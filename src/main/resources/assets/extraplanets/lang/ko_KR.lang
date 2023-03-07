@@ -539,7 +539,7 @@ gui.radiation.reduced.message=방사선 수준이 다음에 의해 감소되었�
 gui.radiation.reduced.message.2=당신의 최초/현재 양에서
 gui.radiation.current.message=현재 방사선 수준은
 gui.radiation.subject.message=지금 해야할 것은
-gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit, Anti Rad Drinks ##NEEDS TRANSLATE##
+gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit ,or Anti Rad Drinks ##NEEDS TRANSLATE##
 gui.radiation.type.message=radiation exposure ##NEEDS TRANSLATE##
 gui.status.waiting.on.player.name=기계에 플레이어가 없습니다.
 gui.message.finding.block=찾을 수 있는 곳
@@ -633,8 +633,8 @@ gui.module.pre_launch_checklist.desc=갤럭티크래프트에서 발사전 체�
 gui.module.nasa_workbench.desc=갤럭티크래프트에서 KARI 워크벤치로 이동할 수 있습니다. 키를 열려면 컨트롤을 참조하세요.
 gui.module.oxygen_tank_switch.desc=인벤토리에서 빈 탱크를 안 빈 산소 탱크로 교체하여 장착하세요.
 gui.module.auto_space_gear_equip.desc=인벤토리에 우주 관련 장비를 자동으로 장착합니다.
-gui.module.basic_solar_panel.desc=Very slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
-gui.module.advanced_solar_panel.desc=Slowly recharger's your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=핵폭탄
