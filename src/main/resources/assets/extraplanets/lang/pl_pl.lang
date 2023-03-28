@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=Merkurowa Ruda Miedzi
 tile.mercury.ore_mercury.name=Ruda Merkurego
 tile.mercury.stone_bricks.name=Merkurowe Kamienne Cegły
 tile.mercury.mercury_block.name=Blok Merkurego
-tile.mercury.ore_carbon.name=Ruda Karbonu
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=Blok Karbonu
 tile.mercury.dungeon_brick.name=Cegły Merkurowego Lochu
 
@@ -454,6 +454,7 @@ tile.basic_solar_evaporation_chamber.description=Służy do poddawania surowca w
 tile.basic_purifier.description=Służy do oczyszczania wody zainfekowanej i radioaktywnej.
 tile.basic_densifier.description=Służy do kompresji płynów w gęstą formę
 tile.vehicle_charger.description=Umieść obok platformy ładującej pojazdu lub platformie startowej, aby zapewnić ładowanie
+
 #Machine Containers
 container.solarhybrid.name=Hybrydowy Panel Słoneczny
 container.solarultimate.name=Najlepszy Panel Słoneczny
@@ -474,6 +475,7 @@ container.vehicle.charger.name=Ładownik Pojazdów
 container.basic.purifier.name=Oczyszczacz
 container.basic.densifier.name=Podstawowy Zagęszczacz
 container.basic.decontamination.unit.name=Podstawowa Jednostka Odkażająca
+
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=Zbiornik na płynną Skrystalizowaną Wodę
 gui.message.salt_water.name=Skrystalizowana Woda
@@ -543,7 +545,7 @@ gui.status.waiting.on.player.name=Brak Gracza w Maszynie
 gui.message.finding.block=Można znaleźć na
 gui.message.finding.volcanic.rock=Jowiszu i Io
 gui.message.finding.potash=Merkury, głęboko pod ziemią
-gui.message.decontamination.unit=Zmniejsza poziom promieniowania o 10%
+gui.message.decontamination.unit=Zmniejsza poziom promieniowania o {PERCENT}
 gui.battery_slot.desc.custom=Zalecane użycie masywnej baterii
 gui.radiation.cancel.message=Możesz użyć uszczelniaczy tlenowych z ulepszeniem kontrolera temperatury otoczenia, aby uzyskać pełną ochronę przed promieniowaniem i ciśnieniem
 currently.unused.name=Obecnie nieużywane!
@@ -584,8 +586,7 @@ gui.celestial_body_has_dungeon.name=Ma lochy
 keybind.vehicle_inv.name=Otwórz ekwipunek pojazdów zasilanych
 keybind.module.manager.name=Otwórz Menedżer modułów
 keybind.module.pre.launch.name=Otwórz GUI listy kontrolnej przed startem
-keybind.module.nasa.workbench.name=Otwórz przenośny stół warsztatowy NASA
- GUI ##NEEDS TRANSLATE##
+keybind.module.nasa.workbench.name=Otwórz przenośny stół warsztatowy NASA GUI
 
 #GUI Module Manager
 gui.module_manager.name=Mendżer Modułów
@@ -621,6 +622,8 @@ gui.module.pre_launch_checklist.name=Lista Kontrolna przed startem
 gui.module.nasa_workbench.name=Przenośny stół NASA
 gui.module.oxygen_tank_switch.name=Automatyczna wymiana zbiornika tlenu
 gui.module.auto_space_gear_equip.name=Automatyczna wymiana sprzętu kosmicznego
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Działa tak samo jak okulary sensoryczne z Galacticraft
 gui.module.no_fall_damage.desc=Usuwa obrażenia od upadku
@@ -630,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Umożliwia łatwy dostęp do listy kontroln
 gui.module.nasa_workbench.desc=Umożliwia przenośny dostęp do stołu NASA z Galacticraft, spójrz do sterowania, aby otworzyć
 gui.module.oxygen_tank_switch.desc=Zamień wyposażone puste zbiorniki na dowolne dostępne, wypełnione zbiorniki tlenu w twoim ekwipunku
 gui.module.auto_space_gear_equip.desc=Automatycznie wyposaża w dowolny sprzęt związany z kosmosem w twoim ekwipunku
+gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Bomba Nuklearna
@@ -668,6 +673,7 @@ tile.candy_blocks_horizontal.candy_cane_lime_horizontal.name=Limonkowa Laska Cuk
 tile.candy_blocks_horizontal.candy_cane_purple_horizontal.name=Fioletowa Laska Cukrowa (Pozioma)
 tile.candy_blocks_horizontal.candy_cane_brown_horizontal.name=Brązowa Laska Cukrowa (Pozioma)
 tile.candy_blocks_horizontal.candy_cane_black_horizontal.name=Czarna Laska Cukrowa (Pozioma)
+
 tile.cake_blocks.cake_block.name=Blok Ciasta
 tile.cake_blocks.cake_block_red_velvet.name=Blok Czerwonego Aksamitnego Ciasta
 tile.cake_blocks.cake_block_chocolate.name=Blok Ciasta Czekoladowego
@@ -738,6 +744,7 @@ tile.pluto_stairs_surface.name=Schody Ze Skały Powierzchniowej Plutona
 tile.pluto_stairs_sub_surface.name=Schody Ze Skały Podpowierzchniowej Plutona
 tile.pluto_stairs_stone.name=Schody Z Kamienia Plutonowego
 tile.pluto_stairs_stone_bricks.name=Schody Z Plutonowych Kamiennych Cegieł 
+
 tile.eris_stairs_surface.name=Schody Ze Skały Powierzchniowej Erisa
 tile.eris_stairs_sub_surface.name=Schody Ze Skały Podpowierzchniowej Erisa
 tile.eris_stairs_stone.name=Schody Z Kamienia Erisowego
@@ -755,6 +762,7 @@ item.item_tier10_electric_rocket.t10Rocket.name=Rakieta Elektryczna Poziomu 10
 rocket_pad.tier2.desc=Musi być umieszczony na platformie startowej poziomie 2
 rocket_pad.tier3.desc=Musi być umieszczony na platformie startowej poziomie 3
 rocket_pad.electric.desc=Musi być umieszczony na zasilanej platformie startowej
+
 #Vehicles
 item.mars_rover.name=Marsjański Łazik
 item.venus_rover.name=Wenusjański Łazik
@@ -1154,6 +1162,7 @@ tier1_armor_layer.desc=Receptura w kompresorze: 4 Sztabki Aluminium
 tier2_armor_layer.desc=Receptura w kompresorze: 4 Sztabki Tytanu
 tier3_armor_layer.desc=Receptura w kompresorze: 4 Sztabki Palladium
 tier4_armor_layer.desc=Receptura w kompresorze: 4 Sztabki Cynku
+
 module.pressure_module_1.name=Modół Ciśnieniowy Poziomu 1
 module.pressure_module_1.desc=Chroni cię przed ciśnieniem na Planetach/Księżycach/Stacjach Kosmicznych z ExtraPlanets albo Galacticraft
 module.pressure_module_2.name=Modół Ciśnieniowy Poziomu 2
@@ -1312,6 +1321,7 @@ item.tools.sledge_hammer.name=Młot Kowalski
 item.tools.grinding_wheel.name=Koło Szlifierskie
 item.tools.mesh.name=Siatka Sznurkowa
 item.tools.filter.name=Filtr
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=Diamentowe Jabłko

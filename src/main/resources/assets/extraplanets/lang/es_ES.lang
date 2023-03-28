@@ -539,13 +539,13 @@ gui.radiation.reduced.message=Tus niveles de Radiación han sido reducidos a
 gui.radiation.reduced.message.2=su punto inicial/Actual
 gui.radiation.current.message=		Nivel de Radiación
 gui.radiation.subject.message=Tu estas siendo sometido a 
-gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit, Anti Rad Drinks ##NEEDS TRANSLATE##
+gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit ,or Anti Rad Drinks ##NEEDS TRANSLATE##
 gui.radiation.type.message=radiation exposure ##NEEDS TRANSLATE##
 gui.status.waiting.on.player.name=No hay jugador en la Maquína
 gui.message.finding.block=Se puede encontrar en
 gui.message.finding.volcanic.rock=Jupiter e Io
 gui.message.finding.potash=Mercury, deep underground ##NEEDS TRANSLATE##
-gui.message.decontamination.unit=Reduce el nivel de Radiación en un 10%
+gui.message.decontamination.unit=Reduce el nivel de Radiación en un {PERCENT}
 gui.battery_slot.desc.custom=Se recomienda usar una Batería Masiva
 gui.radiation.cancel.message=¡Puedes usar Selladores de Oxigeno con un Controlador Térmico Ambiental para protegerte de la Radiación y la presión
 currently.unused.name=¡Actualmente en desuso!
@@ -622,6 +622,8 @@ gui.module.pre_launch_checklist.name=Lista Pre-Lanzamie.
 gui.module.nasa_workbench.name=Mesa Portatil de la NASA
 gui.module.oxygen_tank_switch.name=Cambio de Tanques Auto.
 gui.module.auto_space_gear_equip.name=Equipado Auto. de Traje Espacial
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Funciona igual que los Lentes con Sensor del Galacticraft
 gui.module.no_fall_damage.desc=Anula todo daño de caida del Jugador
@@ -631,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Permite tener un acceso rapido de la Lista 
 gui.module.nasa_workbench.desc=Permite tener un acceso rapido a la Mesa de la NASA del Galacticraft. Por defecto usar la tecla"O"
 gui.module.oxygen_tank_switch.desc=Intercambia los Tanques Vacios por unos Llenos dentro de tu inventario de manera automática
 gui.module.auto_space_gear_equip.desc=Automaticamente equipa cualquier traje espacial en tu inventario
+gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Bomba Nuclear
@@ -1317,6 +1321,7 @@ item.tools.sledge_hammer.name=Almádena
 item.tools.grinding_wheel.name=Muela
 item.tools.mesh.name=Malla de cuerda
 item.tools.filter.name=Filtro
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=Manzana de diamante

@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=Merkür Bakır Cevheri
 tile.mercury.ore_mercury.name=Civa Cevheri
 tile.mercury.stone_bricks.name=Merkür Taşı Tuğla
 tile.mercury.mercury_block.name=Merkür Bloğu
-tile.mercury.ore_carbon.name=Karbon Cevheri
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=Karbon Bloğu
 tile.mercury.dungeon_brick.name=Merkür Zindan Tuğlası
 
@@ -539,13 +539,13 @@ gui.radiation.reduced.message=Radrasyon seviyen düşüyor
 gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=Şuan ki radrasyon seviyen
 gui.radiation.subject.message=Şimdi ki konun
-gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit, Anti Rad Drinks ##NEEDS TRANSLATE##
+gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit ,or Anti Rad Drinks ##NEEDS TRANSLATE##
 gui.radiation.type.message=radiation exposure ##NEEDS TRANSLATE##
 gui.status.waiting.on.player.name=Makinede oyuncu yok
 gui.message.finding.block=Bunu bulabilirsin
 gui.message.finding.volcanic.rock=Jüpiter & Io
 gui.message.finding.potash=Mercury, deep underground ##NEEDS TRANSLATE##
-gui.message.decontamination.unit=Radrasyon seviyeni 10% düşürür
+gui.message.decontamination.unit=Radrasyon seviyeni {PERCENT} düşürür
 gui.battery_slot.desc.custom=Büyük batarya kullanman önerilir
 gui.radiation.cancel.message=Radrasyon ve Basınçtan korunmak için oksijen aletleri kullanabilirsin
 currently.unused.name=Şuan kullanılamıyor!
@@ -603,7 +603,7 @@ gui.module_cost.name=Fiyat
 gui.module.installed.name=Modül Yüklendi!
 gui.module.missing_requirements.name=Üzgünüm, bu modülü yüklemek için gereken gereksinimleri karşılamıyorsun
 gui.module.already_installed.name=Zaten bu modülü yükledin
-gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
+gui.module.missing_armour.name=Unable to install due to a missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
 gui.module.inventory_full.name=Unable to uninstall this module due to your inventory! ##NEEDS TRANSLATE##
 gui.module.description.name=Modül Açıklaması
 gui.module.name.name=Modül İsmi
@@ -622,6 +622,8 @@ gui.module.pre_launch_checklist.name=Ön Kalkış Kontrol Listesi
 gui.module.nasa_workbench.name=Taşınabilir NASA Çalışma Masası
 gui.module.oxygen_tank_switch.name=Oksijen Tankı OTO Doldurucu
 gui.module.auto_space_gear_equip.name=Uzay Aracı OTO Donatıcısı
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Galacticraft Sensörlü Gözlüklerle hemen hemen aynı görevi görür
 gui.module.no_fall_damage.desc=Oyuncudan düşme hasarını kaldırır
@@ -631,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Galacticraft ön kalkış işlemini kolayla
 gui.module.nasa_workbench.desc=Galacticraft NASA çalışma masasını taşımanızı sağlar
 gui.module.oxygen_tank_switch.desc=Boş tankınızı otomatik eşitler
 gui.module.auto_space_gear_equip.desc=Gerekli aletleri otomatik envanterinize verir
+gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Nükleer Bomba
@@ -1317,6 +1321,7 @@ item.tools.sledge_hammer.name=Ağır Çekiç
 item.tools.grinding_wheel.name=Öğütme Tekerleği
 item.tools.mesh.name=Dizilmiş Ağ
 item.tools.filter.name=Filtre
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=Elmas Elma

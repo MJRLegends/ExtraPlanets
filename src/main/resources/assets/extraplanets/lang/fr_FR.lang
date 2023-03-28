@@ -539,13 +539,13 @@ gui.radiation.reduced.message=Votre niveau de rayonnement a été réduit de
 gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=Votre niveau de rayonnement actuel est
 gui.radiation.subject.message=Vous êtes maintenant soumis à
-gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit, Anti Rad Drinks ##NEEDS TRANSLATE##
+gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit ,or Anti Rad Drinks ##NEEDS TRANSLATE##
 gui.radiation.type.message=radiation exposure ##NEEDS TRANSLATE##
 gui.status.waiting.on.player.name=Aucun joueur dans la machine
 gui.message.finding.block=Peut être trouvé sur
 gui.message.finding.volcanic.rock=Jupiter & Io
 gui.message.finding.potash=Mercury, deep underground ##NEEDS TRANSLATE##
-gui.message.decontamination.unit=Réduit le niveau de rayonnement de 10%
+gui.message.decontamination.unit=Réduit le niveau de rayonnement de {PERCENT}
 gui.battery_slot.desc.custom=Recommandé d'utiliser une batterie massive
 gui.radiation.cancel.message=Vous pouvez utiliser des scellants d'oxygène avec une mise à niveau du contrôleur thermique ambiant pour une protection totale contre le rayonnement et la pression.
 currently.unused.name=Actuellement inutilisé!
@@ -588,7 +588,6 @@ keybind.module.manager.name=Ouvrir le gestionnaire de module
 keybind.module.pre.launch.name=Ouvrir l'interface graphique de la liste de contrôle avant le lancement
 keybind.module.nasa.workbench.name=ouvrir l'interface d'utilisateur graphique portable de la NASA
 
-
 #GUI Module Manager
 gui.module_manager.name=Gestionnaire de modules
 gui.modules_helmet.name=Modules de casque
@@ -623,6 +622,8 @@ gui.module.pre_launch_checklist.name=Liste de vérification avant le lancement
 gui.module.nasa_workbench.name=Table de travail portable
 gui.module.oxygen_tank_switch.name=Réservoir d'oxygène automatique
 gui.module.auto_space_gear_equip.name=Equipement spatiaux automatique
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Fonctionne de la même manière que les lunettes sensorielles de Galacticraft
 gui.module.no_fall_damage.desc=Supprime les dégâts de chute du joueur
@@ -632,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Permet un accès facile à la liste de cont
 gui.module.nasa_workbench.desc=Permet l’accès portable à la table de travail de Galacticraft.
 gui.module.oxygen_tank_switch.desc=Remplacez les réservoirs vides équipés par un réservoir d'oxygène non vide disponible dans votre inventaire.
 gui.module.auto_space_gear_equip.desc=Équipez automatiquement tout équipement lié à l'espace dans votre inventaire.
+gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Bombe nucléaire
@@ -1318,6 +1321,7 @@ item.tools.sledge_hammer.name=Marteau de forgeron
 item.tools.grinding_wheel.name=Meule
 item.tools.mesh.name=Maille de fil
 item.tools.filter.name=Filtre
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=Pomme de diamant
@@ -1343,6 +1347,7 @@ item.canned_food.dehydrated_porkchop.name=Côtelette de porc déshydratée
 item.canned_food.dehydrated_fish.name=Morue déshydratée
 item.canned_food.dehydrated_salmon.name=Saumon déshydraté
 item.canned_food.dehydrated_chicken.name=Poulet déshydraté
+item.canned_food.dehydrated_beef.name=Dehydrated Beef ##NEEDS TRANSLATE##
 
 #Electric Parts
 item.electric_parts.battery_tier1.name=Batterie Niveau 1
@@ -1413,6 +1418,7 @@ achievement.neptune_planet.desc=Prener une fusée Niveau 7 pour aller sur Neptun
 achievement.pluto_planet.desc=Prener une fusée Niveau 8 pour aller sur Pluton.
 achievement.eris_planet.desc=Prener une fusée Niveau 9 pour aller sur Eris.
 achievement.kepler22b_planet.desc=Prener une fusée Niveau 10 pour aller sur Kepler 22b
+
 achievement.mercury_boss=Boss Niveau 4 Vaincu !
 achievement.jupiter_boss=Boss Niveau 5 Vaincu ! 
 achievement.saturn_boss=Boss Niveau 6 Vaincu ! 
@@ -1580,8 +1586,11 @@ tile.jupiterDungeonBrickStoneStairs.name=Escalier en mur de donjon de Jupiter
 tile.saturnDungeonBrickStoneStairs.name=Escalier en mur de donjon de Saturne
 tile.uranusDungeonBrickStoneStairs.name=Escalier en mur de donjon d'Uranus
 tile.neptuneDungeonBrickStoneStairs.name=Escalier en mur de donjon de Neptune
+
 #Planets
 planet.Venus=Vénus
+
+planet.VenusEP=Vénus 2.0
 
 #Other Blocks
 tile.slime_block.name=Bloc de slime

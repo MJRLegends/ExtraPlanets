@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=Merkur Kupfererz
 tile.mercury.ore_mercury.name=Quecksilbererz
 tile.mercury.stone_bricks.name=Quecksilber Steinziegel
 tile.mercury.mercury_block.name=Quecksilberblock
-tile.mercury.ore_carbon.name=Kohlenstofferz
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=Kohlenstoffblock
 tile.mercury.dungeon_brick.name=Merkur Verließziegel
 
@@ -539,13 +539,13 @@ gui.radiation.reduced.message=Die Schwere deiner Verstrahlung wurde reduziert um
 gui.radiation.reduced.message.2=von Ihrem ursprünglichen / aktuellen Betrag 
 gui.radiation.current.message=So schwer bist du aktuell verstrahlt
 gui.radiation.subject.message=Du gehörst nun
-gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit, Anti Rad Drinks ##NEEDS TRANSLATE##
+gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit ,or Anti Rad Drinks ##NEEDS TRANSLATE##
 gui.radiation.type.message=radiation exposure ##NEEDS TRANSLATE##
 gui.status.waiting.on.player.name=Kein Spieler in Maschine
 gui.message.finding.block=Kann gefunden werden auf
 gui.message.finding.volcanic.rock=Jupiter und Io
 gui.message.finding.potash=Mercury, deep underground ##NEEDS TRANSLATE##
-gui.message.decontamination.unit=Reduziert Schwere der Verstrahlung um 10%
+gui.message.decontamination.unit=Reduziert Schwere der Verstrahlung um {PERCENT}
 gui.battery_slot.desc.custom=Es wird empfohlen, eine große Batterie zu nutzen
 gui.radiation.cancel.message=Du kannst den Umgebungstemperatur-Controller in einem Sauerstoffversiegler benutzen, um dich vollständig von Druck und Strahlung zu schützen
 currently.unused.name=Zur Zeit unbenutzt!
@@ -621,7 +621,9 @@ gui.module.test.name=Testmodul
 gui.module.pre_launch_checklist.name=Vor dem Start - Checkliste 
 gui.module.nasa_workbench.name=Tragbare Raketenwerkbank 
 gui.module.oxygen_tank_switch.name=Auto Sauerstofftank wechsler 
-gui.module.auto_space_gear_equip.name=Auto Raumanzug-Rüstung ausrüster 
+gui.module.auto_space_gear_equip.name=Auto Raumanzug-Rüstung ausrüster
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Funktioniert wie die Galacticraft-Sensorbrille 
 gui.module.no_fall_damage.desc=Entfernt Sturzschäden vom Spieler 
@@ -631,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Ermöglicht den einfachen Zugriff auf die V
 gui.module.nasa_workbench.desc=Ermöglicht den portablen Zugriff auf eine Raketenwerkbank von Galacticraft. Siehe Tastenbelegung! 
 gui.module.oxygen_tank_switch.desc=Tauscht leere Tanks mit einem verfügbaren nicht leeren Sauerstofftank in Ihrem Inventar aus 
 gui.module.auto_space_gear_equip.desc=Rüstet alle Raumanzugsgegenstände in Ihrem Inventar automatisch aus 
+gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=Atombombe
@@ -1263,7 +1267,7 @@ item.potassium_iodide.name=Kaliumiodid
 item.potassium.name=Kalium
 item.potash_shards.name=Potaschenstück
 item.anti_radiation.name=Anti-Verstrahlt
-anti_radiation.desc=Reduziert den Strahlungspegel um {{PERCENT}} der aktuellen Menge ##NEEDS TRANSLATE##
+anti_radiation.desc=Reduziert den Strahlungspegel um {PERCENT} der aktuellen Menge ##NEEDS TRANSLATE##
 
 #Kits
 item.tier1_kit.full.name=Stufe 1 komplettes Set
@@ -1317,6 +1321,7 @@ item.tools.sledge_hammer.name=Vorschlaghammer
 item.tools.grinding_wheel.name=Schleifscheibe
 item.tools.mesh.name=Netz
 item.tools.filter.name=Filter
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=Diamantapfel

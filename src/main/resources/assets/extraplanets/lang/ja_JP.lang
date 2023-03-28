@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=水星の銅鉱石
 tile.mercury.ore_mercury.name=水星鉱石
 tile.mercury.stone_bricks.name=水星の石レンガ
 tile.mercury.mercury_block.name=固体水銀ブロック
-tile.mercury.ore_carbon.name=カーボン鉱石
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=カーボンブロック
 tile.mercury.dungeon_brick.name=水星ダンジョンのレンガ
 
@@ -539,7 +539,7 @@ gui.radiation.reduced.message=放射線レベルが減少しました。減少�
 gui.radiation.reduced.message.2=(初期/現在の数値から)
 gui.radiation.current.message=あなたの現在の放射線レベルは
 gui.radiation.subject.message=あなたは現在
-gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit, Anti Rad Drinks ##NEEDS TRANSLATE##
+gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit ,or Anti Rad Drinks ##NEEDS TRANSLATE##
 gui.radiation.type.message=radiation exposure ##NEEDS TRANSLATE##
 gui.status.waiting.on.player.name=プレイヤーが入っていません
 gui.message.finding.block=次の場所で発見できる：
@@ -622,6 +622,8 @@ gui.module.pre_launch_checklist.name=発射前チェックリスト
 gui.module.nasa_workbench.name=ポータブルNASA作業台
 gui.module.oxygen_tank_switch.name=酸素タンク自動交換
 gui.module.auto_space_gear_equip.name=スペースギア自動装備
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Galacticraftのセンサーゴーグルと同等の機能
 gui.module.no_fall_damage.desc=落下ダメージを無効化する
@@ -631,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Galacticraftの発射前チェックリス�
 gui.module.nasa_workbench.desc=GalacticraftのNASA作業台へ遠隔アクセスできる. キー設定を参照.
 gui.module.oxygen_tank_switch.desc=装着した酸素タンクが空になったら、インベントリのタンクと交換する
 gui.module.auto_space_gear_equip.desc=インベントリにあるスペースギアを自動的に装着する
+gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=核爆弾
@@ -1317,6 +1321,7 @@ item.tools.sledge_hammer.name=スレッジハンマー
 item.tools.grinding_wheel.name=研削ホイール
 item.tools.mesh.name=糸のメッシュ
 item.tools.filter.name=フィルター
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=ダイヤのリンゴ

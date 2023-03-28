@@ -539,13 +539,13 @@ gui.radiation.reduced.message=Ваш уровень радиации был ум
 gui.radiation.reduced.message.2=от вашего первоначального/текущего количества
 gui.radiation.current.message=Ваш текущий уровень радиации
 gui.radiation.subject.message=Вы теперь подвержены
-gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit, Anti Rad Drinks ##NEEDS TRANSLATE##
-gui.radiation.type.message=radiation exposure ##NEEDS TRANSLATE##
+gui.radiation.reverse.message=Уровень полученной радиации будет медленно уменьшаться с течением времени (1.5x на планетах и лунах), для более быстрого уменьшения используйте сон, базовый обеззараживающий блок, анти-рад
+gui.radiation.type.message=радиационному облучению
 gui.status.waiting.on.player.name=Нет игроков в машине
 gui.message.finding.block=Можно найти на
 gui.message.finding.volcanic.rock=Юпитер и Ио
 gui.message.finding.potash=Меркурий, глубоко под землей
-gui.message.decontamination.unit=Снижает уровень радиации на 10%
+gui.message.decontamination.unit=Снижает уровень радиации на {PERCENT}
 gui.battery_slot.desc.custom=Рекомендуется использовать в Массивном аккумуляторе
 gui.radiation.cancel.message=Вы можете использовать кислородные уплотнители с улучшением температурного контроллера для полной защиты от излучения и давления
 currently.unused.name=В настоящее время не используется!
@@ -604,7 +604,7 @@ gui.module.installed.name=Модуль установлен!
 gui.module.missing_requirements.name=Извините, вы не отвечаете требованиям для установки этого модуля!
 gui.module.already_installed.name=У вас уже установлен этот модуль!
 gui.module.missing_armour.name=Невозможно установить из-за отсутствия части брони скафандра!
-gui.module.inventory_full.name=Unable to uninstall this module due to your inventory! ##NEEDS TRANSLATE##
+gui.module.inventory_full.name=Невозможно удалить из-за отсутствия места в инвентаре!
 gui.module.description.name=Описание модуля
 gui.module.name.name=Имя модуля
 gui.module.type.name=Тип модуля
@@ -622,6 +622,8 @@ gui.module.pre_launch_checklist.name=Предконтрольный список
 gui.module.nasa_workbench.name=Портативный верстак NASA
 gui.module.oxygen_tank_switch.name=Автосмена кислородного резервуара
 gui.module.auto_space_gear_equip.name=Автоэкипировка космического снаряжения
+gui.module.basic_solar_panel.name=Основная портативная солнечная панель
+gui.module.advanced_solar_panel.name=Улучшенная портативная солнечная панель
 
 gui.module.sensor_glasses.desc=Функции такие же, как и сенсорные очки Galacticraft
 gui.module.no_fall_damage.desc=Удаляет урон от падения игрока
@@ -631,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Позволяет легко получи�
 gui.module.nasa_workbench.desc=Предоставляет доступ к портативному верстаку NASA Galacticraft, смотри клавиши управления, чтобы открыть
 gui.module.oxygen_tank_switch.desc=Подкачки из оборудованных пустых резервуаров с любым доступным не пустом кислородный баком в вашем инвентаре
 gui.module.auto_space_gear_equip.desc=Автоматически экипировывает любое связанное с космосом снаряжение в вашем инвентаре
+gui.module.basic_solar_panel.desc=Очень медленно заряжает скафандр в дневное время.
+gui.module.advanced_solar_panel.desc=Медленно заряжает скафандр в дневное время.
 
 #Other Blocks
 tile.nuclear_bomb.name=Ядерная бомба
@@ -1115,8 +1119,8 @@ space.suit.information.extra.4=более медленная радиация б
 space.suit.power.info=Поддерживает следующие системы энергии,
 space.suit.power.info.2=RF, Mekanism джоули, GC джоули, IC2
 space.suit.power.info.3=Питание требуется только для модулей
-space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
-space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
+space.suit.temp.information=Временный/Одноразовое использование. Получено с помощью комплекта для экстренных ситуаций
+space.suit.temp.ticks=Оставшееся время использования
 
 item_desc.spacesuit.shift.name=Нажмите %s для информации о давлении и радиации
 item_desc.spacesuit.module.shift.name=Нажмите %s для установленных модулей
@@ -1317,6 +1321,7 @@ item.tools.sledge_hammer.name=Кувалда
 item.tools.grinding_wheel.name=Шлифовальный круг
 item.tools.mesh.name=Строчная сетка
 item.tools.filter.name=Фильтр
+item.tool.usage.name=Осталось использований
 
 #Other Items
 item.apple_diamond.name=Алмазное яблоко

@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=水星銅礦
 tile.mercury.ore_mercury.name=水星汞礦
 tile.mercury.stone_bricks.name=水星石磚
 tile.mercury.mercury_block.name=水星方塊
-tile.mercury.ore_carbon.name=碳礦
+tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
 tile.mercury.carbon_block.name=碳磚
 tile.mercury.dungeon_brick.name=水星地牢磚
 
@@ -539,13 +539,13 @@ gui.radiation.reduced.message=你的輻射水平已經降低
 gui.radiation.reduced.message.2=from your initial/current amount ##NEEDS TRANSLATE##
 gui.radiation.current.message=你目前的輻射水平為
 gui.radiation.subject.message=你現在受制於
-gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit, Anti Rad Drinks ##NEEDS TRANSLATE##
+gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit ,or Anti Rad Drinks ##NEEDS TRANSLATE##
 gui.radiation.type.message=radiation exposure ##NEEDS TRANSLATE##
 gui.status.waiting.on.player.name=沒有玩家在機器中
 gui.message.finding.block=可以在
 gui.message.finding.volcanic.rock=木星和木衛一找到
 gui.message.finding.potash=Mercury, deep underground ##NEEDS TRANSLATE##
-gui.message.decontamination.unit=將輻射水平降低10%
+gui.message.decontamination.unit=將輻射水平降低{PERCENT}
 gui.battery_slot.desc.custom=建議使用大容量電池
 gui.radiation.cancel.message=你可以使用氧氣封口機進行環境溫度控制器升級，以充分保護輻射和壓力
 currently.unused.name=目前未使用！
@@ -603,7 +603,7 @@ gui.module_cost.name=Cost ##NEEDS TRANSLATE##
 gui.module.installed.name=Module Installed! ##NEEDS TRANSLATE##
 gui.module.missing_requirements.name=Sorry you do not meet the requirements to install this module! ##NEEDS TRANSLATE##
 gui.module.already_installed.name=You already have this module installed! ##NEEDS TRANSLATE##
-gui.module.missing_armour.name=Unable to install due to missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
+gui.module.missing_armour.name=Unable to install due to a missing part of the Space Suit Armour! ##NEEDS TRANSLATE##
 gui.module.inventory_full.name=Unable to uninstall this module due to your inventory! ##NEEDS TRANSLATE##
 gui.module.description.name=Module Description ##NEEDS TRANSLATE##
 gui.module.name.name=Module Name ##NEEDS TRANSLATE##
@@ -622,6 +622,8 @@ gui.module.pre_launch_checklist.name=Pre Launch Checklist ##NEEDS TRANSLATE##
 gui.module.nasa_workbench.name=Portable NASA Workbench ##NEEDS TRANSLATE##
 gui.module.oxygen_tank_switch.name=Oxygen Tank Auto Swapper ##NEEDS TRANSLATE##
 gui.module.auto_space_gear_equip.name=Space Gear Auto Equip ##NEEDS TRANSLATE##
+gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
 
 gui.module.sensor_glasses.desc=Functions the same as the Galacticraft Sensor Glasses ##NEEDS TRANSLATE##
 gui.module.no_fall_damage.desc=Removes fall damage from the player ##NEEDS TRANSLATE##
@@ -631,6 +633,8 @@ gui.module.pre_launch_checklist.desc=Allows easy access to the Pre Launch Checkl
 gui.module.nasa_workbench.desc=Allows portable access to a NASA Workbench from Galacticraft, See Controls for key to open ##NEEDS TRANSLATE##
 gui.module.oxygen_tank_switch.desc=Swappers out equipped empty tanks with any available non empty oxygen tank in your inventory ##NEEDS TRANSLATE##
 gui.module.auto_space_gear_equip.desc=Automatically equip any space related gear in your inventory ##NEEDS TRANSLATE##
+gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
 
 #Other Blocks
 tile.nuclear_bomb.name=核彈
@@ -1317,6 +1321,7 @@ item.tools.sledge_hammer.name=大錘
 item.tools.grinding_wheel.name=砂輪
 item.tools.mesh.name=線網
 item.tools.filter.name=過濾器
+item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
 
 #Other Items
 item.apple_diamond.name=鑽石蘋果
