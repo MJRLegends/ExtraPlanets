@@ -19,6 +19,7 @@ v0.7.6
 *Fixed two config typos in config option names
 *Fixed a bunch of typos in config option comments
 *Fixed some typos in config variables names for Jupiter content
+*Update ru_RU.lang(Thanks to Romz24)
 
 v0.7.5
 *Fixed issue #708 - Fixed compact issue with Wumpleutil/Food Funk with right clicking VehicleChanger due to slots issues
