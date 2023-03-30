@@ -5,6 +5,21 @@
 
 
 ===========================================Released Updates===========================================
+v1.4.5
+*Fixed issue #749 - Basic Densifier output doesn't work
+*Fixed issue #752 - Kepler22b Green & Brown Leaves drops Blue & Red Sa… 
+*Fixed issue #751 - Kepler22b Green & Brown Trees grow with opposite leaves colours
+*Fixed a bunch of grammar errors in all translation files (Suggested changes by weeJman #745)
+*Fixed issue with Open Pre Launch Checklist keybind missing the GUI part at the end
+*Fixed not needed ##NEEDS TRANSLATE## in en_GB & en_US & pl_pl translation files
+*Fixed issue with anti_radiation.desc placeholder of {PERCENT} in de_DE & en_GB translation files
+*Fixed a few issues with cs_CZ & fr_FR & zh_CH translations missing a entries
+*Fixed a few issues with en_GB translation missing a entry
+*Fixed two config typos in config option names
+*Fixed a bunch of typos in config option comments
+*Fixed some typos in config variables names for Jupiter content
+*Update ru_RU.lang(Thanks to Romz24)
+
 v1.4.4
 *Fixed issue #708 - Fixed issue with right clicking in VehicleChanger due to slots issues
 *Fixed issue #417 - Sledge Hammer Acts As Item, Not Tool, Used Up In Every Recipe
