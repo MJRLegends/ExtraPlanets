@@ -578,7 +578,7 @@ public class ExtraPlanets_Planets {
 			mats.add(new MaterialData("Dense Ice", AmountType.MEDIUM));
 			mats.add(new MaterialData("White Gem", AmountType.LOW));
 		}
-		mats.add(new MaterialData("Frozen Water", AmountType.VERY_HIGH));
+		mats.add(new MaterialData("Icy Water", AmountType.VERY_HIGH));
 		CelestialBodyMaterialRegistry.registerMaterialDataForCelestialBody(URANUS, mats);
 
 		mats = new ArrayList<MaterialData>();
