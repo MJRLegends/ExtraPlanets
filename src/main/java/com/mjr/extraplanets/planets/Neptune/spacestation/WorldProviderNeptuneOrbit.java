@@ -132,7 +132,7 @@ public class WorldProviderNeptuneOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.Neptune";
+		return ExtraPlanets_Planets.NEPTUNE.getUnlocalizedName();
 	}
 
 	@Override
