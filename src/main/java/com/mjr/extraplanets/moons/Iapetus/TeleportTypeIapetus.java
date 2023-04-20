@@ -7,6 +7,7 @@ import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
 import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicIapetus;
 import com.mjr.extraplanets.entities.landers.EntityGeneralLander;
 import com.mjr.extraplanets.util.LanderUtil;
+import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
@@ -60,6 +61,7 @@ public class TeleportTypeIapetus implements ITeleportType {
 					lander.forceSpawn = true;
 					newWorld.spawnEntityInWorld(lander);
 					LanderUtil.makeSmallLandingSpot(newWorld, (int)lander.posX, (int)lander.posZ, ExtraPlanets_Blocks.IAPETUS_BLOCKS.getDefaultState().withProperty(BlockBasicIapetus.BASIC_TYPE, BlockBasicIapetus.EnumBlockBasic.STONE), false);
+					MessageUtilities.debugMessageToLog(Constants.modName, "Entering lander at : " + player.posX + "," + player.posZ + " lander spawn at: " + lander.posX + "," + lander.posZ);
 				}
 
 				stats.setTeleportCooldown(10);
