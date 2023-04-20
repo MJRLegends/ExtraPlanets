@@ -2,7 +2,7 @@ package com.mjr.extraplanets.util;
 
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.ChunkProviderServer;
 
@@ -50,12 +50,12 @@ public class LanderUtil {
 		                {
 		                    continue;
 		                }
-		                doBlock(world, x + xx, yy, z + zz, Blocks.AIR.getDefaultState());
+		                doBlock(world, x + xx, yy, z + zz, Blocks.air.getDefaultState());
 	    	        }
 	            }
 	        }
         }
-		if(world.getBlockState(world.getTopSolidOrLiquidBlock(new BlockPos(x, 255, z))).getMaterial().isLiquid()) {
+		if(world.getBlockState(world.getTopSolidOrLiquidBlock(new BlockPos(x, 255, z))).getBlock().getMaterial().isLiquid()) {
 	        for (int xx = -3; xx < 3; xx++)
 	        {
 	            for (int zz = -3; zz < 3; zz++)
