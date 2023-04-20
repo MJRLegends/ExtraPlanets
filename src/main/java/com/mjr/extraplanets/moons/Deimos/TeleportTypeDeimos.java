@@ -3,7 +3,10 @@ package com.mjr.extraplanets.moons.Deimos;
 import java.util.Random;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicDeimos;
 import com.mjr.extraplanets.entities.landers.EntityGeneralLander;
+import com.mjr.extraplanets.util.LanderUtil;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
@@ -62,6 +65,7 @@ public class TeleportTypeDeimos implements ITeleportType {
 					lander.setWorld(newWorld);
 					newWorld.updateEntityWithOptionalForce(lander, true);
 					player.startRiding(lander);
+					LanderUtil.makeSmallLandingSpot(newWorld, (int)lander.posX, (int)lander.posZ, ExtraPlanets_Blocks.DEIMOS_BLOCKS.getDefaultState().withProperty(BlockBasicDeimos.BASIC_TYPE, BlockBasicDeimos.EnumBlockBasic.STONE), false);
 					CompatibilityManager.forceLoadChunksEnd((WorldServer) newWorld, previous);
 					MessageUtilities.debugMessageToLog(Constants.modName, "Entering lander at : " + player.posX + "," + player.posZ + " lander spawn at: " + lander.posX + "," + lander.posZ);
 				}
