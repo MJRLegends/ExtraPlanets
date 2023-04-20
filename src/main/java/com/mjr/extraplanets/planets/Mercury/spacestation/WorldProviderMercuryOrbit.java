@@ -132,7 +132,7 @@ public class WorldProviderMercuryOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.mercury";
+		return ExtraPlanets_Planets.MERCURY.getUnlocalizedName();
 	}
 
 	@Override
