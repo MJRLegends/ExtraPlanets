@@ -48,7 +48,7 @@ public class RenderGeneralLander extends Render<EntityGeneralLander> {
 		float pitch = lander.prevRotationPitch + (lander.rotationPitch - lander.prevRotationPitch) * partialTicks;
 		GlStateManager.disableRescaleNormal();
 		GlStateManager.pushMatrix();
-		GlStateManager.translate((float) x - 0.2F, (float) y + 1.28F, (float) z - 0.2F);
+		GlStateManager.translate((float) x - 0.2F, (float) y, (float) z - 0.2F);
 		GlStateManager.scale(0.2F, 0.2F, 0.2F);
 		GlStateManager.rotate(180.0F - entityYaw, 0.0F, 1.0F, 0.0F);
 		GlStateManager.rotate(-pitch, 0.0F, 0.0F, 1.0F);
