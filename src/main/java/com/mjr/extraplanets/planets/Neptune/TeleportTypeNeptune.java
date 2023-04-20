@@ -3,7 +3,10 @@ package com.mjr.extraplanets.planets.Neptune;
 import java.util.Random;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicNeptune;
 import com.mjr.extraplanets.entities.landers.EntityNeptuneLander;
+import com.mjr.extraplanets.util.LanderUtil;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
@@ -56,6 +59,7 @@ public class TeleportTypeNeptune implements ITeleportType {
 				if (!newWorld.isRemote) {
 					lander.forceSpawn = true;
 					newWorld.spawnEntityInWorld(lander);
+					LanderUtil.makeSmallLandingSpot(newWorld, (int)lander.posX, (int)lander.posZ, ExtraPlanets_Blocks.NEPTUNE_BLOCKS.getDefaultState().withProperty(BlockBasicNeptune.BASIC_TYPE, BlockBasicNeptune.EnumBlockBasic.STONE), false);
 				}
 
 				stats.setTeleportCooldown(10);

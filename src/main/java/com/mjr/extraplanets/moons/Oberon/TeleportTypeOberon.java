@@ -3,7 +3,10 @@ package com.mjr.extraplanets.moons.Oberon;
 import java.util.Random;
 
 import com.mjr.extraplanets.Constants;
+import com.mjr.extraplanets.blocks.ExtraPlanets_Blocks;
+import com.mjr.extraplanets.blocks.planetAndMoonBlocks.BlockBasicOberon;
 import com.mjr.extraplanets.entities.landers.EntityGeneralLander;
+import com.mjr.extraplanets.util.LanderUtil;
 
 import micdoodle8.mods.galacticraft.api.vector.Vector3;
 import micdoodle8.mods.galacticraft.api.world.ITeleportType;
@@ -56,6 +59,7 @@ public class TeleportTypeOberon implements ITeleportType {
 				if (!newWorld.isRemote) {
 					lander.forceSpawn = true;
 					newWorld.spawnEntityInWorld(lander);
+					LanderUtil.makeSmallLandingSpot(newWorld, (int)lander.posX, (int)lander.posZ, ExtraPlanets_Blocks.OBERON_BLOCKS.getDefaultState().withProperty(BlockBasicOberon.BASIC_TYPE, BlockBasicOberon.EnumBlockBasic.STONE), false);
 				}
 
 				stats.setTeleportCooldown(10);
