@@ -132,7 +132,7 @@ public class WorldProviderPlutoOrbit extends WorldProviderOverworldOrbit {
 
 	@Override
 	public String getPlanetToOrbit() {
-		return "planet.pluto";
+		return ExtraPlanets_Planets.PLUTO.getUnlocalizedName();
 	}
 
 	@Override
