@@ -87,7 +87,7 @@ dependencies {
 	deobfCompile "com.mjr.mjrlegendslib:MJRLegendsLib:${version_mjrlegendslib}:dev"
 	compile "com.mjr.planetprogression:PlanetProgression:${version_planetprogression}:api"
 	deobfCompile "curse.maven:mekanism-api-268560:2572882"
-	deobfCompile "curse.maven:numina-235440:2715198"
+	deobfCompile "curse.maven:numina-235440:4629835"
 	deobfCompile "curse.maven:modularpowersuits-235442:4623218"
 	runtime "mezz.jei:jei_${minecraft_version}:${jei_version}"
 	compile files (
