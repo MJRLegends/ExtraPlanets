@@ -2,15 +2,15 @@ package com.mjr.extraplanets.compatibility.MMPowersuitsModules;
 
 import com.mjr.extraplanets.items.ExtraPlanets_Items;
 
-import net.machinemuse.numina.module.EnumModuleCategory;
-import net.machinemuse.numina.module.EnumModuleTarget;
-import net.machinemuse.powersuits.common.ModuleManager;
-import net.machinemuse.powersuits.powermodule.PowerModuleBase;
+import net.machinemuse.numina.common.module.EnumModuleCategory;
+import net.machinemuse.numina.common.module.EnumModuleTarget;
+import net.machinemuse.powersuits.common.base.ModuleManager;
+import net.machinemuse.powersuits.common.powermodule.PowerModuleBase;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Optional;
 
-@Optional.Interface(modid = "powersuits", iface = "net.machinemuse.numina.module.IPowerModule")
+@Optional.Interface(modid = "powersuits", iface = "net.machinemuse.numina.common.module.IPowerModule")
 public class PressureModule extends PowerModuleBase {
 
 	public int tier;

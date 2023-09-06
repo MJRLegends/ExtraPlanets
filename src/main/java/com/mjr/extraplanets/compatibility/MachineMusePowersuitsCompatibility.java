@@ -5,11 +5,11 @@ import com.mjr.extraplanets.compatibility.MMPowersuitsModules.PressureModule;
 import com.mjr.extraplanets.compatibility.MMPowersuitsModules.RadiationModule;
 import com.mjr.mjrlegendslib.util.MessageUtilities;
 
-import net.machinemuse.powersuits.common.ModuleManager;
+import net.machinemuse.powersuits.common.base.ModuleManager;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Optional;
 
-@Optional.Interface(modid = "powersuits", iface = "net.machinemuse.numina.module.IPowerModule")
+@Optional.Interface(modid = "powersuits", iface = "net.machinemuse.numina.common.module.IPowerModule")
 public class MachineMusePowersuitsCompatibility {
 	public static void init() {
 		registerModules();
