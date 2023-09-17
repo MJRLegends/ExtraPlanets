@@ -181,7 +181,7 @@ public class ExtraPlanets_Planets {
 			SATURN.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE);
 			SATURN.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/saturn.png"));
 			SATURN.setDimensionInfo(Config.SATURN_ID, WorldProviderSaturn.class);
-			SATURN.setAtmosphere(new AtmosphereInfo(false, false, true, 80.0F, 0.0F, 0.1F));
+			SATURN.setAtmosphere(new AtmosphereInfo(false, false, true, Config.THERMAL_PADDINGS ? 80.0F : 5.0F, 0.0F, 0.1F));
 			SATURN.addChecklistKeys("tier_4_thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute", "equip_shield_controller");
 			SATURN.setBiomeInfo(SaturnBiomes.saturn, SaturnBiomes.saturnHydroCarbonSea, SaturnBiomes.saturnNuclearLand);
 			SATURN.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
@@ -200,7 +200,7 @@ public class ExtraPlanets_Planets {
 			URANUS.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.METHANE).atmosphereComponent(EnumAtmosphericGas.WATER);
 			URANUS.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/uranus.png"));
 			URANUS.setDimensionInfo(Config.URANUS_ID, WorldProviderUranus.class);
-			URANUS.setAtmosphere(new AtmosphereInfo(false, false, true, -120.0F, 4.0F, 0.1F));
+			URANUS.setAtmosphere(new AtmosphereInfo(false, false, true, Config.THERMAL_PADDINGS ? -120.0F : 5.0F, 4.0F, 0.1F));
 			URANUS.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute", "equip_shield_controller");
 			URANUS.setBiomeInfo(UranusBiomes.uranus, UranusBiomes.uranusFrozenWater, UranusBiomes.uranusSnowLands);
 			URANUS.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
@@ -219,7 +219,7 @@ public class ExtraPlanets_Planets {
 			NEPTUNE.atmosphereComponent(EnumAtmosphericGas.HYDROGEN).atmosphereComponent(EnumAtmosphericGas.HELIUM).atmosphereComponent(EnumAtmosphericGas.WATER);
 			NEPTUNE.setBodyIcon(new ResourceLocation("galacticraftcore:textures/gui/celestialbodies/neptune.png"));
 			NEPTUNE.setDimensionInfo(Config.NEPTUNE_ID, WorldProviderNeptune.class);
-			NEPTUNE.setAtmosphere(new AtmosphereInfo(false, false, true, -140.0F, 5.0F, 0.1F));
+			NEPTUNE.setAtmosphere(new AtmosphereInfo(false, false, true, Config.THERMAL_PADDINGS ? -140.0F : 5.0F, 5.0F, 0.1F));
 			NEPTUNE.addChecklistKeys("tier_5_thermal_padding", "space_suit", "equip_oxygen_suit", "equip_parachute", "equip_shield_controller");
 			NEPTUNE.setBiomeInfo(NeptuneBiomes.neptune, NeptuneBiomes.neptuneLayeredHills, NeptuneBiomes.neptuneRadioActiveWaterSea);
 			NEPTUNE.addMobInfo(new SpawnListEntry(EntityEvolvedZombie.class, 8, 2, 3));
