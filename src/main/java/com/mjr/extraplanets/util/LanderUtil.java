@@ -11,7 +11,7 @@ public class LanderUtil {
     public static void makeSmallLandingSpot(World world, int x, int z, IBlockState block, boolean clearAbovePlatform)
     {
         loadChunksAround(x, z, -1, (ChunkProviderServer) world.getChunkProvider());
-        makePlatform(world, x, world.getSeaLevel(), z, block, clearAbovePlatform);
+        makePlatform(world, x, world.getSeaLevel() - 1, z, block, clearAbovePlatform);
         return;
     }
 
