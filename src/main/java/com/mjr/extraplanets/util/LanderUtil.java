@@ -43,7 +43,7 @@ public class LanderUtil {
 	        {
 	            for (int zz = -5; zz < 5; zz++)
 	            {
-	    	    	for (int yy = 64; yy < 256; yy++)
+	    	    	for (int yy = y; yy < 256; yy++)
 	    	        {
 		                if (xx == -5 && (zz == -5 || zz == 3))
 		                {
