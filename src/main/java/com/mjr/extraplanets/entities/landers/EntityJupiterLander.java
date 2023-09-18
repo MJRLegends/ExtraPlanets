@@ -16,9 +16,11 @@ import micdoodle8.mods.galacticraft.core.entities.EntityLanderBase;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple;
 import micdoodle8.mods.galacticraft.core.network.PacketSimple.EnumSimplePacket;
 import micdoodle8.mods.galacticraft.core.util.GCCoreUtil;
+
 import net.minecraft.client.particle.Particle;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.effect.EntityLightningBolt;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
@@ -270,4 +272,11 @@ public class EntityJupiterLander extends EntityLanderBase implements IIgnoreShif
 	public boolean canBeCollidedWith() {
 		return !this.isDead;
 	}
+	
+	@Override 
+	public void onStruckByLightning(EntityLightningBolt lightningBolt)
+    {
+        return;
+    }
+	
 }
