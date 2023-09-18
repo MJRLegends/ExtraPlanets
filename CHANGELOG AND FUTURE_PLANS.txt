@@ -6,6 +6,20 @@
 
 
 ===========================================Released Updates===========================================
+v0.7.7
+*Fixed a possible issue that could teleport you to the incorrect place when getting to low on all planets space stations
+*Renamed Frozen Water to Icy Water
+*Fixed Frozen Water not being updated for Galaxy Map materials lists
+*Improved the Icy Water (Old Frozen Water) Texture
+*Fixed certain instances where when teleporting to a planet/moon with large liquid biomes you could land under the liquid not on a surface block
+*Improved the Ash Block Texture to be less blocky and repeatable 
+*Fixed the rendering of the General Lander being to high on player, making it less visible to see the player inside
+*Fixed issue #765 - MachineMuse Modular Powersuits Mod compact not working post v1.12.2-1.1.048
+	*Removed pre v1.12.2-1.1.048 support due to unable to keep both
+	*Added a minimum mod requirement of v1.12.2-1.1.048 for MachineMuse Modular Powersuits if exists
+*Fixed Thermal Padding config toggle, not being used for Saturn, Uranus, and Neptune
+*Made Jupiter Lander Entity immune to lighting strikes
+
 v0.7.6
 *Fixed issue #749 - Basic Densifier output doesn't work
 *Fixed issue #752 - Kepler22b Green & Brown Leaves drops Blue & Red Sa… 
