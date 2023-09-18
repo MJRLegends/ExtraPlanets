@@ -39,16 +39,17 @@ public class LanderUtil {
     	if(clearAbovePlatform) {
     		if(!isLiquidSpawn)
     			y = world.getTopSolidOrLiquidBlock(new BlockPos(x, 255, z)).getY() - 1;
+	    	for (int xx = -5; xx < 5; xx++)
 	        {
-	            for (int zz = -3; zz < 3; zz++)
+	            for (int zz = -5; zz < 5; zz++)
 	            {
 	    	    	for (int yy = 64; yy < 256; yy++)
 	    	        {
-		                if (xx == -3 && (zz == -3 || zz == 2))
+		                if (xx == -5 && (zz == -5 || zz == 3))
 		                {
 		                    continue;
 		                }
-		                if (xx == 2 && (zz == -3 || zz == 2))
+		                if (xx == 3 && (zz == -5 || zz == 3))
 		                {
 		                    continue;
 		                }
