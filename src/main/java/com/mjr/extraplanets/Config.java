@@ -783,7 +783,11 @@ public class Config {
 				"galaxyspace:space_suit_head:1",
 				"galaxyspace:space_suit_chest:1",
 				"galaxyspace:space_suit_legs:1",
-				"galaxyspace:space_suit_feet:1"
+				"galaxyspace:space_suit_feet:1",
+				"galaxyspace:space_suit_light_head:1",
+        			"galaxyspace:space_suit_light_chest:1",
+        			"galaxyspace:space_suit_light_legs:1",
+        			"galaxyspace:space_suit_light_feet:1"
 				
 		}, "Format: 'modID:item:tier' (tier = Space Suit Tier) | example: minecraft:iron_chestplate:4")
 				.getStringList();
