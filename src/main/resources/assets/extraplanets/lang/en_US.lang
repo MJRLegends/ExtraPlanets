@@ -1397,6 +1397,7 @@ entity.extraplanets.EvolvedRedCreeper.name=Evolved Red Creeper
 entity.extraplanets.EvolvedPowerSkeleton.name=Evolved Power Skeleton
 entity.extraplanets.EvolvedGiantSpider.name=Evolved Giant Spider
 entity.extraplanets.EvolvedMiniEnderman.name=Evolved Mini Enderman
+entity.extraplanets.EvolvedAncientMagmaCube.name=Evolved Ancient Magma Cube
 
 #Achievements
 achievement.mercury_planet=Land on Mercury!
