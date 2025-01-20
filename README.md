@@ -3,7 +3,7 @@
 # ExtraPlanets
 A Galacticraft Addon, Made By MJRLegends 
 
-**Download:** [http://minecraft.curseforge.com/projects/extraplanets](https://www.curseforge.com/minecraft/mc-mods/extraplanets)
+**Download:** https://www.curseforge.com/minecraft/mc-mods/extraplanets
 
 **Change Log and Future Plans:** https://github.com/MJRLegends/ExtraPlanets/blob/dev_1.12.2/CHANGELOG%20AND%20FUTURE_PLANS.txt
 
