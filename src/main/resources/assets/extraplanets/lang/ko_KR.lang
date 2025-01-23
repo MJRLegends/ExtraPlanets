@@ -1,8 +1,8 @@
 #Creative Tabs
-itemGroup.SpaceItemsTab=엑스트라 플래닛스(아이템)
-itemGroup.SpaceBlocksTab=엑스트라 플래닛스(블록)
-itemGroup.SpaceToolsTab=엑스트라 플래닛스(도구)
-itemGroup.SpaceArmorTab=엑스트라 플래닛스(갑옷)
+itemGroup.SpaceItemsTab=Extra Planets 아이템
+itemGroup.SpaceBlocksTab=Extra Planets 블록
+itemGroup.SpaceToolsTab=Extra Planets 도구
+itemGroup.SpaceArmorTab=Extra Planets 갑옷
 
 #Galaxies
 galaxy.whirlpool=소용돌이
@@ -85,7 +85,7 @@ planet.trars9=트라르스 9
 #Moons
 moon.triton=트리톤
 moon.callisto=칼리스토
-moon.europa=에우로파
+moon.europa=유로파
 moon.ganymede=가니메데
 moon.io=이오
 moon.deimos=데이모스
@@ -102,7 +102,7 @@ moon.dysnomia=디스노미아
 
 moon.tritonEP=트리톤 2.0
 moon.callistoEP=칼리스토 2.0
-moon.europaEP=에우로파 2.0
+moon.europaEP=유로파 2.0
 moon.ganymedeEP=가니메데 2.0
 moon.ioEP=이오 2.0
 moon.deimosEP=데이모스 2.0
@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=수성 구리 광석
 tile.mercury.ore_mercury.name=수은 광석
 tile.mercury.stone_bricks.name=수성 석재 벽돌
 tile.mercury.mercury_block.name=수은 블록
-tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
+tile.mercury.ore_carbon.name=수성 탄소 광석
 tile.mercury.carbon_block.name=탄소 블록
 tile.mercury.dungeon_brick.name=수성 던전 벽돌
 
@@ -212,7 +212,7 @@ tile.eris.ore_dark_iron.name=에리스 흑철광석
 tile.eris.dark_iron_block.name=흑철 블록
 
 tile.kepler22b.dirt.name=케플러 22b 흙
-tile.kepler22b.stone.name=케플러 22b 석
+tile.kepler22b.stone.name=케플러 22b석
 tile.kepler22b_grass.name=케플러 22b 잔디
 tile.kepler22b_blue_grass.name=케플러 22b 파란색 잔디
 tile.kepler22b_purple_grass.name=케플러 22b 보라색 잔디
@@ -279,8 +279,8 @@ tile.callisto.stone.name=칼리스토석
 tile.callisto.ore_iron.name=칼리스토 철광석
 tile.callisto.ore_tin.name=칼리스토 주석 광석
 tile.callisto.ore_copper.name=칼리스토 구리 광석
-tile.callisto.dried_oil.name=칼리스토 건조유
-tile.callisto.shale_oil.name=칼리스토 혈암유
+tile.callisto.dried_oil.name=칼리스토 건성유
+tile.callisto.shale_oil.name=칼리스토 셰일유
 
 tile.deimos.surface.name=데이모스 표면석
 tile.deimos.sub_surface.name=데이모스 해저 표면석
@@ -289,12 +289,12 @@ tile.deimos.ore_iron.name=데이모스 철광석
 tile.deimos.ore_tin.name=데이모스 주석 광석
 tile.deimos.ore_copper.name=데이모스 구리 광석
 
-tile.europa.surface.name=에우로파 표면석
-tile.europa.sub_surface.name=에우로파 해저 표면석
-tile.europa.stone.name=에우로파석
-tile.europa.ore_iron.name=에우로파 철광석
-tile.europa.ore_tin.name=에우로파 주석 광석
-tile.europa.ore_copper.name=에우로파 구리 광석
+tile.europa.surface.name=유로파 표면석
+tile.europa.sub_surface.name=유로파 해저 표면석
+tile.europa.stone.name=유로파석
+tile.europa.ore_iron.name=유로파 철광석
+tile.europa.ore_tin.name=유로파 주석 광석
+tile.europa.ore_copper.name=유로파 구리 광석
 
 tile.io.surface.name=이오 표면석
 tile.io.sub_surface.name=이오 해저 표면석
@@ -339,7 +339,7 @@ tile.titan.ore_tin.name=타이탄 주석 광석
 tile.titan.ore_copper.name=타이탄 구리 광석
 tile.titan.titan_methane_surface.name=타이탄 표면 메테인
 tile.titan.titan_methane_sub_surface.name=타이탄 해저 표면 메테인
-tile.titan.titan_rocks.name=타이탄암
+tile.titan.titan_rocks.name=타이탄암 
 
 tile.oberon.surface.name=오베론 표면석
 tile.oberon.sub_surface.name=오베론 해저 표면석
@@ -369,7 +369,7 @@ tile.ceres_gravel.name=세레스 자갈
 tile.pluto_gravel.name=명왕성 자갈
 tile.eris_gravel.name=에리스 자갈
 tile.io_gravel.name=이오 자갈
-tile.europa_gravel.name=에우로파 자갈
+tile.europa_gravel.name=유로파 자갈
 tile.deimos_gravel.name=데이모스 자갈
 tile.phobos_gravel.name=포보스 자갈
 tile.triton_gravel.name=트리톤 자갈
@@ -387,11 +387,11 @@ tile.uranus_gravel.name=천왕성 자갈
 tile.neptune_gravel.name=해왕성 자갈
 
 #Girt Blocks
-tile.diamond_grit.name=다이아몬드 기개
-tile.coal_grit.name=석탄 기개
-tile.iron_grit.name=철 기개
-tile.gold_grit.name=금 기개
-tile.emerald_grit.name=에메랄드 기개
+tile.diamond_grit.name=다이아몬드빛 모래
+tile.coal_grit.name=석탄빛 모래
+tile.iron_grit.name=철빛 모래
+tile.gold_grit.name=금빛 모래
+tile.emerald_grit.name=에메랄드빛 모래
 
 #Treasure Chests
 tile.treasure_chest_t4.name=4티어 보물 상자
@@ -401,20 +401,20 @@ tile.treasure_chest_t7.name=7티어 보물 상자
 tile.treasure_chest_t8.name=8티어 보물 상자
 tile.treasure_chest_t9.name=9티어 보물 상자
 tile.treasure_chest_t10.name=10티어 보물 상자
-tile.treasure_chest_t4.description=수성 던전 안에 4티어 보물 상자가 생성됩니다. 최종보스를 처치했을시 열 수 있습니다.
-tile.treasure_chest_t5.description=목성 던전 안에 5티어 보물 상자가 생성됩니다. 최종보스를 처치했을시 열 수 있습니다.
-tile.treasure_chest_t6.description=토성 던전 안에 6티어 보물 상자가 생성됩니다. 최종보스를 처치했을시 열 수 있습니다.
-tile.treasure_chest_t7.description=천왕성 던전 안에 7티어 보물 상자가 생성됩니다. 최종보스를 처치했을시 열 수 있습니다.
-tile.treasure_chest_t8.description=해왕성 던전 안에 8티어 보물 상자가 생성됩니다. 최종보스를 처치했을시 열 수 있습니다.
-tile.treasure_chest_t9.description=명왕성 던전 안에 9티어 보물 상자가 생성됩니다. 최종보스를 처치했을시 열 수 있습니다.
-tile.treasure_chest_t10.description=에리스 던전 안에 10티어 보물 상자가 생성됩니다. 최종보스를 처치했을시 열 수 있습니다.
+tile.treasure_chest_t4.description=수성 던전 안에 4티어 보물 상자가 생성됩니다. 최종보스를 처치하면 열 수 있습니다.
+tile.treasure_chest_t5.description=목성 던전 안에 5티어 보물 상자가 생성됩니다. 최종보스를 처치하면 열 수 있습니다.
+tile.treasure_chest_t6.description=토성 던전 안에 6티어 보물 상자가 생성됩니다. 최종보스를 처치하면 열 수 있습니다.
+tile.treasure_chest_t7.description=천왕성 던전 안에 7티어 보물 상자가 생성됩니다. 최종보스를 처치하면 열 수 있습니다.
+tile.treasure_chest_t8.description=해왕성 던전 안에 8티어 보물 상자가 생성됩니다. 최종보스를 처치하면 열 수 있습니다.
+tile.treasure_chest_t9.description=명왕성 던전 안에 9티어 보물 상자가 생성됩니다. 최종보스를 처치하면 열 수 있습니다.
+tile.treasure_chest_t10.description=에리스 던전 안에 10티어 보물 상자가 생성됩니다. 최종보스를 처치하면 열 수 있습니다.
 
 #Machines
 tile.advanced_refinery.name=고급 정제기
 tile.ultimate_refinery.name=초고급 정제기
 tile.solar.hybrid_solar.name=최고급 태양광 전지판
 tile.solar.ultimate_solar.name=초고급 태양광 전지판
-tile.solar_hybrid.description=이 태양광 전지판은 밤낮동안 작동될 것입니다.
+tile.solar_hybrid.description=이 태양광 전지판은 밤낮 동안 작동될 것입니다.
 tile.solar_ultimate.description=이 태양광 전지판은 밤낮 동안 작동될 것입니다.
 tile.advanced_oxygen_compressor.0.name=고급 산소 압축기
 tile.advanced_oxygen_compressor.1.name=고급 산소 감압기
@@ -430,10 +430,10 @@ tile.advanced_launch_pad.tier3LandingPad.name=3티어 로켓 발사대
 tile.advanced_launch_pad.poweredChargingPad.name=차량 충전대
 tile.advanced_launch_pad.rocketPoweredChargingPad.name=파워 로켓 발사대
 tile.advanced_launch_pad_full.name=2/3티어 발사대
-tile.advanced_launch_pad.tier2.desc=4~8티어 로켓을 발사하는데 사용됩니다. 정사각형 모양으로 5x5로 설치하세요.
-tile.advanced_launch_pad.tier3.desc=9~10 티어 로켓을 발사하는데 사용됩니다. 정사각형 모양으로 5x5로 설치하세요.
-tile.advanced_launch_pad.powered.desc=화성 탐사선과 금성 탐사선을 움직이는데 사용됩니다. 정사각형 모양으로 5x5로 설치하세요.
-tile.advanced_launch_pad.powered.rocket.desc=10티어 전자 로켓을 발사하는데 사용됩니다. 정사각형 모양으로 5x5로 설치하세요.
+tile.advanced_launch_pad.tier2.desc=4~8티어 로켓을 발사하는 데 사용됩니다. 5x5 모양의 정사각형으로 설치하세요.
+tile.advanced_launch_pad.tier3.desc=9~10 티어 로켓을 발사하는 데 사용됩니다. 5x5 모양의 정사각형으로 설치하세요.
+tile.advanced_launch_pad.powered.desc=화성 탐사선과 금성 탐사선을 움직이는 데 사용됩니다. 5x5 모양의 정사각형으로 설치하세요.
+tile.advanced_launch_pad.powered.rocket.desc=10티어 전자 로켓을 발사하는 데 사용됩니다. 5x5 모양의 정사각형으로 설치하세요.
 tile.advanced_fuel_loader.name=고급 연료 장전기
 tile.ultimate_fuel_loader.name=초고급 연료 장전기
 tile.vehicle_charger.name=차량 충전기
@@ -478,22 +478,22 @@ container.basic.decontamination.unit.name=기본 정화장치
 
 #GUI Components/Messages
 gui.salt_water_tank.desc.4=액체 수정 물 탱크
-gui.message.salt_water.name=수정물
+gui.message.salt_water.name=수정 물
 gui.salt_water_input.desc.0=탱크를 채우기 위해 액체 수정 물 양동이를
 gui.salt_water_input.desc.1=이 슬롯에 두세요.
 gui.salt_water_input.desc.2=각 액체 수정 물 양동이마다 1000mB를 줍니다.
-gui.salt_water_output.desc.0=그들을 탱크로부터 채우기 위해 빈 바닐라 양동이를
+gui.salt_water_output.desc.0=탱크로부터 채우기 위해 빈 바닐라 양동이를
 gui.salt_water_output.desc.1=이 슬롯에 두세요.
 gui.status.injecting.name=주입
 gui.status.smasher.name=파쇄
 gui.status.crystallizing.name=결정화
 gui.status.decrystallizing.name=비결정화
 gui.status.solarEvaporationChamber.name=증발
-gui.message.power.name=파워 차량
+gui.message.power.name=차량 전력
 gui.message.power.rocket.name=전자 로켓
-gui.message.power.message.name=파워
-gui.button.loadpower.name=로드 파워
-gui.powered.inv.name=인벤토리 / 파워
+gui.message.power.message.name=전력
+gui.button.loadpower.name=전력 적재
+gui.powered.inv.name=인벤토리 / 전력
 gui.status.purifiering.name=정화
 gui.radioactive_water_tank.desc.4=방사성 물 탱크
 gui.message.radioactive_water.name=방사성 물
@@ -507,48 +507,48 @@ gui.radioactive_water_input.desc.2=각 방사성 물 양동이마다 1000mB를 �
 gui.infected_water_input.desc.0=탱크를 채우기 위해 감염된 물 양동이를
 gui.infected_water_input.desc.1=이 슬롯에 두세요.
 gui.infected_water_input.desc.2=각 감염된 물 양동이마다 1000mB를 줍니다.
-gui.clean_water_output.desc.0=그들을 탱크로부터 채우기 위해 빈 바닐라 양동이를
+gui.clean_water_output.desc.0=탱크로부터 채우기 위해 빈 바닐라 양동이를
 gui.clean_water_output.desc.1=이 슬롯에 두세요.
-gui.bucket.message.finding=이 액체는 함유가 가능합니다.
+gui.bucket.message.finding=이 액체는 다음에서 얻을 수 있습니다:	
 gui.bucket.message.finding.2.infected_water_fluid=수성에서
-gui.bucket.message.finding.2.radioactive_water_fluid=on Ceres & Europa & Neptune ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.radioactive_water_fluid=세레스 & 유로파 & 해왕성에서
 gui.bucket.message.finding.2.nitrogen_fluid=해왕성에서
 gui.bucket.message.finding.2.glowstone_fluid=토성에서
 gui.bucket.message.finding.2.magma_fluid=목성과 이오에서
 gui.bucket.message.finding.2.liquid_caramel_fluid=케플러 22b에서
 gui.bucket.message.finding.2.liquid_chocolate_fluid=케플러 22b에서
 gui.bucket.message.finding.2.liquid_hydrocarbon_fluid=토성에서
-gui.bucket.message.finding.2.salt_fluid=on Ceres & Europa & Callisto ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.methane_fluid=on Titan & Saturn ##NEEDS TRANSLATE##
-gui.bucket.message.finding.2.frozen_water_fluid=on Uranus ##NEEDS TRANSLATE##
+gui.bucket.message.finding.2.salt_fluid=세레스 & 유로파 & 칼리스토에서
+gui.bucket.message.finding.2.methane_fluid=타이탄 & 토성에서
+gui.bucket.message.finding.2.frozen_water_fluid=천왕성에서
 gui.bucket.message.finding.2.nitrogen_ice_fluid=트리톤에서
-gui.bucket.message.crafting=어떻게 함유하는지 보고 싶으면 R키를 누르세요.
-gui.status.missing.inputs.name=잃어버린 아이템/유체
-gui.status.missing.power.name=잃어버린 힘
+gui.bucket.message.crafting=어떻게 획득하는지 보고 싶으면 R 키를 누르세요.
+gui.status.missing.inputs.name=아이템/유체 없음
+gui.status.missing.power.name=힘 없음
 gui.densifier_input.desc.0=이 슬롯에서 다음과 같은 양동이들을
 gui.densifier_input.desc.1=둘 수 있습니다:
 gui.densifier_input.desc.2=액체 캐러멜
 gui.densifier_input.desc.3=액체 초콜릿
 gui.densifier_input.desc.4=질소 얼음
-gui.densifier_input.desc.5=1 유체 양동이당 = 1000mb
+gui.densifier_input.desc.5=1 유체 양동이당 1000mb
 gui.message.general.tank.name=유체 탱크
 gui.message.general.tank.fluid.name=유체
 gui.status.densifier.name=고밀도화
 gui.bucket.message.extreme.reactors.compact=이 유체는 반응성이 매우 높습니다.
-gui.radiation.reduced.message=방사선 수준이 다음에 의해 감소되었습니다.
-gui.radiation.reduced.message.2=당신의 최초/현재 양에서
+gui.radiation.reduced.message=방사선 수준이 당신의 최초/현재 양
+gui.radiation.reduced.message.2=에 의해 감소되었습니다.
 gui.radiation.current.message=현재 방사선 수준은
 gui.radiation.subject.message=지금 해야할 것은
-gui.radiation.reverse.message=Naturally Your radiation damage will reduce slowly over time (1.5x on Planets/Moons), but to reduce large amounts use Sleeping, Decontamination Unit ,or Anti Rad Drinks ##NEEDS TRANSLATE##
-gui.radiation.type.message=radiation exposure ##NEEDS TRANSLATE##
+gui.radiation.reverse.message=당연히 시간이 지남에 따라 방사선 피해는 천천히 감소하지만 (행성/위성에서는 1.5배), 많은 양을 줄이려면 잠을 자거나, 정화 장치를 사용하거나, 제염 음료를 마시세요.
+gui.radiation.type.message=방사선 노출
 gui.status.waiting.on.player.name=기계에 플레이어가 없습니다.
 gui.message.finding.block=찾을 수 있는 곳
 gui.message.finding.volcanic.rock=목성과 이오
-gui.message.finding.potash=Mercury, deep underground ##NEEDS TRANSLATE##
+gui.message.finding.potash=수성, 깊은 지하
 gui.message.decontamination.unit=방사선 수준은 10%씩 줄어듭니다.
 gui.battery_slot.desc.custom=대용량 배터리를 사용하는 것을 추천합니다.
 gui.radiation.cancel.message=주변 온도 조절기 업그레이드 시 산소 밀봉기를 사용하여 방사선 및 압력으로부터 완벽하게 보호할 수 있습니다.
-currently.unused.name=지금 사용불가합니다!
+currently.unused.name=지금 사용할 수 없습니다!
 wafter.uses.information=우주 정거장 조합법에 사용됩니다.
 gui.rover.information=차량 충전대와 함께 사용합니다.
 gui.rover.information.2=충전을 위해 차량 충전기를 부착합니다.
@@ -563,7 +563,7 @@ gui.new_galaxies.name=새 은하
 gui.type_planet.name=행성
 gui.type_moon.name=달
 gui.type_satellite.name=위성
-gui.type_unknown.name=불명
+gui.type_unknown.name=알 수 없음
 gui.type_days.name=일
 gui.type_hours.name=시간
 
@@ -572,21 +572,21 @@ gui.celestial_body_amount_of_moons.name=달의 수
 gui.celestial_body_orbit_time.name=궤도 시간
 gui.celestial_body_gravity.name=중력
 gui.celestial_body_day_lengh.name=일의 길이
-gui.celestial_body_meteor_frequency.name=유성 충돌 빈도수
+gui.celestial_body_meteor_frequency.name=유성 충돌 빈도 수
 gui.celestial_body_wind_level.name=바람 빈도
 gui.celestial_body_temperature.name=온도
-gui.celestial_body_breathable.name=호흡가능
+gui.celestial_body_breathable.name=호흡 가능 여부
 gui.celestial_body_corrosive_atmosphere.name=부식성 대기
-gui.celestial_body_radiation_level.name=방사선 빈도
-gui.celestial_body_pressure_level.name=압력 빈도
+gui.celestial_body_radiation_level.name=방사선 수준
+gui.celestial_body_pressure_level.name=압력 수준
 gui.celestial_body_amount_of_planets.name=행성의 수
-gui.celestial_body_has_dungeon.name=던전여부
+gui.celestial_body_has_dungeon.name=던전 존재 여부
 
 #GUI Controls/Keybinds
-keybind.vehicle_inv.name=파워 차량 인벤토리를 엽니다.
-keybind.module.manager.name=모듈 매니저를 엽니다.
-keybind.module.pre.launch.name=발사 전 체크리스트 GUI를 엽니다.
-keybind.module.nasa.workbench.name=휴대용 KARI 워크벤치 GUI를 엽니다.
+keybind.vehicle_inv.name=전자 차량 인벤토리를 여세요
+keybind.module.manager.name=모듈 매니저를 여세요
+keybind.module.pre.launch.name=발사 전 체크리스트 GUI를 여세요
+keybind.module.nasa.workbench.name=휴대용 KARI 워크벤치 GUI를 여세요
 
 #GUI Module Manager
 gui.module_manager.name=모듈 매니저
@@ -597,14 +597,14 @@ gui.modules_boots.name=부츠 모듈
 gui.module_list.name=모듈 목록
 gui.button.install.name=설치
 gui.button.uninstall.name=제거
-gui.button.disable_module.name=사용 함
+gui.button.disable_module.name=사용
 gui.button.enable_module.name=사용 안 함
 gui.module_cost.name=비용
-gui.module.installed.name=모듈이 설치되었습니다!
+gui.module.installed.name=모듈을 설치하였습니다!
 gui.module.missing_requirements.name=모듈 설치에 불필요한 아이템이 있습니다!
 gui.module.already_installed.name=모듈이 이미 설치되었습니다!
 gui.module.missing_armour.name=우주복의 일부가 없어서 설치할 수 없습니다!
-gui.module.inventory_full.name=Unable to uninstall this module due to your inventory! ##NEEDS TRANSLATE##
+gui.module.inventory_full.name=인벤토리 때문에 이 모듈을 제거할 수 없습니다!
 gui.module.description.name=모듈 형태
 gui.module.name.name=모듈명
 gui.module.type.name=모듈 유형
@@ -622,19 +622,19 @@ gui.module.pre_launch_checklist.name=발사전 체크리스트
 gui.module.nasa_workbench.name=휴대용 KARI 워크벤치
 gui.module.oxygen_tank_switch.name=산소 탱크 자동 교체
 gui.module.auto_space_gear_equip.name=우주 기어 자동 설치
-gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
-gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.basic_solar_panel.name=기초 휴대용 태양광 전지판
+gui.module.advanced_solar_panel.name=고급 휴대용 태양광 전지판
 
 gui.module.sensor_glasses.desc=기능은 갤럭티크래프트의 감지경과 비슷합니다.
 gui.module.no_fall_damage.desc=플레이어로부터의 추락 위험을 제거합니다.
 gui.module.geiger_counter.desc=당신의 HUD/스크린에서 지금 방사선 양을 봅니다.
 gui.module.test.desc=시험 모듈
-gui.module.pre_launch_checklist.desc=갤럭티크래프트에서 발사전 체크리스트에 쉽게 액세스 할 수 있습니다. 키를 열려면 컨트롤을 참조하세요.
+gui.module.pre_launch_checklist.desc=갤럭티크래프트에서 발사전 체크리스트에 쉽게 접근할 수 있습니다. 키를 열려면 컨트롤을 참조하세요.
 gui.module.nasa_workbench.desc=갤럭티크래프트에서 KARI 워크벤치로 이동할 수 있습니다. 키를 열려면 컨트롤을 참조하세요.
-gui.module.oxygen_tank_switch.desc=인벤토리에서 빈 탱크를 안 빈 산소 탱크로 교체하여 장착하세요.
+gui.module.oxygen_tank_switch.desc=인벤토리에서 빈 탱크를 안 빈 산소 탱크로 교체해 장착하세요.
 gui.module.auto_space_gear_equip.desc=인벤토리에 우주 관련 장비를 자동으로 장착합니다.
-gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
-gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.basic_solar_panel.desc=낮 시간 동안 우주복을 매우 천천히 충전합니다.
+gui.module.advanced_solar_panel.desc=낮 시간 동안 우주복을 천천히 충전합니다.
 
 #Other Blocks
 tile.nuclear_bomb.name=핵폭탄
@@ -677,10 +677,10 @@ tile.candy_blocks_horizontal.candy_cane_black_horizontal.name=검은색 사탕 �
 tile.cake_blocks.cake_block.name=케이크 블록
 tile.cake_blocks.cake_block_red_velvet.name=레드벨벳 케이크 블록
 tile.cake_blocks.cake_block_chocolate.name=초콜릿 케이크 블록
-tile.cake_blocks.white_icing_red_dots.name=빨간색 점 흰색 당의
-tile.cake_blocks.white_icing_green_dots.name=초록색 점 흰색 당의
-tile.cake_blocks.white_icing_pink_dots.name=분홍색 점 흰색 당의
-tile.cake_blocks.white_icing_orange_dots.name=주황색 점 흰색 당의
+tile.cake_blocks.white_icing_red_dots.name=빨간색 점 흰색 아이싱
+tile.cake_blocks.white_icing_green_dots.name=초록색 점 흰색 아이싱
+tile.cake_blocks.white_icing_pink_dots.name=분홍색 점 흰색 아이싱
+tile.cake_blocks.white_icing_orange_dots.name=주황색 점 흰색 아이싱
 tile.cake_blocks.cookie_rocks.name=쿠키 바위
 
 tile.white_sugar_cane.name=흰색 사탕수수 블록
@@ -871,7 +871,7 @@ item.wafer.white_gem_wafer.name=백보석 웨이퍼
 item.bucket_glowstone.name=발광석 양동이
 item.bucket_salt.name=액체 수정 물
 item.bucket_magma.name=마그마 양동이
-item.bucket_frozen_water.name=Icy Water Bucket ##NEEDS TRANSLATE##
+item.bucket_frozen_water.name=얼음물 양동이
 item.bucket_nitrogen.name=질소 양동이
 item.bucket_clean_water.name=깨끗한 물 양동이
 item.bucket_infected_water.name=감염된 물 양동이
@@ -1081,10 +1081,10 @@ item.green_diamond_chest.name=초록색 다이아몬드 흉갑
 item.green_diamond_legings.name=초록색 다이아몬드 각반
 item.green_diamond_boots.name=초록색 다이아몬드 부츠
 
-item.tier0_space_suit_helmet.name=Temporary Space Suit Helmet ##NEEDS TRANSLATE##
-item.tier0_space_suit_chest.name=Temporary Space Suit Chestplate ##NEEDS TRANSLATE##
-item.tier0_space_suit_legings.name=Temporary Space Suit Leggings ##NEEDS TRANSLATE##
-item.tier0_space_suit_boots.name=Temporary Space Suit Boots ##NEEDS TRANSLATE##
+item.tier0_space_suit_helmet.name=임시 우주복 투구
+item.tier0_space_suit_chest.name=임시 우주복 흉갑
+item.tier0_space_suit_legings.name=임시 우주복 각반
+item.tier0_space_suit_boots.name=임시 우주복 부츠
 item.tier1_space_suit_helmet.name=1티어 우주복 투구
 item.tier1_space_suit_chest.name=1티어 우주복 흉갑
 item.tier1_space_suit_jetpack_chest.name=1티어 우주복 제트팩 흉갑
@@ -1110,20 +1110,20 @@ item.tier4_space_suit_legings.name=4티어 우주복 각반
 item.tier4_space_suit_boots.name=4티어 우주복 부츠
 item.tier4_space_suit_gravity_boots.name=4티어 우주복 중력 부츠
 
-space.suit.information=압력 데미지를 완전히 멈추는데 사용됩니다
+space.suit.information=압력 데미지를 완전히 멈추는 데 사용됩니다
 space.suit.information.2=&방사능의 세기를 느리게 낮춥니다
-space.suit.information.extra=각 부분의 우주복의 티어를 셉니다
-space.suit.information.extra.2=방사능의 세기를 줄이기 위해서는 말이죠
+space.suit.information.extra=방사능의 세기를 줄이기 위해서
+space.suit.information.extra.2=각 부분의 우주복의 티어를 셉니다
 space.suit.information.extra.3=우주복 티어가 높을수록
 space.suit.information.extra.4=방사능 피폭이 느려집니다
-space.suit.power.info=다음과 같은 전력 체계를 제공합니다.
-space.suit.power.info.2=RF, 메카니즘 쥴스, 갤럭티크래프트 쥴스, 인더스트리얼크래프트 2
-space.suit.power.info.3=Power is only required for modules ##NEEDS TRANSLATE##
-space.suit.temp.information=Temporary/One Time Use, Obtained via Enviro Emergency Kit ##NEEDS TRANSLATE##
-space.suit.temp.ticks=Use Time Left ##NEEDS TRANSLATE##
+space.suit.power.info=RF, 메카니즘 쥴스, 갤럭티크래프트 쥴스, 인더스트리얼크래프트 2
+space.suit.power.info.2=위와 같은 전력 체계를 제공합니다.
+space.suit.power.info.3=전력은 오직 모듈에만 필요합니다. 
+space.suit.temp.information=임시/일회 사용, 환경 비상 키트를 통해 얻을 수 있습니다.
+space.suit.temp.ticks=남은 사용 시간
 
-item_desc.spacesuit.shift.name=압력과 방사능 정보는 %s을 누르세요.
-item_desc.spacesuit.module.shift.name=설치된 모듈 확인은 %s을 누르세요.
+item_desc.spacesuit.shift.name=압력과 방사능 정보는 %s을(를) 누르세요.
+item_desc.spacesuit.module.shift.name=설치된 모듈 확인은 %s을(를) 누르세요.
 
 item.tier3_thermal_helm.name=3티어 단열 투구
 item.tier3_thermal_chestplate.name=3티어 단열 흉갑
@@ -1139,8 +1139,8 @@ item.tier5_thermal_leggings.name=5티어 단열 각반
 item.tier5_thermal_boots.name=5티어 단열 부츠
 
 tier3.thermal.padding.information=수성에 필요합니다.
-tier4.thermal.padding.information=그들의 달을 포함해서 목성과 토성에 필요합니다.
-tier5.thermal.padding.information=그들의 달을 포함해서 천왕성, 해왕성, 명왕성, 에리스에 필요합니다.
+tier4.thermal.padding.information=목성, 토성과 그 위성에 필요합니다.
+tier5.thermal.padding.information=천왕성, 해왕성, 명왕성, 에리스와 그 위성에 필요합니다.
 
 #Space Suit Layers
 item.tier1_pressure_layer.name=1티어 압력층
@@ -1164,50 +1164,50 @@ tier3_armor_layer.desc=압축기 조합법: 팔라듐괴 4개
 tier4_armor_layer.desc=압축기 조합법: 아연괴 4개
 
 module.pressure_module_1.name=1티어 압력 모듈
-module.pressure_module_1.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 압력으로부터 보호해줍니다.
+module.pressure_module_1.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 압력으로부터 보호해 줍니다.
 module.pressure_module_2.name=2티어 압력 모듈
-module.pressure_module_2.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 압력으로부터 보호해줍니다.
+module.pressure_module_2.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 압력으로부터 보호해 줍니다.
 module.pressure_module_3.name=3티어 압력 모듈
-module.pressure_module_3.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 압력으로부터 보호해줍니다.
+module.pressure_module_3.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 압력으로부터 보호해 줍니다.
 module.pressure_module_4.name=4티어 압력 모듈
-module.pressure_module_4.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 압력으로부터 보호해줍니다.
+module.pressure_module_4.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 압력으로부터 보호해 줍니다.
 
 module.radiation_module_1.name=1티어 방사능 모듈
-module.radiation_module_1.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 방사능으로부터 보호해줍니다.
+module.radiation_module_1.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 방사능으로부터 보호해 줍니다.
 module.radiation_module_2.name=2티어 방사능 모듈
-module.radiation_module_2.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 방사능으로부터 보호해줍니다.
+module.radiation_module_2.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 방사능으로부터 보호해 줍니다.
 module.radiation_module_3.name=3티어 방사능 모듈
-module.radiation_module_3.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 방사능으로부터 보호해줍니다.
+module.radiation_module_3.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 방사능으로부터 보호해 줍니다.
 module.radiation_module_4.name=4티어 방사능 모듈
-module.radiation_module_4.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 방사능으로부터 보호해줍니다.
+module.radiation_module_4.desc=갤럭티크래프트와 엑스트라 플래닛스의 행성, 위성, 정거장에서 당신을 방사능으로부터 보호해 줍니다.
 
 #UnPrepared Space Suits
-item.tier1_un_prepared_space_suit_helmet.name=1티어 준비안된 우주복 투구
-item.tier1_un_prepared_space_suit_chest.name=1티어 준비안된 우주복 흉갑
-item.tier1_un_prepared_space_suit_legings.name=1티어 준비안된 우주복 각반
-item.tier1_un_prepared_space_suit_boots.name=1티어 준비안된 우주복 부츠
+item.tier1_un_prepared_space_suit_helmet.name=1티어 준비 안 된 우주복 투구
+item.tier1_un_prepared_space_suit_chest.name=1티어 준비 안 된 우주복 흉갑
+item.tier1_un_prepared_space_suit_legings.name=1티어 준비 안 된 우주복 각반
+item.tier1_un_prepared_space_suit_boots.name=1티어 준비 안 된 우주복 부츠
 
-item.tier2_un_prepared_space_suit_helmet.name=2티어 준비안된 우주복 투구
-item.tier2_un_prepared_space_suit_chest.name=2티어 준비안된 우주복 흉갑
-item.tier2_un_prepared_space_suit_legings.name=2티어 준비안된 우주복 각반
-item.tier2_un_prepared_space_suit_boots.name=2티어 준비안된 우주복 부츠
+item.tier2_un_prepared_space_suit_helmet.name=2티어 준비 안 된 우주복 투구
+item.tier2_un_prepared_space_suit_chest.name=2티어 준비 안 된 우주복 흉갑
+item.tier2_un_prepared_space_suit_legings.name=2티어 준비 안 된 우주복 각반
+item.tier2_un_prepared_space_suit_boots.name=2티어 준비 안 된 우주복 부츠
+ 
+item.tier3_un_prepared_space_suit_helmet.name=3티어 준비 안 된 우주복 투구
+item.tier3_un_prepared_space_suit_chest.name=3티어 준비 안 된 우주복 흉갑
+item.tier3_un_prepared_space_suit_legings.name=3티어 준비 안 된 우주복 각반
+item.tier3_un_prepared_space_suit_boots.name=3티어 준비 안 된 우주복 부츠
 
-item.tier3_un_prepared_space_suit_helmet.name=3티어 준비안된 우주복 투구
-item.tier3_un_prepared_space_suit_chest.name=3티어 준비안된 우주복 흉갑
-item.tier3_un_prepared_space_suit_legings.name=3티어 준비안된 우주복 각반
-item.tier3_un_prepared_space_suit_boots.name=3티어 준비안된 우주복 부츠
-
-item.tier4_un_prepared_space_suit_helmet.name=4티어 준비안된 우주복 투구
-item.tier4_un_prepared_space_suit_chest.name=4티어 준비안된 우주복 흉갑
-item.tier4_un_prepared_space_suit_legings.name=4티어 준비안된 우주복 각반
-item.tier4_un_prepared_space_suit_boots.name=4티어 준비안된 우주복 부츠
+item.tier4_un_prepared_space_suit_helmet.name=4티어 준비 안 된 우주복 투구
+item.tier4_un_prepared_space_suit_chest.name=4티어 준비 안 된 우주복 흉갑
+item.tier4_un_prepared_space_suit_legings.name=4티어 준비 안 된 우주복 각반
+item.tier4_un_prepared_space_suit_boots.name=4티어 준비 안 된 우주복 부츠
 
 #Module Items
-item.module_items.no_fall_boots.name=모듈에 추락 위험이 없습니다
+item.module_items.no_fall_boots.name=낙하 위험 방지 모듈
 item.module_items.oxygen_controller.name=산소 조절기
 item.module_items.space_gear_controller.name=우주 기어 조절기
-item.enviro_emergency_kit.name=Environment Emergency Kit ##NEEDS TRANSLATE##
-item.enviro_emergency_kit.description=Right click to equip Temporary Space Suit. Warning: One time use! ##NEEDS TRANSLATE##
+item.enviro_emergency_kit.name=환경 비상 키트
+item.enviro_emergency_kit.description= 임시 우주복을 입으려면 우클릭하세요. 경고: 일회용입니다!
 
 #Oxygen Tanks
 item.oxygen_tank_very_heavy_full.name=초대형 산소 탱크
@@ -1266,47 +1266,47 @@ item.iodide_salt.name=아이오딘화염
 item.potassium_iodide.name=아이오딘화 칼륨
 item.potassium.name=칼륨
 item.potash_shards.name=칼륨 조각
-item.anti_radiation.name=제염
-anti_radiation.desc=지금 양의 {PERCENT}로 방사성 준위를 감소시킵니다.
+item.anti_radiation.name=제염 음료
+anti_radiation.desc=지금 양의 {PERCENT}(으)로 방사성 준위를 감소시킵니다.
 
 #Kits
 item.tier1_kit.full.name=1티어 전체 상자
 item.tier1_kit.basic_setup.name=1티어 기본 상자
-item.tier1_kit.without_oxygen_setup.name=산소 없는 1티어 전체 상자
-item.tier1_kit.without_thermal_padding.name=단열 없는 1티어 전체 상자
+item.tier1_kit.without_oxygen_setup.name=산소통 없는 1티어 전체 상자
+item.tier1_kit.without_thermal_padding.name=단열복 없는 1티어 전체 상자
 item.tier1_kit.just_oxygen_setup.name=1티어 산소 상자
 item.tier1_kit.just_protection.name=1티어 보호 상자
 
 item.tier2_kit.full.name=2티어 전체 상자
 item.tier2_kit.basic_setup.name=2티어 기본 상자
-item.tier2_kit.without_oxygen_setup.name=산소 없는 2티어 전체 상자
-item.tier2_kit.without_thermal_padding.name=단열 없는 2티어 전체 상자
+item.tier2_kit.without_oxygen_setup.name=산소통 없는 2티어 전체 상자
+item.tier2_kit.without_thermal_padding.name=단열복 없는 2티어 전체 상자
 item.tier2_kit.just_oxygen_setup.name=2티어 산소 상자
 item.tier2_kit.just_protection.name=2티어 보호 상자
 
 item.tier3_kit.full.name=3티어 전체 상자
 item.tier3_kit.basic_setup.name=3티어 기본 상자
-item.tier3_kit.without_oxygen_setup.name=산소 없는 3티어 전체 상자
-item.tier3_kit.without_thermal_padding.name=단열 없는 3티어 전체 상자
+item.tier3_kit.without_oxygen_setup.name=산소통 없는 3티어 전체 상자
+item.tier3_kit.without_thermal_padding.name=단열복 없는 3티어 전체 상자
 item.tier3_kit.just_oxygen_setup.name=3티어 산소 상자
 item.tier3_kit.just_protection.name=3티어 보호 상자
 
 item.tier4_kit.full.name=4티어 전체 상자
 item.tier4_kit.basic_setup.name=4티어 기본 상자
-item.tier4_kit.without_oxygen_setup.name=산소 없는 4티어 전체 상자
-item.tier4_kit.without_thermal_padding.name=단열 없는 4티어 전체 상자
+item.tier4_kit.without_oxygen_setup.name=산소통 없는 4티어 전체 상자
+item.tier4_kit.without_thermal_padding.name=단열복 없는 4티어 전체 상자
 item.tier4_kit.just_oxygen_setup.name=4티어 산소 상자
 item.tier4_kit.just_protection.name=4티어 보호 상자
 
 item.tier5_kit.full.name=5티어 전체 상자
 item.tier5_kit.basic_setup.name=5티어 기본 상자
-item.tier5_kit.without_oxygen_setup.name=산소 없는 5티어 전체 상자
-item.tier5_kit.without_thermal_padding.name=단열 없는 5티어 전체 상자
+item.tier5_kit.without_oxygen_setup.name=산소통 없는 5티어 전체 상자
+item.tier5_kit.without_thermal_padding.name=단열복 없는 5티어 전체 상자
 item.tier5_kit.just_oxygen_setup.name=5티어 산소 상자
 item.tier5_kit.just_protection.name=5티어 보호 상자
 
-item.kit.information.desc=우주 장비를 저장고에 넣는데 사용됩니다
-item.kit.information.use=상자를 갖추고 싶으면 우클릭하세요
+item.kit.information.desc=우주 장비를 저장고에 넣는 데 사용됩니다.
+item.kit.information.use=상자를 갖추고 싶으면 우클릭하세요.
 
 #Sticks
 item.tier11_items.blue_sticks.name=파란색 막대기
@@ -1321,7 +1321,7 @@ item.tools.sledge_hammer.name=썰매 망치
 item.tools.grinding_wheel.name=물레방아
 item.tools.mesh.name=끈망
 item.tools.filter.name=여과기
-item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
+item.tool.usage.name=남은 사용
 
 #Other Items
 item.apple_diamond.name=다이아몬드 사과
@@ -1329,16 +1329,16 @@ item.apple_iron.name=철 사과
 item.canned_food.canned_food.name=음식 통조림
 item.bodyparts.arm.name=팔
 item.bodyparts.leg.name=다리
-item.cloth.name=목복
+item.cloth.name=양모 천
 item.gravity_controller.name=중력 조절기
-item.thermal_cloth.tier3_thermal_cloth.name=3티어 단열복
-item.thermal_cloth.tier4_thermal_cloth.name=4티어 단열복
-item.thermal_cloth.tier5_thermal_cloth.name=5티어 단열복
-item.tier5_items.ash.name=재 가루
-item.geiger_counter.name=방사능 측정기
+item.thermal_cloth.tier3_thermal_cloth.name=3티어 단열 천
+item.thermal_cloth.tier4_thermal_cloth.name=4티어 단열 천
+item.thermal_cloth.tier5_thermal_cloth.name=5티어 단열 천
+item.tier5_items.ash.name=재
+item.geiger_counter.name=방사선 측정기
 item.white_sugar_cane_item.name=흰색 사탕수수
-geiger.counter.desc=지금 방사성 수준을 알고 싶으면 우클릭하세요!
-geiger.counter.location.desc=수성 던전으로부터 획득될 수 있습니다!
+geiger.counter.desc=지금 방사선 수준을 알고 싶으면 우클릭하세요!
+geiger.counter.location.desc=수성 던전에서 획득할 수 있습니다!
 item.chocolate_bar.name=초콜릿 바
 item.caramel_bar.name=캐러멜 바
 
@@ -1371,7 +1371,7 @@ entity.extraplanets.EntityTier10ElectricRocket.name=10티어 전자 로켓
 entity.extraplanets.EntityMarsRover.name=화성 탐사선
 entity.extraplanets.EntityVenusRover.name=금성 탐사선
 
-entity.extraplanets.CreeperBossMercury.name=금성 크리퍼 보스
+entity.extraplanets.CreeperBossMercury.name=수성 크리퍼 보스
 entity.extraplanets.CreeperBossJupiter.name=목성 크리퍼 보스
 entity.extraplanets.CreeperBossSaturn.name=토성 크리퍼 보스
 entity.extraplanets.CreeperBossUranus.name=천왕성 크리퍼 보스
@@ -1409,15 +1409,15 @@ achievement.pluto_planet=명왕성 도착!
 achievement.eris_planet=에리스 도착!
 achievement.kepler22b_planet=케플러 22b 도착!
 
-achievement.mercury_planet.desc=3티어 로켓으로 수성 가기
-achievement.ceres_planet.desc=4티어 로켓으로 세레스 가기
-achievement.jupiter_planet.desc=4티어 로켓으로 목성 가기
-achievement.saturn_planet.desc=5티어 로켓으로 토성 가기
-achievement.uranus_planet.desc=6티어 로켓으로 천왕성 가기
-achievement.neptune_planet.desc=7티어 로켓으로 해왕성 가기
-achievement.pluto_planet.desc=8티어 로켓으로 명왕성 가기
-achievement.eris_planet.desc=9티어 로켓으로 에리스 가기
-achievement.kepler22b_planet.desc=10티어 로켓으로 케플러 22b 가기
+achievement.mercury_planet.desc=3티어 로켓으로 수성을 가세요
+achievement.ceres_planet.desc=4티어 로켓으로 세레스를 가세요
+achievement.jupiter_planet.desc=4티어 로켓으로 목성을 가세요
+achievement.saturn_planet.desc=5티어 로켓으로 토성을 가세요
+achievement.uranus_planet.desc=6티어 로켓으로 천왕성을 가세요
+achievement.neptune_planet.desc=7티어 로켓으로 해왕성을 가세요
+achievement.pluto_planet.desc=8티어 로켓으로 명왕성을 가세요
+achievement.eris_planet.desc=9티어 로켓으로 에리스를 가세요
+achievement.kepler22b_planet.desc=10티어 로켓으로 케플러를 가세요
 
 achievement.mercury_boss=4티어 보스 숙청!
 achievement.jupiter_boss=5티어 보스 숙청!
@@ -1427,13 +1427,13 @@ achievement.neptune_boss=8티어 보스 숙청!
 achievement.pluto_boss=9티어 보스 숙청!
 achievement.eris_boss=10티어 보스 숙청!
 
-achievement.mercury_boss.desc=수성 던전 보스를 죽이고 보물 상자 열기
-achievement.jupiter_boss.desc=목성 던전 보스를 죽이고 보물 상자 열기
-achievement.saturn_boss.desc=토성 던전 보스를 죽이고 보물 상자 열기
-achievement.uranus_boss.desc=천왕성 던전 보스를 죽이고 보물 상자 열기
-achievement.neptune_boss.desc=해왕성 던전 보스를 죽이고 보물 상자 열기
-achievement.pluto_boss.desc=명왕성 던전 보스를 죽이고 보물 상자 열기
-achievement.eris_boss.desc=에리스 던전 보스를 죽이고 보물 상자 열기
+achievement.mercury_boss.desc=수성 던전 보스를 죽이고 보물 상자를 여세요
+achievement.jupiter_boss.desc=목성 던전 보스를 죽이고 보물 상자를 여세요
+achievement.saturn_boss.desc=토성 던전 보스를 죽이고 보물 상자를 여세요
+achievement.uranus_boss.desc=천왕성 던전 보스를 죽이고 보물 상자를 여세요
+achievement.neptune_boss.desc=해왕성 던전 보스를 죽이고 보물 상자를 여세요
+achievement.pluto_boss.desc=명왕성 던전 보스를 죽이고 보물 상자를 여세요
+achievement.eris_boss.desc=에리스 던전 보스를 죽이고 보물 상자를 여세요
 
 achievement.craft_rocket_3=3티어 로켓!
 achievement.craft_rocket_4=4티어 로켓!
@@ -1444,20 +1444,20 @@ achievement.craft_rocket_8=8티어 로켓!
 achievement.craft_rocket_9=9티어 로켓!
 achievement.craft_rocket_10=10티어 로켓!
 
-achievement.craft_rocket_3.desc=3티어 로켓 제작
-achievement.craft_rocket_4.desc=4티어 로켓 제작
-achievement.craft_rocket_5.desc=5티어 로켓 제작
-achievement.craft_rocket_6.desc=6티어 로켓 제작
-achievement.craft_rocket_7.desc=7티어 로켓 제작
-achievement.craft_rocket_8.desc=8티어 로켓 제작
-achievement.craft_rocket_9.desc=9티어 로켓 제작
-achievement.craft_rocket_10.desc=10티어 로켓 제작
+achievement.craft_rocket_3.desc=3티어 로켓을 제작하세요
+achievement.craft_rocket_4.desc=4티어 로켓을 제작하세요
+achievement.craft_rocket_5.desc=5티어 로켓을 제작하세요
+achievement.craft_rocket_6.desc=6티어 로켓을 제작하세요
+achievement.craft_rocket_7.desc=7티어 로켓을 제작하세요
+achievement.craft_rocket_8.desc=8티어 로켓을 제작하세요
+achievement.craft_rocket_9.desc=9티어 로켓을 제작하세요
+achievement.craft_rocket_10.desc=10티어 로켓을 제작하세요
 
 #Liquids/Fluid
 tile.glowstone.name=액체 발광석
 tile.magma_block.name=액체 마그마
 tile.nitrogen.name=액체 질소
-tile.frozen_water.name=Icy Water ##NEEDS TRANSLATE##
+tile.frozen_water.name=얼음물
 tile.salt.name=액체 수정 물
 tile.radioactive_water.name=방사성 물
 tile.clean_water.name=깨끗한 물
@@ -1471,7 +1471,7 @@ tile.liquid_caramel.name=액체 캐러멜
 fluid.glowstone_fluid=액체 발광석
 fluid.magma_fluid=액체 마그마
 fluid.nitrogen_fluid=액체 질소
-fluid.frozen_water_fluid=Icy Water ##NEEDS TRANSLATE##
+fluid.frozen_water_fluid=얼음물
 fluid.salt_fluid=액체 수정 물
 fluid.radioactive_water_fluid=방사성 물
 fluid.clean_water_fluid=깨끗한 물
@@ -1487,19 +1487,19 @@ gui.warning.high.pressure=높은 환경 압력
 gui.warning.high.radiation=높은 방사능 피폭 위험
 gui.warning.med.radiation=방사능 피폭 위험
 gui.warning.low.radiation=낮은 방사능 피폭 위험
-death.attack.radiation=%1$s은 방사능에 피폭되어 죽었습니다
-death.attack.pressure=%1$s은 높은 압력으로 인해 죽었습니다
-death.attack.hypothermia=%1$s은 저체온증으로 죽었습니다
-death.attack.magma=%1$s은 마그마에 타 죽었습니다.
-death.attack.radiationLiquid=%1$s은 방사능에 피폭되어 죽었습니다
-death.attack.infection=%1$s은 감염되어 죽었습니다
+death.attack.radiation=%1$s이(가) 방사능에 피폭되어 사망했습니다
+death.attack.pressure=%1$s이(가) 높은 압력으로 인해 사망했습니다
+death.attack.hypothermia=%1$s이(가) 저체온증으로 인해 사망했습니다
+death.attack.magma=%1$s이(가) 마그마에 타 사망했습니다
+death.attack.radiation액체=%1$s이(가) 방사능에 피폭되어 사망했습니다
+death.attack.infection=%1$s이(가) 감염되어 사망했습니다
 
 #CheckList GUI Messages
-checklist.tier_3_thermal_padding.key=3티어 단열 복장 준비
-checklist.tier_4_thermal_padding.key=4티어 단열 복장 준비
-checklist.tier_5_thermal_padding.key=5티어 단열 복장 분비
+checklist.tier_3_thermal_padding.key=3티어 단열복 준비
+checklist.tier_4_thermal_padding.key=4티어 단열복 준비
+checklist.tier_5_thermal_padding.key=5티어 단열복 분비
 
-checklist.space_suit.key=몇 티어 단열 복장
+checklist.space_suit.key=아무 티어의 우주복
 
 satellite.space_station.mercury=수성 우주 정거장
 satellite.space_station.venus=금성 우주 정거장
@@ -1515,120 +1515,120 @@ satellite.space_station.kepler22b=케플러 22b 우주 정거장
 
 #------------------1.7.10 Only Section------------------
 #Venus Blocks
-tile.venus.surface.name=Venus Surface Rock
-tile.venus.sub_surface.name=Venus Sub-Surface Rock
-tile.venus.stone.name=Venus Stone
-tile.venus.ore_iron.name=Venus Iron Ore
-tile.venus.ore_tin.name=Venus Tin Ore
-tile.venus.ore_copper.name=Venus Copper Ore
-tile.venus.ore_carbon.name=Carbon Ore
-tile.venus.stone_bricks.name=Venus Stone Bricks
-tile.venus.carbon_block.name=Block of Carbon
-tile.venus.titanium_block.name=Block of Titanium
-tile.veuns.dungeon_brick.name=Venus Dungeon Brick
+tile.venus.surface.name=금성 표면석
+tile.venus.sub_surface.name=금성 해저 표면석
+tile.venus.stone.name=금성석
+tile.venus.ore_iron.name=금성 철광석
+tile.venus.ore_tin.name=금성 주석 광석
+tile.venus.ore_copper.name=금성 구리 광석
+tile.venus.ore_carbon.name=탄소 광석
+tile.venus.stone_bricks.name=금성석 벽돌
+tile.venus.carbon_block.name=탄소 블록
+tile.venus.titanium_block.name=티타늄 블록
+tile.veuns.dungeon_brick.name=금성 던전 벽돌
 
 #Liquids/Fluid
-tile.glowstone_fluid.name=Liquid Glowstone
-tile.magma_fluid.name=Liquid Magma
-tile.nitrogen_fluid.name=Liquid Nitrogen
-tile.frozen_water_fluid.name=Icy Water ##NEEDS TRANSLATE##
-tile.salt_fluid.name=Liquid Crystallized Water
-tile.radioactive_water_fluid.name=Radioactive Water
-tile.infected_water_fluid.name=Infected Water
-tile.methane_fluid.name=Liquid Methane
-tile.nitrogen_ice_fluid.name=Liquid Nitrogen Ice
-tile.liquid_hydrocarbon_fluid.name=Liquid Hydrocarbon
-tile.liquid_chocolate_fluid.name=Liquid Chocolate
-tile.liquid_caramel_fluid.name=Liquid Caramel
+tile.glowstone_fluid.name=액체 발광석
+tile.magma_fluid.name=액체 마그마
+tile.nitrogen_fluid.name=액체 질소
+tile.frozen_water_fluid.name=얼음물
+tile.salt_fluid.name=액체 수정 물
+tile.radioactive_water_fluid.name=방사성 물
+tile.infected_water_fluid.name=감염된 물
+tile.methane_fluid.name=액체 메테인
+tile.nitrogen_ice_fluid.name=액체 질소 얼음
+tile.liquid_hydrocarbon_fluid.name=액체 탄화수소
+tile.liquid_chocolate_fluid.name=액체 초콜릿
+tile.liquid_caramel_fluid.name=액체 캐러멜
 
 #Planet Blocks Slabs
-tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=Mercury Stone Slab
-tile.ExtraPlanets_venusStoneBlockhalfslab.name=Venus Stone Slab
-tile.ExtraPlanets_ceresStoneBlockhalfslab.name=Ceres Stone Slab
-tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=Jupiter Stone Slab
-tile.ExtraPlanets_saturnStoneBlockhalfslab.name=Saturn Stone Slab
-tile.ExtraPlanets_uranusStoneBlockhalfslab.name=Uranus Stone Slab
-tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=Neptune Stone Slab
-tile.ExtraPlanets_plutoStoneBlockhalfslab.name=Pluto Stone Slab
-tile.ExtraPlanets_erisStoneBlockhalfslab.name=Eris Stone Slab
+tile.ExtraPlanets_mercuryStoneBlockhalfslab.name=수성석 반 블록
+tile.ExtraPlanets_venusStoneBlockhalfslab.name=금성 석 반 블록
+tile.ExtraPlanets_ceresStoneBlockhalfslab.name=세레스석 반 블록
+tile.ExtraPlanets_jupiterStoneBlockhalfslab.name=목성석 반 블록
+tile.ExtraPlanets_saturnStoneBlockhalfslab.name=토성석 반 블록
+tile.ExtraPlanets_uranusStoneBlockhalfslab.name=천왕성석 반 블록
+tile.ExtraPlanets_neptuneStoneBlockhalfslab.name=해왕성석 반 블록
+tile.ExtraPlanets_plutoStoneBlockhalfslab.name=명왕성석 반 블록
+tile.ExtraPlanets_erisStoneBlockhalfslab.name=에리스석 반 블록
 
 #Planet Blocks Stairs
-tile.mercuryStoneStairs.name=Mercury Stone Stairs
-tile.venusStoneStairs.name=Venus Stone Stairs
-tile.ceresStoneStairs.name=Ceres Stone Stairs
-tile.jupiterStoneStairs.name=Jupiter Stone Stairs
-tile.saturnStoneStairs.name=Saturn Stone Stairs
-tile.uranusStoneStairs.name=Uranus Stone Stairs
-tile.neptuneStoneStairs.name=Neptune Stone Stairs
-tile.plutoStoneStairs.name=Pluto Stone Stairs
-tile.erisStoneStairs.name=Eris Stone Stairs
+tile.mercuryStoneStairs.name=수성석 계단
+tile.venusStoneStairs.name=금성석 계단
+tile.ceresStoneStairs.name=세레스석 계단
+tile.jupiterStoneStairs.name=목성석 계단
+tile.saturnStoneStairs.name=토성석 계단
+tile.uranusStoneStairs.name=천왕성석 계단
+tile.neptuneStoneStairs.name=해왕성석 계단
+tile.plutoStoneStairs.name=명왕성석 계단
+tile.erisStoneStairs.name=에리스석 계단
 
-tile.mercuryStoneBrickStairs.name=Mercury Stone Bricks Stairs
-tile.venusStoneBrickStairs.name=Venus Stone Bricks Stairs
-tile.ceresStoneBrickStairs.name=Ceres Stone Bricks Stairs
-tile.jupiterStoneBrickStairs.name=Jupiter Stone Bricks Stairs
-tile.saturnStoneBrickStairs.name=Saturn Stone Bricks Stairs
-tile.uranusStoneBrickStairs.name=Uranus Stone Bricks Stairs
-tile.neptuneStoneBrickStairs.name=Neptune Stone Bricks Stairs
-tile.plutoStoneBrickStairs.name=Pluto Stone Bricks Stairs
-tile.erisStoneBrickStairs.name=Eris Stone Bricks Stairs
+tile.mercuryStoneBrickStairs.name=수성석 벽돌 계단
+tile.venusStoneBrickStairs.name=금성석 벽돌 계단
+tile.ceresStoneBrickStairs.name=세레스석 벽돌 계단
+tile.jupiterStoneBrickStairs.name=목성석 벽돌 계단
+tile.saturnStoneBrickStairs.name=토성석 벽돌 계단
+tile.uranusStoneBrickStairs.name=천왕성석 벽돌 계단
+tile.neptuneStoneBrickStairs.name=해왕성석 벽돌 계단
+tile.plutoStoneBrickStairs.name=명왕성석 벽돌 계단
+tile.erisStoneBrickStairs.name=에리스석 벽돌 계단
 
 #Dungeon Bricks Slabs
-tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=Venus Dungeon Brick Slab
-tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=Jupiter Dungeon Brick Slab
-tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=Saturn Dungeon Brick Slab
-tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=Uranus Dungeon Brick Slab
-tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=Neptune Dungeon Brick Slab
+tile.ExtraPlanets_venusDungeonBrickStoneBlockhalfslab.name=금성 던전 벽돌 반 블록
+tile.ExtraPlanets_jupiterDungeonBrickStoneBlockhalfslab.name=목성 던전 벽돌 반 블록
+tile.ExtraPlanets_saturnDungeonBrickStoneBlockhalfslab.name=토성 던전 벽돌 반 블록
+tile.ExtraPlanets_uranusDungeonBrickStoneBlockhalfslab.name=천왕성 던전 벽돌 반 블록
+tile.ExtraPlanets_neptuneDungeonBrickStoneBlockhalfslab.name=해왕성 던전 벽돌 반 블록
 
 #Dungeon Bricks Stairs
-tile.venusDungeonBrickStoneStairs.name=Venus Dungeon Brick Stairs
-tile.jupiterDungeonBrickStoneStairs.name=Jupiter Dungeon Brick Stairs
-tile.saturnDungeonBrickStoneStairs.name=Saturn Dungeon Brick Stairs
-tile.uranusDungeonBrickStoneStairs.name=Uranus Dungeon Brick Stairs
-tile.neptuneDungeonBrickStoneStairs.name=Neptune Dungeon Brick Stairs
+tile.venusDungeonBrickStoneStairs.name=금성 던전 벽돌 계단
+tile.jupiterDungeonBrickStoneStairs.name=목성 던전 벽돌 계단
+tile.saturnDungeonBrickStoneStairs.name=토성 던전 벽돌 계단
+tile.uranusDungeonBrickStoneStairs.name=천왕성 던전 벽돌 계단
+tile.neptuneDungeonBrickStoneStairs.name=해왕성 던전 벽돌 계단
 
 #Planets
-planet.Venus=Venus
+planet.Venus=금성
 
-planet.VenusEP=Venus 2.0 ##NEEDS TRANSLATE##
+planet.VenusEP=금성 2.0
 
 #Other Blocks
-tile.slime_block.name=Slime Block
-tile.deimos.ore_lead.name=Deimos Lead Ore
-tile.phobos.ore_lead.name=Phobos Lead Ore
+tile.slime_block.name=슬라임 블록
+tile.deimos.ore_lead.name=데이모스 납 광석
+tile.phobos.ore_lead.name=포보스 납 광석
 
 #Other Items
-item.tier4_items.ash_shard.name=Ash Shard
-item.tier4_items.volcanic_shard.name=Volcanic Shard
-item.tier4_items.ingot_volcanic.name=Volcanic Ingot
-item.tier6_items.magnesium_shard.name=Magnesium Shard
-item.tier4_items.ash.name=Ash
-item.tier4_items.sledge_hammer.name=Sledge Hammer
-item.tier4_items.grinding_wheel.name=Grinding Wheel
-item.thermal_cloth.tier2_thermal_cloth.name=Tier 2 Thermal Cloth
+item.tier4_items.ash_shard.name=재 조각
+item.tier4_items.volcanic_shard.name=화산 조각
+item.tier4_items.ingot_volcanic.name=화산괴
+item.tier6_items.magnesium_shard.name=마그네슘 조각
+item.tier4_items.ash.name=재
+item.tier4_items.sledge_hammer.name=썰매 망치
+item.tier4_items.grinding_wheel.name=물레방아
+item.thermal_cloth.tier2_thermal_cloth.name=2티어 단열 천
 
 #MorePlanetsCompactBlocks&Items
-tile.treasure_chest_t4_saturn.name=Tier 4 Treasure Chest
-tile.treasure_chest_t4_uranus.name=Tier 4 Treasure Chest
-tile.treasure_chest_t5_neptune.name=Tier 5 Treasure Chest
-tile.treasure_chest_t6_eris.name=Tier 6 Treasure Chest
+tile.treasure_chest_t4_saturn.name=4티어 던전 상자
+tile.treasure_chest_t4_uranus.name=4티어 던전 상자
+tile.treasure_chest_t5_neptune.name=5티어 던전 상자
+tile.treasure_chest_t6_eris.name=6티어 던전 상자
 
 #Keys
-item.key.T4_saturn.name=Tier 4 Dungeon Key
-item.key.T4_uranus.name=Tier 4 Dungeon Key
-item.key.T5_neptune.name=Tier 5 Dungeon Key
-item.key.T6_eris.name=Tier 6 Dungeon Key
+item.key.T4_saturn.name=4티어 던전 열쇠
+item.key.T4_uranus.name=4티어 던전 열쇠
+item.key.T5_neptune.name=5티어 던전 열쇠
+item.key.T6_eris.name=6티어 던전 열쇠
 
 #Thermal Paddings
-item.tier2_thermal_helm.name=Tier 2 Thermal Padding Helm
-item.tier2_thermal_chestplate.name=Tier 2 Thermal Padding Chestpiece
-item.tier2_thermal_leggings.name=Tier 2 Thermal Padding Leggings
-item.tier2_thermal_boots.name=Tier 2 Thermal Padding Boots
+item.tier2_thermal_helm.name=2티어 단열 투구
+item.tier2_thermal_chestplate.name=2티어 단열 흉갑
+item.tier2_thermal_leggings.name=2티어 단열 각반
+item.tier2_thermal_boots.name=2티어 단열 부츠
 
 #Messages
-tier2.information=Required for Venus and Mercury
-tier3.information=Required for Jupiter and Saturn including their moons
-tier4.information=Required for Uranus, Neptune, Pluto and Eris including their moons
+tier2.information=금성과 수성에 필요합니다.
+tier3.information=목성, 토성과 그 위성에 필요합니다.
+tier4.information=천왕성, 해왕성, 명왕성, 에리스와 그 위성에 필요합니다.
 
 #------------------1.11.2 & 1.12.2 Only Section------------------
 item.t4key.name=4티어 던전 열쇠
