@@ -123,7 +123,7 @@ tile.mercury.ore_copper.name=Merkurowa Ruda Miedzi
 tile.mercury.ore_mercury.name=Ruda Merkurego
 tile.mercury.stone_bricks.name=Merkurowe Kamienne Cegły
 tile.mercury.mercury_block.name=Blok Merkurego
-tile.mercury.ore_carbon.name=Mercury Carbon Ore ##NEEDS TRANSLATE##
+tile.mercury.ore_carbon.name=Mercury Carbon Ore=Ruda Karbonu
 tile.mercury.carbon_block.name=Blok Karbonu
 tile.mercury.dungeon_brick.name=Cegły Merkurowego Lochu
 
@@ -622,8 +622,8 @@ gui.module.pre_launch_checklist.name=Lista Kontrolna przed startem
 gui.module.nasa_workbench.name=Przenośny stół NASA
 gui.module.oxygen_tank_switch.name=Automatyczna wymiana zbiornika tlenu
 gui.module.auto_space_gear_equip.name=Automatyczna wymiana sprzętu kosmicznego
-gui.module.basic_solar_panel.name=Basic Portable Solar Panel ##NEEDS TRANSLATE##
-gui.module.advanced_solar_panel.name=Advanced Portable Solar Panel ##NEEDS TRANSLATE##
+gui.module.basic_solar_panel.name=Podstawowy Przenośny Panel Słoneczny
+gui.module.advanced_solar_panel.name=Zaawansowanz Przenośny Panel Słonecynz
 
 gui.module.sensor_glasses.desc=Działa tak samo jak okulary sensoryczne z Galacticraft
 gui.module.no_fall_damage.desc=Usuwa obrażenia od upadku
@@ -633,8 +633,8 @@ gui.module.pre_launch_checklist.desc=Umożliwia łatwy dostęp do listy kontroln
 gui.module.nasa_workbench.desc=Umożliwia przenośny dostęp do stołu NASA z Galacticraft, spójrz do sterowania, aby otworzyć
 gui.module.oxygen_tank_switch.desc=Zamień wyposażone puste zbiorniki na dowolne dostępne, wypełnione zbiorniki tlenu w twoim ekwipunku
 gui.module.auto_space_gear_equip.desc=Automatycznie wyposaża w dowolny sprzęt związany z kosmosem w twoim ekwipunku
-gui.module.basic_solar_panel.desc=Very slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
-gui.module.advanced_solar_panel.desc=Slowly recharges your space suit during the day time ##NEEDS TRANSLATE##
+gui.module.basic_solar_panel.desc=Bardzo wolno ładuje twój skafander podczas dnia
+gui.module.advanced_solar_panel.desc=Bardzo wolno ładuje twój skafander podczas dnia
 
 #Other Blocks
 tile.nuclear_bomb.name=Bomba Nuklearna
@@ -871,7 +871,7 @@ item.wafer.white_gem_wafer.name=Płyta z Białego Klejnotu
 item.bucket_glowstone.name=Wiadro Jasnogłazu
 item.bucket_salt.name=Ciekła Skrystalizowana Woda
 item.bucket_magma.name=Wiadro Magmy
-item.bucket_frozen_water.name=Icy Water Bucket ##NEEDS TRANSLATE##
+item.bucket_frozen_water.name=Wiadro lodowej wody
 item.bucket_nitrogen.name=Wiadro Azotu
 item.bucket_clean_water.name=Wiadro Czystej Wody
 item.bucket_infected_water.name=Wiadro Zainfekowanej Wody
@@ -1321,7 +1321,7 @@ item.tools.sledge_hammer.name=Młot Kowalski
 item.tools.grinding_wheel.name=Koło Szlifierskie
 item.tools.mesh.name=Siatka Sznurkowa
 item.tools.filter.name=Filtr
-item.tool.usage.name=Remaining Uses ##NEEDS TRANSLATE##
+item.tool.usage.name=Pozostałe użycia
 
 #Other Items
 item.apple_diamond.name=Diamentowe Jabłko
@@ -1457,7 +1457,7 @@ achievement.craft_rocket_10.desc=Scraftuj Rakietę Poziomu 10
 tile.glowstone.name=Płynny Jasnogłaz
 tile.magma_block.name=Płynna Magma
 tile.nitrogen.name=Płynny Azot
-tile.frozen_water.name=Icy Water ##NEEDS TRANSLATE##
+tile.frozen_water.name=Lodowa Woda
 tile.salt.name=Płynna Skrystalizowana Woda
 tile.radioactive_water.name=Radioaktywna Woda
 tile.clean_water.name=Czysta Woda
@@ -1471,7 +1471,7 @@ tile.liquid_caramel.name=Płynny Karmel
 fluid.glowstone_fluid=Płynny Jasnogłaz
 fluid.magma_fluid=Płynna Magma
 fluid.nitrogen_fluid=Płynny Azot
-fluid.frozen_water_fluid=Icy Water ##NEEDS TRANSLATE##
+fluid.frozen_water_fluid=Lodowa Woda
 fluid.salt_fluid=Płynna Skrystalizowana Woda
 fluid.radioactive_water_fluid=Radioaktywna Woda
 fluid.clean_water_fluid=Czysta Woda
